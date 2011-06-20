@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>dllentries.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- 作成： Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="main.html"><span>メインページ</span></a></li>
+      <li><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>dllentries.h</h1>
+<p><a href="dllentries_8h_source.html">ソースコードを見る。</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>ネームスペース</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">namespace &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesxsdk.html">sxsdk</a></td></tr>
+
+<p><tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><p>アニメーション作成に関する各種設定の取得、設定に使用する。 </p>
+<br/></td></tr>
+</p>
+<tr><td colspan="2"><h2>関数</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adc94c8f16008f9bf0fe6c86082bdb86f"></a><!-- doxytag: member="dllentries.h::create_interface" ref="adc94c8f16008f9bf0fe6c86082bdb86f" args="(const IID &amp;iid, int i, void **p, sxsdk::shade_interface *shade, void *aux=0)" -->
+DLLEXPORT void __stdcall&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="dllentries_8h.html#adc94c8f16008f9bf0fe6c86082bdb86f">create_interface</a> (const IID &amp;iid, int i, void **p, <a class="el" href="structsxsdk_1_1shade__interface.html">sxsdk::shade_interface</a> *shade, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">インターフェイスの構築を行う。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a77be18c81060298895eacfbc0a58b81d"></a><!-- doxytag: member="dllentries.h::has_interface" ref="a77be18c81060298895eacfbc0a58b81d" args="(const IID &amp;iid, sxsdk::shade_interface *shade)" -->
+DLLEXPORT int __stdcall&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="dllentries_8h.html#a77be18c81060298895eacfbc0a58b81d">has_interface</a> (const IID &amp;iid, <a class="el" href="structsxsdk_1_1shade__interface.html">sxsdk::shade_interface</a> *shade)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">使用するインターフェイスの数を返す。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6f2ba000248080d52ec51c4260586bc0"></a><!-- doxytag: member="dllentries.h::get_name" ref="a6f2ba000248080d52ec51c4260586bc0" args="(const IID &amp;iid, int i, sxsdk::shade_interface *shade, void *aux=0)" -->
+DLLEXPORT const char *__stdcall&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="dllentries_8h.html#a6f2ba000248080d52ec51c4260586bc0">get_name</a> (const IID &amp;iid, int i, <a class="el" href="structsxsdk_1_1shade__interface.html">sxsdk::shade_interface</a> *shade, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">プラグインの名前を返す。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0f577a6d56ac9e2bd6c817102e6e8313"></a><!-- doxytag: member="dllentries.h::get_group_name" ref="a0f577a6d56ac9e2bd6c817102e6e8313" args="(const IID &amp;iid, sxsdk::shade_interface *shade, void *aux=0)" -->
+DLLEXPORT const char *__stdcall&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="dllentries_8h.html#a0f577a6d56ac9e2bd6c817102e6e8313">get_group_name</a> (const IID &amp;iid, <a class="el" href="structsxsdk_1_1shade__interface.html">sxsdk::shade_interface</a> *shade, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">メニューのグループ名を定義する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8e76bb5733530a3a64cfe47071c47e34"></a><!-- doxytag: member="dllentries.h::get_interface_version" ref="a8e76bb5733530a3a64cfe47071c47e34" args="(void *aux=0)" -->
+DLLEXPORT int __stdcall&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="dllentries_8h.html#a8e76bb5733530a3a64cfe47071c47e34">get_interface_version</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">プラグインインターフェイスバージョンを設定する。<code>interface_version</code> を返す。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a95c101e59aab6a25c48e46647f4e409e"></a><!-- doxytag: member="dllentries.h::is_resident" ref="a95c101e59aab6a25c48e46647f4e409e" args="(const IID &amp;iid, int i, void *aux=0)" -->
+DLLEXPORT bool __stdcall&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="dllentries_8h.html#a95c101e59aab6a25c48e46647f4e409e">is_resident</a> (const IID &amp;iid, int i, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">常駐させるかどうかを設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acf4285ea73e24b1e1301b4de8774ad9c"></a><!-- doxytag: member="dllentries.h::get_text_encoding" ref="acf4285ea73e24b1e1301b4de8774ad9c" args="(sxsdk::shade_interface *shade, void *aux=0)" -->
+DLLEXPORT int __stdcall&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="dllentries_8h.html#acf4285ea73e24b1e1301b4de8774ad9c">get_text_encoding</a> (<a class="el" href="structsxsdk_1_1shade__interface.html">sxsdk::shade_interface</a> *shade, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">テキストのエンコーディングを指定する。0を返し、UTF-8でコードを記述することを推奨。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a57019c624dbfe7420b493b997d134473"></a><!-- doxytag: member="dllentries.h::get_exception" ref="a57019c624dbfe7420b493b997d134473" args="(sxsdk::shade_interface *shade, void *aux=0)" -->
+DLLEXPORT int __stdcall&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="dllentries_8h.html#a57019c624dbfe7420b493b997d134473">get_exception</a> (<a class="el" href="structsxsdk_1_1shade__interface.html">sxsdk::shade_interface</a> *shade, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">例外処理の設定をする。通常、定義する必要はない。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa3df8cf88db68af697c9fd0623c9843c"></a><!-- doxytag: member="dllentries.h::get_info" ref="aa3df8cf88db68af697c9fd0623c9843c" args="(sxsdk::shade_plugin_info &amp;info, sxsdk::shade_interface *shade, void *aux=0)" -->
+DLLEXPORT void __stdcall&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="dllentries_8h.html#aa3df8cf88db68af697c9fd0623c9843c">get_info</a> (<a class="el" href="classsxsdk_1_1shade__plugin__info.html">sxsdk::shade_plugin_info</a> &amp;info, <a class="el" href="structsxsdk_1_1shade__interface.html">sxsdk::shade_interface</a> *shade, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">バージョン・デベロッパ情報を設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a82f647c7c2aa8be0dec53442785b92af"></a><!-- doxytag: member="dllentries.h::has_separate_interfaces" ref="a82f647c7c2aa8be0dec53442785b92af" args="(void *aux=0)" -->
+DLLEXPORT bool __stdcall&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="dllentries_8h.html#a82f647c7c2aa8be0dec53442785b92af">has_separate_interfaces</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">各インターフェイスが独立して動作可能かどうかを設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa885da437906315adb191d63e82f873d"></a><!-- doxytag: member="dllentries.h::get_uuid" ref="aa885da437906315adb191d63e82f873d" args="(const IID &amp;iid, int i, void *aux=0)" -->
+DLLEXPORT sx::uuid_class __stdcall&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="dllentries_8h.html#aa885da437906315adb191d63e82f873d">get_uuid</a> (const IID &amp;iid, int i, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">プラグインIDを設定する。(<a class="el" href="pluginid.html">プラグインID</a>) <br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>説明</h2>
+<p>共通のグローバル関数 </p>
+</div>
+<br><br>
+<hr>
+<div align="center">Copyright &copy; e frontier, Inc. All rights reserved.</div>
+</body></html>

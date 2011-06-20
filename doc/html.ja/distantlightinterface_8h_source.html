@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>distantlightinterface.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- 作成： Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="main.html"><span>メインページ</span></a></li>
+      <li><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+<h1>distantlightinterface.h</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// this file has been created by makeheader.py</span>
+<a name="l00002"></a>00002 <span class="comment">// ja utf-8</span>
+<a name="l00003"></a>00003 <span class="preprocessor">#pragma once</span>
+<a name="l00012"></a>00012 <span class="preprocessor">namespace sxsdk {</span>
+<a name="l00013"></a><a class="code" href="structsxsdk_1_1distant__light__interface.html">00013</a> <span class="preprocessor"></span><span class="keyword">struct </span><a class="code" href="structsxsdk_1_1distant__light__interface.html">distant_light_interface</a> : <span class="keyword">public</span> <a class="code" href="structsxsdk_1_1shade__interface.html">shade_interface</a> {
+<a name="l00014"></a>00014 <span class="keyword">public</span>:
+<a name="l00017"></a>00017     <span class="keyword">virtual</span> <span class="keywordtype">void</span> save (<span class="keyword">const</span> <span class="keywordtype">char</span>*<span class="keyword">const</span>&amp; in, <span class="keywordtype">void</span>* aux = 0);
+<a name="l00020"></a>00020     <span class="keyword">virtual</span> <span class="keywordtype">void</span> load (<span class="keyword">const</span> <span class="keywordtype">char</span>*<span class="keyword">const</span>&amp; from, <span class="keywordtype">void</span>* aux = 0);
+<a name="l00022"></a>00022     <span class="keyword">virtual</span> <span class="keywordtype">int</span> get_number_of_lights (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00023"></a>00023     <span class="keyword">virtual</span> <span class="keywordtype">void</span> set_intensity_deprecated (<span class="keywordtype">int</span> , <span class="keywordtype">float</span> , <span class="keywordtype">void</span>*  = 0);
+<a name="l00024"></a>00024     <span class="keyword">virtual</span> <span class="keywordtype">float</span> get_intensity_deprecated (<span class="keywordtype">int</span> , <span class="keywordtype">void</span>*  = 0);
+<a name="l00025"></a>00025     <span class="keyword">virtual</span> <span class="keywordtype">void</span> set_ambient_deprecated (<span class="keywordtype">int</span> , <span class="keywordtype">float</span> , <span class="keywordtype">void</span>*  = 0);
+<a name="l00026"></a>00026     <span class="keyword">virtual</span> <span class="keywordtype">float</span> get_ambient_deprecated (<span class="keywordtype">int</span> , <span class="keywordtype">void</span>*  = 0);
+<a name="l00027"></a>00027     <span class="keyword">virtual</span> <span class="keywordtype">void</span> set_color_deprecated (<span class="keywordtype">int</span> i, <span class="keyword">const</span> sxsdk::rgb_class&amp; color, <span class="keywordtype">void</span>* aux = 0);
+<a name="l00028"></a>00028     <span class="keyword">virtual</span> sxsdk::rgb_class get_color_deprecated (<span class="keywordtype">int</span> , <span class="keywordtype">void</span>*  = 0);
+<a name="l00029"></a>00029     <span class="keyword">virtual</span> <span class="keywordtype">void</span> set_direction_deprecated (<span class="keywordtype">int</span> i, <span class="keyword">const</span> sxsdk::vec3&amp; direction, <span class="keywordtype">void</span>* aux = 0);
+<a name="l00030"></a>00030     <span class="keyword">virtual</span> sxsdk::vec3 get_direction_deprecated (<span class="keywordtype">int</span> , <span class="keywordtype">void</span>*  = 0);
+<a name="l00031"></a>00031     <span class="keyword">virtual</span> <span class="keywordtype">void</span> set_shadow_deprecated (<span class="keywordtype">int</span> , <span class="keywordtype">float</span> , <span class="keywordtype">void</span>*  = 0);
+<a name="l00032"></a>00032     <span class="keyword">virtual</span> <span class="keywordtype">float</span> get_shadow_deprecated (<span class="keywordtype">int</span> , <span class="keywordtype">void</span>*  = 0);
+<a name="l00033"></a>00033     <span class="keyword">virtual</span> <span class="keywordtype">void</span> set_softness_deprecated (<span class="keywordtype">int</span> , <span class="keywordtype">float</span> , <span class="keywordtype">void</span>*  = 0);
+<a name="l00034"></a>00034     <span class="keyword">virtual</span> <span class="keywordtype">float</span> get_softness_deprecated (<span class="keywordtype">int</span> , <span class="keywordtype">void</span>*  = 0);
+<a name="l00035"></a>00035     <span class="keyword">virtual</span> <span class="keywordtype">void</span> set_glare_deprecated (<span class="keywordtype">int</span> , <span class="keywordtype">float</span> , <span class="keywordtype">void</span>*  = 0);
+<a name="l00036"></a>00036     <span class="keyword">virtual</span> <span class="keywordtype">float</span> get_glare_deprecated (<span class="keywordtype">int</span> , <span class="keywordtype">void</span>*  = 0);
+<a name="l00037"></a>00037     <span class="keyword">virtual</span> <span class="keywordtype">void</span> set_size_deprecated (<span class="keywordtype">int</span> , <span class="keywordtype">float</span> , <span class="keywordtype">void</span>*  = 0);
+<a name="l00038"></a>00038     <span class="keyword">virtual</span> <span class="keywordtype">float</span> get_size_deprecated (<span class="keywordtype">int</span> , <span class="keywordtype">void</span>*  = 0);
+<a name="l00039"></a>00039     <span class="keyword">virtual</span> <span class="keywordtype">void</span> set_specular_deprecated (<span class="keywordtype">int</span> , <span class="keywordtype">float</span> , <span class="keywordtype">void</span>*  = 0);
+<a name="l00040"></a>00040     <span class="keyword">virtual</span> <span class="keywordtype">float</span> get_specular_deprecated (<span class="keywordtype">int</span> , <span class="keywordtype">void</span>*  = 0);
+<a name="l00041"></a>00041     <span class="keyword">virtual</span> <span class="keywordtype">void</span> set_diffuse_deprecated (<span class="keywordtype">int</span> , <span class="keywordtype">float</span> , <span class="keywordtype">void</span>*  = 0);
+<a name="l00042"></a>00042     <span class="keyword">virtual</span> <span class="keywordtype">float</span> get_diffuse_deprecated (<span class="keywordtype">int</span> , <span class="keywordtype">void</span>*  = 0);
+<a name="l00043"></a>00043     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1stream__interface.html">sxsdk::stream_interface</a>* create_attribute_stream_interface_deprecated (<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> attribute_id, <span class="keywordtype">void</span>* aux = 0);
+<a name="l00044"></a>00044 <span class="preprocessor">#ifndef DOXYGEN_SKIP</span>
+<a name="l00045"></a>00045 <span class="preprocessor"></span>        <a class="code" href="structsxsdk_1_1stream__interface.html">sxsdk::stream_interface</a>* create_attribute_stream (<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> attribute_id, <span class="keywordtype">void</span>* aux = 0) { <span class="keywordflow">return</span> create_attribute_stream_interface_deprecated(i, attribute_id); }
+<a name="l00046"></a>00046 <span class="preprocessor">#endif</span>
+<a name="l00047"></a>00047 <span class="preprocessor"></span>    <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1stream__interface.html">sxsdk::stream_interface</a>* get_attribute_stream_interface_deprecated (<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> attribute_id, <span class="keywordtype">void</span>* aux = 0);
+<a name="l00048"></a>00048 <span class="preprocessor">#ifndef DOXYGEN_SKIP</span>
+<a name="l00049"></a>00049 <span class="preprocessor"></span>        <a class="code" href="structsxsdk_1_1stream__interface.html">sxsdk::stream_interface</a>* get_attribute_stream (<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> attribute_id, <span class="keywordtype">void</span>* aux = 0) { <span class="keywordflow">return</span> get_attribute_stream_interface_deprecated(i, attribute_id); }
+<a name="l00050"></a>00050 <span class="preprocessor">#endif</span>
+<a name="l00051"></a>00051 <span class="preprocessor"></span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> delete_attribute_deprecated (<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> attribute_id, <span class="keywordtype">void</span>* aux = 0);
+<a name="l00053"></a>00053     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1distant__light__interface.html">distant_light_interface</a> &amp;set_sky_light_color (<span class="keyword">const</span> sxsdk::rgb_class &amp;sky_light_color_param, <span class="keywordtype">void</span> * = 0);
+<a name="l00055"></a>00055     <span class="keyword">virtual</span> sxsdk::rgb_class get_sky_light_color (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00057"></a>00057     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1distant__light__interface.html">distant_light_interface</a> &amp;set_sky_light (<span class="keywordtype">float</span> sky_light_param, <span class="keywordtype">void</span> * = 0);
+<a name="l00059"></a>00059     <span class="keyword">virtual</span> <span class="keywordtype">float</span> get_sky_light (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00060"></a>00060     <span class="keyword">virtual</span> <span class="keywordtype">void</span> set_has_shadow_map_size_deprecated (<span class="keywordtype">int</span> , <span class="keywordtype">bool</span> , <span class="keywordtype">void</span>*  = 0);
+<a name="l00061"></a>00061     <span class="keyword">virtual</span> <span class="keywordtype">bool</span> get_has_shadow_map_size_deprecated (<span class="keywordtype">int</span> , <span class="keywordtype">void</span>*  = 0);
+<a name="l00062"></a>00062     <span class="keyword">virtual</span> <span class="keywordtype">void</span> set_shadow_map_size_deprecated (<span class="keywordtype">int</span> , <span class="keywordtype">int</span> , <span class="keywordtype">void</span>*  = 0);
+<a name="l00063"></a>00063     <span class="keyword">virtual</span> <span class="keywordtype">int</span> get_shadow_map_size_deprecated (<span class="keywordtype">int</span> , <span class="keywordtype">void</span>*  = 0);
+<a name="l00064"></a>00064     <span class="keyword">virtual</span> <span class="keywordtype">void</span> set_has_shadow_map_bias_deprecated (<span class="keywordtype">int</span> , <span class="keywordtype">bool</span> , <span class="keywordtype">void</span>*  = 0);
+<a name="l00065"></a>00065     <span class="keyword">virtual</span> <span class="keywordtype">bool</span> get_has_shadow_map_bias_deprecated (<span class="keywordtype">int</span> , <span class="keywordtype">void</span>*  = 0);
+<a name="l00066"></a>00066     <span class="keyword">virtual</span> <span class="keywordtype">void</span> set_shadow_map_bias_deprecated (<span class="keywordtype">int</span> , <span class="keywordtype">float</span> , <span class="keywordtype">void</span>*  = 0);
+<a name="l00067"></a>00067     <span class="keyword">virtual</span> <span class="keywordtype">float</span> get_shadow_map_bias_deprecated (<span class="keywordtype">int</span> , <span class="keywordtype">void</span>*  = 0);
+<a name="l00068"></a>00068     <span class="keyword">virtual</span> <span class="keywordtype">void</span> set_has_shadow_map_blur_deprecated (<span class="keywordtype">int</span> , <span class="keywordtype">bool</span> , <span class="keywordtype">void</span>*  = 0);
+<a name="l00069"></a>00069     <span class="keyword">virtual</span> <span class="keywordtype">bool</span> get_has_shadow_map_blur_deprecated (<span class="keywordtype">int</span> , <span class="keywordtype">void</span>*  = 0);
+<a name="l00070"></a>00070     <span class="keyword">virtual</span> <span class="keywordtype">void</span> set_shadow_map_blur_deprecated (<span class="keywordtype">int</span> , <span class="keywordtype">float</span> , <span class="keywordtype">void</span>*  = 0);
+<a name="l00071"></a>00071     <span class="keyword">virtual</span> <span class="keywordtype">float</span> get_shadow_map_blur_deprecated (<span class="keywordtype">int</span> , <span class="keywordtype">void</span>*  = 0);
+<a name="l00072"></a>00072     <span class="keyword">virtual</span> <span class="keywordtype">void</span> set_shadow_type_deprecated (<span class="keywordtype">int</span> , <a class="code" href="namespacesxsdk_1_1enums.html#a46793265982a4d41c5ebe543446871dc" title="影の種類">sxsdk::enums::shadow_type</a> , <span class="keywordtype">void</span>*  = 0);
+<a name="l00073"></a>00073     <span class="keyword">virtual</span> <a class="code" href="namespacesxsdk_1_1enums.html#a46793265982a4d41c5ebe543446871dc" title="影の種類">sxsdk::enums::shadow_type</a> get_shadow_type_deprecated (<span class="keywordtype">int</span> , <span class="keywordtype">void</span>*  = 0);
+<a name="l00074"></a>00074     <span class="keyword">virtual</span> <span class="keywordtype">int</span> distant_light_interface_test_1 ( <span class="keywordtype">void</span>* aux =0 ) { <span class="keywordflow">return</span> 1; }
+<a name="l00080"></a>00080     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1distant__light__item__class.html">distant_light_item_class</a>&amp; distant_light_item (<span class="keywordtype">int</span> i, <span class="keywordtype">void</span>* aux = 0);
+<a name="l00082"></a>00082     <span class="keyword">virtual</span> <span class="keywordtype">void</span> append_light_item (<span class="keywordtype">void</span>* aux = 0);
+<a name="l00084"></a>00084     <span class="keyword">virtual</span> <span class="keywordtype">void</span> stream_to_clipboard (<span class="keywordtype">void</span>* aux = 0);
+<a name="l00086"></a>00086     <span class="keyword">virtual</span> <span class="keywordtype">int</span> get_active_item (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00088"></a>00088     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1distant__light__interface.html">distant_light_interface</a> &amp;set_active_item (<span class="keywordtype">int</span> active_item_param, <span class="keywordtype">void</span> * = 0);
+<a name="l00091"></a>00091     <span class="keyword">virtual</span> <span class="keywordtype">void</span> remove_light_item (<span class="keywordtype">int</span> i, <span class="keywordtype">void</span>* aux = 0);
+<a name="l00092"></a>00092 };
+<a name="l00093"></a>00093 } <span class="comment">// sxsdk</span>
+</pre></div></div>
+<br><br>
+<hr>
+<div align="center">Copyright &copy; e frontier, Inc. All rights reserved.</div>
+</body></html>

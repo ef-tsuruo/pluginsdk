@@ -1,0 +1,333 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>構造体 sxsdk::background_interface</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- 作成： Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="main.html"><span>メインページ</span></a></li>
+      <li><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>構成</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>構成メンバ</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath"><a class="el" href="namespacesxsdk.html">sxsdk</a>::<a class="el" href="structsxsdk_1_1background__interface.html">background_interface</a>
+  </div>
+</div>
+<div class="contents">
+<h1>構造体 sxsdk::background_interface</h1><!-- doxytag: class="sxsdk::background_interface" --><!-- doxytag: inherits="sxsdk::shade_interface" --><div class="dynheader">
+sxsdk::background_interfaceに対する継承グラフ</div>
+<div class="dynsection">
+ <div class="center">
+  <img src="structsxsdk_1_1background__interface.gif" usemap="#sxsdk::background_interface_map" alt=""/>
+  <map id="sxsdk::background_interface_map" name="sxsdk::background_interface_map">
+<area href="structsxsdk_1_1shade__interface.html" alt="sxsdk::shade_interface" shape="rect" coords="0,56,173,80"/>
+<area href="classunknown__interface.html" alt="unknown_interface" shape="rect" coords="0,0,173,24"/>
+</map>
+ </div>
+</div>
+
+<p><a href="structsxsdk_1_1background__interface-members.html">すべてのメンバ一覧</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Public メソッド</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1background__interface.html#a9322e02156dfd27dedc4af01a7490724">save</a> (const char *const &amp;in, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">背景設定をファイルに保存する。  <a href="#a9322e02156dfd27dedc4af01a7490724"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1background__interface.html#ada3663c33b98e13aabe210c8d68589d9">load</a> (const char *const &amp;from, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">背景設定をファイルから読み込む。  <a href="#ada3663c33b98e13aabe210c8d68589d9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abef4e5e33660df7b1b21331862f42607"></a><!-- doxytag: member="sxsdk::background_interface::set_color_deprecated" ref="abef4e5e33660df7b1b21331862f42607" args="(enums::background_part e, const sxsdk::rgb_class &amp;color, void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_color_deprecated</b> (<a class="el" href="namespacesxsdk_1_1enums.html#a5d0f8ad15df8814a1711bd14e17852ee">enums::background_part</a> e, const sxsdk::rgb_class &amp;color, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a70be7f37607fed7c0d25aab14cec4ce9"></a><!-- doxytag: member="sxsdk::background_interface::get_color_deprecated" ref="a70be7f37607fed7c0d25aab14cec4ce9" args="(enums::background_part e, void *aux=0)" -->
+virtual sxsdk::rgb_class&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_color_deprecated</b> (<a class="el" href="namespacesxsdk_1_1enums.html#a5d0f8ad15df8814a1711bd14e17852ee">enums::background_part</a> e, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaa53e71ac3f7463ea77b3de1472a5393"></a><!-- doxytag: member="sxsdk::background_interface::set_texture_deprecated" ref="aaa53e71ac3f7463ea77b3de1472a5393" args="(enums::background_part p, int i, enums::background_texture e, void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_texture_deprecated</b> (<a class="el" href="namespacesxsdk_1_1enums.html#a5d0f8ad15df8814a1711bd14e17852ee">enums::background_part</a> p, int i, <a class="el" href="namespacesxsdk_1_1enums.html#a617228dcf51770d98d44df1837e9ca4a">enums::background_texture</a> e, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0d7a3d357ceebd33c4ea8a7c82ad685c"></a><!-- doxytag: member="sxsdk::background_interface::get_texture_deprecated" ref="a0d7a3d357ceebd33c4ea8a7c82ad685c" args="(enums::background_part p, int i, void *aux=0)" -->
+virtual <a class="el" href="namespacesxsdk_1_1enums.html#a617228dcf51770d98d44df1837e9ca4a">enums::background_texture</a>&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_texture_deprecated</b> (<a class="el" href="namespacesxsdk_1_1enums.html#a5d0f8ad15df8814a1711bd14e17852ee">enums::background_part</a> p, int i, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab1584ebe78de6bcf875be4082bc94124"></a><!-- doxytag: member="sxsdk::background_interface::set_mapping_deprecated" ref="ab1584ebe78de6bcf875be4082bc94124" args="(enums::background_part p, int i, float r, void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_mapping_deprecated</b> (<a class="el" href="namespacesxsdk_1_1enums.html#a5d0f8ad15df8814a1711bd14e17852ee">enums::background_part</a> p, int i, float r, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a97506a5103ce5a52508f4a28650a410f"></a><!-- doxytag: member="sxsdk::background_interface::get_mapping_deprecated" ref="a97506a5103ce5a52508f4a28650a410f" args="(enums::background_part p, int i, void *aux=0)" -->
+virtual float&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_mapping_deprecated</b> (<a class="el" href="namespacesxsdk_1_1enums.html#a5d0f8ad15df8814a1711bd14e17852ee">enums::background_part</a> p, int i, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a71b7e15ca08546d37c43fcdbf4f09a19"></a><!-- doxytag: member="sxsdk::background_interface::set_mapping_color_deprecated" ref="a71b7e15ca08546d37c43fcdbf4f09a19" args="(enums::background_part p, int i, const sxsdk::rgb_class &amp;color, void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_mapping_color_deprecated</b> (<a class="el" href="namespacesxsdk_1_1enums.html#a5d0f8ad15df8814a1711bd14e17852ee">enums::background_part</a> p, int i, const sxsdk::rgb_class &amp;color, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8befe82372846da9758946edf2d76a4c"></a><!-- doxytag: member="sxsdk::background_interface::get_mapping_color_deprecated" ref="a8befe82372846da9758946edf2d76a4c" args="(enums::background_part p, int i, void *aux=0)" -->
+virtual sxsdk::rgb_class&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_mapping_color_deprecated</b> (<a class="el" href="namespacesxsdk_1_1enums.html#a5d0f8ad15df8814a1711bd14e17852ee">enums::background_part</a> p, int i, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5fd9561397f75217c1268b5d4b7990d2"></a><!-- doxytag: member="sxsdk::background_interface::set_density_deprecated" ref="a5fd9561397f75217c1268b5d4b7990d2" args="(enums::background_part p, int i, float r, void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_density_deprecated</b> (<a class="el" href="namespacesxsdk_1_1enums.html#a5d0f8ad15df8814a1711bd14e17852ee">enums::background_part</a> p, int i, float r, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7766baea12c4942191d93efffc6f25cd"></a><!-- doxytag: member="sxsdk::background_interface::get_density_deprecated" ref="a7766baea12c4942191d93efffc6f25cd" args="(enums::background_part p, int i, void *aux=0)" -->
+virtual float&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_density_deprecated</b> (<a class="el" href="namespacesxsdk_1_1enums.html#a5d0f8ad15df8814a1711bd14e17852ee">enums::background_part</a> p, int i, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4aa971c847a4aad2fabecd38a5eb9cdc"></a><!-- doxytag: member="sxsdk::background_interface::set_size_x_deprecated" ref="a4aa971c847a4aad2fabecd38a5eb9cdc" args="(enums::background_part p, int i, float r, void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_size_x_deprecated</b> (<a class="el" href="namespacesxsdk_1_1enums.html#a5d0f8ad15df8814a1711bd14e17852ee">enums::background_part</a> p, int i, float r, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afc1de6f90e0e94ed537dc9e5b117c8e8"></a><!-- doxytag: member="sxsdk::background_interface::get_size_x_deprecated" ref="afc1de6f90e0e94ed537dc9e5b117c8e8" args="(enums::background_part p, int i, void *aux=0)" -->
+virtual float&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_size_x_deprecated</b> (<a class="el" href="namespacesxsdk_1_1enums.html#a5d0f8ad15df8814a1711bd14e17852ee">enums::background_part</a> p, int i, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac687ecb7b97676a6ccc4aed96a4e5b51"></a><!-- doxytag: member="sxsdk::background_interface::set_size_z_deprecated" ref="ac687ecb7b97676a6ccc4aed96a4e5b51" args="(enums::background_part p, int i, float r, void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_size_z_deprecated</b> (<a class="el" href="namespacesxsdk_1_1enums.html#a5d0f8ad15df8814a1711bd14e17852ee">enums::background_part</a> p, int i, float r, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6ba7e309ab9a7f25fbf952322c7b028e"></a><!-- doxytag: member="sxsdk::background_interface::get_size_z_deprecated" ref="a6ba7e309ab9a7f25fbf952322c7b028e" args="(enums::background_part p, int i, void *aux=0)" -->
+virtual float&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_size_z_deprecated</b> (<a class="el" href="namespacesxsdk_1_1enums.html#a5d0f8ad15df8814a1711bd14e17852ee">enums::background_part</a> p, int i, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a13ed2561d53970fb14c6771c3d13d3d4"></a><!-- doxytag: member="sxsdk::background_interface::set_horizontal_flip_deprecated" ref="a13ed2561d53970fb14c6771c3d13d3d4" args="(enums::background_part p, int i, bool b, void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_horizontal_flip_deprecated</b> (<a class="el" href="namespacesxsdk_1_1enums.html#a5d0f8ad15df8814a1711bd14e17852ee">enums::background_part</a> p, int i, bool b, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a48dff0bc6b87dd4e10faf21215fcba0f"></a><!-- doxytag: member="sxsdk::background_interface::get_horizontal_flip_deprecated" ref="a48dff0bc6b87dd4e10faf21215fcba0f" args="(enums::background_part p, int i, void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_horizontal_flip_deprecated</b> (<a class="el" href="namespacesxsdk_1_1enums.html#a5d0f8ad15df8814a1711bd14e17852ee">enums::background_part</a> p, int i, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9f8d1900391ab68e7797196f802ba0f1"></a><!-- doxytag: member="sxsdk::background_interface::set_vertical_flip_deprecated" ref="a9f8d1900391ab68e7797196f802ba0f1" args="(enums::background_part p, int i, bool b, void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_vertical_flip_deprecated</b> (<a class="el" href="namespacesxsdk_1_1enums.html#a5d0f8ad15df8814a1711bd14e17852ee">enums::background_part</a> p, int i, bool b, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a00464e1076360670d7d3e1ab82932586"></a><!-- doxytag: member="sxsdk::background_interface::get_vertical_flip_deprecated" ref="a00464e1076360670d7d3e1ab82932586" args="(enums::background_part p, int i, void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_vertical_flip_deprecated</b> (<a class="el" href="namespacesxsdk_1_1enums.html#a5d0f8ad15df8814a1711bd14e17852ee">enums::background_part</a> p, int i, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6c97bd74a98c49628d40eb7fc29baa97"></a><!-- doxytag: member="sxsdk::background_interface::set_swap_axes_deprecated" ref="a6c97bd74a98c49628d40eb7fc29baa97" args="(enums::background_part p, int i, bool b, void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_swap_axes_deprecated</b> (<a class="el" href="namespacesxsdk_1_1enums.html#a5d0f8ad15df8814a1711bd14e17852ee">enums::background_part</a> p, int i, bool b, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab026b8da0f1e6184e3ccd234fdc91216"></a><!-- doxytag: member="sxsdk::background_interface::get_swap_axes_deprecated" ref="ab026b8da0f1e6184e3ccd234fdc91216" args="(enums::background_part p, int i, void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_swap_axes_deprecated</b> (<a class="el" href="namespacesxsdk_1_1enums.html#a5d0f8ad15df8814a1711bd14e17852ee">enums::background_part</a> p, int i, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9ae2ff9033587b1cfb84bf5873379d56"></a><!-- doxytag: member="sxsdk::background_interface::set_phase_deprecated" ref="a9ae2ff9033587b1cfb84bf5873379d56" args="(enums::background_part p, int i, float phase, void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_phase_deprecated</b> (<a class="el" href="namespacesxsdk_1_1enums.html#a5d0f8ad15df8814a1711bd14e17852ee">enums::background_part</a> p, int i, float phase, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a516ec4c77b18c38d5ee19e6b7e943fae"></a><!-- doxytag: member="sxsdk::background_interface::get_phase_deprecated" ref="a516ec4c77b18c38d5ee19e6b7e943fae" args="(enums::background_part p, int i, void *aux=0)" -->
+virtual float&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_phase_deprecated</b> (<a class="el" href="namespacesxsdk_1_1enums.html#a5d0f8ad15df8814a1711bd14e17852ee">enums::background_part</a> p, int i, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af6ae2288e43a2ba94fec128e895779f1"></a><!-- doxytag: member="sxsdk::background_interface::background_interface_test_1" ref="af6ae2288e43a2ba94fec128e895779f1" args="(void *aux=0)" -->
+virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><b>background_interface_test_1</b> (void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3582d465792a3001513b68f3fd01e1b6"></a><!-- doxytag: member="sxsdk::background_interface::set_image_deprecated" ref="a3582d465792a3001513b68f3fd01e1b6" args="(enums::background_part p, int i, sxsdk::image_interface *image, void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_image_deprecated</b> (<a class="el" href="namespacesxsdk_1_1enums.html#a5d0f8ad15df8814a1711bd14e17852ee">enums::background_part</a> p, int i, <a class="el" href="structsxsdk_1_1image__interface.html">sxsdk::image_interface</a> *image, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a335e216e7687fdded817dad55fc5b2fb"></a><!-- doxytag: member="sxsdk::background_interface::get_image_interface_deprecated" ref="a335e216e7687fdded817dad55fc5b2fb" args="(enums::background_part p, int i, void *aux=0)" -->
+virtual <a class="el" href="structsxsdk_1_1image__interface.html">sxsdk::image_interface</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_image_interface_deprecated</b> (<a class="el" href="namespacesxsdk_1_1enums.html#a5d0f8ad15df8814a1711bd14e17852ee">enums::background_part</a> p, int i, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afca5b86d27f160726a4463a4ee946902"></a><!-- doxytag: member="sxsdk::background_interface::set_lighting_intensity_factor" ref="afca5b86d27f160726a4463a4ee946902" args="(float lighting_intensity_factor_param, void *=0)" -->
+virtual <a class="el" href="structsxsdk_1_1background__interface.html">background_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1background__interface.html#afca5b86d27f160726a4463a4ee946902">set_lighting_intensity_factor</a> (float lighting_intensity_factor_param, void *=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">光源としての明るさ係数を設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a824c706da6983b02796aa5713377495e"></a><!-- doxytag: member="sxsdk::background_interface::get_lighting_intensity_factor" ref="a824c706da6983b02796aa5713377495e" args="(void *=0) const " -->
+virtual float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1background__interface.html#a824c706da6983b02796aa5713377495e">get_lighting_intensity_factor</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">光源としての明るさ係数を取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structsxsdk_1_1background__layer__class.html">background_layer_class</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1background__interface.html#a6ec563aa02ab7936ac0f702f62326e3c">background_layer</a> (int i, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">指定された番号の背景レイヤの参照を取得する。  <a href="#a6ec563aa02ab7936ac0f702f62326e3c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2bebd972a4959cc2f04d8adbaf1e968b"></a><!-- doxytag: member="sxsdk::background_interface::append_background_layer" ref="a2bebd972a4959cc2f04d8adbaf1e968b" args="(void *aux=0)" -->
+virtual <a class="el" href="structsxsdk_1_1background__layer__class.html">background_layer_class</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1background__interface.html#a2bebd972a4959cc2f04d8adbaf1e968b">append_background_layer</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">背景レイヤを追加する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4109db6639f97a2b5c57b2b8cb1f97e1"></a><!-- doxytag: member="sxsdk::background_interface::stream_to_clipboard" ref="a4109db6639f97a2b5c57b2b8cb1f97e1" args="(void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1background__interface.html#a4109db6639f97a2b5c57b2b8cb1f97e1">stream_to_clipboard</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オブジェクトの内容をテキスト（XML）としてクリップボードにコピーする。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1518965540c7606e9a670030657bc22c"></a><!-- doxytag: member="sxsdk::background_interface::get_active_layer" ref="a1518965540c7606e9a670030657bc22c" args="(void *=0) const " -->
+virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1background__interface.html#a1518965540c7606e9a670030657bc22c">get_active_layer</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">選択されているレイヤーの番号を取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5e13f7305add7d95fcac23aee8e80ee6"></a><!-- doxytag: member="sxsdk::background_interface::set_active_layer" ref="a5e13f7305add7d95fcac23aee8e80ee6" args="(int active_layer_param, void *=0)" -->
+virtual <a class="el" href="structsxsdk_1_1background__interface.html">background_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1background__interface.html#a5e13f7305add7d95fcac23aee8e80ee6">set_active_layer</a> (int active_layer_param, void *=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">選択されているレイヤーの番号を設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae09b3a1b4ac1186e9fcfb8ec56054db7"></a><!-- doxytag: member="sxsdk::background_interface::get_upper_base_color" ref="ae09b3a1b4ac1186e9fcfb8ec56054db7" args="(void *=0) const " -->
+virtual sxsdk::rgb_class&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1background__interface.html#ae09b3a1b4ac1186e9fcfb8ec56054db7">get_upper_base_color</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">上半球の基本色を取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a46fd9e61557217057d69759d8ef7a9be"></a><!-- doxytag: member="sxsdk::background_interface::set_upper_base_color" ref="a46fd9e61557217057d69759d8ef7a9be" args="(const sxsdk::rgb_class &amp;upper_base_color_param, void *=0)" -->
+virtual <a class="el" href="structsxsdk_1_1background__interface.html">background_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1background__interface.html#a46fd9e61557217057d69759d8ef7a9be">set_upper_base_color</a> (const sxsdk::rgb_class &amp;upper_base_color_param, void *=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">上半球の基本色を設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6913203e8f950520c30b14357f6e1d39"></a><!-- doxytag: member="sxsdk::background_interface::get_lower_base_color" ref="a6913203e8f950520c30b14357f6e1d39" args="(void *=0) const " -->
+virtual sxsdk::rgb_class&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1background__interface.html#a6913203e8f950520c30b14357f6e1d39">get_lower_base_color</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">下半球の基本色を取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a80fddb534a99c136103bcac524c57b34"></a><!-- doxytag: member="sxsdk::background_interface::set_lower_base_color" ref="a80fddb534a99c136103bcac524c57b34" args="(const sxsdk::rgb_class &amp;lower_base_color_param, void *=0)" -->
+virtual <a class="el" href="structsxsdk_1_1background__interface.html">background_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1background__interface.html#a80fddb534a99c136103bcac524c57b34">set_lower_base_color</a> (const sxsdk::rgb_class &amp;lower_base_color_param, void *=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">下半球の基本色を設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a383c70a821cc6cfb65591e2ca9e2928d"></a><!-- doxytag: member="sxsdk::background_interface::get_number_of_background_layers" ref="a383c70a821cc6cfb65591e2ca9e2928d" args="(void *=0) const " -->
+virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1background__interface.html#a383c70a821cc6cfb65591e2ca9e2928d">get_number_of_background_layers</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">背景レイヤの数を取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1background__interface.html#a6376c2a3539a169a16a0d4a132287a8a">move_up_background_layer</a> (int go, int select=-1, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1background__interface.html#a63a9fbc32684036f2585965e07f33945">move_down_background_layer</a> (int go, int select=-1, void *aux=0)</td></tr>
+</table>
+<hr/><h2>関数</h2>
+<a class="anchor" id="a6ec563aa02ab7936ac0f702f62326e3c"></a><!-- doxytag: member="sxsdk::background_interface::background_layer" ref="a6ec563aa02ab7936ac0f702f62326e3c" args="(int i, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structsxsdk_1_1background__layer__class.html">background_layer_class</a>&amp; sxsdk::background_interface::background_layer </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>指定された番号の背景レイヤの参照を取得する。 </p>
+<p><code><a class="el" href="structsxsdk_1_1background__interface.html#a383c70a821cc6cfb65591e2ca9e2928d" title="背景レイヤの数を取得する。">get_number_of_background_layers()</a></code> で背景レイヤの数が取得できる。存在しないレイヤを指定した場合は例外が投げられる。</p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>i</em>&nbsp;</td><td>背景レイヤの番号 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ada3663c33b98e13aabe210c8d68589d9"></a><!-- doxytag: member="sxsdk::background_interface::load" ref="ada3663c33b98e13aabe210c8d68589d9" args="(const char *const &amp;from, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::background_interface::load </td>
+          <td>(</td>
+          <td class="paramtype">const char *const &amp;&nbsp;</td>
+          <td class="paramname"> <em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>背景設定をファイルから読み込む。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>from</em>&nbsp;</td><td>読み込むファイルの名称を設定する。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a63a9fbc32684036f2585965e07f33945"></a><!-- doxytag: member="sxsdk::background_interface::move_down_background_layer" ref="a63a9fbc32684036f2585965e07f33945" args="(int go, int select=&#45;1, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::background_interface::move_down_background_layer </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>go</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>select</em> = <code>-1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>go</em>&nbsp;</td><td>値ほど動かす </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>select</em>&nbsp;</td><td>動かせるmapping_layer index </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a6376c2a3539a169a16a0d4a132287a8a"></a><!-- doxytag: member="sxsdk::background_interface::move_up_background_layer" ref="a6376c2a3539a169a16a0d4a132287a8a" args="(int go, int select=&#45;1, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::background_interface::move_up_background_layer </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>go</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>select</em> = <code>-1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>go</em>&nbsp;</td><td>値ほど動かす </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>select</em>&nbsp;</td><td>動かせるmapping_layer index </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a9322e02156dfd27dedc4af01a7490724"></a><!-- doxytag: member="sxsdk::background_interface::save" ref="a9322e02156dfd27dedc4af01a7490724" args="(const char *const &amp;in, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::background_interface::save </td>
+          <td>(</td>
+          <td class="paramtype">const char *const &amp;&nbsp;</td>
+          <td class="paramname"> <em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>背景設定をファイルに保存する。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>in</em>&nbsp;</td><td>保存するファイルの名称を設定する。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>この構造体の説明は次のファイルから生成されました:<ul>
+<li><a class="el" href="backgroundinterface_8h_source.html">backgroundinterface.h</a></li>
+</ul>
+</div>
+<br><br>
+<hr>
+<div align="center">Copyright &copy; e frontier, Inc. All rights reserved.</div>
+</body></html>

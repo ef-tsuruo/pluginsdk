@@ -1,0 +1,503 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>構造体 sxsdk::surface_interface</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- 作成： Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="main.html"><span>メインページ</span></a></li>
+      <li><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>構成</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>構成メンバ</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath"><a class="el" href="namespacesxsdk.html">sxsdk</a>::<a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a>
+  </div>
+</div>
+<div class="contents">
+<h1>構造体 sxsdk::surface_interface</h1><!-- doxytag: class="sxsdk::surface_interface" --><!-- doxytag: inherits="sxsdk::shade_interface" --><div class="dynheader">
+sxsdk::surface_interfaceに対する継承グラフ</div>
+<div class="dynsection">
+ <div class="center">
+  <img src="structsxsdk_1_1surface__interface.gif" usemap="#sxsdk::surface_interface_map" alt=""/>
+  <map id="sxsdk::surface_interface_map" name="sxsdk::surface_interface_map">
+<area href="structsxsdk_1_1shade__interface.html" alt="sxsdk::shade_interface" shape="rect" coords="0,56,149,80"/>
+<area href="classunknown__interface.html" alt="unknown_interface" shape="rect" coords="0,0,149,24"/>
+</map>
+ </div>
+</div>
+
+<p><a href="structsxsdk_1_1surface__interface-members.html">すべてのメンバ一覧</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Public 型</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &nbsp;</td><td class="memItemRight" valign="bottom"><b>type_enum</b> { <br/>
+&nbsp;&nbsp;<b>no_mapping</b>, 
+<b>check</b>, 
+<b>marble</b>, 
+<b>spotted</b>, 
+<br/>
+&nbsp;&nbsp;<b>bumpy</b>, 
+<b>wrinkle</b>, 
+<b>wave</b>, 
+<b>waves</b>, 
+<br/>
+&nbsp;&nbsp;<b>stripe</b>, 
+<b>picture_mapping</b>, 
+<b>bump_mapping</b>, 
+<b>metallic</b>, 
+<br/>
+&nbsp;&nbsp;<b>woody</b>, 
+<b>log</b>, 
+<b>reflection_mapping</b>, 
+<b>transparency_mapping</b>, 
+<br/>
+&nbsp;&nbsp;<b>trim_mapping</b>, 
+<b>holes</b>, 
+<b>end</b>
+<br/>
+ }</td></tr>
+<tr><td colspan="2"><h2>Public メソッド</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a161e50ebb02a860a68864e7380c160fd"></a><!-- doxytag: member="sxsdk::surface_interface::save" ref="a161e50ebb02a860a68864e7380c160fd" args="(const char *const &amp;in, void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>save</b> (const char *const &amp;in, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0adee2188b7c162d9a02b53fd128a800"></a><!-- doxytag: member="sxsdk::surface_interface::load" ref="a0adee2188b7c162d9a02b53fd128a800" args="(const char *const &amp;from, void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>load</b> (const char *const &amp;from, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a54e07453a82309c3eae0255130c449fc"></a><!-- doxytag: member="sxsdk::surface_interface::set_mapping_origin" ref="a54e07453a82309c3eae0255130c449fc" args="(int i, const sxsdk::vec3 &amp;v, void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_mapping_origin</b> (int i, const sxsdk::vec3 &amp;v, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a19479ba60f226716e4f663449098a693"></a><!-- doxytag: member="sxsdk::surface_interface::get_mapping_origin" ref="a19479ba60f226716e4f663449098a693" args="(int i, void *aux=0)" -->
+virtual sxsdk::vec3&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_mapping_origin</b> (int i, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab7b8c08a8e9df1e45228859537f92586"></a><!-- doxytag: member="sxsdk::surface_interface::set_no_shading" ref="ab7b8c08a8e9df1e45228859537f92586" args="(bool no_shading_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_no_shading</b> (bool no_shading_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a172a66a80a50a95747caf73c1f993fcd"></a><!-- doxytag: member="sxsdk::surface_interface::get_no_shading" ref="a172a66a80a50a95747caf73c1f993fcd" args="(void *=0) const " -->
+virtual test bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_no_shading</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a810e364efbedee549f3291563db95b7e"></a><!-- doxytag: member="sxsdk::surface_interface::set_dont_cast_shadow" ref="a810e364efbedee549f3291563db95b7e" args="(bool dont_cast_shadow_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_dont_cast_shadow</b> (bool dont_cast_shadow_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5c7cfb45d834225f46962eee4236dd42"></a><!-- doxytag: member="sxsdk::surface_interface::get_dont_cast_shadow" ref="a5c7cfb45d834225f46962eee4236dd42" args="(void *=0) const " -->
+virtual test bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_dont_cast_shadow</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a129c9ee662e0778175d7ffa0e1cabb91"></a><!-- doxytag: member="sxsdk::surface_interface::set_dont_show_shadow" ref="a129c9ee662e0778175d7ffa0e1cabb91" args="(bool dont_show_shadow_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_dont_show_shadow</b> (bool dont_show_shadow_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a406cbe7338367eacce0296c50f626ad3"></a><!-- doxytag: member="sxsdk::surface_interface::get_dont_show_shadow" ref="a406cbe7338367eacce0296c50f626ad3" args="(void *=0) const " -->
+virtual test bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_dont_show_shadow</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a91513237d268d32b84a3ff20125df339"></a><!-- doxytag: member="sxsdk::surface_interface::set_black_key_mask" ref="a91513237d268d32b84a3ff20125df339" args="(bool black_key_mask_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_black_key_mask</b> (bool black_key_mask_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaefb18ba1ca9306d69ff3c6f78aaba12"></a><!-- doxytag: member="sxsdk::surface_interface::get_black_key_mask" ref="aaefb18ba1ca9306d69ff3c6f78aaba12" args="(void *=0) const " -->
+virtual test bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_black_key_mask</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa6cede9758bd3e8579928f093980eead"></a><!-- doxytag: member="sxsdk::surface_interface::set_white_key_mask" ref="aa6cede9758bd3e8579928f093980eead" args="(bool white_key_mask_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_white_key_mask</b> (bool white_key_mask_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3488f631d86d68b5e533d6be01bee2e6"></a><!-- doxytag: member="sxsdk::surface_interface::get_white_key_mask" ref="a3488f631d86d68b5e533d6be01bee2e6" args="(void *=0) const " -->
+virtual test bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_white_key_mask</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5fea30657404c84b421f3ed5caa6cfbb"></a><!-- doxytag: member="sxsdk::surface_interface::set_back_light_obsolete" ref="a5fea30657404c84b421f3ed5caa6cfbb" args="(bool b, void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_back_light_obsolete</b> (bool b, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa8a348a9c2e0a78f39b1bdd0106e4fa3"></a><!-- doxytag: member="sxsdk::surface_interface::get_back_light_obsolete" ref="aa8a348a9c2e0a78f39b1bdd0106e4fa3" args="(void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_back_light_obsolete</b> (void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a73ac4315aa72c5621a616fdb8a2e98f8"></a><!-- doxytag: member="sxsdk::surface_interface::set_smoother_shading" ref="a73ac4315aa72c5621a616fdb8a2e98f8" args="(bool smoother_shading_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_smoother_shading</b> (bool smoother_shading_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a316102120412d01aa33a09ab4bc2cc63"></a><!-- doxytag: member="sxsdk::surface_interface::get_smoother_shading" ref="a316102120412d01aa33a09ab4bc2cc63" args="(void *=0) const " -->
+virtual test bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_smoother_shading</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7aa3b1871139a88dc335a958b7f24a6c"></a><!-- doxytag: member="sxsdk::surface_interface::set_dracula" ref="a7aa3b1871139a88dc335a958b7f24a6c" args="(bool dracula_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_dracula</b> (bool dracula_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaa911788c6b749abf313266620f512c4"></a><!-- doxytag: member="sxsdk::surface_interface::get_dracula" ref="aaa911788c6b749abf313266620f512c4" args="(void *=0) const " -->
+virtual test bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_dracula</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a21bccc26979f1433b84719c5a351d976"></a><!-- doxytag: member="sxsdk::surface_interface::set_texture_transformation" ref="a21bccc26979f1433b84719c5a351d976" args="(bool texture_transformation_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_texture_transformation</b> (bool texture_transformation_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a26b577a54af5de1c2a9dac2244ed9060"></a><!-- doxytag: member="sxsdk::surface_interface::get_texture_transformation" ref="a26b577a54af5de1c2a9dac2244ed9060" args="(void *=0) const " -->
+virtual test bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_texture_transformation</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7e2be6292bc806af9c39215edc2917d9"></a><!-- doxytag: member="sxsdk::surface_interface::set_highlight" ref="a7e2be6292bc806af9c39215edc2917d9" args="(float highlight_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_highlight</b> (float highlight_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5b10d5c33fd92fb287cdafef313a5324"></a><!-- doxytag: member="sxsdk::surface_interface::get_highlight" ref="a5b10d5c33fd92fb287cdafef313a5324" args="(void *=0) const " -->
+virtual test float&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_highlight</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4a3506e3377c58ed2fe8a69bf366282c"></a><!-- doxytag: member="sxsdk::surface_interface::set_highlight_2" ref="a4a3506e3377c58ed2fe8a69bf366282c" args="(float highlight_2_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_highlight_2</b> (float highlight_2_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a992b641d187031cbc34f9125052e7602"></a><!-- doxytag: member="sxsdk::surface_interface::get_highlight_2" ref="a992b641d187031cbc34f9125052e7602" args="(void *=0) const " -->
+virtual test float&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_highlight_2</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a15cda2e673b21fc8bac5505031e82e9b"></a><!-- doxytag: member="sxsdk::surface_interface::set_highlight_color" ref="a15cda2e673b21fc8bac5505031e82e9b" args="(const sxsdk::rgb_class &amp;highlight_color_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_highlight_color</b> (const sxsdk::rgb_class &amp;highlight_color_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a580c2ff3b4754cce339ec4c33c1959df"></a><!-- doxytag: member="sxsdk::surface_interface::get_highlight_color" ref="a580c2ff3b4754cce339ec4c33c1959df" args="(void *=0) const " -->
+virtual test sxsdk::rgb_class&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_highlight_color</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a519ac8a190bed999d9e0e6adc7674bd9"></a><!-- doxytag: member="sxsdk::surface_interface::set_highlight_color_2" ref="a519ac8a190bed999d9e0e6adc7674bd9" args="(const sxsdk::rgb_class &amp;highlight_color_2_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_highlight_color_2</b> (const sxsdk::rgb_class &amp;highlight_color_2_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a73776c7e9c98d94cdebf60d2761a6991"></a><!-- doxytag: member="sxsdk::surface_interface::get_highlight_color_2" ref="a73776c7e9c98d94cdebf60d2761a6991" args="(void *=0) const " -->
+virtual test sxsdk::rgb_class&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_highlight_color_2</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a91567ffed460238bd51d8f9e4c4604c4"></a><!-- doxytag: member="sxsdk::surface_interface::set_highlight_size" ref="a91567ffed460238bd51d8f9e4c4604c4" args="(float highlight_size_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_highlight_size</b> (float highlight_size_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a83586e107f469d323f728f71b44c42c4"></a><!-- doxytag: member="sxsdk::surface_interface::get_highlight_size" ref="a83586e107f469d323f728f71b44c42c4" args="(void *=0) const " -->
+virtual test float&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_highlight_size</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a84abd5976a43ca72db89218ff4d5b494"></a><!-- doxytag: member="sxsdk::surface_interface::set_highlight_size_2" ref="a84abd5976a43ca72db89218ff4d5b494" args="(float highlight_size_2_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_highlight_size_2</b> (float highlight_size_2_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a71095b5b07644a3bbfd6a120a1fc7999"></a><!-- doxytag: member="sxsdk::surface_interface::get_highlight_size_2" ref="a71095b5b07644a3bbfd6a120a1fc7999" args="(void *=0) const " -->
+virtual test float&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_highlight_size_2</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae485daffe3cf0e0eadee091ec7f477a4"></a><!-- doxytag: member="sxsdk::surface_interface::set_reflection" ref="ae485daffe3cf0e0eadee091ec7f477a4" args="(float reflection_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_reflection</b> (float reflection_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa21b9343160939d7ae0ab3dca563c254"></a><!-- doxytag: member="sxsdk::surface_interface::get_reflection" ref="aa21b9343160939d7ae0ab3dca563c254" args="(void *=0) const " -->
+virtual test float&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_reflection</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab7dbdb5a59903d27fb053a34bd690e4b"></a><!-- doxytag: member="sxsdk::surface_interface::set_reflection_color" ref="ab7dbdb5a59903d27fb053a34bd690e4b" args="(const sxsdk::rgb_class &amp;reflection_color_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_reflection_color</b> (const sxsdk::rgb_class &amp;reflection_color_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4b2ca02a3c15b2334e3b2272b120244d"></a><!-- doxytag: member="sxsdk::surface_interface::get_reflection_color" ref="a4b2ca02a3c15b2334e3b2272b120244d" args="(void *=0) const " -->
+virtual test sxsdk::rgb_class&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_reflection_color</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a84e78bb9efa6e1c2c6a457b8e9f00c40"></a><!-- doxytag: member="sxsdk::surface_interface::set_roughness" ref="a84e78bb9efa6e1c2c6a457b8e9f00c40" args="(float roughness_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_roughness</b> (float roughness_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a54eb25f08559a041e395d178383565d0"></a><!-- doxytag: member="sxsdk::surface_interface::get_roughness" ref="a54eb25f08559a041e395d178383565d0" args="(void *=0) const " -->
+virtual test float&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_roughness</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a783ad1f547a72f901ee918ce540f404d"></a><!-- doxytag: member="sxsdk::surface_interface::set_transparency" ref="a783ad1f547a72f901ee918ce540f404d" args="(float transparency_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_transparency</b> (float transparency_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afd1f197ba244e219e5b8e406a496e221"></a><!-- doxytag: member="sxsdk::surface_interface::get_transparency" ref="afd1f197ba244e219e5b8e406a496e221" args="(void *=0) const " -->
+virtual test float&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_transparency</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0668f52b0bb63f8eeb0b41579f558dfe"></a><!-- doxytag: member="sxsdk::surface_interface::set_transparency_color" ref="a0668f52b0bb63f8eeb0b41579f558dfe" args="(const sxsdk::rgb_class &amp;transparency_color_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_transparency_color</b> (const sxsdk::rgb_class &amp;transparency_color_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a15c9c1c0607bffd59ff050b6b7e8a4fc"></a><!-- doxytag: member="sxsdk::surface_interface::get_transparency_color" ref="a15c9c1c0607bffd59ff050b6b7e8a4fc" args="(void *=0) const " -->
+virtual test sxsdk::rgb_class&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_transparency_color</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6a0cc471ebc4482a2ce141bcb3dc6e6b"></a><!-- doxytag: member="sxsdk::surface_interface::set_refraction" ref="a6a0cc471ebc4482a2ce141bcb3dc6e6b" args="(float refraction_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_refraction</b> (float refraction_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4c82ffc83b4d1cc021c53d22e3d78784"></a><!-- doxytag: member="sxsdk::surface_interface::get_refraction" ref="a4c82ffc83b4d1cc021c53d22e3d78784" args="(void *=0) const " -->
+virtual test float&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_refraction</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa4ae17a4b4a28f9c5ba40b608a245f0"></a><!-- doxytag: member="sxsdk::surface_interface::set_metallic" ref="afa4ae17a4b4a28f9c5ba40b608a245f0" args="(float metallic_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_metallic</b> (float metallic_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a47d1232988414efc0e04a4b6ef8eabb9"></a><!-- doxytag: member="sxsdk::surface_interface::get_metallic" ref="a47d1232988414efc0e04a4b6ef8eabb9" args="(void *=0) const " -->
+virtual test float&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_metallic</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1ad306b3ae844a4cb14b446864b12025"></a><!-- doxytag: member="sxsdk::surface_interface::set_metallic_color" ref="a1ad306b3ae844a4cb14b446864b12025" args="(const sxsdk::rgb_class &amp;metallic_color_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_metallic_color</b> (const sxsdk::rgb_class &amp;metallic_color_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae6bcbbc63b8a8c53fe2a6707e2b5ce80"></a><!-- doxytag: member="sxsdk::surface_interface::get_metallic_color" ref="ae6bcbbc63b8a8c53fe2a6707e2b5ce80" args="(void *=0) const " -->
+virtual test sxsdk::rgb_class&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_metallic_color</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa380d1dbb7a3b9ffa64adbc2761e37e0"></a><!-- doxytag: member="sxsdk::surface_interface::set_glow" ref="aa380d1dbb7a3b9ffa64adbc2761e37e0" args="(float glow_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_glow</b> (float glow_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adec4e091e7509d6898edb284a7b8f6aa"></a><!-- doxytag: member="sxsdk::surface_interface::get_glow" ref="adec4e091e7509d6898edb284a7b8f6aa" args="(void *=0) const " -->
+virtual test float&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_glow</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a92be05de1fa7c6c4106eb8ef2dd5fe5c"></a><!-- doxytag: member="sxsdk::surface_interface::set_soft_glow" ref="a92be05de1fa7c6c4106eb8ef2dd5fe5c" args="(float soft_glow_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_soft_glow</b> (float soft_glow_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad507d845d46da6fdccfd670ca157e4ff"></a><!-- doxytag: member="sxsdk::surface_interface::get_soft_glow" ref="ad507d845d46da6fdccfd670ca157e4ff" args="(void *=0) const " -->
+virtual test float&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_soft_glow</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a253b62e9a9a9efdcc2f47f483b9bd81a"></a><!-- doxytag: member="sxsdk::surface_interface::set_glow_color" ref="a253b62e9a9a9efdcc2f47f483b9bd81a" args="(const sxsdk::rgb_class &amp;glow_color_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_glow_color</b> (const sxsdk::rgb_class &amp;glow_color_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a901046fb29331841d11422ae960747ac"></a><!-- doxytag: member="sxsdk::surface_interface::get_glow_color" ref="a901046fb29331841d11422ae960747ac" args="(void *=0) const " -->
+virtual test sxsdk::rgb_class&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_glow_color</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4ae76981acc27bb6afcdfdae2386d5cf"></a><!-- doxytag: member="sxsdk::surface_interface::get_number_of_mapping_layers" ref="a4ae76981acc27bb6afcdfdae2386d5cf" args="(void *=0) const " -->
+virtual test int&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_number_of_mapping_layers</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa4db81d98e7eeb09b3a718792bc75730"></a><!-- doxytag: member="sxsdk::surface_interface::set_texture" ref="aa4db81d98e7eeb09b3a718792bc75730" args="(int i, surface_interface::type_enum e, void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_texture</b> (int i, surface_interface::type_enum e, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae67b2af775567c6eb9d622bab49de1c0"></a><!-- doxytag: member="sxsdk::surface_interface::get_texture" ref="ae67b2af775567c6eb9d622bab49de1c0" args="(int i, void *aux=0)" -->
+virtual <br class="typebreak"/>
+surface_interface::type_enum&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_texture</b> (int i, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a77ff19f931027d0c4287292620dd4c64"></a><!-- doxytag: member="sxsdk::surface_interface::set_mapping" ref="a77ff19f931027d0c4287292620dd4c64" args="(int i, float mapping, void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_mapping</b> (int i, float mapping, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af61a127bfee5d98e1eb831e0a708c9d8"></a><!-- doxytag: member="sxsdk::surface_interface::get_mapping" ref="af61a127bfee5d98e1eb831e0a708c9d8" args="(int i, void *aux=0)" -->
+virtual float&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_mapping</b> (int i, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adcf8219bc1b3c00f2643ee7296c9a011"></a><!-- doxytag: member="sxsdk::surface_interface::set_mapping_color" ref="adcf8219bc1b3c00f2643ee7296c9a011" args="(int i, const sxsdk::rgb_class &amp;color, void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_mapping_color</b> (int i, const sxsdk::rgb_class &amp;color, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4f8ca2b1208e5b732611102a28a69278"></a><!-- doxytag: member="sxsdk::surface_interface::get_mapping_color" ref="a4f8ca2b1208e5b732611102a28a69278" args="(int i, void *aux=0)" -->
+virtual sxsdk::rgb_class&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_mapping_color</b> (int i, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1bd4f3579340d43ed130f2558b8bf053"></a><!-- doxytag: member="sxsdk::surface_interface::set_mapping_size" ref="a1bd4f3579340d43ed130f2558b8bf053" args="(int i, float size, void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_mapping_size</b> (int i, float size, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af95d080dff62b5be6cca58c8da6a7d1f"></a><!-- doxytag: member="sxsdk::surface_interface::get_mapping_size" ref="af95d080dff62b5be6cca58c8da6a7d1f" args="(int i, void *aux=0)" -->
+virtual float&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_mapping_size</b> (int i, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0d9b2208e0c7e76d64bb270e19d29da7"></a><!-- doxytag: member="sxsdk::surface_interface::set_turbulence" ref="a0d9b2208e0c7e76d64bb270e19d29da7" args="(int i, float turbulence, void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_turbulence</b> (int i, float turbulence, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4e6e24e2ed00948e20eaeafef5c597f0"></a><!-- doxytag: member="sxsdk::surface_interface::get_turbulence" ref="a4e6e24e2ed00948e20eaeafef5c597f0" args="(int i, void *aux=0)" -->
+virtual float&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_turbulence</b> (int i, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a03ce26c8ad6d7fc65ef02b68044cb301"></a><!-- doxytag: member="sxsdk::surface_interface::set_softness" ref="a03ce26c8ad6d7fc65ef02b68044cb301" args="(int i, float softness, void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_softness</b> (int i, float softness, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae2447763d8fb06c53559163828ea432d"></a><!-- doxytag: member="sxsdk::surface_interface::get_softness" ref="ae2447763d8fb06c53559163828ea432d" args="(int i, void *aux=0)" -->
+virtual float&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_softness</b> (int i, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aef6ecd59b75860802028aa37f83e67b1"></a><!-- doxytag: member="sxsdk::surface_interface::set_horizontal_flip" ref="aef6ecd59b75860802028aa37f83e67b1" args="(int i, bool flip, void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_horizontal_flip</b> (int i, bool flip, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaa456f027e1c9e6e941dea7668adc44a"></a><!-- doxytag: member="sxsdk::surface_interface::get_horizontal_flip" ref="aaa456f027e1c9e6e941dea7668adc44a" args="(int i, void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_horizontal_flip</b> (int i, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad96473d3c2f333f1bd775a25f325950d"></a><!-- doxytag: member="sxsdk::surface_interface::set_vertical_flip" ref="ad96473d3c2f333f1bd775a25f325950d" args="(int i, bool flip, void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_vertical_flip</b> (int i, bool flip, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac49ec289b4a51003c7799ea0373b2a61"></a><!-- doxytag: member="sxsdk::surface_interface::get_vertical_flip" ref="ac49ec289b4a51003c7799ea0373b2a61" args="(int i, void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_vertical_flip</b> (int i, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa8cbd0bd408ae05e2d3308276892666d"></a><!-- doxytag: member="sxsdk::surface_interface::set_swap_axes" ref="aa8cbd0bd408ae05e2d3308276892666d" args="(int i, bool swap, void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_swap_axes</b> (int i, bool swap, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad817d212816e15eff0bfe926c0186bc6"></a><!-- doxytag: member="sxsdk::surface_interface::get_swap_axes" ref="ad817d212816e15eff0bfe926c0186bc6" args="(int i, void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_swap_axes</b> (int i, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acb639592a306d7f50ef4ee979d75fe56"></a><!-- doxytag: member="sxsdk::surface_interface::set_flip" ref="acb639592a306d7f50ef4ee979d75fe56" args="(int i, bool flip, void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_flip</b> (int i, bool flip, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6e83b84e9ffaff8bb9a5c2b316875635"></a><!-- doxytag: member="sxsdk::surface_interface::get_flip" ref="a6e83b84e9ffaff8bb9a5c2b316875635" args="(int i, void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_flip</b> (int i, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab12d458d2ef2bca8c77c660545043136"></a><!-- doxytag: member="sxsdk::surface_interface::set_smooth_mapping" ref="ab12d458d2ef2bca8c77c660545043136" args="(int i, bool b, void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_smooth_mapping</b> (int i, bool b, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a908217d89e8a8a71a0dcd9c75df0c96a"></a><!-- doxytag: member="sxsdk::surface_interface::get_smooth_mapping" ref="a908217d89e8a8a71a0dcd9c75df0c96a" args="(int i, void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_smooth_mapping</b> (int i, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0ab982935042c5ddc280e00c7f2109c7"></a><!-- doxytag: member="sxsdk::surface_interface::set_mapping_projection" ref="a0ab982935042c5ddc280e00c7f2109c7" args="(int i, int j, void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_mapping_projection</b> (int i, int j, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6bb337b94551a70589c41a844084a282"></a><!-- doxytag: member="sxsdk::surface_interface::get_mapping_projection" ref="a6bb337b94551a70589c41a844084a282" args="(int i, void *aux=0)" -->
+virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_mapping_projection</b> (int i, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5c8a41471a89cf2c9118779b6c0b082b"></a><!-- doxytag: member="sxsdk::surface_interface::set_repetition_x" ref="a5c8a41471a89cf2c9118779b6c0b082b" args="(int i, int n, void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_repetition_x</b> (int i, int n, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a82d3fb3e82af6f0f0377d33991696ce9"></a><!-- doxytag: member="sxsdk::surface_interface::get_repetition_x" ref="a82d3fb3e82af6f0f0377d33991696ce9" args="(int i, void *aux=0)" -->
+virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_repetition_x</b> (int i, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad4547cfe180b375821c23c71e9113c18"></a><!-- doxytag: member="sxsdk::surface_interface::set_repetition_y" ref="ad4547cfe180b375821c23c71e9113c18" args="(int i, int n, void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_repetition_y</b> (int i, int n, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5f5cbc16a1d139e0de117dbc538db8e0"></a><!-- doxytag: member="sxsdk::surface_interface::get_repetition_y" ref="a5f5cbc16a1d139e0de117dbc538db8e0" args="(int i, void *aux=0)" -->
+virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_repetition_y</b> (int i, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4fb2fff86705fb1937e6f569045b1d61"></a><!-- doxytag: member="sxsdk::surface_interface::is_master_surface" ref="a4fb2fff86705fb1937e6f569045b1d61" args="(void *=0) const " -->
+virtual test bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>is_master_surface</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6c32d011b7d737bda1c0087006e73aa9"></a><!-- doxytag: member="sxsdk::surface_interface::load_mapping_image" ref="a6c32d011b7d737bda1c0087006e73aa9" args="(int i, const char *const &amp;path, void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>load_mapping_image</b> (int i, const char *const &amp;path, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a413f118c5cf072200b5b73f6cfabfd6a"></a><!-- doxytag: member="sxsdk::surface_interface::get_mapping_image_interface" ref="a413f118c5cf072200b5b73f6cfabfd6a" args="(int i, void *aux=0)" -->
+virtual <a class="el" href="structsxsdk_1_1image__interface.html">sxsdk::image_interface</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_mapping_image_interface</b> (int i, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abd8188b8e77341658070f4bb658639c3"></a><!-- doxytag: member="sxsdk::surface_interface::set_pseudo_caustics" ref="abd8188b8e77341658070f4bb658639c3" args="(float pseudo_caustics_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_pseudo_caustics</b> (float pseudo_caustics_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2b3c3d3fad98bc3568ead8849f2e8e59"></a><!-- doxytag: member="sxsdk::surface_interface::get_pseudo_caustics" ref="a2b3c3d3fad98bc3568ead8849f2e8e59" args="(void *=0) const " -->
+virtual test float&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_pseudo_caustics</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af9110b1fb3c6ff1279c45ce4a1b223a9"></a><!-- doxytag: member="sxsdk::surface_interface::create_mapping_image" ref="af9110b1fb3c6ff1279c45ce4a1b223a9" args="(int i, int width, int height, void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>create_mapping_image</b> (int i, int width, int height, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afe26ce677f248fc60547725100bc939c"></a><!-- doxytag: member="sxsdk::surface_interface::create_duplicate_surface_interface" ref="afe26ce677f248fc60547725100bc939c" args="(void *aux=0)" -->
+virtual <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>create_duplicate_surface_interface</b> (void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adeac74b6bd9089bd997c4e48663768ed"></a><!-- doxytag: member="sxsdk::surface_interface::set_pseudo_caustics_brightness" ref="adeac74b6bd9089bd997c4e48663768ed" args="(float pseudo_caustics_brightness_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_pseudo_caustics_brightness</b> (float pseudo_caustics_brightness_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e1cd3035212786327cb7069442f7ced"></a><!-- doxytag: member="sxsdk::surface_interface::get_pseudo_caustics_brightness" ref="a1e1cd3035212786327cb7069442f7ced" args="(void *=0) const " -->
+virtual test float&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_pseudo_caustics_brightness</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0791b24e5945bd369ffaac4917b377fe"></a><!-- doxytag: member="sxsdk::surface_interface::set_pseudo_caustics_bump" ref="a0791b24e5945bd369ffaac4917b377fe" args="(float pseudo_caustics_bump_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_pseudo_caustics_bump</b> (float pseudo_caustics_bump_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6ec895c3e0f60ae9a8e2ee2069d31cb2"></a><!-- doxytag: member="sxsdk::surface_interface::get_pseudo_caustics_bump" ref="a6ec895c3e0f60ae9a8e2ee2069d31cb2" args="(void *=0) const " -->
+virtual test float&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_pseudo_caustics_bump</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4fde1f9754f4a9a95866534bc033c614"></a><!-- doxytag: member="sxsdk::surface_interface::set_pseudo_caustics_aberration" ref="a4fde1f9754f4a9a95866534bc033c614" args="(float pseudo_caustics_aberration_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_pseudo_caustics_aberration</b> (float pseudo_caustics_aberration_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acfc2ea6c3903f91a0acabca607ddd52f"></a><!-- doxytag: member="sxsdk::surface_interface::get_pseudo_caustics_aberration" ref="acfc2ea6c3903f91a0acabca607ddd52f" args="(void *=0) const " -->
+virtual test float&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_pseudo_caustics_aberration</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a212e99048be07b21f6afa5b54155040d"></a><!-- doxytag: member="sxsdk::surface_interface::set_aberration" ref="a212e99048be07b21f6afa5b54155040d" args="(float aberration_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_aberration</b> (float aberration_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae8244f8821ad694815e8b1ea05bbab7e"></a><!-- doxytag: member="sxsdk::surface_interface::get_aberration" ref="ae8244f8821ad694815e8b1ea05bbab7e" args="(void *=0) const " -->
+virtual test float&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_aberration</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a251d3f88e207e813a369fba415c520e3"></a><!-- doxytag: member="sxsdk::surface_interface::set_phase" ref="a251d3f88e207e813a369fba415c520e3" args="(int i, float phase, void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_phase</b> (int i, float phase, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acc26013f3596b5a94f1d93509797709f"></a><!-- doxytag: member="sxsdk::surface_interface::get_phase" ref="acc26013f3596b5a94f1d93509797709f" args="(int i, void *aux=0)" -->
+virtual float&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_phase</b> (int i, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab43d9f346891a3524e766186ea01ccda"></a><!-- doxytag: member="sxsdk::surface_interface::set_mapping_area" ref="ab43d9f346891a3524e766186ea01ccda" args="(int i, const sx::rectangle_class &amp;area, void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_mapping_area</b> (int i, const sx::rectangle_class &amp;area, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad015456eef06aeb183cf6849e3ea132e"></a><!-- doxytag: member="sxsdk::surface_interface::get_mapping_area" ref="ad015456eef06aeb183cf6849e3ea132e" args="(int i, void *aux=0)" -->
+virtual sx::rectangle_class&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_mapping_area</b> (int i, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a567bd6bc61e81d1fa7d454aeb1456770"></a><!-- doxytag: member="sxsdk::surface_interface::update_preview_image" ref="a567bd6bc61e81d1fa7d454aeb1456770" args="(void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>update_preview_image</b> (void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6501ac6e5df3aa2c1249fbadae0d58d4"></a><!-- doxytag: member="sxsdk::surface_interface::set_mapping_image" ref="a6501ac6e5df3aa2c1249fbadae0d58d4" args="(int i, sxsdk::image_interface *image, void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_mapping_image</b> (int i, <a class="el" href="structsxsdk_1_1image__interface.html">sxsdk::image_interface</a> *image, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a184859de6cb18899473da2a26c2e52f3"></a><!-- doxytag: member="sxsdk::surface_interface::set_backlight" ref="a184859de6cb18899473da2a26c2e52f3" args="(float backlight_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_backlight</b> (float backlight_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a35732e80c161a9f792df84191c91c212"></a><!-- doxytag: member="sxsdk::surface_interface::get_backlight" ref="a35732e80c161a9f792df84191c91c212" args="(void *=0) const " -->
+virtual test float&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_backlight</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a70cb6553dea9679c3069daa5e3ba1d11"></a><!-- doxytag: member="sxsdk::surface_interface::set_backlight_color" ref="a70cb6553dea9679c3069daa5e3ba1d11" args="(const sxsdk::rgb_class &amp;backlight_color_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_backlight_color</b> (const sxsdk::rgb_class &amp;backlight_color_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a811778279850e0cc26d699960874c4fd"></a><!-- doxytag: member="sxsdk::surface_interface::get_backlight_color" ref="a811778279850e0cc26d699960874c4fd" args="(void *=0) const " -->
+virtual test sxsdk::rgb_class&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_backlight_color</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa731225487a66d15a92835813ec43240"></a><!-- doxytag: member="sxsdk::surface_interface::get_pattern_type" ref="aa731225487a66d15a92835813ec43240" args="(int i, void *aux=0)" -->
+virtual <a class="el" href="namespacesxsdk_1_1enums.html#ab4b715957efd51376e9cd52816943211">enums::pattern_type</a>&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_pattern_type</b> (int i, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa94c3d68fd095d95e853b5826e4e3cf2"></a><!-- doxytag: member="sxsdk::surface_interface::set_pattern_type" ref="aa94c3d68fd095d95e853b5826e4e3cf2" args="(int i, enums::pattern_type pattern_type, void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_pattern_type</b> (int i, <a class="el" href="namespacesxsdk_1_1enums.html#ab4b715957efd51376e9cd52816943211">enums::pattern_type</a> pattern_type, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adf9053b1682d440669d31bc646220cd6"></a><!-- doxytag: member="sxsdk::surface_interface::get_mapping_type" ref="adf9053b1682d440669d31bc646220cd6" args="(int i, void *aux=0)" -->
+virtual <a class="el" href="namespacesxsdk_1_1enums.html#a28229e04e17ac81b2b71291758a574ab">enums::mapping_type</a>&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_mapping_type</b> (int i, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2c1587442bc94719ec436f1908c8005a"></a><!-- doxytag: member="sxsdk::surface_interface::set_mapping_type" ref="a2c1587442bc94719ec436f1908c8005a" args="(int i, enums::mapping_type mapping_type, void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_mapping_type</b> (int i, <a class="el" href="namespacesxsdk_1_1enums.html#a28229e04e17ac81b2b71291758a574ab">enums::mapping_type</a> mapping_type, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae51bf9c29c2a27279be0db00b17378e7"></a><!-- doxytag: member="sxsdk::surface_interface::get_mapping_transformation" ref="ae51bf9c29c2a27279be0db00b17378e7" args="(int i, void *aux=0)" -->
+virtual sxsdk::mat4&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_mapping_transformation</b> (int i, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6cbc10f0b127995122c75bfe20a5428a"></a><!-- doxytag: member="sxsdk::surface_interface::set_mapping_transformation" ref="a6cbc10f0b127995122c75bfe20a5428a" args="(int i, const sxsdk::mat4 &amp;t, void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_mapping_transformation</b> (int i, const sxsdk::mat4 &amp;t, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6eda7c8f2186d01e13cbbaab96a9d01e"></a><!-- doxytag: member="sxsdk::surface_interface::update" ref="a6eda7c8f2186d01e13cbbaab96a9d01e" args="(void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>update</b> (void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8fbbc8da7b90cbbd4bc9d9205a84ff6f"></a><!-- doxytag: member="sxsdk::surface_interface::mapping_layer" ref="a8fbbc8da7b90cbbd4bc9d9205a84ff6f" args="(int i, void *aux=0)" -->
+virtual <a class="el" href="structsxsdk_1_1mapping__layer__class.html">mapping_layer_class</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>mapping_layer</b> (int i, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0ac4d4771eaad6a3c353d02dce7b55b7"></a><!-- doxytag: member="sxsdk::surface_interface::get_attribute_stream_interface" ref="a0ac4d4771eaad6a3c353d02dce7b55b7" args="(int id, void *aux=0)" -->
+virtual <a class="el" href="structsxsdk_1_1stream__interface.html">sxsdk::stream_interface</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_attribute_stream_interface</b> (int id, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeb2a86d8457e4f0362340f269acb74e2"></a><!-- doxytag: member="sxsdk::surface_interface::create_attribute_stream_interface" ref="aeb2a86d8457e4f0362340f269acb74e2" args="(int id, void *aux=0)" -->
+virtual <a class="el" href="structsxsdk_1_1stream__interface.html">sxsdk::stream_interface</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>create_attribute_stream_interface</b> (int id, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac222e77304915e778f9b4dcbb6626ff5"></a><!-- doxytag: member="sxsdk::surface_interface::surface_interface_test_1" ref="ac222e77304915e778f9b4dcbb6626ff5" args="(void *aux=0)" -->
+virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><b>surface_interface_test_1</b> (void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae74cce3aec03cc465e182abeec77aeda"></a><!-- doxytag: member="sxsdk::surface_interface::delete_attribute" ref="ae74cce3aec03cc465e182abeec77aeda" args="(int id, void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>delete_attribute</b> (int id, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a008cc887db6a455313cf90415534dd22"></a><!-- doxytag: member="sxsdk::surface_interface::set_parameter_mapping" ref="a008cc887db6a455313cf90415534dd22" args="(int i, bool b, void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_parameter_mapping</b> (int i, bool b, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a661febaa7022ae822fe491c82df68f10"></a><!-- doxytag: member="sxsdk::surface_interface::get_parameter_mapping" ref="a661febaa7022ae822fe491c82df68f10" args="(int i, void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_parameter_mapping</b> (int i, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual test <br class="typebreak"/>
+<a class="el" href="structsxsdk_1_1scene__interface.html">sxsdk::scene_interface</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1surface__interface.html#ad0923167d45576d1b54acb18a9435c60">get_scene_interface</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">アクティブシーンオブジェクトを取得する。  <a href="#ad0923167d45576d1b54acb18a9435c60"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab6143b4051eff393e16a0b6cc190538b"></a><!-- doxytag: member="sxsdk::surface_interface::get_shape_interface" ref="ab6143b4051eff393e16a0b6cc190538b" args="(void *aux=0)" -->
+virtual shape_interface *&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_shape_interface</b> (void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab9e969fa638b0b0dae25a9ee8fa4b8af"></a><!-- doxytag: member="sxsdk::surface_interface::get_shape" ref="ab9e969fa638b0b0dae25a9ee8fa4b8af" args="(void *=0) const " -->
+virtual test <a class="el" href="structsxsdk_1_1shape__class.html">sxsdk::shape_class</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_shape</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af80ea462e0f217870b79cb01fe1ecc27"></a><!-- doxytag: member="sxsdk::surface_interface::remove_mapping" ref="af80ea462e0f217870b79cb01fe1ecc27" args="(int i, void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>remove_mapping</b> (int i, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a41e6a522b870fb51c86f1898a289998c"></a><!-- doxytag: member="sxsdk::surface_interface::insert_mapping" ref="a41e6a522b870fb51c86f1898a289998c" args="(int i, void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>insert_mapping</b> (int i, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a369ab29254c8186d6de335570ae0496b"></a><!-- doxytag: member="sxsdk::surface_interface::move_mapping" ref="a369ab29254c8186d6de335570ae0496b" args="(int i, int j, void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>move_mapping</b> (int i, int j, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7f75930fe9879cc4ea2b221ecfb538ed"></a><!-- doxytag: member="sxsdk::surface_interface::get_pattern_name" ref="a7f75930fe9879cc4ea2b221ecfb538ed" args="(int pattern, void *aux=0)" -->
+virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_pattern_name</b> (int pattern, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac8169840696c39f6e144c27cfb5449c5"></a><!-- doxytag: member="sxsdk::surface_interface::get_active_layer" ref="ac8169840696c39f6e144c27cfb5449c5" args="(void *=0) const " -->
+virtual test int&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_active_layer</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9635d1dae264c5d7e39a21306791ce59"></a><!-- doxytag: member="sxsdk::surface_interface::set_active_layer" ref="a9635d1dae264c5d7e39a21306791ce59" args="(int active_layer_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_active_layer</b> (int active_layer_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a74e94844a5aa41901b18ffce30409e9e"></a><!-- doxytag: member="sxsdk::surface_interface::set_anisotropic" ref="a74e94844a5aa41901b18ffce30409e9e" args="(float anisotropic_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_anisotropic</b> (float anisotropic_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae99dadeaa1eed6e99cf53132ab9f6500"></a><!-- doxytag: member="sxsdk::surface_interface::get_anisotropic" ref="ae99dadeaa1eed6e99cf53132ab9f6500" args="(void *=0) const " -->
+virtual test float&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_anisotropic</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a42808389f3d0c2ff0a348144e8d10caa"></a><!-- doxytag: member="sxsdk::surface_interface::set_fresnel_reflection" ref="a42808389f3d0c2ff0a348144e8d10caa" args="(float fresnel_reflection_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_fresnel_reflection</b> (float fresnel_reflection_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad32f67f14714407cd7ec333e7455facc"></a><!-- doxytag: member="sxsdk::surface_interface::get_fresnel_reflection" ref="ad32f67f14714407cd7ec333e7455facc" args="(void *=0) const " -->
+virtual test float&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_fresnel_reflection</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a36795eaa8b5f751eabd283c00815c3f3"></a><!-- doxytag: member="sxsdk::surface_interface::has_current_mapping_layer" ref="a36795eaa8b5f751eabd283c00815c3f3" args="(void *=0) const " -->
+virtual test bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>has_current_mapping_layer</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abbab372f78fb0a229065077c8233c287"></a><!-- doxytag: member="sxsdk::surface_interface::get_current_mapping_layer" ref="abbab372f78fb0a229065077c8233c287" args="(void *=0) const " -->
+virtual test <a class="el" href="structsxsdk_1_1mapping__layer__class.html">mapping_layer_class</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_current_mapping_layer</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acf405454875aa71d605deb540e40ec66"></a><!-- doxytag: member="sxsdk::surface_interface::set_diffuse" ref="acf405454875aa71d605deb540e40ec66" args="(float diffuse_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_diffuse</b> (float diffuse_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a933b7620c8d40e569cd20c344f09f17b"></a><!-- doxytag: member="sxsdk::surface_interface::get_diffuse" ref="a933b7620c8d40e569cd20c344f09f17b" args="(void *=0) const " -->
+virtual test float&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_diffuse</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a37c57dee7969e00a3930157e98631638"></a><!-- doxytag: member="sxsdk::surface_interface::set_diffuse_color" ref="a37c57dee7969e00a3930157e98631638" args="(const sxsdk::rgb_class &amp;diffuse_color_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_diffuse_color</b> (const sxsdk::rgb_class &amp;diffuse_color_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afd9892af594b02663c944f744453cc61"></a><!-- doxytag: member="sxsdk::surface_interface::get_diffuse_color" ref="afd9892af594b02663c944f744453cc61" args="(void *=0) const " -->
+virtual test sxsdk::rgb_class&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_diffuse_color</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a784b98e5d5460e46a5f3c8519d29ff78"></a><!-- doxytag: member="sxsdk::surface_interface::set_has_diffuse" ref="a784b98e5d5460e46a5f3c8519d29ff78" args="(bool has_diffuse_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_has_diffuse</b> (bool has_diffuse_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af4aedef6b69c4080b88117f847ac028e"></a><!-- doxytag: member="sxsdk::surface_interface::get_has_diffuse" ref="af4aedef6b69c4080b88117f847ac028e" args="(void *=0) const " -->
+virtual test bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_has_diffuse</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a00ec538b94a9fc6f0755d115b5263872"></a><!-- doxytag: member="sxsdk::surface_interface::set_has_specular_1" ref="a00ec538b94a9fc6f0755d115b5263872" args="(bool has_specular_1_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_has_specular_1</b> (bool has_specular_1_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a05f235ea768ebbf2ac141ecd8aedb42a"></a><!-- doxytag: member="sxsdk::surface_interface::get_has_specular_1" ref="a05f235ea768ebbf2ac141ecd8aedb42a" args="(void *=0) const " -->
+virtual test bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_has_specular_1</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad072adf297b1f5f8d6aa702b61c661b8"></a><!-- doxytag: member="sxsdk::surface_interface::set_has_specular_2" ref="ad072adf297b1f5f8d6aa702b61c661b8" args="(bool has_specular_2_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_has_specular_2</b> (bool has_specular_2_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2f728932b35a80d55abf6173d43bca6a"></a><!-- doxytag: member="sxsdk::surface_interface::get_has_specular_2" ref="a2f728932b35a80d55abf6173d43bca6a" args="(void *=0) const " -->
+virtual test bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_has_specular_2</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7b66decbc6312e01428d352d96f9e02a"></a><!-- doxytag: member="sxsdk::surface_interface::set_has_roughness" ref="a7b66decbc6312e01428d352d96f9e02a" args="(bool has_roughness_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_has_roughness</b> (bool has_roughness_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac90a93f4550d456ad140a032dabc52c4"></a><!-- doxytag: member="sxsdk::surface_interface::get_has_roughness" ref="ac90a93f4550d456ad140a032dabc52c4" args="(void *=0) const " -->
+virtual test bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_has_roughness</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a436160e5c275e70e229009577890576f"></a><!-- doxytag: member="sxsdk::surface_interface::set_has_anisotropic" ref="a436160e5c275e70e229009577890576f" args="(bool has_anisotropic_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_has_anisotropic</b> (bool has_anisotropic_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acaa5bef3af7e095fc0635df39e759973"></a><!-- doxytag: member="sxsdk::surface_interface::get_has_anisotropic" ref="acaa5bef3af7e095fc0635df39e759973" args="(void *=0) const " -->
+virtual test bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_has_anisotropic</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a960ad9d614cf4e0e0dcf4d4b79d0c52d"></a><!-- doxytag: member="sxsdk::surface_interface::set_has_reflection" ref="a960ad9d614cf4e0e0dcf4d4b79d0c52d" args="(bool has_reflection_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_has_reflection</b> (bool has_reflection_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1ff255a59a344acd80a2ed91997210d7"></a><!-- doxytag: member="sxsdk::surface_interface::get_has_reflection" ref="a1ff255a59a344acd80a2ed91997210d7" args="(void *=0) const " -->
+virtual test bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_has_reflection</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac5e289909380a28b0c8c29dadac66cce"></a><!-- doxytag: member="sxsdk::surface_interface::set_has_transparency" ref="ac5e289909380a28b0c8c29dadac66cce" args="(bool has_transparency_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_has_transparency</b> (bool has_transparency_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a16608a40e9e7b6d4e2eb8b89a0d95ea3"></a><!-- doxytag: member="sxsdk::surface_interface::get_has_transparency" ref="a16608a40e9e7b6d4e2eb8b89a0d95ea3" args="(void *=0) const " -->
+virtual test bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_has_transparency</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae707d907fb42d8a392a7b536645cbaf8"></a><!-- doxytag: member="sxsdk::surface_interface::set_has_refraction" ref="ae707d907fb42d8a392a7b536645cbaf8" args="(bool has_refraction_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_has_refraction</b> (bool has_refraction_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6c795e400f78083c5af2c4e62a555668"></a><!-- doxytag: member="sxsdk::surface_interface::get_has_refraction" ref="a6c795e400f78083c5af2c4e62a555668" args="(void *=0) const " -->
+virtual test bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_has_refraction</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7186989be524e83beb5f4d88c271c59e"></a><!-- doxytag: member="sxsdk::surface_interface::set_has_fresnel_reflection" ref="a7186989be524e83beb5f4d88c271c59e" args="(bool has_fresnel_reflection_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_has_fresnel_reflection</b> (bool has_fresnel_reflection_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a86bdc71829a7d5fb8c31401447200e30"></a><!-- doxytag: member="sxsdk::surface_interface::get_has_fresnel_reflection" ref="a86bdc71829a7d5fb8c31401447200e30" args="(void *=0) const " -->
+virtual test bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_has_fresnel_reflection</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab5094e05b38ba1067020d0c67c5a762c"></a><!-- doxytag: member="sxsdk::surface_interface::set_has_metallic" ref="ab5094e05b38ba1067020d0c67c5a762c" args="(bool has_metallic_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_has_metallic</b> (bool has_metallic_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a029d5fbe299092896f728c6fbb5816fb"></a><!-- doxytag: member="sxsdk::surface_interface::get_has_metallic" ref="a029d5fbe299092896f728c6fbb5816fb" args="(void *=0) const " -->
+virtual test bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_has_metallic</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6cc5a873fc1d5078598207cf5e6eaebd"></a><!-- doxytag: member="sxsdk::surface_interface::set_has_glow" ref="a6cc5a873fc1d5078598207cf5e6eaebd" args="(bool has_glow_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_has_glow</b> (bool has_glow_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae7cee799a2f4be8f4aec4609c12ebfd0"></a><!-- doxytag: member="sxsdk::surface_interface::get_has_glow" ref="ae7cee799a2f4be8f4aec4609c12ebfd0" args="(void *=0) const " -->
+virtual test bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_has_glow</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad9f1246388c81697319cb8470480a94e"></a><!-- doxytag: member="sxsdk::surface_interface::set_has_backlight" ref="ad9f1246388c81697319cb8470480a94e" args="(bool has_backlight_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_has_backlight</b> (bool has_backlight_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a470325139080710cf5256fa5b44c6159"></a><!-- doxytag: member="sxsdk::surface_interface::get_has_backlight" ref="a470325139080710cf5256fa5b44c6159" args="(void *=0) const " -->
+virtual test bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_has_backlight</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad38bce2e759a0f7eccc332baa2112724"></a><!-- doxytag: member="sxsdk::surface_interface::set_has_pseudo_caustics" ref="ad38bce2e759a0f7eccc332baa2112724" args="(bool has_pseudo_caustics_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_has_pseudo_caustics</b> (bool has_pseudo_caustics_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa05df813cfd294e2d59e03e5ff28a44b"></a><!-- doxytag: member="sxsdk::surface_interface::get_has_pseudo_caustics" ref="aa05df813cfd294e2d59e03e5ff28a44b" args="(void *=0) const " -->
+virtual test bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_has_pseudo_caustics</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a91d14ae8c6699197cc8aa1228efcc6d7"></a><!-- doxytag: member="sxsdk::surface_interface::set_has_aberration" ref="a91d14ae8c6699197cc8aa1228efcc6d7" args="(bool has_aberration_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_has_aberration</b> (bool has_aberration_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a23ae7db1114b67bed7df05a7b00c220d"></a><!-- doxytag: member="sxsdk::surface_interface::get_has_aberration" ref="a23ae7db1114b67bed7df05a7b00c220d" args="(void *=0) const " -->
+virtual test bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_has_aberration</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a67b0f14f2331a90be2c8556be6868e9a"></a><!-- doxytag: member="sxsdk::surface_interface::set_has_aux" ref="a67b0f14f2331a90be2c8556be6868e9a" args="(bool has_aux_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_has_aux</b> (bool has_aux_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab9e5000388fcbb1a44a2fa85fa0edee5"></a><!-- doxytag: member="sxsdk::surface_interface::get_has_aux" ref="ab9e5000388fcbb1a44a2fa85fa0edee5" args="(void *=0) const " -->
+virtual test bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_has_aux</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aac0bd456c311464873f4480493a112bc"></a><!-- doxytag: member="sxsdk::surface_interface::set_has_mapping_layers" ref="aac0bd456c311464873f4480493a112bc" args="(bool has_mapping_layers_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_has_mapping_layers</b> (bool has_mapping_layers_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac186666cf951ba677a1c425445a1236e"></a><!-- doxytag: member="sxsdk::surface_interface::get_has_mapping_layers" ref="ac186666cf951ba677a1c425445a1236e" args="(void *=0) const " -->
+virtual test bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_has_mapping_layers</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad5fc0c1fd6af7d73804cb5336ed215a9"></a><!-- doxytag: member="sxsdk::surface_interface::set_current_mapping_layer_index" ref="ad5fc0c1fd6af7d73804cb5336ed215a9" args="(int current_mapping_layer_index_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_current_mapping_layer_index</b> (int current_mapping_layer_index_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a29e97a5df80a9ea06c553a67cc394147"></a><!-- doxytag: member="sxsdk::surface_interface::get_current_mapping_layer_index" ref="a29e97a5df80a9ea06c553a67cc394147" args="(void *=0) const " -->
+virtual test int&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_current_mapping_layer_index</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1138a03846f0d6ad25921d752b9f8504"></a><!-- doxytag: member="sxsdk::surface_interface::append_mapping_layer" ref="a1138a03846f0d6ad25921d752b9f8504" args="(void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>append_mapping_layer</b> (void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac3db97a0a3c0e791f6cf26440d32fa06"></a><!-- doxytag: member="sxsdk::surface_interface::stream_to_clipboard" ref="ac3db97a0a3c0e791f6cf26440d32fa06" args="(void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>stream_to_clipboard</b> (void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acc70ce50cfa7ddfc2a4d1c45151e2ce8"></a><!-- doxytag: member="sxsdk::surface_interface::set_thumbnail_image_interface" ref="acc70ce50cfa7ddfc2a4d1c45151e2ce8" args="(sxsdk::image_interface *thumbnail_image_interface_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_thumbnail_image_interface</b> (<a class="el" href="structsxsdk_1_1image__interface.html">sxsdk::image_interface</a> *thumbnail_image_interface_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1d11869c27522f1c261ab97cc7d37589"></a><!-- doxytag: member="sxsdk::surface_interface::get_thumbnail_image_interface" ref="a1d11869c27522f1c261ab97cc7d37589" args="(void *=0) const " -->
+virtual test <br class="typebreak"/>
+<a class="el" href="structsxsdk_1_1image__interface.html">sxsdk::image_interface</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_thumbnail_image_interface</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9ff6609d6d59ba25617f9e817b7c98e9"></a><!-- doxytag: member="sxsdk::surface_interface::get_attribute_stream_interface_with_uuid" ref="a9ff6609d6d59ba25617f9e817b7c98e9" args="(const sx::uuid_class &amp;attribute_id, void *aux=0)" -->
+virtual <a class="el" href="structsxsdk_1_1stream__interface.html">sxsdk::stream_interface</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_attribute_stream_interface_with_uuid</b> (const sx::uuid_class &amp;attribute_id, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e1c6c49b381d0f9d43380b34cb2a745"></a><!-- doxytag: member="sxsdk::surface_interface::create_attribute_stream_interface_with_uuid" ref="a1e1c6c49b381d0f9d43380b34cb2a745" args="(const sx::uuid_class &amp;attribute_id, void *aux=0)" -->
+virtual <a class="el" href="structsxsdk_1_1stream__interface.html">sxsdk::stream_interface</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>create_attribute_stream_interface_with_uuid</b> (const sx::uuid_class &amp;attribute_id, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1b8a6dcac31c3202865b975464f6494b"></a><!-- doxytag: member="sxsdk::surface_interface::delete_attribute_with_uuid" ref="a1b8a6dcac31c3202865b975464f6494b" args="(const sx::uuid_class &amp;attribute_id, void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>delete_attribute_with_uuid</b> (const sx::uuid_class &amp;attribute_id, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a796adfedfc8b2153183f4e77c6e3398e"></a><!-- doxytag: member="sxsdk::surface_interface::set_has_volume_density" ref="a796adfedfc8b2153183f4e77c6e3398e" args="(bool has_volume_density_param, void *=0)" -->
+virtual <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1surface__interface.html#a796adfedfc8b2153183f4e77c6e3398e">set_has_volume_density</a> (bool has_volume_density_param, void *=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ボリューム密度が設定されているかを設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4ed33450a923e37362048722679a793a"></a><!-- doxytag: member="sxsdk::surface_interface::get_has_volume_density" ref="a4ed33450a923e37362048722679a793a" args="(void *=0) const " -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1surface__interface.html#a4ed33450a923e37362048722679a793a">get_has_volume_density</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ボリューム密度が設定されているかを取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2c9a1235e880e521c67d67e835cdc2c6"></a><!-- doxytag: member="sxsdk::surface_interface::set_volume_density" ref="a2c9a1235e880e521c67d67e835cdc2c6" args="(float volume_density_param, void *=0)" -->
+virtual <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1surface__interface.html#a2c9a1235e880e521c67d67e835cdc2c6">set_volume_density</a> (float volume_density_param, void *=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ボリューム密度の設定を設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0415413881136fb371e0d261fecc12b1"></a><!-- doxytag: member="sxsdk::surface_interface::get_volume_density" ref="a0415413881136fb371e0d261fecc12b1" args="(void *=0) const " -->
+virtual float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1surface__interface.html#a0415413881136fb371e0d261fecc12b1">get_volume_density</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ボリューム密度の設定を取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acebada97d1312d19e9137c0bccaafd08"></a><!-- doxytag: member="sxsdk::surface_interface::set_ambient_color" ref="acebada97d1312d19e9137c0bccaafd08" args="(const sxsdk::rgb_class &amp;ambient_color_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_ambient_color</b> (const sxsdk::rgb_class &amp;ambient_color_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7e18092388e28035a803cda1299efd8f"></a><!-- doxytag: member="sxsdk::surface_interface::get_ambient_color" ref="a7e18092388e28035a803cda1299efd8f" args="(void *=0) const " -->
+virtual test sxsdk::rgb_class&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_ambient_color</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afee5ab8956c9b0eed45f9b85bd2018fa"></a><!-- doxytag: member="sxsdk::surface_interface::set_ambient" ref="afee5ab8956c9b0eed45f9b85bd2018fa" args="(const float &amp;ambient_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_ambient</b> (const float &amp;ambient_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2b7c65d6b37b6266dc685ecf4bc51714"></a><!-- doxytag: member="sxsdk::surface_interface::get_ambient" ref="a2b7c65d6b37b6266dc685ecf4bc51714" args="(void *=0) const " -->
+virtual test float&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_ambient</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aef53662c8c3c97ede9e47303b6cfb656"></a><!-- doxytag: member="sxsdk::surface_interface::set_has_ambient" ref="aef53662c8c3c97ede9e47303b6cfb656" args="(bool has_ambient_param, void *=0)" -->
+virtual test <a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_has_ambient</b> (bool has_ambient_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d1fdcf932c60424b8b5131b02c91f8d"></a><!-- doxytag: member="sxsdk::surface_interface::get_has_ambient" ref="a9d1fdcf932c60424b8b5131b02c91f8d" args="(void *=0) const " -->
+virtual test bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_has_ambient</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acd8f306cee6fc09bf71d5d7fe3b441bc"></a><!-- doxytag: member="sxsdk::surface_interface::find_ambient" ref="acd8f306cee6fc09bf71d5d7fe3b441bc" args="(const sxsdk::shape_class &amp;shape, void *aux=0)" -->
+virtual float&nbsp;</td><td class="memItemRight" valign="bottom"><b>find_ambient</b> (const <a class="el" href="structsxsdk_1_1shape__class.html">sxsdk::shape_class</a> &amp;shape, void *aux=0)</td></tr>
+</table>
+<hr/><h2>関数</h2>
+<a class="anchor" id="ad0923167d45576d1b54acb18a9435c60"></a><!-- doxytag: member="sxsdk::surface_interface::get_scene_interface" ref="ad0923167d45576d1b54acb18a9435c60" args="(void *=0) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual test <a class="el" href="structsxsdk_1_1scene__interface.html">sxsdk::scene_interface</a>* sxsdk::surface_interface::get_scene_interface </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>アクティブシーンオブジェクトを取得する。 </p>
+<p>オブジェクトの確実な破棄のために<code><a class="el" href="classcompointer.html" title="*_interfaceクラスのオブジェクトを指す参照カウントスマートポインタ。...">compointer</a></code> を使用する(<a class="el" href="memorymanagement.html">メモリ管理</a> )。 </p>
+
+<p><a class="el" href="structsxsdk_1_1shade__interface.html#a3c0645c8b5acbe164aed7715c6674931">sxsdk::shade_interface</a>を再定義しています。</p>
+
+</div>
+</div>
+<hr/>この構造体の説明は次のファイルから生成されました:<ul>
+<li><a class="el" href="surfaceinterface_8h_source.html">surfaceinterface.h</a></li>
+</ul>
+</div>
+<br><br>
+<hr>
+<div align="center">Copyright &copy; e frontier, Inc. All rights reserved.</div>
+</body></html>

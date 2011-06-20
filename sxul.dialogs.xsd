@@ -1,0 +1,833 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:simpleType name="rgb_type">
+    <xsd:list itemType="xsd:float" />
+  </xsd:simpleType>
+  <xsd:simpleType name="vec2_type">
+    <xsd:list itemType="xsd:float" />
+  </xsd:simpleType>
+  <xsd:simpleType name="vec3_type">
+    <xsd:list itemType="xsd:float" />
+  </xsd:simpleType>
+  <xsd:simpleType name="vec4_type">
+    <xsd:list itemType="xsd:float" />
+  </xsd:simpleType>
+  <xsd:simpleType name="quaternion_type">
+    <xsd:list itemType="xsd:float" />
+  </xsd:simpleType>
+  <xsd:simpleType name="mat4_type">
+    <xsd:list itemType="xsd:float" />
+  </xsd:simpleType>
+  <xsd:element name="dialog">
+    <xsd:annotation>
+      <xsd:documentation> \en dialog box \enden  \ja ダイアログボックス \endja </xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element ref="vbox" />
+        <xsd:element ref="hbox" />
+        <xsd:element ref="push-button" />
+        <xsd:element ref="bool" />
+        <xsd:element ref="int" />
+        <xsd:element ref="float" />
+        <xsd:element ref="double" />
+        <xsd:element ref="selection" />
+        <xsd:element ref="rgb" />
+        <xsd:element ref="progress" />
+        <xsd:element ref="short-string" />
+        <xsd:element ref="long-string" />
+        <xsd:element ref="long-text" />
+        <xsd:element ref="vec3" />
+        <xsd:element ref="custom" />
+        <xsd:element ref="group" />
+        <xsd:element ref="include" />
+        <xsd:element ref="listbox" />
+        <xsd:element ref="path" />
+      </xsd:choice>
+      <xsd:attribute name="title" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation> \en title \enden  \ja タイトル \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="default_button" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation> \en default button \enden  \ja 初期設定ボタン \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="reset_button" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation> \en reset button \enden  \ja 復帰ボタン \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="ok_button" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation> \en ok button \enden  \ja OKボタン \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="cancel_button" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation> \en cancel button \enden  \ja キャンセルボタン \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="resizable" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation> \en blah \enden \ja リサイズ可能なダイアログ \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="id" type="xsd:integer">
+        <xsd:annotation>
+          <xsd:documentation> \en id \enden  \ja 識別子 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="vbox">
+    <xsd:annotation>
+      <xsd:documentation> \en horizontal box \enden  \ja 垂直ボックス \endja </xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element ref="vbox" />
+        <xsd:element ref="hbox" />
+        <xsd:element ref="push-button" />
+        <xsd:element ref="bool" />
+        <xsd:element ref="int" />
+        <xsd:element ref="float" />
+        <xsd:element ref="double" />
+        <xsd:element ref="selection" />
+        <xsd:element ref="rgb" />
+        <xsd:element ref="progress" />
+        <xsd:element ref="short-string" />
+        <xsd:element ref="long-string" />
+        <xsd:element ref="long-text" />
+        <xsd:element ref="vec3" />
+        <xsd:element ref="custom" />
+        <xsd:element ref="group" />
+        <xsd:element ref="include" />
+        <xsd:element ref="listbox" />
+        <xsd:element ref="path" />
+      </xsd:choice>
+      <xsd:attribute name="id" type="xsd:integer">
+        <xsd:annotation>
+          <xsd:documentation> \en id \enden  \ja 識別子 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="hbox">
+    <xsd:annotation>
+      <xsd:documentation> \en vertical \enden  \ja 水平ボックス \endja </xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element ref="vbox" />
+        <xsd:element ref="hbox" />
+        <xsd:element ref="push-button" />
+        <xsd:element ref="bool" />
+        <xsd:element ref="int" />
+        <xsd:element ref="float" />
+        <xsd:element ref="double" />
+        <xsd:element ref="selection" />
+        <xsd:element ref="rgb" />
+        <xsd:element ref="progress" />
+        <xsd:element ref="short-string" />
+        <xsd:element ref="long-string" />
+        <xsd:element ref="long-text" />
+        <xsd:element ref="vec3" />
+        <xsd:element ref="custom" />
+        <xsd:element ref="group" />
+        <xsd:element ref="include" />
+        <xsd:element ref="listbox" />
+        <xsd:element ref="path" />
+      </xsd:choice>
+      <xsd:attribute name="id" type="xsd:integer">
+        <xsd:annotation>
+          <xsd:documentation> \en id \enden  \ja 識別子 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="group">
+    <xsd:annotation>
+      <xsd:documentation> \en vertical \enden  \ja グループ \endja </xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:choice minOccurs="0" maxOccurs="unbounded">
+        <xsd:element ref="vbox" />
+        <xsd:element ref="hbox" />
+        <xsd:element ref="push-button" />
+        <xsd:element ref="bool" />
+        <xsd:element ref="int" />
+        <xsd:element ref="float" />
+        <xsd:element ref="double" />
+        <xsd:element ref="selection" />
+        <xsd:element ref="rgb" />
+        <xsd:element ref="progress" />
+        <xsd:element ref="short-string" />
+        <xsd:element ref="long-string" />
+        <xsd:element ref="long-text" />
+        <xsd:element ref="vec3" />
+        <xsd:element ref="custom" />
+        <xsd:element ref="group" />
+        <xsd:element ref="include" />
+        <xsd:element ref="listbox" />
+        <xsd:element ref="path" />
+      </xsd:choice>
+      <xsd:attribute name="id" type="xsd:integer">
+        <xsd:annotation>
+          <xsd:documentation> \en id \enden  \ja 識別子 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="swap_boxes" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation> \en id \enden  \ja trueを指定すると、内包する複数のbox itemを同じ場所に重ね、そのうち一つを表示するようになります。 \endja </xsd:documentation>
+          <xsd:documentation> \en label \enden  \ja tab itemと同じ記述になります。 \endja </xsd:documentation>
+          <xsd:documentation> \en label \enden  \ja 表示上は通常のグループと同じになり、選択されているコントロールのセットのlabelがタイトルになります。 \endja </xsd:documentation>
+          <xsd:documentation> \en label \enden  \ja コントロールセットの切り替え、取得はset_selection(), get_selection()で行います。 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="label" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation> \en label \enden  \ja ラベル \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="push-button">
+    <xsd:annotation>
+      <xsd:documentation> \en push button \enden  \ja プッシュボタン \endja </xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:attribute name="id" type="xsd:integer">
+        <xsd:annotation>
+          <xsd:documentation> \en id \enden  \ja 識別子 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="label" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation> \en label \enden  \ja ラベル \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="width" type="xsd:integer">
+        <xsd:annotation>
+          <xsd:documentation> \en label \enden  \ja 幅 \endja </xsd:documentation>
+          <xsd:documentation> \ja 指定したサイズに比べて文字や画像の幅が大きい場合は、コントロールの幅を自動的に広げます。 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="height" type="xsd:integer">
+        <xsd:annotation>
+          <xsd:documentation> \en label \enden  \ja 高さ \endja </xsd:documentation>
+          <xsd:documentation> \ja 指定したサイズに比べて文字や画像の幅が大きい場合は、コントロールの幅を自動的に広げます。 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="image" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation> \en tooltip \enden  \ja targa画像リソースから画像つきのボタンを作成 \endja </xsd:documentation>
+          <xsd:documentation> \ja ボタンの状態に対する描画状態はOSの標準に合わせています。(画像にアルファチャンネルを設定することを推奨) \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="alternate_image" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation> \en tooltip \enden  \ja ボタン押下時に表示される画像を設定 \endja </xsd:documentation>
+          <xsd:documentation> \ja 画像を変更しない場合は指定する必要はありません。 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="tooltip" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation> \en tooltip \enden  \ja ツールティップ \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="terminator" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation> \en The dialog box closes when clicked. \enden  \ja trueの場合、このプッシュボタンをクリックすると、ダイアログが閉じられる。 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="bool">
+    <xsd:annotation>
+      <xsd:documentation> \en checkbox \enden  \ja チェックボックス \endja </xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:attribute name="id" type="xsd:integer">
+        <xsd:annotation>
+          <xsd:documentation> \en id \enden  \ja 識別子 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="label" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation> \en label \enden  \ja ラベル \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="push" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation> \en tooltip \enden  \ja チェックボックスをボタン型に設定 \endja </xsd:documentation>
+          <xsd:documentation> \ja imageを設定した場合は自動的にボタン型になります。 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="width" type="xsd:integer">
+        <xsd:annotation>
+          <xsd:documentation> \en tooltip \enden  \ja チェックボックスの幅 \endja </xsd:documentation>
+          <xsd:documentation> \ja 指定したサイズに比べて文字や画像の幅が大きい場合は、コントロールの幅を自動的に広げます。 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="height" type="xsd:integer">
+        <xsd:annotation>
+          <xsd:documentation> \en tooltip \enden  \ja チェックボックスの高さ \endja </xsd:documentation>
+          <xsd:documentation> \ja 指定したサイズに比べて文字や画像の幅が大きい場合は、コントロールの幅を自動的に広げます。 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="image" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation> \en tooltip \enden  \ja targa画像リソースから画像つきのボタンを作成 \endja </xsd:documentation>
+          <xsd:documentation> \ja ボタンの状態に対する描画状態はOSの標準に合わせています。(画像にアルファチャンネルを設定することを推奨) \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="alternate_image" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation> \en tooltip \enden  \ja ボタン押下時に表示される画像を設定 \endja </xsd:documentation>
+          <xsd:documentation> \ja 画像を変更しない場合は指定する必要はありません。 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="bordered" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation> \en tooltip \enden  \ja 枠の描画 \endja </xsd:documentation>
+          <xsd:documentation> \ja falseを指定すると枠なしのボタンになります。 \endja </xsd:documentation>
+          <xsd:documentation> \ja 画像を貼り付けたボタンのみ有効です。 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="tooltip" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation> \en tooltip \enden  \ja ツールティップ \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="default" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation> \en default value \enden  \ja デフォルト値 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="int">
+    <xsd:annotation>
+      <xsd:documentation> \en integer box \enden  \ja 整数ボックス \endja </xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:attribute name="id" type="xsd:integer">
+        <xsd:annotation>
+          <xsd:documentation> \en id \enden  \ja 識別子 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="label" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation> \en label \enden  \ja ラベル \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="tooltip" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation> \en tooltip \enden  \ja ツールティップ \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="default" type="xsd:integer">
+        <xsd:annotation>
+          <xsd:documentation> \en default value \enden  \ja デフォルト値 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="stepper" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation> \en stepper \enden  \ja ステッパ \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="unit" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation> \en unit \enden  \ja 単位 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="float">
+    <xsd:annotation>
+      <xsd:documentation> \en single precision floating point number box \enden  \ja 単精度浮動小数点数ボックス \endja </xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:attribute name="id" type="xsd:integer">
+        <xsd:annotation>
+          <xsd:documentation> \en id \enden  \ja 識別子 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="label" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation> \en label \enden  \ja ラベル \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="tooltip" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation> \en tooltip \enden  \ja ツールティップ \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="default" type="xsd:double">
+        <xsd:annotation>
+          <xsd:documentation> \en default value \enden  \ja デフォルト値 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="unit" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation> \en unit \enden  \ja 単位 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="slider" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation> \en slider \enden  \ja スライダ \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="double">
+    <xsd:annotation>
+      <xsd:documentation> \en double precision floating point number box \enden  \ja 倍精度浮動小数点数ボックス \endja </xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:attribute name="id" type="xsd:integer">
+        <xsd:annotation>
+          <xsd:documentation> \en id \enden  \ja 識別子 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="label" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation> \en label \enden  \ja ラベル \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="tooltip" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation> \en tooltip \enden  \ja ツールティップ \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="default" type="xsd:double">
+        <xsd:annotation>
+          <xsd:documentation> \en default value \enden  \ja デフォルト値 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="unit" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation> \en unit \enden  \ja 単位 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="slider" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation> \en slider \enden  \ja スライダ \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="selection">
+    <xsd:annotation>
+      <xsd:documentation> \en selection popup menu \enden  \ja 選択ポップアップメニュ竏鈀 \endja </xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:attribute name="id" type="xsd:integer">
+        <xsd:annotation>
+          <xsd:documentation> \en id \enden  \ja 識別子 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="label" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation> \en label \enden  \ja ラベル \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="tooltip" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation> \en tooltip \enden  \ja ツールティップ \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="default" type="xsd:nonNegativeInteger">
+        <xsd:annotation>
+          <xsd:documentation> \en default value \enden  \ja デフォルト値 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="rgb">
+    <xsd:annotation>
+      <xsd:documentation> \en color box \enden  \ja カラーボックス \endja </xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:attribute name="id" type="xsd:integer">
+        <xsd:annotation>
+          <xsd:documentation> \en id \enden  \ja 識別子 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="label" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation> \en label \enden  \ja ラベル \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="tooltip" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation> \en tooltip \enden  \ja ツールティップ \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="default" type="rgb_type">
+        <xsd:annotation>
+          <xsd:documentation> \en default value \enden  \ja デフォルト値 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="unit" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation> \en unit \enden  \ja 単位 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="progress">
+    <xsd:annotation>
+      <xsd:documentation> \en progress bar \enden  \ja プログレスバー \endja </xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:attribute name="id" type="xsd:integer">
+        <xsd:annotation>
+          <xsd:documentation> \en id \enden  \ja 識別子 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="label" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation> \en label \enden  \ja ラベル \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="tooltip" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation> \en tooltip \enden  \ja ツールティップ \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="short-string">
+    <xsd:annotation>
+      <xsd:documentation> \en short character string \enden  \ja 短い文字列 \endja </xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:attribute name="id" type="xsd:integer">
+        <xsd:annotation>
+          <xsd:documentation> \en id \enden  \ja 識別子 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="label" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation> \en label \enden  \ja ラベル \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="default" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation> \en default value \enden  \ja デフォルト値 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="tooltip" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation> \en tooltip \enden  \ja ツールティップ \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="unit" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation> \en unit \enden  \ja 単位 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="long-string">
+    <xsd:annotation>
+      <xsd:documentation> \en long character string \enden  \ja 長い文字列 \endja </xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:attribute name="id" type="xsd:integer">
+        <xsd:annotation>
+          <xsd:documentation> \en id \enden  \ja 識別子 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="label" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation> \en label \enden  \ja ラベル \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="tooltip" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation> \en tooltip \enden  \ja ツールティップ \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="default" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation> \en default value \enden  \ja デフォルト \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="unit" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation> \en unit \enden  \ja 単位 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="long-text">
+    <xsd:annotation>
+      <xsd:documentation> \en long text \enden  \ja 長いテキスト \endja </xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:attribute name="id" type="xsd:integer">
+        <xsd:annotation>
+          <xsd:documentation> \en id \enden  \ja 識別子 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="label" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation> \en label \enden  \ja ラベル \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="tooltip" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation> \en tooltip \enden  \ja ツールティップ \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="default" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation> \en default value \enden  \ja デフォルト値 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="editable" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation> \en editable \enden  \ja 編集可能 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="lines" type="xsd:integer">
+        <xsd:annotation>
+          <xsd:documentation> \en the number of lines of text \enden  \ja テキストの行数 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="short_text" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation> \en short text \enden  \ja ショートテキスト \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="min_width" type="xsd:integer">
+        <xsd:annotation>
+          <xsd:documentation> \en blah \enden \ja 最小の幅 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="min_height" type="xsd:integer">
+        <xsd:annotation>
+          <xsd:documentation> \en blah \enden \ja 最小の高さ \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="max_width" type="xsd:integer">
+        <xsd:annotation>
+          <xsd:documentation> \en blah \enden \ja 最大の幅 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="max_height" type="xsd:integer">
+        <xsd:annotation>
+          <xsd:documentation> \en blah \enden \ja 最大の高さ \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="resizable" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation> \en blah \enden \ja リサイズ可能なダイアログ \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="vec3">
+    <xsd:annotation>
+      <xsd:documentation> \en vec3 \enden  \ja vec3 \endja </xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:attribute name="id" type="xsd:integer">
+        <xsd:annotation>
+          <xsd:documentation> \en id \enden  \ja 識別子 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="label" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation> \en label \enden  \ja ラベル \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="tooltip" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation> \en tooltip \enden  \ja ツールティップ \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="default" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation> \en default value \enden  \ja デフォルト値 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="unit" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation> \en unit \enden  \ja 単位 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="listbox">
+    <xsd:annotation>
+      <xsd:documentation> \en list box \enden  \ja リストボックス \endja </xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:attribute name="id" type="xsd:integer">
+        <xsd:annotation>
+          <xsd:documentation> \en id \enden  \ja 識別子 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="lines" type="xsd:integer">
+        <xsd:annotation>
+          <xsd:documentation> \en the number of lines of list \enden  \ja リストの行数 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="width" type="xsd:integer">
+        <xsd:annotation>
+          <xsd:documentation> \en width \enden  \ja 幅 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="has_checkbox" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation> \en blah \enden  \ja trueの場合、リストの項目にチェックボックスが追加されます。 \endja </xsd:documentation>
+          <xsd:documentation> \en blah \enden  \ja チェックの状態が変更されると、respond()の呼び出しでactionにsx::dialog_item::item_changedが渡されます。 \endja </xsd:documentation>
+          <xsd:documentation> \en blah \enden  \ja デフォルトはtrue(明示的に指定することを推奨) \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="editable" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation> \en blah \enden  \ja trueの場合、リストの項目をダブルクリックするとテキスト編集モードになり、項目を編集することができます。 \endja </xsd:documentation>
+          <xsd:documentation> \en blah \enden  \ja テキストが編集されると、respond()の呼び出しでactionにsx::dialog_item::item_changedが渡されます。 \endja </xsd:documentation>
+          <xsd:documentation> \en blah \enden  \ja デフォルトはtrue(明示的に指定することを推奨) \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="resizable" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation> \en blah \enden \ja リサイズ可能なコントロール \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="min_width" type="xsd:integer">
+        <xsd:annotation>
+          <xsd:documentation> \en blah \enden \ja 最小の幅 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="max_width" type="xsd:integer">
+        <xsd:annotation>
+          <xsd:documentation> \en blah \enden \ja 最大の幅 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="min_height" type="xsd:integer">
+        <xsd:annotation>
+          <xsd:documentation> \en blah \enden \ja 最小の高さ \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="max_height" type="xsd:integer">
+        <xsd:annotation>
+          <xsd:documentation> \en blah \enden \ja 最大の高さ \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="tooltip" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation> \en tooltip \enden  \ja ツールティップ \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="custom">
+    <xsd:annotation>
+      <xsd:documentation> \en custom item \enden  \ja カスタムアイテム \endja </xsd:documentation>
+      <xsd:documentation> \en blah \enden </xsd:documentation>
+      <xsd:documentation> \ja 縦、横のサイズを固定する場合は、最大サイズと最小サイズを初期値と同じ値に設定します。 \endja </xsd:documentation>
+      <xsd:documentation> \ja 動作中にサイズを変更した場合は、window_interface::resize() が呼ばれます。 \endja </xsd:documentation>
+      <xsd:documentation> \ja オーバーライドする場合は、関数内で必ず、window_interface::resize() を呼び出す必要があります。 \endja </xsd:documentation>
+      <xsd:documentation> \ja サイズの変更に合わせて再描画する場合は、window_interface::paint() を呼び出します。 \endja </xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:attribute name="id" type="xsd:integer">
+        <xsd:annotation>
+          <xsd:documentation> \en id \enden  \ja 識別子 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="width" type="xsd:integer">
+        <xsd:annotation>
+          <xsd:documentation> \en width \enden  \ja 幅 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="height" type="xsd:integer">
+        <xsd:annotation>
+          <xsd:documentation> \en height \enden  \ja 高さ \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="min_width" type="xsd:integer">
+        <xsd:annotation>
+          <xsd:documentation> \en blah \enden \ja 最小の幅 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="min_height" type="xsd:integer">
+        <xsd:annotation>
+          <xsd:documentation> \en blah \enden \ja 最小の高さ \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="max_width" type="xsd:integer">
+        <xsd:annotation>
+          <xsd:documentation> \en blah \enden \ja 最大の幅 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="max_height" type="xsd:integer">
+        <xsd:annotation>
+          <xsd:documentation> \en blah \enden \ja 最大の高さ \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="resizable" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation> \en blah \enden \ja リサイズ可能なコントロール \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="tooltip" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation> \en tooltip \enden  \ja ツールティップ \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="include">
+    <xsd:annotation>
+      <xsd:documentation>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:attribute name="label" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="index" type="xsd:integer">
+        <xsd:annotation>
+          <xsd:documentation>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="path">
+    <xsd:annotation>
+      <xsd:documentation>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:attribute name="id" type="xsd:integer">
+        <xsd:annotation>
+          <xsd:documentation> \en id \enden  \ja 識別子 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="label" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name="tooltip" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation> \en tooltip \enden  \ja ツールティップ \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

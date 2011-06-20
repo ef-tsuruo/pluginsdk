@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>ローカライズ</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- 作成： Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="main.html"><span>メインページ</span></a></li>
+      <li class="current"><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+
+
+<h1><a class="anchor" id="localization">ローカライズ </a></h1><h2><a class="anchor" id="strings">
+■文字列</a></h2>
+<p>最も簡単な方法は、textという名前のSXULリソースでkey-valueを定義しておき、<code>shade_interface::gettext()</code> 関数でローカライズされた文字列を取得する。サンプルプロジェクトsimpledialogの<code><a class="el" href="dllentries_8h.html#a6f2ba000248080d52ec51c4260586bc0" title="プラグインの名前を返す。">get_name()</a></code> 関数を参照。</p>
+<p>より柔軟な方法として、<code>strings_interface</code> を使うことも可。サンプルプロジェクトsimpledialogのダイアログタイトルを設定している部分を参照。</p>
+<p>SXULファイルは必ずUTF-8。</p>
+<p>Windowsの場合、Shade 7 SDKでビルドされたプラグインの文字コードはデフォルトでCP_OEMCPだが、Shade 8以降のSDKでビルドされたプラグインの文字コードは<code><a class="el" href="dllentries_8h.html#acf4285ea73e24b1e1301b4de8774ad9c" title="テキストのエンコーディングを指定する。0を返し、UTF-8でコードを記述す�...">get_text_encoding()</a></code> でオーバライドしない限りUTF-8と見なす。</p>
+<h2><a class="anchor" id="controls">
+■コントロール類</a></h2>
+<p>プッシュボタン、チェックボックス等といったコントロール類の配置をSXULファイルに定義して、ウインドウから読み込むことが可能。</p>
+<p>詳しくは、simplewindow, simpledialogのサンプルターゲットを参照。 </p>
+</div>
+<br><br>
+<hr>
+<div align="center">Copyright &copy; e frontier, Inc. All rights reserved.</div>
+</body></html>

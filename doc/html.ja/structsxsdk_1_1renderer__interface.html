@@ -1,0 +1,1076 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>構造体 sxsdk::renderer_interface</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- 作成： Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="main.html"><span>メインページ</span></a></li>
+      <li><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>構成</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>構成メンバ</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath"><a class="el" href="namespacesxsdk.html">sxsdk</a>::<a class="el" href="structsxsdk_1_1renderer__interface.html">renderer_interface</a>
+  </div>
+</div>
+<div class="contents">
+<h1>構造体 sxsdk::renderer_interface</h1><!-- doxytag: class="sxsdk::renderer_interface" --><!-- doxytag: inherits="sxsdk::exporter_interface" --><div class="dynheader">
+sxsdk::renderer_interfaceに対する継承グラフ</div>
+<div class="dynsection">
+ <div class="center">
+  <img src="structsxsdk_1_1renderer__interface.gif" usemap="#sxsdk::renderer_interface_map" alt=""/>
+  <map id="sxsdk::renderer_interface_map" name="sxsdk::renderer_interface_map">
+<area href="structsxsdk_1_1exporter__interface.html" alt="sxsdk::exporter_interface" shape="rect" coords="0,112,156,136"/>
+<area href="structsxsdk_1_1plugin__interface.html" alt="sxsdk::plugin_interface" shape="rect" coords="0,56,156,80"/>
+<area href="classunknown__interface.html" alt="unknown_interface" shape="rect" coords="0,0,156,24"/>
+</map>
+ </div>
+</div>
+
+<p><a href="structsxsdk_1_1renderer__interface-members.html">すべてのメンバ一覧</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Public メソッド</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1renderer__interface.html#a5e5864444692993e6a8eb336d0d18107">begin_rendering</a> (<a class="el" href="structsxsdk_1_1rendering__context__interface.html">rendering_context_interface</a> *rendering_context, <a class="el" href="structsxsdk_1_1stream__interface.html">stream_interface</a> *stream, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。レンダリングの開始時呼ばれる。  <a href="#a5e5864444692993e6a8eb336d0d18107"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1renderer__interface.html#ad512091c9fc0fccadd1b20b900ee7ead">ask</a> (<a class="el" href="structsxsdk_1_1stream__interface.html">stream_interface</a> *stream, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。レンダリング設定の手法ポップアップメニューの隣の「設定」ボタンがクリックされたときに呼ばれる。  <a href="#ad512091c9fc0fccadd1b20b900ee7ead"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1renderer__interface.html#a84c35ada93bb9e6df4b9b5c04047e4fd">render</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。実際にレンダリング計算を行う。  <a href="#a84c35ada93bb9e6df4b9b5c04047e4fd"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a19549926da37fb2dc4f7cb8f7d780d05"></a><!-- doxytag: member="sxsdk::renderer_interface::end_rendering" ref="a19549926da37fb2dc4f7cb8f7d780d05" args="(void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1renderer__interface.html#a19549926da37fb2dc4f7cb8f7d780d05">end_rendering</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。レンダリングの終了時に呼ばれる。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0ef8a6dab873f8356377315addb27453"></a><!-- doxytag: member="sxsdk::renderer_interface::accepts_walkthrough" ref="a0ef8a6dab873f8356377315addb27453" args="(void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1renderer__interface.html#a0ef8a6dab873f8356377315addb27453">accepts_walkthrough</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。ウオークスルーをサポートするかどうかを返す。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1renderer__interface.html#ab969d17ee7e2daed0f246dfed0fdd29a">walkthrough</a> (<a class="el" href="structsxsdk_1_1scene__interface.html">sxsdk::scene_interface</a> *scene, <a class="el" href="structsxsdk_1_1camera__interface.html">camera_interface</a> *camera, <a class="el" href="structsxsdk_1_1image__interface.html">sxsdk::image_interface</a> *image, <a class="el" href="structsxsdk_1_1rendering__context__interface.html">rendering_context_interface</a> *rc, <a class="el" href="structsxsdk_1_1stream__interface.html">stream_interface</a> *stream, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。ウオークスルーを行う際に呼ばれる。  <a href="#ab969d17ee7e2daed0f246dfed0fdd29a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1renderer__interface.html#a038d6fc6c77246cb7f37e89b541bcba6">uses_surface_division_level</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。Shadeの「曲面の分割」設定をレンダラで使うかどうかを返す。  <a href="#a038d6fc6c77246cb7f37e89b541bcba6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1renderer__interface.html#a7e3bae34958084deb2f133d826fdb089">uses_shading_type</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。Shadeの「シェーディング」設定をレンダラで使うかどうかを返す。  <a href="#a7e3bae34958084deb2f133d826fdb089"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1renderer__interface.html#a785596408ca18df14cd1c92fb18c4bed">uses_antialiasing</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。Shadeの「アンチエリアシング」設定をレンダラで使うかどうかを返す。  <a href="#a785596408ca18df14cd1c92fb18c4bed"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1renderer__interface.html#a852b0ec30cd1c84d9ad5aedf40e4c719">uses_show_background</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。Shadeの「背景を表示」設定をレンダラで使うかどうかを返す。  <a href="#a852b0ec30cd1c84d9ad5aedf40e4c719"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1renderer__interface.html#ac11b781842aa32ef06b89ef079b53f5a">uses_reflect_background</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。Shadeの「背景を反映」設定をレンダラで使うかどうかを返す。  <a href="#ac11b781842aa32ef06b89ef079b53f5a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1renderer__interface.html#a37afe8a122662b8a216949832202d7bf">uses_show_shadow</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。Shadeの「影を表示」設定をレンダラで使うかどうかを返す。  <a href="#a37afe8a122662b8a216949832202d7bf"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6a442cf4b6b1f11423c3a563717b01b9"></a><!-- doxytag: member="sxsdk::renderer_interface::uses_sideways" ref="a6a442cf4b6b1f11423c3a563717b01b9" args="(void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>uses_sideways</b> (void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1renderer__interface.html#ac1ad0257f80339f43c2edf670e7c1715">uses_panorama</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。Shadeの「パノラマ」設定をレンダラで使うかどうかを返す。  <a href="#ac1ad0257f80339f43c2edf670e7c1715"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1renderer__interface.html#ab5485c33a39b2c0b07a04a20dc23c8a6">uses_radiosity</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。Shadeの「ラジオシティ」設定をレンダラで使うかどうかを返す。  <a href="#ab5485c33a39b2c0b07a04a20dc23c8a6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1renderer__interface.html#ada78ac28285ff2f49e1b16a526d41a9a">uses_premultiplied_pixel</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。Shadeの「アルファ値乗算済み」設定をレンダラで使うかどうかを返す。  <a href="#ada78ac28285ff2f49e1b16a526d41a9a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1renderer__interface.html#ae358d7ae0cad79502686a369cdeb4223">uses_number_of_threads</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。Shadeの「スレッド数」設定をレンダラで使うかどうかを返す。  <a href="#ae358d7ae0cad79502686a369cdeb4223"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1renderer__interface.html#a3ac3b31ce1c05fd5d299e6f254b78006">uses_transparency_affects_alpha</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。Shadeの「透明度がアルファに影響する」設定をレンダラで使うかどうかを返す。  <a href="#a3ac3b31ce1c05fd5d299e6f254b78006"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1renderer__interface.html#a64988cac17f1c3b5c45f6d4a6d2a9ced">uses_render_transparency</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。Shadeの「透明度を描画」設定をレンダラで使うかどうかを返す。  <a href="#a64988cac17f1c3b5c45f6d4a6d2a9ced"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1renderer__interface.html#a381f0c3c963c3057ae4ef46b0341dcd1">uses_single_sided_face</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。Shadeの「片面」設定をレンダラで使うかどうかを返す。  <a href="#a381f0c3c963c3057ae4ef46b0341dcd1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1renderer__interface.html#a2f4002d0d575f2f4fa45b2e1e6d3bbc4">uses_z</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。Shadeの「Z値を保持する」設定をレンダラで使うかどうかを返す。  <a href="#a2f4002d0d575f2f4fa45b2e1e6d3bbc4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaf07118370b765595cfa64f2e3d3b414"></a><!-- doxytag: member="sxsdk::renderer_interface::uses_real_color" ref="aaf07118370b765595cfa64f2e3d3b414" args="(void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>uses_real_color</b> (void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1renderer__interface.html#a0058a8a3c61c8545001a242de9fb9e39">uses_rendering_servers</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。Shadeの「ShadeGrid」設定をレンダラで使うかどうかを返す。  <a href="#a0058a8a3c61c8545001a242de9fb9e39"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1renderer__interface.html#a95f5ad2e3385543e3540ea041b7c51c0">uses_over_sampling</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。Shadeの「オーバーサンプリング」設定をレンダラで使うかどうかを返す。  <a href="#a95f5ad2e3385543e3540ea041b7c51c0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1renderer__interface.html#aad285c13d5237a6cde139b612172fb00">uses_ray_cast_level</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。Shadeの「視線追跡レベル」設定をレンダラで使うかどうかを返す。  <a href="#aad285c13d5237a6cde139b612172fb00"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1renderer__interface.html#a1efe99a40dd34f7e10388fe8b2a90988">uses_ray_tracing_quality</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。Shadeの「レイトレーシングの画質」設定をレンダラで使うかどうかを返す。  <a href="#a1efe99a40dd34f7e10388fe8b2a90988"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1renderer__interface.html#a68125cc7a8fa834ced1581eb54737fa5">uses_ray_tracing_delta</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。Shadeの「レイトレーシングデルタ」設定をレンダラで使うかどうかを返す。  <a href="#a68125cc7a8fa834ced1581eb54737fa5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1renderer__interface.html#ae9358193615958782f9fc1c483021de4">uses_fisheye_distortion</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。Shadeの「魚眼レンズ」設定をレンダラで使うかどうかを返す。  <a href="#ae9358193615958782f9fc1c483021de4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1renderer__interface.html#a57836aaee880e0100e1e05de1522ced2">uses_shadow_type</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。Shadeの「影の種類」設定をレンダラで使うかどうかを返す。  <a href="#a57836aaee880e0100e1e05de1522ced2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab7000c367f8d20c32733d6330062b589"></a><!-- doxytag: member="sxsdk::renderer_interface::uses_correction" ref="ab7000c367f8d20c32733d6330062b589" args="(void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>uses_correction</b> (void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1renderer__interface.html#a0517fc4339f89f36e98bbfee0c02da3c">uses_shadowmap</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。Shadeの「シャドウマップ」設定をレンダラで使うかどうかを返す。  <a href="#a0517fc4339f89f36e98bbfee0c02da3c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1renderer__interface.html#a33b9c0bc4b7e4538dd926c255059e4ab">needs_z</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。Z値を保持する必要があるかどうかを返す。  <a href="#a33b9c0bc4b7e4538dd926c255059e4ab"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abf7b908fcc282c37249a4deed3996137"></a><!-- doxytag: member="sxsdk::renderer_interface::needs_real_color" ref="abf7b908fcc282c37249a4deed3996137" args="(void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>needs_real_color</b> (void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1renderer__interface.html#ae0907958f3677b2e6ddc9b69b24e224d">can_ask</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。<code><a class="el" href="structsxsdk_1_1renderer__interface.html#ad512091c9fc0fccadd1b20b900ee7ead" title="オーバライド可。レンダリング設定の手法ポップアップメニューの隣の「�...">ask()</a></code> 関数呼び出しを待ち受けるかどうかを返す。  <a href="#ae0907958f3677b2e6ddc9b69b24e224d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a656ed775cb6a8c1adf6aef61dc8105a2"></a><!-- doxytag: member="sxsdk::renderer_interface::uses_motion_blur" ref="a656ed775cb6a8c1adf6aef61dc8105a2" args="(void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1renderer__interface.html#a656ed775cb6a8c1adf6aef61dc8105a2">uses_motion_blur</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。モーションブラーをサポートするかどうかを返す。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa59be180058b16e86ced24b2f5cd3357"></a><!-- doxytag: member="sxsdk::renderer_interface::uses_global_illumination" ref="aa59be180058b16e86ced24b2f5cd3357" args="(void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1renderer__interface.html#aa59be180058b16e86ced24b2f5cd3357">uses_global_illumination</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。大域照明をサポートするかどうかを返す。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1renderer__interface.html#ad49d56f6bccc6ef61527f5900643932e">must_clear_image</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。レンダリング開始時にイメージをクリアするかどうかを返す。  <a href="#ad49d56f6bccc6ef61527f5900643932e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1renderer__interface.html#a1f1496d37eaad84be75854f1589e7494">uses_ray_offset</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。Shadeの「レイオフセット」設定をレンダラで使うかどうかを返す。  <a href="#a1f1496d37eaad84be75854f1589e7494"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1renderer__interface.html#a143539d00693eb88c7fe070c28362788">uses_multipass_rendering</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。Shadeの「マルチパスを保持する」設定をレンダラで使うかどうかを返す。  <a href="#a143539d00693eb88c7fe070c28362788"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aad70b78a2e4b4d65c107ab02dd3d9221"></a><!-- doxytag: member="sxsdk::renderer_interface::uses_multipass_layer_obsoleted" ref="aad70b78a2e4b4d65c107ab02dd3d9221" args="(scene_interface &amp;scene, const sx::uuid_class &amp;layer_uuid, void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>uses_multipass_layer_obsoleted</b> (<a class="el" href="structsxsdk_1_1scene__interface.html">scene_interface</a> &amp;scene, const sx::uuid_class &amp;layer_uuid, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae64f8c044daac9315627656e7606d3f1"></a><!-- doxytag: member="sxsdk::renderer_interface::get_multipass_layer_obsoleted" ref="ae64f8c044daac9315627656e7606d3f1" args="(int index, sx::uuid_class &amp;layer_uuid, image_layer_interface &amp;layer, void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_multipass_layer_obsoleted</b> (int index, sx::uuid_class &amp;layer_uuid, <a class="el" href="structsxsdk_1_1image__layer__interface.html">image_layer_interface</a> &amp;layer, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1renderer__interface.html#a12ee540517ebdc564f955324a0ea828c">uses_multipass_layer</a> (<a class="el" href="structsxsdk_1_1scene__interface.html">scene_interface</a> &amp;scene, const char *id_name, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。Shade本体で定義された各パスをレンダラで使うかどうかを返す。  <a href="#a12ee540517ebdc564f955324a0ea828c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1renderer__interface.html#a7be12bbd3a8f96c9a8ed39b8d554ee50">uses_multipass_custom_layer</a> (<a class="el" href="structsxsdk_1_1scene__interface.html">scene_interface</a> &amp;scene, const sx::uuid_class &amp;layer_uuid, const char *id_name, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。プラグインで独自に定義した各パスをレンダラで使うかどうかを返す。  <a href="#a7be12bbd3a8f96c9a8ed39b8d554ee50"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1renderer__interface.html#a8aa977b6c3b7aa26e683a84488a6eba8">get_multipass_layer</a> (int index, sx::uuid_class &amp;layer_uuid, <a class="el" href="structsxsdk_1_1image__layer__interface.html">image_layer_interface</a> &amp;layer, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。Shadeのマルチパスリストにレンダラプラグイン固有のレイヤーを追加する。  <a href="#a8aa977b6c3b7aa26e683a84488a6eba8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1renderer__interface.html#a9160449c8e8dc3e0ffe054fdef9c5985">uses_maximum_distance</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。マルチパスレンダリングのZ値の「最大距離」の設定をレンダラで使うかどうかを返す。  <a href="#a9160449c8e8dc3e0ffe054fdef9c5985"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1renderer__interface.html#a5a68e1ef2c5e99810d1a01c2254886e4">uses_no_antialiasing_data_paths</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。マルチパスレンダリングの「データパスでアンチエリアシングを適用しない」の設定をレンダラで使うかどうかを返す。  <a href="#a5a68e1ef2c5e99810d1a01c2254886e4"></a><br/></td></tr>
+</table>
+<hr/><h2>関数</h2>
+<a class="anchor" id="ad512091c9fc0fccadd1b20b900ee7ead"></a><!-- doxytag: member="sxsdk::renderer_interface::ask" ref="ad512091c9fc0fccadd1b20b900ee7ead" args="(stream_interface *stream, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::renderer_interface::ask </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1stream__interface.html">stream_interface</a> *&nbsp;</td>
+          <td class="paramname"> <em>stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。レンダリング設定の手法ポップアップメニューの隣の「設定」ボタンがクリックされたときに呼ばれる。 </p>
+<p>「設定」ボタンをアクティブにするには<code><a class="el" href="structsxsdk_1_1renderer__interface.html#ae0907958f3677b2e6ddc9b69b24e224d" title="オーバライド可。ask() 関数呼び出しを待ち受けるかどうかを返す。...">can_ask()</a></code> をオーバライドしてtrueを返す。この関数でレンダリングに関する詳細設定行うダイアログボックスを表示する。</p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>stream</em>&nbsp;</td><td>レンダラが自由に使えるデータのストリーム </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a5e5864444692993e6a8eb336d0d18107"></a><!-- doxytag: member="sxsdk::renderer_interface::begin_rendering" ref="a5e5864444692993e6a8eb336d0d18107" args="(rendering_context_interface *rendering_context, stream_interface *stream, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::renderer_interface::begin_rendering </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1rendering__context__interface.html">rendering_context_interface</a> *&nbsp;</td>
+          <td class="paramname"> <em>rendering_context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1stream__interface.html">stream_interface</a> *&nbsp;</td>
+          <td class="paramname"> <em>stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。レンダリングの開始時呼ばれる。 </p>
+<p>レンダリングされるシーンの情報はここで渡される<em>rendering_context</em> から取得する。</p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>rendering_context</em>&nbsp;</td><td>レンダリングコンテクスト。レンダリングされるシーンの情報の取得に使用する。 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>stream</em>&nbsp;</td><td>レンダラが自由に使えるデータのストリーム </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ae0907958f3677b2e6ddc9b69b24e224d"></a><!-- doxytag: member="sxsdk::renderer_interface::can_ask" ref="ae0907958f3677b2e6ddc9b69b24e224d" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::renderer_interface::can_ask </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。<code><a class="el" href="structsxsdk_1_1renderer__interface.html#ad512091c9fc0fccadd1b20b900ee7ead" title="オーバライド可。レンダリング設定の手法ポップアップメニューの隣の「�...">ask()</a></code> 関数呼び出しを待ち受けるかどうかを返す。 </p>
+<p><code>true</code> を返すと、レンダリング設定の手法ポップアップメニューの隣の「設定」ボタンがアクティブになり、ユーザがそれをクリックすることによって<code><a class="el" href="structsxsdk_1_1renderer__interface.html#ad512091c9fc0fccadd1b20b900ee7ead" title="オーバライド可。レンダリング設定の手法ポップアップメニューの隣の「�...">ask()</a></code> 関数が呼ばれる。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a8aa977b6c3b7aa26e683a84488a6eba8"></a><!-- doxytag: member="sxsdk::renderer_interface::get_multipass_layer" ref="a8aa977b6c3b7aa26e683a84488a6eba8" args="(int index, sx::uuid_class &amp;layer_uuid, image_layer_interface &amp;layer, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::renderer_interface::get_multipass_layer </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">sx::uuid_class &amp;&nbsp;</td>
+          <td class="paramname"> <em>layer_uuid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1image__layer__interface.html">image_layer_interface</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>layer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。Shadeのマルチパスリストにレンダラプラグイン固有のレイヤーを追加する。 </p>
+<p>レイヤーの識別のため、<em>layer_uuid</em> のほか、<em>layer</em> に対して、<code><a class="el" href="structsxsdk_1_1image__layer__interface.html#a63c36f06ea7aa4065466d594b03e4782" title="レイヤーの識別名を設定する。">image_layer_interface::set_id_name()</a></code> でID名を必ず設定する必要がある。</p>
+<p>レンダリング設定の表示更新時に呼び出される。返り値にfalseをを返すまで繰り返し呼び出される。</p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>index</em>&nbsp;</td><td>レイヤーのインデクス値。プラグイン側で何番目のレイヤーかを判別するために渡される。 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>layer_uuid</em>&nbsp;</td><td>レイヤーセットのUUIDを設定する。 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>layer</em>&nbsp;</td><td>レイヤーの名称や使用するチャンネルなどを設定する </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ad49d56f6bccc6ef61527f5900643932e"></a><!-- doxytag: member="sxsdk::renderer_interface::must_clear_image" ref="ad49d56f6bccc6ef61527f5900643932e" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::renderer_interface::must_clear_image </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。レンダリング開始時にイメージをクリアするかどうかを返す。 </p>
+<p>オーバライドしない場合はレンダリング開始時にイメージがクリアされる。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a33b9c0bc4b7e4538dd926c255059e4ab"></a><!-- doxytag: member="sxsdk::renderer_interface::needs_z" ref="a33b9c0bc4b7e4538dd926c255059e4ab" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::renderer_interface::needs_z </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。Z値を保持する必要があるかどうかを返す。 </p>
+<p>Z値を出力する場合は必ずオーバライドしてtrueを返す必要がある。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a84c35ada93bb9e6df4b9b5c04047e4fd"></a><!-- doxytag: member="sxsdk::renderer_interface::render" ref="a84c35ada93bb9e6df4b9b5c04047e4fd" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::renderer_interface::render </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。実際にレンダリング計算を行う。 </p>
+<p>この関数内で<code><a class="el" href="structsxsdk_1_1rendering__context__interface.html#a23980a62f0e7685e3187e2a812b243a9" title="シーン内の形状ツリーを辿り、適切に変換しつつコールバック関数を呼ぶ�...">rendering_context_interface::convert()</a></code> を呼び出すことで形状の情報取得のためのコールバック関数呼び出しが開始される。(参照：<code><a class="el" href="structsxsdk_1_1exporter__interface.html">exporter_interface</a></code>)</p>
+<p>また、<code><a class="el" href="structsxsdk_1_1rendering__context__interface.html#a23980a62f0e7685e3187e2a812b243a9" title="シーン内の形状ツリーを辿り、適切に変換しつつコールバック関数を呼ぶ�...">rendering_context_interface::convert()</a></code> の呼び出し後は下記の関数で<code><a class="el" href="structsxsdk_1_1proxy__shape__class.html">proxy_shape_class</a></code> による仮想的な階層構造にアクセスすることができる。</p>
+<p><code><a class="el" href="structsxsdk_1_1rendering__context__interface.html#a0912bbc31e278b2061b3be880cec080b" title="convert() 中のカレントのプロクシ形状を取得する。">rendering_context_interface::get_current_proxy_shape()</a></code>, <code><a class="el" href="structsxsdk_1_1rendering__context__interface.html#a8cc3b5051fa992892a276d60569225b0" title="ルートのプロクシ形状を取得する。">rendering_context_interface::get_root_proxy_shape()</a></code> </p>
+
+</div>
+</div>
+<a class="anchor" id="a785596408ca18df14cd1c92fb18c4bed"></a><!-- doxytag: member="sxsdk::renderer_interface::uses_antialiasing" ref="a785596408ca18df14cd1c92fb18c4bed" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::renderer_interface::uses_antialiasing </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。Shadeの「アンチエリアシング」設定をレンダラで使うかどうかを返す。 </p>
+<p>レンダリング設定の表示を設定する。 </p>
+
+</div>
+</div>
+<a class="anchor" id="ae9358193615958782f9fc1c483021de4"></a><!-- doxytag: member="sxsdk::renderer_interface::uses_fisheye_distortion" ref="ae9358193615958782f9fc1c483021de4" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::renderer_interface::uses_fisheye_distortion </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。Shadeの「魚眼レンズ」設定をレンダラで使うかどうかを返す。 </p>
+<p>レンダリング設定の表示を設定する。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a9160449c8e8dc3e0ffe054fdef9c5985"></a><!-- doxytag: member="sxsdk::renderer_interface::uses_maximum_distance" ref="a9160449c8e8dc3e0ffe054fdef9c5985" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::renderer_interface::uses_maximum_distance </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。マルチパスレンダリングのZ値の「最大距離」の設定をレンダラで使うかどうかを返す。 </p>
+<p>レンダリング設定の表示を設定する。true を返す場合、<code><a class="el" href="structsxsdk_1_1rendering__interface.html#a6ea23f9d41a25822b421ecfaee20dad1" title="マルチパスレンダリングのZ値の「自動最大距離」の設定を取得する。...">rendering_interface::get_auto_maximum_distance()</a></code> がtrueのときは、無限遠とする距離(カメラ平面から最も遠い点までの距離＋α)をプラグイン側で計測して、Z値、Z値(n次レイ)のレイヤーに<code><a class="el" href="structsxsdk_1_1image__layer__interface.html#aca782e2b79aca3ffef0f9c79ccf61786" title="イメージで使用する明度の最大値(RGBA)を設定する。">image_layer_interface::set_maximum_value()</a></code> に設定しておく必要がある。</p>
+<p>Z値、Z値(n次レイ)のパスでは、ピクセルにカメラ平面から形状までの到達距離を実寸(mm)で設定する。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a7be12bbd3a8f96c9a8ed39b8d554ee50"></a><!-- doxytag: member="sxsdk::renderer_interface::uses_multipass_custom_layer" ref="a7be12bbd3a8f96c9a8ed39b8d554ee50" args="(scene_interface &amp;scene, const sx::uuid_class &amp;layer_uuid, const char *id_name, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::renderer_interface::uses_multipass_custom_layer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1scene__interface.html">scene_interface</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>scene</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const sx::uuid_class &amp;&nbsp;</td>
+          <td class="paramname"> <em>layer_uuid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>id_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。プラグインで独自に定義した各パスをレンダラで使うかどうかを返す。 </p>
+<p>レンダリング設定の表示更新時とレンダリング開始時に、プラグインで定義されているパスの数だけ呼び出される。</p>
+<p>この関数でtrueを返し、かつパス有効のチェックボックスがオンになっている場合は、レンダリング開始時にイメージレイヤーが生成される。</p>
+<p>生成されたレイヤーはレンダリング時に<code><a class="el" href="structsxsdk_1_1rendering__context__interface.html#a911d23b25c22b292250725764047ceef" title="プラグイン、スクリプトで独自に生成したレンダリングイメージレイヤー�...">rendering_context_interface::get_custom_image_layer_interface()</a></code> より取得する。</p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>scene</em>&nbsp;</td><td>レンダリング設定を行うシーン </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>layer_uuid</em>&nbsp;</td><td>レイヤーセットのUUID </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>id_name</em>&nbsp;</td><td>レイヤーのID名 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a12ee540517ebdc564f955324a0ea828c"></a><!-- doxytag: member="sxsdk::renderer_interface::uses_multipass_layer" ref="a12ee540517ebdc564f955324a0ea828c" args="(scene_interface &amp;scene, const char *id_name, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::renderer_interface::uses_multipass_layer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1scene__interface.html">scene_interface</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>scene</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>id_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。Shade本体で定義された各パスをレンダラで使うかどうかを返す。 </p>
+<p>レンダリング設定の表示更新時とレンダリング開始時に、Shade本体で定義されているパスの数だけ呼び出される。</p>
+<p>この関数でtrueを返し、かつパス有効のチェックボックスがオンになっている場合は、レンダリング開始時にイメージレイヤーが生成される。</p>
+<p>生成されたレイヤーはレンダリング時に<code><a class="el" href="structsxsdk_1_1rendering__context__interface.html#a099f5271e93ff9d37076b54e7c631440" title="id_name で指定したレンダリングイメージレイヤー">rendering_context_interface::get_image_layer_interface()</a></code> より取得する。</p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>scene</em>&nbsp;</td><td>レンダリング設定を行うシーン </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>id_name</em>&nbsp;</td><td>レイヤーのID名。Shade本体で定義されているレイヤーについては、ネームスペース<code><a class="el" href="namespacesxsdk_1_1multipass.html" title="マルチパスレンダリングに関連するenum">multipass</a></code> の各定数、関数を参照 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a143539d00693eb88c7fe070c28362788"></a><!-- doxytag: member="sxsdk::renderer_interface::uses_multipass_rendering" ref="a143539d00693eb88c7fe070c28362788" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::renderer_interface::uses_multipass_rendering </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。Shadeの「マルチパスを保持する」設定をレンダラで使うかどうかを返す。 </p>
+<p>レンダリング設定の表示を設定する。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a5a68e1ef2c5e99810d1a01c2254886e4"></a><!-- doxytag: member="sxsdk::renderer_interface::uses_no_antialiasing_data_paths" ref="a5a68e1ef2c5e99810d1a01c2254886e4" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::renderer_interface::uses_no_antialiasing_data_paths </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。マルチパスレンダリングの「データパスでアンチエリアシングを適用しない」の設定をレンダラで使うかどうかを返す。 </p>
+<p>レンダリング設定の表示を設定する。trueを返さない場合は、Z値、座標値、法線、XY法線、UV1、UV2のパスにアンチエリアシングを適用しないようにする必要がある。 </p>
+
+</div>
+</div>
+<a class="anchor" id="ae358d7ae0cad79502686a369cdeb4223"></a><!-- doxytag: member="sxsdk::renderer_interface::uses_number_of_threads" ref="ae358d7ae0cad79502686a369cdeb4223" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::renderer_interface::uses_number_of_threads </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。Shadeの「スレッド数」設定をレンダラで使うかどうかを返す。 </p>
+<p>レンダリング設定の表示を設定する。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a95f5ad2e3385543e3540ea041b7c51c0"></a><!-- doxytag: member="sxsdk::renderer_interface::uses_over_sampling" ref="a95f5ad2e3385543e3540ea041b7c51c0" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::renderer_interface::uses_over_sampling </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。Shadeの「オーバーサンプリング」設定をレンダラで使うかどうかを返す。 </p>
+<p>レンダリング設定の表示を設定する。 </p>
+
+</div>
+</div>
+<a class="anchor" id="ac1ad0257f80339f43c2edf670e7c1715"></a><!-- doxytag: member="sxsdk::renderer_interface::uses_panorama" ref="ac1ad0257f80339f43c2edf670e7c1715" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::renderer_interface::uses_panorama </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。Shadeの「パノラマ」設定をレンダラで使うかどうかを返す。 </p>
+<p>レンダリング設定の表示を設定する。 </p>
+
+</div>
+</div>
+<a class="anchor" id="ada78ac28285ff2f49e1b16a526d41a9a"></a><!-- doxytag: member="sxsdk::renderer_interface::uses_premultiplied_pixel" ref="ada78ac28285ff2f49e1b16a526d41a9a" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::renderer_interface::uses_premultiplied_pixel </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。Shadeの「アルファ値乗算済み」設定をレンダラで使うかどうかを返す。 </p>
+<p>レンダリング設定の表示を設定する。 </p>
+
+</div>
+</div>
+<a class="anchor" id="ab5485c33a39b2c0b07a04a20dc23c8a6"></a><!-- doxytag: member="sxsdk::renderer_interface::uses_radiosity" ref="ab5485c33a39b2c0b07a04a20dc23c8a6" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::renderer_interface::uses_radiosity </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。Shadeの「ラジオシティ」設定をレンダラで使うかどうかを返す。 </p>
+<p>レンダリング設定の表示を設定する。 </p>
+
+</div>
+</div>
+<a class="anchor" id="aad285c13d5237a6cde139b612172fb00"></a><!-- doxytag: member="sxsdk::renderer_interface::uses_ray_cast_level" ref="aad285c13d5237a6cde139b612172fb00" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::renderer_interface::uses_ray_cast_level </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。Shadeの「視線追跡レベル」設定をレンダラで使うかどうかを返す。 </p>
+<p>レンダリング設定の表示を設定する。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a1f1496d37eaad84be75854f1589e7494"></a><!-- doxytag: member="sxsdk::renderer_interface::uses_ray_offset" ref="a1f1496d37eaad84be75854f1589e7494" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::renderer_interface::uses_ray_offset </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。Shadeの「レイオフセット」設定をレンダラで使うかどうかを返す。 </p>
+<p>レンダリング設定の表示を設定する。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a68125cc7a8fa834ced1581eb54737fa5"></a><!-- doxytag: member="sxsdk::renderer_interface::uses_ray_tracing_delta" ref="a68125cc7a8fa834ced1581eb54737fa5" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::renderer_interface::uses_ray_tracing_delta </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。Shadeの「レイトレーシングデルタ」設定をレンダラで使うかどうかを返す。 </p>
+<p>レンダリング設定の表示を設定する。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a1efe99a40dd34f7e10388fe8b2a90988"></a><!-- doxytag: member="sxsdk::renderer_interface::uses_ray_tracing_quality" ref="a1efe99a40dd34f7e10388fe8b2a90988" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::renderer_interface::uses_ray_tracing_quality </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。Shadeの「レイトレーシングの画質」設定をレンダラで使うかどうかを返す。 </p>
+<p>レンダリング設定の表示を設定する。 </p>
+
+</div>
+</div>
+<a class="anchor" id="ac11b781842aa32ef06b89ef079b53f5a"></a><!-- doxytag: member="sxsdk::renderer_interface::uses_reflect_background" ref="ac11b781842aa32ef06b89ef079b53f5a" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::renderer_interface::uses_reflect_background </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。Shadeの「背景を反映」設定をレンダラで使うかどうかを返す。 </p>
+<p>レンダリング設定の表示を設定する。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a64988cac17f1c3b5c45f6d4a6d2a9ced"></a><!-- doxytag: member="sxsdk::renderer_interface::uses_render_transparency" ref="a64988cac17f1c3b5c45f6d4a6d2a9ced" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::renderer_interface::uses_render_transparency </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。Shadeの「透明度を描画」設定をレンダラで使うかどうかを返す。 </p>
+<p>レンダリング設定の表示を設定する。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a0058a8a3c61c8545001a242de9fb9e39"></a><!-- doxytag: member="sxsdk::renderer_interface::uses_rendering_servers" ref="a0058a8a3c61c8545001a242de9fb9e39" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::renderer_interface::uses_rendering_servers </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。Shadeの「ShadeGrid」設定をレンダラで使うかどうかを返す。 </p>
+<p>レンダリング設定の表示を設定する。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a7e3bae34958084deb2f133d826fdb089"></a><!-- doxytag: member="sxsdk::renderer_interface::uses_shading_type" ref="a7e3bae34958084deb2f133d826fdb089" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::renderer_interface::uses_shading_type </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。Shadeの「シェーディング」設定をレンダラで使うかどうかを返す。 </p>
+<p>レンダリング設定の表示を設定する。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a57836aaee880e0100e1e05de1522ced2"></a><!-- doxytag: member="sxsdk::renderer_interface::uses_shadow_type" ref="a57836aaee880e0100e1e05de1522ced2" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::renderer_interface::uses_shadow_type </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。Shadeの「影の種類」設定をレンダラで使うかどうかを返す。 </p>
+<p>レンダリング設定の表示を設定する。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a0517fc4339f89f36e98bbfee0c02da3c"></a><!-- doxytag: member="sxsdk::renderer_interface::uses_shadowmap" ref="a0517fc4339f89f36e98bbfee0c02da3c" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::renderer_interface::uses_shadowmap </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。Shadeの「シャドウマップ」設定をレンダラで使うかどうかを返す。 </p>
+<p>レンダリング設定の表示を設定する。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a852b0ec30cd1c84d9ad5aedf40e4c719"></a><!-- doxytag: member="sxsdk::renderer_interface::uses_show_background" ref="a852b0ec30cd1c84d9ad5aedf40e4c719" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::renderer_interface::uses_show_background </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。Shadeの「背景を表示」設定をレンダラで使うかどうかを返す。 </p>
+<p>レンダリング設定の表示を設定する。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a37afe8a122662b8a216949832202d7bf"></a><!-- doxytag: member="sxsdk::renderer_interface::uses_show_shadow" ref="a37afe8a122662b8a216949832202d7bf" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::renderer_interface::uses_show_shadow </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。Shadeの「影を表示」設定をレンダラで使うかどうかを返す。 </p>
+<p>レンダリング設定の表示を設定する。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a381f0c3c963c3057ae4ef46b0341dcd1"></a><!-- doxytag: member="sxsdk::renderer_interface::uses_single_sided_face" ref="a381f0c3c963c3057ae4ef46b0341dcd1" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::renderer_interface::uses_single_sided_face </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。Shadeの「片面」設定をレンダラで使うかどうかを返す。 </p>
+<p>レンダリング設定の表示を設定する。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a038d6fc6c77246cb7f37e89b541bcba6"></a><!-- doxytag: member="sxsdk::renderer_interface::uses_surface_division_level" ref="a038d6fc6c77246cb7f37e89b541bcba6" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::renderer_interface::uses_surface_division_level </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。Shadeの「曲面の分割」設定をレンダラで使うかどうかを返す。 </p>
+<p>レンダリング設定の表示を設定する。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a3ac3b31ce1c05fd5d299e6f254b78006"></a><!-- doxytag: member="sxsdk::renderer_interface::uses_transparency_affects_alpha" ref="a3ac3b31ce1c05fd5d299e6f254b78006" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::renderer_interface::uses_transparency_affects_alpha </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。Shadeの「透明度がアルファに影響する」設定をレンダラで使うかどうかを返す。 </p>
+<p>レンダリング設定の表示を設定する。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a2f4002d0d575f2f4fa45b2e1e6d3bbc4"></a><!-- doxytag: member="sxsdk::renderer_interface::uses_z" ref="a2f4002d0d575f2f4fa45b2e1e6d3bbc4" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::renderer_interface::uses_z </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。Shadeの「Z値を保持する」設定をレンダラで使うかどうかを返す。 </p>
+<p>レンダリング設定の表示を設定する。 </p>
+
+</div>
+</div>
+<a class="anchor" id="ab969d17ee7e2daed0f246dfed0fdd29a"></a><!-- doxytag: member="sxsdk::renderer_interface::walkthrough" ref="ab969d17ee7e2daed0f246dfed0fdd29a" args="(sxsdk::scene_interface *scene, camera_interface *camera, sxsdk::image_interface *image, rendering_context_interface *rc, stream_interface *stream, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::renderer_interface::walkthrough </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1scene__interface.html">sxsdk::scene_interface</a> *&nbsp;</td>
+          <td class="paramname"> <em>scene</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1camera__interface.html">camera_interface</a> *&nbsp;</td>
+          <td class="paramname"> <em>camera</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1image__interface.html">sxsdk::image_interface</a> *&nbsp;</td>
+          <td class="paramname"> <em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1rendering__context__interface.html">rendering_context_interface</a> *&nbsp;</td>
+          <td class="paramname"> <em>rc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1stream__interface.html">stream_interface</a> *&nbsp;</td>
+          <td class="paramname"> <em>stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。ウオークスルーを行う際に呼ばれる。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>scene</em>&nbsp;</td><td>ウオークスルーの対象となっているシーン </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>camera</em>&nbsp;</td><td>ウオークスルーの対象となっているカメラ </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>image</em>&nbsp;</td><td>レンダリング先となるイメージ </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>rc</em>&nbsp;</td><td>レンダリングコンテクスト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>stream</em>&nbsp;</td><td>レンダラが自由に使えるデータのストリーム </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>この構造体の説明は次のファイルから生成されました:<ul>
+<li><a class="el" href="rendererinterface_8h_source.html">rendererinterface.h</a></li>
+</ul>
+</div>
+<br><br>
+<hr>
+<div align="center">Copyright &copy; e frontier, Inc. All rights reserved.</div>
+</body></html>

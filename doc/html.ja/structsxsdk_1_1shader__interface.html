@@ -1,0 +1,947 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>構造体 sxsdk::shader_interface</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- 作成： Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="main.html"><span>メインページ</span></a></li>
+      <li><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>構成</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>構成メンバ</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath"><a class="el" href="namespacesxsdk.html">sxsdk</a>::<a class="el" href="structsxsdk_1_1shader__interface.html">shader_interface</a>
+  </div>
+</div>
+<div class="contents">
+<h1>構造体 sxsdk::shader_interface</h1><!-- doxytag: class="sxsdk::shader_interface" --><!-- doxytag: inherits="sxsdk::plugin_interface" --><div class="dynheader">
+sxsdk::shader_interfaceに対する継承グラフ</div>
+<div class="dynsection">
+ <div class="center">
+  <img src="structsxsdk_1_1shader__interface.gif" usemap="#sxsdk::shader_interface_map" alt=""/>
+  <map id="sxsdk::shader_interface_map" name="sxsdk::shader_interface_map">
+<area href="structsxsdk_1_1plugin__interface.html" alt="sxsdk::plugin_interface" shape="rect" coords="0,56,145,80"/>
+<area href="classunknown__interface.html" alt="unknown_interface" shape="rect" coords="0,0,145,24"/>
+</map>
+ </div>
+</div>
+
+<p><a href="structsxsdk_1_1shader__interface-members.html">すべてのメンバ一覧</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Public メソッド</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#aa630cfa941fdd19d07f7893aa93e6d74">get_default_map_mode</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。デフォルトの投影方法の値を返す。  <a href="#aa630cfa941fdd19d07f7893aa93e6d74"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#aa331e79b84af8bedc583581185509f7c">evaluate</a> (const sxsdk::vec3 &amp;p, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。パターンのスカラー値を返す。  <a href="#aa331e79b84af8bedc583581185509f7c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8c70cc0a0b77c9fe3f458c58393877a7"></a><!-- doxytag: member="sxsdk::shader_interface::supports_evaluate" ref="a8c70cc0a0b77c9fe3f458c58393877a7" args="(void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a8c70cc0a0b77c9fe3f458c58393877a7">supports_evaluate</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。<code><a class="el" href="structsxsdk_1_1shader__interface.html#aa331e79b84af8bedc583581185509f7c" title="オーバライド可。パターンのスカラー値を返す。">evaluate()</a></code> 関数を使用するかどうかを返す。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#aaebaf9a8463a81f9857ae8fa3c4ba618">shade</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。シェーディング処理を実行する。  <a href="#aaebaf9a8463a81f9857ae8fa3c4ba618"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a585775e1e37fbbf17522590bcd43d74b"></a><!-- doxytag: member="sxsdk::shader_interface::supports_shade" ref="a585775e1e37fbbf17522590bcd43d74b" args="(void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a585775e1e37fbbf17522590bcd43d74b">supports_shade</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。<code><a class="el" href="structsxsdk_1_1shader__interface.html#aaebaf9a8463a81f9857ae8fa3c4ba618" title="オーバライド可。シェーディング処理を実行する。">shade()</a></code> 関数を使用するかどうかを返す。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a57a7b215b5bbbc12131f0ac5d0b0673d">bump</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。バンプ処理を実行する。  <a href="#a57a7b215b5bbbc12131f0ac5d0b0673d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a008a3dc1335812fc5019f09c54c7eff8"></a><!-- doxytag: member="sxsdk::shader_interface::supports_bump" ref="a008a3dc1335812fc5019f09c54c7eff8" args="(void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a008a3dc1335812fc5019f09c54c7eff8">supports_bump</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。<code><a class="el" href="structsxsdk_1_1shader__interface.html#a57a7b215b5bbbc12131f0ac5d0b0673d" title="オーバライド可。バンプ処理を実行する。">bump()</a></code> 関数を使用するかどうかを返す。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#ae96a84237b62dca178116c3d47484971">ask</a> (<a class="el" href="structsxsdk_1_1stream__interface.html">stream_interface</a> *stream, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。ダイアログを表示するなどして、設定パラメータの変更をユーザに問い合わせる。  <a href="#ae96a84237b62dca178116c3d47484971"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classsxsdk_1_1shader__info__base__class.html">shader_info_base_class</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a5dec4c7f37ac24ef83d735fe0b298170">new_shader_info</a> (<a class="el" href="structsxsdk_1_1stream__interface.html">stream_interface</a> *stream, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。シェーダが独自に使うデータ領域を生成して、そのポインタを返す。  <a href="#a5dec4c7f37ac24ef83d735fe0b298170"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acd363d8717f4fccdfae7b43adff3a075"></a><!-- doxytag: member="sxsdk::shader_interface::needs_uv" ref="acd363d8717f4fccdfae7b43adff3a075" args="(void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#acd363d8717f4fccdfae7b43adff3a075">needs_uv</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。UV値を必要とするかどうかを返す。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a0f6907e149073bae92c62fdace07410a">needs_tangents</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。接線情報を必要とするかどうかを返す。  <a href="#a0f6907e149073bae92c62fdace07410a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aedfec22ff5c1db5e68dc106a3e35067b"></a><!-- doxytag: member="sxsdk::shader_interface::needs_turbulence" ref="aedfec22ff5c1db5e68dc106a3e35067b" args="(void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#aedfec22ff5c1db5e68dc106a3e35067b">needs_turbulence</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。「乱れ」を必要とするかどうかを返す。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a726bf52dda77c06ea0f8cf2730d7a084"></a><!-- doxytag: member="sxsdk::shader_interface::needs_softness" ref="a726bf52dda77c06ea0f8cf2730d7a084" args="(void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a726bf52dda77c06ea0f8cf2730d7a084">needs_softness</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。「ソフトネス」を必要とするかどうかを返す。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a72719e200732569edf929fb681030eac">needs_to_sample_image</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。イメージをサンプリングする必要があるかどうかを返す。  <a href="#a72719e200732569edf929fb681030eac"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a12b791051335c1e0d534707425a0244a">needs_to_sample_bump</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。バンプイメージをサンプリングする必要があるかどうかを返す。  <a href="#a12b791051335c1e0d534707425a0244a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a65c121748800232cb939f353446c70ea"></a><!-- doxytag: member="sxsdk::shader_interface::needs_projection" ref="a65c121748800232cb939f353446c70ea" args="(void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a65c121748800232cb939f353446c70ea">needs_projection</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。投影方法を指定する必要があるかどうかを返す。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a09b0c6ccf8f9632cc7450f1c4fd09085">visible</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。マッピングパターンとしてインターフェイスに表示するかどうかを返す。  <a href="#a09b0c6ccf8f9632cc7450f1c4fd09085"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad48c706aaceeb5aadf17477e6172cc90"></a><!-- doxytag: member="sxsdk::shader_interface::get_shader_info" ref="ad48c706aaceeb5aadf17477e6172cc90" args="(void *=0) const " -->
+<a class="el" href="classsxsdk_1_1shader__info__base__class.html">shader_info_base_class</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#ad48c706aaceeb5aadf17477e6172cc90">get_shader_info</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><code><a class="el" href="structsxsdk_1_1shader__interface.html#a5dec4c7f37ac24ef83d735fe0b298170" title="オーバライド可。シェーダが独自に使うデータ領域を生成して、そのポイ�...">new_shader_info()</a></code> 関数で生成したシェーダで独自に使う情報のポインタを取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">const <br class="typebreak"/>
+<a class="el" href="classsxsdk_1_1custom__element__info__base__class.html">custom_element_info_base_class</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a34060fb82aa14fabaaa561eb2bc31da0">get_custom_element_info</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><code><a class="el" href="structsxsdk_1_1attribute__interface.html#a365648974dc3236a763d321fbcaecc81" title="オーバライド可。交点計算を行う。(参照：メモリ常駐型プラグイン)...">attribute_interface::ray_intersection()</a></code> 関数で交差判定を行った点において、<code><a class="el" href="structsxsdk_1_1attribute__interface.html#ae76156759216d0b2e3ae05292620f5b9" title="オーバライド可。交点計算に必要な独自の情報を生成する。...">attribute_interface::new_custom_element_info()</a></code> 関数で生成した情報のポインタを取得する。  <a href="#a34060fb82aa14fabaaa561eb2bc31da0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsxsdk_1_1custom__element__info__base__class.html">custom_element_info_base_class</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#adb75e623bb03f9daa07a7596a00702a5">get_custom_element_per_thread_info</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><code><a class="el" href="structsxsdk_1_1attribute__interface.html#a365648974dc3236a763d321fbcaecc81" title="オーバライド可。交点計算を行う。(参照：メモリ常駐型プラグイン)...">attribute_interface::ray_intersection()</a></code> 関数で交差判定を行った点において、<code><a class="el" href="structsxsdk_1_1attribute__interface.html#a786130541083b908efb922764ad264fa" title="オーバライド可。スレッド単位で交点計算に必要な独自の情�...">attribute_interface::new_per_thread_info()</a></code> 関数で生成した情報のポインタを取得する。  <a href="#adb75e623bb03f9daa07a7596a00702a5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8d591a66c263dd04fada9de2a80f11d1"></a><!-- doxytag: member="sxsdk::shader_interface::get_intersection_number" ref="a8d591a66c263dd04fada9de2a80f11d1" args="(void *=0) const " -->
+int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a8d591a66c263dd04fada9de2a80f11d1">get_intersection_number</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><code><a class="el" href="structsxsdk_1_1attribute__interface.html#a365648974dc3236a763d321fbcaecc81" title="オーバライド可。交点計算を行う。(参照：メモリ常駐型プラグイン)...">attribute_interface::ray_intersection()</a></code> 関数で交差判定を行った点において、何番目の交点であるかを取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1d81335c4f0efa5905591875d9a39c24"></a><!-- doxytag: member="sxsdk::shader_interface::get_stream_interface" ref="a1d81335c4f0efa5905591875d9a39c24" args="(void *=0) const " -->
+<a class="el" href="structsxsdk_1_1stream__interface.html">stream_interface</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a1d81335c4f0efa5905591875d9a39c24">get_stream_interface</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">シェーダ独自の設定値などを保持するデータのストリームを取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aecaadc2bc5b4beecc9c4c0fb8657bc1b"></a><!-- doxytag: member="sxsdk::shader_interface::get_mapping" ref="aecaadc2bc5b4beecc9c4c0fb8657bc1b" args="(void *=0) const " -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#aecaadc2bc5b4beecc9c4c0fb8657bc1b">get_mapping</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">マッピング設定値を取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afe5bd45aef7095c8582a2e2979d79438"></a><!-- doxytag: member="sxsdk::shader_interface::get_mapping_color" ref="afe5bd45aef7095c8582a2e2979d79438" args="(void *=0) const " -->
+sxsdk::rgb_class&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#afe5bd45aef7095c8582a2e2979d79438">get_mapping_color</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">マッピング色設定値を取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a69488006a75a47b69293fa26dfc69cbe"></a><!-- doxytag: member="sxsdk::shader_interface::get_turbulence" ref="a69488006a75a47b69293fa26dfc69cbe" args="(void *=0) const " -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a69488006a75a47b69293fa26dfc69cbe">get_turbulence</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">「乱れ」設定値を取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0417522a5eae240f749b9db789addb82"></a><!-- doxytag: member="sxsdk::shader_interface::get_softness" ref="a0417522a5eae240f749b9db789addb82" args="(void *=0) const " -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a0417522a5eae240f749b9db789addb82">get_softness</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">「ソフトネス」設定値を取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae77eb6fef32dbf0b824ed9ebe4b6243e"></a><!-- doxytag: member="sxsdk::shader_interface::get_projection" ref="ae77eb6fef32dbf0b824ed9ebe4b6243e" args="(void *=0) const " -->
+int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#ae77eb6fef32dbf0b824ed9ebe4b6243e">get_projection</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">投影モード設定値を取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">rgba_class&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#aa3c968bb245f32ce1ccbe4762376158f">sample_image</a> (float u, float v)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">イメージをサンプリングする。  <a href="#aa3c968bb245f32ce1ccbe4762376158f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">sxsdk::vec2&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#acf9f85bc719a0cda88ac74115d0f5e09">sample_bump</a> (float u, float v)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">バンプイメージをサンプリングする。  <a href="#acf9f85bc719a0cda88ac74115d0f5e09"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5ef12bcd8890bba8588a2bca49dfb9a6"></a><!-- doxytag: member="sxsdk::shader_interface::get_P" ref="a5ef12bcd8890bba8588a2bca49dfb9a6" args="(void *=0) const " -->
+sxsdk::vec3&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a5ef12bcd8890bba8588a2bca49dfb9a6">get_P</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">シェーディングの対象となっている点の位置を取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0185b38d2d146da04d7a49345f9d6d60"></a><!-- doxytag: member="sxsdk::shader_interface::set_P" ref="a0185b38d2d146da04d7a49345f9d6d60" args="(const sxsdk::vec3 &amp;P_param, void *=0)" -->
+<a class="el" href="structsxsdk_1_1shader__interface.html">shader_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a0185b38d2d146da04d7a49345f9d6d60">set_P</a> (const sxsdk::vec3 &amp;P_param, void *=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">シェーディングの対象となっている点の位置を設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea0dbb5579e915bd44c6756a9b27360f"></a><!-- doxytag: member="sxsdk::shader_interface::get_N" ref="aea0dbb5579e915bd44c6756a9b27360f" args="(void *=0) const " -->
+sxsdk::vec3&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#aea0dbb5579e915bd44c6756a9b27360f">get_N</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">シェーディング計算に使用するための法線ベクトルを取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7112562cb29e07effef873fd9cb028c2"></a><!-- doxytag: member="sxsdk::shader_interface::set_N" ref="a7112562cb29e07effef873fd9cb028c2" args="(const sxsdk::vec3 &amp;N_param, void *=0)" -->
+<a class="el" href="structsxsdk_1_1shader__interface.html">shader_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a7112562cb29e07effef873fd9cb028c2">set_N</a> (const sxsdk::vec3 &amp;N_param, void *=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">シェーディング計算に使用するための法線ベクトルを設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a450e5d1ca4b9f3038f7dc2ae47113bd8"></a><!-- doxytag: member="sxsdk::shader_interface::get_Ng" ref="a450e5d1ca4b9f3038f7dc2ae47113bd8" args="(void *=0) const " -->
+sxsdk::vec3&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a450e5d1ca4b9f3038f7dc2ae47113bd8">get_Ng</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">幾何的な法線ベクトルを取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa00690397e7ba9e20a790a52063e7348"></a><!-- doxytag: member="sxsdk::shader_interface::get_I" ref="aa00690397e7ba9e20a790a52063e7348" args="(void *=0) const " -->
+sxsdk::vec3&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#aa00690397e7ba9e20a790a52063e7348">get_I</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">視線入射ベクトルを取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a53db360d3ccb9b9eb4f4375961f36542"></a><!-- doxytag: member="sxsdk::shader_interface::get_Cs" ref="a53db360d3ccb9b9eb4f4375961f36542" args="(void *=0) const " -->
+sxsdk::rgb_class&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a53db360d3ccb9b9eb4f4375961f36542">get_Cs</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">デフォルト表面色を取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaa797fa645a103996a66ef99748d2a69"></a><!-- doxytag: member="sxsdk::shader_interface::get_Os" ref="aaa797fa645a103996a66ef99748d2a69" args="(void *=0) const " -->
+sxsdk::rgb_class&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#aaa797fa645a103996a66ef99748d2a69">get_Os</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">デフォルト不透明度を取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9aa8f47eb8732182f82ae62a19d808f8"></a><!-- doxytag: member="sxsdk::shader_interface::get_u" ref="a9aa8f47eb8732182f82ae62a19d808f8" args="(void *=0) const " -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a9aa8f47eb8732182f82ae62a19d808f8">get_u</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">パラメータUV値のUを取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aae133535901879b186a06a0674da32de"></a><!-- doxytag: member="sxsdk::shader_interface::get_v" ref="aae133535901879b186a06a0674da32de" args="(void *=0) const " -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#aae133535901879b186a06a0674da32de">get_v</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">パラメータUV値のVを取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a53e95a1d9c83d2bb523f642d6dd632ee"></a><!-- doxytag: member="sxsdk::shader_interface::get_s" ref="a53e95a1d9c83d2bb523f642d6dd632ee" args="(void *=0) const " -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a53e95a1d9c83d2bb523f642d6dd632ee">get_s</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">距離UV値のUを取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aba9762a66c4494a1c837ee3c0fc8e655"></a><!-- doxytag: member="sxsdk::shader_interface::get_t" ref="aba9762a66c4494a1c837ee3c0fc8e655" args="(void *=0) const " -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#aba9762a66c4494a1c837ee3c0fc8e655">get_t</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">距離UV値のVを取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a46a6e11ebbfbafe69446cc866d1ebb98"></a><!-- doxytag: member="sxsdk::shader_interface::get_dPdu" ref="a46a6e11ebbfbafe69446cc866d1ebb98" args="(void *=0) const " -->
+sxsdk::vec3&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a46a6e11ebbfbafe69446cc866d1ebb98">get_dPdu</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">u方向の偏微分ベクトルを取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4ff08831825fa7a02290ace274e6dd05"></a><!-- doxytag: member="sxsdk::shader_interface::get_dPdv" ref="a4ff08831825fa7a02290ace274e6dd05" args="(void *=0) const " -->
+sxsdk::vec3&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a4ff08831825fa7a02290ace274e6dd05">get_dPdv</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">v方向の偏微分ベクトルを取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7a1d5b59ecaf2a99d66107c3b56243bf"></a><!-- doxytag: member="sxsdk::shader_interface::has_uv" ref="a7a1d5b59ecaf2a99d66107c3b56243bf" args="(void *=0) const " -->
+bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a7a1d5b59ecaf2a99d66107c3b56243bf">has_uv</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">パラメータUV値を持っているかどうかを持っているか判定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff24e96bfe9adc411727af61710a67ca"></a><!-- doxytag: member="sxsdk::shader_interface::has_st" ref="aff24e96bfe9adc411727af61710a67ca" args="(void *=0) const " -->
+bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#aff24e96bfe9adc411727af61710a67ca">has_st</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">距離UV値を持っているかどうかを持っているか判定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a593caa806e5467ba12ecd5e10e181fdb"></a><!-- doxytag: member="sxsdk::shader_interface::has_tangents" ref="a593caa806e5467ba12ecd5e10e181fdb" args="(void *=0) const " -->
+bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a593caa806e5467ba12ecd5e10e181fdb">has_tangents</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">偏微分情報を持っているかどうかを持っているか判定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a905379170098c15812c56359be4f22ef"></a><!-- doxytag: member="sxsdk::shader_interface::get_time" ref="a905379170098c15812c56359be4f22ef" args="(void *=0) const " -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a905379170098c15812c56359be4f22ef">get_time</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">現在の時刻を取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3e83527440e1a9a3cdb227c2ea4393f8"></a><!-- doxytag: member="sxsdk::shader_interface::get_du" ref="a3e83527440e1a9a3cdb227c2ea4393f8" args="(void *=0) const " -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a3e83527440e1a9a3cdb227c2ea4393f8">get_du</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">を取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a30b15e620b89005c3abf85199edce4fb"></a><!-- doxytag: member="sxsdk::shader_interface::get_dv" ref="a30b15e620b89005c3abf85199edce4fb" args="(void *=0) const " -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a30b15e620b89005c3abf85199edce4fb">get_dv</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">を取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8738c13ede2b5a6f69736803f15df21b"></a><!-- doxytag: member="sxsdk::shader_interface::get_L" ref="a8738c13ede2b5a6f69736803f15df21b" args="(void *=0) const " -->
+sxsdk::vec3&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a8738c13ede2b5a6f69736803f15df21b">get_L</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">を取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2a860ffc7b36c4d5fb23f798589fd6b3"></a><!-- doxytag: member="sxsdk::shader_interface::get_Cl" ref="a2a860ffc7b36c4d5fb23f798589fd6b3" args="(void *=0) const " -->
+sxsdk::rgb_class&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a2a860ffc7b36c4d5fb23f798589fd6b3">get_Cl</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">を取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a95f203b0a4d5f40458db5c416150f06a"></a><!-- doxytag: member="sxsdk::shader_interface::get_Ci" ref="a95f203b0a4d5f40458db5c416150f06a" args="(void *=0) const " -->
+sxsdk::rgb_class&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a95f203b0a4d5f40458db5c416150f06a">get_Ci</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">シェーディング結果の表面色を取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6268abe4de6b97c8656bd68b404c30b6"></a><!-- doxytag: member="sxsdk::shader_interface::set_Ci" ref="a6268abe4de6b97c8656bd68b404c30b6" args="(const sxsdk::rgb_class &amp;Ci_param, void *=0)" -->
+<a class="el" href="structsxsdk_1_1shader__interface.html">shader_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a6268abe4de6b97c8656bd68b404c30b6">set_Ci</a> (const sxsdk::rgb_class &amp;Ci_param, void *=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">シェーディング結果の表面色を設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac0af77353f8bb63efd673308c4079d62"></a><!-- doxytag: member="sxsdk::shader_interface::get_Oi" ref="ac0af77353f8bb63efd673308c4079d62" args="(void *=0) const " -->
+testsxsdk::rgb_class&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_Oi</b> (void *=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a14028b9c5385f6b0bbb4d729ba66d796"></a><!-- doxytag: member="sxsdk::shader_interface::set_Oi" ref="a14028b9c5385f6b0bbb4d729ba66d796" args="(const sxsdk::rgb_class &amp;Oi_param, void *=0)" -->
+testshader_interface &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_Oi</b> (const sxsdk::rgb_class &amp;Oi_param, void *=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a30612a12b78f5ff1e65ad040f6113da6"></a><!-- doxytag: member="sxsdk::shader_interface::get_vertexdata" ref="a30612a12b78f5ff1e65ad040f6113da6" args="(int index)" -->
+void *&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_vertexdata</b> (int index)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0c1c26df474b3d667dbf6b4e47fa48d8"></a><!-- doxytag: member="sxsdk::shader_interface::normalize" ref="a0c1c26df474b3d667dbf6b4e47fa48d8" args="(const sxsdk::vec3 &amp;v)" -->
+sxsdk::vec3&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a0c1c26df474b3d667dbf6b4e47fa48d8">normalize</a> (const sxsdk::vec3 &amp;v)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">正規化する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3ba2da5a7a7e89ff2ece1bfad2fa12e2"></a><!-- doxytag: member="sxsdk::shader_interface::mod" ref="a3ba2da5a7a7e89ff2ece1bfad2fa12e2" args="(float x, float p)" -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a3ba2da5a7a7e89ff2ece1bfad2fa12e2">mod</a> (float x, float p)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">剰余(x/p)を計算する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a735fa0350810c02438d5e47b60db58ea"></a><!-- doxytag: member="sxsdk::shader_interface::step" ref="a735fa0350810c02438d5e47b60db58ea" args="(float edge, float x)" -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a735fa0350810c02438d5e47b60db58ea">step</a> (float edge, float x)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">閾値関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad484a03cb6170de490da8579e41f9686"></a><!-- doxytag: member="sxsdk::shader_interface::smoothstep" ref="ad484a03cb6170de490da8579e41f9686" args="(float edge0, float edge1, float x)" -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#ad484a03cb6170de490da8579e41f9686">smoothstep</a> (float edge0, float edge1, float x)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">滑らかな閾値関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa04cc8c3f828c2b1b1167fe47fd40481"></a><!-- doxytag: member="sxsdk::shader_interface::noise1" ref="aa04cc8c3f828c2b1b1167fe47fd40481" args="(float x)" -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><b>noise1</b> (float x)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8ab1b94a8c7784374779231f24951cfc"></a><!-- doxytag: member="sxsdk::shader_interface::noise1" ref="a8ab1b94a8c7784374779231f24951cfc" args="(const sxsdk::vec2 &amp;p)" -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a8ab1b94a8c7784374779231f24951cfc">noise1</a> (const sxsdk::vec2 &amp;p)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4ec79342b3a12ff007b2aae4a52ed6e9"></a><!-- doxytag: member="sxsdk::shader_interface::noise1" ref="a4ec79342b3a12ff007b2aae4a52ed6e9" args="(float x, float y)" -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><b>noise1</b> (float x, float y)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab8712ea170f24c5057830ae3dad6733b"></a><!-- doxytag: member="sxsdk::shader_interface::noise1" ref="ab8712ea170f24c5057830ae3dad6733b" args="(const sxsdk::vec3 &amp;p)" -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#ab8712ea170f24c5057830ae3dad6733b">noise1</a> (const sxsdk::vec3 &amp;p)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac371ad44205798c72f69ade8331e3ec1"></a><!-- doxytag: member="sxsdk::shader_interface::noise1" ref="ac371ad44205798c72f69ade8331e3ec1" args="(const sxsdk::vec2 &amp;p, float z)" -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#ac371ad44205798c72f69ade8331e3ec1">noise1</a> (const sxsdk::vec2 &amp;p, float z)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac24c6132f4e7b62852cb903825a35d7f"></a><!-- doxytag: member="sxsdk::shader_interface::noise1" ref="ac24c6132f4e7b62852cb903825a35d7f" args="(float x, float y, float z)" -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#ac24c6132f4e7b62852cb903825a35d7f">noise1</a> (float x, float y, float z)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aab5e6cea5c109646f4df1fa8794a859d"></a><!-- doxytag: member="sxsdk::shader_interface::noise1" ref="aab5e6cea5c109646f4df1fa8794a859d" args="(const sxsdk::vec4 &amp;p)" -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><b>noise1</b> (const sxsdk::vec4 &amp;p)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a15f847fe93a9f396605419def3480fa4"></a><!-- doxytag: member="sxsdk::shader_interface::noise1" ref="a15f847fe93a9f396605419def3480fa4" args="(const sxsdk::vec3 &amp;p, float t)" -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a15f847fe93a9f396605419def3480fa4">noise1</a> (const sxsdk::vec3 &amp;p, float t)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a54083df08ee08a14a13bc15b0747baa5"></a><!-- doxytag: member="sxsdk::shader_interface::noise1" ref="a54083df08ee08a14a13bc15b0747baa5" args="(const sxsdk::vec2 &amp;p, float z, float t)" -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a54083df08ee08a14a13bc15b0747baa5">noise1</a> (const sxsdk::vec2 &amp;p, float z, float t)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a53fe19650b4d24749496c8f5994048e2"></a><!-- doxytag: member="sxsdk::shader_interface::noise1" ref="a53fe19650b4d24749496c8f5994048e2" args="(float x, float y, float z, float t)" -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a53fe19650b4d24749496c8f5994048e2">noise1</a> (float x, float y, float z, float t)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abdc3e28833d3f787afe157773ca0956d"></a><!-- doxytag: member="sxsdk::shader_interface::noise2" ref="abdc3e28833d3f787afe157773ca0956d" args="(float x)" -->
+sxsdk::vec2&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#abdc3e28833d3f787afe157773ca0956d">noise2</a> (float x)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8f322d6f4af18b5d30898dea10146bc3"></a><!-- doxytag: member="sxsdk::shader_interface::noise2" ref="a8f322d6f4af18b5d30898dea10146bc3" args="(const sxsdk::vec2 &amp;p)" -->
+sxsdk::vec2&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a8f322d6f4af18b5d30898dea10146bc3">noise2</a> (const sxsdk::vec2 &amp;p)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2b46af489fc7f99d3c5d6ea1379b82b5"></a><!-- doxytag: member="sxsdk::shader_interface::noise2" ref="a2b46af489fc7f99d3c5d6ea1379b82b5" args="(float x, float y)" -->
+sxsdk::vec2&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a2b46af489fc7f99d3c5d6ea1379b82b5">noise2</a> (float x, float y)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1a94fbd8d5b3e3eb106487d794b50f0"></a><!-- doxytag: member="sxsdk::shader_interface::noise2" ref="aa1a94fbd8d5b3e3eb106487d794b50f0" args="(const sxsdk::vec3 &amp;p)" -->
+sxsdk::vec2&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#aa1a94fbd8d5b3e3eb106487d794b50f0">noise2</a> (const sxsdk::vec3 &amp;p)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4159db4eb7b0405bf0e00ca9c8ccd99e"></a><!-- doxytag: member="sxsdk::shader_interface::noise2" ref="a4159db4eb7b0405bf0e00ca9c8ccd99e" args="(const sxsdk::vec2 &amp;p, float z)" -->
+sxsdk::vec2&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a4159db4eb7b0405bf0e00ca9c8ccd99e">noise2</a> (const sxsdk::vec2 &amp;p, float z)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a72ac56f5e89d06c38fd7e848c0ee6a57"></a><!-- doxytag: member="sxsdk::shader_interface::noise2" ref="a72ac56f5e89d06c38fd7e848c0ee6a57" args="(float x, float y, float z)" -->
+sxsdk::vec2&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a72ac56f5e89d06c38fd7e848c0ee6a57">noise2</a> (float x, float y, float z)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8a07c1ec7a8a48062d841a5abf59f523"></a><!-- doxytag: member="sxsdk::shader_interface::noise2" ref="a8a07c1ec7a8a48062d841a5abf59f523" args="(const sxsdk::vec4 &amp;p)" -->
+sxsdk::vec2&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a8a07c1ec7a8a48062d841a5abf59f523">noise2</a> (const sxsdk::vec4 &amp;p)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6dc239599a158293bd4c09c3dcffa8f0"></a><!-- doxytag: member="sxsdk::shader_interface::noise2" ref="a6dc239599a158293bd4c09c3dcffa8f0" args="(const sxsdk::vec3 &amp;p, float t)" -->
+sxsdk::vec2&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a6dc239599a158293bd4c09c3dcffa8f0">noise2</a> (const sxsdk::vec3 &amp;p, float t)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1b0faa612debb08e063cac9e9f3b50a6"></a><!-- doxytag: member="sxsdk::shader_interface::noise2" ref="a1b0faa612debb08e063cac9e9f3b50a6" args="(const sxsdk::vec2 &amp;p, float z, float t)" -->
+sxsdk::vec2&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a1b0faa612debb08e063cac9e9f3b50a6">noise2</a> (const sxsdk::vec2 &amp;p, float z, float t)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afca99d9ed00b2e4860684ba533b6cf48"></a><!-- doxytag: member="sxsdk::shader_interface::noise2" ref="afca99d9ed00b2e4860684ba533b6cf48" args="(float x, float y, float z, float t)" -->
+sxsdk::vec2&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#afca99d9ed00b2e4860684ba533b6cf48">noise2</a> (float x, float y, float z, float t)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9fc127d20dcd502f6072e97354be7d2a"></a><!-- doxytag: member="sxsdk::shader_interface::noise3" ref="a9fc127d20dcd502f6072e97354be7d2a" args="(float x)" -->
+sxsdk::vec3&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a9fc127d20dcd502f6072e97354be7d2a">noise3</a> (float x)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac761677e827c7cd9f0cef707c818380a"></a><!-- doxytag: member="sxsdk::shader_interface::noise3" ref="ac761677e827c7cd9f0cef707c818380a" args="(const sxsdk::vec2 &amp;p)" -->
+sxsdk::vec3&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#ac761677e827c7cd9f0cef707c818380a">noise3</a> (const sxsdk::vec2 &amp;p)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a833527bb3d3046cc91e4c746d9bafcd0"></a><!-- doxytag: member="sxsdk::shader_interface::noise3" ref="a833527bb3d3046cc91e4c746d9bafcd0" args="(float x, float y)" -->
+sxsdk::vec3&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a833527bb3d3046cc91e4c746d9bafcd0">noise3</a> (float x, float y)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a56f93681891b93359781a8b0c0e5653e"></a><!-- doxytag: member="sxsdk::shader_interface::noise3" ref="a56f93681891b93359781a8b0c0e5653e" args="(const sxsdk::vec3 &amp;p)" -->
+sxsdk::vec3&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a56f93681891b93359781a8b0c0e5653e">noise3</a> (const sxsdk::vec3 &amp;p)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a60bb6abddda48137db03bac18539496f"></a><!-- doxytag: member="sxsdk::shader_interface::noise3" ref="a60bb6abddda48137db03bac18539496f" args="(const sxsdk::vec2 &amp;p, float z)" -->
+sxsdk::vec3&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a60bb6abddda48137db03bac18539496f">noise3</a> (const sxsdk::vec2 &amp;p, float z)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a04a78a284a9a17a4f07278635ef70012"></a><!-- doxytag: member="sxsdk::shader_interface::noise3" ref="a04a78a284a9a17a4f07278635ef70012" args="(float x, float y, float z)" -->
+sxsdk::vec3&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a04a78a284a9a17a4f07278635ef70012">noise3</a> (float x, float y, float z)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab2fa9dc10a58e6318797ce51540e2f5a"></a><!-- doxytag: member="sxsdk::shader_interface::noise3" ref="ab2fa9dc10a58e6318797ce51540e2f5a" args="(const sxsdk::vec4 &amp;p)" -->
+sxsdk::vec3&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#ab2fa9dc10a58e6318797ce51540e2f5a">noise3</a> (const sxsdk::vec4 &amp;p)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a68ec4c01ff084be8b7b2ef66ae822675"></a><!-- doxytag: member="sxsdk::shader_interface::noise3" ref="a68ec4c01ff084be8b7b2ef66ae822675" args="(const sxsdk::vec3 &amp;p, float t)" -->
+sxsdk::vec3&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a68ec4c01ff084be8b7b2ef66ae822675">noise3</a> (const sxsdk::vec3 &amp;p, float t)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3c3200df0ddb15a8d11de7fb2adc81c4"></a><!-- doxytag: member="sxsdk::shader_interface::noise3" ref="a3c3200df0ddb15a8d11de7fb2adc81c4" args="(const sxsdk::vec2 &amp;p, float z, float t)" -->
+sxsdk::vec3&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a3c3200df0ddb15a8d11de7fb2adc81c4">noise3</a> (const sxsdk::vec2 &amp;p, float z, float t)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aebac1cdc155815b00280545ca498362d"></a><!-- doxytag: member="sxsdk::shader_interface::noise3" ref="aebac1cdc155815b00280545ca498362d" args="(float x, float y, float z, float t)" -->
+sxsdk::vec3&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#aebac1cdc155815b00280545ca498362d">noise3</a> (float x, float y, float z, float t)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad6a823c870b1be24f3c262f9848c8a16"></a><!-- doxytag: member="sxsdk::shader_interface::noise4" ref="ad6a823c870b1be24f3c262f9848c8a16" args="(float x)" -->
+sxsdk::vec4&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#ad6a823c870b1be24f3c262f9848c8a16">noise4</a> (float x)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad7d4bcc1ae13e97910519dad9e48ddf5"></a><!-- doxytag: member="sxsdk::shader_interface::noise4" ref="ad7d4bcc1ae13e97910519dad9e48ddf5" args="(const sxsdk::vec2 &amp;p)" -->
+sxsdk::vec4&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#ad7d4bcc1ae13e97910519dad9e48ddf5">noise4</a> (const sxsdk::vec2 &amp;p)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa62eb639e142348bbba36ea29fe9ab9a"></a><!-- doxytag: member="sxsdk::shader_interface::noise4" ref="aa62eb639e142348bbba36ea29fe9ab9a" args="(float x, float y)" -->
+sxsdk::vec4&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#aa62eb639e142348bbba36ea29fe9ab9a">noise4</a> (float x, float y)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="add9f6a3b90eacc7d2d91d5b98ea0bbd7"></a><!-- doxytag: member="sxsdk::shader_interface::noise4" ref="add9f6a3b90eacc7d2d91d5b98ea0bbd7" args="(const sxsdk::vec3 &amp;p)" -->
+sxsdk::vec4&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#add9f6a3b90eacc7d2d91d5b98ea0bbd7">noise4</a> (const sxsdk::vec3 &amp;p)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea891f79286d6886b899815ba21b8b17"></a><!-- doxytag: member="sxsdk::shader_interface::noise4" ref="aea891f79286d6886b899815ba21b8b17" args="(const sxsdk::vec2 &amp;p, float z)" -->
+sxsdk::vec4&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#aea891f79286d6886b899815ba21b8b17">noise4</a> (const sxsdk::vec2 &amp;p, float z)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5b45b05487aa3a3bb1dec3ec37a672c2"></a><!-- doxytag: member="sxsdk::shader_interface::noise4" ref="a5b45b05487aa3a3bb1dec3ec37a672c2" args="(float x, float y, float z)" -->
+sxsdk::vec4&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a5b45b05487aa3a3bb1dec3ec37a672c2">noise4</a> (float x, float y, float z)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4c968fa4112b5a0cf71f5386f37bd528"></a><!-- doxytag: member="sxsdk::shader_interface::noise4" ref="a4c968fa4112b5a0cf71f5386f37bd528" args="(const sxsdk::vec4 &amp;p)" -->
+sxsdk::vec4&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a4c968fa4112b5a0cf71f5386f37bd528">noise4</a> (const sxsdk::vec4 &amp;p)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad89ac3cdb464db2e4f97f749f78ebae1"></a><!-- doxytag: member="sxsdk::shader_interface::noise4" ref="ad89ac3cdb464db2e4f97f749f78ebae1" args="(const sxsdk::vec3 &amp;p, float t)" -->
+sxsdk::vec4&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#ad89ac3cdb464db2e4f97f749f78ebae1">noise4</a> (const sxsdk::vec3 &amp;p, float t)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5fc194d6ff903e8e571fb75d1662b3fb"></a><!-- doxytag: member="sxsdk::shader_interface::noise4" ref="a5fc194d6ff903e8e571fb75d1662b3fb" args="(const sxsdk::vec2 &amp;p, float z, float t)" -->
+sxsdk::vec4&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a5fc194d6ff903e8e571fb75d1662b3fb">noise4</a> (const sxsdk::vec2 &amp;p, float z, float t)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac4f8e3dd95dd655c7fe2ebe73f9989da"></a><!-- doxytag: member="sxsdk::shader_interface::noise4" ref="ac4f8e3dd95dd655c7fe2ebe73f9989da" args="(float x, float y, float z, float t)" -->
+sxsdk::vec4&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#ac4f8e3dd95dd655c7fe2ebe73f9989da">noise4</a> (float x, float y, float z, float t)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad0203accd9161687f2e50bea1a30338b"></a><!-- doxytag: member="sxsdk::shader_interface::cellnoise1" ref="ad0203accd9161687f2e50bea1a30338b" args="(float x)" -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#ad0203accd9161687f2e50bea1a30338b">cellnoise1</a> (float x)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6976c082aa6028846b386d168becc0c0"></a><!-- doxytag: member="sxsdk::shader_interface::cellnoise1" ref="a6976c082aa6028846b386d168becc0c0" args="(const sxsdk::vec2 &amp;p)" -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a6976c082aa6028846b386d168becc0c0">cellnoise1</a> (const sxsdk::vec2 &amp;p)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">セルノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a573a5c0399c0d082c3931ad6284fdb44"></a><!-- doxytag: member="sxsdk::shader_interface::cellnoise1" ref="a573a5c0399c0d082c3931ad6284fdb44" args="(float x, float y)" -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a573a5c0399c0d082c3931ad6284fdb44">cellnoise1</a> (float x, float y)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">セルノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a145f74cb491cdff79d76e5771af3f7d7"></a><!-- doxytag: member="sxsdk::shader_interface::cellnoise1" ref="a145f74cb491cdff79d76e5771af3f7d7" args="(const sxsdk::vec3 &amp;p)" -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a145f74cb491cdff79d76e5771af3f7d7">cellnoise1</a> (const sxsdk::vec3 &amp;p)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">セルノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a225b430ce1cfb29b658a26376cc65c44"></a><!-- doxytag: member="sxsdk::shader_interface::cellnoise1" ref="a225b430ce1cfb29b658a26376cc65c44" args="(const sxsdk::vec2 &amp;p, float z)" -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a225b430ce1cfb29b658a26376cc65c44">cellnoise1</a> (const sxsdk::vec2 &amp;p, float z)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">セルノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abcd3ea56ebe6da416b76e7e37dfb549e"></a><!-- doxytag: member="sxsdk::shader_interface::cellnoise1" ref="abcd3ea56ebe6da416b76e7e37dfb549e" args="(float x, float y, float z)" -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#abcd3ea56ebe6da416b76e7e37dfb549e">cellnoise1</a> (float x, float y, float z)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">セルノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a17d41ab3fa653a1732527ebc02b11e63"></a><!-- doxytag: member="sxsdk::shader_interface::cellnoise1" ref="a17d41ab3fa653a1732527ebc02b11e63" args="(const sxsdk::vec4 &amp;p)" -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a17d41ab3fa653a1732527ebc02b11e63">cellnoise1</a> (const sxsdk::vec4 &amp;p)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">セルノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7edebfba9917be2a6364ba14f1e7b962"></a><!-- doxytag: member="sxsdk::shader_interface::cellnoise1" ref="a7edebfba9917be2a6364ba14f1e7b962" args="(const sxsdk::vec3 &amp;p, float t)" -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a7edebfba9917be2a6364ba14f1e7b962">cellnoise1</a> (const sxsdk::vec3 &amp;p, float t)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">セルノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a467aaa5d83c6f940392fcce9eb4e58fc"></a><!-- doxytag: member="sxsdk::shader_interface::cellnoise1" ref="a467aaa5d83c6f940392fcce9eb4e58fc" args="(const sxsdk::vec2 &amp;p, float z, float t)" -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a467aaa5d83c6f940392fcce9eb4e58fc">cellnoise1</a> (const sxsdk::vec2 &amp;p, float z, float t)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">セルノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0f8fdf30ab426464d6dcfeeed9da7744"></a><!-- doxytag: member="sxsdk::shader_interface::cellnoise1" ref="a0f8fdf30ab426464d6dcfeeed9da7744" args="(float x, float y, float z, float t)" -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a0f8fdf30ab426464d6dcfeeed9da7744">cellnoise1</a> (float x, float y, float z, float t)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">セルノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac33a86a80996dfbf3656efe0d8f353ff"></a><!-- doxytag: member="sxsdk::shader_interface::cellnoise2" ref="ac33a86a80996dfbf3656efe0d8f353ff" args="(float x)" -->
+sxsdk::vec2&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#ac33a86a80996dfbf3656efe0d8f353ff">cellnoise2</a> (float x)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">セルノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a439e32f4eb65ec4fc509db1d0e09f52f"></a><!-- doxytag: member="sxsdk::shader_interface::cellnoise2" ref="a439e32f4eb65ec4fc509db1d0e09f52f" args="(const sxsdk::vec2 &amp;p)" -->
+sxsdk::vec2&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a439e32f4eb65ec4fc509db1d0e09f52f">cellnoise2</a> (const sxsdk::vec2 &amp;p)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">セルノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9ba0b28896713c833d7170ab33659d95"></a><!-- doxytag: member="sxsdk::shader_interface::cellnoise2" ref="a9ba0b28896713c833d7170ab33659d95" args="(float x, float y)" -->
+sxsdk::vec2&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a9ba0b28896713c833d7170ab33659d95">cellnoise2</a> (float x, float y)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">セルノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a974e30dd3ea95ba387bae444c20cad3a"></a><!-- doxytag: member="sxsdk::shader_interface::cellnoise2" ref="a974e30dd3ea95ba387bae444c20cad3a" args="(const sxsdk::vec3 &amp;p)" -->
+sxsdk::vec2&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a974e30dd3ea95ba387bae444c20cad3a">cellnoise2</a> (const sxsdk::vec3 &amp;p)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">セルノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff0bbaf24ab2b16ac33fce8df942e301"></a><!-- doxytag: member="sxsdk::shader_interface::cellnoise2" ref="aff0bbaf24ab2b16ac33fce8df942e301" args="(const sxsdk::vec2 &amp;p, float z)" -->
+sxsdk::vec2&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#aff0bbaf24ab2b16ac33fce8df942e301">cellnoise2</a> (const sxsdk::vec2 &amp;p, float z)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">セルノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5ee5e4d5f43cec390ad8f1853fd37775"></a><!-- doxytag: member="sxsdk::shader_interface::cellnoise2" ref="a5ee5e4d5f43cec390ad8f1853fd37775" args="(float x, float y, float z)" -->
+sxsdk::vec2&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a5ee5e4d5f43cec390ad8f1853fd37775">cellnoise2</a> (float x, float y, float z)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">セルノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1de7209909eaf087785ba939a0f984b0"></a><!-- doxytag: member="sxsdk::shader_interface::cellnoise2" ref="a1de7209909eaf087785ba939a0f984b0" args="(const sxsdk::vec4 &amp;p)" -->
+sxsdk::vec2&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a1de7209909eaf087785ba939a0f984b0">cellnoise2</a> (const sxsdk::vec4 &amp;p)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">セルノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af389c79a4c735986025e4077b0935440"></a><!-- doxytag: member="sxsdk::shader_interface::cellnoise2" ref="af389c79a4c735986025e4077b0935440" args="(const sxsdk::vec3 &amp;p, float t)" -->
+sxsdk::vec2&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#af389c79a4c735986025e4077b0935440">cellnoise2</a> (const sxsdk::vec3 &amp;p, float t)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">セルノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acf664c32e00710c2e33b1848c1a6d509"></a><!-- doxytag: member="sxsdk::shader_interface::cellnoise2" ref="acf664c32e00710c2e33b1848c1a6d509" args="(const sxsdk::vec2 &amp;p, float z, float t)" -->
+sxsdk::vec2&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#acf664c32e00710c2e33b1848c1a6d509">cellnoise2</a> (const sxsdk::vec2 &amp;p, float z, float t)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">セルノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad93aeda480b882a7fec12c263089e024"></a><!-- doxytag: member="sxsdk::shader_interface::cellnoise2" ref="ad93aeda480b882a7fec12c263089e024" args="(float x, float y, float z, float t)" -->
+sxsdk::vec2&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#ad93aeda480b882a7fec12c263089e024">cellnoise2</a> (float x, float y, float z, float t)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">セルノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2e7586e59ba45bbc50a4cd6b64c621c5"></a><!-- doxytag: member="sxsdk::shader_interface::cellnoise3" ref="a2e7586e59ba45bbc50a4cd6b64c621c5" args="(float x)" -->
+sxsdk::vec3&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a2e7586e59ba45bbc50a4cd6b64c621c5">cellnoise3</a> (float x)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">セルノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acc9267f853eb84bf0b050ae924268fa5"></a><!-- doxytag: member="sxsdk::shader_interface::cellnoise3" ref="acc9267f853eb84bf0b050ae924268fa5" args="(const sxsdk::vec2 &amp;p)" -->
+sxsdk::vec3&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#acc9267f853eb84bf0b050ae924268fa5">cellnoise3</a> (const sxsdk::vec2 &amp;p)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">セルノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1874cc476120b2ed7a7167f4a4b4e451"></a><!-- doxytag: member="sxsdk::shader_interface::cellnoise3" ref="a1874cc476120b2ed7a7167f4a4b4e451" args="(float x, float y)" -->
+sxsdk::vec3&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a1874cc476120b2ed7a7167f4a4b4e451">cellnoise3</a> (float x, float y)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">セルノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab0fe7179aa3cfe5c4ae868dc9265984e"></a><!-- doxytag: member="sxsdk::shader_interface::cellnoise3" ref="ab0fe7179aa3cfe5c4ae868dc9265984e" args="(const sxsdk::vec3 &amp;p)" -->
+sxsdk::vec3&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#ab0fe7179aa3cfe5c4ae868dc9265984e">cellnoise3</a> (const sxsdk::vec3 &amp;p)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">セルノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8d930dcdc954a9f3bd2af0a582d5c3a5"></a><!-- doxytag: member="sxsdk::shader_interface::cellnoise3" ref="a8d930dcdc954a9f3bd2af0a582d5c3a5" args="(const sxsdk::vec2 &amp;p, float z)" -->
+sxsdk::vec3&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a8d930dcdc954a9f3bd2af0a582d5c3a5">cellnoise3</a> (const sxsdk::vec2 &amp;p, float z)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">セルノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0287d6b83abda758712a7540caaeb9fa"></a><!-- doxytag: member="sxsdk::shader_interface::cellnoise3" ref="a0287d6b83abda758712a7540caaeb9fa" args="(float x, float y, float z)" -->
+sxsdk::vec3&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a0287d6b83abda758712a7540caaeb9fa">cellnoise3</a> (float x, float y, float z)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">セルノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a864c9f8fb6344e42bfd00a40feaac59e"></a><!-- doxytag: member="sxsdk::shader_interface::cellnoise3" ref="a864c9f8fb6344e42bfd00a40feaac59e" args="(const sxsdk::vec4 &amp;p)" -->
+sxsdk::vec3&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a864c9f8fb6344e42bfd00a40feaac59e">cellnoise3</a> (const sxsdk::vec4 &amp;p)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">セルノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9ad967043743585e9ffa1f3c84d6de3b"></a><!-- doxytag: member="sxsdk::shader_interface::cellnoise3" ref="a9ad967043743585e9ffa1f3c84d6de3b" args="(const sxsdk::vec3 &amp;p, float t)" -->
+sxsdk::vec3&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a9ad967043743585e9ffa1f3c84d6de3b">cellnoise3</a> (const sxsdk::vec3 &amp;p, float t)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">セルノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a98d2d7c47a3d12c5de9a3cb84e675b37"></a><!-- doxytag: member="sxsdk::shader_interface::cellnoise3" ref="a98d2d7c47a3d12c5de9a3cb84e675b37" args="(const sxsdk::vec2 &amp;p, float z, float t)" -->
+sxsdk::vec3&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a98d2d7c47a3d12c5de9a3cb84e675b37">cellnoise3</a> (const sxsdk::vec2 &amp;p, float z, float t)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">セルノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a905028906731f78fd80f4a8fa27852fe"></a><!-- doxytag: member="sxsdk::shader_interface::cellnoise4" ref="a905028906731f78fd80f4a8fa27852fe" args="(float x)" -->
+sxsdk::vec4&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a905028906731f78fd80f4a8fa27852fe">cellnoise4</a> (float x)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">セルノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acc086e051c1a1edd4960027471c42a8b"></a><!-- doxytag: member="sxsdk::shader_interface::cellnoise4" ref="acc086e051c1a1edd4960027471c42a8b" args="(const sxsdk::vec2 &amp;p)" -->
+sxsdk::vec4&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#acc086e051c1a1edd4960027471c42a8b">cellnoise4</a> (const sxsdk::vec2 &amp;p)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">セルノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a05aa3d522c9760c11ad023bf7845a6c9"></a><!-- doxytag: member="sxsdk::shader_interface::cellnoise4" ref="a05aa3d522c9760c11ad023bf7845a6c9" args="(float x, float y)" -->
+sxsdk::vec4&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a05aa3d522c9760c11ad023bf7845a6c9">cellnoise4</a> (float x, float y)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">セルノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaf79180d6a5dd1cd92f1d5a23020ad62"></a><!-- doxytag: member="sxsdk::shader_interface::cellnoise4" ref="aaf79180d6a5dd1cd92f1d5a23020ad62" args="(const sxsdk::vec3 &amp;p)" -->
+sxsdk::vec4&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#aaf79180d6a5dd1cd92f1d5a23020ad62">cellnoise4</a> (const sxsdk::vec3 &amp;p)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">セルノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5648b1e5b2d66509fc78bf3b204f58b9"></a><!-- doxytag: member="sxsdk::shader_interface::cellnoise4" ref="a5648b1e5b2d66509fc78bf3b204f58b9" args="(const sxsdk::vec2 &amp;p, float z)" -->
+sxsdk::vec4&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a5648b1e5b2d66509fc78bf3b204f58b9">cellnoise4</a> (const sxsdk::vec2 &amp;p, float z)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">セルノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5e8d03492b03cabc54dbea104c6d0cf8"></a><!-- doxytag: member="sxsdk::shader_interface::cellnoise4" ref="a5e8d03492b03cabc54dbea104c6d0cf8" args="(float x, float y, float z)" -->
+sxsdk::vec4&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a5e8d03492b03cabc54dbea104c6d0cf8">cellnoise4</a> (float x, float y, float z)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">セルノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8748295747dd3a74dfb29b149ae00dda"></a><!-- doxytag: member="sxsdk::shader_interface::cellnoise4" ref="a8748295747dd3a74dfb29b149ae00dda" args="(const sxsdk::vec4 &amp;p)" -->
+sxsdk::vec4&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a8748295747dd3a74dfb29b149ae00dda">cellnoise4</a> (const sxsdk::vec4 &amp;p)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">セルノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4150f7185088e2d99b73ebd3d58d0d57"></a><!-- doxytag: member="sxsdk::shader_interface::cellnoise4" ref="a4150f7185088e2d99b73ebd3d58d0d57" args="(const sxsdk::vec3 &amp;p, float t)" -->
+sxsdk::vec4&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a4150f7185088e2d99b73ebd3d58d0d57">cellnoise4</a> (const sxsdk::vec3 &amp;p, float t)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">セルノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3c37521224b1f026eddfcda3bc9f2845"></a><!-- doxytag: member="sxsdk::shader_interface::cellnoise4" ref="a3c37521224b1f026eddfcda3bc9f2845" args="(const sxsdk::vec2 &amp;p, float z, float t)" -->
+sxsdk::vec4&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a3c37521224b1f026eddfcda3bc9f2845">cellnoise4</a> (const sxsdk::vec2 &amp;p, float z, float t)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">セルノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aadda47156f3e39ebcd7301ccb541f971"></a><!-- doxytag: member="sxsdk::shader_interface::cellnoise4" ref="aadda47156f3e39ebcd7301ccb541f971" args="(float x, float y, float z, float t)" -->
+sxsdk::vec4&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#aadda47156f3e39ebcd7301ccb541f971">cellnoise4</a> (float x, float y, float z, float t)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">セルノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a504777af5ed356e5d684a24d9d607536"></a><!-- doxytag: member="sxsdk::shader_interface::pnoise1" ref="a504777af5ed356e5d684a24d9d607536" args="(float x, float period)" -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a504777af5ed356e5d684a24d9d607536">pnoise1</a> (float x, float period)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">pノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1f41a1c8dd946e1ec2ae9ed651ab780"></a><!-- doxytag: member="sxsdk::shader_interface::pnoise1" ref="aa1f41a1c8dd946e1ec2ae9ed651ab780" args="(const sxsdk::vec2 &amp;p, const sxsdk::vec2 &amp;period)" -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#aa1f41a1c8dd946e1ec2ae9ed651ab780">pnoise1</a> (const sxsdk::vec2 &amp;p, const sxsdk::vec2 &amp;period)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">pノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a08d23ec39be65cb3884424916694cc9b"></a><!-- doxytag: member="sxsdk::shader_interface::pnoise1" ref="a08d23ec39be65cb3884424916694cc9b" args="(float x, float y, const sxsdk::vec2 &amp;period)" -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a08d23ec39be65cb3884424916694cc9b">pnoise1</a> (float x, float y, const sxsdk::vec2 &amp;period)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">pノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa480d3c6d6316ac120e16f3e62ddb111"></a><!-- doxytag: member="sxsdk::shader_interface::pnoise1" ref="aa480d3c6d6316ac120e16f3e62ddb111" args="(const sxsdk::vec3 &amp;p, const sxsdk::vec3 &amp;period)" -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#aa480d3c6d6316ac120e16f3e62ddb111">pnoise1</a> (const sxsdk::vec3 &amp;p, const sxsdk::vec3 &amp;period)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">pノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9e0ef49a4b2891a31d163af9e439ba6a"></a><!-- doxytag: member="sxsdk::shader_interface::pnoise1" ref="a9e0ef49a4b2891a31d163af9e439ba6a" args="(const sxsdk::vec2 &amp;p, float z, const sxsdk::vec3 &amp;period)" -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a9e0ef49a4b2891a31d163af9e439ba6a">pnoise1</a> (const sxsdk::vec2 &amp;p, float z, const sxsdk::vec3 &amp;period)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">pノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1ce7c987fb52d7d6712c06589d29855b"></a><!-- doxytag: member="sxsdk::shader_interface::pnoise1" ref="a1ce7c987fb52d7d6712c06589d29855b" args="(float x, float y, float z, const sxsdk::vec3 &amp;period)" -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a1ce7c987fb52d7d6712c06589d29855b">pnoise1</a> (float x, float y, float z, const sxsdk::vec3 &amp;period)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">pノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a565e8543734fdeaf07d17ad4bd7b1537"></a><!-- doxytag: member="sxsdk::shader_interface::pnoise1" ref="a565e8543734fdeaf07d17ad4bd7b1537" args="(const sxsdk::vec4 &amp;p, const sxsdk::vec4 &amp;period)" -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a565e8543734fdeaf07d17ad4bd7b1537">pnoise1</a> (const sxsdk::vec4 &amp;p, const sxsdk::vec4 &amp;period)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">pノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adb31017619b258a1fea9a417d0a33475"></a><!-- doxytag: member="sxsdk::shader_interface::pnoise1" ref="adb31017619b258a1fea9a417d0a33475" args="(const sxsdk::vec3 &amp;p, float t, const sxsdk::vec4 &amp;period)" -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#adb31017619b258a1fea9a417d0a33475">pnoise1</a> (const sxsdk::vec3 &amp;p, float t, const sxsdk::vec4 &amp;period)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">pノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aef6488cbe56b79bcf60d1fead36364b5"></a><!-- doxytag: member="sxsdk::shader_interface::pnoise1" ref="aef6488cbe56b79bcf60d1fead36364b5" args="(const sxsdk::vec2 &amp;p, float z, float t, const sxsdk::vec4 &amp;period)" -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#aef6488cbe56b79bcf60d1fead36364b5">pnoise1</a> (const sxsdk::vec2 &amp;p, float z, float t, const sxsdk::vec4 &amp;period)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">pノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af0b868cfff4dd7aa244325e60c20f9a3"></a><!-- doxytag: member="sxsdk::shader_interface::pnoise1" ref="af0b868cfff4dd7aa244325e60c20f9a3" args="(float x, float y, float z, float t, const sxsdk::vec4 &amp;period)" -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#af0b868cfff4dd7aa244325e60c20f9a3">pnoise1</a> (float x, float y, float z, float t, const sxsdk::vec4 &amp;period)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">pノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aac3a55651fe6f6561c0049918c4cc943"></a><!-- doxytag: member="sxsdk::shader_interface::pnoise2" ref="aac3a55651fe6f6561c0049918c4cc943" args="(float x, float period)" -->
+sxsdk::vec2&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#aac3a55651fe6f6561c0049918c4cc943">pnoise2</a> (float x, float period)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">pノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a11dd1605c94407e235397eac89c251ea"></a><!-- doxytag: member="sxsdk::shader_interface::pnoise2" ref="a11dd1605c94407e235397eac89c251ea" args="(const sxsdk::vec2 &amp;p, const sxsdk::vec2 &amp;period)" -->
+sxsdk::vec2&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a11dd1605c94407e235397eac89c251ea">pnoise2</a> (const sxsdk::vec2 &amp;p, const sxsdk::vec2 &amp;period)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">pノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8914a02f66175add27d14f287a9fea7c"></a><!-- doxytag: member="sxsdk::shader_interface::pnoise2" ref="a8914a02f66175add27d14f287a9fea7c" args="(float x, float y, const sxsdk::vec2 &amp;period)" -->
+sxsdk::vec2&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a8914a02f66175add27d14f287a9fea7c">pnoise2</a> (float x, float y, const sxsdk::vec2 &amp;period)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">pノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3f2fd33c73f5e8a1d420e35c5b5f2c4a"></a><!-- doxytag: member="sxsdk::shader_interface::pnoise2" ref="a3f2fd33c73f5e8a1d420e35c5b5f2c4a" args="(const sxsdk::vec3 &amp;p, const sxsdk::vec3 &amp;period)" -->
+sxsdk::vec2&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a3f2fd33c73f5e8a1d420e35c5b5f2c4a">pnoise2</a> (const sxsdk::vec3 &amp;p, const sxsdk::vec3 &amp;period)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">pノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a23d21b138e0e3847166f94a88a8cd5f8"></a><!-- doxytag: member="sxsdk::shader_interface::pnoise2" ref="a23d21b138e0e3847166f94a88a8cd5f8" args="(const sxsdk::vec2 &amp;p, float z, const sxsdk::vec3 &amp;period)" -->
+sxsdk::vec2&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a23d21b138e0e3847166f94a88a8cd5f8">pnoise2</a> (const sxsdk::vec2 &amp;p, float z, const sxsdk::vec3 &amp;period)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">pノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0cb5ee64cfb60e29bfab0a1c9cfea7b2"></a><!-- doxytag: member="sxsdk::shader_interface::pnoise2" ref="a0cb5ee64cfb60e29bfab0a1c9cfea7b2" args="(float x, float y, float z, const sxsdk::vec3 &amp;period)" -->
+sxsdk::vec2&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a0cb5ee64cfb60e29bfab0a1c9cfea7b2">pnoise2</a> (float x, float y, float z, const sxsdk::vec3 &amp;period)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">pノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4c2cc650043fefa14ea8f8828bddc15e"></a><!-- doxytag: member="sxsdk::shader_interface::pnoise2" ref="a4c2cc650043fefa14ea8f8828bddc15e" args="(const sxsdk::vec4 &amp;p, const sxsdk::vec4 &amp;period)" -->
+sxsdk::vec2&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a4c2cc650043fefa14ea8f8828bddc15e">pnoise2</a> (const sxsdk::vec4 &amp;p, const sxsdk::vec4 &amp;period)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">pノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6ee341fb2d0a42c5a86c63b12347f28b"></a><!-- doxytag: member="sxsdk::shader_interface::pnoise2" ref="a6ee341fb2d0a42c5a86c63b12347f28b" args="(const sxsdk::vec3 &amp;p, float t, const sxsdk::vec4 &amp;period)" -->
+sxsdk::vec2&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a6ee341fb2d0a42c5a86c63b12347f28b">pnoise2</a> (const sxsdk::vec3 &amp;p, float t, const sxsdk::vec4 &amp;period)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">pノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa0d3fb3dc26ccc2de9a45f8f5b259ef3"></a><!-- doxytag: member="sxsdk::shader_interface::pnoise2" ref="aa0d3fb3dc26ccc2de9a45f8f5b259ef3" args="(const sxsdk::vec2 &amp;p, float z, float t, const sxsdk::vec4 &amp;period)" -->
+sxsdk::vec2&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#aa0d3fb3dc26ccc2de9a45f8f5b259ef3">pnoise2</a> (const sxsdk::vec2 &amp;p, float z, float t, const sxsdk::vec4 &amp;period)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">pノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a85f8bc6166bd624d3225f0709d38366c"></a><!-- doxytag: member="sxsdk::shader_interface::pnoise2" ref="a85f8bc6166bd624d3225f0709d38366c" args="(float x, float y, float z, float t, const sxsdk::vec4 &amp;period)" -->
+sxsdk::vec2&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a85f8bc6166bd624d3225f0709d38366c">pnoise2</a> (float x, float y, float z, float t, const sxsdk::vec4 &amp;period)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">pノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac419b296ffff2dbd5bb47142b845dde1"></a><!-- doxytag: member="sxsdk::shader_interface::pnoise3" ref="ac419b296ffff2dbd5bb47142b845dde1" args="(float x, float period)" -->
+sxsdk::vec3&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#ac419b296ffff2dbd5bb47142b845dde1">pnoise3</a> (float x, float period)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">pノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a355fd7c43790bbc841b1aa4be5de9713"></a><!-- doxytag: member="sxsdk::shader_interface::pnoise3" ref="a355fd7c43790bbc841b1aa4be5de9713" args="(const sxsdk::vec2 &amp;p, const sxsdk::vec2 &amp;period)" -->
+sxsdk::vec3&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a355fd7c43790bbc841b1aa4be5de9713">pnoise3</a> (const sxsdk::vec2 &amp;p, const sxsdk::vec2 &amp;period)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">pノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9e58a0dffd466d19b873f368bef1c613"></a><!-- doxytag: member="sxsdk::shader_interface::pnoise3" ref="a9e58a0dffd466d19b873f368bef1c613" args="(float x, float y, const sxsdk::vec2 &amp;period)" -->
+sxsdk::vec3&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a9e58a0dffd466d19b873f368bef1c613">pnoise3</a> (float x, float y, const sxsdk::vec2 &amp;period)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">pノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5b45ea6e4d9c835d1cb1ac55ceb1e684"></a><!-- doxytag: member="sxsdk::shader_interface::pnoise3" ref="a5b45ea6e4d9c835d1cb1ac55ceb1e684" args="(const sxsdk::vec3 &amp;p, const sxsdk::vec3 &amp;period)" -->
+sxsdk::vec3&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a5b45ea6e4d9c835d1cb1ac55ceb1e684">pnoise3</a> (const sxsdk::vec3 &amp;p, const sxsdk::vec3 &amp;period)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">pノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad854ef6558ff95ea1819c58a97a6c5d5"></a><!-- doxytag: member="sxsdk::shader_interface::pnoise3" ref="ad854ef6558ff95ea1819c58a97a6c5d5" args="(const sxsdk::vec2 &amp;p, float z, const sxsdk::vec3 &amp;period)" -->
+sxsdk::vec3&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#ad854ef6558ff95ea1819c58a97a6c5d5">pnoise3</a> (const sxsdk::vec2 &amp;p, float z, const sxsdk::vec3 &amp;period)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">pノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a38a5ee4df3ca6bde64af3ebe21110160"></a><!-- doxytag: member="sxsdk::shader_interface::pnoise3" ref="a38a5ee4df3ca6bde64af3ebe21110160" args="(float x, float y, float z, const sxsdk::vec3 &amp;period)" -->
+sxsdk::vec3&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a38a5ee4df3ca6bde64af3ebe21110160">pnoise3</a> (float x, float y, float z, const sxsdk::vec3 &amp;period)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">pノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aded249c1e85955c6b81f5d09053fcd7c"></a><!-- doxytag: member="sxsdk::shader_interface::pnoise3" ref="aded249c1e85955c6b81f5d09053fcd7c" args="(const sxsdk::vec4 &amp;p, const sxsdk::vec4 &amp;period)" -->
+sxsdk::vec3&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#aded249c1e85955c6b81f5d09053fcd7c">pnoise3</a> (const sxsdk::vec4 &amp;p, const sxsdk::vec4 &amp;period)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">pノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6673fc938d129d6fde5c88516164218c"></a><!-- doxytag: member="sxsdk::shader_interface::pnoise3" ref="a6673fc938d129d6fde5c88516164218c" args="(const sxsdk::vec3 &amp;p, float t, const sxsdk::vec4 &amp;period)" -->
+sxsdk::vec3&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a6673fc938d129d6fde5c88516164218c">pnoise3</a> (const sxsdk::vec3 &amp;p, float t, const sxsdk::vec4 &amp;period)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">pノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e50b0238b06f471792d4750f36be77e"></a><!-- doxytag: member="sxsdk::shader_interface::pnoise3" ref="a1e50b0238b06f471792d4750f36be77e" args="(const sxsdk::vec2 &amp;p, float z, float t, const sxsdk::vec4 &amp;period)" -->
+sxsdk::vec3&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a1e50b0238b06f471792d4750f36be77e">pnoise3</a> (const sxsdk::vec2 &amp;p, float z, float t, const sxsdk::vec4 &amp;period)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">pノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2e8480e7b037d8cd422795d7c370d551"></a><!-- doxytag: member="sxsdk::shader_interface::pnoise3" ref="a2e8480e7b037d8cd422795d7c370d551" args="(float x, float y, float z, float t, const sxsdk::vec4 &amp;period)" -->
+sxsdk::vec3&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a2e8480e7b037d8cd422795d7c370d551">pnoise3</a> (float x, float y, float z, float t, const sxsdk::vec4 &amp;period)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">pノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac1249beb8e7e9bb66c25489dcf42351a"></a><!-- doxytag: member="sxsdk::shader_interface::pnoise4" ref="ac1249beb8e7e9bb66c25489dcf42351a" args="(float x, float period)" -->
+sxsdk::vec4&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#ac1249beb8e7e9bb66c25489dcf42351a">pnoise4</a> (float x, float period)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">pノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7e6d3003b660563ed981a9ecbe25f7fe"></a><!-- doxytag: member="sxsdk::shader_interface::pnoise4" ref="a7e6d3003b660563ed981a9ecbe25f7fe" args="(const sxsdk::vec2 &amp;p, const sxsdk::vec2 &amp;period)" -->
+sxsdk::vec4&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a7e6d3003b660563ed981a9ecbe25f7fe">pnoise4</a> (const sxsdk::vec2 &amp;p, const sxsdk::vec2 &amp;period)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">pノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2a581df0f02a2e7ebccb59105a5250f6"></a><!-- doxytag: member="sxsdk::shader_interface::pnoise4" ref="a2a581df0f02a2e7ebccb59105a5250f6" args="(float x, float y, const sxsdk::vec2 &amp;period)" -->
+sxsdk::vec4&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a2a581df0f02a2e7ebccb59105a5250f6">pnoise4</a> (float x, float y, const sxsdk::vec2 &amp;period)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">pノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a97ca9966d74f08b656f179b7616d382a"></a><!-- doxytag: member="sxsdk::shader_interface::pnoise4" ref="a97ca9966d74f08b656f179b7616d382a" args="(const sxsdk::vec3 &amp;p, const sxsdk::vec3 &amp;period)" -->
+sxsdk::vec4&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a97ca9966d74f08b656f179b7616d382a">pnoise4</a> (const sxsdk::vec3 &amp;p, const sxsdk::vec3 &amp;period)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">pノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6fe977da3ddb9414ec85257da67d3ad6"></a><!-- doxytag: member="sxsdk::shader_interface::pnoise4" ref="a6fe977da3ddb9414ec85257da67d3ad6" args="(const sxsdk::vec2 &amp;p, float z, const sxsdk::vec3 &amp;period)" -->
+sxsdk::vec4&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a6fe977da3ddb9414ec85257da67d3ad6">pnoise4</a> (const sxsdk::vec2 &amp;p, float z, const sxsdk::vec3 &amp;period)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">pノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a181b120e9ec8c9860c4415d1e75f9a98"></a><!-- doxytag: member="sxsdk::shader_interface::pnoise4" ref="a181b120e9ec8c9860c4415d1e75f9a98" args="(float x, float y, float z, const sxsdk::vec3 &amp;period)" -->
+sxsdk::vec4&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a181b120e9ec8c9860c4415d1e75f9a98">pnoise4</a> (float x, float y, float z, const sxsdk::vec3 &amp;period)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">pノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa5d057919e097a88b1a7398b1a936559"></a><!-- doxytag: member="sxsdk::shader_interface::pnoise4" ref="aa5d057919e097a88b1a7398b1a936559" args="(const sxsdk::vec4 &amp;p, const sxsdk::vec4 &amp;period)" -->
+sxsdk::vec4&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#aa5d057919e097a88b1a7398b1a936559">pnoise4</a> (const sxsdk::vec4 &amp;p, const sxsdk::vec4 &amp;period)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">pノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5525d079dd228862a22fd3a48cb5bfea"></a><!-- doxytag: member="sxsdk::shader_interface::pnoise4" ref="a5525d079dd228862a22fd3a48cb5bfea" args="(const sxsdk::vec3 &amp;p, float t, const sxsdk::vec4 &amp;period)" -->
+sxsdk::vec4&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a5525d079dd228862a22fd3a48cb5bfea">pnoise4</a> (const sxsdk::vec3 &amp;p, float t, const sxsdk::vec4 &amp;period)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">pノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ada8bfeca77bad388f213a4c422f505c9"></a><!-- doxytag: member="sxsdk::shader_interface::pnoise4" ref="ada8bfeca77bad388f213a4c422f505c9" args="(const sxsdk::vec2 &amp;p, float z, float t, const sxsdk::vec4 &amp;period)" -->
+sxsdk::vec4&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#ada8bfeca77bad388f213a4c422f505c9">pnoise4</a> (const sxsdk::vec2 &amp;p, float z, float t, const sxsdk::vec4 &amp;period)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">pノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a937177cc2d8cd473a242e65f3a0223f6"></a><!-- doxytag: member="sxsdk::shader_interface::pnoise4" ref="a937177cc2d8cd473a242e65f3a0223f6" args="(float x, float y, float z, float t, const sxsdk::vec4 &amp;period)" -->
+sxsdk::vec4&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a937177cc2d8cd473a242e65f3a0223f6">pnoise4</a> (float x, float y, float z, float t, const sxsdk::vec4 &amp;period)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">pノイズ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ace2816bd408e3b59f13fab01fc5b0a5d"></a><!-- doxytag: member="sxsdk::shader_interface::turbulence1" ref="ace2816bd408e3b59f13fab01fc5b0a5d" args="(sxsdk::vec3 p, int m)" -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#ace2816bd408e3b59f13fab01fc5b0a5d">turbulence1</a> (sxsdk::vec3 p, int m)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">乱れ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6e3a22a8306ec9d500bcf77cbf72be8f"></a><!-- doxytag: member="sxsdk::shader_interface::turbulence3" ref="a6e3a22a8306ec9d500bcf77cbf72be8f" args="(sxsdk::vec3 p, int m)" -->
+sxsdk::vec3&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1shader__interface.html#a6e3a22a8306ec9d500bcf77cbf72be8f">turbulence3</a> (sxsdk::vec3 p, int m)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">乱れ関数 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9debf9c031b0937c3ed90489eb6dd204"></a><!-- doxytag: member="sxsdk::shader_interface::shader_interface" ref="a9debf9c031b0937c3ed90489eb6dd204" args="(shade_interface &amp;shade)" -->
+&nbsp;</td><td class="memItemRight" valign="bottom"><b>shader_interface</b> (<a class="el" href="structsxsdk_1_1shade__interface.html">shade_interface</a> &amp;shade)</td></tr>
+<tr><td colspan="2"><h2>Public 変数</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aad752eef14f8077a02fd6930c5d5e3a3"></a><!-- doxytag: member="sxsdk::shader_interface::i" ref="aad752eef14f8077a02fd6930c5d5e3a3" args="" -->
+<a class="el" href="structsxsdk_1_1shade__interface.html">shade_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>i</b></td></tr>
+</table>
+<hr/><h2>関数</h2>
+<a class="anchor" id="ae96a84237b62dca178116c3d47484971"></a><!-- doxytag: member="sxsdk::shader_interface::ask" ref="ae96a84237b62dca178116c3d47484971" args="(stream_interface *stream, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::shader_interface::ask </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1stream__interface.html">stream_interface</a> *&nbsp;</td>
+          <td class="paramname"> <em>stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。ダイアログを表示するなどして、設定パラメータの変更をユーザに問い合わせる。 </p>
+<p>変更があった場合には<code>true</code> を返すと、Shadeは各種ウインドウの表示を更新する。</p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>stream</em>&nbsp;</td><td>設定値などを保持するデータのストリーム </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a57a7b215b5bbbc12131f0ac5d0b0673d"></a><!-- doxytag: member="sxsdk::shader_interface::bump" ref="a57a7b215b5bbbc12131f0ac5d0b0673d" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::shader_interface::bump </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。バンプ処理を実行する。 </p>
+<p><code><a class="el" href="structsxsdk_1_1shader__interface.html#a008a3dc1335812fc5019f09c54c7eff8" title="オーバライド可。bump() 関数を使用するかどうかを返す。">supports_bump()</a></code> 関数でtrueを返すことにより呼び出される。 </p>
+
+</div>
+</div>
+<a class="anchor" id="aa331e79b84af8bedc583581185509f7c"></a><!-- doxytag: member="sxsdk::shader_interface::evaluate" ref="aa331e79b84af8bedc583581185509f7c" args="(const sxsdk::vec3 &amp;p, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual float sxsdk::shader_interface::evaluate </td>
+          <td>(</td>
+          <td class="paramtype">const sxsdk::vec3 &amp;&nbsp;</td>
+          <td class="paramname"> <em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。パターンのスカラー値を返す。 </p>
+<p><code><a class="el" href="structsxsdk_1_1shader__interface.html#a8c70cc0a0b77c9fe3f458c58393877a7" title="オーバライド可。evaluate() 関数を使用するかどうかを返す。">supports_evaluate()</a></code> 関数でtrueを返すことにより呼び出される。</p>
+<p><code><a class="el" href="structsxsdk_1_1shader__interface.html#a585775e1e37fbbf17522590bcd43d74b" title="オーバライド可。shade() 関数を使用するかどうかを返す。">supports_shade()</a></code> 関数でtrueを返していたときは、<code>shade</code> () 関数が優先して呼び出される。(環境、トリムマップでは<code><a class="el" href="structsxsdk_1_1shader__interface.html#aa331e79b84af8bedc583581185509f7c" title="オーバライド可。パターンのスカラー値を返す。">evaluate()</a></code> 関数が呼び出される)</p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>p</em>&nbsp;</td><td>シェーディングの対象となっている点の位置 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a34060fb82aa14fabaaa561eb2bc31da0"></a><!-- doxytag: member="sxsdk::shader_interface::get_custom_element_info" ref="a34060fb82aa14fabaaa561eb2bc31da0" args="(void *=0) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classsxsdk_1_1custom__element__info__base__class.html">custom_element_info_base_class</a>* sxsdk::shader_interface::get_custom_element_info </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p><code><a class="el" href="structsxsdk_1_1attribute__interface.html#a365648974dc3236a763d321fbcaecc81" title="オーバライド可。交点計算を行う。(参照：メモリ常駐型プラグイン)...">attribute_interface::ray_intersection()</a></code> 関数で交差判定を行った点において、<code><a class="el" href="structsxsdk_1_1attribute__interface.html#ae76156759216d0b2e3ae05292620f5b9" title="オーバライド可。交点計算に必要な独自の情報を生成する。...">attribute_interface::new_custom_element_info()</a></code> 関数で生成した情報のポインタを取得する。 </p>
+<p>複数スレッドで共有する固定値の情報を扱う。 </p>
+
+</div>
+</div>
+<a class="anchor" id="adb75e623bb03f9daa07a7596a00702a5"></a><!-- doxytag: member="sxsdk::shader_interface::get_custom_element_per_thread_info" ref="adb75e623bb03f9daa07a7596a00702a5" args="(void *=0) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsxsdk_1_1custom__element__info__base__class.html">custom_element_info_base_class</a>* sxsdk::shader_interface::get_custom_element_per_thread_info </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p><code><a class="el" href="structsxsdk_1_1attribute__interface.html#a365648974dc3236a763d321fbcaecc81" title="オーバライド可。交点計算を行う。(参照：メモリ常駐型プラグイン)...">attribute_interface::ray_intersection()</a></code> 関数で交差判定を行った点において、<code><a class="el" href="structsxsdk_1_1attribute__interface.html#a786130541083b908efb922764ad264fa" title="オーバライド可。スレッド単位で交点計算に必要な独自の情�...">attribute_interface::new_per_thread_info()</a></code> 関数で生成した情報のポインタを取得する。 </p>
+<p><code><a class="el" href="structsxsdk_1_1attribute__interface.html#a365648974dc3236a763d321fbcaecc81" title="オーバライド可。交点計算を行う。(参照：メモリ常駐型プラグイン)...">attribute_interface::ray_intersection()</a></code> 関数で計算した交点の情報を取得する。 </p>
+
+</div>
+</div>
+<a class="anchor" id="aa630cfa941fdd19d07f7893aa93e6d74"></a><!-- doxytag: member="sxsdk::shader_interface::get_default_map_mode" ref="aa630cfa941fdd19d07f7893aa93e6d74" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int sxsdk::shader_interface::get_default_map_mode </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。デフォルトの投影方法の値を返す。 </p>
+<p><code><a class="el" href="structsxsdk_1_1shader__interface.html#a65c121748800232cb939f353446c70ea" title="オーバライド可。投影方法を指定する必要があるかどうかを返す。...">needs_projection()</a></code> でtrueを返し投影方法を選択できる状態の時に有効。</p>
+<p>投影方法は0=X方向、1=Y方向、2=Z方向、3=ラップマップ、4=すべて=ラップマップ、5=円筒、6=球。デフォルトでは3（ラップマップ）。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a0f6907e149073bae92c62fdace07410a"></a><!-- doxytag: member="sxsdk::shader_interface::needs_tangents" ref="a0f6907e149073bae92c62fdace07410a" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::shader_interface::needs_tangents </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。接線情報を必要とするかどうかを返す。 </p>
+<p><code>trueを返すと、<code><a class="el" href="structsxsdk_1_1shader__interface.html#a46a6e11ebbfbafe69446cc866d1ebb98" title="u方向の偏微分ベクトルを取得する。">get_dPdu()</a></code> 、<code><a class="el" href="structsxsdk_1_1shader__interface.html#a4ff08831825fa7a02290ace274e6dd05" title="v方向の偏微分ベクトルを取得する。">get_dPdv()</a></code> 関数が有効となる。</code> </p>
+
+</div>
+</div>
+<a class="anchor" id="a12b791051335c1e0d534707425a0244a"></a><!-- doxytag: member="sxsdk::shader_interface::needs_to_sample_bump" ref="a12b791051335c1e0d534707425a0244a" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::shader_interface::needs_to_sample_bump </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。バンプイメージをサンプリングする必要があるかどうかを返す。 </p>
+<p><code>trueを返すと、マッピング設定でイメージを割り当てることができるようになり、<code><a class="el" href="structsxsdk_1_1shader__interface.html#acf9f85bc719a0cda88ac74115d0f5e09" title="バンプイメージをサンプリングする。">sample_bump()</a></code> 関数が有効となる。</code> </p>
+
+</div>
+</div>
+<a class="anchor" id="a72719e200732569edf929fb681030eac"></a><!-- doxytag: member="sxsdk::shader_interface::needs_to_sample_image" ref="a72719e200732569edf929fb681030eac" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::shader_interface::needs_to_sample_image </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。イメージをサンプリングする必要があるかどうかを返す。 </p>
+<p><code>trueを返すと、マッピング設定でイメージを割り当てることができるようになり、<code><a class="el" href="structsxsdk_1_1shader__interface.html#aa3c968bb245f32ce1ccbe4762376158f" title="イメージをサンプリングする。">sample_image()</a></code> 関数が有効となる。</code> </p>
+
+</div>
+</div>
+<a class="anchor" id="a5dec4c7f37ac24ef83d735fe0b298170"></a><!-- doxytag: member="sxsdk::shader_interface::new_shader_info" ref="a5dec4c7f37ac24ef83d735fe0b298170" args="(stream_interface *stream, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classsxsdk_1_1shader__info__base__class.html">shader_info_base_class</a>* sxsdk::shader_interface::new_shader_info </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1stream__interface.html">stream_interface</a> *&nbsp;</td>
+          <td class="paramname"> <em>stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。シェーダが独自に使うデータ領域を生成して、そのポインタを返す。 </p>
+<p>stream_interfaceを介した情報の読み書きは動作が遅いため、ここで必要な情報をオブジェクトに読み込んでおき、シェーディング計算で使用する。</p>
+<p><code><a class="el" href="classsxsdk_1_1shader__info__base__class.html">shader_info_base_class</a></code> の派生クラスを<code>new</code> で生成して返す。プラグインからは<code>delete</code> する必要はない。</p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>stream</em>&nbsp;</td><td>設定値などを保持するデータのストリーム </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="acf9f85bc719a0cda88ac74115d0f5e09"></a><!-- doxytag: member="sxsdk::shader_interface::sample_bump" ref="acf9f85bc719a0cda88ac74115d0f5e09" args="(float u, float v)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sxsdk::vec2 sxsdk::shader_interface::sample_bump </td>
+          <td>(</td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>u</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>v</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>バンプイメージをサンプリングする。 </p>
+<p>マッピング設定で割り当てられたイメージからバンプをサンプリングする。</p>
+<p><code><a class="el" href="structsxsdk_1_1shader__interface.html#a12b791051335c1e0d534707425a0244a" title="オーバライド可。バンプイメージをサンプリングする必要があるかどうか�...">needs_to_sample_bump()</a></code> 関数でtrueを返すことにより有効となる。 </p>
+
+</div>
+</div>
+<a class="anchor" id="aa3c968bb245f32ce1ccbe4762376158f"></a><!-- doxytag: member="sxsdk::shader_interface::sample_image" ref="aa3c968bb245f32ce1ccbe4762376158f" args="(float u, float v)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rgba_class sxsdk::shader_interface::sample_image </td>
+          <td>(</td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>u</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>v</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>イメージをサンプリングする。 </p>
+<p>マッピング設定で割り当てられたイメージから色をサンプリングする。</p>
+<p><code><a class="el" href="structsxsdk_1_1shader__interface.html#a72719e200732569edf929fb681030eac" title="オーバライド可。イメージをサンプリングする必要があるかどうかを返す�...">needs_to_sample_image()</a></code> 関数でtrueを返すことにより有効となる。 </p>
+
+</div>
+</div>
+<a class="anchor" id="aaebaf9a8463a81f9857ae8fa3c4ba618"></a><!-- doxytag: member="sxsdk::shader_interface::shade" ref="aaebaf9a8463a81f9857ae8fa3c4ba618" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::shader_interface::shade </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。シェーディング処理を実行する。 </p>
+<p><code><a class="el" href="structsxsdk_1_1shader__interface.html#a585775e1e37fbbf17522590bcd43d74b" title="オーバライド可。shade() 関数を使用するかどうかを返す。">supports_shade()</a></code> 関数でtrueを返すことにより呼び出される。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a09b0c6ccf8f9632cc7450f1c4fd09085"></a><!-- doxytag: member="sxsdk::shader_interface::visible" ref="a09b0c6ccf8f9632cc7450f1c4fd09085" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::shader_interface::visible </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。マッピングパターンとしてインターフェイスに表示するかどうかを返す。 </p>
+<p>false を返すと、表面材質ウインドウのマッピングパターンポップアップメニューに表示されず、また、パターンが設定されたマッピングレイヤーを不可視にする。 </p>
+
+</div>
+</div>
+<hr/>この構造体の説明は次のファイルから生成されました:<ul>
+<li><a class="el" href="shaderinterface_8h_source.html">shaderinterface.h</a></li>
+</ul>
+</div>
+<br><br>
+<hr>
+<div align="center">Copyright &copy; e frontier, Inc. All rights reserved.</div>
+</body></html>

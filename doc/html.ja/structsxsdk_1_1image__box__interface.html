@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>構造体 sxsdk::image_box_interface</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- 作成： Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="main.html"><span>メインページ</span></a></li>
+      <li><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>構成</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>構成メンバ</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath"><a class="el" href="namespacesxsdk.html">sxsdk</a>::<a class="el" href="structsxsdk_1_1image__box__interface.html">image_box_interface</a>
+  </div>
+</div>
+<div class="contents">
+<h1>構造体 sxsdk::image_box_interface</h1><!-- doxytag: class="sxsdk::image_box_interface" --><!-- doxytag: inherits="sxsdk::plugin_interface" --><div class="dynheader">
+sxsdk::image_box_interfaceに対する継承グラフ</div>
+<div class="dynsection">
+ <div class="center">
+  <img src="structsxsdk_1_1image__box__interface.gif" usemap="#sxsdk::image_box_interface_map" alt=""/>
+  <map id="sxsdk::image_box_interface_map" name="sxsdk::image_box_interface_map">
+<area href="structsxsdk_1_1plugin__interface.html" alt="sxsdk::plugin_interface" shape="rect" coords="0,56,166,80"/>
+<area href="classunknown__interface.html" alt="unknown_interface" shape="rect" coords="0,0,166,24"/>
+</map>
+ </div>
+</div>
+
+<p><a href="structsxsdk_1_1image__box__interface-members.html">すべてのメンバ一覧</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Public メソッド</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1image__box__interface.html#a8a7f6bcfe89c45c9b16262cc950986c4">do_image_box</a> (<a class="el" href="structsxsdk_1_1image__interface.html">sxsdk::image_interface</a> *image, void *aux=0)=0</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。コンテクストメニューから起動したときに呼び出される。  <a href="#a8a7f6bcfe89c45c9b16262cc950986c4"></a><br/></td></tr>
+</table>
+<hr/><h2>関数</h2>
+<a class="anchor" id="a8a7f6bcfe89c45c9b16262cc950986c4"></a><!-- doxytag: member="sxsdk::image_box_interface::do_image_box" ref="a8a7f6bcfe89c45c9b16262cc950986c4" args="(sxsdk::image_interface *image, void *aux=0)=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::image_box_interface::do_image_box </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1image__interface.html">sxsdk::image_interface</a> *&nbsp;</td>
+          <td class="paramname"> <em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。コンテクストメニューから起動したときに呼び出される。 </p>
+<p>何らかの変更を行った場合はtrue、そうでない場合はfalseを返すように設定する。</p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>image</em>&nbsp;</td><td>対象となっているイメージ。イメージボックスに画像が無い場合、nullポインタではなく、実際にはイメージを持たない（<code>has_image()</code> が<code>false</code> を返す）イメージインターフェイスのポインタが渡される。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>この構造体の説明は次のファイルから生成されました:<ul>
+<li><a class="el" href="imageboxinterface_8h_source.html">imageboxinterface.h</a></li>
+</ul>
+</div>
+<br><br>
+<hr>
+<div align="center">Copyright &copy; e frontier, Inc. All rights reserved.</div>
+</body></html>

@@ -1,0 +1,2173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>XMLSHDスキーマ定義</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- 作成： Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="main.html"><span>メインページ</span></a></li>
+      <li class="current"><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+
+
+<h1><a class="anchor" id="xmlshd">XMLSHDスキーマ定義 </a></h1><html><head><meta charset="utf-8"></head><body>
+<ul type="disc">
+<li><b>joint</b>	group 8</li><p>    ジョイント  </p>
+<ul type="disc">
+<li><b>type</b>	int 1</li><p>    ジョイントの種類  </p>
+<p>    0 : ジョイント無効  </p>
+<p>    2 : 直線移動ジョイント  </p>
+<p>    3 : 拡大縮小ジョイント  </p>
+<p>    4 : 均等拡大縮小ジョイント  </p>
+<p>    5 : 光源エフェクタ  </p>
+<p>    6 : パスジョイント  </p>
+<p>    9 : 変形ジョイント  </p>
+<p>    10 : 回転ジョイント  </p>
+<p>    11 : カスタムジョイント  </p>
+<p>    12 : ボールジョイント  </p>
+<p>    13 : カメラジョイント  </p>
+</ul>
+<ul type="disc">
+<li><b>points</b>	points 1</li><p>    ジョイントの位置等の幾何情報を表す点列  </p>
+<p>    nに続いてn個のpointが並ぶ。  </p>
+<p>    回転ジョイント：回転軸を定義する２端点  </p>
+<p>    直線移動／拡大縮小ジョイント：始点、終点  </p>
+<p>    均等拡大縮小／ボールジョイント：基準点、（表示の際の）サイズ  </p>
+<ul type="disc">
+<li><b>n</b>	int 1</li><p>    点の数  </p>
+</ul>
+<ul type="disc">
+<li><b>point</b>	vec3 1</li><p>    座標値  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>value</b>	float 1</li><p>    ジョイントスカラー値  </p>
+<p>    回転ジョイント：回転角度  </p>
+<p>    直線移動ジョイント：始点-終点間の距離に対する相対値としての移動量  </p>
+<p>    均等拡大縮小／ボールジョイント：拡大縮小値  </p>
+<p>    パスジョイント：パスに対する相対値としての移動量  </p>
+</ul>
+<ul type="disc">
+<li><b>has_range</b>	int 2</li><p>    ジョイントスカラー値が設定された範囲内に限定される  </p>
+</ul>
+<ul type="disc">
+<li><b>rotation</b>	quaternion 1</li><p>    回転量  </p>
+<p>    ボールジョイント、カメラジョイントで使われる  </p>
+</ul>
+<ul type="disc">
+<li><b>offset</b>	vec3 1</li><p>    オフセット量  </p>
+<p>    ボールジョイント、カメラジョイントで使われる  </p>
+</ul>
+<ul type="disc">
+<li><b>min_value</b>	float 2</li><p>    ユーザが設定した最小スカラー値  </p>
+</ul>
+<ul type="disc">
+<li><b>max_value</b>	float 3</li><p>    ユーザが設定した最大スカラー値  </p>
+</ul>
+<ul type="disc">
+<li><b>default_min_value</b>	float 4</li><p>    デフォルト最小スカラー値  </p>
+<p>    ジョイントの種類によって異なった値がデフォルトとなることに注意  </p>
+</ul>
+<ul type="disc">
+<li><b>default_max_value</b>	float 5</li><p>    デフォルト最大スカラー値  </p>
+<p>    ジョイントの種類によって異なった値がデフォルトとなることに注意  </p>
+</ul>
+<ul type="disc">
+<li><b>default_scalar</b>	float 6</li><p>    デフォルトスカラー値  </p>
+<p>    ジョイントの種類によって異なった値がデフォルトとなることに注意  </p>
+</ul>
+<ul type="disc">
+<li><b>blend</b>	float 7</li><p>    ブレンド値  </p>
+<p>    スキンをジョイントにバインドする際のブレンド値  </p>
+</ul>
+<ul type="disc">
+<li><b>default_rotation</b>	quaternion 2</li><p>    デフォルト回転値  </p>
+</ul>
+<ul type="disc">
+<li><b>transformation</b>	mat4 1</li><p>    変換マトリクス  </p>
+<p>    ジョイントの評価結果としての変換マトリクス値。Shade本体では使用しないが、ジョイント機能を実装しないプログラムで読み込む際には、実際にジョイントを評価して変換マトリクスを計算する必要はなく、このマトリクス値を使えば良い。  </p>
+</ul>
+<ul type="disc">
+<li><b>graph_height</b>	int 3</li><p>    モーショングラフを画面に表示する際の、グラフの高さ  </p>
+</ul>
+<ul type="disc">
+<li><b>flags</b></li><p>    各種フラグ  </p>
+<ul type="none">
+<li><b>flat_joint</b>	0x1</li><p>    フラットジョイント  </p>
+<p>    ONの場合には、ジョイントパートに含まれる子形状ではなく、同階層でそれ以降にならぶ形状に対してジョイントが作用する。  </p>
+<p>    デフォルトでOFF。  </p>
+</ul>
+<ul type="none">
+<li><b>path_correction_distance</b>	0x20</li><p>    パス補正(パスジョイントのみで有効)  </p>
+<p>    ONの場合には、パスの線形状を距離で補正して作用する。  </p>
+<p>    Shade 8で作成したパスジョイントはデフォルトでON。Shade 7以前で作成したファイルを開いた場合はOFF。  </p>
+</ul>
+<ul type="none">
+<li><b>graph_disclosed</b>	0x10</li><p>    モーション設定グラフをディスクローズ表示  </p>
+</ul>
+<ul type="none">
+<li><b>tree_disclosed</b>	0x8</li><p>    モーション設定ツリーをディスクローズ表示  </p>
+</ul>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>shape_specifier</b>	group 133</li><p>    形状を特定するために必要な情報  </p>
+<p>    リンクの種類の後に１個または複数個並んだ整数値によって、形状を特定する。整数値は、ルートレベルから辿って、階層内での対象形状またはそれを含むパートの相対位置を表す。したがって、必ず 0 から始まり、[0]はルート形状を指す。  </p>
+<ul type="disc">
+<li><b>link_type</b>	int 1</li><p>    リンクの種類  </p>
+<p>    0 : 通常のリンク形状  </p>
+<p>    1 : カメラの視点連結形状  </p>
+<p>    2 : カメラの注視点連結形状  </p>
+</ul>
+<ul type="disc">
+<li><b>int</b></li><p>    階層内での相対位置  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>attribute</b>	group 103</li><p>    プラグインが付加したカスタム属性データ  </p>
+<ul type="disc">
+<li><b>uuid</b>	uuid 1</li><p>    プラグインがカスタム属性データを特定するための識別子  </p>
+</ul>
+<ul type="disc">
+<li><b>wireframe_uuid</b>	uuid 2</li><p>    ワイヤフレーム表示を行うプラグインを特定する識別子  </p>
+</ul>
+<ul type="disc">
+<li><b>intersection_uuid</b>	uuid 3</li><p>    レイトレーシング交点計算を行うプラグインを特定する識別子  </p>
+</ul>
+<ul type="disc">
+<li><b>stream</b>	block 1</li><p>    データを保持するストリーム  </p>
+<ul type="none">
+<li><b>size</b></li><p>    ストリームのサイズ（バイト数）  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>label</b>	string 1</li><p>    プラグインから自由に設定、取得できる名称  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>attributes</b>	group 102</li><p>    プラグインが付加したカスタム属性の配列  </p>
+<p>    （ポリゴンメッシュの頂点に割り当てられたattributesの場合には面インデクス値、頂点インデクスに続き）0個またはそれ以上のカスタム属性が並ぶ。  </p>
+<ul type="disc">
+<li><b>face_index</b>	int 1</li><p>    面インデクス値  </p>
+<p>    ポリゴンメッシュの面の頂点に割り当てられたカスタム属性の場合には、割り当てられた面のインデクス値を表す。それ以外の場合には無効。  </p>
+</ul>
+<ul type="disc">
+<li><b>vertex_index</b>	int 2</li><p>    頂点インデクス  </p>
+<p>    ポリゴンメッシュの面の頂点に割り当てられたカスタム属性の場合には、割り当てられた頂点の（面内）インデクス値を表す。それ以外の場合には無効。  </p>
+</ul>
+<ul type="disc">
+<li><b>attribute</b>	group 103</li><p>    attributesに含まれる個々のカスタム属性の実体  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>common_shape_info</b>	group 64</li><p>    全ての種類の形状が持つ情報  </p>
+<ul type="disc">
+<li><b>flags</b></li><p>    各種フラグ  </p>
+<ul type="none">
+<li><b>fip_face</b>	0x1</li><p>    面の表裏を反転  </p>
+</ul>
+<ul type="none">
+<li><b>not_modifiable</b>	0x4</li><p>    モディファイ可能  </p>
+</ul>
+<ul type="none">
+<li><b>not_browsable</b>	0x8</li><p>    ブラウズ可能  </p>
+</ul>
+<ul type="none">
+<li><b>hidden</b>	0x10</li><p>    非表示  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>solid</b>	int 3</li><p>    （半）透明な形状の場合に、面一枚でもソリッドと見なす。すなわち、その面に入射した光線は、面を通過した時点で即形状外に射出すると見なす。  </p>
+<p>    0 : オフ  </p>
+<p>    1 : オン  </p>
+<p>    -1 : 親の値を継承  </p>
+</ul>
+<ul type="disc">
+<li><b>render</b>	int 4</li><p>    レンダリングの対象とする  </p>
+<p>    0 : オフ  </p>
+<p>    1 : オン  </p>
+<p>    -1 : 親の値を継承  </p>
+</ul>
+<ul type="disc">
+<li><b>rough</b>	int 5</li><p>    ラフ表示  </p>
+<p>    0 : オフ  </p>
+<p>    1 : オン  </p>
+<p>    -1 : 親の値を継承  </p>
+</ul>
+<ul type="disc">
+<li><b>radiosity_shooter</b>	int 13</li><p>    ラジオシティ計算のシュータ  </p>
+<p>    0 : オフ  </p>
+<p>    1 : オン  </p>
+<p>    -1 : 親の値を継承  </p>
+</ul>
+<ul type="disc">
+<li><b>radiosity_receiver</b>	int 14</li><p>    ラジオシティ計算のレシーバ  </p>
+<p>    0 : オフ  </p>
+<p>    1 : オン  </p>
+<p>    -1 : 親の値を継承  </p>
+</ul>
+<ul type="disc">
+<li><b>radiosity_cast_shadow</b>	int 15</li><p>    ラジオシティ計算で影を落とす  </p>
+<p>    0 : オフ  </p>
+<p>    1 : オン  </p>
+<p>    -1 : 親の値を継承  </p>
+</ul>
+<ul type="disc">
+<li><b>radiosity_doublesided</b>	int 12</li><p>    ラジオシティ計算で両面と見なす  </p>
+<p>    0 : オフ  </p>
+<p>    1 : オン  </p>
+<p>    -1 : 親の値を継承  </p>
+</ul>
+<ul type="disc">
+<li><b>xrp_light_index</b>	int 16</li><p>    ラジオシティ計算用光源インデクス  </p>
+<p>    Shade内部で使用  </p>
+</ul>
+<ul type="disc">
+<li><b>xrp_handle</b>	int 8</li><p>    ラジオシティ計算用ハンドル値  </p>
+<p>    Shade内部で使用  </p>
+</ul>
+<ul type="disc">
+<li><b>marker_index</b>	int 17</li><p>    マーカインデクス  </p>
+<p>    ブラウザ表示色のインデクス値  </p>
+</ul>
+<ul type="disc">
+<li><b>joint_specifier</b>	group 119</li><p>    スキン設定でスコープとするジョイント  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>fog</b>	group 48</li><p>    フォグ設定  </p>
+<ul type="disc">
+<li><b>color</b>	rgb 1</li><p>    フォグの色  </p>
+</ul>
+<ul type="disc">
+<li><b>fog</b>	float 1</li><p>    フォグの濃度  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>joint_specifier</b>	group 119</li><p>    ジョイントを特定するために必要な情報  </p>
+<p>    shape_specifierと同様に、階層内での相対位置の値の配列として形状を特定するが、shape_specifierとは異なりジョイント形状のみを対象とする。  </p>
+<ul type="disc">
+<li><b>int</b></li><p>    階層内での相対位置  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>part</b>	group 7</li><p>    パート  </p>
+<ul type="disc">
+<li><b>transformation</b>	mat4 2</li><p>    変換マトリクス  </p>
+</ul>
+<ul type="disc">
+<li><b>string</b></li><p>    名前  </p>
+</ul>
+<ul type="disc">
+<li><b>skin</b>	group 110</li><p>    パートに設定されたスキン  </p>
+</ul>
+<ul type="disc">
+<li><b>joint</b>	group 8</li><p>    ジョイント情報  </p>
+</ul>
+<ul type="disc">
+<li><b>view</b>	group 122</li><p>    カメラ形状の場合の視野設定  </p>
+</ul>
+<ul type="disc">
+<li><b>int</b></li><p>    使用しているマスターサーフェスの番号  </p>
+</ul>
+<ul type="disc">
+<li><b>surface</b>	group 143</li><p>    表面材質  </p>
+</ul>
+<ul type="disc">
+<li><b>common_shape_info</b>	group 64</li><p>    各種属性  </p>
+</ul>
+<ul type="disc">
+<li><b>attributes</b>	group 102</li><p>    プラグインが付加したカスタム属性  </p>
+</ul>
+<ul type="disc">
+<li><b>flags</b></li><p>    各種フラグ  </p>
+<ul type="none">
+<li><b>disclosed</b>	0x2</li><p>    ブラウザでディスクローズ表示  </p>
+</ul>
+<ul type="none">
+<li><b>surface_closed</b>	0x4</li><p>    交差方向に閉じた自由曲面  </p>
+</ul>
+<ul type="none">
+<li><b>switched</b>	0x8</li><p>    縦横の切り替えがされている  </p>
+</ul>
+<ul type="none">
+<li><b>master_surface</b>	0x20</li><p>    ONの場合には、マスターサーフェス形状を含むパート  </p>
+</ul>
+<ul type="none">
+<li><b>current_camera</b>	0x80</li><p>    現行のカメラ  </p>
+<p>    パートがカメラ形状の場合に有効。  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>part_type</b>	int 1</li><p>    パートの種類  </p>
+<p>    0 : 通常パートおよび各種ジョイント  </p>
+<p>    1 : 自由曲面パート  </p>
+</ul>
+<ul type="disc">
+<li><b>bindable</b>	int 3</li><p>    スキン設定でバインドの対象とする  </p>
+<p>    0 : オフ  </p>
+<p>    1 : オン  </p>
+<p>    -1 : 親の値を継承  </p>
+</ul>
+<ul type="disc">
+<li><b>motion</b>	group 9</li><p>    モーション設定  </p>
+<p>    n個のモーションポイントが並ぶ。  </p>
+<ul type="disc">
+<li><b>n</b>	int 1</li><p>    モーションポイントの数  </p>
+</ul>
+<ul type="disc">
+<li><b>interpolation</b>	int 7</li><p>    補間の種類  </p>
+<p>    0 : ベジェ補間  </p>
+</ul>
+<ul type="disc">
+<li><b>anchor</b>	int 8</li><p>    アンカーモード  </p>
+<p>    カメラジョイントの場合にのみ有効  </p>
+<p>    0 : 視点のパス、注視点のパスをそれぞれ明示的に補間し、その結果としてカメラの向きが必然的に決まる。  </p>
+<p>    1 : 視点のパス、カメラの向きをそれぞれ明示的に補間し、その結果として注視点が必然的に決まる。  </p>
+<p>    2 : 注視点のパス、カメラの向きをそれぞれ明示的に補間し、その結果として視点が必然的に決まる。  </p>
+</ul>
+<ul type="disc">
+<li><b>motion_point</b>	group 10</li><p>    モーションポイント  </p>
+<ul type="disc">
+<li><b>index</b>	int 1</li><p>    モーションポイントのインデクス値  </p>
+</ul>
+<ul type="disc">
+<li><b>sequence_joint_value_0</b>	float 1</li><p>    回転ジョイント：回転角度  </p>
+<p>    直線移動ジョイント：始点-終点間の距離に対する相対値としての移動量  </p>
+<p>    均等拡大縮小／ボールジョイント：拡大縮小値  </p>
+<p>    パスジョイント：パスに対する相対値としての移動量  </p>
+<p>    カメラジョイント：視点、注視点間の距離  </p>
+</ul>
+<ul type="disc">
+<li><b>sequence_joint_value_1</b>	float 6</li><p>    カメラジョイント：ズーム値  </p>
+</ul>
+<ul type="disc">
+<li><b>sequence_joint_value_2</b>	float 7</li><p>    カメラジョイント：バンク値  </p>
+</ul>
+<ul type="disc">
+<li><b>sequence_joint_value_3</b>	float 8</li><p>    カメラジョイント：垂直パース補正値  </p>
+</ul>
+<ul type="disc">
+<li><b>sequence_joint_value_4</b>	float 9</li><p>    カメラジョイント：焦点値  </p>
+</ul>
+<ul type="disc">
+<li><b>sequence_joint_value_5</b>	float 10</li><p>    カメラジョイント：焦点位置のX  </p>
+</ul>
+<ul type="disc">
+<li><b>sequence_joint_value_6</b>	float 11</li><p>    カメラジョイント：焦点位置のY  </p>
+</ul>
+<ul type="disc">
+<li><b>sequence_joint_value_7</b>	float 12</li><p>    カメラジョイント：焦点位置のZ  </p>
+</ul>
+<ul type="disc">
+<li><b>sequence_joint_value_8</b>	float 13</li><p>    カメラジョイント：シフトのX  </p>
+</ul>
+<ul type="disc">
+<li><b>sequence_joint_value_9</b>	float 14</li><p>    カメラジョイント：シフトのY  </p>
+</ul>
+<ul type="disc">
+<li><b>sequence_joint_value_10</b>	float 15</li><p>    カメラジョイント：フィルムシフトのX  </p>
+</ul>
+<ul type="disc">
+<li><b>sequence_joint_value_11</b>	float 16</li><p>    カメラジョイント：フィルムシフトのY  </p>
+</ul>
+<ul type="disc">
+<li><b>sequence_joint_value_12</b>	float 17</li><p>    カメラジョイント：フィルムティルトのX  </p>
+</ul>
+<ul type="disc">
+<li><b>sequence_joint_value_13</b>	float 18</li><p>    カメラジョイント：フィルムティルトのY  </p>
+</ul>
+<ul type="disc">
+<li><b>sequence_joint_value_14</b>	float 19</li><p>    カメラジョイント：レンズティルトのX  </p>
+</ul>
+<ul type="disc">
+<li><b>sequence_joint_value_15</b>	float 20</li><p>    カメラジョイント：レンズティルトのY  </p>
+</ul>
+<ul type="disc">
+<li><b>sequence_joint_value_16</b>	float 21</li><p>    カメラジョイント：平行移動量  </p>
+</ul>
+<ul type="disc">
+<li><b>sequence_joint_value_17</b>	float 22</li><p>    カメラジョイント：スケール値  </p>
+</ul>
+<ul type="disc">
+<li><b>rotation</b>	quaternion 1</li><p>    ボールジョイント：回転値  </p>
+<p>    カメラジョイント：カメラの向き  </p>
+</ul>
+<ul type="disc">
+<li><b>offset</b>	vec3 2</li><p>    ボールジョイント／カメラジョイント：オフセット値  </p>
+</ul>
+<ul type="disc">
+<li><b>slow_in</b>	float 3</li><p>    スローイン  </p>
+</ul>
+<ul type="disc">
+<li><b>slow_out</b>	float 4</li><p>    スローアウト  </p>
+</ul>
+<ul type="disc">
+<li><b>keyframe_index</b>	int 2</li><p>    モーションポイントが属するキーフレームのインデクス値  </p>
+</ul>
+<ul type="disc">
+<li><b>auto_smooth</b>	int 3</li><p>    自動スムース化  </p>
+</ul>
+<ul type="disc">
+<li><b>q0</b>	float 23</li><p>    自動スムース化がオフの場合に、明示的に設定したインハンドル値  </p>
+</ul>
+<ul type="disc">
+<li><b>q1</b>	float 24</li><p>    自動スムース化がオフの場合に、明示的に設定したアウトハンドル値  </p>
+</ul>
+<ul type="disc">
+<li><b>repeated</b>	int 4</li><p>    繰り返しによって生成されたモーションポイント  </p>
+</ul>
+<ul type="disc">
+<li><b>flags</b></li><p>    各種フラグ  </p>
+<ul type="none">
+<li><b>corner</b>	0x1</li><p>    cusp  </p>
+</ul>
+</ul>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>view_info</b>	group 46</li><p>    ビュー情報  </p>
+<p>    ローカル座標系表示の際に使用する各種設定値。  </p>
+</ul>
+<ul type="disc">
+<li><b>shape_specifier</b>	group 133</li><p>    リンク元の形状  </p>
+</ul>
+<ul type="disc">
+<li><b>part</b>	group 7</li><p>    （パートに含まれる）パート  </p>
+</ul>
+<ul type="disc">
+<li><b>polygon_mesh</b>	group 58</li><p>    （パートに含まれる）ポリゴンメッシュ形状  </p>
+<ul type="disc">
+<li><b>string</b></li><p>    名前  </p>
+</ul>
+<ul type="disc">
+<li><b>int</b></li><p>    使用しているマスターサーフェスの番号  </p>
+</ul>
+<ul type="disc">
+<li><b>surface</b>	group 143</li><p>    表面材質  </p>
+</ul>
+<ul type="disc">
+<li><b>common_shape_info</b>	group 64</li><p>    各種属性  </p>
+</ul>
+<ul type="disc">
+<li><b>attributes</b>	group 102</li><p>    プラグインが付加したカスタム属性  </p>
+</ul>
+<ul type="disc">
+<li><b>vertices</b>	group 113</li><p>    頂点  </p>
+<ul type="disc">
+<li><b>positions</b>	vecs 1</li><p>    座標値の配列  </p>
+<p>    座標値の数に続き、座標値のX,Y,Zが繰り返し並ぶ。  </p>
+</ul>
+<ul type="disc">
+<li><b>active_flags</b>	ints 1</li><p>    アクティブかどうかを示すフラグの列  </p>
+<p>    フラグの数に続き、0または1のフラグ値が繰り返し並ぶ。  </p>
+</ul>
+<ul type="disc">
+<li><b>skin</b>	group 110</li><p>    スキン設定  </p>
+<p>    0個以上のスキン設定がverticesグループ内に含まれる。  </p>
+<p>    個々のスキン設定がどの頂点に割り当てられているかは、skinグループ内のインデクス値で判断する。  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>edges</b>	group 114</li><p>    稜線  </p>
+<ul type="disc">
+<li><b>edge_vertices</b>	ints 1</li><p>    稜線を成す頂点インデクス値ペアの列  </p>
+<p>    頂点インデクス値の数（稜線の数の２倍）に続き、稜線の両端点の頂点インデクス値が並ぶ。  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>faces</b>	group 115</li><p>    面  </p>
+<ul type="disc">
+<li><b>face_vertices</b>	ints 1</li><p>    面を成す頂点インデクス値の列  </p>
+<p>    先頭の値は、それ以降に続く値の数を示し、続いて個々の面ごとにその面の頂点数と頂点インデクス値の列が繰り返し並ぶ。  </p>
+</ul>
+<ul type="disc">
+<li><b>face_uvs</b>	floats 1</li><p>    面を成す頂点に割り当てられたUV値の列  </p>
+<p>    先頭の値は、それ以降に続く値の数を示し、続いて個々の面ごとその個々の頂点に割り当てられているU_PARAMETER、V_PARAMETER、U_DISTANCE、V_DISTANCEの値が繰り返し並ぶ。  </p>
+</ul>
+<ul type="disc">
+<li><b>index</b>	int 1</li><p>    面インデクス  </p>
+</ul>
+<ul type="disc">
+<li><b>normals</b>	vecs 1</li><p>    法線ベクトルの配列  </p>
+<p>    一個の面に属する全ての頂点の法線ベクトルの配列。先頭の値はその面が持つ法線ベクトル、すなわち頂点の数。それに続いて法線ベクトルのX,Y,Z値が並ぶ。  </p>
+<p>    法線ベクトルがどの面に割り当てられているかは、直近に読み込まれた面インデクスの値で判断する。  </p>
+</ul>
+<ul type="disc">
+<li><b>subsurface_index</b>	int 2</li><p>    サブ面インデクス  </p>
+<p>    一個のポリゴンメッシュ内の個々の面に異なった表面材質を割り当てる場合の、表面材質インデクス値。  </p>
+<p>    サブ面インデクスがどの面に割り当てられているかは、直近に読み込まれた面インデクスの値で判断する。  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>polygon_mesh_aux</b>	group 71</li><p>    その他のポリゴンメッシュ情報  </p>
+<ul type="disc">
+<li><b>u_order</b>	int 1</li><p>    u_order  </p>
+</ul>
+<ul type="disc">
+<li><b>v_order</b>	int 2</li><p>    v_order  </p>
+</ul>
+<ul type="disc">
+<li><b>rows</b>	int 3</li><p>    rows  </p>
+</ul>
+<ul type="disc">
+<li><b>columns</b>	int 4</li><p>    columns  </p>
+</ul>
+<ul type="disc">
+<li><b>u_knot</b>	float 1</li><p>    u_knot  </p>
+</ul>
+<ul type="disc">
+<li><b>v_knot</b>	float 2</li><p>    v_knot  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>flags</b></li><p>    各種フラグ  </p>
+<ul type="none">
+<li><b>smooth_edges</b>	0x2</li><p>    稜線をスムース化  </p>
+</ul>
+<ul type="none">
+<li><b>hide_edge</b>	0x4</li><p>    稜線を非表示  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>round</b>	double 1</li><p>    丸め  </p>
+</ul>
+<ul type="disc">
+<li><b>threshold</b>	float 1</li><p>    スムーシングの閾角度  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>disk</b>	group 14</li><p>    （パートに含まれる）円形状  </p>
+<ul type="disc">
+<li><b>string</b></li><p>    名前  </p>
+</ul>
+<ul type="disc">
+<li><b>int</b></li><p>    使用しているマスターサーフェスの番号  </p>
+</ul>
+<ul type="disc">
+<li><b>surface</b>	group 143</li><p>    表面材質  </p>
+</ul>
+<ul type="disc">
+<li><b>common_shape_info</b>	group 64</li><p>    各種属性  </p>
+</ul>
+<ul type="disc">
+<li><b>attributes</b>	group 102</li><p>    プラグインが付加したカスタム属性  </p>
+</ul>
+<ul type="disc">
+<li><b>matrix</b>	mat4 1</li><p>    円を定義する変換マトリクス  </p>
+<p>    単位円（原点に位置し半径が1、X-Y平面上にある円）から対象とする円に変換する４×４座標変換マトリクス。  </p>
+<p>    このマトリクスをスケール、回転、移動の成分に分解すると、それぞれの成分は円の半径、向き、位置ということになる。  </p>
+</ul>
+<ul type="disc">
+<li><b>from</b>	float 1</li><p>    開始角度  </p>
+</ul>
+<ul type="disc">
+<li><b>to</b>	float 2</li><p>    終了角度  </p>
+</ul>
+<ul type="disc">
+<li><b>flags</b></li><p>    各種フラグ  </p>
+<ul type="none">
+<li><b>closed</b>	0x2</li><p>    閉じた円形状  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>solid</b>	group 1</li><p>    ソリッド設定  </p>
+</ul>
+<ul type="disc">
+<li><b>skin</b>	group 110</li><p>    スキン設定  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>light</b>	group 11</li><p>    （パートに含まれる）光源  </p>
+<ul type="disc">
+<li><b>string</b></li><p>    名前  </p>
+</ul>
+<ul type="disc">
+<li><b>int</b></li><p>    使用しているマスターサーフェスの番号  </p>
+</ul>
+<ul type="disc">
+<li><b>common_shape_info</b>	group 64</li><p>    各種属性  </p>
+</ul>
+<ul type="disc">
+<li><b>attributes</b>	group 102</li><p>    プラグインが付加したカスタム属性  </p>
+</ul>
+<ul type="disc">
+<li><b>flags</b></li><p>    各種フラグ  </p>
+<ul type="none">
+<li><b>square</b>	0x4</li><p>    オフ : 線形減衰  </p>
+<p>    オン : ２次減衰  </p>
+</ul>
+<ul type="none">
+<li><b>lumen</b>	0x10</li><p>    ルーメン  </p>
+</ul>
+<ul type="none">
+<li><b>has_shadow_map_bias</b>	0x20</li><p>    シャドウマップバイアス値を持っている  </p>
+<p>    値を持っていない場合には、レンダリング設定値から継承する。  </p>
+</ul>
+<ul type="none">
+<li><b>has_shadow_map_blur</b>	0x40</li><p>    シャドウマップブラー値を持っている  </p>
+<p>    値を持っていない場合には、レンダリング設定値から継承する。  </p>
+</ul>
+<ul type="none">
+<li><b>has_shadow_map_size</b>	0x80</li><p>    シャドウマップサイズ値を持っている  </p>
+<p>    値を持っていない場合には、レンダリング設定値から継承する。  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>distribution_type</b>	int 3</li><p>    配光の種類  </p>
+<p>    0 : 点光源  </p>
+<p>    1 : スポットライト  </p>
+<p>    2 : 配光  </p>
+</ul>
+<ul type="disc">
+<li><b>position</b>	vec3 1</li><p>    光源の位置  </p>
+</ul>
+<ul type="disc">
+<li><b>rotation</b>	quaternion 1</li><p>    光源向きを表す回転値  </p>
+<p>    スポットライト、配光の場合に有効。  </p>
+</ul>
+<ul type="disc">
+<li><b>shadow_type</b>	int 2</li><p>    影の種類  </p>
+<p>    0 : 継承  </p>
+<p>    1 : レイトレーシング  </p>
+<p>    2 : シャドウマップ  </p>
+</ul>
+<ul type="disc">
+<li><b>intensity</b>	float 1</li><p>    光源の明るさ規定する距離値  </p>
+<p>    光源からこの値だけ離れた位置にある物体が単位量の光を受け取る。線形減衰、２次減衰には依存しない。  </p>
+</ul>
+<ul type="disc">
+<li><b>angle</b>	float 2</li><p>    角度  </p>
+<p>    スポットライトの場合に有効。  </p>
+</ul>
+<ul type="disc">
+<li><b>softness</b>	float 3</li><p>    ソフトネス  </p>
+<p>    スポットライトの場合に有効。  </p>
+</ul>
+<ul type="disc">
+<li><b>shadow</b>	float 4</li><p>    影の強度  </p>
+</ul>
+<ul type="disc">
+<li><b>shadow_softness</b>	float 5</li><p>    影のソフトネス  </p>
+</ul>
+<ul type="disc">
+<li><b>specular</b>	float 6</li><p>    鏡面反射の強度  </p>
+</ul>
+<ul type="disc">
+<li><b>diffuse</b>	float 9</li><p>    拡散反射の強度  </p>
+</ul>
+<ul type="disc">
+<li><b>shadow_map_size</b>	int 1</li><p>    シャドウマップのサイズ  </p>
+</ul>
+<ul type="disc">
+<li><b>intensity_distribution</b>	group 140</li><p>    配光データ  </p>
+<p>    一個以上並んだ経度値の列、一個以上並んだ緯度値の列に続いて、経度値の数×緯度値の数だけエネルギー値が並ぶ。  </p>
+<ul type="disc">
+<li><b>name</b>	string 1</li><p>    名前  </p>
+</ul>
+<ul type="disc">
+<li><b>latitude_angle</b>	float 1</li><p>    経度  </p>
+</ul>
+<ul type="disc">
+<li><b>longitude_angle</b>	float 2</li><p>    緯度  </p>
+</ul>
+<ul type="disc">
+<li><b>energy</b>	float 3</li><p>    エネルギー値  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>skin</b>	group 110</li><p>    スキン設定  </p>
+</ul>
+<ul type="disc">
+<li><b>surface</b>	group 143</li><p>    表面材質  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>line</b>	group 12</li><p>    （パートに含まれる）線形状  </p>
+<ul type="disc">
+<li><b>string</b></li><p>    名前  </p>
+</ul>
+<ul type="disc">
+<li><b>int</b></li><p>    使用しているマスターサーフェスの番号  </p>
+</ul>
+<ul type="disc">
+<li><b>surface</b>	group 143</li><p>    表面材質  </p>
+</ul>
+<ul type="disc">
+<li><b>common_shape_info</b>	group 64</li><p>    各種属性  </p>
+</ul>
+<ul type="disc">
+<li><b>attributes</b>	group 102</li><p>    プラグインが付加したカスタム属性  </p>
+</ul>
+<ul type="disc">
+<li><b>control_points</b>	group 62</li><p>    コントロールポイント列  </p>
+<ul type="disc">
+<li><b>n</b>	int 1</li><p>    コントロールポイントの数  </p>
+</ul>
+<ul type="disc">
+<li><b>control_point</b>	group 63</li><p>    コントロールポイント  </p>
+<ul type="disc">
+<li><b>anchor_point</b>	vec3 1</li><p>    アンカーポイント  </p>
+</ul>
+<ul type="disc">
+<li><b>in_handle</b>	vec3 2</li><p>    インハンドル  </p>
+</ul>
+<ul type="disc">
+<li><b>out_handle</b>	vec3 3</li><p>    アウトハンドル  </p>
+</ul>
+<ul type="disc">
+<li><b>lateral_in_handle</b>	vec3 4</li><p>    交差方向インハンドル  </p>
+</ul>
+<ul type="disc">
+<li><b>lateral_out_handle</b>	vec3 5</li><p>    交差方向アウトハンドル  </p>
+</ul>
+<ul type="disc">
+<li><b>flags</b></li><p>    各種フラグ  </p>
+<ul type="none">
+<li><b>linked</b>	0x1</li><p>    インハンドルとアウトハンドルが連結されている  </p>
+</ul>
+<ul type="none">
+<li><b>lateral_linked</b>	0x2</li><p>    交差方向のインハンドルとアウトハンドルが連結されている  </p>
+</ul>
+<ul type="none">
+<li><b>active</b>	0x4</li><p>    選択されている  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>skin</b>	group 110</li><p>    コントロールポイントに設定されたスキン  </p>
+</ul>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>flags</b></li><p>    各種フラグ  </p>
+<ul type="none">
+<li><b>closed</b>	0x2</li><p>    閉じた線形状  </p>
+</ul>
+<ul type="none">
+<li><b>hole</b>	0x8</li><p>    穴  </p>
+</ul>
+<ul type="none">
+<li><b>lumen</b>	0x10</li><p>    明るさをルーメンとして表示  </p>
+<p>    線光源、面光源の場合に有効。  </p>
+</ul>
+<ul type="none">
+<li><b>area_light_visible</b>	0x20</li><p>    光源をレンダリング  </p>
+<p>    線光源、面光源の場合に有効。  </p>
+</ul>
+<ul type="none">
+<li><b>has_shadow_map_bias</b>	0x40</li><p>    シャドウマップバイアス値を持っている  </p>
+<p>    値を持っていない場合には、レンダリング設定値から継承する。  </p>
+<p>    線光源、面光源の場合に有効。  </p>
+</ul>
+<ul type="none">
+<li><b>has_shadow_map_blur</b>	0x80</li><p>    シャドウマップブラー値を持っている  </p>
+<p>    値を持っていない場合には、レンダリング設定値から継承する。  </p>
+<p>    線光源、面光源の場合に有効。  </p>
+</ul>
+<ul type="none">
+<li><b>has_shadow_map_size</b>	0x100</li><p>    シャドウマップサイズ値を持っている  </p>
+<p>    値を持っていない場合には、レンダリング設定値から継承する。  </p>
+<p>    線光源、面光源の場合に有効。  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>curve_type</b>	int 1</li><p>    曲線の種類  </p>
+<p>    1 : ベジェ曲線  </p>
+</ul>
+<ul type="disc">
+<li><b>shadow_type</b>	int 4</li><p>    影の種類  </p>
+<p>    0 : 継承  </p>
+<p>    1 : レイトレーシング  </p>
+<p>    2 : シャドウマップ  </p>
+</ul>
+<ul type="disc">
+<li><b>light_type</b>	int 5</li><p>    光源の種類  </p>
+<p>    -1 : 光源ではない  </p>
+<p>    0 : 面光源  </p>
+<p>    1 : 線光源  </p>
+</ul>
+<ul type="disc">
+<li><b>light_intensity</b>	float 1</li><p>    光源の明るさ規定する距離値  </p>
+<p>    光源からこの値だけ離れた位置にある物体が単位量の光を受け取る。線形減衰、２次減衰には依存しない。  </p>
+</ul>
+<ul type="disc">
+<li><b>light_specular</b>	float 2</li><p>    光源の鏡面反射の強度  </p>
+</ul>
+<ul type="disc">
+<li><b>light_diffuse</b>	float 5</li><p>    光源の拡散反射の強度  </p>
+</ul>
+<ul type="disc">
+<li><b>light_shadow</b>	float 6</li><p>    光源の影の強度  </p>
+</ul>
+<ul type="disc">
+<li><b>shadow_map_size</b>	int 3</li><p>    シャドウマップサイズ値  </p>
+</ul>
+<ul type="disc">
+<li><b>shadow_map_bias</b>	float 3</li><p>    シャドウマップバイアス値  </p>
+</ul>
+<ul type="disc">
+<li><b>shadow_map_blur</b>	float 4</li><p>    シャドウマップブラー値  </p>
+</ul>
+<ul type="disc">
+<li><b>solid</b>	group 1</li><p>    ソリッド設定  </p>
+</ul>
+<ul type="disc">
+<li><b>skin</b>	group 110</li><p>    線形状に設定されたスキン  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>sphere</b>	group 13</li><p>    （パートに含まれる）球  </p>
+<ul type="disc">
+<li><b>string</b></li><p>    名前  </p>
+</ul>
+<ul type="disc">
+<li><b>int</b></li><p>    使用しているマスターサーフェスの番号  </p>
+</ul>
+<ul type="disc">
+<li><b>surface</b>	group 143</li><p>    表面材質  </p>
+</ul>
+<ul type="disc">
+<li><b>common_shape_info</b>	group 64</li><p>    各種属性  </p>
+</ul>
+<ul type="disc">
+<li><b>attributes</b>	group 102</li><p>    カスタム属性  </p>
+</ul>
+<ul type="disc">
+<li><b>matrix</b>	mat4 1</li><p>    球を定義する変換マトリクス  </p>
+<p>    単位球（原点に位置し半径が1、Y軸が極軸の球）から対象とする球に変換する４×４座標変換マトリクス。  </p>
+<p>    このマトリクスをスケール、回転、移動の成分に分解すると、それぞれの成分は球の半径、向き、位置ということになる。  </p>
+</ul>
+<ul type="disc">
+<li><b>skin</b>	group 110</li><p>    球に設定されたスキン  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>master_surface</b>	flag 20</li><p>    マスターサーフェス  </p>
+<ul type="disc">
+<li><b>string</b></li><p>    名前  </p>
+</ul>
+<ul type="disc">
+<li><b>int</b></li><p>    int  </p>
+</ul>
+<ul type="disc">
+<li><b>surface</b>	group 143</li><p>    表面材質  </p>
+</ul>
+<ul type="disc">
+<li><b>common_shape_info</b>	group 64</li><p>    各種属性  </p>
+</ul>
+<ul type="disc">
+<li><b>attributes</b>	group 102</li><p>    カスタム属性  </p>
+</ul>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>pixels</b>	group 74</li><p>    イメージ  </p>
+<ul type="disc">
+<li><b>link_id</b>	int64 2</li><p>    イメージの実体を参照するリンク識別子  </p>
+</ul>
+<ul type="disc">
+<li><b>object_id</b>	int64 1</li><p>    イメージの実体として他から参照される場合に使われるオブジェクト識別子  </p>
+</ul>
+<ul type="disc">
+<li><b>exr</b>	block 6</li><p>    OpenEXR形式イメージデータ  </p>
+</ul>
+<ul type="disc">
+<li><b>mov_alias</b>	group 98</li><p>    MOVファイルを参照するエイリアス  </p>
+</ul>
+<ul type="disc">
+<li><b>avi_alias</b>	group 99</li><p>    AVIファイルを参照するエイリアス  </p>
+</ul>
+<ul type="disc">
+<li><b>rect</b>	rectangle 1</li><p>    rect  </p>
+</ul>
+<ul type="disc">
+<li><b>area</b>	rectangle 2</li><p>    範囲  </p>
+</ul>
+<ul type="disc">
+<li><b>shift</b>	vec3 1</li><p>    シフト量  </p>
+</ul>
+<ul type="disc">
+<li><b>scale</b>	int 3</li><p>    スケール値  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>shade</b></li><p>    シーン  </p>
+<ul type="disc">
+<li><b>image</b>	group 27</li><p>    レンダリングされたイメージ  </p>
+<ul type="disc">
+<li><b>pixels</b>	group 74</li><p>    レンダリングされたイメージの実体  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>attributes</b>	group 102</li><p>    プラグインが付加したカスタム属性  </p>
+</ul>
+<ul type="disc">
+<li><b>figure_window_info</b></li><p>    図形ウインドウ関連情報  </p>
+<ul type="disc">
+<li><b>size</b></li><p>    サイズ  </p>
+</ul>
+<ul type="disc">
+<li><b>position</b></li><p>    位置  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>animation_settings</b>	group 43</li><p>    アニメーション設定  </p>
+<ul type="disc">
+<li><b>sequence</b>	int 12</li><p>    シーケンス値  </p>
+</ul>
+<ul type="disc">
+<li><b>leading_frames</b>	int 15</li><p>    リーディングフレーム数  </p>
+</ul>
+<ul type="disc">
+<li><b>total_frames</b>	int 1</li><p>    全体フレーム数  </p>
+</ul>
+<ul type="disc">
+<li><b>trailing_frames</b>	int 16</li><p>    トレーリングフレーム数  </p>
+</ul>
+<ul type="disc">
+<li><b>start_frame</b>	int 5</li><p>    開始フレーム  </p>
+</ul>
+<ul type="disc">
+<li><b>end_frame</b>	int 6</li><p>    終了フレーム  </p>
+</ul>
+<ul type="disc">
+<li><b>frame_rate</b>	int 9</li><p>    フレームレート値  </p>
+</ul>
+<ul type="disc">
+<li><b>rows</b>	int 13</li><p>    列  </p>
+</ul>
+<ul type="disc">
+<li><b>interlace</b>	int 17</li><p>    インターレースモード  </p>
+</ul>
+<ul type="disc">
+<li><b>step_frames</b>	float 1</li><p>    ステップフレーム  </p>
+</ul>
+<ul type="disc">
+<li><b>flags</b></li><p>    各種フラグ  </p>
+<ul type="none">
+<li><b>auto_scaling</b>	0x20</li><p>    自動スケーリング  </p>
+</ul>
+<ul type="none">
+<li><b>object_movie</b>	0x40</li><p>    オブジェクトムービー  </p>
+</ul>
+<ul type="none">
+<li><b>drop_frame</b>	0x80</li><p>    ドロップフレーム  </p>
+</ul>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>hot_spot</b>	group 49</li><p>    ホットスポット  </p>
+</ul>
+<ul type="disc">
+<li><b>rendering_settings</b>	group 125</li><p>    レンダリング設定の配列  </p>
+<ul type="disc">
+<li><b>rendering_setting</b>	group 19</li><p>    個々のレンダリング設定  </p>
+<ul type="disc">
+<li><b>flags</b></li><p>    各種フラグ  </p>
+<ul type="none">
+<li><b>show_background</b>	0x1</li><p>    背景を表示  </p>
+</ul>
+<ul type="none">
+<li><b>show_shadow</b>	0x2</li><p>    影を表示  </p>
+</ul>
+<ul type="none">
+<li><b>antialiasing</b>	0x4</li><p>    アンチエリアシング  </p>
+</ul>
+<ul type="none">
+<li><b>show_texture</b>	0x40</li><p>    テクスチャを表示  </p>
+</ul>
+<ul type="none">
+<li><b>reflect_background</b>	0x80</li><p>    背景を反映  </p>
+</ul>
+<ul type="none">
+<li><b>panorama</b>	0x800</li><p>    パノラマ  </p>
+</ul>
+<ul type="none">
+<li><b>sideways</b>	0x1000</li><p>    横向き  </p>
+</ul>
+<ul type="none">
+<li><b>alpha_channel</b>	0x2000</li><p>    アルファチャネル  </p>
+</ul>
+<ul type="none">
+<li><b>single_sided_face</b>	0x4000</li><p>    片面  </p>
+</ul>
+<ul type="none">
+<li><b>total_energy</b>	0x20000</li><p>    total_energy  </p>
+<p>    オフ：間接光  </p>
+<p>    オン：直接光＋間接光  </p>
+</ul>
+<ul type="none">
+<li><b>not_premultiplied_pixel</b>	0x40000</li><p>    アルファ乗算しない  </p>
+</ul>
+<ul type="none">
+<li><b>not_transparency_affects_alpha</b>	0x80000</li><p>    透明度がアルファ値に影響しない  </p>
+</ul>
+<ul type="none">
+<li><b>render_transparency</b>	0x100000</li><p>    透明度をレンダリング  </p>
+</ul>
+<ul type="none">
+<li><b>z</b>	0x200000</li><p>    奥行き値を保持  </p>
+</ul>
+<ul type="none">
+<li><b>illuminance</b>	0x1000000</li><p>    Shadeデバグ用  </p>
+</ul>
+<ul type="none">
+<li><b>dont_use_rendering_server</b>	0x2000000</li><p>    レンダリングサーバを使用しない  </p>
+</ul>
+<ul type="none">
+<li><b>solve</b>	0x4000000</li><p>    レンダリング前にラジオシティ計算を行う  </p>
+</ul>
+<ul type="none">
+<li><b>use_server_only</b>	0x8000000</li><p>    レンダリングサーバのみを使用する  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>name</b>	string 1</li><p>    名前  </p>
+</ul>
+<ul type="disc">
+<li><b>shadow_type</b>	int 18</li><p>    影の種類  </p>
+<p>    1 : レイトレーシング  </p>
+<p>    2 : シャドウマップ  </p>
+</ul>
+<ul type="disc">
+<li><b>surface_division_level</b>	int 2</li><p>    分割レベル  </p>
+<p>    0 : 分割しない  </p>
+<p>    1 : 荒い  </p>
+<p>    2 : 普通  </p>
+<p>    3 : 細かい  </p>
+<p>    4 : 最も細かい  </p>
+</ul>
+<ul type="disc">
+<li><b>ray_cast_level</b>	int 3</li><p>    視線追跡レベル  </p>
+</ul>
+<ul type="disc">
+<li><b>ray_tracing_quality</b>	int 4</li><p>    画質  </p>
+</ul>
+<ul type="disc">
+<li><b>number_of_threads</b>	int 23</li><p>    スレッド数  </p>
+</ul>
+<ul type="disc">
+<li><b>use_environment_mapping</b>	int 10</li><p>    use_environment_mapping  </p>
+</ul>
+<ul type="disc">
+<li><b>use_spherical_panorama</b>	int 11</li><p>    use_spherical_panorama  </p>
+</ul>
+<ul type="disc">
+<li><b>over_sampling</b>	int 12</li><p>    オーバーサンプリング  </p>
+<p>    1 : 自動適応  </p>
+<p>    2 : 2 x 2  </p>
+<p>    3 : 3 x 3  </p>
+<p>    4 : 4 x 4  </p>
+</ul>
+<ul type="disc">
+<li><b>renderer_uuid</b>	uuid 1</li><p>    レンダラ識別子  </p>
+<p>    先頭32ビット以外が全てゼロの場合には、先頭32ビット整数の値を以下のように解釈する。  </p>
+<p>    0 : レイトレーシング  </p>
+<p>    0 : パストレーシング  </p>
+<p>    0 : スキャンライン  </p>
+<p>    それ以外の場合には、プラグインレンダラの識別子  </p>
+</ul>
+<ul type="disc">
+<li><b>shadow_map_size</b>	int 14</li><p>    シャドウマップのサイズ  </p>
+</ul>
+<ul type="disc">
+<li><b>shadow_map_sampling</b>	int 25</li><p>    シャドウマップのサンプリング  </p>
+<p>    0 : ４×４ ジタリングする  </p>
+<p>    1 : ８×８ ジタリングする  </p>
+<p>    2 : １６×１６ ジタリングしない  </p>
+</ul>
+<ul type="disc">
+<li><b>minimum_samplings</b>	int 28</li><p>    サンプリング数最小値  </p>
+<p>    未使用  </p>
+</ul>
+<ul type="disc">
+<li><b>subframes</b>	int 26</li><p>    サブフレーム数  </p>
+<p>    モーションブラーを計算する際のサブフレーム分割数  </p>
+</ul>
+<ul type="disc">
+<li><b>initialize_random</b>	int 29</li><p>    initialize_random  </p>
+<p>    未使用  </p>
+</ul>
+<ul type="disc">
+<li><b>photon_map_total_energy</b>	int 30</li><p>    フォトンマップ　直接光＋間接光  </p>
+<p>    デバグ用  </p>
+</ul>
+<ul type="disc">
+<li><b>caustics</b>	int 33</li><p>    コースティクス計算のオン／オフ  </p>
+</ul>
+<ul type="disc">
+<li><b>caustics_weight</b>	int 34</li><p>    コースティクス荷重  </p>
+<p>    この値が大きいほどコースティクス計算に時間を割く。  </p>
+</ul>
+<ul type="disc">
+<li><b>frequency_cap</b>	int 31</li><p>    テクスチャパターンの周波数を制限  </p>
+<p>    デバグ用  </p>
+</ul>
+<ul type="disc">
+<li><b>sampling_shape</b>	int 32</li><p>    サンプリングの形状  </p>
+<p>    デバグ用  </p>
+<p>    0 : 円形  </p>
+<p>    1 : 正方形  </p>
+</ul>
+<ul type="disc">
+<li><b>probabilistic_branching</b>	int 35</li><p>    probabilistic_branching  </p>
+</ul>
+<ul type="disc">
+<li><b>own_image</b>	int 36</li><p>    それぞれのレンダリング設定が個別にレンダリングイメージを持つ  </p>
+<p>    デバグ用  </p>
+</ul>
+<ul type="disc">
+<li><b>pixel_depth</b>	int 37</li><p>    イメージのピクセル深度  </p>
+<p>    0 : 32ビット。R,G,B,Aそれぞれ8ビット符号無し整数  </p>
+<p>    1 : 64ビット。R,G,B,Aそれぞれ16ビット浮動小数点  </p>
+<p>    2 : 128ビット。R,G,B,Aそれぞれ32ビット浮動小数点  </p>
+</ul>
+<ul type="disc">
+<li><b>image_width</b>	int 15</li><p>    イメージの幅のピクセル数  </p>
+</ul>
+<ul type="disc">
+<li><b>image_height</b>	int 16</li><p>    イメージの高さのピクセル数  </p>
+</ul>
+<ul type="disc">
+<li><b>image_scale</b>	int 24</li><p>    イメージのスケール  </p>
+</ul>
+<ul type="disc">
+<li><b>compatibility_mode</b>	int 20</li><p>    レンダリング互換モード  </p>
+<p>    0 : Shade R5  </p>
+<p>    1 : Shade 6 spirit (rev.18)  </p>
+<p>    2 : Shade 6 (rev.19)  </p>
+<p>    3 : Shade 6 (rev.20)  </p>
+<p>    4 : Shade 7 basic (rev.37)  </p>
+<p>    5 : Shade 7.1.1  </p>
+<p>    6 : Shade 7.5  </p>
+<p>    適当に大きな数 : 現行版  </p>
+</ul>
+<ul type="disc">
+<li><b>global_illumination</b>	int 21</li><p>    大域照明の種類  </p>
+<p>    0 : 無し  </p>
+<p>    0 : パストレーシング  </p>
+<p>    0 : フォトンマッピング  </p>
+<p>    0 : ラジオシティ  </p>
+</ul>
+<ul type="disc">
+<li><b>target_number_of_photons</b>	int 22</li><p>    発射するフォトンの目標数  </p>
+</ul>
+<ul type="disc">
+<li><b>pixel_ratio</b>	float 9</li><p>    ピクセル縦横比  </p>
+</ul>
+<ul type="disc">
+<li><b>fisheye_distortion</b>	float 5</li><p>    魚眼変形  </p>
+</ul>
+<ul type="disc">
+<li><b>ray_tracing_delta</b>	float 6</li><p>    ray_tracing_delta  </p>
+</ul>
+<ul type="disc">
+<li><b>shadow_map_blur</b>	float 7</li><p>    シャドウマップのブラー値  </p>
+</ul>
+<ul type="disc">
+<li><b>shadow_map_bias</b>	float 8</li><p>    シャドウマップのバイアス値  </p>
+</ul>
+<ul type="disc">
+<li><b>reflection_factor</b>	float 10</li><p>    拡散反射係数  </p>
+</ul>
+<ul type="disc">
+<li><b>noise_reduction</b>	float 11</li><p>    ノイズ減少  </p>
+</ul>
+<ul type="disc">
+<li><b>sampling_spread</b>	float 12</li><p>    サンプリングの範囲  </p>
+</ul>
+<ul type="disc">
+<li><b>opening</b>	float 13</li><p>    モーションブラーのシャッター開度  </p>
+</ul>
+<ul type="disc">
+<li><b>backdrop</b>	group 89</li><p>    バックドロップ  </p>
+<ul type="disc">
+<li><b>flags</b></li><p>    各種フラグ  </p>
+<ul type="none">
+<li><b>backdrop</b>	0x1</li><p>    バックドロップを合成する  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>pixels</b>	group 74</li><p>    イメージデータの実体  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>renderers</b>	group 105</li><p>    プラグインレンダラが設定したカスタム属性データの配列  </p>
+<ul type="disc">
+<li><b>face_index</b>	int 1</li><p>    無効  </p>
+</ul>
+<ul type="disc">
+<li><b>vertex_index</b>	int 2</li><p>    無効  </p>
+</ul>
+<ul type="disc">
+<li><b>attribute</b>	group 103</li><p>    renderersに含まれる個々のattribute  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>effectors</b>	group 104</li><p>    レンダリングエフェクターの配列  </p>
+<ul type="disc">
+<li><b>face_index</b>	int 1</li><p>    無効  </p>
+</ul>
+<ul type="disc">
+<li><b>vertex_index</b>	int 2</li><p>    無効  </p>
+</ul>
+<ul type="disc">
+<li><b>attribute</b>	group 103</li><p>    個々のエフェクタ（実態はエフェクタプラグインが付加した属性データ）  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>attributes</b>	group 102</li><p>    （レンダラプラグインに限らず）任意のプラグインがレンダリング設定に付加したカスタム属性  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>index</b>	int 1</li><p>    レンダリング設定のインデクス値  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>fog</b>	group 48</li></ul>
+<ul type="disc">
+<li><b>distant_lights</b>	group 16</li><p>/distant lights \enden   無限遠光源  </p>
+<ul type="disc">
+<li><b>distant_light</b>	group 17</li><p>    個々の無限遠光源  </p>
+<ul type="disc">
+<li><b>flags</b></li><p>    各種フラグ  </p>
+<ul type="none">
+<li><b>has_shadow_map_bias</b>	0x1</li><p>    シャドウマップバイアス値を持っている  </p>
+<p>    値を持っていない場合には、レンダリング設定値から継承する。  </p>
+</ul>
+<ul type="none">
+<li><b>has_shadow_map_blur</b>	0x2</li><p>    シャドウマップブラー値を持っている  </p>
+<p>    値を持っていない場合には、レンダリング設定値から継承する。  </p>
+</ul>
+<ul type="none">
+<li><b>has_shadow_map_size</b>	0x4</li><p>    シャドウマップサイズ値を持っている  </p>
+<p>    値を持っていない場合には、レンダリング設定値から継承する。  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>index</b>	int 1</li><p>    インデクス値  </p>
+</ul>
+<ul type="disc">
+<li><b>rgb</b></li><p>    光源の色  </p>
+</ul>
+<ul type="disc">
+<li><b>direction</b>	vec3 1</li><p>    光源の方向  </p>
+</ul>
+<ul type="disc">
+<li><b>intensity</b>	float 1</li><p>    光源の強度  </p>
+</ul>
+<ul type="disc">
+<li><b>ambient</b>	float 3</li><p>    環境光の相対強度  </p>
+</ul>
+<ul type="disc">
+<li><b>softness</b>	float 2</li><p>    ソフトネス  </p>
+</ul>
+<ul type="disc">
+<li><b>shadow</b>	float 6</li><p>    影の強度  </p>
+</ul>
+<ul type="disc">
+<li><b>glare</b>	float 4</li><p>    グレア  </p>
+</ul>
+<ul type="disc">
+<li><b>size</b>	float 5</li><p>    グレアの大きさ  </p>
+</ul>
+<ul type="disc">
+<li><b>specular</b>	float 7</li><p>    鏡面反射の強度  </p>
+</ul>
+<ul type="disc">
+<li><b>diffuse</b>	float 8</li><p>    拡散反射の強度  </p>
+</ul>
+<ul type="disc">
+<li><b>shadow_map_bias</b>	float 9</li><p>    シャドウマップバイアス値  </p>
+</ul>
+<ul type="disc">
+<li><b>shadow_map_blur</b>	float 10</li><p>    シャドウマップブラー値  </p>
+</ul>
+<ul type="disc">
+<li><b>shadow_map_size</b>	int 2</li><p>    シャドウマップのサイズ値  </p>
+</ul>
+<ul type="disc">
+<li><b>shadow_type</b>	int 3</li><p>    影の種類  </p>
+<p>    0 : レンダリング設定値から継承  </p>
+<p>    1 : レイトレーシング  </p>
+<p>    2 : シャドウマップ  </p>
+</ul>
+<ul type="disc">
+<li><b>attributes</b>	group 102</li><p>    プラグインが付加したカスタム属性  </p>
+</ul>
+<ul type="disc">
+<li><b>xrp_index</b>	int 4</li><p>    Shade内部でラジオシティ計算に使用するインデクス値  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>flags</b></li><p>    各種フラグ  </p>
+<ul type="none">
+<li><b>lx</b>	0x1</li><p>    lx  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>sky_light</b>	float 1</li><p>    天空光の強度  </p>
+<p>    ラジオシティで使用  </p>
+</ul>
+<ul type="disc">
+<li><b>skylight_color</b>	rgb 1</li><p>    天空光の色  </p>
+<p>    ラジオシティで使用  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>background</b>	group 20</li><p>    背景設定  </p>
+<ul type="disc">
+<li><b>upper_base_color</b>	rgb 1</li><p>    上半球の基本色  </p>
+</ul>
+<ul type="disc">
+<li><b>lower_base_color</b>	rgb 2</li><p>    下半球の基本色  </p>
+</ul>
+<ul type="disc">
+<li><b>lighting_intensity_factor</b>	float 1</li><p>    光源強度係数  </p>
+</ul>
+<ul type="disc">
+<li><b>background_layer</b>	group 23</li><p>    背景レイヤ  </p>
+<ul type="disc">
+<li><b>index</b>	int 1</li><p>    背景レイヤのインデクス値  </p>
+</ul>
+<ul type="disc">
+<li><b>target</b>	int 7</li><p>    ターゲット  </p>
+<p>    0 : 全体  </p>
+<p>    1 : 上半球  </p>
+<p>    2 : 下半球  </p>
+</ul>
+<ul type="disc">
+<li><b>texture</b>	int 2</li><p>    テクスチャの種類  </p>
+<p>    0 : 無し  </p>
+<p>    1 : 雲  </p>
+<p>    2 : 海  </p>
+<p>    3 : 大理石  </p>
+<p>    4 : スポット  </p>
+<p>    5 : チェック  </p>
+<p>    6 : 霧  </p>
+<p>    7 : イメージ  </p>
+</ul>
+<ul type="disc">
+<li><b>mix_mode</b>	int 4</li><p>    合成モード  </p>
+<p>    0 : 通常  </p>
+<p>    1 : αブレンド  </p>
+<p>    2 : 加算  </p>
+<p>    3 : 減算  </p>
+<p>    4 : 乗算  </p>
+<p>    5 : 比較（明）  </p>
+<p>    6 : 比較（暗）  </p>
+</ul>
+<ul type="disc">
+<li><b>premultiplied</b>	int 5</li><p>    アルファ値乗算済みイメージ  </p>
+</ul>
+<ul type="disc">
+<li><b>projection</b>	int 6</li><p>    投影モード  </p>
+<p>    0 : 平面  </p>
+<p>    1 : Latitude-longitude  </p>
+<p>    2 : Light probe  </p>
+<p>    3 : Cube map  </p>
+<p>    4 : Vertical cross  </p>
+</ul>
+<ul type="disc">
+<li><b>projection_direction</b>	int 8</li><p>    投影方向  </p>
+<p>    0 : X軸正方向  </p>
+<p>    1 : X軸負方向  </p>
+<p>    2 : Y軸正方向  </p>
+<p>    3 : Y軸負方向  </p>
+<p>    4 : Z軸正方向  </p>
+<p>    5 : Z軸負方向  </p>
+</ul>
+<ul type="disc">
+<li><b>color</b>	rgb 1</li><p>    色  </p>
+</ul>
+<ul type="disc">
+<li><b>area</b>	rectangle 1</li><p>    イメージの範囲  </p>
+</ul>
+<ul type="disc">
+<li><b>flags</b>	flags 1</li><p>    各種フラグ  </p>
+<ul type="none">
+<li><b>horizontal_flip</b>	0x1</li><p>    水平反転  </p>
+</ul>
+<ul type="none">
+<li><b>vertical_flip</b>	0x2</li><p>    垂直反転  </p>
+</ul>
+<ul type="none">
+<li><b>swap_axis</b>	0x4</li><p>    縦横入れ替え  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>mapping</b>	float 1</li><p>    ブレンド荷重  </p>
+</ul>
+<ul type="disc">
+<li><b>density</b>	float 2</li><p>    密度  </p>
+</ul>
+<ul type="disc">
+<li><b>phase</b>	float 7</li><p>    位相  </p>
+</ul>
+<ul type="disc">
+<li><b>size</b>	float 8</li><p>    サイズ  </p>
+</ul>
+<ul type="disc">
+<li><b>anisotropic</b>	float 9</li><p>    異方性  </p>
+</ul>
+<ul type="disc">
+<li><b>pixels</b>	group 74</li><p>    イメージの実体  </p>
+</ul>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>radiosity</b>	group 76</li><p>    ラジオシティ  </p>
+<ul type="disc">
+<li><b>flags</b></li><p>    各種フラグ  </p>
+<ul type="none">
+<li><b>display_mesh</b>	0x1</li><p>    メッシュ表示  </p>
+</ul>
+<ul type="none">
+<li><b>display_solid</b>	0x2</li><p>    ソリッド表示  </p>
+</ul>
+<ul type="none">
+<li><b>display_cull_face</b>	0x4</li><p>    カルフェイス表示  </p>
+</ul>
+<ul type="none">
+<li><b>display_blend</b>	0x8</li><p>    ブレンド表示  </p>
+</ul>
+<ul type="none">
+<li><b>display_texture</b>	0x10</li><p>    テクスチャ表示  </p>
+</ul>
+<ul type="none">
+<li><b>display_radiator</b>	0x20</li><p>    ラジエタ表示  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>display_updates</b>	int 1</li><p>    表示の更新頻度  </p>
+</ul>
+<ul type="disc">
+<li><b>solution_sky_light_accuracy</b>	int 2</li><p>    天空光計算精度  </p>
+</ul>
+<ul type="disc">
+<li><b>solution_source_subdivision_sensitivity</b>	int 3</li><p>    solution_source_subdivision_sensitivity  </p>
+</ul>
+<ul type="disc">
+<li><b>number_of_threads</b>	int 7</li><p>    スレッド数  </p>
+</ul>
+<ul type="disc">
+<li><b>shadow_leak_reduction</b>	int 5</li><p>    シャドウリーク減少  </p>
+</ul>
+<ul type="disc">
+<li><b>auto_update</b>	int 6</li><p>    自動更新  </p>
+</ul>
+<ul type="disc">
+<li><b>solution_convergence</b>	float 1</li><p>    solution_convergence  </p>
+</ul>
+<ul type="disc">
+<li><b>solution_initial_mesh_spacing</b>	float 2</li><p>    初期メッシュ間隔  </p>
+</ul>
+<ul type="disc">
+<li><b>solution_minimum_mesh_spacing</b>	float 3</li><p>    最小メッシュ間隔  </p>
+</ul>
+<ul type="disc">
+<li><b>solution_direct_radiation_mesh_subdivision_sensitivity</b>	float 9</li><p>    solution_direct_radiation_mesh_subdivision_sensitivity  </p>
+</ul>
+<ul type="disc">
+<li><b>solution_indirect_radiation_mesh_subdivision_sensitivity</b>	float 10</li><p>    solution_indirect_radiation_mesh_subdivision_sensitivity  </p>
+</ul>
+<ul type="disc">
+<li><b>solution_diffuse</b>	float 6</li><p>    拡散反射  </p>
+</ul>
+<ul type="disc">
+<li><b>exposure</b>	float 14</li><p>    露出設定  </p>
+</ul>
+<ul type="disc">
+<li><b>original_reference_energy</b>	float 12</li><p>    オリジナル参照エネルギー値  </p>
+</ul>
+<ul type="disc">
+<li><b>reference_energy</b>	float 13</li><p>    参照エネルギー値  </p>
+</ul>
+<ul type="disc">
+<li><b>radiosity</b>	block 13</li><p>    ラジオシティ計算結果  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>keyframes</b>	group 120</li><p>    キーフレーム列  </p>
+<ul type="disc">
+<li><b>minframe</b>	double 1</li><p>    最小フレーム値  </p>
+</ul>
+<ul type="disc">
+<li><b>maxframe</b>	double 2</li><p>    最大フレーム値  </p>
+</ul>
+<ul type="disc">
+<li><b>keyframe_groups</b>	group 126</li><p>    キーフレームグループの列  </p>
+<ul type="disc">
+<li><b>index</b>	int 1</li><p>    キーフレームグループのインデクス値  </p>
+</ul>
+<ul type="disc">
+<li><b>keyframe_group</b>	group 127</li><p>    キーフレームグループ  </p>
+<p>    0個以上の、キーフレームのインデクス値が並ぶ  </p>
+<ul type="disc">
+<li><b>name</b>	string 1</li><p>    名前  </p>
+</ul>
+<ul type="disc">
+<li><b>repeat</b>	int 2</li><p>    繰り返しの数  </p>
+</ul>
+<ul type="disc">
+<li><b>minframe</b>	double 1</li><p>    最小フレーム値  </p>
+</ul>
+<ul type="disc">
+<li><b>maxframe</b>	double 2</li><p>    最大フレーム値  </p>
+</ul>
+<ul type="disc">
+<li><b>i</b>	int 1</li><p>    キーフレームのインデクス値  </p>
+</ul>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>keyframe</b>	group 121</li><ul type="disc">
+<li><b>clone</b>	int 1</li><p>    クローン  </p>
+<p>    キーフレームを複製した場合に、複製元は複製先のキーフレームのインデクス値を保持する。  </p>
+</ul>
+<ul type="disc">
+<li><b>repeat</b>	int 3</li><p>    繰り返しによってキーフレームが生成された場合、元のキーフレームは生成されたキーフレームのインデクス値を保持する。  </p>
+</ul>
+<ul type="disc">
+<li><b>repeated</b>	int 2</li><p>    このキーフレームは繰り返しによって生成された  </p>
+</ul>
+<ul type="disc">
+<li><b>frame</b>	double 1</li><p>    フレーム値  </p>
+</ul>
+<ul type="disc">
+<li><b>flags</b></li><p>    各種フラグ  </p>
+<ul type="none">
+<li><b>active</b>	0x1</li><p>    選択されている  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>joint_specifier</b>	group 119</li><p>    ジョイント  </p>
+</ul>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>quickrendering</b>	group 150</li><p>    シェーディング表示設定  </p>
+<ul type="disc">
+<li><b>singlesided</b>	int 3</li><p>    片面表示  </p>
+</ul>
+<ul type="disc">
+<li><b>all_lights</b>	int 4</li><p>    全ての光源を有効にする  </p>
+</ul>
+<ul type="disc">
+<li><b>texture_size</b>	int 5</li><p>    テクスチャサイズ  </p>
+<p>    128, 256, 512, 1024  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>template_images</b>	group 136</li><p>    テンプレートイメージの配列  </p>
+<ul type="disc">
+<li><b>opacity</b>	float 1</li><p>    テンプレートイメージ表示の際の不透明度  </p>
+</ul>
+<ul type="disc">
+<li><b>pers_view</b></li><p>    透視図に表示するテンプレートイメージ  </p>
+<p>    -1 : 透視図に読み込んだイメージをそのまま表示  </p>
+<p>    0 : 側面図に読み込んだイメージをZ-Y平面上に表示  </p>
+<p>    1 : 上面図に読み込んだイメージをX-Z平面上に表示  </p>
+<p>    2 : 正面図に読み込んだイメージをX-Y平面上に表示  </p>
+</ul>
+<ul type="disc">
+<li><b>visible</b>	int 2</li><p>    表示  </p>
+</ul>
+<ul type="disc">
+<li><b>template_image</b>	group 137</li><p>    個々のテンプレートイメージ  </p>
+<ul type="disc">
+<li><b>position</b>	vec3 1</li><p>    位置  </p>
+</ul>
+<ul type="disc">
+<li><b>size</b>	vec3 2</li><p>    サイズ  </p>
+</ul>
+<ul type="disc">
+<li><b>pixels</b>	group 74</li><p>    イメージデータの実体  </p>
+</ul>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>scene_info</b>	group 61</li><p>    シーンの情報  </p>
+<ul type="disc">
+<li><b>divider</b>	point 1</li><p>    図面分割ラインの位置  </p>
+</ul>
+<ul type="disc">
+<li><b>spos</b>	vec3 1</li><p>    spos  </p>
+</ul>
+<ul type="disc">
+<li><b>center</b>	vec3 2</li><p>    ３面図表示の中心位置  </p>
+</ul>
+<ul type="disc">
+<li><b>view_info</b>	group 46</li><p>    view_info  </p>
+</ul>
+<ul type="disc">
+<li><b>current_frame</b>	float 3</li><p>    現行のフレーム値  </p>
+</ul>
+<ul type="disc">
+<li><b>frame_scale</b>	int 5</li><p>    フレームスケール値  </p>
+</ul>
+<ul type="disc">
+<li><b>elapsed_time</b>	int 7</li><p>    レンダリングにかかった時間  </p>
+</ul>
+<ul type="disc">
+<li><b>show_normals</b>	int 8</li><p>    法線を表示  </p>
+</ul>
+<ul type="disc">
+<li><b>default_bevel_radius</b>	float 2</li><p>    ベベルサイズのデフォルト値  </p>
+</ul>
+<ul type="disc">
+<li><b>default_disk_radius</b>	float 4</li><p>    円形状の半径のデフォルト値  </p>
+</ul>
+<ul type="disc">
+<li><b>default_sphere_radius</b>	float 5</li><p>    円形状の半径のデフォルト値  </p>
+</ul>
+<ul type="disc">
+<li><b>default_light_radius</b>	float 6</li><p>    光源形状のサイズのデフォルト値  </p>
+</ul>
+<ul type="disc">
+<li><b>safe_zone_size</b>	float 8</li><p>    セーフゾーンのサイズ  </p>
+</ul>
+<ul type="disc">
+<li><b>rev16c_compatible_rotation</b>	int 10</li><p>    Rev.16c互換の回転値  </p>
+</ul>
+<ul type="disc">
+<li><b>main_frame_maximized</b>	int 9</li><p>    メインフレームが最大化されている  </p>
+</ul>
+<ul type="disc">
+<li><b>main_frame</b></li><p>    メインフレーム  </p>
+</ul>
+<ul type="disc">
+<li><b>flags</b></li><p>    各種フラグ  </p>
+<ul type="none">
+<li><b>snap</b>	0x1</li><p>    スナップ  </p>
+</ul>
+<ul type="none">
+<li><b>ruler</b>	0x2</li><p>    定規表示  </p>
+</ul>
+<ul type="none">
+<li><b>grid</b>	0x4</li><p>    ３面図グリッド表示  </p>
+</ul>
+<ul type="none">
+<li><b>pers_grid</b>	0x2000000</li><p>    透視図グリッド表示  </p>
+</ul>
+<ul type="none">
+<li><b>current_frame_is_good</b>	0x1000</li><p>    現行のフレーム値が有効  </p>
+</ul>
+<ul type="none">
+<li><b>local_part</b>	0x4000</li><p>    ローカル座標系表示の対象となっているパート  </p>
+</ul>
+<ul type="none">
+<li><b>multi_handle</b>	0x80000</li><p>    選択されている全てのハンドルが連動する  </p>
+</ul>
+<ul type="none">
+<li><b>large_point</b>	0x100000</li><p>    ラージポイント  </p>
+</ul>
+<ul type="none">
+<li><b>no_snap_frame</b>	0x200000</li><p>    フレーム値をスナップしない  </p>
+</ul>
+<ul type="none">
+<li><b>auto_key</b>	0x400000</li><p>    キーフレームを自動生成  </p>
+</ul>
+<ul type="none">
+<li><b>no_frame_skip</b></li><p>    モーションのプレビュー時に実時間再生をしない。  </p>
+</ul>
+<ul type="none">
+<li><b>preview_loop</b></li><p>    モーションのプレビューをループさせる。  </p>
+</ul>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>views</b>	group 24</li><p>    視野の配列  </p>
+<ul type="disc">
+<li><b>current_metacamera</b>	int 1</li><p>    現行のメタカメラのインデクス値  </p>
+</ul>
+<ul type="disc">
+<li><b>view</b>	group 122</li><p>    視野情報  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>part</b>	group 7</li><p>    ルートパート  </p>
+</ul>
+<ul type="disc">
+<li><b>end_of_file</b></li><p>    ファイル終了マーカ  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>skin</b>	group 110</li><p>    スキン設定  </p>
+<p>    0個以上の、ジョイントと荷重の値のペアが並ぶ。  </p>
+<ul type="disc">
+<li><b>index</b>	int 1</li><p>    ポリゴンメッシュ頂点インデクス値  </p>
+<p>    ポリゴンメッシュの頂点に設定されたスキンの場合、その頂点のインデクス値。それ以外の場合には無効。  </p>
+</ul>
+<ul type="disc">
+<li><b>joint_specifier</b>	group 119</li><p>    このジョイントから影響を受ける  </p>
+</ul>
+<ul type="disc">
+<li><b>weight</b>	float 1</li><p>    ジョイントからの影響の荷重  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>solid</b>	group 1</li><p>    ソリッド  </p>
+<p>    回転体または掃引体の設定  </p>
+<ul type="disc">
+<li><b>revolve</b>	group 3</li><p>    回転体の設定  </p>
+<ul type="disc">
+<li><b>axis_matrix</b>	mat4 1</li><p>    回転軸を定義する変換マトリクス  </p>
+<p>    Z軸をこのマトリクスで座標変換した結果が、回転軸となる。  </p>
+</ul>
+<ul type="disc">
+<li><b>from</b>	float 1</li><p>    開始角度  </p>
+</ul>
+<ul type="disc">
+<li><b>to</b>	float 2</li><p>    終了角度  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>extrude</b>	group 2</li><p>    掃引体の設定  </p>
+<ul type="disc">
+<li><b>direction</b>	vec3 1</li><p>    掃引の方向（と距離）  </p>
+</ul>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>surface</b>	group 143</li><p>    表面材質設定  </p>
+<ul type="disc">
+<li><b>flags</b></li><p>    各種フラグ  </p>
+<ul type="none">
+<li><b>has_diffuse</b>	0x1</li><p>    拡散反射値を持っている  </p>
+<p>    値を持っていない場合には、親階層、さらには表面材質デフォルト設定値から継承する。  </p>
+</ul>
+<ul type="none">
+<li><b>has_specular</b>	0x2</li><p>    鏡面反射値を持っている  </p>
+<p>    値を持っていない場合には、親階層、さらには表面材質デフォルト設定値から継承する。  </p>
+</ul>
+<ul type="none">
+<li><b>has_specular_2</b>	0x4</li><p>    鏡面反射２値を持っている  </p>
+<p>    値を持っていない場合には、親階層、さらには表面材質デフォルト設定値から継承する。  </p>
+</ul>
+<ul type="none">
+<li><b>has_roughness</b>	0x8</li><p>    荒さ値を持っている  </p>
+<p>    値を持っていない場合には、親階層、さらには表面材質デフォルト設定値から継承する。  </p>
+</ul>
+<ul type="none">
+<li><b>has_anisotropic</b>	0x10</li><p>    異方性反射値を持っている  </p>
+<p>    値を持っていない場合には、親階層、さらには表面材質デフォルト設定値から継承する。  </p>
+</ul>
+<ul type="none">
+<li><b>has_reflection</b>	0x20</li><p>    反射率値を持っている  </p>
+<p>    値を持っていない場合には、親階層、さらには表面材質デフォルト設定値から継承する。  </p>
+</ul>
+<ul type="none">
+<li><b>has_transparency</b>	0x40</li><p>    透明度値を持っている  </p>
+<p>    値を持っていない場合には、親階層、さらには表面材質デフォルト設定値から継承する。  </p>
+</ul>
+<ul type="none">
+<li><b>has_refraction</b>	0x80</li><p>    屈折率値を持っている  </p>
+<p>    値を持っていない場合には、親階層、さらには表面材質デフォルト設定値から継承する。  </p>
+</ul>
+<ul type="none">
+<li><b>has_fresnel_reflection</b>	0x100</li><p>    フレネル反射値を持っている  </p>
+<p>    値を持っていない場合には、親階層、さらには表面材質デフォルト設定値から継承する。  </p>
+</ul>
+<ul type="none">
+<li><b>has_metallic</b>	0x200</li><p>    メタリック値を持っている  </p>
+<p>    値を持っていない場合には、親階層、さらには表面材質デフォルト設定値から継承する。  </p>
+</ul>
+<ul type="none">
+<li><b>has_glow</b>	0x400</li><p>    発光値を持っている  </p>
+<p>    値を持っていない場合には、親階層、さらには表面材質デフォルト設定値から継承する。  </p>
+</ul>
+<ul type="none">
+<li><b>has_backlight</b>	0x800</li><p>    バックライト値を持っている  </p>
+<p>    値を持っていない場合には、親階層、さらには表面材質デフォルト設定値から継承する。  </p>
+</ul>
+<ul type="none">
+<li><b>has_pseudo_caustics</b>	0x1000</li><p>    pseudo_causticsを持っている  </p>
+<p>    値を持っていない場合には、親階層、さらには表面材質デフォルト設定値から継承する。  </p>
+</ul>
+<ul type="none">
+<li><b>has_aux</b>	0x2000</li><p>    auxを持っている  </p>
+<p>    値を持っていない場合には、親階層、さらには表面材質デフォルト設定値から継承する。  </p>
+</ul>
+<ul type="none">
+<li><b>has_mappings</b>	0x4000</li><p>    マッピング設定を持っている  </p>
+<p>    値を持っていない場合には、親階層、さらには表面材質デフォルト設定値から継承する。  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>pixels</b>	group 74</li><p>    サムネールイメージ  </p>
+</ul>
+<ul type="disc">
+<li><b>aux</b>	flags 1</li><p>    その他フラグ  </p>
+<ul type="none">
+<li><b>white_key_mask</b>	0x1</li><p>    ホワイトキーマスク  </p>
+</ul>
+<ul type="none">
+<li><b>black_key_mask</b>	0x2</li><p>    ブラックキーマスク  </p>
+</ul>
+<ul type="none">
+<li><b>dont_cast_shadow</b>	0x4</li><p>    影を落とさない  </p>
+</ul>
+<ul type="none">
+<li><b>no_shading</b>	0x10</li><p>    陰影付けしない  </p>
+</ul>
+<ul type="none">
+<li><b>smoother_shading</b>	0x20</li><p>    より滑らかな陰影付け  </p>
+</ul>
+<ul type="none">
+<li><b>dracula</b>	0x40</li><p>    反射しない  </p>
+</ul>
+<ul type="none">
+<li><b>texture_transformation</b>	0x80</li><p>    テクスチャ座標の変換  </p>
+</ul>
+<ul type="none">
+<li><b>dont_show_shadow</b>	0x200</li><p>    影を表示しない  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>diffuse_color</b>	rgb 9</li><p>    拡散反射の色  </p>
+</ul>
+<ul type="disc">
+<li><b>diffuse</b>	float 23</li><p>    拡散反射の強度  </p>
+</ul>
+<ul type="disc">
+<li><b>specular_color</b>	rgb 1</li><p>    鏡面反射の色  </p>
+</ul>
+<ul type="disc">
+<li><b>highlight</b>	float 2</li><p>    鏡面反射の強度  </p>
+</ul>
+<ul type="disc">
+<li><b>highlight_size</b>	float 3</li><p>    鏡面反射のサイズ  </p>
+</ul>
+<ul type="disc">
+<li><b>highlight_2</b>	float 11</li><p>    鏡面反射2の強度  </p>
+</ul>
+<ul type="disc">
+<li><b>highlight_size_2</b>	float 12</li><p>    鏡面反射2のサイズ  </p>
+</ul>
+<ul type="disc">
+<li><b>specular_color_2</b>	rgb 7</li><p>    鏡面反射2の色  </p>
+</ul>
+<ul type="disc">
+<li><b>roughness</b>	float 4</li><p>    荒さ  </p>
+</ul>
+<ul type="disc">
+<li><b>anisotropic</b>	float 21</li><p>    異方性反射  </p>
+</ul>
+<ul type="disc">
+<li><b>reflection_color</b>	rgb 2</li><p>    反射の色  </p>
+</ul>
+<ul type="disc">
+<li><b>reflection</b>	float 5</li><p>    反射の強度  </p>
+</ul>
+<ul type="disc">
+<li><b>transparency_color</b>	rgb 3</li><p>    透過の色  </p>
+</ul>
+<ul type="disc">
+<li><b>transparency</b>	float 7</li><p>    透明度  </p>
+</ul>
+<ul type="disc">
+<li><b>refraction</b>	float 8</li><p>    屈折率  </p>
+</ul>
+<ul type="disc">
+<li><b>fresnel_reflection</b>	float 22</li><p>    フレネル反射  </p>
+</ul>
+<ul type="disc">
+<li><b>metallic_color</b>	rgb 4</li><p>    メタリックの色  </p>
+</ul>
+<ul type="disc">
+<li><b>metallic</b>	float 9</li><p>    メタリックの強度  </p>
+</ul>
+<ul type="disc">
+<li><b>glow_color</b>	rgb 6</li><p>    発光の色  </p>
+</ul>
+<ul type="disc">
+<li><b>glow</b>	float 10</li><p>    発光の強度  </p>
+</ul>
+<ul type="disc">
+<li><b>soft_glow</b>	float 13</li><p>    ソフト発光  </p>
+</ul>
+<ul type="disc">
+<li><b>backlight_color</b>	rgb 8</li><p>    バックライトの色  </p>
+</ul>
+<ul type="disc">
+<li><b>backlight</b>	float 20</li><p>    バックライトの強度  </p>
+</ul>
+<ul type="disc">
+<li><b>pseudo_caustics</b>	float 14</li><p>    疑似コースティクス  </p>
+</ul>
+<ul type="disc">
+<li><b>pseudo_caustics_aberration</b>	float 15</li><p>    疑似コースティクス収差  </p>
+</ul>
+<ul type="disc">
+<li><b>pseudo_caustics_brightness</b>	float 17</li><p>    疑似コースティクス明るさ  </p>
+</ul>
+<ul type="disc">
+<li><b>pseudo_caustics_bump</b>	float 18</li><p>    疑似コースティクスバンプ  </p>
+</ul>
+<ul type="disc">
+<li><b>aberration</b>	float 16</li><p>    収差  </p>
+</ul>
+<ul type="disc">
+<li><b>attributes</b>	group 102</li><p>    プラグインが付加したカスタム属性  </p>
+</ul>
+<ul type="disc">
+<li><b>number_of_mappings</b>	int 1</li><p>    マッピングレイヤの数  </p>
+</ul>
+<ul type="disc">
+<li><b>mapping_layer</b>	group 124</li><p>    マッピングレイヤ  </p>
+<ul type="disc">
+<li><b>index</b>	int 1</li><p>    マッピングレイヤのインデクス値  </p>
+</ul>
+<ul type="disc">
+<li><b>mapping_mix</b>	int 12</li><p>    合成モード  </p>
+<p>    0 : 通常  </p>
+<p>    1 : αブレンド  </p>
+<p>    2 : 加算  </p>
+<p>    3 : 減算  </p>
+<p>    4 : 乗算  </p>
+<p>    5 : 比較（明）  </p>
+<p>    6 : 比較（暗）  </p>
+</ul>
+<ul type="disc">
+<li><b>premultiplied</b>	int 13</li><p>    アルファ乗算済みイメージ  </p>
+</ul>
+<ul type="disc">
+<li><b>mapping_by</b>	int 10</li><p>    0 : 距離補正  </p>
+<p>    1 : UV  </p>
+</ul>
+<ul type="disc">
+<li><b>mapping_type</b>	int 8</li><p>    チャネル  </p>
+<p>    0 : 拡散反射  </p>
+<p>    1 : 光沢１  </p>
+<p>    2 : 光沢２  </p>
+<p>    3 : 反射  </p>
+<p>    4 : 透明度  </p>
+<p>    5 : バンプ  </p>
+<p>    6 : トリム  </p>
+<p>    7 : 環境  </p>
+<p>    8 : 発光  </p>
+<p>    9 : バックライト  </p>
+<p>    10 : 荷重  </p>
+</ul>
+<ul type="disc">
+<li><b>pattern_type_uuid</b>	uuid 1</li><p>    パターン  </p>
+<p>    先頭の32ビット以外が全てゼロの場合には、先頭32ビットによって以下のように解釈する。  </p>
+<p>    0 : 無し  </p>
+<p>    2 : ストライプ  </p>
+<p>    3 : チェック  </p>
+<p>    4 : スポット  </p>
+<p>    5 : 大理石  </p>
+<p>    6 : 木目  </p>
+<p>    7 : 丸太  </p>
+<p>    10 : 波  </p>
+<p>    11 : 海  </p>
+<p>    12 : 雲  </p>
+<p>    それ以外の場合には、シェーダプラグインの識別子。  </p>
+</ul>
+<ul type="disc">
+<li><b>mapping_projection_type</b>	int 9</li><p>    投影の種類  </p>
+<p>    0 : X軸方向平行投影  </p>
+<p>    0 : Y軸方向平行投影  </p>
+<p>    0 : Z軸方向平行投影  </p>
+<p>    0 : ラップ／３軸方向  </p>
+<p>    0 : 円筒  </p>
+<p>    0 : 球  </p>
+</ul>
+<ul type="disc">
+<li><b>weight</b>	float 1</li><p>    荷重  </p>
+</ul>
+<ul type="disc">
+<li><b>turbulence</b>	float 9</li><p>    乱れ  </p>
+</ul>
+<ul type="disc">
+<li><b>softness</b>	float 10</li><p>    ソフトネス  </p>
+</ul>
+<ul type="disc">
+<li><b>diffuse_factor</b>	float 8</li><p>    拡散反射係数  </p>
+</ul>
+<ul type="disc">
+<li><b>mapping_size</b>	float 2</li><p>    サイズ  </p>
+</ul>
+<ul type="disc">
+<li><b>mapping_scale</b>	float 3</li><p>    スケール  </p>
+</ul>
+<ul type="disc">
+<li><b>x_interval</b>	float 4</li><p>    横繰り返し間隔  </p>
+</ul>
+<ul type="disc">
+<li><b>y_interval</b>	float 5</li><p>    縦繰り返し間隔  </p>
+</ul>
+<ul type="disc">
+<li><b>phase</b>	float 7</li><p>    位相  </p>
+</ul>
+<ul type="disc">
+<li><b>mapping_color</b>	rgb 1</li><p>    色  </p>
+</ul>
+<ul type="disc">
+<li><b>pixels</b>	group 74</li><p>    イメージ  </p>
+</ul>
+<ul type="disc">
+<li><b>area</b>	rectangle 1</li><p>    イメージの範囲  </p>
+</ul>
+<ul type="disc">
+<li><b>flags</b>	flags 1</li><p>    各種フラグ  </p>
+<ul type="none">
+<li><b>horizontal_flip</b>	0x1</li><p>    水平反転  </p>
+</ul>
+<ul type="none">
+<li><b>vertical_flip</b>	0x2</li><p>    垂直反転  </p>
+</ul>
+<ul type="none">
+<li><b>swap_axis</b>	0x4</li><p>    縦横反転  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>transformation</b>	mat4 1</li><p>    テクスチャ座標系の変換マトリクス  </p>
+</ul>
+<ul type="disc">
+<li><b>aux_flags</b>	flags 2</li><p>    その他フラグ  </p>
+<ul type="none">
+<li><b>blur</b>	0x1</li><p>    ブラー  </p>
+</ul>
+<ul type="none">
+<li><b>flip</b>	0x2</li><p>    反転  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>repetition_x</b>	int 4</li><p>    横繰り返し数  </p>
+</ul>
+<ul type="disc">
+<li><b>repetition_y</b>	int 5</li><p>    縦繰り返し数  </p>
+</ul>
+<ul type="disc">
+<li><b>shader_attributes</b>	block 2</li><p>    プラグインシェーダが付加した属性  </p>
+</ul>
+<ul type="disc">
+<li><b>attributes</b>	group 102</li><p>    プラグインが付加したカスタム属性  </p>
+</ul>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>view</b>	group 122</li><p>    視野設定  </p>
+<ul type="disc">
+<li><b>index</b>	int 1</li><p>    視野設定のインデクス値  </p>
+</ul>
+<ul type="disc">
+<li><b>position</b>	vec3 1</li><p>    視点の位置  </p>
+</ul>
+<ul type="disc">
+<li><b>offset</b>	vec3 2</li><p>    オフセット値  </p>
+</ul>
+<ul type="disc">
+<li><b>rotation</b>	quaternion 1</li><p>    回転値  </p>
+</ul>
+<ul type="disc">
+<li><b>distance</b>	float 8</li><p>    視点から注視点までの距離  </p>
+</ul>
+<ul type="disc">
+<li><b>camera_mode</b>	int 2</li><p>    camera_mode  </p>
+</ul>
+<ul type="disc">
+<li><b>master_mode</b>	int 3</li><p>    master_mode  </p>
+</ul>
+<ul type="disc">
+<li><b>zoom</b>	float 1</li><p>    ズーム値  </p>
+</ul>
+<ul type="disc">
+<li><b>bank</b>	float 4</li><p>    バンク角度  </p>
+</ul>
+<ul type="disc">
+<li><b>focus_point</b>	vec3 3</li><p>    焦点の位置  </p>
+</ul>
+<ul type="disc">
+<li><b>focus</b>	float 2</li><p>    フォーカス値  </p>
+</ul>
+<ul type="disc">
+<li><b>shift</b>	vec3 4</li><p>    シフト値  </p>
+</ul>
+<ul type="disc">
+<li><b>film_shift</b>	vec3 7</li><p>    フィルムシフト値  </p>
+</ul>
+<ul type="disc">
+<li><b>film_tilt</b>	vec3 5</li><p>    フィルムティルト値  </p>
+</ul>
+<ul type="disc">
+<li><b>lens_tilt</b>	vec3 6</li><p>    レンズティルト値  </p>
+</ul>
+<ul type="disc">
+<li><b>scale</b>	float 9</li><p>    スケール値  </p>
+</ul>
+<ul type="disc">
+<li><b>parallel</b>	float 5</li><p>    平行移動距離  </p>
+</ul>
+<ul type="disc">
+<li><b>correction_value</b>	float 10</li><p>    垂直パース補正値  </p>
+</ul>
+<ul type="disc">
+<li><b>flags</b></li><p>    各種フラグ  </p>
+<ul type="none">
+<li><b>distant</b>	0x1</li><p>    無限遠カメラ  </p>
+</ul>
+<ul type="none">
+<li><b>show_volume</b>	0x2</li><p>    視野ボリュームを表示  </p>
+</ul>
+<ul type="none">
+<li><b>show_sight</b>	0x4</li><p>    視線を表示  </p>
+</ul>
+<ul type="none">
+<li><b>show_path</b>	0x8</li><p>    パスを表示  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>attributes</b>	group 102</li><p>    プラグインが付加したカスタム属性  </p>
+</ul>
+<ul type="disc">
+<li><b>eye_link</b>	group 151</li><p>    視点連結  </p>
+<ul type="disc">
+<li><b>shape_specifier</b>	group 133</li><p>    この形状に視点を連動させる  </p>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>target_link</b>	group 152</li><p>    注視点連結  </p>
+<ul type="disc">
+<li><b>shape_specifier</b>	group 133</li><p>    この形状に注視点を連動させる  </p>
+</ul>
+</ul>
+</ul>
+<ul type="disc">
+<li><b>view_info</b>	group 46</li><p>    表示情報  </p>
+<ul type="disc">
+<li><b>index</b>	int 1</li><p>    表示情報のインデクス値  </p>
+</ul>
+<ul type="disc">
+<li><b>unit</b>	int 2</li><p>    単位  </p>
+</ul>
+<ul type="disc">
+<li><b>precise_center</b>	vec3 1</li><p>    precise_center  </p>
+</ul>
+<ul type="disc">
+<li><b>rotation</b>	quaternion 1</li><p>    ろくろ回転値  </p>
+</ul>
+<ul type="disc">
+<li><b>scale1000</b>	int 5</li><p>    スケール  </p>
+</ul>
+</ul>
+</body></html>
+ </div>
+<br><br>
+<hr>
+<div align="center">Copyright &copy; e frontier, Inc. All rights reserved.</div>
+</body></html>

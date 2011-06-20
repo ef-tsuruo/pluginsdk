@@ -1,0 +1,1471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema' elementFormDefault='qualified'>
+	<xsd:simpleType name='size_type'>
+		<xsd:list itemType='xsd:integer'/>
+	</xsd:simpleType>
+	<xsd:simpleType name='rgb_type'>
+		<xsd:list itemType='xsd:float'/>
+	</xsd:simpleType>
+	<xsd:simpleType name='vec2_type'>
+		<xsd:list itemType='xsd:float'/>
+	</xsd:simpleType>
+	<xsd:simpleType name='vec3_type'>
+		<xsd:list itemType='xsd:float'/>
+	</xsd:simpleType>
+	<xsd:simpleType name='vec4_type'>
+		<xsd:list itemType='xsd:float'/>
+	</xsd:simpleType>
+	<xsd:simpleType name='quaternion_type'>
+		<xsd:list itemType='xsd:float'/>
+	</xsd:simpleType>
+	<xsd:simpleType name='mat4_type'>
+		<xsd:list itemType='xsd:float'/>
+	</xsd:simpleType>
+	<xsd:simpleType name='margins_type'>
+		<xsd:list itemType='xsd:integer'/>
+	</xsd:simpleType>
+	<xsd:simpleType name='slack_type'>
+		<xsd:list itemType='xsd:integer'/>
+	</xsd:simpleType>
+	<xsd:element name='palette'>
+		<xsd:annotation>
+			<xsd:documentation> \en palette \enden  \ja パレット \endja </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:choice minOccurs='0' maxOccurs='unbounded'>
+				<xsd:element ref='vbox'/>
+				<xsd:element ref='hbox'/>
+				<xsd:element ref='group'/>
+				<xsd:element ref='tab'/>
+				<xsd:element ref='control'/>
+				<xsd:element ref='push-button'/>
+				<xsd:element ref='image-box'/>
+				<xsd:element ref='checkbox'/>
+				<xsd:element ref='radio-button'/>
+				<xsd:element ref='popup-menu'/>
+				<xsd:element ref='static-text'/>
+				<xsd:element ref='editable-text'/>
+				<xsd:element ref='number'/>
+				<xsd:element ref='slider'/>
+				<xsd:element ref='scale'/>
+				<xsd:element ref='color-box'/>
+				<xsd:element ref='color-disk'/>
+				<xsd:element ref='vec2'/>
+				<xsd:element ref='vec3'/>
+				<xsd:element ref='vec4'/>
+				<xsd:element ref='quaternion'/>
+				<xsd:element ref='matrix'/>
+				<xsd:element ref='disclosure-button'/>
+				<xsd:element ref='flasher'/>
+				<xsd:element ref='graph'/>
+			</xsd:choice>
+			<xsd:attribute name='horizontal' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation> \en Whether to align contained items horizontaly or not \enden  \ja 包含するアイテムを水平に並べるかどうか \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='vertical' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation> \en Whether to align contained items vertically or not \enden  \ja 包含する要素を垂直に並べるかどうか \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='layout' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation> \en aut-layout by Shade \enden  \ja Shadeにレイアウトをまかせる \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='align-base' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='margins' type='margins_type'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='slack' type='slack_type'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name='vbox'>
+		<xsd:annotation>
+			<xsd:documentation> \en horizontal box \enden  \ja 垂直ボックス \endja </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:choice minOccurs='0' maxOccurs='unbounded'>
+				<xsd:element ref='vbox'/>
+				<xsd:element ref='hbox'/>
+				<xsd:element ref='group'/>
+				<xsd:element ref='tab'/>
+				<xsd:element ref='control'/>
+				<xsd:element ref='push-button'/>
+				<xsd:element ref='image-box'/>
+				<xsd:element ref='checkbox'/>
+				<xsd:element ref='radio-button'/>
+				<xsd:element ref='popup-menu'/>
+				<xsd:element ref='static-text'/>
+				<xsd:element ref='editable-text'/>
+				<xsd:element ref='number'/>
+				<xsd:element ref='slider'/>
+				<xsd:element ref='scale'/>
+				<xsd:element ref='color-box'/>
+				<xsd:element ref='color-disk'/>
+				<xsd:element ref='vec2'/>
+				<xsd:element ref='vec3'/>
+				<xsd:element ref='vec4'/>
+				<xsd:element ref='quaternion'/>
+				<xsd:element ref='matrix'/>
+				<xsd:element ref='disclosure-button'/>
+				<xsd:element ref='flasher'/>
+				<xsd:element ref='graph'/>
+			</xsd:choice>
+			<xsd:attribute name='id' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en id string \enden  \ja 識別文字列 \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='link' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='expand' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='standard' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='professional' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='full' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name='hbox'>
+		<xsd:annotation>
+			<xsd:documentation> \en vertical box \enden  \ja 水平ボックス \endja </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:choice minOccurs='0' maxOccurs='unbounded'>
+				<xsd:element ref='vbox'/>
+				<xsd:element ref='hbox'/>
+				<xsd:element ref='group'/>
+				<xsd:element ref='tab'/>
+				<xsd:element ref='control'/>
+				<xsd:element ref='push-button'/>
+				<xsd:element ref='image-box'/>
+				<xsd:element ref='checkbox'/>
+				<xsd:element ref='radio-button'/>
+				<xsd:element ref='popup-menu'/>
+				<xsd:element ref='static-text'/>
+				<xsd:element ref='editable-text'/>
+				<xsd:element ref='number'/>
+				<xsd:element ref='slider'/>
+				<xsd:element ref='scale'/>
+				<xsd:element ref='color-box'/>
+				<xsd:element ref='color-disk'/>
+				<xsd:element ref='vec2'/>
+				<xsd:element ref='vec3'/>
+				<xsd:element ref='vec4'/>
+				<xsd:element ref='quaternion'/>
+				<xsd:element ref='matrix'/>
+				<xsd:element ref='disclosure-button'/>
+				<xsd:element ref='flasher'/>
+				<xsd:element ref='graph'/>
+			</xsd:choice>
+			<xsd:attribute name='id' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en id string \enden  \ja 識別文字列 \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='link' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='standard' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='professional' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='full' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name='group'>
+		<xsd:annotation>
+			<xsd:documentation> \en group \enden  \ja グループ \endja </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:choice minOccurs='0' maxOccurs='unbounded'>
+				<xsd:element ref='vbox'/>
+				<xsd:element ref='hbox'/>
+				<xsd:element ref='group'/>
+				<xsd:element ref='tab'/>
+				<xsd:element ref='control'/>
+				<xsd:element ref='push-button'/>
+				<xsd:element ref='image-box'/>
+				<xsd:element ref='checkbox'/>
+				<xsd:element ref='radio-button'/>
+				<xsd:element ref='popup-menu'/>
+				<xsd:element ref='static-text'/>
+				<xsd:element ref='editable-text'/>
+				<xsd:element ref='number'/>
+				<xsd:element ref='slider'/>
+				<xsd:element ref='scale'/>
+				<xsd:element ref='color-box'/>
+				<xsd:element ref='color-disk'/>
+				<xsd:element ref='vec2'/>
+				<xsd:element ref='vec3'/>
+				<xsd:element ref='vec4'/>
+				<xsd:element ref='quaternion'/>
+				<xsd:element ref='matrix'/>
+				<xsd:element ref='disclosure-button'/>
+				<xsd:element ref='flasher'/>
+				<xsd:element ref='graph'/>
+			</xsd:choice>
+			<xsd:attribute name='id' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en id string \enden  \ja 識別文字列 \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='label' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en label \enden  \ja ラベル \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='tooltip' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en tooltip \enden  \ja ツールティップ \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='disclosure' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation> \en Whether disclosable or not. \enden  \ja 開閉可能かどうか \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+      <xsd:attribute name='style' type='xsd:string'>
+        <xsd:annotation>
+          <xsd:documentation> \en blah \enden  \ja グループの枠の表示を設定します。 \endja </xsd:documentation>
+          <xsd:documentation> \en blah \enden  \ja 設定なし: 通常の線による枠表示します。 \endja </xsd:documentation>
+          <xsd:documentation> \en blah \enden  \ja raised: 浮き上がったボタンの形で枠を表示します。 \endja </xsd:documentation>
+          <xsd:documentation> \en blah \enden  \ja depressed: 押された状態のボタンの形で枠を表示します。 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+			<xsd:attribute name='standard' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='professional' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='full' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name='tab'>
+		<xsd:annotation>
+			<xsd:documentation> \en tab \enden  \ja タブ \endja </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:choice minOccurs='0' maxOccurs='unbounded'>
+				<xsd:element ref='group'/>
+			</xsd:choice>
+			<xsd:attribute name='id' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en id string \enden  \ja 識別文字列 \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='margins' type='margins_type'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='tooltip' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en tooltip \enden  \ja ツールティップ \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='standard' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='professional' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='full' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name='control'>
+		<xsd:annotation>
+			<xsd:documentation> \en control \enden  \ja コントロール \endja </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:attribute name='id' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en id string \enden  \ja 識別文字列 \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='breakable' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation> \en Whether the item is breakable from its previous item. \enden  \ja 直前のアイテムから分離可能かどうか \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='size' type='size_type'>
+				<xsd:annotation>
+					<xsd:documentation> \en size \enden  \ja サイズ \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='tooltip' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en tooltip \enden  \ja ツールティップ \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='standard' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='professional' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='full' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name='push-button'>
+		<xsd:annotation>
+			<xsd:documentation> \en push button \enden  \ja プッシュボタン \endja </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:choice minOccurs='0' maxOccurs='unbounded'>
+				<xsd:element ref='item'/>
+			</xsd:choice>
+			<xsd:attribute name='id' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en id string \enden  \ja 識別文字列 \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='label' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en label \enden  \ja ラベル \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='tooltip' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en tooltip \enden  \ja ツールティップ \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='breakable' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation> \en Whether the item is breakable from its previous item. \enden  \ja 直前のアイテムから分離可能かどうか \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='image' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en image resource name \enden  \ja イメージリソース名 \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='menu' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en menu resource name \enden  \ja メニューリソース名 \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='size' type='size_type'>
+				<xsd:annotation>
+					<xsd:documentation> \en size \enden  \ja サイズ \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='right-aligned' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='center-aligned' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='text-alignment' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+      <xsd:attribute name='alternate_image' type='xsd:string'>
+        <xsd:annotation>
+          <xsd:documentation> \en blah \enden  \ja ボタンが押されたときに表示される画像を指定します。 \endja </xsd:documentation>
+          <xsd:documentation> \en blah \enden  \ja 画像を変更しない場合は指定する必要はありません。 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+			<xsd:attribute name='standard' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='professional' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='full' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name='image-box'>
+		<xsd:annotation>
+			<xsd:documentation> \en image box \enden  \ja イメージボックス \endja </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:attribute name='id' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en id string \enden  \ja 識別文字列 \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='tooltip' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en tooltip \enden  \ja ツールティップ \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='breakable' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation> \en Whether the item is breakable from its previous item. \enden  \ja 直前のアイテムから分離可能かどうか \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='size' type='size_type'>
+				<xsd:annotation>
+					<xsd:documentation> \en size \enden  \ja サイズ \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='edit-button' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='standard' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='professional' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='full' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name='checkbox'>
+		<xsd:annotation>
+			<xsd:documentation> \en checkbox \enden  \ja チェックボックス \endja </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:attribute name='id' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en id string \enden  \ja 識別文字列 \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='label' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en label \enden  \ja ラベル \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='tooltip' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en tooltip \enden  \ja ツールティップ \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='right-aligned' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='breakable' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation> \en Whether the item is breakable from its previous item. \enden  \ja 直前のアイテムから分離可能かどうか \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='image' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en image id name \enden  \ja イメージ識別名 \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='size' type='xsd:integer'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+      <xsd:attribute name='alternate_image' type='xsd:string'>
+        <xsd:annotation>
+          <xsd:documentation> \en blah \enden  \ja チェックがオンの時に表示される画像を指定します。 \endja </xsd:documentation>
+          <xsd:documentation> \en blah \enden  \ja オン、オフの違いで画像を変更しない場合は指定する必要がありません。 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+      <xsd:attribute name='push' type='xsd:boolean'>
+        <xsd:annotation>
+          <xsd:documentation> \en blah \enden  \ja trueを指定すると、ボタン型のチェックボックスになります。 \endja </xsd:documentation>
+        </xsd:annotation>
+      </xsd:attribute>
+			<xsd:attribute name='standard' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='professional' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='full' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name='radio-button'>
+		<xsd:annotation>
+			<xsd:documentation> \en radio button \enden  \ja ラジオボタン \endja </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:choice minOccurs='0' maxOccurs='unbounded'>
+				<xsd:element ref='item'/>
+			</xsd:choice>
+			<xsd:attribute name='id' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en id string \enden  \ja 識別文字列 \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='label' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en label \enden  \ja ラベル \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='tooltip' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en tooltip \enden  \ja ツールティップ \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='breakable' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation> \en Whether the item is breakable from its previous item. \enden  \ja 直前のアイテムから分離可能かどうか \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='standard' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='professional' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='full' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name='popup-menu'>
+		<xsd:annotation>
+			<xsd:documentation> \en popup menu \enden  \ja ポップアップメニュー \endja </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:choice minOccurs='0' maxOccurs='unbounded'>
+				<xsd:element ref='item'/>
+				<xsd:element ref='separator'/>
+			</xsd:choice>
+			<xsd:attribute name='id' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en id string \enden  \ja 識別文字列 \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='label' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en label \enden  \ja ラベル \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='unit' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='tooltip' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en tooltip \enden  \ja ツールティップ \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='breakable' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation> \en Whether the item is breakable from its previous item. \enden  \ja 直前のアイテムから分離可能かどうか \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='stepper' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation> \en Whether the item has a stepper or not. \enden  \ja ステッパを持つかどうか \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='expand' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='size' type='xsd:integer'>
+				<xsd:annotation>
+					<xsd:documentation> \en size \enden  \ja サイズ \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='standard' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='professional' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='full' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name='static-text'>
+		<xsd:annotation>
+			<xsd:documentation> \en static text \enden  \ja スタティックテキスト \endja </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:attribute name='id' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en id string \enden  \ja 識別文字列 \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='label' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en label \enden  \ja ラベル \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='unit' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='size' type='size_type'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='tooltip' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en tooltip \enden  \ja ツールティップ \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='breakable' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation> \en Whether the item is breakable from its previous item. \enden  \ja 直前のアイテムから分離可能かどうか \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='right-aligned' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='standard' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='professional' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='full' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name='editable-text'>
+		<xsd:annotation>
+			<xsd:documentation> \en static text \enden  \ja スタティックテキスト \endja </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:attribute name='id' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en id string \enden  \ja 識別文字列 \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='label' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en label \enden  \ja ラベル \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='size' type='size_type'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='tooltip' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en tooltip \enden  \ja ツールティップ \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='breakable' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation> \en Whether the item is breakable from its previous item. \enden  \ja 直前のアイテムから分離可能かどうか \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='right-aligned' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='standard' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='professional' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='full' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name='number'>
+		<xsd:annotation>
+			<xsd:documentation> \en number \enden  \ja 数値 \endja </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:attribute name='id' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en id string \enden  \ja 識別文字列 \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='label' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en label \enden  \ja ラベル \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='size' type='size_type'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='tooltip' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en tooltip \enden  \ja ツールティップ \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='editable' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='breakable' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation> \en Whether the item is breakable from its previous item. \enden  \ja 直前のアイテムから分離可能かどうか \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='unit' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en unit \enden  \ja 単位 \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='type' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en timecode, real or integer \enden  \ja timecode, real or integer \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='columns' type='xsd:integer'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='popup' type='xsd:integer'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='standard' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='professional' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='full' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name='slider'>
+		<xsd:annotation>
+			<xsd:documentation> \en slider \enden  \ja スライダ \endja </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:attribute name='id' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en id string \enden  \ja 識別文字列 \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='label' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en label \enden  \ja ラベル \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='unit' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='tooltip' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en tooltip \enden  \ja ツールティップ \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='breakable' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation> \en Whether the item is breakable from its previous item. \enden  \ja 直前のアイテムから分離可能かどうか \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='size' type='xsd:integer'>
+				<xsd:annotation>
+					<xsd:documentation> \en size \enden  \ja サイズ \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='marked' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation> \en Whether to display marks or not. \enden  \ja 目盛りを表示するかどうか \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='dial' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation> \en dial \enden  \ja ダイアル \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='number' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation> \en Whether to display number or not \enden  \ja 数値を表示するかどうか \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='can-have-limit' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='columns' type='xsd:integer'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='range' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='type' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='standard' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='professional' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='full' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name='scale'>
+		<xsd:annotation>
+			<xsd:documentation> \en scale \enden  \ja スケール \endja </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:attribute name='id' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en id string \enden  \ja 識別文字列 \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='label' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en label \enden  \ja ラベル \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='tooltip' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en tooltip \enden  \ja ツールティップ \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='standard' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='professional' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='full' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name='color-box'>
+		<xsd:annotation>
+			<xsd:documentation> \en color box \enden  \ja カラーボックス \endja </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:attribute name='id' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en id string \enden  \ja 識別文字列 \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='label' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en label \enden  \ja ラベル \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='tooltip' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en tooltip \enden  \ja ツールティップ \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='breakable' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation> \en Whether the item is breakable from its previous item. \enden  \ja 直前のアイテムから分離可能かどうか \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='size' type='size_type'>
+				<xsd:annotation>
+					<xsd:documentation> \en size \enden  \ja サイズ \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='standard' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='professional' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='full' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name='color-disk'>
+		<xsd:annotation>
+			<xsd:documentation> \en color disk \enden  \ja カラーディスク \endja </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:attribute name='id' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en id string \enden  \ja 識別文字列 \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='tooltip' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en tooltip \enden  \ja ツールティップ \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='breakable' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation> \en Whether the item is breakable from its previous item. \enden  \ja 直前のアイテムから分離可能かどうか \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='standard' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='professional' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='full' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name='vec2'>
+		<xsd:annotation>
+			<xsd:documentation> \en vec2 \enden  \ja vec2 \endja </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:attribute name='id' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en id string \enden  \ja 識別文字列 \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='label' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en label \enden  \ja ラベル \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='unit' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='tooltip' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en tooltip \enden  \ja ツールティップ \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='breakable' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation> \en Whether the item is breakable from its previous item. \enden  \ja 直前のアイテムから分離可能かどうか \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='standard' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='professional' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='full' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name='vec3'>
+		<xsd:annotation>
+			<xsd:documentation> \en vec3 \enden  \ja vec3 \endja </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:attribute name='id' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en id string \enden  \ja 識別文字列 \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='label' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en label \enden  \ja ラベル \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='unit' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='tooltip' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en tooltip \enden  \ja ツールティップ \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='breakable' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation> \en Whether the item is breakable from its previous item. \enden  \ja 直前のアイテムから分離可能かどうか \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='standard' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='professional' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='full' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name='vec4'>
+		<xsd:annotation>
+			<xsd:documentation> \en vec3 \enden  \ja vec3 \endja </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:attribute name='id' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en id string \enden  \ja 識別文字列 \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='label' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en label \enden  \ja ラベル \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='unit' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='tooltip' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en tooltip \enden  \ja ツールティップ \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='breakable' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation> \en Whether the item is breakable from its previous item. \enden  \ja 直前のアイテムから分離可能かどうか \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='standard' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='professional' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='full' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name='quaternion'>
+		<xsd:annotation>
+			<xsd:documentation> \en quaternion \enden  \ja クオタニオン \endja </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:attribute name='id' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en id string \enden  \ja 識別文字列 \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='label' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en label \enden  \ja ラベル \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='tooltip' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en tooltip \enden  \ja ツールティップ \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='standard' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='professional' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='full' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name='matrix'>
+		<xsd:annotation>
+			<xsd:documentation> \en matrix \enden  \ja マトリクス \endja </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:attribute name='id' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en id string \enden  \ja 識別文字列 \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='label' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en label \enden  \ja ラベル \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='tooltip' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en tooltip \enden  \ja ツールティップ \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='standard' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='professional' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='full' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name='disclosure-button'>
+		<xsd:annotation>
+			<xsd:documentation> \en disclosure button \enden  \ja ディスクロージャボタン \endja </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:attribute name='id' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en id string \enden  \ja 識別文字列 \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='tooltip' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en tooltip \enden  \ja ツールティップ \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='breakable' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation> \en Whether the item is breakable from its previous item. \enden  \ja 直前のアイテムから分離可能かどうか \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='standard' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='professional' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='full' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name='flasher'>
+		<xsd:annotation>
+			<xsd:documentation> \en flasher \enden  \ja フラッシャ \endja </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:attribute name='id' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en id string \enden  \ja 識別文字列 \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='tooltip' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en tooltip \enden  \ja ツールティップ \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='breakable' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation> \en Whether the item is breakable from its previous item. \enden  \ja 直前のアイテムから分離可能かどうか \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='standard' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='professional' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='full' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name='item'>
+		<xsd:annotation>
+			<xsd:documentation> \en (Popup or pulldown menu) item \enden  \ja （ポップアップ／プルダウンメニュー）アイテム \endja </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:attribute name='id' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en id string \enden  \ja 識別文字列 \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='tooltip' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en tooltip \enden  \ja ツールティップ \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='label' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en label \enden  \ja ラベル \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='icon' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en label \enden  \ja ラベル \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='standard' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='professional' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='full' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name='separator'>
+		<xsd:annotation>
+			<xsd:documentation></xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:attribute name='id' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en id string \enden  \ja 識別文字列 \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='standard' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='professional' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='full' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name='graph'>
+		<xsd:annotation>
+			<xsd:documentation></xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:attribute name='id' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en id string \enden  \ja 識別文字列 \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='size' type='size_type'>
+				<xsd:annotation>
+					<xsd:documentation> \en size \enden  \ja サイズ \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='tooltip' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en tooltip \enden  \ja ツールティップ \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='standard' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='professional' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='full' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

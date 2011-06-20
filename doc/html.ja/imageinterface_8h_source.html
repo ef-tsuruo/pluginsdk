@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>imageinterface.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- 作成： Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="main.html"><span>メインページ</span></a></li>
+      <li><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+<h1>imageinterface.h</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// this file has been created by makeheader.py</span>
+<a name="l00002"></a>00002 <span class="comment">// ja utf-8</span>
+<a name="l00003"></a>00003 <span class="preprocessor">#pragma once</span>
+<a name="l00022"></a>00022 <span class="preprocessor">namespace sxsdk {</span>
+<a name="l00023"></a><a class="code" href="structsxsdk_1_1image__interface.html">00023</a> <span class="preprocessor"></span><span class="keyword">struct </span><a class="code" href="structsxsdk_1_1image__interface.html">image_interface</a> : <span class="keyword">public</span> <a class="code" href="structsxsdk_1_1shade__interface.html">shade_interface</a> {
+<a name="l00024"></a>00024 <span class="keyword">public</span>:
+<a name="l00025"></a><a class="code" href="structsxsdk_1_1image__interface_1_1smudge__function__class.html">00025</a>         <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1image__interface_1_1smudge__function__class.html">smudge_function_class</a> {  
+<a name="l00026"></a>00026             <span class="keyword">virtual</span> ~<a class="code" href="structsxsdk_1_1image__interface_1_1smudge__function__class.html">smudge_function_class</a> () { }  
+<a name="l00027"></a>00027             <span class="keyword">virtual</span> sx::rgba&lt;float&gt; function (<span class="keyword">const</span> sx::vec&lt;float,2&gt; &amp;p) {  
+<a name="l00028"></a>00028                 <span class="keywordflow">if</span> (1.0 &lt; p.y) <span class="keywordflow">return</span> sx::rgba&lt;float&gt;(0.0f, 0.0f, 0.0f, 0.0f);  
+<a name="l00029"></a>00029                 <span class="keyword">const</span> <span class="keywordtype">float</span> k = 1.0 - p.y;  
+<a name="l00030"></a>00030                 <span class="keywordflow">return</span> sx::rgba&lt;float&gt;(k, k, k, 1.0f);  
+<a name="l00031"></a>00031             }  
+<a name="l00032"></a>00032             <span class="keyword">virtual</span> <span class="keywordtype">bool</span> is_polar () { <span class="keywordflow">return</span> <span class="keyword">true</span>; }  
+<a name="l00033"></a>00033             <span class="keyword">virtual</span> <span class="keywordtype">bool</span> is_cartesian () { <span class="keywordflow">return</span> <span class="keyword">false</span>; }  
+<a name="l00034"></a>00034         };  
+<a name="l00035"></a>00035 <span class="preprocessor">        #if SXWINDOWS </span>
+<a name="l00037"></a>00037 <span class="preprocessor">    virtual void save_ (void* aux = 0);</span>
+<a name="l00040"></a>00040 <span class="preprocessor">    virtual void save (const char*const&amp; path = &quot;&quot;, void* aux = 0);</span>
+<a name="l00041"></a>00041 <span class="preprocessor"></span><span class="preprocessor">        #else </span>
+<a name="l00044"></a>00044 <span class="preprocessor">    virtual void save (const char*const&amp; path = &quot;&quot;, void* aux = 0);</span>
+<a name="l00046"></a>00046 <span class="preprocessor">    virtual void save_ (void* aux = 0);</span>
+<a name="l00047"></a>00047 <span class="preprocessor"></span><span class="preprocessor">        #endif </span>
+<a name="l00049"></a>00049 <span class="preprocessor">    virtual sx::vec&lt;int,2&gt; get_size (void * = 0) const;</span>
+<a name="l00057"></a>00057 <span class="preprocessor">    virtual void set_pixel (int x, int y, const sxsdk::rgb_class&amp; rgb, void* aux = 0);</span>
+<a name="l00065"></a>00065 <span class="preprocessor">    virtual void get_pixel (int x, int y, sxsdk::rgb_class&amp; rgb, void* aux = 0);</span>
+<a name="l00070"></a>00070 <span class="preprocessor">    virtual void set_pixel (int x, int y, const sx::pixel32&amp; rgba, void* aux = 0);</span>
+<a name="l00075"></a>00075 <span class="preprocessor">    virtual void get_pixel (int x, int y, sx::pixel32&amp; rgba, void* aux = 0);</span>
+<a name="l00082"></a>00082 <span class="preprocessor">    virtual void set_pixel (int x, int y, int dx, int dy, const sx::pixel32* rgba, void* aux = 0);</span>
+<a name="l00089"></a>00089 <span class="preprocessor">    virtual void get_pixel (int x, int y, int dx, int dy, sx::pixel32* rgba, void* aux = 0);</span>
+<a name="l00096"></a>00096 <span class="preprocessor">    virtual void draw_smudge (const sxsdk::vec2&amp; c, const sxsdk::vec2&amp; r, smudge_function_class&amp; func, bool antialiasing = false, enums::image_mix_mode mix_mode = enums::image_add_mode);</span>
+<a name="l00098"></a>00098 <span class="preprocessor">    virtual void begin_opengl (void* aux = 0);</span>
+<a name="l00100"></a>00100 <span class="preprocessor">    virtual void end_opengl (void* aux = 0);</span>
+<a name="l00102"></a>00102 <span class="preprocessor">    virtual sx::vec&lt;int,2&gt; get_offset (void * = 0) const;</span>
+<a name="l00107"></a>00107 <span class="preprocessor">    virtual bool has_z (void * = 0) const;</span>
+<a name="l00115"></a>00115 <span class="preprocessor">    virtual void set_z (int x, int y, float z, void* aux = 0);</span>
+<a name="l00123"></a>00123 <span class="preprocessor">    virtual void get_z (int x, int y, float&amp; z, void* aux = 0);</span>
+<a name="l00133"></a>00133 <span class="preprocessor">    virtual void set_zs (int x, int y, int dx, int dy, const float* z, void* aux = 0);</span>
+<a name="l00143"></a>00143 <span class="preprocessor">    virtual void get_zs (int x, int y, int dx, int dy, float* z, void* aux = 0);</span>
+<a name="l00150"></a>00150 <span class="preprocessor">    virtual void mix_smudge (const sxsdk::vec2&amp; c, const sxsdk::vec2&amp; r, smudge_function_class&amp; func, bool antialiasing = false, enums::image_mix_mode mix_mode = enums::image_add_mode);</span>
+<a name="l00155"></a>00155 <span class="preprocessor">    virtual bool has_real_color (void * = 0) const;</span>
+<a name="l00165"></a>00165 <span class="preprocessor">    virtual void set_real_color (int x, int y, const sxsdk::rgb_class&amp; real_color, void* aux = 0);</span>
+<a name="l00173"></a>00173 <span class="preprocessor">    virtual void get_real_color (int x, int y, sxsdk::rgb_class&amp; real_color, void* aux = 0);</span>
+<a name="l00185"></a>00185 <span class="preprocessor">    virtual void set_real_colors (int x, int y, int dx, int dy, const sxsdk::rgb_class* real_color, void* aux = 0);</span>
+<a name="l00195"></a>00195 <span class="preprocessor">    virtual void get_real_colors (int x, int y, int dx, int dy, sxsdk::rgb_class* real_color, void* aux = 0);</span>
+<a name="l00197"></a>00197 <span class="preprocessor">    virtual sxsdk::graphic_context_interface* get_graphic_context_interface (void * = 0) const;</span>
+<a name="l00202"></a>00202 <span class="preprocessor">    virtual void set_pixel_rgba (int x, int y, const sx::rgba8_class&amp; rgba, void* aux = 0);</span>
+<a name="l00207"></a>00207 <span class="preprocessor">    virtual void get_pixel_rgba (int x, int y, sx::rgba8_class&amp; rgba, void* aux = 0);</span>
+<a name="l00214"></a>00214 <span class="preprocessor">    virtual void set_pixels_rgba (int x, int y, int dx, int dy, const sx::rgba8_class* rgba, void* aux = 0);</span>
+<a name="l00221"></a>00221 <span class="preprocessor">    virtual void get_pixels_rgba (int x, int y, int dx, int dy, sx::rgba8_class* rgba, void* aux = 0);</span>
+<a name="l00226"></a>00226 <span class="preprocessor">    virtual sxsdk::image_interface* create_duplicate_image_interface (const sx::vec&lt;int,2&gt;* size = 0, bool fit = true, int depth = 32, void* aux = 0);</span>
+<a name="l00227"></a>00227 <span class="preprocessor"></span><span class="preprocessor">#ifndef DOXYGEN_SKIP</span>
+<a name="l00228"></a>00228 <span class="preprocessor"></span>        <a class="code" href="structsxsdk_1_1image__interface.html">sxsdk::image_interface</a>* duplicate_image (<span class="keyword">const</span> sx::vec&lt;int,2&gt;* size = 0, <span class="keywordtype">bool</span> fit = <span class="keyword">true</span>, <span class="keywordtype">int</span> depth = 32, <span class="keywordtype">void</span>* aux = 0) { <span class="keywordflow">return</span> create_duplicate_image_interface(size, fit, depth); }
+<a name="l00229"></a>00229 <span class="preprocessor">#endif</span>
+<a name="l00231"></a>00231 <span class="preprocessor">    virtual void write_pict (stream_interface* stream, void* aux = 0);</span>
+<a name="l00234"></a>00234 <span class="preprocessor">    virtual void load_test_image (int i, void* aux = 0);</span>
+<a name="l00236"></a>00236 <span class="preprocessor">    virtual bool has_image (void * = 0) const;</span>
+<a name="l00237"></a>00237 <span class="preprocessor"></span>    <span class="keyword">virtual</span> <span class="keywordtype">int</span> image_interface_test_1 ( <span class="keywordtype">void</span>* aux =0 ) { <span class="keywordflow">return</span> 1; }
+<a name="l00239"></a>00239     <span class="keyword">virtual</span> <span class="keywordtype">bool</span> is_fake (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00241"></a>00241     <span class="keyword">virtual</span> <span class="keywordtype">void</span> copy_to_clipboard (<span class="keywordtype">void</span>* aux = 0);
+<a name="l00244"></a>00244     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1image__interface.html">sxsdk::image_interface</a>* create_difference_image_interface (<a class="code" href="structsxsdk_1_1image__interface.html">sxsdk::image_interface</a>* image, <span class="keywordtype">void</span>* aux = 0);
+<a name="l00249"></a>00249     <span class="keyword">virtual</span> image_interface &amp;set_shift (<span class="keyword">const</span> sxsdk::vec2 &amp;shift_param, <span class="keywordtype">void</span> * = 0);
+<a name="l00254"></a>00254     <span class="keyword">virtual</span> sxsdk::vec2 get_shift (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00257"></a>00257     <span class="keyword">virtual</span> <span class="keywordtype">bool</span> equal (<a class="code" href="structsxsdk_1_1image__interface.html">sxsdk::image_interface</a>* image, <span class="keywordtype">void</span>* aux = 0);
+<a name="l00260"></a>00260     <span class="keyword">virtual</span> <span class="keywordtype">bool</span> similar (<a class="code" href="structsxsdk_1_1image__interface.html">sxsdk::image_interface</a>* image, <span class="keywordtype">void</span>* aux = 0);
+<a name="l00263"></a>00263     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1window__interface.html">sxsdk::window_interface</a>* create_window_interface (<span class="keyword">const</span> <span class="keywordtype">char</span>* title = (<span class="keyword">const</span> <span class="keywordtype">char</span>*)0, <span class="keywordtype">void</span>* aux = 0);
+<a name="l00265"></a>00265     <span class="keyword">virtual</span> <span class="keywordtype">void</span> stream_to_clipboard (<span class="keywordtype">void</span>* aux = 0);
+<a name="l00267"></a>00267     <span class="keyword">virtual</span> bitmap_interface* create_bitmap_interface (<span class="keywordtype">bool</span> alpha_blend = <span class="keyword">true</span>, <span class="keywordtype">float</span> opacity = 1.0f, <span class="keywordtype">void</span>* aux = 0);
+<a name="l00269"></a>00269     <span class="keyword">virtual</span> <span class="keywordtype">void</span> clear (<span class="keywordtype">void</span>* aux = 0);
+<a name="l00271"></a>00271     <span class="keyword">virtual</span> sx::rectangle_class get_bounds (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00276"></a>00276     <span class="keyword">virtual</span> <span class="keywordtype">void</span> set_pixel_rgba_float (<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keyword">const</span> rgba_class&amp; rgba, <span class="keywordtype">void</span>* aux = 0);
+<a name="l00281"></a>00281     <span class="keyword">virtual</span> <span class="keywordtype">void</span> get_pixel_rgba_float (<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, rgba_class&amp; rgba, <span class="keywordtype">void</span>* aux = 0);
+<a name="l00288"></a>00288     <span class="keyword">virtual</span> <span class="keywordtype">void</span> set_pixels_rgba_float (<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> dx, <span class="keywordtype">int</span> dy, <span class="keyword">const</span> rgba_class* rgba, <span class="keywordtype">void</span>* aux = 0);
+<a name="l00295"></a>00295     <span class="keyword">virtual</span> <span class="keywordtype">void</span> get_pixels_rgba_float (<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> dx, <span class="keywordtype">int</span> dy, rgba_class* rgba, <span class="keywordtype">void</span>* aux = 0);
+<a name="l00297"></a>00297     <span class="keyword">virtual</span> <span class="keywordtype">int</span> get_pixel_depth (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00299"></a>00299     <span class="keyword">virtual</span> image_interface &amp;set_pixel_depth (<span class="keywordtype">int</span> pixel_depth_param, <span class="keywordtype">void</span> * = 0);
+<a name="l00301"></a>00301     <span class="keyword">virtual</span> <span class="keywordtype">bool</span> file_exists (<span class="keywordtype">void</span>* aux = 0);
+<a name="l00308"></a>00308     <span class="keyword">virtual</span> <span class="keywordtype">bool</span> update (<span class="keywordtype">int</span> frame = 0, <span class="keyword">const</span> <span class="keywordtype">bool</span>* ask = 0);
+<a name="l00310"></a>00310     <span class="keyword">virtual</span> <span class="keywordtype">bool</span> is_movie (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00312"></a>00312     <span class="keyword">virtual</span> <span class="keywordtype">int</span> get_total_frames (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00314"></a>00314     <span class="keyword">virtual</span> image_interface &amp;set_path (<span class="keyword">const</span> <span class="keywordtype">char</span>* path_param, <span class="keywordtype">void</span> * = 0);
+<a name="l00316"></a>00316     <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* get_path (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00318"></a>00318     <span class="keyword">virtual</span> <span class="keywordtype">bool</span> get_external_reference (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00320"></a>00320     <span class="keyword">virtual</span> image_interface &amp;set_external_reference (<span class="keywordtype">bool</span> external_reference_param, <span class="keywordtype">void</span> * = 0);
+<a name="l00325"></a>00325     <span class="keyword">virtual</span> <span class="keywordtype">bool</span> update_external_reference (<span class="keywordtype">int</span> frame = 0, <span class="keywordtype">bool</span> ask = <span class="keyword">false</span>, <span class="keywordtype">bool</span>* ignore_all = 0, <span class="keywordtype">void</span>* aux = 0);
+<a name="l00332"></a>00332     <span class="keyword">virtual</span> sxsdk::rgb_class get_pixel_ (<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">void</span>* aux = 0);
+<a name="l00336"></a>00336     <span class="keyword">virtual</span> sxsdk::rgba_class get_pixel_rgba_float_ (<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">void</span>* aux = 0);
+<a name="l00338"></a>00338     <span class="keyword">virtual</span> <span class="keywordtype">int</span> get_pixel_format (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00340"></a>00340     <span class="keyword">virtual</span> image_interface &amp;set_pixel_format (<span class="keywordtype">int</span> pixel_format_param, <span class="keywordtype">void</span> * = 0);
+<a name="l00345"></a>00345     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1image__interface.html">sxsdk::image_interface</a>* create_duplicate_image_interface_square (<span class="keyword">const</span> sx::vec&lt;int,2&gt;* size = 0, <span class="keywordtype">bool</span> fit = <span class="keyword">true</span>, <span class="keywordtype">int</span> depth = 32, <span class="keywordtype">void</span>* aux = 0);
+<a name="l00346"></a>00346 };
+<a name="l00347"></a>00347 } <span class="comment">// sxsdk</span>
+</pre></div></div>
+<br><br>
+<hr>
+<div align="center">Copyright &copy; e frontier, Inc. All rights reserved.</div>
+</body></html>

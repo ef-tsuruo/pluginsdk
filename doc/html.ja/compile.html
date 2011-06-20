@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>コンパイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- 作成： Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="main.html"><span>メインページ</span></a></li>
+      <li class="current"><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+
+
+<h1><a class="anchor" id="compile">コンパイル </a></h1><h2><a class="anchor" id="windows">
+■Windows</a></h2>
+<h2><a class="anchor" id="compile_new_project_windows">
+■Visual C++ .NET 2005でのShadeプラグイン用の新規プロジェクト作成方法</a></h2>
+<h3><a class="anchor" id="compile_new_project_windows_step1">
+1.新規プロジェクトの作成</a></h3>
+<ul>
+<li>「ファイル(F)」メニューから「新規作成(N)」 &gt; 「プロジェクト(P)」を選択し、「新しいプロジェクト」ダイアログを出します。<br/>
+ </li>
+<li>「新しいプロジェクト」ダイアログのプロジェクトの種類から「Visual C++ プロジェクト」の「Win32」を選択します。<br/>
+ </li>
+<li>右側のテンプレートの項目の「Win32 プロジェクト」のテンプレートを選択します。<br/>
+ </li>
+<li>プロジェクトの名を入力して「OK」で次に進みます。<br/>
+ </li>
+<li>次に、Win32 アプリケーション ウィザードダイアログが表示されます。<br/>
+ </li>
+<li>Win32 アプリケーションウィザードの「アプリケーションの設定」のタブを選択します。<br/>
+ </li>
+<li>アプリケーションの種類を「DLL」に変更し、空のプロジェクトにチェックを入れて「完了」してプロジェクトを作成します。</li>
+</ul>
+<h3><a class="anchor" id="compile_new_project_windows_step2">
+2.プラグインプロジェクトの設定</a></h3>
+<ul>
+<li>ソリューションエクスプローラからプロジェクトを選択し、メニューのプロパティからプロジェクトページダイアログを表示します。<br/>
+ </li>
+<li>構成プロパティ &gt; C/C++ &gt; 全般の「追加のインクルード ディレクトリ」にヘッダーファイルのパスを追加 サンプルでは以下のようになっています。作成したプロジェクトとPluinSDKの位置に応じて変更して下さい。</li>
+</ul>
+<div class="fragment"><pre class="fragment"> ../../include;../../boost_1_33_1
+</pre></div><ul>
+<li>構成プロパティ &gt; C/C++ &gt; プリプロセッサの「プリプロセッサの定義」に以下の項目を追加してください。</li>
+</ul>
+<div class="fragment"><pre class="fragment"> PLUGIN=1;STDCALL=__stdcall;DLLEXPORT=__declspec(dllexport);<span class="keywordflow">for</span>=<span class="keywordflow">if</span>(<span class="keyword">true</span>)<span class="keywordflow">for</span>
+</pre></div><ul>
+<li>サンプルでは以下のようになっています。</li>
+</ul>
+<div class="fragment"><pre class="fragment"> WIN32;NDEBUG;_WINDOWS;PLUGIN=1;STDCALL=__stdcall;DLLEXPORT=__declspec(dllexport);<span class="keywordflow">for</span>=<span class="keywordflow">if</span>(<span class="keyword">true</span>)<span class="keywordflow">for</span>
+</pre></div><ul>
+<li>プロジェクトにSDK付属のソースコードを追加 PluginSDKのincludeフォルダの「vectors.cpp」、「com.cpp」をプロジェクトに追加します。</li>
+</ul>
+<h2><a class="anchor" id="MacOSX">
+■MacOSX</a></h2>
+<h2><a class="anchor" id="compile_new_project_mac">
+■Xcode 2.xでのShadeプラグイン用の新規プロジェクト作成方法</a></h2>
+<h3><a class="anchor" id="compile_new_project_mac_step1">
+1.新規プロジェクトの作成</a></h3>
+<ul>
+<li>ファイルメニューの新規プロジェクトからCocoa Bundleを選択し、「次へ」ボタンを押します。<br/>
+ </li>
+<li>プロジェクト名にプロジェクトの名称を、ディレクトリは横の「選択...」ボタンを選択してプロジェクトが作成されるフォルダを選択し「完了」ボタンを押します。<br/>
+ </li>
+<li>開かれたXcodeのWindowの左側にある「グループとファイル」ツリー内のFrameworks and Librariesの中を選択して、マウスを右クリック若しくはctrl+クリックで表示されるコンテクストメニューの「追加 &gt; 既存のフレームワーク...」を選択して、Carbonフレームワークを追加してください。<br/>
+ </li>
+<li>追加するCarbonフレームワークは/System/Library/Frameworksの中のCarbon.frameworkです。</li>
+</ul>
+<h3><a class="anchor" id="compile_new_project_mac_step2">
+2.プラグインプロジェクトの設定</a></h3>
+<ul>
+<li>「グループとファイル」ツリーの「ターゲット」項目の中のプロジェクト名の項目を選択して、「情報を見る」(command+i)で「ターゲット"プロジェクト名"の情報」を表示させます。<br/>
+ </li>
+<li>"ラッパーの拡張子"の"bundle"を"shdplugin"に変更します。<br/>
+ </li>
+<li>"ヘッダ検索パス"にShade 9 Plugin SDKのincludeとboost_1_33_1のパスを記述します。<br/>
+ </li>
+<li>Shade 9 Plugin SDKのincludeの中にある vectors.cpp、 com.cpp を「グループとファイル」ツリーに追加します。<br/>
+ </li>
+<li>「グループとファイル」ツリーにあるプリコンパイルヘッダ(標準ではプロジェクト名.pch)に以下を追記してください。</li>
+</ul>
+<div class="fragment"><pre class="fragment"><span class="preprocessor"> #include &lt;Carbon/Carbon.h&gt;</span>
+ 
+<span class="preprocessor"> #define MacOS 1</span>
+<span class="preprocessor"></span><span class="preprocessor"> #define SXCARBON 1</span>
+<span class="preprocessor"></span><span class="preprocessor"> #define PLUGIN 1</span>
+<span class="preprocessor"></span><span class="preprocessor"> #define DLLEXPORT</span>
+<span class="preprocessor"> #define STDCALL</span>
+</pre></div><h2><a class="anchor" id="sample_code">
+■プラグイン作成</a></h2>
+<p>plugin_interfaceを使用した最小プラグインのサンプルソースを下に記します</p>
+<div class="fragment"><pre class="fragment"><span class="preprocessor"> #include &quot;shadebuildnumber.h&quot;</span>
+<span class="preprocessor"> #include &quot;shadetypes.h&quot;</span>
+<span class="preprocessor"> #include &quot;plugininterface.h&quot;</span>
+<span class="preprocessor"> #include &quot;shadeinterface.h&quot;</span>
+<span class="preprocessor"> #include &quot;pluginids.h&quot;</span>
+<span class="preprocessor"> #include &quot;<a class="code" href="dllentries_8h.html">dllentries.h</a>&quot;</span>
+ 
+<span class="preprocessor"> #define hello_shade_id uuid_class(&quot;6930d807-b0cf-4159-9d8a-27d8674bd52c&quot;)</span>
+<span class="preprocessor"></span> 
+ <span class="keyword">struct </span>helloshade_plugin_component : plugin_interface {
+         <span class="keyword">virtual</span> <span class="keywordtype">void</span> do_it (shade_interface *shade, scene_interface *scene, <span class="keywordtype">void</span> *aux = 0) {
+                 shade-&gt;message(<span class="stringliteral">&quot;Hello Shade!&quot;</span>);
+         }
+         <span class="keyword">virtual</span> <span class="keywordtype">int</span> get_shade_version ()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> SHADE_BUILD_NUMBER; }
+         <span class="keyword">virtual</span> uuid_class <a class="code" href="dllentries_8h.html#aa885da437906315adb191d63e82f873d" title="プラグインIDを設定する。(プラグインID)">get_uuid</a> (<span class="keywordtype">void</span> *) { <span class="keywordflow">return</span> hello_shade_id; }
+ };
+ 
+ <span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> <span class="keywordtype">void</span> STDCALL <a class="code" href="dllentries_8h.html#adc94c8f16008f9bf0fe6c86082bdb86f" title="インターフェイスの構築を行う。">create_interface</a> (<span class="keyword">const</span> IID &amp;iid, <span class="keywordtype">int</span> i, <span class="keywordtype">void</span> **p, shade_interface *shade, <span class="keywordtype">void</span> *) { 
+         <a class="code" href="classunknown__interface.html">unknown_interface</a> *u = <span class="keyword">new</span> helloshade_plugin_component;
+         u-&gt;AddRef();
+         *p = (<span class="keywordtype">void</span> *)u;
+ }
+ <span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> <span class="keywordtype">int</span> STDCALL <a class="code" href="dllentries_8h.html#a77be18c81060298895eacfbc0a58b81d" title="使用するインターフェイスの数を返す。">has_interface</a> (<span class="keyword">const</span> IID &amp;iid, shade_interface *shade) { 
+         <span class="keywordflow">if</span> (iid == plugin_iid) <span class="keywordflow">return</span> 1; 
+         <span class="keywordflow">return</span> 0; 
+ }
+ <span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * STDCALL <a class="code" href="dllentries_8h.html#a6f2ba000248080d52ec51c4260586bc0" title="プラグインの名前を返す。">get_name</a> (<span class="keyword">const</span> IID &amp;iid, <span class="keywordtype">int</span> i, shade_interface *shade, <span class="keywordtype">void</span> *) { <span class="keywordflow">return</span> <span class="stringliteral">&quot;HelloShade&quot;</span>; }
+ <span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> uuid_class STDCALL <a class="code" href="dllentries_8h.html#aa885da437906315adb191d63e82f873d" title="プラグインIDを設定する。(プラグインID)">get_uuid</a> (<span class="keyword">const</span> IID &amp;iid, <span class="keywordtype">int</span> i, <span class="keywordtype">void</span> *) { <span class="keywordflow">return</span> hello_shade_id; }
+</pre></div><p>・ サンプル捕捉</p>
+<p>過去互換のプラグインIDはShade onlineのサポートページより申請をして取得する必要がありましたが、Shade 8よりget_uuid()から返すuuid_classをプラグイン毎に生成したUUIDを使用する事でプラグインIDとします。</p>
+<p>UUID生成方法については<a class="el" href="pluginid.html">プラグインID</a> を参照してください。 </p>
+</div>
+<br><br>
+<hr>
+<div align="center">Copyright &copy; e frontier, Inc. All rights reserved.</div>
+</body></html>

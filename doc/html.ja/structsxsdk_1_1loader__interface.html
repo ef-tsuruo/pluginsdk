@@ -1,0 +1,1119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>構造体 sxsdk::loader_interface</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- 作成： Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="main.html"><span>メインページ</span></a></li>
+      <li><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>構成</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>構成メンバ</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath"><a class="el" href="namespacesxsdk.html">sxsdk</a>::<a class="el" href="structsxsdk_1_1loader__interface.html">loader_interface</a>
+  </div>
+</div>
+<div class="contents">
+<h1>構造体 sxsdk::loader_interface</h1><!-- doxytag: class="sxsdk::loader_interface" --><!-- doxytag: inherits="unknown_interface" --><div class="dynheader">
+sxsdk::loader_interfaceに対する継承グラフ</div>
+<div class="dynsection">
+ <div class="center">
+  <img src="structsxsdk_1_1loader__interface.gif" usemap="#sxsdk::loader_interface_map" alt=""/>
+  <map id="sxsdk::loader_interface_map" name="sxsdk::loader_interface_map">
+<area href="classunknown__interface.html" alt="unknown_interface" shape="rect" coords="0,0,142,24"/>
+</map>
+ </div>
+</div>
+
+<p><a href="structsxsdk_1_1loader__interface-members.html">すべてのメンバ一覧</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Public メソッド</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#a78f1763c8487425fe7ba63a2af44b33a">do_load</a> (<a class="el" href="structsxsdk_1_1loader__info__interface.html">sxsdk::loader_info_interface</a> *loader_info, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。データ部の読み込み処理開始時に呼ばれる。  <a href="#a78f1763c8487425fe7ba63a2af44b33a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a821d36e0e2dcf17b66d913c271f977e0"></a><!-- doxytag: member="sxsdk::loader_interface::skip_load_objects" ref="a821d36e0e2dcf17b66d913c271f977e0" args="(void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#a821d36e0e2dcf17b66d913c271f977e0">skip_load_objects</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。オーバライドしてtrueを返すと、形状データ部の読み込み処理が省略される。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6441c21eb60b90c9361efb959ddfe982"></a><!-- doxytag: member="sxsdk::loader_interface::start" ref="a6441c21eb60b90c9361efb959ddfe982" args="(void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#a6441c21eb60b90c9361efb959ddfe982">start</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。読み込み処理の最初に呼ばれる。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0faf6855f49ca5f7a324a8ede8962a12"></a><!-- doxytag: member="sxsdk::loader_interface::finish" ref="a0faf6855f49ca5f7a324a8ede8962a12" args="(void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#a0faf6855f49ca5f7a324a8ede8962a12">finish</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。読み込み処理の最後に呼ばれる。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6df2ac97d580de4576b2e8e5745e309b"></a><!-- doxytag: member="sxsdk::loader_interface::begin" ref="a6df2ac97d580de4576b2e8e5745e309b" args="(void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#a6df2ac97d580de4576b2e8e5745e309b">begin</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。カレント形状の処理の最初に呼ばれる。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8724f0dcb4bb5b9af0054820b044c803"></a><!-- doxytag: member="sxsdk::loader_interface::end" ref="a8724f0dcb4bb5b9af0054820b044c803" args="(void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#a8724f0dcb4bb5b9af0054820b044c803">end</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。カレント形状の処理の最後に呼ばれる。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4188ecba4ede52bf2e401c34ca33826b"></a><!-- doxytag: member="sxsdk::loader_interface::head" ref="a4188ecba4ede52bf2e401c34ca33826b" args="(void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#a4188ecba4ede52bf2e401c34ca33826b">head</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。カレントノードの処理の最初に呼ばれる。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4a991605c57c591b17cf4977932f16ba"></a><!-- doxytag: member="sxsdk::loader_interface::tail" ref="a4a991605c57c591b17cf4977932f16ba" args="(void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#a4a991605c57c591b17cf4977932f16ba">tail</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。カレントノードの処理の最後に呼ばれる。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acd0e6ee4b79c9560ce7c533919e83dec"></a><!-- doxytag: member="sxsdk::loader_interface::must_skip" ref="acd0e6ee4b79c9560ce7c533919e83dec" args="(void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#acd0e6ee4b79c9560ce7c533919e83dec">must_skip</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。オーバライドしてtrueを返すことによって、curren_shapeの処理をスキップさせることができる。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#a61c3d57d0734a43eb237764af7ec0d95">set_transformation</a> (const sx::mat&lt; float, 4 &gt; &amp;t, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。カレント形状が掃引体の上面部分の場合、掃引に相当する変換マトリクスが渡される。  <a href="#a61c3d57d0734a43eb237764af7ec0d95"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a119c3ae53ece8c5432b44855f784a207"></a><!-- doxytag: member="sxsdk::loader_interface::clear_transformation" ref="a119c3ae53ece8c5432b44855f784a207" args="(void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#a119c3ae53ece8c5432b44855f784a207">clear_transformation</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。掃引体の上面部分が処理された後、<code><a class="el" href="structsxsdk_1_1loader__interface.html#a61c3d57d0734a43eb237764af7ec0d95" title="オーバライド可。カレント形状が掃引体の上面部分の場合、掃引に相当す�...">set_transformation()</a></code> で設定された変換マトリクスをクリアするために呼ばれる。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a957a760f67046859bfb52e9894c67338"></a><!-- doxytag: member="sxsdk::loader_interface::can_accept_polyline" ref="a957a760f67046859bfb52e9894c67338" args="(void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#a957a760f67046859bfb52e9894c67338">can_accept_polyline</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。オーバライドしてtrueを返すことによって、開いた線形状に対して<code><a class="el" href="structsxsdk_1_1loader__interface.html#a211c91e222741851d7d50064fc754489" title="オーバライド可。カレント形状が開いた線形状の場合に呼ばれる。can_accept...">do_polyline()</a></code> が呼び出される。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a545ed74c2b9b1ac702660dc8c6789408"></a><!-- doxytag: member="sxsdk::loader_interface::can_accept_polygon" ref="a545ed74c2b9b1ac702660dc8c6789408" args="(void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#a545ed74c2b9b1ac702660dc8c6789408">can_accept_polygon</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。オーバライドしてtrueを返すことによって、閉じた線形状に対して<code><a class="el" href="structsxsdk_1_1loader__interface.html#a28b940cd7fd64b01fc5feb41a13a0937" title="オーバライド可。カレント形状が閉じた線形状の場合、または他の形状か�...">do_polygon()</a></code> が呼び出される。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#a04aa421a1cabe7776412a06635994fe6">can_accept_sphere</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。オーバライドしてtrueを返すことによって、球形状に対して<code><a class="el" href="structsxsdk_1_1loader__interface.html#ae40cc89a89cab872eaa1a70cde10661c" title="オーバライド可。カレント形状が球の場合に呼ばれる。can_accept_sphere()...">do_sphere()</a></code> が呼び出される。  <a href="#a04aa421a1cabe7776412a06635994fe6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#ac1391f6cf105489ee049bf278b1c95e9">can_accept_bezier_surface</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。オーバライドしてtrueを返すことによって、自由曲面形状に対して<code><a class="el" href="structsxsdk_1_1loader__interface.html#a40964ea896d79dde78439e29c11f6586" title="オーバライド可。カレント形状が自由曲面の場合に呼ばれる。can_accept_bezie...">do_bezier_surface()</a></code> が呼び出される。  <a href="#ac1391f6cf105489ee049bf278b1c95e9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#a23ebdf0226319e7564b4375e721d3ec5">can_accept_polymesh</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。オーバライドしてtrueを返すことによって、ポリゴンメッシュ形状を受け付ける。  <a href="#a23ebdf0226319e7564b4375e721d3ec5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a01f178b9aecfe1889d6cd6beaa4dd885"></a><!-- doxytag: member="sxsdk::loader_interface::can_accept_disk" ref="a01f178b9aecfe1889d6cd6beaa4dd885" args="(void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#a01f178b9aecfe1889d6cd6beaa4dd885">can_accept_disk</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。オーバライドしてtrueを返すことによって、円形状に対して<code><a class="el" href="structsxsdk_1_1loader__interface.html#a3260018122173fbee2a040269b0c76c5" title="オーバライド可。カレント形状が円形状の場合に呼ばれる。can_accept_disk()...">do_disk()</a></code> が呼び出される。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac1af2fdac30577ca4b062dd7a878b965"></a><!-- doxytag: member="sxsdk::loader_interface::can_accept_closed_mesh" ref="ac1af2fdac30577ca4b062dd7a878b965" args="(void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#ac1af2fdac30577ca4b062dd7a878b965">can_accept_closed_mesh</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。閉じたメッシュを受け付けることができる場合、オーバライドしてtrueを返す。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#ab2d75e5ebafb33cd759fa7019526f317">can_accept_meshes</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。オーバライドしてfalseを返すことによって、<code><a class="el" href="structsxsdk_1_1loader__interface.html#a427bdaf016fa0c24d14253cdd0ec45f9" title="オーバライド可。カレント形状がmeshes形状に変換された場合に呼ばれる。...">do_meshes()</a>の呼び出しを避け、ポリゴンメッシュとして処理する。</code>  <a href="#ab2d75e5ebafb33cd759fa7019526f317"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#a94a38f83c51e72bec0203215841d7c73">can_accept_link</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。オーバライドしてtrueを返すことによって、リンク形状に対して<code><a class="el" href="structsxsdk_1_1loader__interface.html#a0196c0e67bcbd5cb27432a035895d8d3" title="オーバライド可。カレント形状がリンクの場合に呼ばれる。can_accept_link()...">do_link()</a></code> が呼び出される。  <a href="#a94a38f83c51e72bec0203215841d7c73"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a815ec6981bb7e27a1a4cff94cfb488e8"></a><!-- doxytag: member="sxsdk::loader_interface::can_accept_linear_light" ref="a815ec6981bb7e27a1a4cff94cfb488e8" args="(void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#a815ec6981bb7e27a1a4cff94cfb488e8">can_accept_linear_light</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。オーバライドしてtrueを返すことによって、線光源となる線形状に対して<code><a class="el" href="structsxsdk_1_1loader__interface.html#a60ac808915b438d639718f95ed1ecb29" title="オーバライド可。カレント形状が開いた線光源の場合に呼ばれる。can_accept...">do_linear_light()</a></code> が呼び出される。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3e941faac3e3cfa4e20ce3ca1fc99a56"></a><!-- doxytag: member="sxsdk::loader_interface::can_accept_area_light" ref="a3e941faac3e3cfa4e20ce3ca1fc99a56" args="(void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#a3e941faac3e3cfa4e20ce3ca1fc99a56">can_accept_area_light</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。オーバライドしてtrueを返すことによって、面光源となる閉じた線形状に対して<code><a class="el" href="structsxsdk_1_1loader__interface.html#ae9af3fd8ab67ddecf03cf9f4fda82072" title="オーバライド可。カレント形状が開いた面光源の場合に呼ばれる。can_accept...">do_area_light()</a></code> が呼び出される。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af9ebd0a3047abad559845a07d0739f70"></a><!-- doxytag: member="sxsdk::loader_interface::can_accept_light" ref="af9ebd0a3047abad559845a07d0739f70" args="(void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#af9ebd0a3047abad559845a07d0739f70">can_accept_light</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。オーバライドしてtrueを返すことによって、光源形状（点光源、スポットライト、配光）に対して<code><a class="el" href="structsxsdk_1_1loader__interface.html#ad2637f8f7ad443d6d80a5d4113cfd44c" title="オーバライド可。カレント形状が開いた光源形状（点光源、スポットライ�...">do_light()</a></code> が呼び出される。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#ae53b0b7842019ca55d2bab0d4ecf7496">can_accept_replicator</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。オーバライドしてtrueを返すことによって、リプリケータによって複製される子形状分<code><a class="el" href="structsxsdk_1_1loader__interface.html#afd44d7639e1b5f16924170604570ad96" title="オーバライド可。個々の形状のコールバックが呼ばれる前に呼ばれる。オ�...">do_replicator()</a></code> が呼び出される。  <a href="#ae53b0b7842019ca55d2bab0d4ecf7496"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#a7eb69a6743eb8f5d7cfe3160b837f838">can_accept_switch</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。オーバライドしてtrueを返すことによって、スイッチジョイントに対して<code><a class="el" href="structsxsdk_1_1loader__interface.html#afbe4ef394035f66a1111c66f6191a59f" title="オーバライド可。カレント形状がスイッチジョイントの場合に呼ばれる。c...">do_switch()</a></code> が呼び出される。  <a href="#a7eb69a6743eb8f5d7cfe3160b837f838"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#a5c3ebd53a4c1ebc0b6224abceca96b11">must_triangulate_polymesh</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。オーバライドしてtrueを返すと、ポリゴンメッシュの面はすべて３角形に分割される。  <a href="#a5c3ebd53a4c1ebc0b6224abceca96b11"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5fb78fa13e93f441c1671f6187a1296c"></a><!-- doxytag: member="sxsdk::loader_interface::must_divide_polymesh" ref="a5fb78fa13e93f441c1671f6187a1296c" args="(void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#a5fb78fa13e93f441c1671f6187a1296c">must_divide_polymesh</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。オーバライドしてtrueを返すと、ポリゴンメッシュの面はすべて分割される。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#a434eb0591992ac24d73728e04ac32166">get_max_vertices_per_face</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。オーバライドして、プラグインで受け付けることのできるポリゴンメッシュ面の頂点の最大数を返す。3, 4, -1が有効で、-1の場合には制限無し。  <a href="#a434eb0591992ac24d73728e04ac32166"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#a211c91e222741851d7d50064fc754489">do_polyline</a> (<a class="el" href="structsxsdk_1_1points__interface.html">sxsdk::points_interface</a> *points, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。カレント形状が開いた線形状の場合に呼ばれる。<code><a class="el" href="structsxsdk_1_1loader__interface.html#a957a760f67046859bfb52e9894c67338" title="オーバライド可。オーバライドしてtrueを返すことによって、開いた線形状...">can_accept_polyline()</a></code> がtrueを返す場合にのみ呼ばれる。  <a href="#a211c91e222741851d7d50064fc754489"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#a28b940cd7fd64b01fc5feb41a13a0937">do_polygon</a> (int n, <a class="el" href="structsxsdk_1_1points__interface.html">sxsdk::points_interface</a> **c, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。カレント形状が閉じた線形状の場合、または他の形状から閉じた線形状に変換された場合に呼ばれる。<code><a class="el" href="structsxsdk_1_1loader__interface.html#a545ed74c2b9b1ac702660dc8c6789408" title="オーバライド可。オーバライドしてtrueを返すことによって、閉じた線形状...">can_accept_polygon()</a></code> がtrueを返す場合にのみ呼ばれる。  <a href="#a28b940cd7fd64b01fc5feb41a13a0937"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#a427bdaf016fa0c24d14253cdd0ec45f9">do_meshes</a> (<a class="el" href="structsxsdk_1_1meshes__interface.html">sxsdk::meshes_interface</a> *m, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。カレント形状がmeshes形状に変換された場合に呼ばれる。  <a href="#a427bdaf016fa0c24d14253cdd0ec45f9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#ae40cc89a89cab872eaa1a70cde10661c">do_sphere</a> (const sx::mat&lt; float, 4 &gt; &amp;t, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。カレント形状が球の場合に呼ばれる。<code><a class="el" href="structsxsdk_1_1loader__interface.html#a04aa421a1cabe7776412a06635994fe6" title="オーバライド可。オーバライドしてtrueを返すことによって、球形状に対し...">can_accept_sphere()</a></code> がtrueを返す場合にのみ呼ばれる。  <a href="#ae40cc89a89cab872eaa1a70cde10661c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#a3260018122173fbee2a040269b0c76c5">do_disk</a> (const sx::mat&lt; float, 4 &gt; &amp;t, float t0, float t1, bool filled, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。カレント形状が円形状の場合に呼ばれる。<code><a class="el" href="structsxsdk_1_1loader__interface.html#a01f178b9aecfe1889d6cd6beaa4dd885" title="オーバライド可。オーバライドしてtrueを返すことによって、円形状に対し...">can_accept_disk()</a></code> がtrueを返す場合にのみ呼ばれる。  <a href="#a3260018122173fbee2a040269b0c76c5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#a40964ea896d79dde78439e29c11f6586">do_bezier_surface</a> (<a class="el" href="structsxsdk_1_1mesh__interface.html">sxsdk::mesh_interface</a> *m, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。カレント形状が自由曲面の場合に呼ばれる。<code><a class="el" href="structsxsdk_1_1loader__interface.html#ac1391f6cf105489ee049bf278b1c95e9" title="オーバライド可。オーバライドしてtrueを返すことによって、自由曲面形状...">can_accept_bezier_surface()</a></code> がtrueを返す場合にのみ呼ばれる。  <a href="#a40964ea896d79dde78439e29c11f6586"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aed5c97a5971b559741b3fb4bb0e1372a"></a><!-- doxytag: member="sxsdk::loader_interface::begin_polymesh" ref="aed5c97a5971b559741b3fb4bb0e1372a" args="(void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#aed5c97a5971b559741b3fb4bb0e1372a">begin_polymesh</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。カレント形状がポリゴンメッシュ形状の場合、または他の形状からポリゴンメッシュに変換された場合に呼ばれる。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#ae05817501bb62de907bd4676d896cfae">begin_polymesh_vertex</a> (int n, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。<code><a class="el" href="structsxsdk_1_1loader__interface.html#aed5c97a5971b559741b3fb4bb0e1372a" title="オーバライド可。カレント形状がポリゴンメッシュ形状の場合、または他�...">begin_polymesh()</a></code> が呼ばれた後、頂点列の開始を示すために呼ばれる。  <a href="#ae05817501bb62de907bd4676d896cfae"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#ac6c9b769179ce4c6d83b6338fec39cd5">polymesh_vertex</a> (int i, const sxsdk::vec3 &amp;v, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。ポリゴンメッシュの個々の頂点ごとに呼ばれる。  <a href="#ac6c9b769179ce4c6d83b6338fec39cd5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2e633af210e06778bc0951c63d8dad7a"></a><!-- doxytag: member="sxsdk::loader_interface::end_polymesh_vertex" ref="a2e633af210e06778bc0951c63d8dad7a" args="(void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#a2e633af210e06778bc0951c63d8dad7a">end_polymesh_vertex</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。頂点列の終了を示すために呼ばれる。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#a571f3cf06233a0548524fccbff60b99d">begin_polymesh_face</a> (int n, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。面列の開始を示すために呼ばれる。  <a href="#a571f3cf06233a0548524fccbff60b99d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#a5daaa56a03535e41a8904b52c7c08dc7">polymesh_face</a> (int n_list, const int list[], const sxsdk::vec3 *normals, const sxsdk::vec4 *plane_equation, const sxsdk::vec4 *uvs, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。uv値を伴ったポリゴンメッシュ面の情報がプラグインに渡される。  <a href="#a5daaa56a03535e41a8904b52c7c08dc7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab80b8d1c6f7433d858fb1656226fe940"></a><!-- doxytag: member="sxsdk::loader_interface::end_polymesh_face" ref="ab80b8d1c6f7433d858fb1656226fe940" args="(void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#ab80b8d1c6f7433d858fb1656226fe940">end_polymesh_face</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。面列の終了を示すために呼ばれる。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a557bebed2bb900179e31064fc38147b1"></a><!-- doxytag: member="sxsdk::loader_interface::end_polymesh" ref="a557bebed2bb900179e31064fc38147b1" args="(void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#a557bebed2bb900179e31064fc38147b1">end_polymesh</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。ポリゴンメッシュ形状の処理の終了を示すために呼ばれる。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#a0196c0e67bcbd5cb27432a035895d8d3">do_link</a> (<a class="el" href="structsxsdk_1_1part__class.html">sxsdk::part_class</a> &amp;link, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。カレント形状がリンクの場合に呼ばれる。<code><a class="el" href="structsxsdk_1_1loader__interface.html#a94a38f83c51e72bec0203215841d7c73" title="オーバライド可。オーバライドしてtrueを返すことによって、リンク形状に...">can_accept_link()</a></code> がtrueを返す場合にのみ呼ばれる。  <a href="#a0196c0e67bcbd5cb27432a035895d8d3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#a60ac808915b438d639718f95ed1ecb29">do_linear_light</a> (<a class="el" href="structsxsdk_1_1points__interface.html">sxsdk::points_interface</a> *points, bool closed, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。カレント形状が開いた線光源の場合に呼ばれる。<code><a class="el" href="structsxsdk_1_1loader__interface.html#a815ec6981bb7e27a1a4cff94cfb488e8" title="オーバライド可。オーバライドしてtrueを返すことによって、線光源となる...">can_accept_linear_light()</a></code> がtrueを返す場合にのみ呼ばれる。  <a href="#a60ac808915b438d639718f95ed1ecb29"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#ae9af3fd8ab67ddecf03cf9f4fda82072">do_area_light</a> (<a class="el" href="structsxsdk_1_1points__interface.html">sxsdk::points_interface</a> *points, float area, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。カレント形状が開いた面光源の場合に呼ばれる。<code><a class="el" href="structsxsdk_1_1loader__interface.html#a3e941faac3e3cfa4e20ce3ca1fc99a56" title="オーバライド可。オーバライドしてtrueを返すことによって、面光源となる...">can_accept_area_light()</a></code> がtrueを返す場合にのみ呼ばれる。  <a href="#ae9af3fd8ab67ddecf03cf9f4fda82072"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#ad2637f8f7ad443d6d80a5d4113cfd44c">do_light</a> (<a class="el" href="namespacesxsdk_1_1enums.html#a3797db46b7674c36747f0802b39e87d7">sxsdk::enums::light_distribution_type</a> points, const sxsdk::vec3 *color, const sxsdk::vec3 *position, const sxsdk::vec3 *direction, float angle, float softness, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。カレント形状が開いた光源形状（点光源、スポットライト、配光）の場合に呼ばれる。<code><a class="el" href="structsxsdk_1_1loader__interface.html#af9ebd0a3047abad559845a07d0739f70" title="オーバライド可。オーバライドしてtrueを返すことによって、光源形状（点...">can_accept_light()</a></code> がtrueを返す場合にのみ呼ばれる。  <a href="#ad2637f8f7ad443d6d80a5d4113cfd44c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#afd44d7639e1b5f16924170604570ad96">do_replicator</a> (<a class="el" href="structsxsdk_1_1part__class.html">sxsdk::part_class</a> &amp;replicator, <a class="el" href="structsxsdk_1_1shape__class.html">sxsdk::shape_class</a> &amp;shape, const sxsdk::mat4 *trans, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。個々の形状のコールバックが呼ばれる前に呼ばれる。オーバライドしてtrueを返すと、その直後の<code><a class="el" href="structsxsdk_1_1loader__interface.html#ae40cc89a89cab872eaa1a70cde10661c" title="オーバライド可。カレント形状が球の場合に呼ばれる。can_accept_sphere()...">do_sphere()</a></code>, <code><a class="el" href="structsxsdk_1_1loader__interface.html#a28b940cd7fd64b01fc5feb41a13a0937" title="オーバライド可。カレント形状が閉じた線形状の場合、または他の形状か�...">do_polygon()</a></code> など形状処理コールバックは呼ばれない。  <a href="#afd44d7639e1b5f16924170604570ad96"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#afbe4ef394035f66a1111c66f6191a59f">do_switch</a> (<a class="el" href="structsxsdk_1_1part__class.html">sxsdk::part_class</a> &amp;switch_joint, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。カレント形状がスイッチジョイントの場合に呼ばれる。<code><a class="el" href="structsxsdk_1_1loader__interface.html#a7eb69a6743eb8f5d7cfe3160b837f838" title="オーバライド可。オーバライドしてtrueを返すことによって、スイッチジョ...">can_accept_switch()</a></code> がtrueを返す場合にのみ呼ばれる。  <a href="#afbe4ef394035f66a1111c66f6191a59f"></a><br/></td></tr>
+</table>
+<hr/><h2>関数</h2>
+<a class="anchor" id="a571f3cf06233a0548524fccbff60b99d"></a><!-- doxytag: member="sxsdk::loader_interface::begin_polymesh_face" ref="a571f3cf06233a0548524fccbff60b99d" args="(int n, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::loader_interface::begin_polymesh_face </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。面列の開始を示すために呼ばれる。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>n</em>&nbsp;</td><td>面の数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ae05817501bb62de907bd4676d896cfae"></a><!-- doxytag: member="sxsdk::loader_interface::begin_polymesh_vertex" ref="ae05817501bb62de907bd4676d896cfae" args="(int n, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::loader_interface::begin_polymesh_vertex </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。<code><a class="el" href="structsxsdk_1_1loader__interface.html#aed5c97a5971b559741b3fb4bb0e1372a" title="オーバライド可。カレント形状がポリゴンメッシュ形状の場合、または他�...">begin_polymesh()</a></code> が呼ばれた後、頂点列の開始を示すために呼ばれる。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>n</em>&nbsp;</td><td>頂点の数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ac1391f6cf105489ee049bf278b1c95e9"></a><!-- doxytag: member="sxsdk::loader_interface::can_accept_bezier_surface" ref="ac1391f6cf105489ee049bf278b1c95e9" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::loader_interface::can_accept_bezier_surface </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。オーバライドしてtrueを返すことによって、自由曲面形状に対して<code><a class="el" href="structsxsdk_1_1loader__interface.html#a40964ea896d79dde78439e29c11f6586" title="オーバライド可。カレント形状が自由曲面の場合に呼ばれる。can_accept_bezie...">do_bezier_surface()</a></code> が呼び出される。 </p>
+<p>falseが返される場合はポリゴンメッシュに変換される。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a94a38f83c51e72bec0203215841d7c73"></a><!-- doxytag: member="sxsdk::loader_interface::can_accept_link" ref="a94a38f83c51e72bec0203215841d7c73" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::loader_interface::can_accept_link </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。オーバライドしてtrueを返すことによって、リンク形状に対して<code><a class="el" href="structsxsdk_1_1loader__interface.html#a0196c0e67bcbd5cb27432a035895d8d3" title="オーバライド可。カレント形状がリンクの場合に呼ばれる。can_accept_link()...">do_link()</a></code> が呼び出される。 </p>
+<p>falseが返される場合は、リンク形状を実体化して、<code><a class="el" href="structsxsdk_1_1loader__interface.html#ae40cc89a89cab872eaa1a70cde10661c" title="オーバライド可。カレント形状が球の場合に呼ばれる。can_accept_sphere()...">do_sphere()</a></code>, <code><a class="el" href="structsxsdk_1_1loader__interface.html#a28b940cd7fd64b01fc5feb41a13a0937" title="オーバライド可。カレント形状が閉じた線形状の場合、または他の形状か�...">do_polygon()</a></code> などの形状処理コールバックを呼び出す。 </p>
+
+</div>
+</div>
+<a class="anchor" id="ab2d75e5ebafb33cd759fa7019526f317"></a><!-- doxytag: member="sxsdk::loader_interface::can_accept_meshes" ref="ab2d75e5ebafb33cd759fa7019526f317" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::loader_interface::can_accept_meshes </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。オーバライドしてfalseを返すことによって、<code><a class="el" href="structsxsdk_1_1loader__interface.html#a427bdaf016fa0c24d14253cdd0ec45f9" title="オーバライド可。カレント形状がmeshes形状に変換された場合に呼ばれる。...">do_meshes()</a>の呼び出しを避け、ポリゴンメッシュとして処理する。</code> </p>
+<p>trueが返される場合は<code><a class="el" href="structsxsdk_1_1loader__interface.html#a427bdaf016fa0c24d14253cdd0ec45f9" title="オーバライド可。カレント形状がmeshes形状に変換された場合に呼ばれる。...">do_meshes()</a>が呼ばれる。</code> </p>
+
+</div>
+</div>
+<a class="anchor" id="a23ebdf0226319e7564b4375e721d3ec5"></a><!-- doxytag: member="sxsdk::loader_interface::can_accept_polymesh" ref="a23ebdf0226319e7564b4375e721d3ec5" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::loader_interface::can_accept_polymesh </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。オーバライドしてtrueを返すことによって、ポリゴンメッシュ形状を受け付ける。 </p>
+<p>falseが返される場合はポリゴンメッシュのすべての面が<code><a class="el" href="structsxsdk_1_1loader__interface.html#a28b940cd7fd64b01fc5feb41a13a0937" title="オーバライド可。カレント形状が閉じた線形状の場合、または他の形状か�...">do_polygon()</a></code> に渡される。 </p>
+
+</div>
+</div>
+<a class="anchor" id="ae53b0b7842019ca55d2bab0d4ecf7496"></a><!-- doxytag: member="sxsdk::loader_interface::can_accept_replicator" ref="ae53b0b7842019ca55d2bab0d4ecf7496" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::loader_interface::can_accept_replicator </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。オーバライドしてtrueを返すことによって、リプリケータによって複製される子形状分<code><a class="el" href="structsxsdk_1_1loader__interface.html#afd44d7639e1b5f16924170604570ad96" title="オーバライド可。個々の形状のコールバックが呼ばれる前に呼ばれる。オ�...">do_replicator()</a></code> が呼び出される。 </p>
+<p>falseが返される場合は、リプリケータによって複製された形状を実体化して、<code><a class="el" href="structsxsdk_1_1loader__interface.html#ae40cc89a89cab872eaa1a70cde10661c" title="オーバライド可。カレント形状が球の場合に呼ばれる。can_accept_sphere()...">do_sphere()</a></code>, <code><a class="el" href="structsxsdk_1_1loader__interface.html#a28b940cd7fd64b01fc5feb41a13a0937" title="オーバライド可。カレント形状が閉じた線形状の場合、または他の形状か�...">do_polygon()</a></code> などの形状処理コールバックを呼び出す。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a04aa421a1cabe7776412a06635994fe6"></a><!-- doxytag: member="sxsdk::loader_interface::can_accept_sphere" ref="a04aa421a1cabe7776412a06635994fe6" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::loader_interface::can_accept_sphere </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。オーバライドしてtrueを返すことによって、球形状に対して<code><a class="el" href="structsxsdk_1_1loader__interface.html#ae40cc89a89cab872eaa1a70cde10661c" title="オーバライド可。カレント形状が球の場合に呼ばれる。can_accept_sphere()...">do_sphere()</a></code> が呼び出される。 </p>
+<p>falseが返される場合はポリゴンメッシュに変換される。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a7eb69a6743eb8f5d7cfe3160b837f838"></a><!-- doxytag: member="sxsdk::loader_interface::can_accept_switch" ref="a7eb69a6743eb8f5d7cfe3160b837f838" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::loader_interface::can_accept_switch </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。オーバライドしてtrueを返すことによって、スイッチジョイントに対して<code><a class="el" href="structsxsdk_1_1loader__interface.html#afbe4ef394035f66a1111c66f6191a59f" title="オーバライド可。カレント形状がスイッチジョイントの場合に呼ばれる。c...">do_switch()</a></code> が呼び出される。 </p>
+<p>falseが返される場合は、スイッチ処理が行われアクティブな子形状に対して、<code><a class="el" href="structsxsdk_1_1loader__interface.html#ae40cc89a89cab872eaa1a70cde10661c" title="オーバライド可。カレント形状が球の場合に呼ばれる。can_accept_sphere()...">do_sphere()</a></code>, <code><a class="el" href="structsxsdk_1_1loader__interface.html#a28b940cd7fd64b01fc5feb41a13a0937" title="オーバライド可。カレント形状が閉じた線形状の場合、または他の形状か�...">do_polygon()</a></code> などの形状処理コールバックを呼び出す。 </p>
+
+</div>
+</div>
+<a class="anchor" id="ae9af3fd8ab67ddecf03cf9f4fda82072"></a><!-- doxytag: member="sxsdk::loader_interface::do_area_light" ref="ae9af3fd8ab67ddecf03cf9f4fda82072" args="(sxsdk::points_interface *points, float area, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::loader_interface::do_area_light </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1points__interface.html">sxsdk::points_interface</a> *&nbsp;</td>
+          <td class="paramname"> <em>points</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>area</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。カレント形状が開いた面光源の場合に呼ばれる。<code><a class="el" href="structsxsdk_1_1loader__interface.html#a3e941faac3e3cfa4e20ce3ca1fc99a56" title="オーバライド可。オーバライドしてtrueを返すことによって、面光源となる...">can_accept_area_light()</a></code> がtrueを返す場合にのみ呼ばれる。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>points</em>&nbsp;</td><td>線形状の点列 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>area</em>&nbsp;</td><td>面光源の面積 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a40964ea896d79dde78439e29c11f6586"></a><!-- doxytag: member="sxsdk::loader_interface::do_bezier_surface" ref="a40964ea896d79dde78439e29c11f6586" args="(sxsdk::mesh_interface *m, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::loader_interface::do_bezier_surface </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1mesh__interface.html">sxsdk::mesh_interface</a> *&nbsp;</td>
+          <td class="paramname"> <em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。カレント形状が自由曲面の場合に呼ばれる。<code><a class="el" href="structsxsdk_1_1loader__interface.html#ac1391f6cf105489ee049bf278b1c95e9" title="オーバライド可。オーバライドしてtrueを返すことによって、自由曲面形状...">can_accept_bezier_surface()</a></code> がtrueを返す場合にのみ呼ばれる。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>m</em>&nbsp;</td><td>曲面定義ポイントのメッシュ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a3260018122173fbee2a040269b0c76c5"></a><!-- doxytag: member="sxsdk::loader_interface::do_disk" ref="a3260018122173fbee2a040269b0c76c5" args="(const sx::mat&lt; float, 4 &gt; &amp;t, float t0, float t1, bool filled, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::loader_interface::do_disk </td>
+          <td>(</td>
+          <td class="paramtype">const sx::mat&lt; float, 4 &gt; &amp;&nbsp;</td>
+          <td class="paramname"> <em>t</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>t0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>t1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>filled</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。カレント形状が円形状の場合に呼ばれる。<code><a class="el" href="structsxsdk_1_1loader__interface.html#a01f178b9aecfe1889d6cd6beaa4dd885" title="オーバライド可。オーバライドしてtrueを返すことによって、円形状に対し...">can_accept_disk()</a></code> がtrueを返す場合にのみ呼ばれる。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>t</em>&nbsp;</td><td>円形状を定義する変換マトリクス </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>t0</em>&nbsp;</td><td>開始角度 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>t1</em>&nbsp;</td><td>終了角度 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>filled</em>&nbsp;</td><td>中身が詰まっているかどうか </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ad2637f8f7ad443d6d80a5d4113cfd44c"></a><!-- doxytag: member="sxsdk::loader_interface::do_light" ref="ad2637f8f7ad443d6d80a5d4113cfd44c" args="(sxsdk::enums::light_distribution_type points, const sxsdk::vec3 *color, const sxsdk::vec3 *position, const sxsdk::vec3 *direction, float angle, float softness, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::loader_interface::do_light </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacesxsdk_1_1enums.html#a3797db46b7674c36747f0802b39e87d7">sxsdk::enums::light_distribution_type</a>&nbsp;</td>
+          <td class="paramname"> <em>points</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const sxsdk::vec3 *&nbsp;</td>
+          <td class="paramname"> <em>color</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const sxsdk::vec3 *&nbsp;</td>
+          <td class="paramname"> <em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const sxsdk::vec3 *&nbsp;</td>
+          <td class="paramname"> <em>direction</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>angle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>softness</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。カレント形状が開いた光源形状（点光源、スポットライト、配光）の場合に呼ばれる。<code><a class="el" href="structsxsdk_1_1loader__interface.html#af9ebd0a3047abad559845a07d0739f70" title="オーバライド可。オーバライドしてtrueを返すことによって、光源形状（点...">can_accept_light()</a></code> がtrueを返す場合にのみ呼ばれる。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>points</em>&nbsp;</td><td>光源の種類 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>color</em>&nbsp;</td><td>光源の色 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>position</em>&nbsp;</td><td>光源の位置 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>direction</em>&nbsp;</td><td>光源の方向 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>angle</em>&nbsp;</td><td>光源の角度 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>softness</em>&nbsp;</td><td>光源のソフトネス </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a60ac808915b438d639718f95ed1ecb29"></a><!-- doxytag: member="sxsdk::loader_interface::do_linear_light" ref="a60ac808915b438d639718f95ed1ecb29" args="(sxsdk::points_interface *points, bool closed, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::loader_interface::do_linear_light </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1points__interface.html">sxsdk::points_interface</a> *&nbsp;</td>
+          <td class="paramname"> <em>points</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>closed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。カレント形状が開いた線光源の場合に呼ばれる。<code><a class="el" href="structsxsdk_1_1loader__interface.html#a815ec6981bb7e27a1a4cff94cfb488e8" title="オーバライド可。オーバライドしてtrueを返すことによって、線光源となる...">can_accept_linear_light()</a></code> がtrueを返す場合にのみ呼ばれる。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>points</em>&nbsp;</td><td>線形状の点列 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>closed</em>&nbsp;</td><td>線形状が閉じているかのフラグ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a0196c0e67bcbd5cb27432a035895d8d3"></a><!-- doxytag: member="sxsdk::loader_interface::do_link" ref="a0196c0e67bcbd5cb27432a035895d8d3" args="(sxsdk::part_class &amp;link, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::loader_interface::do_link </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1part__class.html">sxsdk::part_class</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>link</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。カレント形状がリンクの場合に呼ばれる。<code><a class="el" href="structsxsdk_1_1loader__interface.html#a94a38f83c51e72bec0203215841d7c73" title="オーバライド可。オーバライドしてtrueを返すことによって、リンク形状に...">can_accept_link()</a></code> がtrueを返す場合にのみ呼ばれる。 </p>
+<p>リンク形状に対応したデータ形式に書き出す場合に使用する。</p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>link</em>&nbsp;</td><td>リンク形状 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a78f1763c8487425fe7ba63a2af44b33a"></a><!-- doxytag: member="sxsdk::loader_interface::do_load" ref="a78f1763c8487425fe7ba63a2af44b33a" args="(sxsdk::loader_info_interface *loader_info, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::loader_interface::do_load </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1loader__info__interface.html">sxsdk::loader_info_interface</a> *&nbsp;</td>
+          <td class="paramname"> <em>loader_info</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。データ部の読み込み処理開始時に呼ばれる。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>loader_info</em>&nbsp;</td><td><code>speed_loader_info_interface</code> へのポインタ。読み込みのために必要な各種オブジェクトへの xxx_interface を得るためのメンバ関数が定義されている。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a427bdaf016fa0c24d14253cdd0ec45f9"></a><!-- doxytag: member="sxsdk::loader_interface::do_meshes" ref="a427bdaf016fa0c24d14253cdd0ec45f9" args="(sxsdk::meshes_interface *m, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::loader_interface::do_meshes </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1meshes__interface.html">sxsdk::meshes_interface</a> *&nbsp;</td>
+          <td class="paramname"> <em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。カレント形状がmeshes形状に変換された場合に呼ばれる。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>m</em>&nbsp;</td><td>メッシュデータ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a28b940cd7fd64b01fc5feb41a13a0937"></a><!-- doxytag: member="sxsdk::loader_interface::do_polygon" ref="a28b940cd7fd64b01fc5feb41a13a0937" args="(int n, sxsdk::points_interface **c, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::loader_interface::do_polygon </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1points__interface.html">sxsdk::points_interface</a> **&nbsp;</td>
+          <td class="paramname"> <em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。カレント形状が閉じた線形状の場合、または他の形状から閉じた線形状に変換された場合に呼ばれる。<code><a class="el" href="structsxsdk_1_1loader__interface.html#a545ed74c2b9b1ac702660dc8c6789408" title="オーバライド可。オーバライドしてtrueを返すことによって、閉じた線形状...">can_accept_polygon()</a></code> がtrueを返す場合にのみ呼ばれる。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>n</em>&nbsp;</td><td>ポリゴンの数 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>c</em>&nbsp;</td><td>点列の配列 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a211c91e222741851d7d50064fc754489"></a><!-- doxytag: member="sxsdk::loader_interface::do_polyline" ref="a211c91e222741851d7d50064fc754489" args="(sxsdk::points_interface *points, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::loader_interface::do_polyline </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1points__interface.html">sxsdk::points_interface</a> *&nbsp;</td>
+          <td class="paramname"> <em>points</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。カレント形状が開いた線形状の場合に呼ばれる。<code><a class="el" href="structsxsdk_1_1loader__interface.html#a957a760f67046859bfb52e9894c67338" title="オーバライド可。オーバライドしてtrueを返すことによって、開いた線形状...">can_accept_polyline()</a></code> がtrueを返す場合にのみ呼ばれる。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>points</em>&nbsp;</td><td>線形状の点列 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="afd44d7639e1b5f16924170604570ad96"></a><!-- doxytag: member="sxsdk::loader_interface::do_replicator" ref="afd44d7639e1b5f16924170604570ad96" args="(sxsdk::part_class &amp;replicator, sxsdk::shape_class &amp;shape, const sxsdk::mat4 *trans, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::loader_interface::do_replicator </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1part__class.html">sxsdk::part_class</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>replicator</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1shape__class.html">sxsdk::shape_class</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>shape</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const sxsdk::mat4 *&nbsp;</td>
+          <td class="paramname"> <em>trans</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。個々の形状のコールバックが呼ばれる前に呼ばれる。オーバライドしてtrueを返すと、その直後の<code><a class="el" href="structsxsdk_1_1loader__interface.html#ae40cc89a89cab872eaa1a70cde10661c" title="オーバライド可。カレント形状が球の場合に呼ばれる。can_accept_sphere()...">do_sphere()</a></code>, <code><a class="el" href="structsxsdk_1_1loader__interface.html#a28b940cd7fd64b01fc5feb41a13a0937" title="オーバライド可。カレント形状が閉じた線形状の場合、または他の形状か�...">do_polygon()</a></code> など形状処理コールバックは呼ばれない。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>replicator</em>&nbsp;</td><td>形状を複製したリプリケータ </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>shape</em>&nbsp;</td><td>複製された形状 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>trans</em>&nbsp;</td><td>リプリケータによって形状に適用される変換マトリクス </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ae40cc89a89cab872eaa1a70cde10661c"></a><!-- doxytag: member="sxsdk::loader_interface::do_sphere" ref="ae40cc89a89cab872eaa1a70cde10661c" args="(const sx::mat&lt; float, 4 &gt; &amp;t, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::loader_interface::do_sphere </td>
+          <td>(</td>
+          <td class="paramtype">const sx::mat&lt; float, 4 &gt; &amp;&nbsp;</td>
+          <td class="paramname"> <em>t</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。カレント形状が球の場合に呼ばれる。<code><a class="el" href="structsxsdk_1_1loader__interface.html#a04aa421a1cabe7776412a06635994fe6" title="オーバライド可。オーバライドしてtrueを返すことによって、球形状に対し...">can_accept_sphere()</a></code> がtrueを返す場合にのみ呼ばれる。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>t</em>&nbsp;</td><td>球を定義するマトリクス </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="afbe4ef394035f66a1111c66f6191a59f"></a><!-- doxytag: member="sxsdk::loader_interface::do_switch" ref="afbe4ef394035f66a1111c66f6191a59f" args="(sxsdk::part_class &amp;switch_joint, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::loader_interface::do_switch </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1part__class.html">sxsdk::part_class</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>switch_joint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。カレント形状がスイッチジョイントの場合に呼ばれる。<code><a class="el" href="structsxsdk_1_1loader__interface.html#a7eb69a6743eb8f5d7cfe3160b837f838" title="オーバライド可。オーバライドしてtrueを返すことによって、スイッチジョ...">can_accept_switch()</a></code> がtrueを返す場合にのみ呼ばれる。 </p>
+<p>スイッチジョイントの切り替え処理を独自に処理したい場合などに使用する。</p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>switch_joint</em>&nbsp;</td><td>スイッチジョイント </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a434eb0591992ac24d73728e04ac32166"></a><!-- doxytag: member="sxsdk::loader_interface::get_max_vertices_per_face" ref="a434eb0591992ac24d73728e04ac32166" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int sxsdk::loader_interface::get_max_vertices_per_face </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。オーバライドして、プラグインで受け付けることのできるポリゴンメッシュ面の頂点の最大数を返す。3, 4, -1が有効で、-1の場合には制限無し。 </p>
+<p><code><a class="el" href="structsxsdk_1_1loader__interface.html#a5c3ebd53a4c1ebc0b6224abceca96b11" title="オーバライド可。オーバライドしてtrueを返すと、ポリゴンメッシュの面は...">must_triangulate_polymesh()</a></code> がfalseを返す場合にのみ有効。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a5c3ebd53a4c1ebc0b6224abceca96b11"></a><!-- doxytag: member="sxsdk::loader_interface::must_triangulate_polymesh" ref="a5c3ebd53a4c1ebc0b6224abceca96b11" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::loader_interface::must_triangulate_polymesh </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。オーバライドしてtrueを返すと、ポリゴンメッシュの面はすべて３角形に分割される。 </p>
+<p>falseが返される場合は、<code><a class="el" href="structsxsdk_1_1loader__interface.html#a434eb0591992ac24d73728e04ac32166" title="オーバライド可。オーバライドして、プラグインで受け付けることのでき�...">get_max_vertices_per_face()</a></code> で設定された頂点の数に分割される。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a5daaa56a03535e41a8904b52c7c08dc7"></a><!-- doxytag: member="sxsdk::loader_interface::polymesh_face" ref="a5daaa56a03535e41a8904b52c7c08dc7" args="(int n_list, const int list[], const sxsdk::vec3 *normals, const sxsdk::vec4 *plane_equation, const sxsdk::vec4 *uvs, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::loader_interface::polymesh_face </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>n_list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&nbsp;</td>
+          <td class="paramname"> <em>list</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const sxsdk::vec3 *&nbsp;</td>
+          <td class="paramname"> <em>normals</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const sxsdk::vec4 *&nbsp;</td>
+          <td class="paramname"> <em>plane_equation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const sxsdk::vec4 *&nbsp;</td>
+          <td class="paramname"> <em>uvs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。uv値を伴ったポリゴンメッシュ面の情報がプラグインに渡される。 </p>
+<p>パラメータと距離補正のUV値が渡される。UV値が不要な場合は<code><a class="el" href="structsxsdk_1_1loader__interface.html#a5daaa56a03535e41a8904b52c7c08dc7" title="オーバライド可。uv値を伴ったポリゴンメッシュ面の情報がプラグインに�...">polymesh_face()</a></code> 、パラメータのUV値のみが必要な場合には<code>polymesh_face_uvuv()</code> を使用する。</p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>list</em>&nbsp;</td><td>面の頂点の番号の配列。例えば、面の頂点の数nが４の場合、<em>list</em>[0], <em>list</em>[1], <em>list</em>[2], <em>list</em>[3] で面を構成する頂点の番号の並びを取得できる。処理の対象となっている現在の面が頂点番号0, 5, 2, 3の並びで構成されている場合、<em>list</em>[0], <em>list</em>[1], <em>list</em>[2], <em>list</em>[3] は、それぞれ0, 5, 2, 3の値となる。 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>normals</em>&nbsp;</td><td>法線ベクトルの配列。ポリゴンメッシュでスムーズがオンになっている場合にのみ取得できる。面の頂点の数nが4のとき、<em>normals</em>[0], <em>normals</em>[1], <em>normals</em>[2], <em>normals</em>[3] がそれぞれの頂点の法線ベクトルとなる。 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>plane_equation</em>&nbsp;</td><td>平面方程式パラメータ </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>uvs</em>&nbsp;</td><td>パラメータUV値と距離UV値の配列。<code>vec4</code> の4つのデータの内、1, 2番目の値はパラメータの、3, 4番目の値は距離のUV値となる。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ac6c9b769179ce4c6d83b6338fec39cd5"></a><!-- doxytag: member="sxsdk::loader_interface::polymesh_vertex" ref="ac6c9b769179ce4c6d83b6338fec39cd5" args="(int i, const sxsdk::vec3 &amp;v, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::loader_interface::polymesh_vertex </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const sxsdk::vec3 &amp;&nbsp;</td>
+          <td class="paramname"> <em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。ポリゴンメッシュの個々の頂点ごとに呼ばれる。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>i</em>&nbsp;</td><td>頂点の番号 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>v</em>&nbsp;</td><td>頂点の座標値 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a61c3d57d0734a43eb237764af7ec0d95"></a><!-- doxytag: member="sxsdk::loader_interface::set_transformation" ref="a61c3d57d0734a43eb237764af7ec0d95" args="(const sx::mat&lt; float, 4 &gt; &amp;t, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::loader_interface::set_transformation </td>
+          <td>(</td>
+          <td class="paramtype">const sx::mat&lt; float, 4 &gt; &amp;&nbsp;</td>
+          <td class="paramname"> <em>t</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。カレント形状が掃引体の上面部分の場合、掃引に相当する変換マトリクスが渡される。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>t</em>&nbsp;</td><td>掃引に相当する変換マトリクス </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>この構造体の説明は次のファイルから生成されました:<ul>
+<li><a class="el" href="loaderinterface_8h_source.html">loaderinterface.h</a></li>
+</ul>
+</div>
+<br><br>
+<hr>
+<div align="center">Copyright &copy; e frontier, Inc. All rights reserved.</div>
+</body></html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>構造体 sxsdk::progress_dialog_interface</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- 作成： Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="main.html"><span>メインページ</span></a></li>
+      <li><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>構成</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>構成メンバ</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath"><a class="el" href="namespacesxsdk.html">sxsdk</a>::<a class="el" href="structsxsdk_1_1progress__dialog__interface.html">progress_dialog_interface</a>
+  </div>
+</div>
+<div class="contents">
+<h1>構造体 sxsdk::progress_dialog_interface</h1><!-- doxytag: class="sxsdk::progress_dialog_interface" --><!-- doxytag: inherits="unknown_interface" --><div class="dynheader">
+sxsdk::progress_dialog_interfaceに対する継承グラフ</div>
+<div class="dynsection">
+ <div class="center">
+  <img src="structsxsdk_1_1progress__dialog__interface.gif" usemap="#sxsdk::progress_dialog_interface_map" alt=""/>
+  <map id="sxsdk::progress_dialog_interface_map" name="sxsdk::progress_dialog_interface_map">
+<area href="classunknown__interface.html" alt="unknown_interface" shape="rect" coords="0,0,197,24"/>
+</map>
+ </div>
+</div>
+
+<p><a href="structsxsdk_1_1progress__dialog__interface-members.html">すべてのメンバ一覧</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Public メソッド</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1progress__dialog__interface.html#a94cd5a25825a1fb9a5434cfe2bd6ea72">set_range</a> (int start, int end, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">値の範囲を設定する。  <a href="#a94cd5a25825a1fb9a5434cfe2bd6ea72"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac6f67de88e413e9e96382643a8757b55"></a><!-- doxytag: member="sxsdk::progress_dialog_interface::set_position" ref="ac6f67de88e413e9e96382643a8757b55" args="(int position_param, void *=0)" -->
+virtual <a class="el" href="structsxsdk_1_1progress__dialog__interface.html">progress_dialog_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1progress__dialog__interface.html#ac6f67de88e413e9e96382643a8757b55">set_position</a> (int position_param, void *=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">プログレスバーの現在値（設定のみ）を設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1progress__dialog__interface.html#a9b35745126673b39dc0fa4e27561a8c5">step</a> (int step=1, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ポジションを進める。キャンセルボタンが押されると例外が投げられる。  <a href="#a9b35745126673b39dc0fa4e27561a8c5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1progress__dialog__interface.html#a7d146222ccdbba5b164acc4f5e28d306">set_position_nothrow</a> (int at)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">プログレスバーの現在値を設定する。キャンセルボタンが押されるとfalseが返される。  <a href="#a7d146222ccdbba5b164acc4f5e28d306"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1progress__dialog__interface.html#a61df1fb863a35e83062ef072f9c4c8a2">step_nothrow</a> (int by=1)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ポジションを進める。キャンセルボタンが押されるとfalseが返される。  <a href="#a61df1fb863a35e83062ef072f9c4c8a2"></a><br/></td></tr>
+</table>
+<hr/><h2>関数</h2>
+<a class="anchor" id="a7d146222ccdbba5b164acc4f5e28d306"></a><!-- doxytag: member="sxsdk::progress_dialog_interface::set_position_nothrow" ref="a7d146222ccdbba5b164acc4f5e28d306" args="(int at)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::progress_dialog_interface::set_position_nothrow </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>at</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>プログレスバーの現在値を設定する。キャンセルボタンが押されるとfalseが返される。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>at</em>&nbsp;</td><td>プログレスバーの現在値 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a94cd5a25825a1fb9a5434cfe2bd6ea72"></a><!-- doxytag: member="sxsdk::progress_dialog_interface::set_range" ref="a94cd5a25825a1fb9a5434cfe2bd6ea72" args="(int start, int end, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::progress_dialog_interface::set_range </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>end</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>値の範囲を設定する。 </p>
+<p>設定した数値に関わらず、ダイアログの表示では開始の値が０％、終了の値が１００％となる。</p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>start</em>&nbsp;</td><td>開始の値 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>end</em>&nbsp;</td><td>終了の値 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a9b35745126673b39dc0fa4e27561a8c5"></a><!-- doxytag: member="sxsdk::progress_dialog_interface::step" ref="a9b35745126673b39dc0fa4e27561a8c5" args="(int step=1, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::progress_dialog_interface::step </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>step</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>ポジションを進める。キャンセルボタンが押されると例外が投げられる。 </p>
+<p>呼び出すたびにプログレスの現在値が<em>step</em> だけ進み、<code><a class="el" href="structsxsdk_1_1progress__dialog__interface.html#a94cd5a25825a1fb9a5434cfe2bd6ea72" title="値の範囲を設定する。">set_range()</a></code> で設定した終了の値まで到達するとプログレスバーが閉じられる。</p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>step</em>&nbsp;</td><td>進行量 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a61df1fb863a35e83062ef072f9c4c8a2"></a><!-- doxytag: member="sxsdk::progress_dialog_interface::step_nothrow" ref="a61df1fb863a35e83062ef072f9c4c8a2" args="(int by=1)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::progress_dialog_interface::step_nothrow </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>by</em> = <code>1</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>ポジションを進める。キャンセルボタンが押されるとfalseが返される。 </p>
+<p>呼び出すたびにプログレスの現在値が<em>step</em> だけ進み、<code><a class="el" href="structsxsdk_1_1progress__dialog__interface.html#a94cd5a25825a1fb9a5434cfe2bd6ea72" title="値の範囲を設定する。">set_range()</a></code> で設定した終了の値まで到達するとプログレスバーが閉じられる。</p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>by</em>&nbsp;</td><td>進行量 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>この構造体の説明は次のファイルから生成されました:<ul>
+<li><a class="el" href="progressdialoginterface_8h_source.html">progressdialoginterface.h</a></li>
+</ul>
+</div>
+<br><br>
+<hr>
+<div align="center">Copyright &copy; e frontier, Inc. All rights reserved.</div>
+</body></html>

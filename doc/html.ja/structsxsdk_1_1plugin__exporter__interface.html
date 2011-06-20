@@ -1,0 +1,365 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>構造体 sxsdk::plugin_exporter_interface</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- 作成： Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="main.html"><span>メインページ</span></a></li>
+      <li><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>構成</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>構成メンバ</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath"><a class="el" href="namespacesxsdk.html">sxsdk</a>::<a class="el" href="structsxsdk_1_1plugin__exporter__interface.html">plugin_exporter_interface</a>
+  </div>
+</div>
+<div class="contents">
+<h1>構造体 sxsdk::plugin_exporter_interface</h1><!-- doxytag: class="sxsdk::plugin_exporter_interface" --><!-- doxytag: inherits="sxsdk::shade_interface" --><div class="dynheader">
+sxsdk::plugin_exporter_interfaceに対する継承グラフ</div>
+<div class="dynsection">
+ <div class="center">
+  <img src="structsxsdk_1_1plugin__exporter__interface.gif" usemap="#sxsdk::plugin_exporter_interface_map" alt=""/>
+  <map id="sxsdk::plugin_exporter_interface_map" name="sxsdk::plugin_exporter_interface_map">
+<area href="structsxsdk_1_1shade__interface.html" alt="sxsdk::shade_interface" shape="rect" coords="0,56,194,80"/>
+<area href="classunknown__interface.html" alt="unknown_interface" shape="rect" coords="0,0,194,24"/>
+</map>
+ </div>
+</div>
+
+<p><a href="structsxsdk_1_1plugin__exporter__interface-members.html">すべてのメンバ一覧</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Public メソッド</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structsxsdk_1_1scene__interface.html">sxsdk::scene_interface</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1plugin__exporter__interface.html#a22696274e2377329a42046dd9747b440">get_scene_interface</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">エクスポートするシーンを取得する。  <a href="#a22696274e2377329a42046dd9747b440"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1plugin__exporter__interface.html#a0140ac2dc4df0fa8c4d3bd0b7995602d">do_export</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">エクスポート処理を開始する。この関数の呼び出しは<code><a class="el" href="structsxsdk_1_1exporter__interface.html#afe6839918b8afc242739d78431be1d44" title="オーバライド可。ファイル保存ダイアログで保存先を指定した後に呼ばれ�...">exporter_interface::do_export()</a></code> 内で行う。  <a href="#a0140ac2dc4df0fa8c4d3bd0b7995602d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structsxsdk_1_1stream__interface.html">sxsdk::stream_interface</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1plugin__exporter__interface.html#af5fea325af10e34b6681f93d12066e6a">get_stream_interface</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">エクスポートするファイルのストリームを取得する。  <a href="#af5fea325af10e34b6681f93d12066e6a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structsxsdk_1_1text__stream__interface.html">text_stream_interface</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1plugin__exporter__interface.html#abd5c998fb27d221a50893d4742b103ba">get_text_stream_interface</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">エクスポートするファイルのテキストストリームを取得する。  <a href="#abd5c998fb27d221a50893d4742b103ba"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aab905062312b246cfccbc8a1c6fc2b7d"></a><!-- doxytag: member="sxsdk::plugin_exporter_interface::get_current_shape_interface" ref="aab905062312b246cfccbc8a1c6fc2b7d" args="(void *aux=0)" -->
+virtual shape_interface *&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_current_shape_interface</b> (void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af456762d402b05d8111e8470128f0563"></a><!-- doxytag: member="sxsdk::plugin_exporter_interface::get_transformation" ref="af456762d402b05d8111e8470128f0563" args="(void *aux=0)" -->
+virtual sxsdk::mat4&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1plugin__exporter__interface.html#af456762d402b05d8111e8470128f0563">get_transformation</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">変換マトリクスを取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aba30158017e120b85c113f4fd21e76df"></a><!-- doxytag: member="sxsdk::plugin_exporter_interface::get_all_objects" ref="aba30158017e120b85c113f4fd21e76df" args="(void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1plugin__exporter__interface.html#aba30158017e120b85c113f4fd21e76df">get_all_objects</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">エクスポートの設定ダイアログで「すべての形状」を出力が選択されているかを返す。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acac543b739ae2342d848796d9d602ab8"></a><!-- doxytag: member="sxsdk::plugin_exporter_interface::get_shade_interface" ref="acac543b739ae2342d848796d9d602ab8" args="(void *aux=0)" -->
+virtual <a class="el" href="structsxsdk_1_1shade__interface.html">shade_interface</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1plugin__exporter__interface.html#acac543b739ae2342d848796d9d602ab8">get_shade_interface</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">shade_interfaceを取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1plugin__exporter__interface.html#a97e586e1cacbd10b8d139149a3ae38b7">yield</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">プログラムの制御をShadeに渡す。  <a href="#a97e586e1cacbd10b8d139149a3ae38b7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1bbd79f9e99db81cb7c4de13ecfa6905"></a><!-- doxytag: member="sxsdk::plugin_exporter_interface::get_flip_face_shade" ref="a1bbd79f9e99db81cb7c4de13ecfa6905" args="(void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1plugin__exporter__interface.html#a1bbd79f9e99db81cb7c4de13ecfa6905">get_flip_face_shade</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">面を裏返すかどうかを取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2328c6522f58e74a74e4776da455fec7"></a><!-- doxytag: member="sxsdk::plugin_exporter_interface::get_fnum" ref="a2328c6522f58e74a74e4776da455fec7" args="(void *aux=0)" -->
+virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1plugin__exporter__interface.html#a2328c6522f58e74a74e4776da455fec7">get_fnum</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">出力先のファイル識別番号を取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1plugin__exporter__interface.html#a70a95959ed4fdb823d8ab273dcafc893">get_binary</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">バイナリデータで出力するかどうかを取得を取得する。  <a href="#a70a95959ed4fdb823d8ab273dcafc893"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9aab19af2d1f760dbf89c5daf1bfb20e"></a><!-- doxytag: member="sxsdk::plugin_exporter_interface::get_file_spec_obsolete" ref="a9aab19af2d1f760dbf89c5daf1bfb20e" args="(void *aux=0)" -->
+virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_file_spec_obsolete</b> (void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa5ad5eccdf9d9db2c5f0e1e689ef13c8"></a><!-- doxytag: member="sxsdk::plugin_exporter_interface::delete_file" ref="aa5ad5eccdf9d9db2c5f0e1e689ef13c8" args="(void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1plugin__exporter__interface.html#aa5ad5eccdf9d9db2c5f0e1e689ef13c8">delete_file</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">出力先のファイルを削除する。必ず、<code><a class="el" href="structsxsdk_1_1exporter__interface.html#a256c5adb91d93b08a3598ba4a00ee586" title="オーバライド可。エクスポート先ファイルが閉じられた後に呼ばれる。...">exporter_interface::clean_up()</a></code> で呼び出す。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad5751a564f67bff6aa46a936240f436a"></a><!-- doxytag: member="sxsdk::plugin_exporter_interface::get_current_shape" ref="ad5751a564f67bff6aa46a936240f436a" args="(void *aux=0)" -->
+virtual <a class="el" href="structsxsdk_1_1shape__class.html">sxsdk::shape_class</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1plugin__exporter__interface.html#ad5751a564f67bff6aa46a936240f436a">get_current_shape</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">現在処理中の形状を取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a60f844a8bd91c5c0d642e39b01ded97b"></a><!-- doxytag: member="sxsdk::plugin_exporter_interface::get_flip_face" ref="a60f844a8bd91c5c0d642e39b01ded97b" args="(void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1plugin__exporter__interface.html#a60f844a8bd91c5c0d642e39b01ded97b">get_flip_face</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">面が反転されているかどうかを取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1plugin__exporter__interface.html#a87a4d1ba5bcaa4a98d09e8ea85c818c6">get_subdivision_level</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">再分割のレベルを返す。0:分割しない（または最低限の分割）、1:荒い分割、2:普通の分割、3:細かい分割....  <a href="#a87a4d1ba5bcaa4a98d09e8ea85c818c6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a84749f940d9df0f82da48d168af5ba90"></a><!-- doxytag: member="sxsdk::plugin_exporter_interface::get_render" ref="a84749f940d9df0f82da48d168af5ba90" args="(void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1plugin__exporter__interface.html#a84749f940d9df0f82da48d168af5ba90">get_render</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">レンダリング対象の形状かどうかを返す。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structsxsdk_1_1proxy__shape__class.html">proxy_shape_class</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1plugin__exporter__interface.html#a393954c2e5cb319c72390efd0d4a21b5">get_current_proxy_shape</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">現在処理中の形状のプロクシ形状を取得する。  <a href="#a393954c2e5cb319c72390efd0d4a21b5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structsxsdk_1_1proxy__shape__class.html">proxy_shape_class</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1plugin__exporter__interface.html#a659501fe48f01435fa44c12875904b81">get_root_proxy_shape</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ルートパートのプロクシ形状を取得する。  <a href="#a659501fe48f01435fa44c12875904b81"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1plugin__exporter__interface.html#aec13fb59656d9242dcf618124d3c3c9e">get_file_path</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">出力先のファイルのパスを取得する。  <a href="#aec13fb59656d9242dcf618124d3c3c9e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1plugin__exporter__interface.html#a49e0b4b362f160e0cddd189b1a1623b3">get_active</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">カレントの形状が選択されているかどうかかどうかを返す。を取得する。  <a href="#a49e0b4b362f160e0cddd189b1a1623b3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1plugin__exporter__interface.html#aaa9fd22672035c5865b2fe89032ea5d2">get_rendering_flag</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">カレントの形状の「レンダリング」チェックボックスの継承結果(1: オン, 0: オフ, -1: 継承)を取得する。  <a href="#aaa9fd22672035c5865b2fe89032ea5d2"></a><br/></td></tr>
+</table>
+<hr/><h2>関数</h2>
+<a class="anchor" id="a0140ac2dc4df0fa8c4d3bd0b7995602d"></a><!-- doxytag: member="sxsdk::plugin_exporter_interface::do_export" ref="a0140ac2dc4df0fa8c4d3bd0b7995602d" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::plugin_exporter_interface::do_export </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>エクスポート処理を開始する。この関数の呼び出しは<code><a class="el" href="structsxsdk_1_1exporter__interface.html#afe6839918b8afc242739d78431be1d44" title="オーバライド可。ファイル保存ダイアログで保存先を指定した後に呼ばれ�...">exporter_interface::do_export()</a></code> 内で行う。 </p>
+<p>この関数が呼び出されるとエクスポート処理が開始され、エクスポータプラグインのコールバックが順次呼び出される。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a49e0b4b362f160e0cddd189b1a1623b3"></a><!-- doxytag: member="sxsdk::plugin_exporter_interface::get_active" ref="a49e0b4b362f160e0cddd189b1a1623b3" args="(void *=0) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::plugin_exporter_interface::get_active </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>カレントの形状が選択されているかどうかかどうかを返す。を取得する。 </p>
+<p>親の方向に辿りながら形状が選択されているかどうかを調べてその結果を返す。リンク形状内のツリーを辿っている場合にも選択状態を正しく取得することができる。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a70a95959ed4fdb823d8ab273dcafc893"></a><!-- doxytag: member="sxsdk::plugin_exporter_interface::get_binary" ref="a70a95959ed4fdb823d8ab273dcafc893" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::plugin_exporter_interface::get_binary </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>バイナリデータで出力するかどうかを取得を取得する。 </p>
+<p>trueが返された場合は<code><a class="el" href="structsxsdk_1_1plugin__exporter__interface.html#af5fea325af10e34b6681f93d12066e6a" title="エクスポートするファイルのストリームを取得する。">get_stream_interface()</a></code> で取得したストリームに、falseが返された場合は<code><a class="el" href="structsxsdk_1_1plugin__exporter__interface.html#abd5c998fb27d221a50893d4742b103ba" title="エクスポートするファイルのテキストストリームを取得する。...">get_text_stream_interface()</a></code> で取得したストリームに書き込む。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a393954c2e5cb319c72390efd0d4a21b5"></a><!-- doxytag: member="sxsdk::plugin_exporter_interface::get_current_proxy_shape" ref="a393954c2e5cb319c72390efd0d4a21b5" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structsxsdk_1_1proxy__shape__class.html">proxy_shape_class</a>* sxsdk::plugin_exporter_interface::get_current_proxy_shape </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>現在処理中の形状のプロクシ形状を取得する。 </p>
+<p><code><a class="el" href="structsxsdk_1_1proxy__shape__class.html">proxy_shape_class</a></code> を使用すると、リンク形状を展開した状態のシーンの階層構造を取得できる。 </p>
+
+</div>
+</div>
+<a class="anchor" id="aec13fb59656d9242dcf618124d3c3c9e"></a><!-- doxytag: member="sxsdk::plugin_exporter_interface::get_file_path" ref="aec13fb59656d9242dcf618124d3c3c9e" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const char* sxsdk::plugin_exporter_interface::get_file_path </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>出力先のファイルのパスを取得する。 </p>
+<p><code><a class="el" href="structsxsdk_1_1stream__interface.html#a0a79ccc6ee4c5db014fcb9e1fd08e297" title="フルパス名(ストリームがファイルの場合にのみ有効)を取得する。...">stream_interface::get_file_path()</a></code> は一時ファイルのパスを返す場合もあるため、実際の出力先を取得する場合はこちらを使用する。 </p>
+
+</div>
+</div>
+<a class="anchor" id="aaa9fd22672035c5865b2fe89032ea5d2"></a><!-- doxytag: member="sxsdk::plugin_exporter_interface::get_rendering_flag" ref="aaa9fd22672035c5865b2fe89032ea5d2" args="(void *=0) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int sxsdk::plugin_exporter_interface::get_rendering_flag </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>カレントの形状の「レンダリング」チェックボックスの継承結果(1: オン, 0: オフ, -1: 継承)を取得する。 </p>
+<p>親の方向に辿りながら形状が選択されているかどうかを調べてその結果を返す。リンク形状内のツリーを辿っている場合にも選択状態を正しく取得することができる。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a659501fe48f01435fa44c12875904b81"></a><!-- doxytag: member="sxsdk::plugin_exporter_interface::get_root_proxy_shape" ref="a659501fe48f01435fa44c12875904b81" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structsxsdk_1_1proxy__shape__class.html">proxy_shape_class</a>* sxsdk::plugin_exporter_interface::get_root_proxy_shape </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>ルートパートのプロクシ形状を取得する。 </p>
+<p><code><a class="el" href="structsxsdk_1_1proxy__shape__class.html">proxy_shape_class</a></code> を使用すると、リンク形状を展開した状態のシーンの階層構造を取得できる。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a22696274e2377329a42046dd9747b440"></a><!-- doxytag: member="sxsdk::plugin_exporter_interface::get_scene_interface" ref="a22696274e2377329a42046dd9747b440" args="(void *=0) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structsxsdk_1_1scene__interface.html">sxsdk::scene_interface</a>* sxsdk::plugin_exporter_interface::get_scene_interface </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>エクスポートするシーンを取得する。 </p>
+<p>エクスポート処理中にシーンの情報を取得する場合は、必ずこの関数で取得した<code><a class="el" href="structsxsdk_1_1scene__interface.html">scene_interface</a></code> を使用する。 </p>
+
+<p><a class="el" href="structsxsdk_1_1shade__interface.html#a3c0645c8b5acbe164aed7715c6674931">sxsdk::shade_interface</a>を再定義しています。</p>
+
+</div>
+</div>
+<a class="anchor" id="af5fea325af10e34b6681f93d12066e6a"></a><!-- doxytag: member="sxsdk::plugin_exporter_interface::get_stream_interface" ref="af5fea325af10e34b6681f93d12066e6a" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structsxsdk_1_1stream__interface.html">sxsdk::stream_interface</a>* sxsdk::plugin_exporter_interface::get_stream_interface </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>エクスポートするファイルのストリームを取得する。 </p>
+<p>エクスポートの設定ダイアログでバイナリが選択されたときに有効。<code><a class="el" href="structsxsdk_1_1plugin__exporter__interface.html#a70a95959ed4fdb823d8ab273dcafc893" title="バイナリデータで出力するかどうかを取得を取得する。">get_binary()</a></code> でどちらが選択されたかを取得する。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a87a4d1ba5bcaa4a98d09e8ea85c818c6"></a><!-- doxytag: member="sxsdk::plugin_exporter_interface::get_subdivision_level" ref="a87a4d1ba5bcaa4a98d09e8ea85c818c6" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int sxsdk::plugin_exporter_interface::get_subdivision_level </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>再分割のレベルを返す。0:分割しない（または最低限の分割）、1:荒い分割、2:普通の分割、3:細かい分割.... </p>
+<p>エクスポートの設定ダイアログで設定された曲面の分割を返す。 </p>
+
+</div>
+</div>
+<a class="anchor" id="abd5c998fb27d221a50893d4742b103ba"></a><!-- doxytag: member="sxsdk::plugin_exporter_interface::get_text_stream_interface" ref="abd5c998fb27d221a50893d4742b103ba" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structsxsdk_1_1text__stream__interface.html">text_stream_interface</a>* sxsdk::plugin_exporter_interface::get_text_stream_interface </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>エクスポートするファイルのテキストストリームを取得する。 </p>
+<p>エクスポートの設定ダイアログでテキストが選択されたときに有効。<code><a class="el" href="structsxsdk_1_1plugin__exporter__interface.html#a70a95959ed4fdb823d8ab273dcafc893" title="バイナリデータで出力するかどうかを取得を取得する。">get_binary()</a></code> でどちらが選択されたかを取得する。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a97e586e1cacbd10b8d139149a3ae38b7"></a><!-- doxytag: member="sxsdk::plugin_exporter_interface::yield" ref="a97e586e1cacbd10b8d139149a3ae38b7" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::plugin_exporter_interface::yield </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>プログラムの制御をShadeに渡す。 </p>
+<p>エクスポート中に各種ユーザインタフェイスを適切に更新するために、<code><a class="el" href="structsxsdk_1_1plugin__exporter__interface.html#a97e586e1cacbd10b8d139149a3ae38b7" title="プログラムの制御をShadeに渡す。">yield()</a></code> を定期的に呼ぶ必要がある。 </p>
+
+</div>
+</div>
+<hr/>この構造体の説明は次のファイルから生成されました:<ul>
+<li><a class="el" href="pluginexporterinterface_8h_source.html">pluginexporterinterface.h</a></li>
+</ul>
+</div>
+<br><br>
+<hr>
+<div align="center">Copyright &copy; e frontier, Inc. All rights reserved.</div>
+</body></html>

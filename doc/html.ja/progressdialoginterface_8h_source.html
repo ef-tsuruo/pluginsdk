@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>progressdialoginterface.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- 作成： Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="main.html"><span>メインページ</span></a></li>
+      <li><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+<h1>progressdialoginterface.h</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// this file has been created by makeheader.py</span>
+<a name="l00002"></a>00002 <span class="comment">// ja utf-8</span>
+<a name="l00003"></a>00003 <span class="preprocessor">#pragma once</span>
+<a name="l00010"></a>00010 <span class="preprocessor">namespace sxsdk {</span>
+<a name="l00011"></a><a class="code" href="structsxsdk_1_1progress__dialog__interface.html">00011</a> <span class="preprocessor"></span><span class="keyword">struct </span><a class="code" href="structsxsdk_1_1progress__dialog__interface.html">progress_dialog_interface</a> : <span class="keyword">public</span> <a class="code" href="classunknown__interface.html">unknown_interface</a> {
+<a name="l00012"></a>00012 <span class="keyword">public</span>:
+<a name="l00019"></a>00019     <span class="keyword">virtual</span> <span class="keywordtype">void</span> set_range (<span class="keywordtype">int</span> start, <span class="keywordtype">int</span> end, <span class="keywordtype">void</span>* aux = 0);
+<a name="l00021"></a>00021     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1progress__dialog__interface.html">progress_dialog_interface</a> &amp;set_position (<span class="keywordtype">int</span> position_param, <span class="keywordtype">void</span> * = 0);
+<a name="l00027"></a>00027     <span class="keyword">virtual</span> <span class="keywordtype">void</span> step (<span class="keywordtype">int</span> step = 1, <span class="keywordtype">void</span>* aux = 0);
+<a name="l00030"></a>00030     <span class="keyword">virtual</span> <span class="keywordtype">bool</span> set_position_nothrow (<span class="keywordtype">int</span> at);
+<a name="l00036"></a>00036     <span class="keyword">virtual</span> <span class="keywordtype">bool</span> step_nothrow (<span class="keywordtype">int</span> by = 1);
+<a name="l00037"></a>00037 };
+<a name="l00038"></a>00038 } <span class="comment">// sxsdk</span>
+</pre></div></div>
+<br><br>
+<hr>
+<div align="center">Copyright &copy; e frontier, Inc. All rights reserved.</div>
+</body></html>

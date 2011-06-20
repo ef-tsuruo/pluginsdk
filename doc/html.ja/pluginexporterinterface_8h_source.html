@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>pluginexporterinterface.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- 作成： Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="main.html"><span>メインページ</span></a></li>
+      <li><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+<h1>pluginexporterinterface.h</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// this file has been created by makeheader.py</span>
+<a name="l00002"></a>00002 <span class="comment">// ja utf-8</span>
+<a name="l00003"></a>00003 <span class="preprocessor">#pragma once</span>
+<a name="l00014"></a>00014 <span class="preprocessor">namespace sxsdk {</span>
+<a name="l00015"></a><a class="code" href="structsxsdk_1_1plugin__exporter__interface.html">00015</a> <span class="preprocessor"></span><span class="keyword">struct </span><a class="code" href="structsxsdk_1_1plugin__exporter__interface.html">plugin_exporter_interface</a> : <span class="keyword">public</span> <a class="code" href="structsxsdk_1_1shade__interface.html">shade_interface</a> {
+<a name="l00016"></a>00016 <span class="keyword">public</span>:
+<a name="l00021"></a>00021     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1scene__interface.html">sxsdk::scene_interface</a>* get_scene_interface (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00026"></a>00026     <span class="keyword">virtual</span> <span class="keywordtype">void</span> do_export (<span class="keywordtype">void</span>* aux = 0);
+<a name="l00031"></a>00031     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1stream__interface.html">sxsdk::stream_interface</a>* get_stream_interface (<span class="keywordtype">void</span>* aux = 0);
+<a name="l00036"></a>00036     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1text__stream__interface.html">text_stream_interface</a>* get_text_stream_interface (<span class="keywordtype">void</span>* aux = 0);
+<a name="l00037"></a>00037     <span class="keyword">virtual</span> shape_interface* get_current_shape_interface (<span class="keywordtype">void</span>* aux = 0);
+<a name="l00039"></a>00039     <span class="keyword">virtual</span> sxsdk::mat4 get_transformation (<span class="keywordtype">void</span>* aux = 0);
+<a name="l00041"></a>00041     <span class="keyword">virtual</span> <span class="keywordtype">bool</span> get_all_objects (<span class="keywordtype">void</span>* aux = 0);
+<a name="l00043"></a>00043     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1shade__interface.html">shade_interface</a>* get_shade_interface (<span class="keywordtype">void</span>* aux = 0);
+<a name="l00048"></a>00048     <span class="keyword">virtual</span> <span class="keywordtype">void</span> yield (<span class="keywordtype">void</span>* aux = 0);
+<a name="l00050"></a>00050     <span class="keyword">virtual</span> <span class="keywordtype">bool</span> get_flip_face_shade (<span class="keywordtype">void</span>* aux = 0);
+<a name="l00052"></a>00052     <span class="keyword">virtual</span> <span class="keywordtype">int</span> get_fnum (<span class="keywordtype">void</span>* aux = 0);
+<a name="l00057"></a>00057     <span class="keyword">virtual</span> <span class="keywordtype">bool</span> get_binary (<span class="keywordtype">void</span>* aux = 0);
+<a name="l00058"></a>00058     <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* get_file_spec_obsolete (<span class="keywordtype">void</span>* aux = 0);
+<a name="l00060"></a>00060     <span class="keyword">virtual</span> <span class="keywordtype">void</span> delete_file (<span class="keywordtype">void</span>* aux = 0);
+<a name="l00062"></a>00062     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1shape__class.html">sxsdk::shape_class</a>* get_current_shape (<span class="keywordtype">void</span>* aux = 0);
+<a name="l00064"></a>00064     <span class="keyword">virtual</span> <span class="keywordtype">bool</span> get_flip_face (<span class="keywordtype">void</span>* aux = 0);
+<a name="l00069"></a>00069     <span class="keyword">virtual</span> <span class="keywordtype">int</span> get_subdivision_level (<span class="keywordtype">void</span>* aux = 0);
+<a name="l00070"></a>00070 <span class="preprocessor">#ifndef DOXYGEN_SKIP</span>
+<a name="l00071"></a>00071 <span class="preprocessor"></span>    <span class="keyword">virtual</span> <span class="keywordtype">int</span> plugin_exporter_interface_dummy16(<span class="keywordtype">void</span> *) { assert(<span class="keyword">false</span>); <span class="keywordflow">throw</span> <span class="stringliteral">&quot;invalid interface plugin_exporter_interface&quot;</span>; <span class="keywordflow">return</span> 0; } <span class="comment">// 16</span>
+<a name="l00072"></a>00072 <span class="preprocessor">#endif</span>
+<a name="l00074"></a>00074 <span class="preprocessor">    virtual bool get_render (void* aux = 0);</span>
+<a name="l00079"></a>00079 <span class="preprocessor">    virtual proxy_shape_class* get_current_proxy_shape (void* aux = 0);</span>
+<a name="l00084"></a>00084 <span class="preprocessor">    virtual proxy_shape_class* get_root_proxy_shape (void* aux = 0);</span>
+<a name="l00089"></a>00089 <span class="preprocessor">    virtual const char* get_file_path (void* aux = 0);</span>
+<a name="l00094"></a>00094 <span class="preprocessor">    virtual bool get_active (void * = 0) const;</span>
+<a name="l00099"></a>00099 <span class="preprocessor">    virtual int get_rendering_flag (void * = 0) const;</span>
+<a name="l00100"></a>00100 <span class="preprocessor"></span>};
+<a name="l00101"></a>00101 } <span class="comment">// sxsdk</span>
+</pre></div></div>
+<br><br>
+<hr>
+<div align="center">Copyright &copy; e frontier, Inc. All rights reserved.</div>
+</body></html>

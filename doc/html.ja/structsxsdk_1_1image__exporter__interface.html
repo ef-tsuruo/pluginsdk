@@ -1,0 +1,687 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>構造体 sxsdk::image_exporter_interface</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- 作成： Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="main.html"><span>メインページ</span></a></li>
+      <li><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>構成</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>構成メンバ</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath"><a class="el" href="namespacesxsdk.html">sxsdk</a>::<a class="el" href="structsxsdk_1_1image__exporter__interface.html">image_exporter_interface</a>
+  </div>
+</div>
+<div class="contents">
+<h1>構造体 sxsdk::image_exporter_interface</h1><!-- doxytag: class="sxsdk::image_exporter_interface" --><!-- doxytag: inherits="sxsdk::plugin_interface" --><div class="dynheader">
+sxsdk::image_exporter_interfaceに対する継承グラフ</div>
+<div class="dynsection">
+ <div class="center">
+  <img src="structsxsdk_1_1image__exporter__interface.gif" usemap="#sxsdk::image_exporter_interface_map" alt=""/>
+  <map id="sxsdk::image_exporter_interface_map" name="sxsdk::image_exporter_interface_map">
+<area href="structsxsdk_1_1plugin__interface.html" alt="sxsdk::plugin_interface" shape="rect" coords="0,56,193,80"/>
+<area href="classunknown__interface.html" alt="unknown_interface" shape="rect" coords="0,0,193,24"/>
+</map>
+ </div>
+</div>
+
+<p><a href="structsxsdk_1_1image__exporter__interface-members.html">すべてのメンバ一覧</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Public メソッド</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1image__exporter__interface.html#a2a50fed3a0b578bcc550990784662f27">get_file_extension</a> (int index, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。対応する画像ファイルの拡張子を登録する。複数の拡張子を登録可能。  <a href="#a2a50fed3a0b578bcc550990784662f27"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1image__exporter__interface.html#a77c8716330c2f9767573c33102e9066a">get_file_description</a> (int index, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。ファイルの種類ポップアップメニューに表示する画像ファイル形式の名称を登録する。  <a href="#a77c8716330c2f9767573c33102e9066a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1image__exporter__interface.html#aed3482a29f8c60d4646dc44d62d92947">do_export</a> (int index, <a class="el" href="structsxsdk_1_1image__interface.html">sxsdk::image_interface</a> *image, <a class="el" href="structsxsdk_1_1stream__interface.html">stream_interface</a> *stream, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。イメージのエクスポートを行うときに呼ばれる。この関数でファイルへの書き出しを行う。  <a href="#aed3482a29f8c60d4646dc44d62d92947"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1image__exporter__interface.html#acbb685b2712842d09532ed5109fd6322">do_pre_export</a> (int index, <a class="el" href="structsxsdk_1_1image__interface.html">sxsdk::image_interface</a> *image, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。エクスポート処理を行う前に呼ばれる。  <a href="#acbb685b2712842d09532ed5109fd6322"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1image__exporter__interface.html#a1fe62c46d27b22d9b2eecba920c4f4be">do_post_export</a> (int index, <a class="el" href="structsxsdk_1_1image__interface.html">sxsdk::image_interface</a> *image, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。エクスポート処理を行った後に呼ばれる。  <a href="#a1fe62c46d27b22d9b2eecba920c4f4be"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1image__exporter__interface.html#af3238cc7d30780a03373b0de0a75dec9">accepts_animation</a> (int index, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。複数のイメージからなるアニメーションを一個のストリームに書き出す場合には、<code>trueを返す。</code>  <a href="#af3238cc7d30780a03373b0de0a75dec9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a867f879053afbea1792271180bbdfbef"></a><!-- doxytag: member="sxsdk::image_exporter_interface::get_file_type" ref="a867f879053afbea1792271180bbdfbef" args="(int i, void *aux=0)" -->
+virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1image__exporter__interface.html#a867f879053afbea1792271180bbdfbef">get_file_type</a> (int i, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。ファイルタイプを返す。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6a39fdfd5fdad5c4f0e5d37fd52c79ff"></a><!-- doxytag: member="sxsdk::image_exporter_interface::get_file_creator" ref="a6a39fdfd5fdad5c4f0e5d37fd52c79ff" args="(int i, void *aux=0)" -->
+virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1image__exporter__interface.html#a6a39fdfd5fdad5c4f0e5d37fd52c79ff">get_file_creator</a> (int i, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。ファイルクリエータを返す。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1image__exporter__interface.html#aa5207ea8f042ff2d643078611ef683bf">accepts_multilayer</a> (int index, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。複数のレイヤーを持ったイメージを一個のストリームに書き出すことができる場合には、<code>trueを返す。</code>  <a href="#aa5207ea8f042ff2d643078611ef683bf"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1image__exporter__interface.html#a796391fa4acf4bfc2487bc18aec9cbdf">do_multilayer_export</a> (int index, int n, <a class="el" href="structsxsdk_1_1image__layer__interface.html">sxsdk::image_layer_interface</a> **images, <a class="el" href="structsxsdk_1_1stream__interface.html">stream_interface</a> *stream, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。複数のレイヤーを持ったイメージのエクスポートを行うときに呼ばれる。この関数でファイルへの書き出しを行う。  <a href="#a796391fa4acf4bfc2487bc18aec9cbdf"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1image__exporter__interface.html#a78175f5b03031a36aee86e6815f90eb1">do_pre_multilayer_export</a> (int index, <a class="el" href="structsxsdk_1_1image__layer__interface.html">sxsdk::image_layer_interface</a> *image, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。複数のレイヤーを持ったイメージのエクスポート処理を行う前に、レイヤーの数だけ呼ばれる。  <a href="#a78175f5b03031a36aee86e6815f90eb1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1image__exporter__interface.html#a788c459e213c815e7e8b74a5694002c7">do_post_multilayer_export</a> (int index, <a class="el" href="structsxsdk_1_1image__layer__interface.html">sxsdk::image_layer_interface</a> *image, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。複数のレイヤーを持ったイメージのエクスポート処理を行った後にレイヤーの数だけ呼ばれる。  <a href="#a788c459e213c815e7e8b74a5694002c7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1image__exporter__interface.html#a458e5c065bfa12ba034eb5de75d63dc3">is_multilayer_only</a> (int index, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。複数のレイヤーを持ったイメージのみを書き出すことができる場合には、<code>trueを返す。</code>  <a href="#a458e5c065bfa12ba034eb5de75d63dc3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1image__exporter__interface.html#aa178c565ae15fd5572d47a9970b368c9">use_custom_export</a> (int index, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。独自ストリームを用いてエクスポートする<code>trueを返す。</code>  <a href="#aa178c565ae15fd5572d47a9970b368c9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1image__exporter__interface.html#ae3db3c743983b8154effa6aea5f81f18">do_export_custom</a> (int index, <a class="el" href="structsxsdk_1_1image__interface.html">sxsdk::image_interface</a> *image, const std::string &amp;path, <a class="el" href="structsxsdk_1_1scene__interface.html">sxsdk::scene_interface</a> *scene=0, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1image__exporter__interface.html#acce142ac006841bc4de4e83abc5a589a">do_multilayer_export_custom</a> (int index, <a class="el" href="structsxsdk_1_1image__interface.html">sxsdk::image_interface</a> *image, const std::string &amp;path, <a class="el" href="structsxsdk_1_1scene__interface.html">sxsdk::scene_interface</a> *scene=0, void *aux=0)</td></tr>
+</table>
+<hr/><h2>関数</h2>
+<a class="anchor" id="af3238cc7d30780a03373b0de0a75dec9"></a><!-- doxytag: member="sxsdk::image_exporter_interface::accepts_animation" ref="af3238cc7d30780a03373b0de0a75dec9" args="(int index, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::image_exporter_interface::accepts_animation </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。複数のイメージからなるアニメーションを一個のストリームに書き出す場合には、<code>trueを返す。</code> </p>
+<p>デフォルトでは<code>falseを返し、その場合、一個のイメージのみエクスポートできることを示す。</code> </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>index</em>&nbsp;</td><td>インデクス値。複数の画像形式に対応するときに種類を判別するために使用する。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aa5207ea8f042ff2d643078611ef683bf"></a><!-- doxytag: member="sxsdk::image_exporter_interface::accepts_multilayer" ref="aa5207ea8f042ff2d643078611ef683bf" args="(int index, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::image_exporter_interface::accepts_multilayer </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。複数のレイヤーを持ったイメージを一個のストリームに書き出すことができる場合には、<code>trueを返す。</code> </p>
+<p><code>trueを返した場合、複数レイヤーを持ったイメージの保存時に<code><a class="el" href="structsxsdk_1_1image__exporter__interface.html#a796391fa4acf4bfc2487bc18aec9cbdf" title="オーバライド可。複数のレイヤーを持ったイメージのエクスポートを行う�...">do_multilayer_export()</a>が呼び出される。また、その呼び出しの前後にイメージのレイヤーの数だけ<code><a class="el" href="structsxsdk_1_1image__exporter__interface.html#a78175f5b03031a36aee86e6815f90eb1" title="オーバライド可。複数のレイヤーを持ったイメージのエクスポート処理を�...">do_pre_multilayer_export()</a></code>,</code> <code><a class="el" href="structsxsdk_1_1image__exporter__interface.html#a788c459e213c815e7e8b74a5694002c7" title="オーバライド可。複数のレイヤーを持ったイメージのエクスポート処理を�...">do_post_multilayer_export()</a>が呼び出される。</code>  </code> デフォルトでは<code>falseを返し、その場合、一個のイメージのみエクスポートできることを示す。</code> </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>index</em>&nbsp;</td><td>インデクス値。複数の画像形式に対応するときに種類を判別するために使用する。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aed3482a29f8c60d4646dc44d62d92947"></a><!-- doxytag: member="sxsdk::image_exporter_interface::do_export" ref="aed3482a29f8c60d4646dc44d62d92947" args="(int index, sxsdk::image_interface *image, stream_interface *stream, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::image_exporter_interface::do_export </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1image__interface.html">sxsdk::image_interface</a> *&nbsp;</td>
+          <td class="paramname"> <em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1stream__interface.html">stream_interface</a> *&nbsp;</td>
+          <td class="paramname"> <em>stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。イメージのエクスポートを行うときに呼ばれる。この関数でファイルへの書き出しを行う。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>index</em>&nbsp;</td><td>インデクス値。複数の画像形式に対応するときに種類を判別するために使用する。 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>image</em>&nbsp;</td><td>エクスポートするイメージ </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>stream</em>&nbsp;</td><td>エクスポート先となるストリーム </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ae3db3c743983b8154effa6aea5f81f18"></a><!-- doxytag: member="sxsdk::image_exporter_interface::do_export_custom" ref="ae3db3c743983b8154effa6aea5f81f18" args="(int index, sxsdk::image_interface *image, const std::string &amp;path, sxsdk::scene_interface *scene=0, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::image_exporter_interface::do_export_custom </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1image__interface.html">sxsdk::image_interface</a> *&nbsp;</td>
+          <td class="paramname"> <em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1scene__interface.html">sxsdk::scene_interface</a> *&nbsp;</td>
+          <td class="paramname"> <em>scene</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>index</em>&nbsp;</td><td>インデクス値。複数の画像形式に対応するときに種類を判別するために使用する。 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>image</em>&nbsp;</td><td>エクスポートするイメージ </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>path</em>&nbsp;</td><td>ファイルのパス </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a796391fa4acf4bfc2487bc18aec9cbdf"></a><!-- doxytag: member="sxsdk::image_exporter_interface::do_multilayer_export" ref="a796391fa4acf4bfc2487bc18aec9cbdf" args="(int index, int n, sxsdk::image_layer_interface **images, stream_interface *stream, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::image_exporter_interface::do_multilayer_export </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1image__layer__interface.html">sxsdk::image_layer_interface</a> **&nbsp;</td>
+          <td class="paramname"> <em>images</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1stream__interface.html">stream_interface</a> *&nbsp;</td>
+          <td class="paramname"> <em>stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。複数のレイヤーを持ったイメージのエクスポートを行うときに呼ばれる。この関数でファイルへの書き出しを行う。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>index</em>&nbsp;</td><td>インデクス値。複数の画像形式に対応するときに種類を判別するために使用する。 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>n</em>&nbsp;</td><td>レイヤー数。<em>images</em>, <em>names</em>, <em>id_names</em>, <em>channel_namesの配列のサイズが渡される。</em> </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>images</em>&nbsp;</td><td>エクスポートするイメージレイヤーのリスト </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>stream</em>&nbsp;</td><td>エクスポート先となるストリーム </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="acce142ac006841bc4de4e83abc5a589a"></a><!-- doxytag: member="sxsdk::image_exporter_interface::do_multilayer_export_custom" ref="acce142ac006841bc4de4e83abc5a589a" args="(int index, sxsdk::image_interface *image, const std::string &amp;path, sxsdk::scene_interface *scene=0, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::image_exporter_interface::do_multilayer_export_custom </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1image__interface.html">sxsdk::image_interface</a> *&nbsp;</td>
+          <td class="paramname"> <em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&nbsp;</td>
+          <td class="paramname"> <em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1scene__interface.html">sxsdk::scene_interface</a> *&nbsp;</td>
+          <td class="paramname"> <em>scene</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>index</em>&nbsp;</td><td>インデクス値。複数の画像形式に対応するときに種類を判別するために使用する。 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>image</em>&nbsp;</td><td>エクスポートするイメージ </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>path</em>&nbsp;</td><td>ファイルのパス </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a1fe62c46d27b22d9b2eecba920c4f4be"></a><!-- doxytag: member="sxsdk::image_exporter_interface::do_post_export" ref="a1fe62c46d27b22d9b2eecba920c4f4be" args="(int index, sxsdk::image_interface *image, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::image_exporter_interface::do_post_export </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1image__interface.html">sxsdk::image_interface</a> *&nbsp;</td>
+          <td class="paramname"> <em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。エクスポート処理を行った後に呼ばれる。 </p>
+<p>アニメーションを連番イメージファイルとして作成する場合、<code><a class="el" href="structsxsdk_1_1image__exporter__interface.html#aed3482a29f8c60d4646dc44d62d92947" title="オーバライド可。イメージのエクスポートを行うときに呼ばれる。この関�...">do_export()</a></code> 関数が繰り返し呼ばれるが、その一連の呼び出しの後に一度だけ<code><a class="el" href="structsxsdk_1_1image__exporter__interface.html#a1fe62c46d27b22d9b2eecba920c4f4be" title="オーバライド可。エクスポート処理を行った後に呼ばれる。...">do_post_export()</a></code> が呼ばれる。</p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>index</em>&nbsp;</td><td>インデクス値。複数の画像形式に対応するときに種類を判別するために使用する。 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>image</em>&nbsp;</td><td>エクスポートしたイメージ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a788c459e213c815e7e8b74a5694002c7"></a><!-- doxytag: member="sxsdk::image_exporter_interface::do_post_multilayer_export" ref="a788c459e213c815e7e8b74a5694002c7" args="(int index, sxsdk::image_layer_interface *image, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::image_exporter_interface::do_post_multilayer_export </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1image__layer__interface.html">sxsdk::image_layer_interface</a> *&nbsp;</td>
+          <td class="paramname"> <em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。複数のレイヤーを持ったイメージのエクスポート処理を行った後にレイヤーの数だけ呼ばれる。 </p>
+<p>アニメーションを連番イメージファイルとして作成する場合、<code><a class="el" href="structsxsdk_1_1image__exporter__interface.html#a796391fa4acf4bfc2487bc18aec9cbdf" title="オーバライド可。複数のレイヤーを持ったイメージのエクスポートを行う�...">do_multilayer_export()</a></code> 関数が繰り返し呼ばれるが、その一連の呼び出しの後に一度だけ<code><a class="el" href="structsxsdk_1_1image__exporter__interface.html#a788c459e213c815e7e8b74a5694002c7" title="オーバライド可。複数のレイヤーを持ったイメージのエクスポート処理を�...">do_post_multilayer_export()</a></code> が呼ばれる。</p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>index</em>&nbsp;</td><td>インデクス値。複数の画像形式に対応するときに種類を判別するために使用する。 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>image</em>&nbsp;</td><td>エクスポートするイメージレイヤー </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="acbb685b2712842d09532ed5109fd6322"></a><!-- doxytag: member="sxsdk::image_exporter_interface::do_pre_export" ref="acbb685b2712842d09532ed5109fd6322" args="(int index, sxsdk::image_interface *image, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::image_exporter_interface::do_pre_export </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1image__interface.html">sxsdk::image_interface</a> *&nbsp;</td>
+          <td class="paramname"> <em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。エクスポート処理を行う前に呼ばれる。 </p>
+<p>アニメーションを連番イメージファイルとして作成する場合、<code><a class="el" href="structsxsdk_1_1image__exporter__interface.html#aed3482a29f8c60d4646dc44d62d92947" title="オーバライド可。イメージのエクスポートを行うときに呼ばれる。この関�...">do_export()</a></code> 関数が繰り返し呼ばれるが、その一連の呼び出しの前に一度だけ<code><a class="el" href="structsxsdk_1_1image__exporter__interface.html#acbb685b2712842d09532ed5109fd6322" title="オーバライド可。エクスポート処理を行う前に呼ばれる。">do_pre_export()</a></code> が呼ばれる。</p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>index</em>&nbsp;</td><td>インデクス値。複数の画像形式に対応するときに種類を判別するために使用する。 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>image</em>&nbsp;</td><td>エクスポートするイメージ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a78175f5b03031a36aee86e6815f90eb1"></a><!-- doxytag: member="sxsdk::image_exporter_interface::do_pre_multilayer_export" ref="a78175f5b03031a36aee86e6815f90eb1" args="(int index, sxsdk::image_layer_interface *image, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::image_exporter_interface::do_pre_multilayer_export </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1image__layer__interface.html">sxsdk::image_layer_interface</a> *&nbsp;</td>
+          <td class="paramname"> <em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。複数のレイヤーを持ったイメージのエクスポート処理を行う前に、レイヤーの数だけ呼ばれる。 </p>
+<p>アニメーションを連番イメージファイルとして作成する場合、<code><a class="el" href="structsxsdk_1_1image__exporter__interface.html#a796391fa4acf4bfc2487bc18aec9cbdf" title="オーバライド可。複数のレイヤーを持ったイメージのエクスポートを行う�...">do_multilayer_export()</a></code> 関数が繰り返し呼ばれるが、その一連の呼び出しの前に一度だけ<code><a class="el" href="structsxsdk_1_1image__exporter__interface.html#a78175f5b03031a36aee86e6815f90eb1" title="オーバライド可。複数のレイヤーを持ったイメージのエクスポート処理を�...">do_pre_multilayer_export()</a></code> が呼ばれる。</p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>index</em>&nbsp;</td><td>インデクス値。複数の画像形式に対応するときに種類を判別するために使用する。 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>image</em>&nbsp;</td><td>エクスポートするイメージレイヤー </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a77c8716330c2f9767573c33102e9066a"></a><!-- doxytag: member="sxsdk::image_exporter_interface::get_file_description" ref="a77c8716330c2f9767573c33102e9066a" args="(int index, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const char* sxsdk::image_exporter_interface::get_file_description </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。ファイルの種類ポップアップメニューに表示する画像ファイル形式の名称を登録する。 </p>
+<p>0を返すまで<em>indexの値を繰り上げつつ繰り返し呼び出される。すべての画像ファイル形式を登録した後で必ず0を返す。</em> </p>
+<p>対応する画像ファイル形式が1種類だけのときは、<em>indexが0の時に名称を返し、1以上の場合には0を返す。</em> </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>index</em>&nbsp;</td><td>インデクス値。複数の画像形式に対応するときに種類を判別するために使用する。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a2a50fed3a0b578bcc550990784662f27"></a><!-- doxytag: member="sxsdk::image_exporter_interface::get_file_extension" ref="a2a50fed3a0b578bcc550990784662f27" args="(int index, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const char* sxsdk::image_exporter_interface::get_file_extension </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。対応する画像ファイルの拡張子を登録する。複数の拡張子を登録可能。 </p>
+<p>0を返すまで<em>indexの値を繰り上げつつ繰り返し呼び出される。すべての拡張子を登録した後で必ず0を返す。</em> </p>
+<p>対応する画像ファイル形式が1種類だけのときは、<em>indexが0の時に拡張子を返し、1以上の場合には0を返す。</em> </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>index</em>&nbsp;</td><td>インデクス値。複数の画像形式に対応するときに種類を判別するために使用する。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a458e5c065bfa12ba034eb5de75d63dc3"></a><!-- doxytag: member="sxsdk::image_exporter_interface::is_multilayer_only" ref="a458e5c065bfa12ba034eb5de75d63dc3" args="(int index, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::image_exporter_interface::is_multilayer_only </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。複数のレイヤーを持ったイメージのみを書き出すことができる場合には、<code>trueを返す。</code> </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>index</em>&nbsp;</td><td>インデクス値。複数の画像形式に対応するときに種類を判別するために使用する。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aa178c565ae15fd5572d47a9970b368c9"></a><!-- doxytag: member="sxsdk::image_exporter_interface::use_custom_export" ref="aa178c565ae15fd5572d47a9970b368c9" args="(int index, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::image_exporter_interface::use_custom_export </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。独自ストリームを用いてエクスポートする<code>trueを返す。</code> </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>index</em>&nbsp;</td><td>インデクス値。複数の画像形式に対応するときに種類を判別するために使用する。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>この構造体の説明は次のファイルから生成されました:<ul>
+<li><a class="el" href="imageexporterinterface_8h_source.html">imageexporterinterface.h</a></li>
+</ul>
+</div>
+<br><br>
+<hr>
+<div align="center">Copyright &copy; e frontier, Inc. All rights reserved.</div>
+</body></html>

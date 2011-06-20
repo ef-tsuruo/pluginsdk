@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>メモリ常駐型プラグイン</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- 作成： Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="main.html"><span>メインページ</span></a></li>
+      <li class="current"><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+
+
+<h1><a class="anchor" id="resident">メモリ常駐型プラグイン </a></h1><h2><a class="anchor" id="resident1">
+■メモリ常駐型プラグインとは</a></h2>
+<p>メモリ常駐型プラグインとは、その名の通り、メモリに読み込まれたまま常駐するプラグインです。非常駐型プラグインはメニューなどからユーザにより呼び出されたときにインスタンス（プラグインの実体であるオブジェクト）を生成し、実行後にすぐに破棄されます。メモリ常駐型のプラグインはそのように実行時に生成されるのではなく、Shade起動時に生成されShadeが終了するまでメモリ上に常駐するプラグインです。メモリ常駐することにより、Shade上のユーザの操作に応じて即座に独自の処理を行わせるといった機能（コールバック機能）が実現できます。ただし、むやみに常駐プラグインを多用するとShadeの動作速度を落としてしまう恐れがあります、常駐プラグインは必要な場合のみ使用するようにしてください。</p>
+<h2><a class="anchor" id="resident2">
+■常駐・非常駐の切り替え方法</a></h2>
+<p>常駐・非常駐の切り替えは、共通のグローバル関数「is_resident」でtrueを返すかfalseを返すかで行います。trueを返したインターフェイスは常駐となり、そのプラグインはメモリ常駐型プラグインになります。常駐には２つの意味があり、１つは共有ライブラリ（Windowsではdll、Mac OS Xではdylib）がShade起動時にロードされたまま、終了時までアンロードされないということ、もう１つは、create_interfaceでnewにより生成するインターフェイス(xxx_interface)のインスタンスを終了時までdeleteしないという意味があります。</p>
+<h2><a class="anchor" id="resident3">
+■コールバック関数</a></h2>
+<p>コールバック関数はShade上で所定の操作が行われたときに常駐プラグインに対して呼び出される関数です。例えば、ユーザが形状の作成、移動、削除の操作をした場合にプラグインがコールバック関数を受けることで、それに応じた処理を行うことができるようになります。プラグインによる図形ウィンドウへのワイヤフレームの描画を行うこともできます。これらのコールバック関数はユーザの操作や、プラグインの処理により頻繁に呼び出されることになります。コールバック関数で時間のかかる処理を行うと、Shade全体の動作速度を落としてしまうことになりますので注意してください。 </p>
+</div>
+<br><br>
+<hr>
+<div align="center">Copyright &copy; e frontier, Inc. All rights reserved.</div>
+</body></html>

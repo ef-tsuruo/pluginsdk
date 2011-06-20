@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>renderinglightclass.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- 作成： Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="main.html"><span>メインページ</span></a></li>
+      <li><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+<h1>renderinglightclass.h</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// this file has been created by makeheader.py</span>
+<a name="l00002"></a>00002 <span class="comment">// ja utf-8</span>
+<a name="l00003"></a>00003 <span class="preprocessor">#pragma once</span>
+<a name="l00014"></a>00014 <span class="preprocessor">namespace sxsdk {</span>
+<a name="l00015"></a><a class="code" href="structsxsdk_1_1rendering__light__class.html">00015</a> <span class="preprocessor"></span><span class="keyword">struct </span><a class="code" href="structsxsdk_1_1rendering__light__class.html">rendering_light_class</a> {
+<a name="l00016"></a>00016 <span class="keyword">public</span>:
+<a name="l00018"></a>00018     <span class="keyword">virtual</span> <span class="keywordtype">bool</span> is_distant_light (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00020"></a>00020     <span class="keyword">virtual</span> <span class="keywordtype">bool</span> is_point_light (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00022"></a>00022     <span class="keyword">virtual</span> <span class="keywordtype">bool</span> is_spotlight (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00024"></a>00024     <span class="keyword">virtual</span> sxsdk::vec4 get_position (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00026"></a>00026     <span class="keyword">virtual</span> sxsdk::vec3 get_direction (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00028"></a>00028     <span class="keyword">virtual</span> sxsdk::rgb_class get_color (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00030"></a>00030     <span class="keyword">virtual</span> <span class="keywordtype">float</span> get_ambient (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00032"></a>00032     <span class="keyword">virtual</span> <span class="keywordtype">float</span> get_intensity (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00034"></a>00034     <span class="keyword">virtual</span> <span class="keywordtype">float</span> get_brightness (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00036"></a>00036     <span class="keyword">virtual</span> sxsdk::rgb_class get_visibility (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00038"></a>00038     <span class="keyword">virtual</span> <span class="keywordtype">float</span> get_softness (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00040"></a>00040     <span class="keyword">virtual</span> <span class="keywordtype">float</span> get_shadow (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00042"></a>00042     <span class="keyword">virtual</span> <span class="keywordtype">float</span> get_shadow_softness (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00044"></a>00044     <span class="keyword">virtual</span> <span class="keywordtype">bool</span> get_square (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00046"></a>00046     <span class="keyword">virtual</span> <span class="keywordtype">float</span> get_angle (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00048"></a>00048     <span class="keyword">virtual</span> <span class="keywordtype">float</span> get_specular (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00050"></a>00050     <span class="keyword">virtual</span> <span class="keywordtype">float</span> get_diffuse (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00051"></a>00051     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1stream__interface.html">sxsdk::stream_interface</a>* get_attribute_stream_interface (<span class="keywordtype">int</span> attribute_id, <span class="keywordtype">void</span>* aux = 0) <span class="keyword">const</span>;
+<a name="l00052"></a>00052 <span class="preprocessor">#ifndef DOXYGEN_SKIP</span>
+<a name="l00053"></a>00053 <span class="preprocessor"></span>        <a class="code" href="structsxsdk_1_1stream__interface.html">sxsdk::stream_interface</a>* get_attribute_stream (<span class="keywordtype">int</span> attribute_id, <span class="keywordtype">void</span>* aux = 0) { <span class="keywordflow">return</span> get_attribute_stream_interface(attribute_id); }
+<a name="l00054"></a>00054 <span class="preprocessor">#endif</span>
+<a name="l00055"></a>00055 <span class="preprocessor"></span><span class="preprocessor">#ifndef DOXYGEN_SKIP</span>
+<a name="l00056"></a>00056 <span class="preprocessor"></span>    <span class="keyword">virtual</span> <span class="keywordtype">int</span> rendering_light_class_dummy18(<span class="keywordtype">void</span> *) { assert(<span class="keyword">false</span>); <span class="keywordflow">throw</span> <span class="stringliteral">&quot;invalid interface rendering_light_class&quot;</span>; <span class="keywordflow">return</span> 0; } <span class="comment">// 18</span>
+<a name="l00057"></a>00057 <span class="preprocessor">#endif</span>
+<a name="l00059"></a>00059 <span class="preprocessor">    virtual bool is_area_light (void * = 0) const;</span>
+<a name="l00060"></a>00060 <span class="preprocessor"></span>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* get_exception_string () <span class="keyword">const</span>;
+<a name="l00062"></a>00062     <span class="keyword">virtual</span> <span class="keywordtype">bool</span> is_distribution_light (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00068"></a>00068     <span class="keyword">virtual</span> <span class="keywordtype">float</span> evaluate_distribution ( <span class="keyword">const</span> sxsdk::vec3&amp; p, <span class="keywordtype">void</span>* aux = 0) <span class="keyword">const</span>;
+<a name="l00074"></a>00074     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1stream__interface.html">sxsdk::stream_interface</a>* get_attribute_stream_interface_with_uuid (<span class="keyword">const</span> sx::uuid_class&amp; <span class="keywordtype">id</span>, <span class="keywordtype">void</span>* aux = 0) <span class="keyword">const</span>;
+<a name="l00076"></a>00076     <span class="keyword">virtual</span> sxsdk::rgb_class get_shadow_color (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00077"></a>00077 };
+<a name="l00078"></a>00078 } <span class="comment">// sxsdk</span>
+</pre></div></div>
+<br><br>
+<hr>
+<div align="center">Copyright &copy; e frontier, Inc. All rights reserved.</div>
+</body></html>

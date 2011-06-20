@@ -1,0 +1,838 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Palette SXULスキーマ定義</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- 作成： Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="main.html"><span>メインページ</span></a></li>
+      <li class="current"><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+
+
+<h1><a class="anchor" id="sxul_palettes">Palette SXULスキーマ定義 </a></h1><html><head><meta charset="utf-8"></head><body>
+<table width="500"><tr><td class="indexkey"><b>palette</b></td></tr></table><p>    パレット  </p>
+<table border="0" width="350" cellpadding="0" cellspacing="0"><tr><td colspan="2"><p>タグ内で利用可能なタグ</p></td></tr><td class="memItemRight" valign="bottom"><b>vbox,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>hbox,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>group,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>tab,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>control,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>push-button,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>image-box,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>checkbox,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>radio-button,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>popup-menu,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>static-text,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>editable-text,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>number,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>slider,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>scale,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>color-box,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>color-disk,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>vec2,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>vec3,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>vec4,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>quaternion,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>matrix,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>disclosure-button,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>flasher,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>graph,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+</td></table><br><ul type="circle">
+<li><b>horizontal</b>	type = xsd:boolean</li><p>    包含するアイテムを水平に並べるかどうか  </p>
+</ul>
+<ul type="circle">
+<li><b>vertical</b>	type = xsd:boolean</li><p>    包含する要素を垂直に並べるかどうか  </p>
+</ul>
+<ul type="circle">
+<li><b>layout</b>	type = xsd:boolean</li><p>    Shadeにレイアウトをまかせる  </p>
+</ul>
+<ul type="circle">
+<li><b>align-base</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>margins</b>	type = margins_type</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>slack</b>	type = slack_type</li><p></p>
+</ul>
+<table width="500"><tr><td class="indexkey"><b>vbox</b></td></tr></table><p>    垂直ボックス  </p>
+<table border="0" width="350" cellpadding="0" cellspacing="0"><tr><td colspan="2"><p>タグ内で利用可能なタグ</p></td></tr><td class="memItemRight" valign="bottom"><b>vbox,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>hbox,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>group,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>tab,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>control,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>push-button,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>image-box,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>checkbox,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>radio-button,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>popup-menu,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>static-text,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>editable-text,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>number,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>slider,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>scale,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>color-box,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>color-disk,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>vec2,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>vec3,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>vec4,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>quaternion,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>matrix,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>disclosure-button,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>flasher,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>graph,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+</td></table><br><ul type="circle">
+<li><b>id</b>	type = xsd:string</li><p>    識別文字列  </p>
+</ul>
+<ul type="circle">
+<li><b>link</b>	type = xsd:string</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>expand</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>standard</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>professional</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>full</b>	type = xsd:boolean</li><p></p>
+</ul>
+<table width="500"><tr><td class="indexkey"><b>hbox</b></td></tr></table><p>    水平ボックス  </p>
+<table border="0" width="350" cellpadding="0" cellspacing="0"><tr><td colspan="2"><p>タグ内で利用可能なタグ</p></td></tr><td class="memItemRight" valign="bottom"><b>vbox,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>hbox,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>group,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>tab,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>control,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>push-button,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>image-box,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>checkbox,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>radio-button,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>popup-menu,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>static-text,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>editable-text,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>number,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>slider,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>scale,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>color-box,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>color-disk,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>vec2,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>vec3,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>vec4,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>quaternion,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>matrix,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>disclosure-button,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>flasher,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>graph,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+</td></table><br><ul type="circle">
+<li><b>id</b>	type = xsd:string</li><p>    識別文字列  </p>
+</ul>
+<ul type="circle">
+<li><b>link</b>	type = xsd:string</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>standard</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>professional</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>full</b>	type = xsd:boolean</li><p></p>
+</ul>
+<table width="500"><tr><td class="indexkey"><b>group</b></td></tr></table><p>    グループ  </p>
+<table border="0" width="350" cellpadding="0" cellspacing="0"><tr><td colspan="2"><p>タグ内で利用可能なタグ</p></td></tr><td class="memItemRight" valign="bottom"><b>vbox,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>hbox,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>group,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>tab,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>control,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>push-button,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>image-box,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>checkbox,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>radio-button,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>popup-menu,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>static-text,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>editable-text,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>number,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>slider,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>scale,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>color-box,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>color-disk,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>vec2,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>vec3,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>vec4,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>quaternion,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>matrix,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>disclosure-button,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>flasher,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>graph,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+</td></table><br><ul type="circle">
+<li><b>id</b>	type = xsd:string</li><p>    識別文字列  </p>
+</ul>
+<ul type="circle">
+<li><b>label</b>	type = xsd:string</li><p>    ラベル  </p>
+</ul>
+<ul type="circle">
+<li><b>tooltip</b>	type = xsd:string</li><p>    ツールティップ  </p>
+</ul>
+<ul type="circle">
+<li><b>disclosure</b>	type = xsd:boolean</li><p>    開閉可能かどうか  </p>
+</ul>
+<ul type="circle">
+<li><b>style</b>	type = xsd:string</li><p>    グループの枠の表示を設定します。  </p>
+<p>    設定なし: 通常の線による枠表示します。  </p>
+<p>    raised: 浮き上がったボタンの形で枠を表示します。  </p>
+<p>    depressed: 押された状態のボタンの形で枠を表示します。  </p>
+</ul>
+<ul type="circle">
+<li><b>standard</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>professional</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>full</b>	type = xsd:boolean</li><p></p>
+</ul>
+<table width="500"><tr><td class="indexkey"><b>tab</b></td></tr></table><p>    タブ  </p>
+<table border="0" width="350" cellpadding="0" cellspacing="0"><tr><td colspan="2"><p>タグ内で利用可能なタグ</p></td></tr><td class="memItemRight" valign="bottom"><b>group,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+</td></table><br><ul type="circle">
+<li><b>id</b>	type = xsd:string</li><p>    識別文字列  </p>
+</ul>
+<ul type="circle">
+<li><b>margins</b>	type = margins_type</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>tooltip</b>	type = xsd:string</li><p>    ツールティップ  </p>
+</ul>
+<ul type="circle">
+<li><b>standard</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>professional</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>full</b>	type = xsd:boolean</li><p></p>
+</ul>
+<table width="500"><tr><td class="indexkey"><b>control</b></td></tr></table><p>    コントロール  </p>
+<ul type="circle">
+<li><b>id</b>	type = xsd:string</li><p>    識別文字列  </p>
+</ul>
+<ul type="circle">
+<li><b>breakable</b>	type = xsd:boolean</li><p>    直前のアイテムから分離可能かどうか  </p>
+</ul>
+<ul type="circle">
+<li><b>size</b>	type = size_type</li><p>    サイズ  </p>
+</ul>
+<ul type="circle">
+<li><b>tooltip</b>	type = xsd:string</li><p>    ツールティップ  </p>
+</ul>
+<ul type="circle">
+<li><b>standard</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>professional</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>full</b>	type = xsd:boolean</li><p></p>
+</ul>
+<table width="500"><tr><td class="indexkey"><b>push-button</b></td></tr></table><p>    プッシュボタン  </p>
+<table border="0" width="350" cellpadding="0" cellspacing="0"><tr><td colspan="2"><p>タグ内で利用可能なタグ</p></td></tr><td class="memItemRight" valign="bottom"><b>item,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+</td></table><br><ul type="circle">
+<li><b>id</b>	type = xsd:string</li><p>    識別文字列  </p>
+</ul>
+<ul type="circle">
+<li><b>label</b>	type = xsd:string</li><p>    ラベル  </p>
+</ul>
+<ul type="circle">
+<li><b>tooltip</b>	type = xsd:string</li><p>    ツールティップ  </p>
+</ul>
+<ul type="circle">
+<li><b>breakable</b>	type = xsd:boolean</li><p>    直前のアイテムから分離可能かどうか  </p>
+</ul>
+<ul type="circle">
+<li><b>image</b>	type = xsd:string</li><p>    イメージリソース名  </p>
+</ul>
+<ul type="circle">
+<li><b>menu</b>	type = xsd:string</li><p>    メニューリソース名  </p>
+</ul>
+<ul type="circle">
+<li><b>size</b>	type = size_type</li><p>    サイズ  </p>
+</ul>
+<ul type="circle">
+<li><b>right-aligned</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>center-aligned</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>text-alignment</b>	type = xsd:string</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>alternate_image</b>	type = xsd:string</li><p>    ボタンが押されたときに表示される画像を指定します。  </p>
+<p>    画像を変更しない場合は指定する必要はありません。  </p>
+</ul>
+<ul type="circle">
+<li><b>standard</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>professional</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>full</b>	type = xsd:boolean</li><p></p>
+</ul>
+<table width="500"><tr><td class="indexkey"><b>image-box</b></td></tr></table><p>    イメージボックス  </p>
+<ul type="circle">
+<li><b>id</b>	type = xsd:string</li><p>    識別文字列  </p>
+</ul>
+<ul type="circle">
+<li><b>tooltip</b>	type = xsd:string</li><p>    ツールティップ  </p>
+</ul>
+<ul type="circle">
+<li><b>breakable</b>	type = xsd:boolean</li><p>    直前のアイテムから分離可能かどうか  </p>
+</ul>
+<ul type="circle">
+<li><b>size</b>	type = size_type</li><p>    サイズ  </p>
+</ul>
+<ul type="circle">
+<li><b>edit-button</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>standard</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>professional</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>full</b>	type = xsd:boolean</li><p></p>
+</ul>
+<table width="500"><tr><td class="indexkey"><b>checkbox</b></td></tr></table><p>    チェックボックス  </p>
+<ul type="circle">
+<li><b>id</b>	type = xsd:string</li><p>    識別文字列  </p>
+</ul>
+<ul type="circle">
+<li><b>label</b>	type = xsd:string</li><p>    ラベル  </p>
+</ul>
+<ul type="circle">
+<li><b>tooltip</b>	type = xsd:string</li><p>    ツールティップ  </p>
+</ul>
+<ul type="circle">
+<li><b>right-aligned</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>breakable</b>	type = xsd:boolean</li><p>    直前のアイテムから分離可能かどうか  </p>
+</ul>
+<ul type="circle">
+<li><b>image</b>	type = xsd:string</li><p>    イメージ識別名  </p>
+</ul>
+<ul type="circle">
+<li><b>size</b>	type = xsd:integer</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>alternate_image</b>	type = xsd:string</li><p>    チェックがオンの時に表示される画像を指定します。  </p>
+<p>    オン、オフの違いで画像を変更しない場合は指定する必要がありません。  </p>
+</ul>
+<ul type="circle">
+<li><b>push</b>	type = xsd:boolean</li><p>    trueを指定すると、ボタン型のチェックボックスになります。  </p>
+</ul>
+<ul type="circle">
+<li><b>standard</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>professional</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>full</b>	type = xsd:boolean</li><p></p>
+</ul>
+<table width="500"><tr><td class="indexkey"><b>radio-button</b></td></tr></table><p>    ラジオボタン  </p>
+<table border="0" width="350" cellpadding="0" cellspacing="0"><tr><td colspan="2"><p>タグ内で利用可能なタグ</p></td></tr><td class="memItemRight" valign="bottom"><b>item,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+</td></table><br><ul type="circle">
+<li><b>id</b>	type = xsd:string</li><p>    識別文字列  </p>
+</ul>
+<ul type="circle">
+<li><b>label</b>	type = xsd:string</li><p>    ラベル  </p>
+</ul>
+<ul type="circle">
+<li><b>tooltip</b>	type = xsd:string</li><p>    ツールティップ  </p>
+</ul>
+<ul type="circle">
+<li><b>breakable</b>	type = xsd:boolean</li><p>    直前のアイテムから分離可能かどうか  </p>
+</ul>
+<ul type="circle">
+<li><b>standard</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>professional</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>full</b>	type = xsd:boolean</li><p></p>
+</ul>
+<table width="500"><tr><td class="indexkey"><b>popup-menu</b></td></tr></table><p>    ポップアップメニュー  </p>
+<table border="0" width="350" cellpadding="0" cellspacing="0"><tr><td colspan="2"><p>タグ内で利用可能なタグ</p></td></tr><td class="memItemRight" valign="bottom"><b>item,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>separator,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+</td></table><br><ul type="circle">
+<li><b>id</b>	type = xsd:string</li><p>    識別文字列  </p>
+</ul>
+<ul type="circle">
+<li><b>label</b>	type = xsd:string</li><p>    ラベル  </p>
+</ul>
+<ul type="circle">
+<li><b>unit</b>	type = xsd:string</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>tooltip</b>	type = xsd:string</li><p>    ツールティップ  </p>
+</ul>
+<ul type="circle">
+<li><b>breakable</b>	type = xsd:boolean</li><p>    直前のアイテムから分離可能かどうか  </p>
+</ul>
+<ul type="circle">
+<li><b>stepper</b>	type = xsd:boolean</li><p>    ステッパを持つかどうか  </p>
+</ul>
+<ul type="circle">
+<li><b>expand</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>size</b>	type = xsd:integer</li><p>    サイズ  </p>
+</ul>
+<ul type="circle">
+<li><b>standard</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>professional</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>full</b>	type = xsd:boolean</li><p></p>
+</ul>
+<table width="500"><tr><td class="indexkey"><b>static-text</b></td></tr></table><p>    スタティックテキスト  </p>
+<ul type="circle">
+<li><b>id</b>	type = xsd:string</li><p>    識別文字列  </p>
+</ul>
+<ul type="circle">
+<li><b>label</b>	type = xsd:string</li><p>    ラベル  </p>
+</ul>
+<ul type="circle">
+<li><b>unit</b>	type = xsd:string</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>size</b>	type = size_type</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>tooltip</b>	type = xsd:string</li><p>    ツールティップ  </p>
+</ul>
+<ul type="circle">
+<li><b>breakable</b>	type = xsd:boolean</li><p>    直前のアイテムから分離可能かどうか  </p>
+</ul>
+<ul type="circle">
+<li><b>right-aligned</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>standard</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>professional</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>full</b>	type = xsd:boolean</li><p></p>
+</ul>
+<table width="500"><tr><td class="indexkey"><b>editable-text</b></td></tr></table><p>    スタティックテキスト  </p>
+<ul type="circle">
+<li><b>id</b>	type = xsd:string</li><p>    識別文字列  </p>
+</ul>
+<ul type="circle">
+<li><b>label</b>	type = xsd:string</li><p>    ラベル  </p>
+</ul>
+<ul type="circle">
+<li><b>size</b>	type = size_type</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>tooltip</b>	type = xsd:string</li><p>    ツールティップ  </p>
+</ul>
+<ul type="circle">
+<li><b>breakable</b>	type = xsd:boolean</li><p>    直前のアイテムから分離可能かどうか  </p>
+</ul>
+<ul type="circle">
+<li><b>right-aligned</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>standard</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>professional</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>full</b>	type = xsd:boolean</li><p></p>
+</ul>
+<table width="500"><tr><td class="indexkey"><b>number</b></td></tr></table><p>    数値  </p>
+<ul type="circle">
+<li><b>id</b>	type = xsd:string</li><p>    識別文字列  </p>
+</ul>
+<ul type="circle">
+<li><b>label</b>	type = xsd:string</li><p>    ラベル  </p>
+</ul>
+<ul type="circle">
+<li><b>size</b>	type = size_type</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>tooltip</b>	type = xsd:string</li><p>    ツールティップ  </p>
+</ul>
+<ul type="circle">
+<li><b>editable</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>breakable</b>	type = xsd:boolean</li><p>    直前のアイテムから分離可能かどうか  </p>
+</ul>
+<ul type="circle">
+<li><b>unit</b>	type = xsd:string</li><p>    単位  </p>
+</ul>
+<ul type="circle">
+<li><b>type</b>	type = xsd:string</li><p>    timecode, real or integer  </p>
+</ul>
+<ul type="circle">
+<li><b>columns</b>	type = xsd:integer</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>popup</b>	type = xsd:integer</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>standard</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>professional</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>full</b>	type = xsd:boolean</li><p></p>
+</ul>
+<table width="500"><tr><td class="indexkey"><b>slider</b></td></tr></table><p>    スライダ  </p>
+<ul type="circle">
+<li><b>id</b>	type = xsd:string</li><p>    識別文字列  </p>
+</ul>
+<ul type="circle">
+<li><b>label</b>	type = xsd:string</li><p>    ラベル  </p>
+</ul>
+<ul type="circle">
+<li><b>unit</b>	type = xsd:string</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>tooltip</b>	type = xsd:string</li><p>    ツールティップ  </p>
+</ul>
+<ul type="circle">
+<li><b>breakable</b>	type = xsd:boolean</li><p>    直前のアイテムから分離可能かどうか  </p>
+</ul>
+<ul type="circle">
+<li><b>size</b>	type = xsd:integer</li><p>    サイズ  </p>
+</ul>
+<ul type="circle">
+<li><b>marked</b>	type = xsd:boolean</li><p>    目盛りを表示するかどうか  </p>
+</ul>
+<ul type="circle">
+<li><b>dial</b>	type = xsd:boolean</li><p>    ダイアル  </p>
+</ul>
+<ul type="circle">
+<li><b>number</b>	type = xsd:boolean</li><p>    数値を表示するかどうか  </p>
+</ul>
+<ul type="circle">
+<li><b>can-have-limit</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>columns</b>	type = xsd:integer</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>range</b>	type = xsd:string</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>type</b>	type = xsd:string</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>standard</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>professional</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>full</b>	type = xsd:boolean</li><p></p>
+</ul>
+<table width="500"><tr><td class="indexkey"><b>scale</b></td></tr></table><p>    スケール  </p>
+<ul type="circle">
+<li><b>id</b>	type = xsd:string</li><p>    識別文字列  </p>
+</ul>
+<ul type="circle">
+<li><b>label</b>	type = xsd:string</li><p>    ラベル  </p>
+</ul>
+<ul type="circle">
+<li><b>tooltip</b>	type = xsd:string</li><p>    ツールティップ  </p>
+</ul>
+<ul type="circle">
+<li><b>standard</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>professional</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>full</b>	type = xsd:boolean</li><p></p>
+</ul>
+<table width="500"><tr><td class="indexkey"><b>color-box</b></td></tr></table><p>    カラーボックス  </p>
+<ul type="circle">
+<li><b>id</b>	type = xsd:string</li><p>    識別文字列  </p>
+</ul>
+<ul type="circle">
+<li><b>label</b>	type = xsd:string</li><p>    ラベル  </p>
+</ul>
+<ul type="circle">
+<li><b>tooltip</b>	type = xsd:string</li><p>    ツールティップ  </p>
+</ul>
+<ul type="circle">
+<li><b>breakable</b>	type = xsd:boolean</li><p>    直前のアイテムから分離可能かどうか  </p>
+</ul>
+<ul type="circle">
+<li><b>size</b>	type = size_type</li><p>    サイズ  </p>
+</ul>
+<ul type="circle">
+<li><b>standard</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>professional</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>full</b>	type = xsd:boolean</li><p></p>
+</ul>
+<table width="500"><tr><td class="indexkey"><b>color-disk</b></td></tr></table><p>    カラーディスク  </p>
+<ul type="circle">
+<li><b>id</b>	type = xsd:string</li><p>    識別文字列  </p>
+</ul>
+<ul type="circle">
+<li><b>tooltip</b>	type = xsd:string</li><p>    ツールティップ  </p>
+</ul>
+<ul type="circle">
+<li><b>breakable</b>	type = xsd:boolean</li><p>    直前のアイテムから分離可能かどうか  </p>
+</ul>
+<ul type="circle">
+<li><b>standard</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>professional</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>full</b>	type = xsd:boolean</li><p></p>
+</ul>
+<table width="500"><tr><td class="indexkey"><b>vec2</b></td></tr></table><p>    vec2  </p>
+<ul type="circle">
+<li><b>id</b>	type = xsd:string</li><p>    識別文字列  </p>
+</ul>
+<ul type="circle">
+<li><b>label</b>	type = xsd:string</li><p>    ラベル  </p>
+</ul>
+<ul type="circle">
+<li><b>unit</b>	type = xsd:string</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>tooltip</b>	type = xsd:string</li><p>    ツールティップ  </p>
+</ul>
+<ul type="circle">
+<li><b>breakable</b>	type = xsd:boolean</li><p>    直前のアイテムから分離可能かどうか  </p>
+</ul>
+<ul type="circle">
+<li><b>standard</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>professional</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>full</b>	type = xsd:boolean</li><p></p>
+</ul>
+<table width="500"><tr><td class="indexkey"><b>vec3</b></td></tr></table><p>    vec3  </p>
+<ul type="circle">
+<li><b>id</b>	type = xsd:string</li><p>    識別文字列  </p>
+</ul>
+<ul type="circle">
+<li><b>label</b>	type = xsd:string</li><p>    ラベル  </p>
+</ul>
+<ul type="circle">
+<li><b>unit</b>	type = xsd:string</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>tooltip</b>	type = xsd:string</li><p>    ツールティップ  </p>
+</ul>
+<ul type="circle">
+<li><b>breakable</b>	type = xsd:boolean</li><p>    直前のアイテムから分離可能かどうか  </p>
+</ul>
+<ul type="circle">
+<li><b>standard</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>professional</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>full</b>	type = xsd:boolean</li><p></p>
+</ul>
+<table width="500"><tr><td class="indexkey"><b>vec4</b></td></tr></table><p>    vec3  </p>
+<ul type="circle">
+<li><b>id</b>	type = xsd:string</li><p>    識別文字列  </p>
+</ul>
+<ul type="circle">
+<li><b>label</b>	type = xsd:string</li><p>    ラベル  </p>
+</ul>
+<ul type="circle">
+<li><b>unit</b>	type = xsd:string</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>tooltip</b>	type = xsd:string</li><p>    ツールティップ  </p>
+</ul>
+<ul type="circle">
+<li><b>breakable</b>	type = xsd:boolean</li><p>    直前のアイテムから分離可能かどうか  </p>
+</ul>
+<ul type="circle">
+<li><b>standard</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>professional</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>full</b>	type = xsd:boolean</li><p></p>
+</ul>
+<table width="500"><tr><td class="indexkey"><b>quaternion</b></td></tr></table><p>    クオタニオン  </p>
+<ul type="circle">
+<li><b>id</b>	type = xsd:string</li><p>    識別文字列  </p>
+</ul>
+<ul type="circle">
+<li><b>label</b>	type = xsd:string</li><p>    ラベル  </p>
+</ul>
+<ul type="circle">
+<li><b>tooltip</b>	type = xsd:string</li><p>    ツールティップ  </p>
+</ul>
+<ul type="circle">
+<li><b>standard</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>professional</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>full</b>	type = xsd:boolean</li><p></p>
+</ul>
+<table width="500"><tr><td class="indexkey"><b>matrix</b></td></tr></table><p>    マトリクス  </p>
+<ul type="circle">
+<li><b>id</b>	type = xsd:string</li><p>    識別文字列  </p>
+</ul>
+<ul type="circle">
+<li><b>label</b>	type = xsd:string</li><p>    ラベル  </p>
+</ul>
+<ul type="circle">
+<li><b>tooltip</b>	type = xsd:string</li><p>    ツールティップ  </p>
+</ul>
+<ul type="circle">
+<li><b>standard</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>professional</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>full</b>	type = xsd:boolean</li><p></p>
+</ul>
+<table width="500"><tr><td class="indexkey"><b>disclosure-button</b></td></tr></table><p>    ディスクロージャボタン  </p>
+<ul type="circle">
+<li><b>id</b>	type = xsd:string</li><p>    識別文字列  </p>
+</ul>
+<ul type="circle">
+<li><b>tooltip</b>	type = xsd:string</li><p>    ツールティップ  </p>
+</ul>
+<ul type="circle">
+<li><b>breakable</b>	type = xsd:boolean</li><p>    直前のアイテムから分離可能かどうか  </p>
+</ul>
+<ul type="circle">
+<li><b>standard</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>professional</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>full</b>	type = xsd:boolean</li><p></p>
+</ul>
+<table width="500"><tr><td class="indexkey"><b>flasher</b></td></tr></table><p>    フラッシャ  </p>
+<ul type="circle">
+<li><b>id</b>	type = xsd:string</li><p>    識別文字列  </p>
+</ul>
+<ul type="circle">
+<li><b>tooltip</b>	type = xsd:string</li><p>    ツールティップ  </p>
+</ul>
+<ul type="circle">
+<li><b>breakable</b>	type = xsd:boolean</li><p>    直前のアイテムから分離可能かどうか  </p>
+</ul>
+<ul type="circle">
+<li><b>standard</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>professional</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>full</b>	type = xsd:boolean</li><p></p>
+</ul>
+<table width="500"><tr><td class="indexkey"><b>item</b></td></tr></table><p>    （ポップアップ／プルダウンメニュー）アイテム  </p>
+<ul type="circle">
+<li><b>id</b>	type = xsd:string</li><p>    識別文字列  </p>
+</ul>
+<ul type="circle">
+<li><b>tooltip</b>	type = xsd:string</li><p>    ツールティップ  </p>
+</ul>
+<ul type="circle">
+<li><b>label</b>	type = xsd:string</li><p>    ラベル  </p>
+</ul>
+<ul type="circle">
+<li><b>icon</b>	type = xsd:string</li><p>    ラベル  </p>
+</ul>
+<ul type="circle">
+<li><b>standard</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>professional</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>full</b>	type = xsd:boolean</li><p></p>
+</ul>
+<table width="500"><tr><td class="indexkey"><b>separator</b></td></tr></table><p></p>
+<ul type="circle">
+<li><b>id</b>	type = xsd:string</li><p>    識別文字列  </p>
+</ul>
+<ul type="circle">
+<li><b>standard</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>professional</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>full</b>	type = xsd:boolean</li><p></p>
+</ul>
+<table width="500"><tr><td class="indexkey"><b>graph</b></td></tr></table><p></p>
+<ul type="circle">
+<li><b>id</b>	type = xsd:string</li><p>    識別文字列  </p>
+</ul>
+<ul type="circle">
+<li><b>size</b>	type = size_type</li><p>    サイズ  </p>
+</ul>
+<ul type="circle">
+<li><b>tooltip</b>	type = xsd:string</li><p>    ツールティップ  </p>
+</ul>
+<ul type="circle">
+<li><b>standard</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>professional</b>	type = xsd:boolean</li><p></p>
+</ul>
+<ul type="circle">
+<li><b>full</b>	type = xsd:boolean</li><p></p>
+</ul>
+</body></html>
+ </div>
+<br><br>
+<hr>
+<div align="center">Copyright &copy; e frontier, Inc. All rights reserved.</div>
+</body></html>

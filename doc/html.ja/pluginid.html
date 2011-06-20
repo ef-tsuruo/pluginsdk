@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>プラグインID</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- 作成： Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="main.html"><span>メインページ</span></a></li>
+      <li class="current"><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+
+
+<h1><a class="anchor" id="pluginid">プラグインID </a></h1><h2><a class="anchor" id="uuid">
+■UUID</a></h2>
+<p>Shade 7では個々のプラグインは32ビット整数のIDで識別されていたが、Shade 8以降では128ビットのUUIDを使用する。したがって、特に理由がない限り、プラグインデベロッパにIDの範囲を割り当てたり、管理したりする必要はない。プラグインデベロッパは必要に応じて、uuidgenコマンド等でIDを生成する。</p>
+<p>従来の32ビット整数IDを使ったプラグインも、Shade 8以降では内部的に128ビットUUIDに変換するため、無変更で動作する。</p>
+<h2><a class="anchor" id="uuidgen">
+■UUID生成方法</a></h2>
+<h3><a class="anchor" id="uuidgen_win">
+Windows 2000 / XP / Vista + Visual C++ .NET Version 2005</a></h3>
+<ul>
+<li>Visual Studio .net 2005 のツールメニューから「GUIDの作成」 <br/>
+ </li>
+<li>生成されたUUIDを「Copy」ボタンでクリップボードにコピー <br/>
+ </li>
+<li>コピーされたUUIDを下記の形式に編集</li>
+</ul>
+<div class="fragment"><pre class="fragment"> <span class="comment">// {8103127E-6E91-467f-8B98-9E6821DCC7CE}</span>
+ <span class="keyword">const</span> uuid_class SAMPLE_UUID = uuid_class(<span class="stringliteral">&quot;8103127E-6E91-467f-8B98-9E6821DCC7CE&quot;</span>);
+</pre></div><h3><a class="anchor" id="uuidgen_mac">
+Mac OS X</a></h3>
+<ul>
+<li>ターミナルで「uuidgen」を実行 <br/>
+ </li>
+<li>生成されたUUIDを下記の形式に編集</li>
+</ul>
+<div class="fragment"><pre class="fragment"> <span class="keyword">const</span> uuid_class SAMPLE_UUID = uuid_class(<span class="stringliteral">&quot;8103127E-6E91-467f-8B98-9E6821DCC7CE&quot;</span>);
+</pre></div> </div>
+<br><br>
+<hr>
+<div align="center">Copyright &copy; e frontier, Inc. All rights reserved.</div>
+</body></html>

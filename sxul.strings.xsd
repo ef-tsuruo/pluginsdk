@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema' elementFormDefault='qualified'>
+	<xsd:element name='strings'>
+		<xsd:annotation>
+			<xsd:documentation> \en strings \enden  \ja 文字列 \endja </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType mixed='true'>
+			<xsd:choice minOccurs='0' maxOccurs='unbounded'>
+				<xsd:element name='string'>
+					<!-- xsd:annotation>
+						<xsd:documentation> \en string \enden  \ja 文字列 \endja </xsd:documentation>
+					</xsd:annotation -->
+					<xsd:complexType>
+						<xsd:attribute name='value' type='xsd:string'>
+							<xsd:annotation>
+								<xsd:documentation> \en string \enden  \ja 文字列 \endja </xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+						<xsd:attribute name='id' type='xsd:string'>
+							<xsd:annotation>
+								<xsd:documentation></xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name='item'>
+					<xsd:annotation>
+						<xsd:documentation> \en string item \enden  \ja 文字列アイテム \endja </xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType mixed='true'>
+						<xsd:choice minOccurs='0' maxOccurs='unbounded'>
+							<xsd:element name='string'>
+								<xsd:annotation>
+									<xsd:documentation> \en string \enden  \ja 文字列 \endja </xsd:documentation>
+								</xsd:annotation>
+								<xsd:complexType>
+									<xsd:attribute name='lang' type='xsd:string'>
+										<xsd:annotation>
+											<xsd:documentation> \en language code \enden  \ja 言語コード \endja </xsd:documentation>
+										</xsd:annotation>
+									</xsd:attribute>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:choice>
+						<xsd:attribute name='tag' type='xsd:string'>
+							<xsd:annotation>
+								<xsd:documentation></xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+						<xsd:attribute name='en' type='xsd:string'>
+							<xsd:annotation>
+								<xsd:documentation></xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+						<xsd:attribute name='ja' type='xsd:string'>
+							<xsd:annotation>
+								<xsd:documentation></xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+						<xsd:attribute name='fr' type='xsd:string'>
+							<xsd:annotation>
+								<xsd:documentation></xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+						<xsd:attribute name='zh_CN' type='xsd:string'>
+							<xsd:annotation>
+								<xsd:documentation></xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+						<xsd:attribute name='de' type='xsd:string'>
+							<xsd:annotation>
+								<xsd:documentation></xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+						<xsd:attribute name='es' type='xsd:string'>
+							<xsd:annotation>
+								<xsd:documentation></xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+						<xsd:attribute name='ko' type='xsd:string'>
+							<xsd:annotation>
+								<xsd:documentation></xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

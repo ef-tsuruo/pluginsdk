@@ -1,0 +1,547 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>構造体 sxsdk::modifier_interface</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- 作成： Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="main.html"><span>メインページ</span></a></li>
+      <li><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>構成</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>構成メンバ</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath"><a class="el" href="namespacesxsdk.html">sxsdk</a>::<a class="el" href="structsxsdk_1_1modifier__interface.html">modifier_interface</a>
+  </div>
+</div>
+<div class="contents">
+<h1>構造体 sxsdk::modifier_interface</h1><!-- doxytag: class="sxsdk::modifier_interface" --><!-- doxytag: inherits="sxsdk::plugin_interface" --><div class="dynheader">
+sxsdk::modifier_interfaceに対する継承グラフ</div>
+<div class="dynsection">
+ <div class="center">
+  <img src="structsxsdk_1_1modifier__interface.gif" usemap="#sxsdk::modifier_interface_map" alt=""/>
+  <map id="sxsdk::modifier_interface_map" name="sxsdk::modifier_interface_map">
+<area href="structsxsdk_1_1plugin__interface.html" alt="sxsdk::plugin_interface" shape="rect" coords="0,56,151,80"/>
+<area href="classunknown__interface.html" alt="unknown_interface" shape="rect" coords="0,0,151,24"/>
+</map>
+ </div>
+</div>
+
+<p><a href="structsxsdk_1_1modifier__interface-members.html">すべてのメンバ一覧</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Public メソッド</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1modifier__interface.html#a35e918742c22908cf823c366f68188e9">accepts_sphere</a> (void *aux=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。図形ウインドウ内での、球を作成するドラッグ操作を待ち受けるかどうかを返す。  <a href="#a35e918742c22908cf823c366f68188e9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1modifier__interface.html#a9793f6b6759fd2c81a167940d807de68">accepts_disk</a> (void *aux=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。図形ウインドウ内での、円を作成するドラッグ操作を待ち受けるかどうかを返す。  <a href="#a9793f6b6759fd2c81a167940d807de68"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1modifier__interface.html#a6a415f3cfa5d39dd274f2cd37f758262">accepts_rectangle</a> (void *aux=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。図形ウインドウ内での、長方形を作成するドラッグ操作を待ち受けるかどうかを返す。  <a href="#a6a415f3cfa5d39dd274f2cd37f758262"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1modifier__interface.html#af9de073e7a0f887662f4fd28df145282">accepts_translation</a> (void *aux=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。図形ウインドウ内での、直線移動するドラッグ操作を待ち受けるかどうかを返す。  <a href="#af9de073e7a0f887662f4fd28df145282"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1modifier__interface.html#a1a85fa7aef3818ab78a00b4996d8fe60">set_sphere</a> (const sxsdk::vec3 &amp;center, float radius, int axis)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。球のドラッグ操作後に呼ばれる。  <a href="#a1a85fa7aef3818ab78a00b4996d8fe60"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1modifier__interface.html#af48269a2a125539a0fd04d182a9fc8ca">set_disk</a> (const sxsdk::vec3 &amp;center, float radius, int axis, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。円のドラッグ操作後に呼ばれる。  <a href="#af48269a2a125539a0fd04d182a9fc8ca"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1modifier__interface.html#a9d704033dd204d4f592a72eef7607cba">set_rectangle</a> (const sxsdk::vec3 &amp;p, const sxsdk::vec3 &amp;q, int axis, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。長方形のドラッグ操作後に呼ばれる。  <a href="#a9d704033dd204d4f592a72eef7607cba"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1modifier__interface.html#afaae298e772204d0ce4f40fa7a3d4460">set_translation</a> (const sxsdk::mat4 &amp;t, const sxsdk::vec3 &amp;p, int axis)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。直線移動のドラッグ操作後に呼ばれる。  <a href="#afaae298e772204d0ce4f40fa7a3d4460"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1modifier__interface.html#a114478a9bbb1cccba31af815eb363c58">make_wireframe</a> (<a class="el" href="structsxsdk_1_1shape__class.html">sxsdk::shape_class</a> &amp;shape, const sxsdk::mat4 &amp;mat, int view, int flags, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。Shadeが形状のワイヤフレームを表示する際にこの関数が呼ばれる。この関数をオーバーライドしてワイヤフレーム表示を追加することが可能。(参照：<a class="el" href="resident.html">メモリ常駐型プラグイン</a>)  <a href="#a114478a9bbb1cccba31af815eb363c58"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1modifier__interface.html#ab3f6a861e7cf700039dc5ed70ede8318">modify</a> (<a class="el" href="structsxsdk_1_1scene__interface.html">sxsdk::scene_interface</a> *scene, void *aux=0)=0</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。メニューからプラグインが選択され、指定したダイアログ表示やユーザ操作の後に呼ばれる。  <a href="#ab3f6a861e7cf700039dc5ed70ede8318"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a97af54b8fc83e26f4f6a5e270a9c4dbb"></a><!-- doxytag: member="sxsdk::modifier_interface::make_wireframe_private" ref="a97af54b8fc83e26f4f6a5e270a9c4dbb" args="(sxsdk::shape_class &amp;shape, const sxsdk::mat4 &amp;mat, int view, void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>make_wireframe_private</b> (<a class="el" href="structsxsdk_1_1shape__class.html">sxsdk::shape_class</a> &amp;shape, const sxsdk::mat4 &amp;mat, int view, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af45d1879f4c8e7dbc1ea0bf1bb9d7b60"></a><!-- doxytag: member="sxsdk::modifier_interface::accepts_sphere_private" ref="af45d1879f4c8e7dbc1ea0bf1bb9d7b60" args="(void *aux=0) const " -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>accepts_sphere_private</b> (void *aux=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a238a04756dbcb852fc5c07d0347dc7c2"></a><!-- doxytag: member="sxsdk::modifier_interface::accepts_disk_private" ref="a238a04756dbcb852fc5c07d0347dc7c2" args="(void *aux=0) const " -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>accepts_disk_private</b> (void *aux=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aba879a0286a460ea89c2fe9b9f594c47"></a><!-- doxytag: member="sxsdk::modifier_interface::accepts_rectangle_private" ref="aba879a0286a460ea89c2fe9b9f594c47" args="(void *aux=0) const " -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>accepts_rectangle_private</b> (void *aux=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3848ff0a1c3019472f62db5ab2dfca82"></a><!-- doxytag: member="sxsdk::modifier_interface::accepts_translation_private" ref="a3848ff0a1c3019472f62db5ab2dfca82" args="(void *aux=0) const " -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>accepts_translation_private</b> (void *aux=0) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac9cf111542d79a76b8db7025104f16f8"></a><!-- doxytag: member="sxsdk::modifier_interface::set_sphere_private" ref="ac9cf111542d79a76b8db7025104f16f8" args="(const sxsdk::vec3 &amp;center, float radius, int axis)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_sphere_private</b> (const sxsdk::vec3 &amp;center, float radius, int axis)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a315366082c8e3c801891a36debd47c4a"></a><!-- doxytag: member="sxsdk::modifier_interface::set_disk_private" ref="a315366082c8e3c801891a36debd47c4a" args="(const sxsdk::vec3 &amp;center, float radius, int axis, void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_disk_private</b> (const sxsdk::vec3 &amp;center, float radius, int axis, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a87358508bb335992dc971ac89bdf982f"></a><!-- doxytag: member="sxsdk::modifier_interface::set_rectangle_private" ref="a87358508bb335992dc971ac89bdf982f" args="(const sxsdk::vec3 &amp;p, const sxsdk::vec3 &amp;q, int axis, void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_rectangle_private</b> (const sxsdk::vec3 &amp;p, const sxsdk::vec3 &amp;q, int axis, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adbc919fbe645ed79f19cf2774cd37017"></a><!-- doxytag: member="sxsdk::modifier_interface::set_translation_private" ref="adbc919fbe645ed79f19cf2774cd37017" args="(const sxsdk::mat4 &amp;t, const sxsdk::vec3 &amp;p, int axis)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>set_translation_private</b> (const sxsdk::mat4 &amp;t, const sxsdk::vec3 &amp;p, int axis)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1modifier__interface.html#af3d00d2eb0b0de2ef939b9be967d8f3f">pre_modify</a> (<a class="el" href="structsxsdk_1_1scene__interface.html">sxsdk::scene_interface</a> *scene, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。メニューからプラグインが選択された直後、指定したダイアログ表示やユーザ操作の前に呼ばれる。  <a href="#af3d00d2eb0b0de2ef939b9be967d8f3f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1modifier__interface.html#a1dd4630acb671b7695f342ba9e7a8dd1">canceled</a> (<a class="el" href="structsxsdk_1_1scene__interface.html">sxsdk::scene_interface</a> *scene, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。ドラッグ操作待ちの時にfinishボタンや他のツールの選択でプラグインの実行がキャンセルされると呼び出される。  <a href="#a1dd4630acb671b7695f342ba9e7a8dd1"></a><br/></td></tr>
+</table>
+<hr/><h2>関数</h2>
+<a class="anchor" id="a9793f6b6759fd2c81a167940d807de68"></a><!-- doxytag: member="sxsdk::modifier_interface::accepts_disk" ref="a9793f6b6759fd2c81a167940d807de68" args="(void *aux=0) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::modifier_interface::accepts_disk </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。図形ウインドウ内での、円を作成するドラッグ操作を待ち受けるかどうかを返す。 </p>
+<p><code><a class="el" href="structsxsdk_1_1modifier__interface.html#a35e918742c22908cf823c366f68188e9" title="オーバライド可。図形ウインドウ内での、球を作成するドラッグ操作を待�...">accepts_sphere()</a></code>, <code><a class="el" href="structsxsdk_1_1modifier__interface.html#a9793f6b6759fd2c81a167940d807de68" title="オーバライド可。図形ウインドウ内での、円を作成するドラッグ操作を待�...">accepts_disk()</a></code>, <code><a class="el" href="structsxsdk_1_1modifier__interface.html#a6a415f3cfa5d39dd274f2cd37f758262" title="オーバライド可。図形ウインドウ内での、長方形を作成するドラッグ操作�...">accepts_rectangle()</a></code>, <code><a class="el" href="structsxsdk_1_1modifier__interface.html#af9de073e7a0f887662f4fd28df145282" title="オーバライド可。図形ウインドウ内での、直線移動するドラッグ操作を待�...">accepts_translation()</a></code> は同時に使用することはできない。この関数がtrueを返す場合は、他の関数でfalseを返さなければならない。</p>
+<p>ドラッグ操作の結果は<code><a class="el" href="structsxsdk_1_1modifier__interface.html#af48269a2a125539a0fd04d182a9fc8ca" title="オーバライド可。円のドラッグ操作後に呼ばれる。">set_disk()</a>で取得する。</code> </p>
+
+<p><a class="el" href="structsxsdk_1_1plugin__interface.html#acd98e26c1aa942187b4ecb94169c81de">sxsdk::plugin_interface</a>を再定義しています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a6a415f3cfa5d39dd274f2cd37f758262"></a><!-- doxytag: member="sxsdk::modifier_interface::accepts_rectangle" ref="a6a415f3cfa5d39dd274f2cd37f758262" args="(void *aux=0) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::modifier_interface::accepts_rectangle </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。図形ウインドウ内での、長方形を作成するドラッグ操作を待ち受けるかどうかを返す。 </p>
+<p><code><a class="el" href="structsxsdk_1_1modifier__interface.html#a35e918742c22908cf823c366f68188e9" title="オーバライド可。図形ウインドウ内での、球を作成するドラッグ操作を待�...">accepts_sphere()</a></code>, <code><a class="el" href="structsxsdk_1_1modifier__interface.html#a9793f6b6759fd2c81a167940d807de68" title="オーバライド可。図形ウインドウ内での、円を作成するドラッグ操作を待�...">accepts_disk()</a></code>, <code><a class="el" href="structsxsdk_1_1modifier__interface.html#a6a415f3cfa5d39dd274f2cd37f758262" title="オーバライド可。図形ウインドウ内での、長方形を作成するドラッグ操作�...">accepts_rectangle()</a></code>, <code><a class="el" href="structsxsdk_1_1modifier__interface.html#af9de073e7a0f887662f4fd28df145282" title="オーバライド可。図形ウインドウ内での、直線移動するドラッグ操作を待�...">accepts_translation()</a></code> は同時に使用することはできない。この関数がtrueを返す場合は、他の関数でfalseを返さなければならない。</p>
+<p>ドラッグ操作の結果は<code><a class="el" href="structsxsdk_1_1modifier__interface.html#a9d704033dd204d4f592a72eef7607cba" title="オーバライド可。長方形のドラッグ操作後に呼ばれる。">set_rectangle()</a>で取得する。</code> </p>
+
+<p><a class="el" href="structsxsdk_1_1plugin__interface.html#a4d897e4da9d4983e73bb25707e80a398">sxsdk::plugin_interface</a>を再定義しています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a35e918742c22908cf823c366f68188e9"></a><!-- doxytag: member="sxsdk::modifier_interface::accepts_sphere" ref="a35e918742c22908cf823c366f68188e9" args="(void *aux=0) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::modifier_interface::accepts_sphere </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。図形ウインドウ内での、球を作成するドラッグ操作を待ち受けるかどうかを返す。 </p>
+<p><code><a class="el" href="structsxsdk_1_1modifier__interface.html#a35e918742c22908cf823c366f68188e9" title="オーバライド可。図形ウインドウ内での、球を作成するドラッグ操作を待�...">accepts_sphere()</a></code>, <code><a class="el" href="structsxsdk_1_1modifier__interface.html#a9793f6b6759fd2c81a167940d807de68" title="オーバライド可。図形ウインドウ内での、円を作成するドラッグ操作を待�...">accepts_disk()</a></code>, <code><a class="el" href="structsxsdk_1_1modifier__interface.html#a6a415f3cfa5d39dd274f2cd37f758262" title="オーバライド可。図形ウインドウ内での、長方形を作成するドラッグ操作�...">accepts_rectangle()</a></code>, <code><a class="el" href="structsxsdk_1_1modifier__interface.html#af9de073e7a0f887662f4fd28df145282" title="オーバライド可。図形ウインドウ内での、直線移動するドラッグ操作を待�...">accepts_translation()</a></code> は同時に使用することはできない。この関数がtrueを返す場合は、他の関数でfalseを返さなければならない。</p>
+<p>ドラッグ操作の結果は<code><a class="el" href="structsxsdk_1_1modifier__interface.html#a1a85fa7aef3818ab78a00b4996d8fe60" title="オーバライド可。球のドラッグ操作後に呼ばれる。">set_sphere()</a>で取得する。</code> </p>
+
+<p><a class="el" href="structsxsdk_1_1plugin__interface.html#aad3d440708ca869c239efeae9ca67d36">sxsdk::plugin_interface</a>を再定義しています。</p>
+
+</div>
+</div>
+<a class="anchor" id="af9de073e7a0f887662f4fd28df145282"></a><!-- doxytag: member="sxsdk::modifier_interface::accepts_translation" ref="af9de073e7a0f887662f4fd28df145282" args="(void *aux=0) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::modifier_interface::accepts_translation </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。図形ウインドウ内での、直線移動するドラッグ操作を待ち受けるかどうかを返す。 </p>
+<p><code><a class="el" href="structsxsdk_1_1modifier__interface.html#a35e918742c22908cf823c366f68188e9" title="オーバライド可。図形ウインドウ内での、球を作成するドラッグ操作を待�...">accepts_sphere()</a></code>, <code><a class="el" href="structsxsdk_1_1modifier__interface.html#a9793f6b6759fd2c81a167940d807de68" title="オーバライド可。図形ウインドウ内での、円を作成するドラッグ操作を待�...">accepts_disk()</a></code>, <code><a class="el" href="structsxsdk_1_1modifier__interface.html#a6a415f3cfa5d39dd274f2cd37f758262" title="オーバライド可。図形ウインドウ内での、長方形を作成するドラッグ操作�...">accepts_rectangle()</a></code>, <code><a class="el" href="structsxsdk_1_1modifier__interface.html#af9de073e7a0f887662f4fd28df145282" title="オーバライド可。図形ウインドウ内での、直線移動するドラッグ操作を待�...">accepts_translation()</a></code> は同時に使用することはできない。この関数がtrueを返す場合は、他の関数でfalseを返さなければならない。</p>
+<p>ドラッグ操作の結果は<code><a class="el" href="structsxsdk_1_1modifier__interface.html#afaae298e772204d0ce4f40fa7a3d4460" title="オーバライド可。直線移動のドラッグ操作後に呼ばれる。">set_translation()</a>で取得する。</code> </p>
+
+<p><a class="el" href="structsxsdk_1_1plugin__interface.html#a41351e89236175ebd56c0f711148802f">sxsdk::plugin_interface</a>を再定義しています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a1dd4630acb671b7695f342ba9e7a8dd1"></a><!-- doxytag: member="sxsdk::modifier_interface::canceled" ref="a1dd4630acb671b7695f342ba9e7a8dd1" args="(sxsdk::scene_interface *scene, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::modifier_interface::canceled </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1scene__interface.html">sxsdk::scene_interface</a> *&nbsp;</td>
+          <td class="paramname"> <em>scene</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。ドラッグ操作待ちの時にfinishボタンや他のツールの選択でプラグインの実行がキャンセルされると呼び出される。 </p>
+<p>ドラッグによる操作を受け付けない場合には呼び出されない。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a114478a9bbb1cccba31af815eb363c58"></a><!-- doxytag: member="sxsdk::modifier_interface::make_wireframe" ref="a114478a9bbb1cccba31af815eb363c58" args="(sxsdk::shape_class &amp;shape, const sxsdk::mat4 &amp;mat, int view, int flags, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::modifier_interface::make_wireframe </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1shape__class.html">sxsdk::shape_class</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>shape</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const sxsdk::mat4 &amp;&nbsp;</td>
+          <td class="paramname"> <em>mat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>view</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>flags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。Shadeが形状のワイヤフレームを表示する際にこの関数が呼ばれる。この関数をオーバーライドしてワイヤフレーム表示を追加することが可能。(参照：<a class="el" href="resident.html">メモリ常駐型プラグイン</a>) </p>
+<p><code><a class="el" href="structsxsdk_1_1shape__class.html#a4b76c527c5fd568479fd57b3aaf513bb" title="カスタム属性ストリームを生成する。形状にプラグイン独自の情�...">sxsdk::shape_class::create_attribute_stream_interface_with_uuid()</a></code> で引数<em>wireframe_id</em> にプラグインIDを渡して属性ストリームを生成すると、その形状に対して呼び出される。</p>
+<p>この関数内でOpenGL命令を直接記述することで独自にワイヤーフレームを構築することができる。全体の処理速度に影響するため、この関数内ではワイヤフレームの描画以外の処理を行わないことを推奨。また、シーンの状態を変更する処理の動作は保証されない。</p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>shape</em>&nbsp;</td><td>描画する対象となっている形状 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>mat</em>&nbsp;</td><td>形状のローカル座標系をワールド座標系に変換するマトリクス </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>view</em>&nbsp;</td><td>描画対象のビュー（0:側面 1:正面 2:上面 3:透視) </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>flags</em>&nbsp;</td><td>バウンディングモード、ピックモードを判別するフラグ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="structsxsdk_1_1plugin__interface.html#a13ed7f8d0cce9838504302688caee395">sxsdk::plugin_interface</a>を再定義しています。</p>
+
+</div>
+</div>
+<a class="anchor" id="ab3f6a861e7cf700039dc5ed70ede8318"></a><!-- doxytag: member="sxsdk::modifier_interface::modify" ref="ab3f6a861e7cf700039dc5ed70ede8318" args="(sxsdk::scene_interface *scene, void *aux=0)=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::modifier_interface::modify </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1scene__interface.html">sxsdk::scene_interface</a> *&nbsp;</td>
+          <td class="paramname"> <em>scene</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。メニューからプラグインが選択され、指定したダイアログ表示やユーザ操作の後に呼ばれる。 </p>
+<p>シーン中で何らかの変更を行った場合はtrue、そうでない場合はfalseを返すように設定する。</p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>scene</em>&nbsp;</td><td>対象となっているシーン </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af3d00d2eb0b0de2ef939b9be967d8f3f"></a><!-- doxytag: member="sxsdk::modifier_interface::pre_modify" ref="af3d00d2eb0b0de2ef939b9be967d8f3f" args="(sxsdk::scene_interface *scene, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::modifier_interface::pre_modify </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1scene__interface.html">sxsdk::scene_interface</a> *&nbsp;</td>
+          <td class="paramname"> <em>scene</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。メニューからプラグインが選択された直後、指定したダイアログ表示やユーザ操作の前に呼ばれる。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>scene</em>&nbsp;</td><td>対象となっているシーン </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af48269a2a125539a0fd04d182a9fc8ca"></a><!-- doxytag: member="sxsdk::modifier_interface::set_disk" ref="af48269a2a125539a0fd04d182a9fc8ca" args="(const sxsdk::vec3 &amp;center, float radius, int axis, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::modifier_interface::set_disk </td>
+          <td>(</td>
+          <td class="paramtype">const sxsdk::vec3 &amp;&nbsp;</td>
+          <td class="paramname"> <em>center</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>axis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。円のドラッグ操作後に呼ばれる。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>center</em>&nbsp;</td><td>ユーザ座標系での中心位置 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>radius</em>&nbsp;</td><td>ユーザ座標系での半径 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>axis</em>&nbsp;</td><td>カーソル面 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="structsxsdk_1_1plugin__interface.html#a9c690ec1242dd1fdb0d2c942973145c7">sxsdk::plugin_interface</a>を再定義しています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a9d704033dd204d4f592a72eef7607cba"></a><!-- doxytag: member="sxsdk::modifier_interface::set_rectangle" ref="a9d704033dd204d4f592a72eef7607cba" args="(const sxsdk::vec3 &amp;p, const sxsdk::vec3 &amp;q, int axis, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::modifier_interface::set_rectangle </td>
+          <td>(</td>
+          <td class="paramtype">const sxsdk::vec3 &amp;&nbsp;</td>
+          <td class="paramname"> <em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const sxsdk::vec3 &amp;&nbsp;</td>
+          <td class="paramname"> <em>q</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>axis</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。長方形のドラッグ操作後に呼ばれる。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>p</em>&nbsp;</td><td>ユーザ座標系でのドラッグ開始位置 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>q</em>&nbsp;</td><td>ユーザ座標系でのドラッグ終了位置 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>axis</em>&nbsp;</td><td>カーソル面 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="structsxsdk_1_1plugin__interface.html#ad489c6e8eee7cf2861e304133fba8498">sxsdk::plugin_interface</a>を再定義しています。</p>
+
+</div>
+</div>
+<a class="anchor" id="a1a85fa7aef3818ab78a00b4996d8fe60"></a><!-- doxytag: member="sxsdk::modifier_interface::set_sphere" ref="a1a85fa7aef3818ab78a00b4996d8fe60" args="(const sxsdk::vec3 &amp;center, float radius, int axis)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::modifier_interface::set_sphere </td>
+          <td>(</td>
+          <td class="paramtype">const sxsdk::vec3 &amp;&nbsp;</td>
+          <td class="paramname"> <em>center</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>radius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>axis</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。球のドラッグ操作後に呼ばれる。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>center</em>&nbsp;</td><td>ユーザ座標系での中心位置 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>radius</em>&nbsp;</td><td>ユーザ座標系での半径 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>axis</em>&nbsp;</td><td>カーソル面 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="structsxsdk_1_1plugin__interface.html#ae63cd3ab4f03af97c90a77f42299dcaf">sxsdk::plugin_interface</a>を再定義しています。</p>
+
+</div>
+</div>
+<a class="anchor" id="afaae298e772204d0ce4f40fa7a3d4460"></a><!-- doxytag: member="sxsdk::modifier_interface::set_translation" ref="afaae298e772204d0ce4f40fa7a3d4460" args="(const sxsdk::mat4 &amp;t, const sxsdk::vec3 &amp;p, int axis)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::modifier_interface::set_translation </td>
+          <td>(</td>
+          <td class="paramtype">const sxsdk::mat4 &amp;&nbsp;</td>
+          <td class="paramname"> <em>t</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const sxsdk::vec3 &amp;&nbsp;</td>
+          <td class="paramname"> <em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>axis</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。直線移動のドラッグ操作後に呼ばれる。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>t</em>&nbsp;</td><td>ユーザ座標系でのドラッグ開始位置 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>p</em>&nbsp;</td><td>ユーザ座標系でのドラッグ終了位置 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>axis</em>&nbsp;</td><td>カーソル面 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="structsxsdk_1_1plugin__interface.html#af0a91306e1a1557267269565fab0f715">sxsdk::plugin_interface</a>を再定義しています。</p>
+
+</div>
+</div>
+<hr/>この構造体の説明は次のファイルから生成されました:<ul>
+<li><a class="el" href="modifierinterface_8h_source.html">modifierinterface.h</a></li>
+</ul>
+</div>
+<br><br>
+<hr>
+<div align="center">Copyright &copy; e frontier, Inc. All rights reserved.</div>
+</body></html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>構造体 sxsdk::mesh_interface</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- 作成： Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="main.html"><span>メインページ</span></a></li>
+      <li><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>構成</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>構成メンバ</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath"><a class="el" href="namespacesxsdk.html">sxsdk</a>::<a class="el" href="structsxsdk_1_1mesh__interface.html">mesh_interface</a>
+  </div>
+</div>
+<div class="contents">
+<h1>構造体 sxsdk::mesh_interface</h1><!-- doxytag: class="sxsdk::mesh_interface" --><!-- doxytag: inherits="sxsdk::shade_interface" --><div class="dynheader">
+sxsdk::mesh_interfaceに対する継承グラフ</div>
+<div class="dynsection">
+ <div class="center">
+  <img src="structsxsdk_1_1mesh__interface.gif" usemap="#sxsdk::mesh_interface_map" alt=""/>
+  <map id="sxsdk::mesh_interface_map" name="sxsdk::mesh_interface_map">
+<area href="structsxsdk_1_1shade__interface.html" alt="sxsdk::shade_interface" shape="rect" coords="0,56,140,80"/>
+<area href="classunknown__interface.html" alt="unknown_interface" shape="rect" coords="0,0,140,24"/>
+</map>
+ </div>
+</div>
+
+<p><a href="structsxsdk_1_1mesh__interface-members.html">すべてのメンバ一覧</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Public メソッド</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="affccc6a390a6702372403a1ee6089028"></a><!-- doxytag: member="sxsdk::mesh_interface::get_m_number" ref="affccc6a390a6702372403a1ee6089028" args="(void *=0) const " -->
+virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1mesh__interface.html#affccc6a390a6702372403a1ee6089028">get_m_number</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">m方向のハンドルを含むコントロールポイントの数を取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0942b43d84ab16302b6348edcca24c2a"></a><!-- doxytag: member="sxsdk::mesh_interface::get_n_number" ref="a0942b43d84ab16302b6348edcca24c2a" args="(void *=0) const " -->
+virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1mesh__interface.html#a0942b43d84ab16302b6348edcca24c2a">get_n_number</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">n方向のハンドルを含むコントロールポイントの数を取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abead3caebd4e727dc2e2b8650ddffd00"></a><!-- doxytag: member="sxsdk::mesh_interface::operator[]" ref="abead3caebd4e727dc2e2b8650ddffd00" args="(int i)" -->
+virtual sxsdk::vec3 &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1mesh__interface.html#abead3caebd4e727dc2e2b8650ddffd00">operator[]</a> (int i)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">i番目のコントロールポイント、ハンドルの位置を取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual sxsdk::vec3 &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1mesh__interface.html#a763c155bcd0ee859732a5c61ffec93a3">operator()</a> (int i, int j, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">i,jで指定されるコントロールポイント、ハンドルの位置を取得する。  <a href="#a763c155bcd0ee859732a5c61ffec93a3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac940fa6e24819961a3a49bf382b5e89c"></a><!-- doxytag: member="sxsdk::mesh_interface::get_m_closed" ref="ac940fa6e24819961a3a49bf382b5e89c" args="(void *=0) const " -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1mesh__interface.html#ac940fa6e24819961a3a49bf382b5e89c">get_m_closed</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">m方向に閉じているかどうかを取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afde9242d3051abe9b9c3bc24d8b6f9c7"></a><!-- doxytag: member="sxsdk::mesh_interface::get_n_closed" ref="afde9242d3051abe9b9c3bc24d8b6f9c7" args="(void *=0) const " -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1mesh__interface.html#afde9242d3051abe9b9c3bc24d8b6f9c7">get_n_closed</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">n方向に閉じているかどうかを取得する。 <br/></td></tr>
+</table>
+<hr/><h2>関数</h2>
+<a class="anchor" id="a763c155bcd0ee859732a5c61ffec93a3"></a><!-- doxytag: member="sxsdk::mesh_interface::operator()" ref="a763c155bcd0ee859732a5c61ffec93a3" args="(int i, int j, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual sxsdk::vec3&amp; sxsdk::mesh_interface::operator() </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>j</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>i,jで指定されるコントロールポイント、ハンドルの位置を取得する。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>i</em>&nbsp;</td><td>m方向、i番目を指定 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>j</em>&nbsp;</td><td>n方向、j番目を指定 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>この構造体の説明は次のファイルから生成されました:<ul>
+<li><a class="el" href="meshinterface_8h_source.html">meshinterface.h</a></li>
+</ul>
+</div>
+<br><br>
+<hr>
+<div align="center">Copyright &copy; e frontier, Inc. All rights reserved.</div>
+</body></html>

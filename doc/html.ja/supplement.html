@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>補足</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- 作成： Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="main.html"><span>メインページ</span></a></li>
+      <li class="current"><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+
+
+<h1><a class="anchor" id="supplement">補足 </a></h1><h2><a class="anchor" id="void">
+■引数のvoid *</a></h2>
+<div class="fragment"><pre class="fragment"> <span class="keywordtype">void</span> function ( ... <span class="keywordtype">void</span> *aux = 0);
+</pre></div><p>Shade Plugin SDKのクラスのメンバ関数のほとんどはvoidのポインタ型（void *aux = 0）を引数としてとりますが、これは今後の関数の拡張を考慮しての引数ですので、実際のコーディングでは引数として考慮する必要はありません。なお、関数のリファレンスではこの引数は省略されています。</p>
+<h2><a class="anchor" id="units">
+■プラグインでの単位</a></h2>
+<p>Shadeではユーザの選択によってmm,cm,m,km,inch,foot,mile,yardの単位を切り替えることができますが、Shade内部の単位（native unit）は、ユーザの選択した単位に関係なく常に、mmになっています。プラグインにおいても同様に、mm単位で扱うことになります。ユーザが設定した単位系からShade内部の単位に変換する際には、<code>scene_interface::get_native_to_user_unit()</code>, <code>scene_interface::get_user_to_native_unit()</code> で係数を取得します。</p>
+<p>頂点データなどの座標値はローカル座標系の座標値になります。ローカル座標系の座標値をグローバル座標系の座標値に変換する際には、<code>shape_class::get_local_to_world_matrix()</code>, <code>shape_class::get_world_to_local_matrix()</code> で変換マトリクスを取得します。ただし、スキンが設定された頂点については、<code>skin_class::get_skin_world_matrix()</code> から変換マトリクスを取得します。</p>
+<p>図形ウインドウで表示されている座標系(ユーザ座標系)は、ろくろ機能やローカル座標モードによって傾きなどの座標変換をされている場合があります。グローバル座標系とユーザ座標系を変換するマトリクスは、<code><code>scene_interface::get_user_to_world_matrix()</code>,</code> <code>scene_interface::get_world_to_user_matrix()</code> により取得します。 </p>
+</div>
+<br><br>
+<hr>
+<div align="center">Copyright &copy; e frontier, Inc. All rights reserved.</div>
+</body></html>

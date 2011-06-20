@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>構造体 sxsdk::master_shape_class</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- 作成： Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="main.html"><span>メインページ</span></a></li>
+      <li><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>構成</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>構成メンバ</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath"><a class="el" href="namespacesxsdk.html">sxsdk</a>::<a class="el" href="structsxsdk_1_1master__shape__class.html">master_shape_class</a>
+  </div>
+</div>
+<div class="contents">
+<h1>構造体 sxsdk::master_shape_class</h1><!-- doxytag: class="sxsdk::master_shape_class" --><!-- doxytag: inherits="sxsdk::part_class" --><div class="dynheader">
+sxsdk::master_shape_classに対する継承グラフ</div>
+<div class="dynsection">
+ <div class="center">
+  <img src="structsxsdk_1_1master__shape__class.gif" usemap="#sxsdk::master_shape_class_map" alt=""/>
+  <map id="sxsdk::master_shape_class_map" name="sxsdk::master_shape_class_map">
+<area href="structsxsdk_1_1part__class.html" alt="sxsdk::part_class" shape="rect" coords="0,56,163,80"/>
+<area href="structsxsdk_1_1shape__class.html" alt="sxsdk::shape_class" shape="rect" coords="0,0,163,24"/>
+</map>
+ </div>
+</div>
+
+<p><a href="structsxsdk_1_1master__shape__class-members.html">すべてのメンバ一覧</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Public メソッド</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structsxsdk_1_1master__shape__class.html">master_shape_class</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1master__shape__class.html#a4a4d2e1cf2d8aaea4f95dc128106e71b">set_path</a> (const char *path_param, void *=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">外部参照を行うファイルのパスを設定する。  <a href="#a4a4d2e1cf2d8aaea4f95dc128106e71b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual const char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1master__shape__class.html#a24d7f6fa125f3918095a74122e168c32">get_path</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">外部参照を行うファイルのパスを取得する。  <a href="#a24d7f6fa125f3918095a74122e168c32"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1master__shape__class.html#aa2141c09c406b5f9f29d1bfdf6fc9125">update_external_reference</a> (bool ask=true, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">外部参照ファイルを再読み込みする。  <a href="#aa2141c09c406b5f9f29d1bfdf6fc9125"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1master__shape__class.html#a8095f562d599a43a0448bb902468b760">update_external_reference</a> (<a class="el" href="structsxsdk_1_1plugin__filereference__class.html">plugin_filereference_class</a> &amp;resolver, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">外部参照ファイルを再読み込みする。(ファイルが見つからない場合の解決手段をプラグイン側で実装する)  <a href="#a8095f562d599a43a0448bb902468b760"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1master__shape__class.html#aa6794d4d16ae3132045e0c98960d7b51">unlink_external_reference</a> (bool ask, bool unlink_all=false, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">外部参照ファイルとのリンクを切断して、シーン内に取り込む。  <a href="#aa6794d4d16ae3132045e0c98960d7b51"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a742820ab72ee5490df83018b3278c823"></a><!-- doxytag: member="sxsdk::master_shape_class::file_exists" ref="a742820ab72ee5490df83018b3278c823" args="(void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1master__shape__class.html#a742820ab72ee5490df83018b3278c823">file_exists</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">外部参照されたファイルが存在しているかどうかを返す。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0d14fd53d63dc37c629059a7fd74844a"></a><!-- doxytag: member="sxsdk::master_shape_class::has_external_reference" ref="a0d14fd53d63dc37c629059a7fd74844a" args="(void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1master__shape__class.html#a0d14fd53d63dc37c629059a7fd74844a">has_external_reference</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">外部参照ファイル内でさらに外部参照ファイルが使用されているかどうか。 <br/></td></tr>
+</table>
+<hr/><h2>関数</h2>
+<a class="anchor" id="a24d7f6fa125f3918095a74122e168c32"></a><!-- doxytag: member="sxsdk::master_shape_class::get_path" ref="a24d7f6fa125f3918095a74122e168c32" args="(void *=0) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const char* sxsdk::master_shape_class::get_path </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>外部参照を行うファイルのパスを取得する。 </p>
+<p>パスの変更を反映させるには、<code><a class="el" href="structsxsdk_1_1master__shape__class.html#aa2141c09c406b5f9f29d1bfdf6fc9125" title="外部参照ファイルを再読み込みする。">update_external_reference()</a></code> を呼び出す。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a4a4d2e1cf2d8aaea4f95dc128106e71b"></a><!-- doxytag: member="sxsdk::master_shape_class::set_path" ref="a4a4d2e1cf2d8aaea4f95dc128106e71b" args="(const char *path_param, void *=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structsxsdk_1_1master__shape__class.html">master_shape_class</a>&amp; sxsdk::master_shape_class::set_path </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>path_param</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>外部参照を行うファイルのパスを設定する。 </p>
+<p>パスの変更を反映させるには、<code><a class="el" href="structsxsdk_1_1master__shape__class.html#aa2141c09c406b5f9f29d1bfdf6fc9125" title="外部参照ファイルを再読み込みする。">update_external_reference()</a></code> を呼び出す。 </p>
+
+</div>
+</div>
+<a class="anchor" id="aa6794d4d16ae3132045e0c98960d7b51"></a><!-- doxytag: member="sxsdk::master_shape_class::unlink_external_reference" ref="aa6794d4d16ae3132045e0c98960d7b51" args="(bool ask, bool unlink_all=false, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::master_shape_class::unlink_external_reference </td>
+          <td>(</td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>ask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>unlink_all</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>外部参照ファイルとのリンクを切断して、シーン内に取り込む。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>ask</em>&nbsp;</td><td>Shadeの各種確認ダイアログを表示するかどうか。 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>unlink_all</em>&nbsp;</td><td>外部参照ファイル内でさらに外部参照ファイルが使用されていた場合、すべてのリンクを切断してシーンに取り込むかどうか。<em>ask</em> にtrueを渡した場合は問い合わせのダイアログを表示するので、この引数の値は無視される。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a8095f562d599a43a0448bb902468b760"></a><!-- doxytag: member="sxsdk::master_shape_class::update_external_reference" ref="a8095f562d599a43a0448bb902468b760" args="(plugin_filereference_class &amp;resolver, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::master_shape_class::update_external_reference </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1plugin__filereference__class.html">plugin_filereference_class</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>resolver</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>外部参照ファイルを再読み込みする。(ファイルが見つからない場合の解決手段をプラグイン側で実装する) </p>
+<p>外部参照をしているシーンファイルの中でさらに外部参照をしている場合があるため、<code><a class="el" href="structsxsdk_1_1plugin__filereference__class.html">plugin_filereference_class</a></code> は複数回の呼び出しを考慮した実装をする必要がある。</p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>resolver</em>&nbsp;</td><td>外部参照ファイルが見つからなかったときにコールバックを受けるオブジェクト。<code><a class="el" href="structsxsdk_1_1plugin__filereference__class.html">plugin_filereference_class</a></code> を継承したクラスを生成して渡す。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aa2141c09c406b5f9f29d1bfdf6fc9125"></a><!-- doxytag: member="sxsdk::master_shape_class::update_external_reference" ref="aa2141c09c406b5f9f29d1bfdf6fc9125" args="(bool ask=true, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::master_shape_class::update_external_reference </td>
+          <td>(</td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>ask</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>外部参照ファイルを再読み込みする。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>ask</em>&nbsp;</td><td>外部参照ファイルが見つからなかったときの動作を指定する。trueの場合、ファイル指定のダイアログボックスを表示してユーザに解決を求める。falseの場合、すべて無視して進行する。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>この構造体の説明は次のファイルから生成されました:<ul>
+<li><a class="el" href="shapeclass_8h_source.html">shapeclass.h</a></li>
+</ul>
+</div>
+<br><br>
+<hr>
+<div align="center">Copyright &copy; e frontier, Inc. All rights reserved.</div>
+</body></html>

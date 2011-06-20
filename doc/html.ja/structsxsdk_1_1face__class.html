@@ -1,0 +1,472 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>構造体 sxsdk::face_class</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- 作成： Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="main.html"><span>メインページ</span></a></li>
+      <li><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>構成</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>構成メンバ</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath"><a class="el" href="namespacesxsdk.html">sxsdk</a>::<a class="el" href="structsxsdk_1_1face__class.html">face_class</a>
+  </div>
+</div>
+<div class="contents">
+<h1>構造体 sxsdk::face_class</h1><!-- doxytag: class="sxsdk::face_class" -->
+<p><a href="structsxsdk_1_1face__class-members.html">すべてのメンバ一覧</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Public メソッド</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7b1e0e1891f7b4f82bd7e3ad8b2ea924"></a><!-- doxytag: member="sxsdk::face_class::get_number_of_vertices" ref="a7b1e0e1891f7b4f82bd7e3ad8b2ea924" args="(void *=0) const " -->
+virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1face__class.html#a7b1e0e1891f7b4f82bd7e3ad8b2ea924">get_number_of_vertices</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">面に属する頂点の数を取得する。を取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structsxsdk_1_1vertex__class.html">vertex_class</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1face__class.html#a42b7bbcff2a8d71feeb1ee256e5fba04">vertex</a> (int i, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><em>i</em> 番目の頂点の参照を返す。  <a href="#a42b7bbcff2a8d71feeb1ee256e5fba04"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8a79fe03504f0b6df8f31e036d0d1fcb"></a><!-- doxytag: member="sxsdk::face_class::get_vertex_indices" ref="a8a79fe03504f0b6df8f31e036d0d1fcb" args="(int list[], void *=0) const " -->
+virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1face__class.html#a8a79fe03504f0b6df8f31e036d0d1fcb">get_vertex_indices</a> (int list[], void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">頂点のインデックスを取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaaa76c0d53e4e1b60c7909132059f024"></a><!-- doxytag: member="sxsdk::face_class::set_vertex_indices" ref="aaaa76c0d53e4e1b60c7909132059f024" args="(int n, int list[], void *=0)" -->
+virtual <a class="el" href="structsxsdk_1_1face__class.html">face_class</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1face__class.html#aaaa76c0d53e4e1b60c7909132059f024">set_vertex_indices</a> (int n, int list[], void *=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">頂点のインデックスを設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3200ce12418655b8110285c06e7803b7"></a><!-- doxytag: member="sxsdk::face_class::has_uv" ref="a3200ce12418655b8110285c06e7803b7" args="(void *=0) const " -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1face__class.html#a3200ce12418655b8110285c06e7803b7">has_uv</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">uv値を持っているか判定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1face__class.html#a16cf1b9d1cd5ba0ff16d7756293889cf">get_parameter_uv</a> (sxsdk::vec2 list[], void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">パラメータUV値のリストを取得する。  <a href="#a16cf1b9d1cd5ba0ff16d7756293889cf"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structsxsdk_1_1face__class.html">face_class</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1face__class.html#a6528a1af73c169fced6562ed0d8ecbd8">set_parameter_uv</a> (int n, sxsdk::vec2 list[], void *=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">パラメータUV値のリストを設定する。  <a href="#a6528a1af73c169fced6562ed0d8ecbd8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1face__class.html#ac0daf565cded20a374b733974081fc3c">get_distance_uv</a> (sxsdk::vec2 list[], void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">距離UV値のリストを取得する。  <a href="#ac0daf565cded20a374b733974081fc3c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structsxsdk_1_1face__class.html">face_class</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1face__class.html#ac19e53fb4bcda816cc3df378b6fc7c9d">set_distance_uv</a> (int n, sxsdk::vec2 list[], void *=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">距離UV値のリストを設定する。  <a href="#ac19e53fb4bcda816cc3df378b6fc7c9d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad8af0249b70072e206f04db25c7d6fb1"></a><!-- doxytag: member="sxsdk::face_class::remove" ref="ad8af0249b70072e206f04db25c7d6fb1" args="(void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1face__class.html#ad8af0249b70072e206f04db25c7d6fb1">remove</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">面を削除する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a10b1011b58bd359f661bc0459f70453a"></a><!-- doxytag: member="sxsdk::face_class::stream_to_clipboard" ref="a10b1011b58bd359f661bc0459f70453a" args="(void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1face__class.html#a10b1011b58bd359f661bc0459f70453a">stream_to_clipboard</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オブジェクトの内容をテキスト（XML）としてクリップボードにコピーする。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1face__class.html#a720025a1a819e5c570045886dca94592">get_normals</a> (sxsdk::vec3 list[], void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">法線ベクトルを取得する。  <a href="#a720025a1a819e5c570045886dca94592"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structsxsdk_1_1face__class.html">face_class</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1face__class.html#a5c91c2868f53312a1a999726cd5ac487">set_normals</a> (int n, sxsdk::vec3 list[], void *=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">法線ベクトルを設定する。  <a href="#a5c91c2868f53312a1a999726cd5ac487"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1face__class.html#ab3a7bf0fb22682e979b210993723252c">get_sub_surface_index</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">サブサーフェスオブジェクトのインデックス値を取得する。  <a href="#ab3a7bf0fb22682e979b210993723252c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structsxsdk_1_1face__class.html">face_class</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1face__class.html#a6763c374cf0baf07812b02d6790d6137">set_sub_surface_index</a> (int sub_surface_index_param, void *=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">サブサーフェスオブジェクトのインデックス値を設定する。  <a href="#a6763c374cf0baf07812b02d6790d6137"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a377baabec4a7dd5c7faec4628d57293d"></a><!-- doxytag: member="sxsdk::face_class::set_active" ref="a377baabec4a7dd5c7faec4628d57293d" args="(bool active_param, void *=0)" -->
+virtual <a class="el" href="structsxsdk_1_1face__class.html">face_class</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1face__class.html#a377baabec4a7dd5c7faec4628d57293d">set_active</a> (bool active_param, void *=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">選択状態を設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2db26c4f7c947e455cd5269a7b3a7983"></a><!-- doxytag: member="sxsdk::face_class::get_active" ref="a2db26c4f7c947e455cd5269a7b3a7983" args="(void *=0) const " -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1face__class.html#a2db26c4f7c947e455cd5269a7b3a7983">get_active</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">選択状態を取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a53f2b1ec90d9788e58087743047b82db"></a><!-- doxytag: member="sxsdk::face_class::set_active_order" ref="a53f2b1ec90d9788e58087743047b82db" args="(int active_order_param, void *=0)" -->
+virtual <a class="el" href="structsxsdk_1_1face__class.html">face_class</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1face__class.html#a53f2b1ec90d9788e58087743047b82db">set_active_order</a> (int active_order_param, void *=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">選択順番号を設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac78886099fffb8b4fceef28cd370c0da"></a><!-- doxytag: member="sxsdk::face_class::get_active_order" ref="ac78886099fffb8b4fceef28cd370c0da" args="(void *=0) const " -->
+virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1face__class.html#ac78886099fffb8b4fceef28cd370c0da">get_active_order</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">選択順番号を取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual sxsdk::vec2&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1face__class.html#a8c825302cebcaed4c2e71d4924746734">get_face_uv</a> (int uv_layer_index, int v_index, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">指定のUVレイヤにおける面の頂点UVを取得。  <a href="#a8c825302cebcaed4c2e71d4924746734"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1face__class.html#a8e86ff78549427b6f4bc0e505663e389">set_face_uv</a> (int uv_layer_index, int v_index, sxsdk::vec2 uv, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">指定のUVレイヤにおける面の頂点UVを指定。  <a href="#a8e86ff78549427b6f4bc0e505663e389"></a><br/></td></tr>
+</table>
+<hr/><h2>関数</h2>
+<a class="anchor" id="ac0daf565cded20a374b733974081fc3c"></a><!-- doxytag: member="sxsdk::face_class::get_distance_uv" ref="ac0daf565cded20a374b733974081fc3c" args="(sxsdk::vec2 list[], void *=0) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int sxsdk::face_class::get_distance_uv </td>
+          <td>(</td>
+          <td class="paramtype">sxsdk::vec2&nbsp;</td>
+          <td class="paramname"> <em>list</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>距離UV値のリストを取得する。 </p>
+<p>面の頂点に割り当てられている距離UV値のリスト。ポリゴンメッシュ形状が自由曲面から変換されて生成されたものの場合、元の自由曲面のu-v方向の幾何的距離を正規化した値が初期値として設定されている。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a8c825302cebcaed4c2e71d4924746734"></a><!-- doxytag: member="sxsdk::face_class::get_face_uv" ref="a8c825302cebcaed4c2e71d4924746734" args="(int uv_layer_index, int v_index, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual sxsdk::vec2 sxsdk::face_class::get_face_uv </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>uv_layer_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>v_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>指定のUVレイヤにおける面の頂点UVを取得。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>uv_layer_index</em>&nbsp;</td><td>UV層の番号 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>v_index</em>&nbsp;</td><td>頂点番号 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a720025a1a819e5c570045886dca94592"></a><!-- doxytag: member="sxsdk::face_class::get_normals" ref="a720025a1a819e5c570045886dca94592" args="(sxsdk::vec3 list[], void *=0) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int sxsdk::face_class::get_normals </td>
+          <td>(</td>
+          <td class="paramtype">sxsdk::vec3&nbsp;</td>
+          <td class="paramname"> <em>list</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>法線ベクトルを取得する。 </p>
+<p>通常はポリゴンメッシュ面の法線ベクトルはレンダリング時など必要に応じてその場で計算されるが、明示的に法線ベクトルの値が設定されていると、計算せずに設定された値を使う。設定する場合にはアイテム数は面が持つ頂点の数に一致していなければならない。また、アイテム数をゼロとして設定すると、法線ベクトルの設定がクリアされる。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a16cf1b9d1cd5ba0ff16d7756293889cf"></a><!-- doxytag: member="sxsdk::face_class::get_parameter_uv" ref="a16cf1b9d1cd5ba0ff16d7756293889cf" args="(sxsdk::vec2 list[], void *=0) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int sxsdk::face_class::get_parameter_uv </td>
+          <td>(</td>
+          <td class="paramtype">sxsdk::vec2&nbsp;</td>
+          <td class="paramname"> <em>list</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>パラメータUV値のリストを取得する。 </p>
+<p>面の頂点に割り当てられているパラメータUV値のリスト。ポリゴンメッシュ形状が自由曲面から変換されて生成されたものの場合、元の自由曲面のu-vパラメータ値が初期値として設定されている。 </p>
+
+</div>
+</div>
+<a class="anchor" id="ab3a7bf0fb22682e979b210993723252c"></a><!-- doxytag: member="sxsdk::face_class::get_sub_surface_index" ref="ab3a7bf0fb22682e979b210993723252c" args="(void *=0) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int sxsdk::face_class::get_sub_surface_index </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>サブサーフェスオブジェクトのインデックス値を取得する。 </p>
+<p>インデックス値で指定されたサブオブジェクトの表面材質属性がこの面に割り当てられる。デフォルト値は-1で、割り当てられていない状態。 </p>
+
+</div>
+</div>
+<a class="anchor" id="ac19e53fb4bcda816cc3df378b6fc7c9d"></a><!-- doxytag: member="sxsdk::face_class::set_distance_uv" ref="ac19e53fb4bcda816cc3df378b6fc7c9d" args="(int n, sxsdk::vec2 list[], void *=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structsxsdk_1_1face__class.html">face_class</a>&amp; sxsdk::face_class::set_distance_uv </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">sxsdk::vec2&nbsp;</td>
+          <td class="paramname"> <em>list</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>距離UV値のリストを設定する。 </p>
+<p>面の頂点に割り当てられている距離UV値のリスト。ポリゴンメッシュ形状が自由曲面から変換されて生成されたものの場合、元の自由曲面のu-v方向の幾何的距離を正規化した値が初期値として設定されている。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a8e86ff78549427b6f4bc0e505663e389"></a><!-- doxytag: member="sxsdk::face_class::set_face_uv" ref="a8e86ff78549427b6f4bc0e505663e389" args="(int uv_layer_index, int v_index, sxsdk::vec2 uv, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::face_class::set_face_uv </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>uv_layer_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>v_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">sxsdk::vec2&nbsp;</td>
+          <td class="paramname"> <em>uv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>指定のUVレイヤにおける面の頂点UVを指定。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>uv_layer_index</em>&nbsp;</td><td>UV層の番号 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>v_index</em>&nbsp;</td><td>頂点番号 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>uv</em>&nbsp;</td><td>頂点UV </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a5c91c2868f53312a1a999726cd5ac487"></a><!-- doxytag: member="sxsdk::face_class::set_normals" ref="a5c91c2868f53312a1a999726cd5ac487" args="(int n, sxsdk::vec3 list[], void *=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structsxsdk_1_1face__class.html">face_class</a>&amp; sxsdk::face_class::set_normals </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">sxsdk::vec3&nbsp;</td>
+          <td class="paramname"> <em>list</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>法線ベクトルを設定する。 </p>
+<p>通常はポリゴンメッシュ面の法線ベクトルはレンダリング時など必要に応じてその場で計算されるが、明示的に法線ベクトルの値が設定されていると、計算せずに設定された値を使う。設定する場合にはアイテム数は面が持つ頂点の数に一致していなければならない。また、アイテム数をゼロとして設定すると、法線ベクトルの設定がクリアされる。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a6528a1af73c169fced6562ed0d8ecbd8"></a><!-- doxytag: member="sxsdk::face_class::set_parameter_uv" ref="a6528a1af73c169fced6562ed0d8ecbd8" args="(int n, sxsdk::vec2 list[], void *=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structsxsdk_1_1face__class.html">face_class</a>&amp; sxsdk::face_class::set_parameter_uv </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">sxsdk::vec2&nbsp;</td>
+          <td class="paramname"> <em>list</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>パラメータUV値のリストを設定する。 </p>
+<p>面の頂点に割り当てられているパラメータUV値のリスト。ポリゴンメッシュ形状が自由曲面から変換されて生成されたものの場合、元の自由曲面のu-vパラメータ値が初期値として設定されている。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a6763c374cf0baf07812b02d6790d6137"></a><!-- doxytag: member="sxsdk::face_class::set_sub_surface_index" ref="a6763c374cf0baf07812b02d6790d6137" args="(int sub_surface_index_param, void *=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structsxsdk_1_1face__class.html">face_class</a>&amp; sxsdk::face_class::set_sub_surface_index </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>sub_surface_index_param</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>サブサーフェスオブジェクトのインデックス値を設定する。 </p>
+<p>インデックス値で指定されたサブオブジェクトの表面材質属性がこの面に割り当てられる。デフォルト値は-1で、割り当てられていない状態。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a42b7bbcff2a8d71feeb1ee256e5fba04"></a><!-- doxytag: member="sxsdk::face_class::vertex" ref="a42b7bbcff2a8d71feeb1ee256e5fba04" args="(int i, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structsxsdk_1_1vertex__class.html">vertex_class</a>&amp; sxsdk::face_class::vertex </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p><em>i</em> 番目の頂点の参照を返す。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>i</em>&nbsp;</td><td>面に属する頂点の番号 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>この構造体の説明は次のファイルから生成されました:<ul>
+<li><a class="el" href="faceclass_8h_source.html">faceclass.h</a></li>
+</ul>
+</div>
+<br><br>
+<hr>
+<div align="center">Copyright &copy; e frontier, Inc. All rights reserved.</div>
+</body></html>

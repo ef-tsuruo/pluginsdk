@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>メモリ管理</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- 作成： Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="main.html"><span>メインページ</span></a></li>
+      <li class="current"><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+
+
+<h1><a class="anchor" id="memorymanagement">メモリ管理 </a></h1><h2><a class="anchor" id="objects">
+■オブジェクトの種類</a></h2>
+<p>Shade plugin SDKで扱うオブジェクトは、２種類に分類される。1つ目は'_interface'で終わる名前のクラスのオブジェクトで、これは参照カウントにより管理される。２つ目は'_class'で終わる名前のオブジェクト。これはShade本体内部に既に存在するオブジェクトをプラグインから参照するための便宜上のオブジェクトで、参照先のオブジェクトに付随しており、特にメモリ管理する必要はない。</p>
+<h2><a class="anchor" id="refcounting">
+■参照カウント</a></h2>
+<p>すべての'*_interface'クラスはunknown_interfaceクラスから派生されており、unknown_interfaceクラスのAddRef()、Release()関数によってそれぞれ参照カウントをインクリメント／デクリメントする。</p>
+<p>SDK関数のget_*_interface()またはcreate_*_interface()はAddRef()した状態でオブジェクトを返すので、受け取った側で必ずRelease()を呼ばなくてはならない。</p>
+<p>例外が投げられても安全／確実にRelease()を呼ぶための１つの方法として、compointerテンプレートクラスを使うことを推奨。</p>
+<h2><a class="anchor" id="compointer">
+■compointerについて</a></h2>
+<h3><a class="anchor" id="requiring_compointer">
+compointerを必要とする場合</a></h3>
+<div class="fragment"><pre class="fragment"> <span class="comment">// xxx_interfaceを戻り値にとる関数</span>
+ xxx_interface *scene_interface::get_xxx_interface(<span class="keywordtype">void</span> * = 0);
+</pre></div><div class="fragment"><pre class="fragment"> <span class="comment">// compointerで取得する(○)</span>
+ <a class="code" href="classcompointer.html" title="*_interfaceクラスのオブジェクトを指す参照カウントスマートポインタ。...">compointer&lt;xxx_interface&gt;</a> xxx (scene-&gt;get_xxx_interface());
+ 
+ <span class="comment">// このように取得するとそのままではメモリリークする(×） </span>
+ xxx_interface *xxx = scene-&gt;get_xxx_interface();
+</pre></div><p>Shade Plugin SDKでは、xxx_interfaceのポインタを関数の戻り値として取得する際には上記のようにcompointerを使うようにしてください。compointerを使用せず通常のポインタとして扱った場合はinterfaceのメモリが開放されずに残りメモリリークが起きます。xxx_interfaceを戻り値としてとる関数は例外なくcompointerを必要とするので、まずは「xxx_interfaceのポインタを取得する関数であればcompointerを使う」と覚えておけばよいでしょう。</p>
+<h3><a class="anchor" id="not_using_compointer">
+compointerを必要としない場合</a></h3>
+<div class="fragment"><pre class="fragment"> <span class="comment">// このように取得するとそのままではメモリリークするが、</span>
+ xxx_interface *xxx = scene-&gt;get_xxx_interface();
+ <span class="comment">// Releaseすれば解放される（○） </span>
+ xxx-&gt;Release();
+</pre></div><div class="fragment"><pre class="fragment"> <span class="comment">// このように取得するとそのままではメモリリークするが、</span>
+ xxx_interface *xxx = scene-&gt;get_xxx_interface();
+ <span class="comment">// deleteすれば解放される（△）</span>
+ <span class="keyword">delete</span> xxx; <span class="comment">// このやり方は推奨しません</span>
+</pre></div><p>インターフェイスの取得にはcompointerの使用を推奨していますが、compointerを使わずに扱うこともできます。１つは取得したinterfaceのポインタに対してRelease関数をよぶ方法、もう１つはdeleteする方法です。Release関数を呼ぶ方法はcompointerが内部的に行っていることを直接行う方法です。deleteで解放する方法はget_xxx_interface内でnewにより確保されたメモリをdeleteにより強制的に解放する方法です。現時点ではインターフェイスは参照カウンタが1の状態（自分のプラグイン以外から参照されていない）で取得されれため、直接deleteしても問題は起こらないと思いますが、このやり方は参照カウンタによりメモリを管理するCOM（Component Object Model)の形式に反するものなので推奨しません。 </p>
+</div>
+<br><br>
+<hr>
+<div align="center">Copyright &copy; e frontier, Inc. All rights reserved.</div>
+</body></html>

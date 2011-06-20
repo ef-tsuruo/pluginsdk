@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>構造体 sxsdk::plugin_filereference_class</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- 作成： Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="main.html"><span>メインページ</span></a></li>
+      <li><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>構成</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>構成メンバ</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath"><a class="el" href="namespacesxsdk.html">sxsdk</a>::<a class="el" href="structsxsdk_1_1plugin__filereference__class.html">plugin_filereference_class</a>
+  </div>
+</div>
+<div class="contents">
+<h1>構造体 sxsdk::plugin_filereference_class</h1><!-- doxytag: class="sxsdk::plugin_filereference_class" -->
+<p><a href="structsxsdk_1_1plugin__filereference__class-members.html">すべてのメンバ一覧</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Public メソッド</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1plugin__filereference__class.html#a9c5c33cc0fea90da45586e2e452d4267">ask</a> (const char *path, const char *name, int type, int number_of_extensions, char **extensions)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。ファイルパスの解決が必要なときに呼ばれる。メモリを確保して、解決済みのパスの文字列を返す(メモリの開放はShadeが行う)。  <a href="#a9c5c33cc0fea90da45586e2e452d4267"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1plugin__filereference__class.html#a04d041c7a116a7e53bd2af46cc81ddcf">alert</a> (int error_type, const char *path, const char *name, int file_type, int number_of_extensions, char **extensions)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。外部参照ファイルの読み込みに失敗した場合に呼ばれる。  <a href="#a04d041c7a116a7e53bd2af46cc81ddcf"></a><br/></td></tr>
+</table>
+<hr/><h2>関数</h2>
+<a class="anchor" id="a04d041c7a116a7e53bd2af46cc81ddcf"></a><!-- doxytag: member="sxsdk::plugin_filereference_class::alert" ref="a04d041c7a116a7e53bd2af46cc81ddcf" args="(int error_type, const char *path, const char *name, int file_type, int number_of_extensions, char **extensions)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::plugin_filereference_class::alert </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>error_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>file_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>number_of_extensions</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&nbsp;</td>
+          <td class="paramname"> <em>extensions</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。外部参照ファイルの読み込みに失敗した場合に呼ばれる。 </p>
+<p>trueを返した場合、続いてパスの解決のために<code><a class="el" href="structsxsdk_1_1plugin__filereference__class.html#a9c5c33cc0fea90da45586e2e452d4267" title="オーバライド可。ファイルパスの解決が必要なときに呼ばれる。メモリを�...">ask()</a></code> が呼ばれる。</p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>error_type</em>&nbsp;</td><td>エラーの種類(0: ファイルが存在しない, 1: ファイルの読み込みに失敗, 2: 循環参照を検出) </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>path</em>&nbsp;</td><td>元のファイルパス </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>name</em>&nbsp;</td><td>参照名 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>file_type</em>&nbsp;</td><td>参照の種類(0: 形状, 1: 表面材質, 2: イメージ) </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>number_of_extensions</em>&nbsp;</td><td>読み込み対象となる拡張子の種類の数 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>extensions</em>&nbsp;</td><td>読み込み対象となる拡張子のリスト </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a9c5c33cc0fea90da45586e2e452d4267"></a><!-- doxytag: member="sxsdk::plugin_filereference_class::ask" ref="a9c5c33cc0fea90da45586e2e452d4267" args="(const char *path, const char *name, int type, int number_of_extensions, char **extensions)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual char* sxsdk::plugin_filereference_class::ask </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>number_of_extensions</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&nbsp;</td>
+          <td class="paramname"> <em>extensions</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。ファイルパスの解決が必要なときに呼ばれる。メモリを確保して、解決済みのパスの文字列を返す(メモリの開放はShadeが行う)。 </p>
+<p>読み込み処理を中断する場合は、<code><a class="el" href="structsxsdk_1_1plugin__filereference__class.html#a04d041c7a116a7e53bd2af46cc81ddcf" title="オーバライド可。外部参照ファイルの読み込みに失敗した場合に呼ばれる�...">alert()</a></code> の呼び出しの際にfalseを返す。</p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>path</em>&nbsp;</td><td>元のファイルパス </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>name</em>&nbsp;</td><td>参照名 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>type</em>&nbsp;</td><td>参照の種類(0: 形状, 1: 表面材質, 2: イメージ) </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>number_of_extensions</em>&nbsp;</td><td>読み込み対象となる拡張子の種類の数 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>extensions</em>&nbsp;</td><td>読み込み対象となる拡張子のリスト </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>この構造体の説明は次のファイルから生成されました:<ul>
+<li><a class="el" href="shapeclass_8h_source.html">shapeclass.h</a></li>
+</ul>
+</div>
+<br><br>
+<hr>
+<div align="center">Copyright &copy; e frontier, Inc. All rights reserved.</div>
+</body></html>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema' elementFormDefault='qualified'>
+	<xsd:element name='menubar'>
+		<xsd:annotation>
+			<xsd:documentation> \en menu bar \enden  \ja メニューバー \endja </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:choice minOccurs='0' maxOccurs='unbounded'>
+				<xsd:element ref='menu'/>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name='menu'>
+		<xsd:annotation>
+			<xsd:documentation> \en menu \enden  \ja メニュー \endja </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:choice minOccurs='0' maxOccurs='unbounded'>
+				<xsd:element ref='menu'/>
+				<xsd:element ref='menu-item'/>
+				<xsd:element ref='menu-separator'/>
+			</xsd:choice>
+			<xsd:attribute name='label' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en label \enden  \ja ラベル \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='id' type='xsd:integer'>
+				<xsd:annotation>
+					<xsd:documentation> \en id \enden  \ja 識別子 \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='macosx' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation> \en loaded only on Mac OS X \enden  \ja Mac OS Xでのみ有効 \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='windows' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation> \en loaded only on Windows \enden  \ja Wiwndowsでのみ有効 \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name='popup-menu'>
+		<xsd:annotation>
+			<xsd:documentation> \en popup menu \enden  \ja ポップアップメニューメニュー \endja </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:choice minOccurs='0' maxOccurs='unbounded'>
+				<xsd:element ref='menu-item'/>
+				<xsd:element ref='menu-separator'/>
+				<xsd:element ref='menu'/>
+			</xsd:choice>
+			<xsd:attribute name='label' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en label \enden  \ja ラベル \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='id' type='xsd:integer'>
+				<xsd:annotation>
+					<xsd:documentation> \en id \enden  \ja 識別子 \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name='menu-item'>
+		<xsd:annotation>
+			<xsd:documentation> \en menu item \enden  \ja メニューアイテム \endja </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:attribute name='label' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en label \enden  \ja ラベル \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='id' type='xsd:integer'>
+				<xsd:annotation>
+					<xsd:documentation> \en id \enden  \ja 識別子 \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='action' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en action \enden  \ja アクション \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='key' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en key \enden  \ja キィ \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='mackey' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en key (Mac) \enden  \ja キィ　（Mac） \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='winkey' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en key (Windows) \enden  \ja キィ　（Windows） \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='tooltip' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en tooltip \enden  \ja ツールティップ \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='icon' type='xsd:string'>
+				<xsd:annotation>
+					<xsd:documentation> \en icon resource name \enden  \ja アイコンリソース名 \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='local' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='windows' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation> \en Windows only \enden  \ja Windowsのみで有効 \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='macosx' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation></xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+			<xsd:attribute name='full' type='xsd:boolean'>
+				<xsd:annotation>
+					<xsd:documentation> \en FULL only \enden  \ja FULL版のみで有効 \endja </xsd:documentation>
+				</xsd:annotation>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name='menu-separator'>
+		<xsd:annotation>
+			<xsd:documentation> \en menu separator \enden  \ja メニューセパレータ \endja </xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+</xsd:schema>

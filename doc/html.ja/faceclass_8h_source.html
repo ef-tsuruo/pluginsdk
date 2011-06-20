@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>faceclass.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- 作成： Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="main.html"><span>メインページ</span></a></li>
+      <li><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+<h1>faceclass.h</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// this file has been created by makeheader.py</span>
+<a name="l00002"></a>00002 <span class="comment">// ja utf-8</span>
+<a name="l00003"></a>00003 <span class="preprocessor">#pragma once</span>
+<a name="l00010"></a>00010 <span class="preprocessor">namespace sxsdk {</span>
+<a name="l00011"></a><a class="code" href="structsxsdk_1_1face__class.html">00011</a> <span class="preprocessor"></span><span class="keyword">struct </span><a class="code" href="structsxsdk_1_1face__class.html">face_class</a> {
+<a name="l00012"></a>00012 <span class="keyword">public</span>:
+<a name="l00014"></a>00014     <span class="keyword">virtual</span> <span class="keywordtype">int</span> get_number_of_vertices (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00017"></a>00017     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1vertex__class.html">vertex_class</a>&amp; vertex (<span class="keywordtype">int</span> i, <span class="keywordtype">void</span>* aux = 0);
+<a name="l00019"></a>00019     <span class="keyword">virtual</span> <span class="keywordtype">int</span> get_vertex_indices (<span class="keywordtype">int</span> list [], <span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00021"></a>00021     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1face__class.html">face_class</a> &amp;set_vertex_indices (<span class="keywordtype">int</span> n, <span class="keywordtype">int</span> list [], <span class="keywordtype">void</span> * = 0);
+<a name="l00023"></a>00023     <span class="keyword">virtual</span> <span class="keywordtype">bool</span> has_uv (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00028"></a>00028     <span class="keyword">virtual</span> <span class="keywordtype">int</span> get_parameter_uv (sxsdk::vec2 list [], <span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00033"></a>00033     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1face__class.html">face_class</a> &amp;set_parameter_uv (<span class="keywordtype">int</span> n, sxsdk::vec2 list [], <span class="keywordtype">void</span> * = 0);
+<a name="l00038"></a>00038     <span class="keyword">virtual</span> <span class="keywordtype">int</span> get_distance_uv (sxsdk::vec2 list [], <span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00043"></a>00043     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1face__class.html">face_class</a> &amp;set_distance_uv (<span class="keywordtype">int</span> n, sxsdk::vec2 list [], <span class="keywordtype">void</span> * = 0);
+<a name="l00045"></a>00045     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <span class="keyword">remove</span> (<span class="keywordtype">void</span>* aux = 0);
+<a name="l00047"></a>00047     <span class="keyword">virtual</span> <span class="keywordtype">void</span> stream_to_clipboard (<span class="keywordtype">void</span>* aux = 0);
+<a name="l00052"></a>00052     <span class="keyword">virtual</span> <span class="keywordtype">int</span> get_normals (sxsdk::vec3 list [], <span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00057"></a>00057     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1face__class.html">face_class</a> &amp;set_normals (<span class="keywordtype">int</span> n, sxsdk::vec3 list [], <span class="keywordtype">void</span> * = 0);
+<a name="l00062"></a>00062     <span class="keyword">virtual</span> <span class="keywordtype">int</span> get_sub_surface_index (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00067"></a>00067     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1face__class.html">face_class</a> &amp;set_sub_surface_index (<span class="keywordtype">int</span> sub_surface_index_param, <span class="keywordtype">void</span> * = 0);
+<a name="l00069"></a>00069     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1face__class.html">face_class</a> &amp;set_active (<span class="keywordtype">bool</span> active_param, <span class="keywordtype">void</span> * = 0);
+<a name="l00071"></a>00071     <span class="keyword">virtual</span> <span class="keywordtype">bool</span> get_active (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00073"></a>00073     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1face__class.html">face_class</a> &amp;set_active_order (<span class="keywordtype">int</span> active_order_param, <span class="keywordtype">void</span> * = 0);
+<a name="l00075"></a>00075     <span class="keyword">virtual</span> <span class="keywordtype">int</span> get_active_order (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00079"></a>00079     <span class="keyword">virtual</span> sxsdk::vec2 get_face_uv (<span class="keywordtype">int</span> uv_layer_index, <span class="keywordtype">int</span> v_index, <span class="keywordtype">void</span>* aux = 0);
+<a name="l00084"></a>00084     <span class="keyword">virtual</span> <span class="keywordtype">void</span> set_face_uv (<span class="keywordtype">int</span> uv_layer_index, <span class="keywordtype">int</span> v_index, sxsdk::vec2 uv, <span class="keywordtype">void</span>* aux = 0);
+<a name="l00085"></a>00085 };
+<a name="l00086"></a>00086 } <span class="comment">// sxsdk</span>
+</pre></div></div>
+<br><br>
+<hr>
+<div align="center">Copyright &copy; e frontier, Inc. All rights reserved.</div>
+</body></html>

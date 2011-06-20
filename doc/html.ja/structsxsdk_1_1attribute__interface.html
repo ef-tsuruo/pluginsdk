@@ -1,0 +1,856 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>構造体 sxsdk::attribute_interface</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- 作成： Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="main.html"><span>メインページ</span></a></li>
+      <li><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>構成</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>構成メンバ</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath"><a class="el" href="namespacesxsdk.html">sxsdk</a>::<a class="el" href="structsxsdk_1_1attribute__interface.html">attribute_interface</a>
+  </div>
+</div>
+<div class="contents">
+<h1>構造体 sxsdk::attribute_interface</h1><!-- doxytag: class="sxsdk::attribute_interface" --><!-- doxytag: inherits="sxsdk::plugin_interface" --><div class="dynheader">
+sxsdk::attribute_interfaceに対する継承グラフ</div>
+<div class="dynsection">
+ <div class="center">
+  <img src="structsxsdk_1_1attribute__interface.gif" usemap="#sxsdk::attribute_interface_map" alt=""/>
+  <map id="sxsdk::attribute_interface_map" name="sxsdk::attribute_interface_map">
+<area href="structsxsdk_1_1plugin__interface.html" alt="sxsdk::plugin_interface" shape="rect" coords="0,56,151,80"/>
+<area href="classunknown__interface.html" alt="unknown_interface" shape="rect" coords="0,0,151,24"/>
+</map>
+ </div>
+</div>
+
+<p><a href="structsxsdk_1_1attribute__interface-members.html">すべてのメンバ一覧</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Public メソッド</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1attribute__interface.html#a701bf67c20847f025d893afa273dedad">ask_shape</a> (<a class="el" href="structsxsdk_1_1shape__class.html">sxsdk::shape_class</a> &amp;shape, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。カスタム情報メニューから選択された時に呼ばれる。メニューに表示するには<code><a class="el" href="structsxsdk_1_1attribute__interface.html#a6ff3db52a0d655f047e60c30e382b615" title="オーバライド可。カスタム情報メニューに表示するにはこの関数をオーバ�...">accepts_shape()</a></code> をオーバーライドする。  <a href="#a701bf67c20847f025d893afa273dedad"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1attribute__interface.html#af7a11a41393d9d8ecb7bddab4b61a7a4">ask_distant_light</a> (<a class="el" href="structsxsdk_1_1distant__light__interface.html">sxsdk::distant_light_interface</a> *light, int i, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。無限遠光源ウインドウの情報ポップアップメニューから選択された時に呼ばれる。メニューに表示するには<code><a class="el" href="structsxsdk_1_1attribute__interface.html#a3241bb2d74bbe1a2083dc086b9bea869" title="オーバライド可。無限遠光源ウインドウの情報ポップアップメニューに表�...">accepts_distant_light()</a></code> をオーバーライドする。  <a href="#af7a11a41393d9d8ecb7bddab4b61a7a4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1attribute__interface.html#a7b9d9de0c8d1e1d4096ac57dc23f2c5c">ask_camera</a> (<a class="el" href="structsxsdk_1_1camera__interface.html">camera_interface</a> *camera, int i, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。カメラウインドウの情報ポップアップメニューから選択された時に呼ばれる。  <a href="#a7b9d9de0c8d1e1d4096ac57dc23f2c5c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1attribute__interface.html#a6ff3db52a0d655f047e60c30e382b615">accepts_shape</a> (bool &amp;accept, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。カスタム情報メニューに表示するにはこの関数をオーバーライドする。  <a href="#a6ff3db52a0d655f047e60c30e382b615"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1attribute__interface.html#a3241bb2d74bbe1a2083dc086b9bea869">accepts_distant_light</a> (bool &amp;accept, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。無限遠光源ウインドウの情報ポップアップメニューに表示するにはこの関数をオーバーライドする。  <a href="#a3241bb2d74bbe1a2083dc086b9bea869"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1attribute__interface.html#a7f1eac75368d8ff328065bbbeed16d7e">accepts_camera</a> (bool &amp;accept, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。カメラウインドウの情報ポップアップメニューに表示するにはこの関数をオーバーライドする。  <a href="#a7f1eac75368d8ff328065bbbeed16d7e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1attribute__interface.html#a1535e8bce3bd6818661f70421a4e2b1f">accepts_shape_type</a> (bool &amp;accept, <a class="el" href="namespacesxsdk_1_1enums.html#aa6cc70b74636bfbf63bbfb8a2da2ce52">enums::shape_type</a> shape_type, <a class="el" href="structsxsdk_1_1shape__class.html">sxsdk::shape_class</a> &amp;shape)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。カスタム情報メニューに表示されるときのアクティブ、ディム状態を設定する。  <a href="#a1535e8bce3bd6818661f70421a4e2b1f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0ea8305b144f8af22aa7d54709bf69c1"></a><!-- doxytag: member="sxsdk::attribute_interface::make_wireframe_private" ref="a0ea8305b144f8af22aa7d54709bf69c1" args="(sxsdk::shape_class &amp;shape, const sxsdk::mat4 &amp;mat, int view)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>make_wireframe_private</b> (<a class="el" href="structsxsdk_1_1shape__class.html">sxsdk::shape_class</a> &amp;shape, const sxsdk::mat4 &amp;mat, int view)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a38043f1c3721d704816ccbb70060e8e3"></a><!-- doxytag: member="sxsdk::attribute_interface::get_number_of_elements" ref="a38043f1c3721d704816ccbb70060e8e3" args="(sxsdk::shape_class &amp;shape, void *aux=0)" -->
+virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1attribute__interface.html#a38043f1c3721d704816ccbb70060e8e3">get_number_of_elements</a> (<a class="el" href="structsxsdk_1_1shape__class.html">sxsdk::shape_class</a> &amp;shape, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。 <code>new_custom_element_info</code> で作成する情報の数をShadeに渡す。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <br class="typebreak"/>
+<a class="el" href="classsxsdk_1_1custom__element__info__base__class.html">custom_element_info_base_class</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1attribute__interface.html#ae76156759216d0b2e3ae05292620f5b9">new_custom_element_info</a> (<a class="el" href="structsxsdk_1_1shape__class.html">sxsdk::shape_class</a> &amp;shape, const sxsdk::mat4 &amp;lw, const sxsdk::mat4 &amp;wl, int i)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。交点計算に必要な独自の情報を生成する。  <a href="#ae76156759216d0b2e3ae05292620f5b9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual box3_class&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1attribute__interface.html#af3a33cd77c065e56bc41eb82e58ce143">get_bounding_box</a> (const <a class="el" href="classsxsdk_1_1custom__element__info__base__class.html">custom_element_info_base_class</a> *info, <a class="el" href="structsxsdk_1_1shape__class.html">sxsdk::shape_class</a> &amp;shape, const sxsdk::mat4 &amp;lw, const sxsdk::mat4 &amp;wl, int i, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。バウンディングボックスをShadeに渡す。  <a href="#af3a33cd77c065e56bc41eb82e58ce143"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1attribute__interface.html#a38220456a7bc2725ee4e8f4192d4c006">get_max_intersections</a> (<a class="el" href="structsxsdk_1_1shape__class.html">sxsdk::shape_class</a> &amp;shape, int i, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。一本のレイと交差する可能性のある点の最大数をShadeに渡す。  <a href="#a38220456a7bc2725ee4e8f4192d4c006"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1attribute__interface.html#a365648974dc3236a763d321fbcaecc81">ray_intersection</a> (const <a class="el" href="classsxsdk_1_1custom__element__info__base__class.html">custom_element_info_base_class</a> *info, <a class="el" href="structsxsdk_1_1shape__class.html">sxsdk::shape_class</a> &amp;shape, const sxsdk::mat4 &amp;lw, const sxsdk::mat4 &amp;wl, int i, const sxsdk::vec3 &amp;o, const sxsdk::vec3 &amp;d, <a class="el" href="classsxsdk_1_1intersection__class.html">intersection_class</a> intersections[], <a class="el" href="classsxsdk_1_1custom__element__info__base__class.html">custom_element_info_base_class</a> *per_thread_info, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。交点計算を行う。(参照：<a class="el" href="resident.html">メモリ常駐型プラグイン</a>)  <a href="#a365648974dc3236a763d321fbcaecc81"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1attribute__interface.html#af899869f20bc32bf35995e778f67b5b3">get_max_shapes</a> (<a class="el" href="structsxsdk_1_1shape__class.html">sxsdk::shape_class</a> &amp;shape, int i, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。融合する可能性のある形状の最大数をShadeに渡す。  <a href="#af899869f20bc32bf35995e778f67b5b3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <br class="typebreak"/>
+<a class="el" href="classsxsdk_1_1custom__element__info__base__class.html">custom_element_info_base_class</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1attribute__interface.html#a786130541083b908efb922764ad264fa">new_per_thread_info</a> (<a class="el" href="structsxsdk_1_1shape__class.html">sxsdk::shape_class</a> &amp;shape, int i, int j)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。スレッド単位で交点計算に必要な独自の情報を生成する。  <a href="#a786130541083b908efb922764ad264fa"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1attribute__interface.html#a1c9444b98042dee084decb840f39c2bb">accepts_surface</a> (bool &amp;accept, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。表面材質ウインドウの情報ポップアップメニューに表示するにはこの関数をオーバーライドする。  <a href="#a1c9444b98042dee084decb840f39c2bb"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1attribute__interface.html#a11fdca33d5a1b31a160870c7a1c0a550">ask_surface</a> (<a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> *surface, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。表面材質ウインドウの情報ポップアップメニューから選択された時に呼ばれる。メニューに表示するには<code><a class="el" href="structsxsdk_1_1attribute__interface.html#a1c9444b98042dee084decb840f39c2bb" title="オーバライド可。表面材質ウインドウの情報ポップアップメニューに表示�...">accepts_surface()</a></code> をオーバーライドする。  <a href="#a11fdca33d5a1b31a160870c7a1c0a550"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1attribute__interface.html#ac3b41e9b0449d23991cc005256b0adce">accepts_mapping</a> (bool &amp;accept, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。表面材質ウインドウのマッピング設定の情報ポップアップメニューに表示するにはこの関数をオーバーライドする。  <a href="#ac3b41e9b0449d23991cc005256b0adce"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1attribute__interface.html#abd7051967f1b6d72fdf53b418ca297e6">ask_mapping</a> (<a class="el" href="structsxsdk_1_1mapping__layer__class.html">mapping_layer_class</a> &amp;mapping, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。表面材質ウインドウのマッピング設定の情報ポップアップメニューから選択された時に呼ばれる。メニューに表示するには<code><a class="el" href="structsxsdk_1_1attribute__interface.html#abd7051967f1b6d72fdf53b418ca297e6" title="オーバライド可。表面材質ウインドウのマッピング設定の情�...">ask_mapping()</a></code> をオーバーライドする。  <a href="#abd7051967f1b6d72fdf53b418ca297e6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af0a1d4e98e85877beea1f76e3333ec82"></a><!-- doxytag: member="sxsdk::attribute_interface::thread_safe" ref="af0a1d4e98e85877beea1f76e3333ec82" args="(void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1attribute__interface.html#af0a1d4e98e85877beea1f76e3333ec82">thread_safe</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。レイ交点計算がスレッドセーフな場合には、この関数をオーバーライドしてtrueを返すと、交点計算の呼び出しがミューテクスで保護されず、並列実行される。 <br/></td></tr>
+</table>
+<hr/><h2>関数</h2>
+<a class="anchor" id="a7f1eac75368d8ff328065bbbeed16d7e"></a><!-- doxytag: member="sxsdk::attribute_interface::accepts_camera" ref="a7f1eac75368d8ff328065bbbeed16d7e" args="(bool &amp;accept, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::attribute_interface::accepts_camera </td>
+          <td>(</td>
+          <td class="paramtype">bool &amp;&nbsp;</td>
+          <td class="paramname"> <em>accept</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。カメラウインドウの情報ポップアップメニューに表示するにはこの関数をオーバーライドする。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>accept</em>&nbsp;</td><td>trueを設定するとメニューに表示される。メニューから選択されると、<code><a class="el" href="structsxsdk_1_1attribute__interface.html#a7b9d9de0c8d1e1d4096ac57dc23f2c5c" title="オーバライド可。カメラウインドウの情報ポップアップメニューから選択�...">ask_camera()</a></code> が呼び出される。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a3241bb2d74bbe1a2083dc086b9bea869"></a><!-- doxytag: member="sxsdk::attribute_interface::accepts_distant_light" ref="a3241bb2d74bbe1a2083dc086b9bea869" args="(bool &amp;accept, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::attribute_interface::accepts_distant_light </td>
+          <td>(</td>
+          <td class="paramtype">bool &amp;&nbsp;</td>
+          <td class="paramname"> <em>accept</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。無限遠光源ウインドウの情報ポップアップメニューに表示するにはこの関数をオーバーライドする。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>accept</em>&nbsp;</td><td>trueを設定するとメニューに表示される。メニューから選択されると、<code><a class="el" href="structsxsdk_1_1attribute__interface.html#af7a11a41393d9d8ecb7bddab4b61a7a4" title="オーバライド可。無限遠光源ウインドウの情報ポップアップメニューから�...">ask_distant_light()</a></code> が呼び出される。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ac3b41e9b0449d23991cc005256b0adce"></a><!-- doxytag: member="sxsdk::attribute_interface::accepts_mapping" ref="ac3b41e9b0449d23991cc005256b0adce" args="(bool &amp;accept, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::attribute_interface::accepts_mapping </td>
+          <td>(</td>
+          <td class="paramtype">bool &amp;&nbsp;</td>
+          <td class="paramname"> <em>accept</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。表面材質ウインドウのマッピング設定の情報ポップアップメニューに表示するにはこの関数をオーバーライドする。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>accept</em>&nbsp;</td><td>&gt;trueを設定するとメニューに表示される。メニューから選択されると、<code><a class="el" href="structsxsdk_1_1attribute__interface.html#abd7051967f1b6d72fdf53b418ca297e6" title="オーバライド可。表面材質ウインドウのマッピング設定の情�...">ask_mapping()</a></code> が呼び出される。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a6ff3db52a0d655f047e60c30e382b615"></a><!-- doxytag: member="sxsdk::attribute_interface::accepts_shape" ref="a6ff3db52a0d655f047e60c30e382b615" args="(bool &amp;accept, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::attribute_interface::accepts_shape </td>
+          <td>(</td>
+          <td class="paramtype">bool &amp;&nbsp;</td>
+          <td class="paramname"> <em>accept</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。カスタム情報メニューに表示するにはこの関数をオーバーライドする。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>accept</em>&nbsp;</td><td>trueを設定するとメニューに表示される。メニューから選択されると、<code><a class="el" href="structsxsdk_1_1attribute__interface.html#a701bf67c20847f025d893afa273dedad" title="オーバライド可。カスタム情報メニューから選択された時に呼ばれる。メ�...">ask_shape()</a></code> が呼び出される。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a1535e8bce3bd6818661f70421a4e2b1f"></a><!-- doxytag: member="sxsdk::attribute_interface::accepts_shape_type" ref="a1535e8bce3bd6818661f70421a4e2b1f" args="(bool &amp;accept, enums::shape_type shape_type, sxsdk::shape_class &amp;shape)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::attribute_interface::accepts_shape_type </td>
+          <td>(</td>
+          <td class="paramtype">bool &amp;&nbsp;</td>
+          <td class="paramname"> <em>accept</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacesxsdk_1_1enums.html#aa6cc70b74636bfbf63bbfb8a2da2ce52">enums::shape_type</a>&nbsp;</td>
+          <td class="paramname"> <em>shape_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1shape__class.html">sxsdk::shape_class</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>shape</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。カスタム情報メニューに表示されるときのアクティブ、ディム状態を設定する。 </p>
+<p><em>accept</em> にtrueを代入するとアクティブ、falseを代入するとディム状態になる。オーバーライドしない場合は常にアクティブになる。</p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>accept</em>&nbsp;</td><td><em>true</em> を代入するとメニュー項目がアクティブになり、<code><a class="el" href="structsxsdk_1_1attribute__interface.html#a701bf67c20847f025d893afa273dedad" title="オーバライド可。カスタム情報メニューから選択された時に呼ばれる。メ�...">ask_shape()</a></code> の呼び出しを受けることができるようになる。 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>shape_type</em>&nbsp;</td><td>選択している形状の種類 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>shape</em>&nbsp;</td><td>選択している形状の<code><a class="el" href="structsxsdk_1_1shape__class.html">sxsdk::shape_class</a></code> が渡される。複数選択に対応する場合は、<code><a class="el" href="structsxsdk_1_1scene__interface.html">scene_interface</a></code> を取得して<code><a class="el" href="structsxsdk_1_1scene__interface.html#a9acb167a81b2469fc1ffa02fac141f30" title="i番目の選択されている形状を返す。">scene_interface::active_shape()</a></code> や<code><a class="el" href="structsxsdk_1_1scene__interface.html#a4d7a60ca9e1430028264099a3c970f3b" title="現在選択されている形状のリスト。を取得する。">scene_interface::get_active_shapes()</a></code> から選択情報を取得する。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a1c9444b98042dee084decb840f39c2bb"></a><!-- doxytag: member="sxsdk::attribute_interface::accepts_surface" ref="a1c9444b98042dee084decb840f39c2bb" args="(bool &amp;accept, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::attribute_interface::accepts_surface </td>
+          <td>(</td>
+          <td class="paramtype">bool &amp;&nbsp;</td>
+          <td class="paramname"> <em>accept</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。表面材質ウインドウの情報ポップアップメニューに表示するにはこの関数をオーバーライドする。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>accept</em>&nbsp;</td><td>trueを設定するとメニューに表示される。メニューから選択されると、<code><a class="el" href="structsxsdk_1_1attribute__interface.html#a11fdca33d5a1b31a160870c7a1c0a550" title="オーバライド可。表面材質ウインドウの情報ポップアップメニューから選�...">ask_surface()</a></code> が呼び出される。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a7b9d9de0c8d1e1d4096ac57dc23f2c5c"></a><!-- doxytag: member="sxsdk::attribute_interface::ask_camera" ref="a7b9d9de0c8d1e1d4096ac57dc23f2c5c" args="(camera_interface *camera, int i, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::attribute_interface::ask_camera </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1camera__interface.html">camera_interface</a> *&nbsp;</td>
+          <td class="paramname"> <em>camera</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。カメラウインドウの情報ポップアップメニューから選択された時に呼ばれる。 </p>
+<p>カスタム属性ストリームも含めて、シーン中で何らかの変更を行った場合はtrue、そうでない場合はfalseを返すように設定する。</p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>camera</em>&nbsp;</td><td>選択しているカメラの<code><a class="el" href="structsxsdk_1_1camera__interface.html">camera_interface</a></code> が渡される。 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>i</em>&nbsp;</td><td>選択しているカメラ番号が渡される。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af7a11a41393d9d8ecb7bddab4b61a7a4"></a><!-- doxytag: member="sxsdk::attribute_interface::ask_distant_light" ref="af7a11a41393d9d8ecb7bddab4b61a7a4" args="(sxsdk::distant_light_interface *light, int i, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::attribute_interface::ask_distant_light </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1distant__light__interface.html">sxsdk::distant_light_interface</a> *&nbsp;</td>
+          <td class="paramname"> <em>light</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。無限遠光源ウインドウの情報ポップアップメニューから選択された時に呼ばれる。メニューに表示するには<code><a class="el" href="structsxsdk_1_1attribute__interface.html#a3241bb2d74bbe1a2083dc086b9bea869" title="オーバライド可。無限遠光源ウインドウの情報ポップアップメニューに表�...">accepts_distant_light()</a></code> をオーバーライドする。 </p>
+<p>カスタム属性ストリームも含めて、シーン中で何らかの変更を行った場合はtrue、そうでない場合はfalseを返すように設定する。</p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>light</em>&nbsp;</td><td><code><a class="el" href="structsxsdk_1_1distant__light__interface.html">distant_light_interface</a></code> が渡される。 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>i</em>&nbsp;</td><td>選択している無限遠光源の番号が渡される。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="abd7051967f1b6d72fdf53b418ca297e6"></a><!-- doxytag: member="sxsdk::attribute_interface::ask_mapping" ref="abd7051967f1b6d72fdf53b418ca297e6" args="(mapping_layer_class &amp;mapping, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::attribute_interface::ask_mapping </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1mapping__layer__class.html">mapping_layer_class</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>mapping</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。表面材質ウインドウのマッピング設定の情報ポップアップメニューから選択された時に呼ばれる。メニューに表示するには<code><a class="el" href="structsxsdk_1_1attribute__interface.html#abd7051967f1b6d72fdf53b418ca297e6" title="オーバライド可。表面材質ウインドウのマッピング設定の情�...">ask_mapping()</a></code> をオーバーライドする。 </p>
+<p>カスタム属性ストリームも含めて、シーン中で何らかの変更を行った場合はtrue、そうでない場合はfalseを返すように設定する。</p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>mapping</em>&nbsp;</td><td>選択しているマッピングレイヤーのmapping_layer_classが渡される。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a701bf67c20847f025d893afa273dedad"></a><!-- doxytag: member="sxsdk::attribute_interface::ask_shape" ref="a701bf67c20847f025d893afa273dedad" args="(sxsdk::shape_class &amp;shape, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::attribute_interface::ask_shape </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1shape__class.html">sxsdk::shape_class</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>shape</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。カスタム情報メニューから選択された時に呼ばれる。メニューに表示するには<code><a class="el" href="structsxsdk_1_1attribute__interface.html#a6ff3db52a0d655f047e60c30e382b615" title="オーバライド可。カスタム情報メニューに表示するにはこの関数をオーバ�...">accepts_shape()</a></code> をオーバーライドする。 </p>
+<p>形状のカスタム属性ストリームも含めて、シーン中で何らかの変更を行った場合はtrue、そうでない場合はfalseを返すように設定する。</p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>shape</em>&nbsp;</td><td>選択している形状の<code><a class="el" href="structsxsdk_1_1shape__class.html">sxsdk::shape_class</a></code> が渡される。複数形状に適用する場合は、<code><a class="el" href="structsxsdk_1_1scene__interface.html">scene_interface</a></code> を取得して<code><a class="el" href="structsxsdk_1_1scene__interface.html#a9acb167a81b2469fc1ffa02fac141f30" title="i番目の選択されている形状を返す。">scene_interface::active_shape()</a></code> や<code><a class="el" href="structsxsdk_1_1scene__interface.html#a4d7a60ca9e1430028264099a3c970f3b" title="現在選択されている形状のリスト。を取得する。">scene_interface::get_active_shapes()</a></code> から選択情報を取得する。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a11fdca33d5a1b31a160870c7a1c0a550"></a><!-- doxytag: member="sxsdk::attribute_interface::ask_surface" ref="a11fdca33d5a1b31a160870c7a1c0a550" args="(surface_interface *surface, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::attribute_interface::ask_surface </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1surface__interface.html">surface_interface</a> *&nbsp;</td>
+          <td class="paramname"> <em>surface</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。表面材質ウインドウの情報ポップアップメニューから選択された時に呼ばれる。メニューに表示するには<code><a class="el" href="structsxsdk_1_1attribute__interface.html#a1c9444b98042dee084decb840f39c2bb" title="オーバライド可。表面材質ウインドウの情報ポップアップメニューに表示�...">accepts_surface()</a></code> をオーバーライドする。 </p>
+<p>カスタム属性ストリームも含めて、シーン中で何らかの変更を行った場合はtrue、そうでない場合はfalseを返すように設定する。</p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>surface</em>&nbsp;</td><td>選択している表面材質のsurface_interfaceが渡される。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af3a33cd77c065e56bc41eb82e58ce143"></a><!-- doxytag: member="sxsdk::attribute_interface::get_bounding_box" ref="af3a33cd77c065e56bc41eb82e58ce143" args="(const custom_element_info_base_class *info, sxsdk::shape_class &amp;shape, const sxsdk::mat4 &amp;lw, const sxsdk::mat4 &amp;wl, int i, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual box3_class sxsdk::attribute_interface::get_bounding_box </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classsxsdk_1_1custom__element__info__base__class.html">custom_element_info_base_class</a> *&nbsp;</td>
+          <td class="paramname"> <em>info</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1shape__class.html">sxsdk::shape_class</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>shape</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const sxsdk::mat4 &amp;&nbsp;</td>
+          <td class="paramname"> <em>lw</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const sxsdk::mat4 &amp;&nbsp;</td>
+          <td class="paramname"> <em>wl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。バウンディングボックスをShadeに渡す。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>info</em>&nbsp;</td><td>new_custom_element_infoで生成したデータ </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>shape</em>&nbsp;</td><td>交点計算の対象となる形状の<code><a class="el" href="structsxsdk_1_1shape__class.html">sxsdk::shape_class</a></code> が渡される。 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>lw</em>&nbsp;</td><td>形状のローカル座標からワールド座標に変換するマトリクス </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>wl</em>&nbsp;</td><td>ワールド座標から形状のローカル座標に変換するマトリクス </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>i</em>&nbsp;</td><td>要素の番号。0...要素数-1の値をとる。要素数は<code><a class="el" href="structsxsdk_1_1attribute__interface.html#a38043f1c3721d704816ccbb70060e8e3" title="オーバライド可。 new_custom_element_info で作成する情報の数をShadeに渡す。...">get_number_of_elements()</a></code> で設定した値 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a38220456a7bc2725ee4e8f4192d4c006"></a><!-- doxytag: member="sxsdk::attribute_interface::get_max_intersections" ref="a38220456a7bc2725ee4e8f4192d4c006" args="(sxsdk::shape_class &amp;shape, int i, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int sxsdk::attribute_interface::get_max_intersections </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1shape__class.html">sxsdk::shape_class</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>shape</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。一本のレイと交差する可能性のある点の最大数をShadeに渡す。 </p>
+<p><code><a class="el" href="structsxsdk_1_1attribute__interface.html#a365648974dc3236a763d321fbcaecc81" title="オーバライド可。交点計算を行う。(参照：メモリ常駐型プラグイン)...">ray_intersection()</a></code> でレンダラーに渡すことのできる交点の最大数となる。</p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>shape</em>&nbsp;</td><td>交点計算の対象となる形状の<code><a class="el" href="structsxsdk_1_1shape__class.html">sxsdk::shape_class</a></code> が渡される。 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>i</em>&nbsp;</td><td>要素の番号。0...要素数-1の値をとる。要素数は<code><a class="el" href="structsxsdk_1_1attribute__interface.html#a38043f1c3721d704816ccbb70060e8e3" title="オーバライド可。 new_custom_element_info で作成する情報の数をShadeに渡す。...">get_number_of_elements()</a></code> で設定した値 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af899869f20bc32bf35995e778f67b5b3"></a><!-- doxytag: member="sxsdk::attribute_interface::get_max_shapes" ref="af899869f20bc32bf35995e778f67b5b3" args="(sxsdk::shape_class &amp;shape, int i, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int sxsdk::attribute_interface::get_max_shapes </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1shape__class.html">sxsdk::shape_class</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>shape</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。融合する可能性のある形状の最大数をShadeに渡す。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>shape</em>&nbsp;</td><td>交点計算の対象となる形状のsxsdkshape_classが渡される。 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>i</em>&nbsp;</td><td>要素番号。0...要素数-1の値をとる。要素数は<code><a class="el" href="structsxsdk_1_1attribute__interface.html#a38043f1c3721d704816ccbb70060e8e3" title="オーバライド可。 new_custom_element_info で作成する情報の数をShadeに渡す。...">get_number_of_elements()</a></code> で設定した値 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ae76156759216d0b2e3ae05292620f5b9"></a><!-- doxytag: member="sxsdk::attribute_interface::new_custom_element_info" ref="ae76156759216d0b2e3ae05292620f5b9" args="(sxsdk::shape_class &amp;shape, const sxsdk::mat4 &amp;lw, const sxsdk::mat4 &amp;wl, int i)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classsxsdk_1_1custom__element__info__base__class.html">custom_element_info_base_class</a>* sxsdk::attribute_interface::new_custom_element_info </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1shape__class.html">sxsdk::shape_class</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>shape</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const sxsdk::mat4 &amp;&nbsp;</td>
+          <td class="paramname"> <em>lw</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const sxsdk::mat4 &amp;&nbsp;</td>
+          <td class="paramname"> <em>wl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>i</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。交点計算に必要な独自の情報を生成する。 </p>
+<p>custom_element_info_base_classの派生クラスを作成し、そのポインタを返す。</p>
+<p>ここで生成したオプジェクトのポインタは、<code><a class="el" href="structsxsdk_1_1attribute__interface.html#af3a33cd77c065e56bc41eb82e58ce143" title="オーバライド可。バウンディングボックスをShadeに渡す。">get_bounding_box()</a></code> および<code><a class="el" href="structsxsdk_1_1attribute__interface.html#a365648974dc3236a763d321fbcaecc81" title="オーバライド可。交点計算を行う。(参照：メモリ常駐型プラグイン)...">ray_intersection()</a></code> 関数呼び出しの引数として渡される。</p>
+<p>stream_interfaceを介した情報の読み書きは動作が遅いため、ここで必要な情報をオブジェクトに読み込んでおき、交点計算で使用する。</p>
+<p><code><a class="el" href="structsxsdk_1_1attribute__interface.html#af3a33cd77c065e56bc41eb82e58ce143" title="オーバライド可。バウンディングボックスをShadeに渡す。">get_bounding_box()</a></code> および<code><a class="el" href="structsxsdk_1_1attribute__interface.html#a365648974dc3236a763d321fbcaecc81" title="オーバライド可。交点計算を行う。(参照：メモリ常駐型プラグイン)...">ray_intersection()</a></code> 関数は複数スレッドから同時に呼び出される可能性があるので、<code><a class="el" href="structsxsdk_1_1shader__interface.html">shader_interface</a></code> に情報を渡すなど、スレッドごとに扱う必要のある場合は<code><a class="el" href="structsxsdk_1_1attribute__interface.html#a786130541083b908efb922764ad264fa" title="オーバライド可。スレッド単位で交点計算に必要な独自の情�...">new_per_thread_info()</a></code> で生成する。</p>
+<p>レンダリング終了時に自動的にdeleteされる。</p>
+<p>交点計算に独自の情報を確保しておく必要がなければ、<code><a class="el" href="structsxsdk_1_1attribute__interface.html#ae76156759216d0b2e3ae05292620f5b9" title="オーバライド可。交点計算に必要な独自の情報を生成する。...">new_custom_element_info()</a></code> をオーバライドする必要はない。</p>
+<p>作成したcustom_element_info_base_classの派生クラスを返す。</p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>shape</em>&nbsp;</td><td>交点計算の対象となっている形状の<code><a class="el" href="structsxsdk_1_1shape__class.html">sxsdk::shape_class</a></code> が渡される。 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>lw</em>&nbsp;</td><td>形状のローカル座標からワールド座標に変換するマトリクス </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>wl</em>&nbsp;</td><td>ワールド座標から形状のローカル座標に変換するマトリクス </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>i</em>&nbsp;</td><td>要素の番号。0...要素数-1の値をとる。要素数は<code><a class="el" href="structsxsdk_1_1attribute__interface.html#a38043f1c3721d704816ccbb70060e8e3" title="オーバライド可。 new_custom_element_info で作成する情報の数をShadeに渡す。...">get_number_of_elements()</a></code> で設定した値 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a786130541083b908efb922764ad264fa"></a><!-- doxytag: member="sxsdk::attribute_interface::new_per_thread_info" ref="a786130541083b908efb922764ad264fa" args="(sxsdk::shape_class &amp;shape, int i, int j)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classsxsdk_1_1custom__element__info__base__class.html">custom_element_info_base_class</a>* sxsdk::attribute_interface::new_per_thread_info </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1shape__class.html">sxsdk::shape_class</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>shape</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>j</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。スレッド単位で交点計算に必要な独自の情報を生成する。 </p>
+<p><code><a class="el" href="classsxsdk_1_1custom__element__info__base__class.html">custom_element_info_base_class</a></code> の派生クラスを作成し、そのポインタを返す。</p>
+<p><code><a class="el" href="structsxsdk_1_1shader__interface.html">shader_interface</a></code> に情報を渡す一時情報など、スレッドごとに扱う必要のある場合に使用する。</p>
+<p>この関数では要素ごとにレンダリングを行うスレッドの数だけ生成するので、複数スレッドで共有する固定値の情報は<code><a class="el" href="structsxsdk_1_1attribute__interface.html#ae76156759216d0b2e3ae05292620f5b9" title="オーバライド可。交点計算に必要な独自の情報を生成する。...">new_custom_element_info()</a>を使用する。</code> </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>i</em>&nbsp;</td><td>要素番号。0...要素数-1の値をとる。要素数は<code><a class="el" href="structsxsdk_1_1attribute__interface.html#a38043f1c3721d704816ccbb70060e8e3" title="オーバライド可。 new_custom_element_info で作成する情報の数をShadeに渡す。...">get_number_of_elements()</a></code> で設定した値 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>j</em>&nbsp;</td><td>スレッド番号 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a365648974dc3236a763d321fbcaecc81"></a><!-- doxytag: member="sxsdk::attribute_interface::ray_intersection" ref="a365648974dc3236a763d321fbcaecc81" args="(const custom_element_info_base_class *info, sxsdk::shape_class &amp;shape, const sxsdk::mat4 &amp;lw, const sxsdk::mat4 &amp;wl, int i, const sxsdk::vec3 &amp;o, const sxsdk::vec3 &amp;d, intersection_class intersections[], custom_element_info_base_class *per_thread_info, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int sxsdk::attribute_interface::ray_intersection </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classsxsdk_1_1custom__element__info__base__class.html">custom_element_info_base_class</a> *&nbsp;</td>
+          <td class="paramname"> <em>info</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1shape__class.html">sxsdk::shape_class</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>shape</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const sxsdk::mat4 &amp;&nbsp;</td>
+          <td class="paramname"> <em>lw</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const sxsdk::mat4 &amp;&nbsp;</td>
+          <td class="paramname"> <em>wl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const sxsdk::vec3 &amp;&nbsp;</td>
+          <td class="paramname"> <em>o</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const sxsdk::vec3 &amp;&nbsp;</td>
+          <td class="paramname"> <em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsxsdk_1_1intersection__class.html">intersection_class</a>&nbsp;</td>
+          <td class="paramname"> <em>intersections</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classsxsdk_1_1custom__element__info__base__class.html">custom_element_info_base_class</a> *&nbsp;</td>
+          <td class="paramname"> <em>per_thread_info</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。交点計算を行う。(参照：<a class="el" href="resident.html">メモリ常駐型プラグイン</a>) </p>
+<p><code><a class="el" href="structsxsdk_1_1shape__class.html#a4b76c527c5fd568479fd57b3aaf513bb" title="カスタム属性ストリームを生成する。形状にプラグイン独自の情�...">sxsdk::shape_class::create_attribute_stream_interface_with_uuid()</a></code> で引数<em>intersection_id</em> にプラグインIDを渡した形状に対して呼び出される。</p>
+<p>交点の色を独自に計算する場合は、<code><a class="el" href="structsxsdk_1_1shader__interface.html">shader_interface</a></code> を使用する。</p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>info</em>&nbsp;</td><td><code><a class="el" href="structsxsdk_1_1attribute__interface.html#ae76156759216d0b2e3ae05292620f5b9" title="オーバライド可。交点計算に必要な独自の情報を生成する。...">new_custom_element_info()</a></code> で生成したデータ </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>shape</em>&nbsp;</td><td>交点計算の対象となっている形状の<code><a class="el" href="structsxsdk_1_1shape__class.html">sxsdk::shape_class</a></code> が渡される。 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>lw</em>&nbsp;</td><td>形状のローカル座標からワールド座標に変換するマトリクス </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>wl</em>&nbsp;</td><td>ワールド座標から形状のローカル座標に変換するマトリクス </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>i</em>&nbsp;</td><td>要素番号。0...要素数-1の値をとる。要素数は<code><a class="el" href="structsxsdk_1_1attribute__interface.html#a38043f1c3721d704816ccbb70060e8e3" title="オーバライド可。 new_custom_element_info で作成する情報の数をShadeに渡す。...">get_number_of_elements()</a></code> で設定した値 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>o</em>&nbsp;</td><td>レイの始点位置 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>d</em>&nbsp;</td><td>レイの単位方向ベクトル </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>intersections</em>&nbsp;</td><td>交点ごとの情報を戻り値として渡す交点の数だけ配列に格納する。 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>per_thread_info</em>&nbsp;</td><td><code><a class="el" href="structsxsdk_1_1attribute__interface.html#a786130541083b908efb922764ad264fa" title="オーバライド可。スレッド単位で交点計算に必要な独自の情�...">new_per_thread_info()</a></code> で生成したデータ。shader_interface に渡す情報など、スレッドごとで個別に扱う一時的な情報を格納する。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>この構造体の説明は次のファイルから生成されました:<ul>
+<li><a class="el" href="attributeinterface_8h_source.html">attributeinterface.h</a></li>
+</ul>
+</div>
+<br><br>
+<hr>
+<div align="center">Copyright &copy; e frontier, Inc. All rights reserved.</div>
+</body></html>

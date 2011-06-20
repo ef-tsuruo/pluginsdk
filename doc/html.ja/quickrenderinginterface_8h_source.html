@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>quickrenderinginterface.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- 作成： Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="main.html"><span>メインページ</span></a></li>
+      <li><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+<h1>quickrenderinginterface.h</h1><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// this file has been created by makeheader.py</span>
+<a name="l00002"></a>00002 <span class="comment">// ja utf-8</span>
+<a name="l00003"></a>00003 <span class="preprocessor">#pragma once</span>
+<a name="l00004"></a>00004 <span class="preprocessor"></span><span class="keyword">namespace </span>sxsdk {
+<a name="l00005"></a><a class="code" href="structsxsdk_1_1quickrendering__interface.html">00005</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1quickrendering__interface.html">quickrendering_interface</a> : <span class="keyword">public</span> <a class="code" href="structsxsdk_1_1shade__interface.html">shade_interface</a> {
+<a name="l00006"></a>00006 <span class="keyword">public</span>:
+<a name="l00007"></a>00007 test    <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1quickrendering__interface.html">quickrendering_interface</a> &amp;set_show_side_view (<span class="keywordtype">bool</span> show_side_view_param, <span class="keywordtype">void</span> * = 0);
+<a name="l00008"></a>00008 test    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> get_show_side_view (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00009"></a>00009 test    <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1quickrendering__interface.html">quickrendering_interface</a> &amp;set_show_top_view (<span class="keywordtype">bool</span> show_top_view_param, <span class="keywordtype">void</span> * = 0);
+<a name="l00010"></a>00010 test    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> get_show_top_view (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00011"></a>00011 test    <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1quickrendering__interface.html">quickrendering_interface</a> &amp;set_show_front_view (<span class="keywordtype">bool</span> show_front_view_param, <span class="keywordtype">void</span> * = 0);
+<a name="l00012"></a>00012 test    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> get_show_front_view (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00013"></a>00013 test    <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1quickrendering__interface.html">quickrendering_interface</a> &amp;set_show_pers_view (<span class="keywordtype">bool</span> show_pers_view_param, <span class="keywordtype">void</span> * = 0);
+<a name="l00014"></a>00014 test    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> get_show_pers_view (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00015"></a>00015 test    <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1quickrendering__interface.html">quickrendering_interface</a> &amp;set_wireframe (<span class="keywordtype">bool</span> wireframe_param, <span class="keywordtype">void</span> * = 0);
+<a name="l00016"></a>00016 test    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> get_wireframe (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00017"></a>00017 test    <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1quickrendering__interface.html">quickrendering_interface</a> &amp;set_smooth_shading (<span class="keywordtype">bool</span> smooth_shading_param, <span class="keywordtype">void</span> * = 0);
+<a name="l00018"></a>00018 test    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> get_smooth_shading (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00019"></a>00019 test    <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1quickrendering__interface.html">quickrendering_interface</a> &amp;set_singlesided (<span class="keywordtype">bool</span> singlesided_param, <span class="keywordtype">void</span> * = 0);
+<a name="l00020"></a>00020 test    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> get_singlesided (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00021"></a>00021     <span class="keyword">virtual</span> <span class="keywordtype">void</span> update_texture (<span class="keywordtype">void</span>* aux = 0);
+<a name="l00022"></a>00022     <span class="keyword">virtual</span> <span class="keywordtype">void</span> clear_texture (<span class="keywordtype">void</span>* aux = 0);
+<a name="l00023"></a>00023 test    <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1quickrendering__interface.html">quickrendering_interface</a> &amp;set_abort (<span class="keywordtype">float</span> abort_param, <span class="keywordtype">void</span> * = 0);
+<a name="l00024"></a>00024 test    <span class="keyword">virtual</span> <span class="keywordtype">float</span> get_abort (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00025"></a>00025 test    <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1quickrendering__interface.html">quickrendering_interface</a> &amp;set_random_texture (<span class="keywordtype">bool</span> random_texture_param, <span class="keywordtype">void</span> * = 0);
+<a name="l00026"></a>00026 test    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> get_random_texture (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00027"></a>00027 test    <span class="keyword">virtual</span> <span class="keywordtype">int</span> get_total_texture_size (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00028"></a>00028     <span class="keyword">virtual</span> <span class="keywordtype">int</span> quickrendering_interface_test_1 ( <span class="keywordtype">void</span>* aux =0 ) { <span class="keywordflow">return</span> 1; }
+<a name="l00029"></a>00029     <span class="keyword">virtual</span> <span class="keywordtype">void</span> clear_cache (<span class="keywordtype">void</span>* aux = 0);
+<a name="l00030"></a>00030 test    <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1quickrendering__interface.html">quickrendering_interface</a> &amp;set_all_lights (<span class="keywordtype">bool</span> all_lights_param, <span class="keywordtype">void</span> * = 0);
+<a name="l00031"></a>00031 test    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> get_all_lights (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00032"></a>00032 test    <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1quickrendering__interface.html">quickrendering_interface</a> &amp;set_texture_size (<span class="keywordtype">int</span> texture_size_param, <span class="keywordtype">void</span> * = 0);
+<a name="l00033"></a>00033 test    <span class="keyword">virtual</span> <span class="keywordtype">int</span> get_texture_size (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l00034"></a>00034     <span class="keyword">virtual</span> <span class="keywordtype">void</span> stream_to_clipboard (<span class="keywordtype">void</span>* aux = 0);
+<a name="l00035"></a>00035 };
+<a name="l00036"></a>00036 } <span class="comment">// sxsdk</span>
+</pre></div></div>
+<br><br>
+<hr>
+<div align="center">Copyright &copy; e frontier, Inc. All rights reserved.</div>
+</body></html>

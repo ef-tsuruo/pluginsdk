@@ -1,0 +1,637 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>構造体 sxsdk::camera_class</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- 作成： Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="main.html"><span>メインページ</span></a></li>
+      <li><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li class="current"><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>構成</span></a></li>
+      <li><a href="hierarchy.html"><span>クラス階層</span></a></li>
+      <li><a href="functions.html"><span>構成メンバ</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath"><a class="el" href="namespacesxsdk.html">sxsdk</a>::<a class="el" href="structsxsdk_1_1camera__class.html">camera_class</a>
+  </div>
+</div>
+<div class="contents">
+<h1>構造体 sxsdk::camera_class</h1><!-- doxytag: class="sxsdk::camera_class" -->
+<p><a href="structsxsdk_1_1camera__class-members.html">すべてのメンバ一覧</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Public メソッド</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#ad17a2ce1cfc6619f1d35eaa643645248">save</a> (const char *path, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">カメラ設定をファイルに保存する。  <a href="#ad17a2ce1cfc6619f1d35eaa643645248"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#aca3f88aaab931f2cc57e594335758da3">load</a> (const char *path, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">カメラ設定をファイルから読み込む。  <a href="#aca3f88aaab931f2cc57e594335758da3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual sxsdk::vec3&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#a2b353c9f58ce64078951c8e1de4a5415">get_eye</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">視点の位置を取得する。  <a href="#a2b353c9f58ce64078951c8e1de4a5415"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structsxsdk_1_1camera__class.html">camera_class</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#ae0034209349f0ca443792593e6b604ee">set_eye</a> (const sxsdk::vec3 &amp;eye_param, void *=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">視点の位置を設定する。  <a href="#ae0034209349f0ca443792593e6b604ee"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual sxsdk::vec3&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#a276e4843aa37812f3093ed32725ca0c9">get_target</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">注視点の位置を取得する。  <a href="#a276e4843aa37812f3093ed32725ca0c9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structsxsdk_1_1camera__class.html">camera_class</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#aec18aa7b54c88e1cf298fdaa55e5a5f4">set_target</a> (const sxsdk::vec3 &amp;target_param, void *=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">注視点の位置を設定する。  <a href="#aec18aa7b54c88e1cf298fdaa55e5a5f4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#a08d951e2c1169170f38255199e58231c">get_zoom</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">焦点距離を取得する。  <a href="#a08d951e2c1169170f38255199e58231c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structsxsdk_1_1camera__class.html">camera_class</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#a2da39b78209bb495e91c042fe1901ac2">set_zoom</a> (float zoom_param, void *=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">焦点距離を設定する。  <a href="#a2da39b78209bb495e91c042fe1901ac2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa8342cb5bc41864b0e6ece5e155762c3"></a><!-- doxytag: member="sxsdk::camera_class::get_distant_camera" ref="aa8342cb5bc41864b0e6ece5e155762c3" args="(void *=0) const " -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#aa8342cb5bc41864b0e6ece5e155762c3">get_distant_camera</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">平行投影を取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b893f427f71b980c85413d35c663343"></a><!-- doxytag: member="sxsdk::camera_class::set_distant_camera" ref="a0b893f427f71b980c85413d35c663343" args="(bool distant_camera_param, void *=0)" -->
+virtual <a class="el" href="structsxsdk_1_1camera__class.html">camera_class</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#a0b893f427f71b980c85413d35c663343">set_distant_camera</a> (bool distant_camera_param, void *=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">平行投影を設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a857e3f2bd062cb5c2a5bfa0b76f0d7a1"></a><!-- doxytag: member="sxsdk::camera_class::get_bank" ref="a857e3f2bd062cb5c2a5bfa0b76f0d7a1" args="(void *=0) const " -->
+virtual float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#a857e3f2bd062cb5c2a5bfa0b76f0d7a1">get_bank</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">カメラの傾きを取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9127d13429633662ba17cedb6c3f0204"></a><!-- doxytag: member="sxsdk::camera_class::set_bank" ref="a9127d13429633662ba17cedb6c3f0204" args="(float bank_param, void *=0)" -->
+virtual <a class="el" href="structsxsdk_1_1camera__class.html">camera_class</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#a9127d13429633662ba17cedb6c3f0204">set_bank</a> (float bank_param, void *=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">カメラの傾きを設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a549e3e63d81b8cd48236d3414429505f"></a><!-- doxytag: member="sxsdk::camera_class::get_focus_point" ref="a549e3e63d81b8cd48236d3414429505f" args="(void *=0) const " -->
+virtual sxsdk::vec3&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#a549e3e63d81b8cd48236d3414429505f">get_focus_point</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">被写界深度の焦点の位置を取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afbcc403816c5360feb9f3009f4141a20"></a><!-- doxytag: member="sxsdk::camera_class::set_focus_point" ref="afbcc403816c5360feb9f3009f4141a20" args="(const sxsdk::vec3 &amp;focus_point_param, void *=0)" -->
+virtual <a class="el" href="structsxsdk_1_1camera__class.html">camera_class</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#afbcc403816c5360feb9f3009f4141a20">set_focus_point</a> (const sxsdk::vec3 &amp;focus_point_param, void *=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">被写界深度の焦点の位置を設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4f783c7ad761c43f57c435e865edcd36"></a><!-- doxytag: member="sxsdk::camera_class::get_focus" ref="a4f783c7ad761c43f57c435e865edcd36" args="(void *=0) const " -->
+virtual float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#a4f783c7ad761c43f57c435e865edcd36">get_focus</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">被写界深度のフォーカスの値を取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a53ff8ef3b0299097e5b0f0ac6630b38f"></a><!-- doxytag: member="sxsdk::camera_class::set_focus" ref="a53ff8ef3b0299097e5b0f0ac6630b38f" args="(float focus_param, void *=0)" -->
+virtual <a class="el" href="structsxsdk_1_1camera__class.html">camera_class</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#a53ff8ef3b0299097e5b0f0ac6630b38f">set_focus</a> (float focus_param, void *=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">被写界深度のフォーカスの値を設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af259b3252aa621c6ed9f789036414307"></a><!-- doxytag: member="sxsdk::camera_class::get_shift" ref="af259b3252aa621c6ed9f789036414307" args="(void *=0) const " -->
+virtual float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#af259b3252aa621c6ed9f789036414307">get_shift</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">水平シフトを取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab5299d9f29061f1913fd237fc3ea639d"></a><!-- doxytag: member="sxsdk::camera_class::set_shift" ref="ab5299d9f29061f1913fd237fc3ea639d" args="(float shift_param, void *=0)" -->
+virtual <a class="el" href="structsxsdk_1_1camera__class.html">camera_class</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#ab5299d9f29061f1913fd237fc3ea639d">set_shift</a> (float shift_param, void *=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">水平シフトを設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5a4f39e47b8d6894c29708f75733078f"></a><!-- doxytag: member="sxsdk::camera_class::get_rise" ref="a5a4f39e47b8d6894c29708f75733078f" args="(void *=0) const " -->
+virtual float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#a5a4f39e47b8d6894c29708f75733078f">get_rise</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">垂直シフトを取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a37eda0432551a3dfa14db6982578c818"></a><!-- doxytag: member="sxsdk::camera_class::set_rise" ref="a37eda0432551a3dfa14db6982578c818" args="(float rise_param, void *=0)" -->
+virtual <a class="el" href="structsxsdk_1_1camera__class.html">camera_class</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#a37eda0432551a3dfa14db6982578c818">set_rise</a> (float rise_param, void *=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">垂直シフトを設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aab50d68f7f92cfcd8c64b82d306fc5f1"></a><!-- doxytag: member="sxsdk::camera_class::memorize_as_line_object" ref="aab50d68f7f92cfcd8c64b82d306fc5f1" args="(void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#aab50d68f7f92cfcd8c64b82d306fc5f1">memorize_as_line_object</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">カメラの視線から線形状を作成する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab2f2fa84e8079e22aadb3c5bde224477"></a><!-- doxytag: member="sxsdk::camera_class::memorize_as_spotlight" ref="ab2f2fa84e8079e22aadb3c5bde224477" args="(void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#ab2f2fa84e8079e22aadb3c5bde224477">memorize_as_spotlight</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">カメラの視野からスポットライトを作成する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5bf677e325762cb392a9433c96cd2e91"></a><!-- doxytag: member="sxsdk::camera_class::memorize_as_camera" ref="a5bf677e325762cb392a9433c96cd2e91" args="(void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#a5bf677e325762cb392a9433c96cd2e91">memorize_as_camera</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">現在のカメラの視野からカメラオブジェクトを作成する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad9e52240b5cb2b47c1a14e672342e7b6"></a><!-- doxytag: member="sxsdk::camera_class::create_attribute_stream_interface" ref="ad9e52240b5cb2b47c1a14e672342e7b6" args="(int attribute_id, void *aux=0)" -->
+virtual <a class="el" href="structsxsdk_1_1stream__interface.html">sxsdk::stream_interface</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>create_attribute_stream_interface</b> (int attribute_id, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab5fc839487e6e9085624b42cd6cefda0"></a><!-- doxytag: member="sxsdk::camera_class::get_attribute_stream_interface" ref="ab5fc839487e6e9085624b42cd6cefda0" args="(int attribute_id, void *aux=0)" -->
+virtual <a class="el" href="structsxsdk_1_1stream__interface.html">sxsdk::stream_interface</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>get_attribute_stream_interface</b> (int attribute_id, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual sxsdk::mat4&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#ae56fe14634ce923c5cfe0db2d47438f7">get_world_to_view_matrix</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ワールド座標系からカメラのビュー座標系に変換するマトリクスを取得する。  <a href="#ae56fe14634ce923c5cfe0db2d47438f7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual sxsdk::mat4&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#a0d19a0c5efada6301db0e1c1544ee739">get_world_to_perspective_matrix</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ワールド座標系からカメラの透視座標系に変換するマトリクスを取得する。  <a href="#a0d19a0c5efada6301db0e1c1544ee739"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaf3bf3113a61f04ae8ba9319ef929d10"></a><!-- doxytag: member="sxsdk::camera_class::delete_attribute" ref="aaf3bf3113a61f04ae8ba9319ef929d10" args="(int attribute_id, void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>delete_attribute</b> (int attribute_id, void *aux=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#a360486cf290512728d5e249f384f1bed">restore_from_object</a> (<a class="el" href="structsxsdk_1_1shape__class.html">sxsdk::shape_class</a> &amp;shape, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">引数で与えられた形状をカメラ設定に適用する。  <a href="#a360486cf290512728d5e249f384f1bed"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac27432f8ccd009d5015ce3a40a85a252"></a><!-- doxytag: member="sxsdk::camera_class::restore_from_default" ref="ac27432f8ccd009d5015ce3a40a85a252" args="(void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#ac27432f8ccd009d5015ce3a40a85a252">restore_from_default</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">カメラを初期設定状態に戻す。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4c91c078f0080dfd5009f27801d1083b"></a><!-- doxytag: member="sxsdk::camera_class::set_correction" ref="a4c91c078f0080dfd5009f27801d1083b" args="(float correction_param, void *=0)" -->
+virtual <a class="el" href="structsxsdk_1_1camera__class.html">camera_class</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#a4c91c078f0080dfd5009f27801d1083b">set_correction</a> (float correction_param, void *=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">垂直あおり補正の値を設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aebc343010fef1ba8899369df3f49efda"></a><!-- doxytag: member="sxsdk::camera_class::get_correction" ref="aebc343010fef1ba8899369df3f49efda" args="(void *=0) const " -->
+virtual float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#aebc343010fef1ba8899369df3f49efda">get_correction</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">垂直あおり補正の値を取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a021956e5be3541f27689866001c6c055"></a><!-- doxytag: member="sxsdk::camera_class::set_film_shift" ref="a021956e5be3541f27689866001c6c055" args="(float film_shift_param, void *=0)" -->
+virtual <a class="el" href="structsxsdk_1_1camera__class.html">camera_class</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#a021956e5be3541f27689866001c6c055">set_film_shift</a> (float film_shift_param, void *=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">フィルムシフトの値を設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac052ae0ae1ec6c0dde8e84eebeec0ca5"></a><!-- doxytag: member="sxsdk::camera_class::get_film_shift" ref="ac052ae0ae1ec6c0dde8e84eebeec0ca5" args="(void *=0) const " -->
+virtual float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#ac052ae0ae1ec6c0dde8e84eebeec0ca5">get_film_shift</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">フィルムシフトの値を取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3899bea9e473ff75aeb82e99aa2d128e"></a><!-- doxytag: member="sxsdk::camera_class::set_film_rise" ref="a3899bea9e473ff75aeb82e99aa2d128e" args="(float film_rise_param, void *=0)" -->
+virtual <a class="el" href="structsxsdk_1_1camera__class.html">camera_class</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#a3899bea9e473ff75aeb82e99aa2d128e">set_film_rise</a> (float film_rise_param, void *=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">フィルムライズの値を設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae877f4009b05b555faa8bdc04de0ca25"></a><!-- doxytag: member="sxsdk::camera_class::get_film_rise" ref="ae877f4009b05b555faa8bdc04de0ca25" args="(void *=0) const " -->
+virtual float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#ae877f4009b05b555faa8bdc04de0ca25">get_film_rise</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">フィルムライズの値を取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a85b1ee7298e8e2945f303e5e77ad1184"></a><!-- doxytag: member="sxsdk::camera_class::set_film_swing" ref="a85b1ee7298e8e2945f303e5e77ad1184" args="(float film_swing_param, void *=0)" -->
+virtual <a class="el" href="structsxsdk_1_1camera__class.html">camera_class</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#a85b1ee7298e8e2945f303e5e77ad1184">set_film_swing</a> (float film_swing_param, void *=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">フィルムスイングの値を設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8073aec345d3a95f21c5f81f9197e359"></a><!-- doxytag: member="sxsdk::camera_class::get_film_swing" ref="a8073aec345d3a95f21c5f81f9197e359" args="(void *=0) const " -->
+virtual float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#a8073aec345d3a95f21c5f81f9197e359">get_film_swing</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">フィルムスイングの値を取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ade600c26e51399f880277e02dfc1b1db"></a><!-- doxytag: member="sxsdk::camera_class::set_film_tilt" ref="ade600c26e51399f880277e02dfc1b1db" args="(float film_tilt_param, void *=0)" -->
+virtual <a class="el" href="structsxsdk_1_1camera__class.html">camera_class</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#ade600c26e51399f880277e02dfc1b1db">set_film_tilt</a> (float film_tilt_param, void *=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">フィルムチルトの値を設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa33f7041c7cd9aa42dacaae0f269d267"></a><!-- doxytag: member="sxsdk::camera_class::get_film_tilt" ref="aa33f7041c7cd9aa42dacaae0f269d267" args="(void *=0) const " -->
+virtual float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#aa33f7041c7cd9aa42dacaae0f269d267">get_film_tilt</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">フィルムチルトの値を取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a19b84f9edbb882f3cde51621445d0d96"></a><!-- doxytag: member="sxsdk::camera_class::set_lens_swing" ref="a19b84f9edbb882f3cde51621445d0d96" args="(float lens_swing_param, void *=0)" -->
+virtual <a class="el" href="structsxsdk_1_1camera__class.html">camera_class</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#a19b84f9edbb882f3cde51621445d0d96">set_lens_swing</a> (float lens_swing_param, void *=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">レンズスイングの値を設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab933bbc13182c57a16ebf83b4b9aceb1"></a><!-- doxytag: member="sxsdk::camera_class::get_lens_swing" ref="ab933bbc13182c57a16ebf83b4b9aceb1" args="(void *=0) const " -->
+virtual float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#ab933bbc13182c57a16ebf83b4b9aceb1">get_lens_swing</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">レンズスイングの値を取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4a61840da0e2f7252229091988ef58eb"></a><!-- doxytag: member="sxsdk::camera_class::set_lens_tilt" ref="a4a61840da0e2f7252229091988ef58eb" args="(float lens_tilt_param, void *=0)" -->
+virtual <a class="el" href="structsxsdk_1_1camera__class.html">camera_class</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#a4a61840da0e2f7252229091988ef58eb">set_lens_tilt</a> (float lens_tilt_param, void *=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">レンズチルトの値を設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a362653c9273a2b05e96c1a7fca6b9bba"></a><!-- doxytag: member="sxsdk::camera_class::get_lens_tilt" ref="a362653c9273a2b05e96c1a7fca6b9bba" args="(void *=0) const " -->
+virtual float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#a362653c9273a2b05e96c1a7fca6b9bba">get_lens_tilt</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">レンズチルトの値を取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5e7ff42904743d9b252a8af847358744"></a><!-- doxytag: member="sxsdk::camera_class::set_scale" ref="a5e7ff42904743d9b252a8af847358744" args="(float scale_param, void *=0)" -->
+virtual <a class="el" href="structsxsdk_1_1camera__class.html">camera_class</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#a5e7ff42904743d9b252a8af847358744">set_scale</a> (float scale_param, void *=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">スケールの値を設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7f558f165a85c3ad999c03b0cef18752"></a><!-- doxytag: member="sxsdk::camera_class::get_scale" ref="a7f558f165a85c3ad999c03b0cef18752" args="(void *=0) const " -->
+virtual float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#a7f558f165a85c3ad999c03b0cef18752">get_scale</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">スケールの値を取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b29ec18c35b26c8313d3a5f9de53033"></a><!-- doxytag: member="sxsdk::camera_class::get_camera_mode" ref="a0b29ec18c35b26c8313d3a5f9de53033" args="(void *=0) const " -->
+virtual <a class="el" href="namespacesxsdk_1_1enums.html#afc79acbce82d2749454659f95d6c5add">sxsdk::enums::camera_mode</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#a0b29ec18c35b26c8313d3a5f9de53033">get_camera_mode</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">カメラのモード(<code><a class="el" href="namespacesxsdk_1_1enums.html#afc79acbce82d2749454659f95d6c5add" title="カメラの動作モード">sxsdk::enums::camera_mode</a></code> を参照)を取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9e3a5862ca2596c6ed3dce7b4bef8ec4"></a><!-- doxytag: member="sxsdk::camera_class::set_camera_mode" ref="a9e3a5862ca2596c6ed3dce7b4bef8ec4" args="(sxsdk::enums::camera_mode camera_mode_param, void *=0)" -->
+virtual <a class="el" href="structsxsdk_1_1camera__class.html">camera_class</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#a9e3a5862ca2596c6ed3dce7b4bef8ec4">set_camera_mode</a> (<a class="el" href="namespacesxsdk_1_1enums.html#afc79acbce82d2749454659f95d6c5add">sxsdk::enums::camera_mode</a> camera_mode_param, void *=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">カメラのモード(<code><a class="el" href="namespacesxsdk_1_1enums.html#afc79acbce82d2749454659f95d6c5add" title="カメラの動作モード">sxsdk::enums::camera_mode</a></code> を参照)を設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a19e20f735dc95f97b00111413e555592"></a><!-- doxytag: member="sxsdk::camera_class::get_camera_object" ref="a19e20f735dc95f97b00111413e555592" args="(void *=0) const " -->
+virtual <a class="el" href="structsxsdk_1_1part__class.html">part_class</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#a19e20f735dc95f97b00111413e555592">get_camera_object</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">カメラ形状オブジェクトを取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a10d5301cb02b2dd5daf75d26c80d98b5"></a><!-- doxytag: member="sxsdk::camera_class::stream_to_clipboard" ref="a10d5301cb02b2dd5daf75d26c80d98b5" args="(void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#a10d5301cb02b2dd5daf75d26c80d98b5">stream_to_clipboard</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オブジェクトの内容をテキスト（XML）としてクリップボードにコピーする。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5d1b0fbe7d94dfc3153b3700815cd3ea"></a><!-- doxytag: member="sxsdk::camera_class::memorize_as_metacamera" ref="a5d1b0fbe7d94dfc3153b3700815cd3ea" args="(void *aux=0)" -->
+virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#a5d1b0fbe7d94dfc3153b3700815cd3ea">memorize_as_metacamera</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">現在のカメラの視野からメタカメラを作成する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structsxsdk_1_1stream__interface.html">sxsdk::stream_interface</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#a98c7f631a13ad000fdf391e105b40138">create_attribute_stream_interface_with_uuid</a> (const sx::uuid_class &amp;attribute_id, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">属性ストリームを生成する。  <a href="#a98c7f631a13ad000fdf391e105b40138"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structsxsdk_1_1stream__interface.html">sxsdk::stream_interface</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#a41867ed95be35a31df4b3c01b49d0ccf">get_attribute_stream_interface_with_uuid</a> (const sx::uuid_class &amp;attribute_id, void *aux=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">属性ストリームを取得する。  <a href="#a41867ed95be35a31df4b3c01b49d0ccf"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#ae479d98cd97c33e5ca013bac82f2077c">delete_attribute_with_uuid</a> (const sx::uuid_class &amp;attribute_id, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">属性を削除する。  <a href="#ae479d98cd97c33e5ca013bac82f2077c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1camera__class.html#addf413480e8ec12e0c3a959aba6643da">rotate_eye</a> (float h, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">注視点を中心に、Y軸に対してカメラを回転させる。  <a href="#addf413480e8ec12e0c3a959aba6643da"></a><br/></td></tr>
+</table>
+<hr/><h2>関数</h2>
+<a class="anchor" id="a98c7f631a13ad000fdf391e105b40138"></a><!-- doxytag: member="sxsdk::camera_class::create_attribute_stream_interface_with_uuid" ref="a98c7f631a13ad000fdf391e105b40138" args="(const sx::uuid_class &amp;attribute_id, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structsxsdk_1_1stream__interface.html">sxsdk::stream_interface</a>* sxsdk::camera_class::create_attribute_stream_interface_with_uuid </td>
+          <td>(</td>
+          <td class="paramtype">const sx::uuid_class &amp;&nbsp;</td>
+          <td class="paramname"> <em>attribute_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>属性ストリームを生成する。 </p>
+<p>すでに同じIDの属性ストリームを持っている場合には内容がクリアされる。</p>
+<p>オブジェクトの確実な破棄のために<code><a class="el" href="classcompointer.html" title="*_interfaceクラスのオブジェクトを指す参照カウントスマートポインタ。...">compointer</a></code> を使用する(<a class="el" href="memorymanagement.html">メモリ管理</a> )。</p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>attribute_id</em>&nbsp;</td><td>属性ストリームのuuid </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ae479d98cd97c33e5ca013bac82f2077c"></a><!-- doxytag: member="sxsdk::camera_class::delete_attribute_with_uuid" ref="ae479d98cd97c33e5ca013bac82f2077c" args="(const sx::uuid_class &amp;attribute_id, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::camera_class::delete_attribute_with_uuid </td>
+          <td>(</td>
+          <td class="paramtype">const sx::uuid_class &amp;&nbsp;</td>
+          <td class="paramname"> <em>attribute_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>属性を削除する。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>attribute_id</em>&nbsp;</td><td>属性ストリームのuuid </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a41867ed95be35a31df4b3c01b49d0ccf"></a><!-- doxytag: member="sxsdk::camera_class::get_attribute_stream_interface_with_uuid" ref="a41867ed95be35a31df4b3c01b49d0ccf" args="(const sx::uuid_class &amp;attribute_id, void *aux=0) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structsxsdk_1_1stream__interface.html">sxsdk::stream_interface</a>* sxsdk::camera_class::get_attribute_stream_interface_with_uuid </td>
+          <td>(</td>
+          <td class="paramtype">const sx::uuid_class &amp;&nbsp;</td>
+          <td class="paramname"> <em>attribute_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>属性ストリームを取得する。 </p>
+<p>オブジェクトの確実な破棄のために<code><a class="el" href="classcompointer.html" title="*_interfaceクラスのオブジェクトを指す参照カウントスマートポインタ。...">compointer</a></code> を使用する(<a class="el" href="memorymanagement.html">メモリ管理</a> )。</p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>attribute_id</em>&nbsp;</td><td>属性ストリームのuuid </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a2b353c9f58ce64078951c8e1de4a5415"></a><!-- doxytag: member="sxsdk::camera_class::get_eye" ref="a2b353c9f58ce64078951c8e1de4a5415" args="(void *=0) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual sxsdk::vec3 sxsdk::camera_class::get_eye </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>視点の位置を取得する。 </p>
+<p>レンダリング時に取得する場合は、<code><a class="el" href="structsxsdk_1_1rendering__context__interface.html#af8fd4e2b615a4c60af027dc931fff3cf" title="カメラの視点の位置を取得する。">rendering_context_interface::get_eye()</a></code> を使用する。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a276e4843aa37812f3093ed32725ca0c9"></a><!-- doxytag: member="sxsdk::camera_class::get_target" ref="a276e4843aa37812f3093ed32725ca0c9" args="(void *=0) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual sxsdk::vec3 sxsdk::camera_class::get_target </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>注視点の位置を取得する。 </p>
+<p>レンダリング時に取得する場合は、<code><a class="el" href="structsxsdk_1_1rendering__context__interface.html#a4850fa55227c222fb10c6ed43c6bf102" title="カメラの注視点の位置を取得する。">rendering_context_interface::get_target()</a></code> を使用する。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a0d19a0c5efada6301db0e1c1544ee739"></a><!-- doxytag: member="sxsdk::camera_class::get_world_to_perspective_matrix" ref="a0d19a0c5efada6301db0e1c1544ee739" args="(void *=0) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual sxsdk::mat4 sxsdk::camera_class::get_world_to_perspective_matrix </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>ワールド座標系からカメラの透視座標系に変換するマトリクスを取得する。 </p>
+<p>カメラの位置や向き、傾きを考慮してワールド座標系を回転、移動、正規化させるマトリクス。視点が原点に一致し、視線の向きがZ軸となる。</p>
+<p>視野内の座標について、縦横を-1.0から1.0 、奥行きを0.0から1.0の範囲に収まるよう正規化する。この範囲外の座標は視野外となるため、クリッピングはこの座標系で行う。 </p>
+
+</div>
+</div>
+<a class="anchor" id="ae56fe14634ce923c5cfe0db2d47438f7"></a><!-- doxytag: member="sxsdk::camera_class::get_world_to_view_matrix" ref="ae56fe14634ce923c5cfe0db2d47438f7" args="(void *=0) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual sxsdk::mat4 sxsdk::camera_class::get_world_to_view_matrix </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>ワールド座標系からカメラのビュー座標系に変換するマトリクスを取得する。 </p>
+<p>カメラの位置や向き、傾きを考慮してワールド座標系を回転、移動させるマトリクス。視点が原点に一致し、視線の向きがZ軸となる。</p>
+<p>透視変換はかからない。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a08d951e2c1169170f38255199e58231c"></a><!-- doxytag: member="sxsdk::camera_class::get_zoom" ref="a08d951e2c1169170f38255199e58231c" args="(void *=0) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual float sxsdk::camera_class::get_zoom </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>焦点距離を取得する。 </p>
+<p>レンダリング時に取得する場合は、<code><a class="el" href="structsxsdk_1_1rendering__context__interface.html#ac1021d4df6b641e420b0e685f530f0b9" title="カメラのズーム値を取得する。">rendering_context_interface::get_zoom()</a></code> を使用する。 </p>
+
+</div>
+</div>
+<a class="anchor" id="aca3f88aaab931f2cc57e594335758da3"></a><!-- doxytag: member="sxsdk::camera_class::load" ref="aca3f88aaab931f2cc57e594335758da3" args="(const char *path, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::camera_class::load </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>カメラ設定をファイルから読み込む。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>path</em>&nbsp;</td><td>読み込むファイルの名称を設定する。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a360486cf290512728d5e249f384f1bed"></a><!-- doxytag: member="sxsdk::camera_class::restore_from_object" ref="a360486cf290512728d5e249f384f1bed" args="(sxsdk::shape_class &amp;shape, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::camera_class::restore_from_object </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1shape__class.html">sxsdk::shape_class</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>shape</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>引数で与えられた形状をカメラ設定に適用する。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>shape</em>&nbsp;</td><td>カメラ設定に適用する形状の<code><a class="el" href="structsxsdk_1_1shape__class.html">sxsdk::shape_class</a></code> を渡す。線形状、スポットライトを指定可能。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="addf413480e8ec12e0c3a959aba6643da"></a><!-- doxytag: member="sxsdk::camera_class::rotate_eye" ref="addf413480e8ec12e0c3a959aba6643da" args="(float h, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::camera_class::rotate_eye </td>
+          <td>(</td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>注視点を中心に、Y軸に対してカメラを回転させる。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>h</em>&nbsp;</td><td>回転角度 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ad17a2ce1cfc6619f1d35eaa643645248"></a><!-- doxytag: member="sxsdk::camera_class::save" ref="ad17a2ce1cfc6619f1d35eaa643645248" args="(const char *path, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::camera_class::save </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>カメラ設定をファイルに保存する。 </p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>path</em>&nbsp;</td><td>保存するファイルの名称を設定する。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ae0034209349f0ca443792593e6b604ee"></a><!-- doxytag: member="sxsdk::camera_class::set_eye" ref="ae0034209349f0ca443792593e6b604ee" args="(const sxsdk::vec3 &amp;eye_param, void *=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structsxsdk_1_1camera__class.html">camera_class</a>&amp; sxsdk::camera_class::set_eye </td>
+          <td>(</td>
+          <td class="paramtype">const sxsdk::vec3 &amp;&nbsp;</td>
+          <td class="paramname"> <em>eye_param</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>視点の位置を設定する。 </p>
+<p>レンダリング時に取得する場合は、<code><a class="el" href="structsxsdk_1_1rendering__context__interface.html#af8fd4e2b615a4c60af027dc931fff3cf" title="カメラの視点の位置を取得する。">rendering_context_interface::get_eye()</a></code> を使用する。 </p>
+
+</div>
+</div>
+<a class="anchor" id="aec18aa7b54c88e1cf298fdaa55e5a5f4"></a><!-- doxytag: member="sxsdk::camera_class::set_target" ref="aec18aa7b54c88e1cf298fdaa55e5a5f4" args="(const sxsdk::vec3 &amp;target_param, void *=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structsxsdk_1_1camera__class.html">camera_class</a>&amp; sxsdk::camera_class::set_target </td>
+          <td>(</td>
+          <td class="paramtype">const sxsdk::vec3 &amp;&nbsp;</td>
+          <td class="paramname"> <em>target_param</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>注視点の位置を設定する。 </p>
+<p>レンダリング時に取得する場合は、<code><a class="el" href="structsxsdk_1_1rendering__context__interface.html#a4850fa55227c222fb10c6ed43c6bf102" title="カメラの注視点の位置を取得する。">rendering_context_interface::get_target()</a></code> を使用する。 </p>
+
+</div>
+</div>
+<a class="anchor" id="a2da39b78209bb495e91c042fe1901ac2"></a><!-- doxytag: member="sxsdk::camera_class::set_zoom" ref="a2da39b78209bb495e91c042fe1901ac2" args="(float zoom_param, void *=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structsxsdk_1_1camera__class.html">camera_class</a>&amp; sxsdk::camera_class::set_zoom </td>
+          <td>(</td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>zoom_param</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>焦点距離を設定する。 </p>
+<p>レンダリング時に取得する場合は、<code><a class="el" href="structsxsdk_1_1rendering__context__interface.html#ac1021d4df6b641e420b0e685f530f0b9" title="カメラのズーム値を取得する。">rendering_context_interface::get_zoom()</a></code> を使用する。 </p>
+
+</div>
+</div>
+<hr/>この構造体の説明は次のファイルから生成されました:<ul>
+<li><a class="el" href="cameraclass_8h_source.html">cameraclass.h</a></li>
+</ul>
+</div>
+<br><br>
+<hr>
+<div align="center">Copyright &copy; e frontier, Inc. All rights reserved.</div>
+</body></html>

@@ -1,0 +1,3681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xsd:element name="joint">
+		<xsd:annotation>
+			<xsd:documentation> \en joint \enden  \ja ジョイント \endja </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="type" type='xsd:integer'>
+					<xsd:annotation>
+						<xsd:documentation> \en joint type \enden  \ja ジョイントの種類 \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja 0 : ジョイント無効 \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja 2 : 直線移動ジョイント \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja 3 : 拡大縮小ジョイント \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja 4 : 均等拡大縮小ジョイント \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja 5 : 光源エフェクタ \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja 6 : パスジョイント \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja 9 : 変形ジョイント \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja 10 : 回転ジョイント \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja 11 : カスタムジョイント \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja 12 : ボールジョイント \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja 13 : カメラジョイント \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="points">
+					<xsd:annotation>
+						<xsd:documentation> \en geometric attributes of the joint \enden  \ja ジョイントの位置等の幾何情報を表す点列 \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja nに続いてn個のpointが並ぶ。 \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja 回転ジョイント：回転軸を定義する２端点 \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja 直線移動／拡大縮小ジョイント：始点、終点 \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja 均等拡大縮小／ボールジョイント：基準点、（表示の際の）サイズ \endja </xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+						<xsd:choice minOccurs="0" maxOccurs="unbounded">
+							<xsd:element name="n" type='xsd:integer'>
+								<xsd:annotation>
+									<xsd:documentation> \en the number of points \enden  \ja 点の数 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="point" type="vec3">
+								<xsd:annotation>
+									<xsd:documentation> \en point \enden  \ja 座標値 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="value">
+					<xsd:annotation>
+						<xsd:documentation> \en joint value \enden  \ja ジョイントスカラー値 \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja 回転ジョイント：回転角度 \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja 直線移動ジョイント：始点-終点間の距離に対する相対値としての移動量 \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja 均等拡大縮小／ボールジョイント：拡大縮小値 \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja パスジョイント：パスに対する相対値としての移動量 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="has_range">
+					<xsd:annotation>
+						<xsd:documentation> \en joint value is constrained with the specified range. \enden  \ja ジョイントスカラー値が設定された範囲内に限定される \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="rotation">
+					<xsd:annotation>
+						<xsd:documentation> \en rotation \enden  \ja 回転量 \endja </xsd:documentation>
+						<xsd:documentation> \en rotation \enden  \ja ボールジョイント、カメラジョイントで使われる \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="offset">
+					<xsd:annotation>
+						<xsd:documentation> \en offset \enden  \ja オフセット量 \endja </xsd:documentation>
+						<xsd:documentation> \en rotation \enden  \ja ボールジョイント、カメラジョイントで使われる \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="min_value">
+					<xsd:annotation>
+						<xsd:documentation> \en minimum value specified by the user. \enden  \ja ユーザが設定した最小スカラー値 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="max_value">
+					<xsd:annotation>
+						<xsd:documentation> \en maximum value specified by the user. \enden  \ja ユーザが設定した最大スカラー値 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="default_min_value">
+					<xsd:annotation>
+						<xsd:documentation> \en default minimum value \enden  \ja デフォルト最小スカラー値 \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja ジョイントの種類によって異なった値がデフォルトとなることに注意 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="default_max_value">
+					<xsd:annotation>
+						<xsd:documentation> \en default maximum value \enden  \ja デフォルト最大スカラー値 \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja ジョイントの種類によって異なった値がデフォルトとなることに注意 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="default_scalar">
+					<xsd:annotation>
+						<xsd:documentation> \en default joint value \enden  \ja デフォルトスカラー値 \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja ジョイントの種類によって異なった値がデフォルトとなることに注意 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="blend">
+					<xsd:annotation>
+						<xsd:documentation> \en blend \enden  \ja ブレンド値 \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja スキンをジョイントにバインドする際のブレンド値 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="default_rotation">
+					<xsd:annotation>
+						<xsd:documentation> \en default rotation \enden  \ja デフォルト回転値 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="transformation">
+					<xsd:annotation>
+						<xsd:documentation> \en transformation matrix \enden  \ja 変換マトリクス \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja ジョイントの評価結果としての変換マトリクス値。Shade本体では使用しないが、ジョイント機能を実装しないプログラムで読み込む際には、実際にジョイントを評価して変換マトリクスを計算する必要はなく、このマトリクス値を使えば良い。 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="graph_height">
+					<xsd:annotation>
+						<xsd:documentation> \en height of the motion graph when displayed \enden  \ja モーショングラフを画面に表示する際の、グラフの高さ \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="flags">
+					<xsd:annotation>
+						<xsd:documentation> \en flags \enden  \ja 各種フラグ \endja </xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+						<xsd:attribute name="flat_joint">
+							<xsd:annotation>
+								<xsd:documentation> \en flat_joint \enden  \ja フラットジョイント \endja </xsd:documentation>
+								<xsd:documentation> \en blah \enden  \ja ONの場合には、ジョイントパートに含まれる子形状ではなく、同階層でそれ以降にならぶ形状に対してジョイントが作用する。 \endja </xsd:documentation>
+								<xsd:documentation> \en blah \enden  \ja デフォルトでOFF。 \endja </xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+						<xsd:attribute name="path_correction_distance">
+							<xsd:annotation>
+								<xsd:documentation> \en Path Correction(used only Path Joint) \enden  \ja パス補正(パスジョイントのみで有効) \endja </xsd:documentation>
+								<xsd:documentation> \en blah \enden  \ja ONの場合には、パスの線形状を距離で補正して作用する。 \endja </xsd:documentation>
+								<xsd:documentation> \en blah \enden  \ja Shade 8で作成したパスジョイントはデフォルトでON。Shade 7以前で作成したファイルを開いた場合はOFF。 \endja </xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+						<xsd:attribute name="graph_disclosed">
+							<xsd:annotation>
+								<xsd:documentation> \en graph_disclosed \enden  \ja モーション設定グラフをディスクローズ表示 \endja </xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+						<xsd:attribute name="tree_disclosed">
+							<xsd:annotation>
+								<xsd:documentation> \en tree_disclosed \enden  \ja モーション設定ツリーをディスクローズ表示 \endja </xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="shape_specifier">
+		<xsd:annotation>
+			<xsd:documentation> \en information necessary to specify a shape object \enden  \ja 形状を特定するために必要な情報 \endja </xsd:documentation>
+			<xsd:documentation> \en blah \enden  \ja リンクの種類の後に１個または複数個並んだ整数値によって、形状を特定する。整数値は、ルートレベルから辿って、階層内での対象形状またはそれを含むパートの相対位置を表す。したがって、必ず 0 から始まり、[0]はルート形状を指す。 \endja </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="link_type">
+					<xsd:annotation>
+						<xsd:documentation> \en link type \enden  \ja リンクの種類 \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja 0 : 通常のリンク形状 \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja 1 : カメラの視点連結形状 \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja 2 : カメラの注視点連結形状 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="int">
+					<xsd:annotation>
+						<xsd:documentation> \en int \enden  \ja 階層内での相対位置 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="attribute">
+		<xsd:annotation>
+			<xsd:documentation> \en attribute data atached by plugins \enden  \ja プラグインが付加したカスタム属性データ \endja </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="uuid">
+					<xsd:annotation>
+						<xsd:documentation> \en identifier used by plugins \enden  \ja プラグインがカスタム属性データを特定するための識別子 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="wireframe_uuid">
+					<xsd:annotation>
+						<xsd:documentation> \en specifies a plugin that draws wireframe \enden  \ja ワイヤフレーム表示を行うプラグインを特定する識別子 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="intersection_uuid">
+					<xsd:annotation>
+						<xsd:documentation> \en specifies a plugins that calculates intersections. \enden  \ja レイトレーシング交点計算を行うプラグインを特定する識別子 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="stream">
+					<xsd:annotation>
+						<xsd:documentation> \en stream \enden  \ja データを保持するストリーム \endja </xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+					<xsd:simpleContent>
+						<xsd:extension base="xsd:string">
+							<xsd:attribute name="size">
+								<xsd:annotation>
+									<xsd:documentation> \en size (number of bytes) \enden  \ja ストリームのサイズ（バイト数） \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:attribute>
+						</xsd:extension>
+					</xsd:simpleContent>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="label">
+					<xsd:annotation>
+						<xsd:documentation> \en label \enden  \ja プラグインから自由に設定、取得できる名称 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="attributes">
+		<xsd:annotation>
+			<xsd:documentation> \en array of attributes \enden  \ja プラグインが付加したカスタム属性の配列 \endja </xsd:documentation>
+			<xsd:documentation> \en blah \enden  \ja （ポリゴンメッシュの頂点に割り当てられたattributesの場合には面インデクス値、頂点インデクスに続き）0個またはそれ以上のカスタム属性が並ぶ。 \endja </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="face_index">
+					<xsd:annotation>
+						<xsd:documentation> \en face_index \enden  \ja 面インデクス値 \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja ポリゴンメッシュの面の頂点に割り当てられたカスタム属性の場合には、割り当てられた面のインデクス値を表す。それ以外の場合には無効。 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="vertex_index">
+					<xsd:annotation>
+						<xsd:documentation> \en vertex_index \enden  \ja 頂点インデクス \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja ポリゴンメッシュの面の頂点に割り当てられたカスタム属性の場合には、割り当てられた頂点の（面内）インデクス値を表す。それ以外の場合には無効。 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element ref="attribute">
+					<xsd:annotation>
+						<xsd:documentation> \en attribute \enden  \ja attributesに含まれる個々のカスタム属性の実体 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="common_shape_info">
+		<xsd:annotation>
+			<xsd:documentation> \en infomation common to all types of shade \enden  \ja 全ての種類の形状が持つ情報 \endja </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="flags">
+					<xsd:annotation>
+						<xsd:documentation> \en flags \enden  \ja 各種フラグ \endja </xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+						<xsd:attribute name="fip_face">
+							<xsd:annotation>
+								<xsd:documentation> \en fip_face \enden  \ja 面の表裏を反転 \endja </xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+						<xsd:attribute name="not_modifiable">
+							<xsd:annotation>
+								<xsd:documentation> \en not_modifiable \enden  \ja モディファイ可能 \endja </xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+						<xsd:attribute name="not_browsable">
+							<xsd:annotation>
+								<xsd:documentation> \en not_browsable \enden  \ja ブラウズ可能 \endja </xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+						<xsd:attribute name="hidden">
+							<xsd:annotation>
+								<xsd:documentation> \en hidden \enden  \ja 非表示 \endja </xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="solid">
+					<xsd:annotation>
+						<xsd:documentation> \en solid \enden  \ja （半）透明な形状の場合に、面一枚でもソリッドと見なす。すなわち、その面に入射した光線は、面を通過した時点で即形状外に射出すると見なす。 \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja 0 : オフ \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja 1 : オン \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja -1 : 親の値を継承 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="render">
+					<xsd:annotation>
+						<xsd:documentation> \en render \enden  \ja レンダリングの対象とする \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja 0 : オフ \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja 1 : オン \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja -1 : 親の値を継承 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="rough">
+					<xsd:annotation>
+						<xsd:documentation> \en rough \enden  \ja ラフ表示 \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja 0 : オフ \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja 1 : オン \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja -1 : 親の値を継承 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="radiosity_shooter">
+					<xsd:annotation>
+						<xsd:documentation> \en radiosity shooter \enden  \ja ラジオシティ計算のシュータ \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja 0 : オフ \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja 1 : オン \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja -1 : 親の値を継承 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="radiosity_receiver">
+					<xsd:annotation>
+						<xsd:documentation> \en radiosity receiver \enden  \ja ラジオシティ計算のレシーバ \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja 0 : オフ \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja 1 : オン \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja -1 : 親の値を継承 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="radiosity_cast_shadow">
+					<xsd:annotation>
+						<xsd:documentation> \en radiosity cast shadow \enden  \ja ラジオシティ計算で影を落とす \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja 0 : オフ \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja 1 : オン \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja -1 : 親の値を継承 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="radiosity_doublesided">
+					<xsd:annotation>
+						<xsd:documentation> \en radiosity double-sided \enden  \ja ラジオシティ計算で両面と見なす \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja 0 : オフ \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja 1 : オン \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja -1 : 親の値を継承 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="xrp_light_index">
+					<xsd:annotation>
+						<xsd:documentation> \en xrp_light_index \enden  \ja ラジオシティ計算用光源インデクス \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja Shade内部で使用 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="xrp_handle">
+					<xsd:annotation>
+						<xsd:documentation> \en xrp_handle \enden  \ja ラジオシティ計算用ハンドル値 \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja Shade内部で使用 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="marker_index">
+					<xsd:annotation>
+						<xsd:documentation> \en marker_index \enden  \ja マーカインデクス \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja ブラウザ表示色のインデクス値 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element ref="joint_specifier">
+					<xsd:annotation>
+						<xsd:documentation> \en joint_specifier \enden  \ja スキン設定でスコープとするジョイント \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="fog">
+		<xsd:annotation>
+			<xsd:documentation> \en fog settings \enden  \ja フォグ設定 \endja </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="color">
+					<xsd:annotation>
+						<xsd:documentation> \en fog color \enden  \ja フォグの色 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="fog">
+					<xsd:annotation>
+						<xsd:documentation> \en fog density \enden  \ja フォグの濃度 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="joint_specifier">
+		<xsd:annotation>
+			<xsd:documentation> \en joint specifier \enden  \ja ジョイントを特定するために必要な情報 \endja </xsd:documentation>
+			<xsd:documentation> \en blah \enden  \ja shape_specifierと同様に、階層内での相対位置の値の配列として形状を特定するが、shape_specifierとは異なりジョイント形状のみを対象とする。 \endja </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="int">
+					<xsd:annotation>
+						<xsd:documentation> \en ordinal \enden  \ja 階層内での相対位置 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="part">
+		<xsd:annotation>
+			<xsd:documentation> \en part \enden  \ja パート \endja </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="transformation">
+					<xsd:annotation>
+						<xsd:documentation> \en transformation \enden  \ja 変換マトリクス \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="string">
+					<xsd:annotation>
+						<xsd:documentation> \en name \enden  \ja 名前 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element ref="skin">
+					<xsd:annotation>
+						<xsd:documentation> \en skin \enden  \ja パートに設定されたスキン \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element ref="joint">
+					<xsd:annotation>
+						<xsd:documentation> \en joint \enden  \ja ジョイント情報 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element ref="view">
+					<xsd:annotation>
+						<xsd:documentation> \en view \enden  \ja カメラ形状の場合の視野設定 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="int">
+					<xsd:annotation>
+						<xsd:documentation> \en int \enden  \ja 使用しているマスターサーフェスの番号 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element ref="surface">
+					<xsd:annotation>
+						<xsd:documentation> \en surface attributes \enden  \ja 表面材質 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element ref="common_shape_info">
+					<xsd:annotation>
+						<xsd:documentation> \en common shape info \enden  \ja 各種属性 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element ref="attributes">
+					<xsd:annotation>
+						<xsd:documentation> \en custom attributes \enden  \ja プラグインが付加したカスタム属性 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="flags">
+					<xsd:annotation>
+						<xsd:documentation> \en flags \enden  \ja 各種フラグ \endja </xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+						<xsd:attribute name="disclosed">
+							<xsd:annotation>
+								<xsd:documentation> \en disclosed \enden  \ja ブラウザでディスクローズ表示 \endja </xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+						<xsd:attribute name="surface_closed">
+							<xsd:annotation>
+								<xsd:documentation> \en switched \enden  \ja 交差方向に閉じた自由曲面 \endja </xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+						<xsd:attribute name="switched">
+							<xsd:annotation>
+								<xsd:documentation> \en switched \enden  \ja 縦横の切り替えがされている \endja </xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+						<xsd:attribute name="master_surface">
+							<xsd:annotation>
+								<xsd:documentation> \en master_surface \enden  \ja ONの場合には、マスターサーフェス形状を含むパート \endja </xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+						<xsd:attribute name="current_camera">
+							<xsd:annotation>
+								<xsd:documentation> \en current_camera \enden  \ja 現行のカメラ \endja </xsd:documentation>
+								<xsd:documentation> \en blah \enden  \ja パートがカメラ形状の場合に有効。 \endja </xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="part_type">
+					<xsd:annotation>
+						<xsd:documentation> \en part type \enden  \ja パートの種類 \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja 0 : 通常パートおよび各種ジョイント \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja 1 : 自由曲面パート \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="bindable">
+					<xsd:annotation>
+						<xsd:documentation> \en bindable \enden  \ja スキン設定でバインドの対象とする \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja 0 : オフ \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja 1 : オン \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja -1 : 親の値を継承 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="motion">
+					<xsd:annotation>
+						<xsd:documentation> \en motion settings \enden  \ja モーション設定 \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja n個のモーションポイントが並ぶ。 \endja </xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+						<xsd:choice minOccurs="0" maxOccurs="unbounded">
+							<xsd:element name="n">
+								<xsd:annotation>
+									<xsd:documentation> \en the number of motion points \enden  \ja モーションポイントの数 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="interpolation">
+								<xsd:annotation>
+									<xsd:documentation> \en interpolcation \enden  \ja 補間の種類 \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 0 : ベジェ補間 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="anchor">
+								<xsd:annotation>
+									<xsd:documentation> \en anchor \enden  \ja アンカーモード \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja カメラジョイントの場合にのみ有効 \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 0 : 視点のパス、注視点のパスをそれぞれ明示的に補間し、その結果としてカメラの向きが必然的に決まる。 \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 1 : 視点のパス、カメラの向きをそれぞれ明示的に補間し、その結果として注視点が必然的に決まる。 \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 2 : 注視点のパス、カメラの向きをそれぞれ明示的に補間し、その結果として視点が必然的に決まる。 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="motion_point">
+								<xsd:annotation>
+									<xsd:documentation> \en motion point \enden  \ja モーションポイント \endja </xsd:documentation>
+								</xsd:annotation>
+								<xsd:complexType>
+									<xsd:choice minOccurs="0" maxOccurs="unbounded">
+										<xsd:element name="index">
+											<xsd:annotation>
+												<xsd:documentation> \en index \enden  \ja モーションポイントのインデクス値 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="sequence_joint_value_0">
+											<xsd:annotation>
+												<xsd:documentation> \en blah \enden  \ja 回転ジョイント：回転角度 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 直線移動ジョイント：始点-終点間の距離に対する相対値としての移動量 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 均等拡大縮小／ボールジョイント：拡大縮小値 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja パスジョイント：パスに対する相対値としての移動量 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja カメラジョイント：視点、注視点間の距離 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="sequence_joint_value_1">
+											<xsd:annotation>
+												<xsd:documentation> \en blah \enden  \ja カメラジョイント：ズーム値 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="sequence_joint_value_2">
+											<xsd:annotation>
+												<xsd:documentation> \en blah \enden  \ja カメラジョイント：バンク値 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="sequence_joint_value_3">
+											<xsd:annotation>
+												<xsd:documentation> \en blah \enden  \ja カメラジョイント：垂直パース補正値 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="sequence_joint_value_4">
+											<xsd:annotation>
+												<xsd:documentation> \en blah \enden  \ja カメラジョイント：焦点値 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="sequence_joint_value_5">
+											<xsd:annotation>
+												<xsd:documentation> \en blah \enden  \ja カメラジョイント：焦点位置のX \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="sequence_joint_value_6">
+											<xsd:annotation>
+												<xsd:documentation> \en blah \enden  \ja カメラジョイント：焦点位置のY \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="sequence_joint_value_7">
+											<xsd:annotation>
+												<xsd:documentation> \en blah \enden  \ja カメラジョイント：焦点位置のZ \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="sequence_joint_value_8">
+											<xsd:annotation>
+												<xsd:documentation> \en blah \enden  \ja カメラジョイント：シフトのX \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="sequence_joint_value_9">
+											<xsd:annotation>
+												<xsd:documentation> \en blah \enden  \ja カメラジョイント：シフトのY \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="sequence_joint_value_10">
+											<xsd:annotation>
+												<xsd:documentation> \en blah \enden  \ja カメラジョイント：フィルムシフトのX \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="sequence_joint_value_11">
+											<xsd:annotation>
+												<xsd:documentation> \en blah \enden  \ja カメラジョイント：フィルムシフトのY \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="sequence_joint_value_12">
+											<xsd:annotation>
+												<xsd:documentation> \en blah \enden  \ja カメラジョイント：フィルムティルトのX \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="sequence_joint_value_13">
+											<xsd:annotation>
+												<xsd:documentation> \en blah \enden  \ja カメラジョイント：フィルムティルトのY \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="sequence_joint_value_14">
+											<xsd:annotation>
+												<xsd:documentation> \en blah \enden  \ja カメラジョイント：レンズティルトのX \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="sequence_joint_value_15">
+											<xsd:annotation>
+												<xsd:documentation> \en blah \enden  \ja カメラジョイント：レンズティルトのY \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="sequence_joint_value_16">
+											<xsd:annotation>
+												<xsd:documentation> \en blah \enden  \ja カメラジョイント：平行移動量 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="sequence_joint_value_17">
+											<xsd:annotation>
+												<xsd:documentation> \en blah \enden  \ja カメラジョイント：スケール値 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="rotation">
+											<xsd:annotation>
+												<xsd:documentation> \en blah \enden  \ja ボールジョイント：回転値 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja カメラジョイント：カメラの向き \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="offset">
+											<xsd:annotation>
+												<xsd:documentation> \en blah \enden  \ja ボールジョイント／カメラジョイント：オフセット値 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="slow_in">
+											<xsd:annotation>
+												<xsd:documentation> \en slow in \enden  \ja スローイン \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="slow_out">
+											<xsd:annotation>
+												<xsd:documentation> \en slow out \enden  \ja スローアウト \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="keyframe_index">
+											<xsd:annotation>
+												<xsd:documentation> \en keyframe index \enden  \ja モーションポイントが属するキーフレームのインデクス値 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="auto_smooth">
+											<xsd:annotation>
+												<xsd:documentation> \en auto_smooth \enden  \ja 自動スムース化 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="q0">
+											<xsd:annotation>
+												<xsd:documentation> \en blah \enden  \ja 自動スムース化がオフの場合に、明示的に設定したインハンドル値 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="q1">
+											<xsd:annotation>
+												<xsd:documentation> \en blah \enden  \ja 自動スムース化がオフの場合に、明示的に設定したアウトハンドル値 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="repeated">
+											<xsd:annotation>
+												<xsd:documentation> \en repeated \enden  \ja 繰り返しによって生成されたモーションポイント \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+
+										<xsd:element name="flags">
+											<xsd:annotation>
+												<xsd:documentation> \en flags \enden  \ja 各種フラグ \endja </xsd:documentation>
+											</xsd:annotation>
+											<xsd:complexType>
+												<xsd:attribute name="corner">
+													<xsd:annotation>
+														<xsd:documentation> \en cusp \enden  \ja cusp \endja </xsd:documentation>
+													</xsd:annotation>
+												</xsd:attribute>
+											</xsd:complexType>
+										</xsd:element>
+
+									</xsd:choice>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element ref="view_info">
+					<xsd:annotation>
+						<xsd:documentation> \en view info \enden  \ja ビュー情報 \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja ローカル座標系表示の際に使用する各種設定値。 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element ref="shape_specifier">
+					<xsd:annotation>
+						<xsd:documentation> \en link \enden  \ja リンク元の形状 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element ref="part">
+					<xsd:annotation>
+						<xsd:documentation> \en part \enden  \ja （パートに含まれる）パート \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="polygon_mesh">
+					<xsd:annotation>
+						<xsd:documentation> \en polygon mesh \enden  \ja （パートに含まれる）ポリゴンメッシュ形状 \endja </xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+						<xsd:choice minOccurs="0" maxOccurs="unbounded">
+							<xsd:element name="string">
+								<xsd:annotation>
+									<xsd:documentation> \en name \enden  \ja 名前 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="int">
+								<xsd:annotation>
+									<xsd:documentation> \en int \enden  \ja 使用しているマスターサーフェスの番号 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element ref="surface">
+								<xsd:annotation>
+									<xsd:documentation> \en surface attributes \enden  \ja 表面材質 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element ref="common_shape_info">
+								<xsd:annotation>
+									<xsd:documentation> \en common shape info \enden  \ja 各種属性 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element ref="attributes">
+								<xsd:annotation>
+									<xsd:documentation> \en custom attributes \enden  \ja プラグインが付加したカスタム属性 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="vertices">
+								<xsd:annotation>
+									<xsd:documentation> \en vertices \enden  \ja 頂点 \endja </xsd:documentation>
+								</xsd:annotation>
+								<xsd:complexType>
+									<xsd:choice minOccurs="0" maxOccurs="unbounded">
+										<xsd:element name="positions">
+											<xsd:annotation>
+												<xsd:documentation> \en array of position coordinates \enden  \ja 座標値の配列 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 座標値の数に続き、座標値のX,Y,Zが繰り返し並ぶ。 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="active_flags">
+											<xsd:annotation>
+												<xsd:documentation> \en array of active flags \enden  \ja アクティブかどうかを示すフラグの列 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja フラグの数に続き、0または1のフラグ値が繰り返し並ぶ。 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element ref="skin">
+											<xsd:annotation>
+												<xsd:documentation> \en skin settings \enden  \ja スキン設定 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 0個以上のスキン設定がverticesグループ内に含まれる。 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 個々のスキン設定がどの頂点に割り当てられているかは、skinグループ内のインデクス値で判断する。 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+									</xsd:choice>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="edges">
+								<xsd:annotation>
+									<xsd:documentation> \en edges \enden  \ja 稜線 \endja </xsd:documentation>
+								</xsd:annotation>
+								<xsd:complexType>
+									<xsd:choice minOccurs="0" maxOccurs="unbounded">
+										<xsd:element name="edge_vertices">
+											<xsd:annotation>
+												<xsd:documentation> \en edge vertices \enden  \ja 稜線を成す頂点インデクス値ペアの列 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 頂点インデクス値の数（稜線の数の２倍）に続き、稜線の両端点の頂点インデクス値が並ぶ。 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+									</xsd:choice>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="faces">
+								<xsd:annotation>
+									<xsd:documentation> \en faces \enden  \ja 面 \endja </xsd:documentation>
+								</xsd:annotation>
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="face_vertices">
+											<xsd:annotation>
+												<xsd:documentation> \en array of vertex indices \enden  \ja 面を成す頂点インデクス値の列 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 先頭の値は、それ以降に続く値の数を示し、続いて個々の面ごとにその面の頂点数と頂点インデクス値の列が繰り返し並ぶ。 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="face_uvs">
+											<xsd:annotation>
+												<xsd:documentation> \en uv \enden  \ja 面を成す頂点に割り当てられたUV値の列 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 先頭の値は、それ以降に続く値の数を示し、続いて個々の面ごとその個々の頂点に割り当てられているU_PARAMETER、V_PARAMETER、U_DISTANCE、V_DISTANCEの値が繰り返し並ぶ。 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="index">
+											<xsd:annotation>
+												<xsd:documentation> \en index \enden  \ja 面インデクス \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="normals">
+											<xsd:annotation>
+												<xsd:documentation> \en normals \enden  \ja 法線ベクトルの配列 \endja </xsd:documentation>
+												<xsd:documentation> \en normals \enden  \ja 一個の面に属する全ての頂点の法線ベクトルの配列。先頭の値はその面が持つ法線ベクトル、すなわち頂点の数。それに続いて法線ベクトルのX,Y,Z値が並ぶ。 \endja </xsd:documentation>
+												<xsd:documentation> \en normals \enden  \ja 法線ベクトルがどの面に割り当てられているかは、直近に読み込まれた面インデクスの値で判断する。 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="subsurface_index">
+											<xsd:annotation>
+												<xsd:documentation> \en subsurface_index \enden  \ja サブ面インデクス \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 一個のポリゴンメッシュ内の個々の面に異なった表面材質を割り当てる場合の、表面材質インデクス値。 \endja </xsd:documentation>
+												<xsd:documentation> \en normals \enden  \ja サブ面インデクスがどの面に割り当てられているかは、直近に読み込まれた面インデクスの値で判断する。 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="polygon_mesh_aux">
+								<xsd:annotation>
+									<xsd:documentation> \en aux \enden  \ja その他のポリゴンメッシュ情報 \endja </xsd:documentation>
+								</xsd:annotation>
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="u_order">
+											<xsd:annotation>
+												<xsd:documentation> \en u_order \enden  \ja u_order \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="v_order">
+											<xsd:annotation>
+												<xsd:documentation> \en v_order \enden  \ja v_order \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="rows">
+											<xsd:annotation>
+												<xsd:documentation> \en rows \enden  \ja rows \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="columns">
+											<xsd:annotation>
+												<xsd:documentation> \en columns \enden  \ja columns \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="u_knot">
+											<xsd:annotation>
+												<xsd:documentation> \en u_knot \enden  \ja u_knot \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="v_knot">
+											<xsd:annotation>
+												<xsd:documentation> \en v_knot \enden  \ja v_knot \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="flags">
+								<xsd:annotation>
+									<xsd:documentation> \en flags \enden  \ja 各種フラグ \endja </xsd:documentation>
+								</xsd:annotation>
+								<xsd:complexType>
+									<xsd:attribute name="smooth_edges">
+										<xsd:annotation>
+											<xsd:documentation> \en smooth_edges \enden  \ja 稜線をスムース化 \endja </xsd:documentation>
+										</xsd:annotation>
+									</xsd:attribute>
+									<xsd:attribute name="hide_edge">
+										<xsd:annotation>
+											<xsd:documentation> \en hide_edge \enden  \ja 稜線を非表示 \endja </xsd:documentation>
+										</xsd:annotation>
+									</xsd:attribute>
+								</xsd:complexType>
+							</xsd:element>
+
+							<xsd:element name="round">
+								<xsd:annotation>
+									<xsd:documentation> \en round \enden  \ja 丸め \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="threshold">
+								<xsd:annotation>
+									<xsd:documentation> \en smoothing threshold \enden  \ja スムーシングの閾角度 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="disk">
+					<xsd:annotation>
+						<xsd:documentation> \en disk \enden  \ja （パートに含まれる）円形状 \endja </xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+						<xsd:choice minOccurs="0" maxOccurs="unbounded">
+							<xsd:element name="string">
+								<xsd:annotation>
+									<xsd:documentation> \en name \enden  \ja 名前 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="int">
+								<xsd:annotation>
+									<xsd:documentation> \en int \enden  \ja 使用しているマスターサーフェスの番号 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element ref="surface">
+								<xsd:annotation>
+									<xsd:documentation> \en surface attributes \enden  \ja 表面材質 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element ref="common_shape_info">
+								<xsd:annotation>
+									<xsd:documentation> \en common shape info \enden  \ja 各種属性 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element ref="attributes">
+								<xsd:annotation>
+									<xsd:documentation> \en custom attributes \enden  \ja プラグインが付加したカスタム属性 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="matrix">
+								<xsd:annotation>
+									<xsd:documentation> \en matrix \enden  \ja 円を定義する変換マトリクス \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 単位円（原点に位置し半径が1、X-Y平面上にある円）から対象とする円に変換する４×４座標変換マトリクス。 \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja このマトリクスをスケール、回転、移動の成分に分解すると、それぞれの成分は円の半径、向き、位置ということになる。 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="from">
+								<xsd:annotation>
+									<xsd:documentation> \en from \enden  \ja 開始角度 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="to">
+								<xsd:annotation>
+									<xsd:documentation> \en to \enden  \ja 終了角度 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="flags">
+								<xsd:annotation>
+									<xsd:documentation> \en flags \enden  \ja 各種フラグ \endja </xsd:documentation>
+								</xsd:annotation>
+								<xsd:complexType>
+									<xsd:attribute name="closed">
+										<xsd:annotation>
+											<xsd:documentation> \en closed \enden  \ja 閉じた円形状 \endja </xsd:documentation>
+										</xsd:annotation>
+									</xsd:attribute>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element ref="solid" minOccurs="0">
+								<xsd:annotation>
+									<xsd:documentation> \en solid \enden  \ja ソリッド設定 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element ref="skin">
+								<xsd:annotation>
+									<xsd:documentation> \en skin \enden  \ja スキン設定 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="light">
+					<xsd:annotation>
+						<xsd:documentation> \en light \enden  \ja （パートに含まれる）光源 \endja </xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+						<xsd:choice maxOccurs="unbounded">
+							<xsd:element name="string">
+								<xsd:annotation>
+									<xsd:documentation> \en name \enden  \ja 名前 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="int">
+								<xsd:annotation>
+									<xsd:documentation> \en int \enden  \ja 使用しているマスターサーフェスの番号 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element ref="common_shape_info">
+								<xsd:annotation>
+									<xsd:documentation> \en custom shape info \enden  \ja 各種属性 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element ref="attributes">
+								<xsd:annotation>
+									<xsd:documentation> \en custom attributes \enden  \ja プラグインが付加したカスタム属性 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="flags">
+								<xsd:annotation>
+									<xsd:documentation> \en flags \enden  \ja 各種フラグ \endja </xsd:documentation>
+								</xsd:annotation>
+								<xsd:complexType>
+									<xsd:attribute name="square">
+										<xsd:annotation>
+											<xsd:documentation> \en blah \enden  \ja オフ : 線形減衰 \endja </xsd:documentation>
+											<xsd:documentation> \en blah \enden  \ja オン : ２次減衰 \endja </xsd:documentation>
+										</xsd:annotation>
+									</xsd:attribute>
+									<xsd:attribute name="lumen">
+										<xsd:annotation>
+											<xsd:documentation> \en lumen \enden  \ja ルーメン \endja </xsd:documentation>
+										</xsd:annotation>
+									</xsd:attribute>
+									<xsd:attribute name="has_shadow_map_bias">
+										<xsd:annotation>
+											<xsd:documentation> \en has_shadow_map_bias \enden  \ja シャドウマップバイアス値を持っている \endja </xsd:documentation>
+											<xsd:documentation> \en blah \enden  \ja 値を持っていない場合には、レンダリング設定値から継承する。 \endja </xsd:documentation>
+										</xsd:annotation>
+									</xsd:attribute>
+									<xsd:attribute name="has_shadow_map_blur">
+										<xsd:annotation>
+											<xsd:documentation> \en has_shadow_map_blur \enden  \ja シャドウマップブラー値を持っている \endja </xsd:documentation>
+											<xsd:documentation> \en blah \enden  \ja 値を持っていない場合には、レンダリング設定値から継承する。 \endja </xsd:documentation>
+										</xsd:annotation>
+									</xsd:attribute>
+									<xsd:attribute name="has_shadow_map_size">
+										<xsd:annotation>
+											<xsd:documentation> \en has_shadow_map_size \enden  \ja シャドウマップサイズ値を持っている \endja </xsd:documentation>
+											<xsd:documentation> \en blah \enden  \ja 値を持っていない場合には、レンダリング設定値から継承する。 \endja </xsd:documentation>
+										</xsd:annotation>
+									</xsd:attribute>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="distribution_type">
+								<xsd:annotation>
+									<xsd:documentation> \en distribution type \enden  \ja 配光の種類 \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 0 : 点光源 \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 1 : スポットライト \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 2 : 配光 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="position">
+								<xsd:annotation>
+									<xsd:documentation> \en position \enden  \ja 光源の位置 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="rotation">
+								<xsd:annotation>
+									<xsd:documentation> \en rotation \enden  \ja 光源向きを表す回転値 \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja スポットライト、配光の場合に有効。 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="shadow_type">
+								<xsd:annotation>
+									<xsd:documentation> \en shadow type \enden  \ja 影の種類 \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 0 : 継承 \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 1 : レイトレーシング \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 2 : シャドウマップ \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="intensity">
+								<xsd:annotation>
+									<xsd:documentation> \en intensity \enden  \ja 光源の明るさ規定する距離値 \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 光源からこの値だけ離れた位置にある物体が単位量の光を受け取る。線形減衰、２次減衰には依存しない。 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="angle">
+								<xsd:annotation>
+									<xsd:documentation> \en angle \enden  \ja 角度 \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja スポットライトの場合に有効。 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="softness">
+								<xsd:annotation>
+									<xsd:documentation> \en softness \enden  \ja ソフトネス \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja スポットライトの場合に有効。 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="shadow">
+								<xsd:annotation>
+									<xsd:documentation> \en shadow \enden  \ja 影の強度 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="shadow_softness">
+								<xsd:annotation>
+									<xsd:documentation> \en shadow softness \enden  \ja 影のソフトネス \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="specular">
+								<xsd:annotation>
+									<xsd:documentation> \en specular \enden  \ja 鏡面反射の強度 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="diffuse">
+								<xsd:annotation>
+									<xsd:documentation> \en diffuse \enden  \ja 拡散反射の強度 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+
+							<xsd:element name="shadow_map_size">
+								<xsd:annotation>
+									<xsd:documentation> \en shadow_map_size \enden  \ja シャドウマップのサイズ \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="intensity_distribution">
+								<xsd:annotation>
+									<xsd:documentation> \en intensity distribution \enden  \ja 配光データ \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 一個以上並んだ経度値の列、一個以上並んだ緯度値の列に続いて、経度値の数×緯度値の数だけエネルギー値が並ぶ。 \endja </xsd:documentation>
+								</xsd:annotation>
+								<xsd:complexType>
+									<xsd:choice minOccurs="0" maxOccurs="unbounded">
+										<xsd:element name="name">
+											<xsd:annotation>
+												<xsd:documentation> \en name \enden  \ja 名前 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="latitude_angle">
+											<xsd:annotation>
+												<xsd:documentation> \en lattitude angle \enden  \ja 経度 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="longitude_angle">
+											<xsd:annotation>
+												<xsd:documentation> \en longitude angle \enden  \ja 緯度 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="energy">
+											<xsd:annotation>
+												<xsd:documentation> \en energy \enden  \ja エネルギー値 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+									</xsd:choice>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element ref="skin">
+								<xsd:annotation>
+									<xsd:documentation> \en skin \enden  \ja スキン設定 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element ref="surface">
+								<xsd:annotation>
+									<xsd:documentation> \en surface attributes \enden  \ja 表面材質 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="line">
+					<xsd:annotation>
+						<xsd:documentation> \en line \enden  \ja （パートに含まれる）線形状 \endja </xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+						<xsd:choice minOccurs="0" maxOccurs="unbounded">
+							<xsd:element name="string">
+								<xsd:annotation>
+									<xsd:documentation> \en name \enden  \ja 名前 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="int">
+								<xsd:annotation>
+									<xsd:documentation> \en int \enden  \ja 使用しているマスターサーフェスの番号 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element ref="surface" minOccurs="0">
+								<xsd:annotation>
+									<xsd:documentation> \en surface attributes \enden  \ja 表面材質 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element ref="common_shape_info">
+								<xsd:annotation>
+									<xsd:documentation> \en common shape info \enden  \ja 各種属性 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element ref="attributes">
+								<xsd:annotation>
+									<xsd:documentation> \en custom attributes \enden  \ja プラグインが付加したカスタム属性 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="control_points">
+								<xsd:annotation>
+									<xsd:documentation> \en array of control points \enden  \ja コントロールポイント列 \endja </xsd:documentation>
+								</xsd:annotation>
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="n">
+											<xsd:annotation>
+												<xsd:documentation> \en the number of control points \enden  \ja コントロールポイントの数 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="control_point">
+											<xsd:annotation>
+												<xsd:documentation> \en control point \enden  \ja コントロールポイント \endja </xsd:documentation>
+											</xsd:annotation>
+											<xsd:complexType>
+												<xsd:choice minOccurs="0" maxOccurs="unbounded">
+													<xsd:element name="anchor_point">
+														<xsd:annotation>
+															<xsd:documentation> \en anchor point \enden  \ja アンカーポイント \endja </xsd:documentation>
+														</xsd:annotation>
+													</xsd:element>
+													<xsd:element name="in_handle" minOccurs="0">
+														<xsd:annotation>
+															<xsd:documentation> \en in-handle \enden  \ja インハンドル \endja </xsd:documentation>
+														</xsd:annotation>
+													</xsd:element>
+													<xsd:element name="out_handle" minOccurs="0">
+														<xsd:annotation>
+															<xsd:documentation> \en out-handle \enden  \ja アウトハンドル \endja </xsd:documentation>
+														</xsd:annotation>
+													</xsd:element>
+													<xsd:element name="lateral_in_handle" minOccurs="0">
+														<xsd:annotation>
+															<xsd:documentation> \en lateral in-handle \enden  \ja 交差方向インハンドル \endja </xsd:documentation>
+														</xsd:annotation>
+													</xsd:element>
+													<xsd:element name="lateral_out_handle" minOccurs="0">
+														<xsd:annotation>
+															<xsd:documentation> \en lateral out-handle \enden  \ja 交差方向アウトハンドル \endja </xsd:documentation>
+														</xsd:annotation>
+													</xsd:element>
+													<xsd:element name="flags">
+														<xsd:annotation>
+															<xsd:documentation> \en flags \enden  \ja 各種フラグ \endja </xsd:documentation>
+														</xsd:annotation>
+														<xsd:complexType>
+															<xsd:attribute name="linked">
+																<xsd:annotation>
+																	<xsd:documentation> \en linked \enden  \ja インハンドルとアウトハンドルが連結されている \endja </xsd:documentation>
+																</xsd:annotation>
+															</xsd:attribute>
+															<xsd:attribute name="lateral_linked">
+																<xsd:annotation>
+																	<xsd:documentation> \en lateral_linked \enden  \ja 交差方向のインハンドルとアウトハンドルが連結されている \endja </xsd:documentation>
+																</xsd:annotation>
+															</xsd:attribute>
+															<xsd:attribute name="active">
+																<xsd:annotation>
+																	<xsd:documentation> \en active \enden  \ja 選択されている \endja </xsd:documentation>
+																</xsd:annotation>
+															</xsd:attribute>
+														</xsd:complexType>
+													</xsd:element>
+													<xsd:element ref="skin">
+														<xsd:annotation>
+															<xsd:documentation> \en skin \enden  \ja コントロールポイントに設定されたスキン \endja </xsd:documentation>
+														</xsd:annotation>
+													</xsd:element>
+												</xsd:choice>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="flags">
+								<xsd:annotation>
+									<xsd:documentation> \en flags \enden  \ja 各種フラグ \endja </xsd:documentation>
+								</xsd:annotation>
+								<xsd:complexType>
+									<xsd:attribute name="closed">
+										<xsd:annotation>
+											<xsd:documentation> \en closed \enden  \ja 閉じた線形状 \endja </xsd:documentation>
+										</xsd:annotation>
+									</xsd:attribute>
+									<xsd:attribute name="hole">
+										<xsd:annotation>
+											<xsd:documentation> \en hole \enden  \ja 穴 \endja </xsd:documentation>
+										</xsd:annotation>
+									</xsd:attribute>
+									<xsd:attribute name="lumen">
+										<xsd:annotation>
+											<xsd:documentation> \en lumen \enden  \ja 明るさをルーメンとして表示 \endja </xsd:documentation>
+											<xsd:documentation> \en blah \enden  \ja 線光源、面光源の場合に有効。 \endja </xsd:documentation>
+										</xsd:annotation>
+									</xsd:attribute>
+									<xsd:attribute name="area_light_visible">
+										<xsd:annotation>
+											<xsd:documentation> \en area_light_visible \enden  \ja 光源をレンダリング \endja </xsd:documentation>
+											<xsd:documentation> \en blah \enden  \ja 線光源、面光源の場合に有効。 \endja </xsd:documentation>
+										</xsd:annotation>
+									</xsd:attribute>
+									<xsd:attribute name="has_shadow_map_bias">
+										<xsd:annotation>
+											<xsd:documentation> \en has_shadow_map_bias \enden  \ja シャドウマップバイアス値を持っている \endja </xsd:documentation>
+											<xsd:documentation> \en blah \enden  \ja 値を持っていない場合には、レンダリング設定値から継承する。 \endja </xsd:documentation>
+											<xsd:documentation> \en blah \enden  \ja 線光源、面光源の場合に有効。 \endja </xsd:documentation>
+										</xsd:annotation>
+									</xsd:attribute>
+									<xsd:attribute name="has_shadow_map_blur">
+										<xsd:annotation>
+											<xsd:documentation> \en has_shadow_map_blur \enden  \ja シャドウマップブラー値を持っている \endja </xsd:documentation>
+											<xsd:documentation> \en blah \enden  \ja 値を持っていない場合には、レンダリング設定値から継承する。 \endja </xsd:documentation>
+											<xsd:documentation> \en blah \enden  \ja 線光源、面光源の場合に有効。 \endja </xsd:documentation>
+										</xsd:annotation>
+									</xsd:attribute>
+									<xsd:attribute name="has_shadow_map_size">
+										<xsd:annotation>
+											<xsd:documentation> \en has_shadow_map_size \enden  \ja シャドウマップサイズ値を持っている \endja </xsd:documentation>
+											<xsd:documentation> \en blah \enden  \ja 値を持っていない場合には、レンダリング設定値から継承する。 \endja </xsd:documentation>
+											<xsd:documentation> \en blah \enden  \ja 線光源、面光源の場合に有効。 \endja </xsd:documentation>
+										</xsd:annotation>
+									</xsd:attribute>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="curve_type">
+								<xsd:annotation>
+									<xsd:documentation> \en curve type \enden  \ja 曲線の種類 \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 1 : ベジェ曲線 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="shadow_type">
+								<xsd:annotation>
+									<xsd:documentation> \en shadow type \enden  \ja 影の種類 \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 0 : 継承 \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 1 : レイトレーシング \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 2 : シャドウマップ \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="light_type">
+								<xsd:annotation>
+									<xsd:documentation> \en light type \enden  \ja 光源の種類 \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja -1 : 光源ではない \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 0 : 面光源 \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 1 : 線光源 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="light_intensity">
+								<xsd:annotation>
+									<xsd:documentation> \en intensity \enden  \ja 光源の明るさ規定する距離値 \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 光源からこの値だけ離れた位置にある物体が単位量の光を受け取る。線形減衰、２次減衰には依存しない。 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="light_specular">
+								<xsd:annotation>
+									<xsd:documentation> \en light specular \enden  \ja 光源の鏡面反射の強度 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="light_diffuse">
+								<xsd:annotation>
+									<xsd:documentation> \en light diffuse \enden  \ja 光源の拡散反射の強度 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="light_shadow">
+								<xsd:annotation>
+									<xsd:documentation> \en light shadow \enden  \ja 光源の影の強度 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="shadow_map_size">
+								<xsd:annotation>
+									<xsd:documentation> \en shadow_map_size \enden  \ja シャドウマップサイズ値 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="shadow_map_bias">
+								<xsd:annotation>
+									<xsd:documentation> \en shadow_map_bias \enden  \ja シャドウマップバイアス値 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="shadow_map_blur">
+								<xsd:annotation>
+									<xsd:documentation> \en shadow_map_blur \enden  \ja シャドウマップブラー値 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element ref="solid">
+								<xsd:annotation>
+									<xsd:documentation> \en solid \enden  \ja ソリッド設定 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element ref="skin">
+								<xsd:annotation>
+									<xsd:documentation> \en skin \enden  \ja 線形状に設定されたスキン \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="sphere">
+					<xsd:annotation>
+						<xsd:documentation> \en sphere \enden  \ja （パートに含まれる）球 \endja </xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+						<xsd:choice minOccurs="0" maxOccurs="unbounded">
+							<xsd:element name="string">
+								<xsd:annotation>
+									<xsd:documentation> \en name \enden  \ja 名前 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="int">
+								<xsd:annotation>
+									<xsd:documentation> \en int \enden  \ja 使用しているマスターサーフェスの番号 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element ref="surface">
+								<xsd:annotation>
+									<xsd:documentation> \en surface attributes \enden  \ja 表面材質 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element ref="common_shape_info">
+								<xsd:annotation>
+									<xsd:documentation> \en common shape info \enden  \ja 各種属性 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element ref="attributes">
+								<xsd:annotation>
+									<xsd:documentation> \en custom attributes \enden  \ja カスタム属性 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="matrix">
+								<xsd:annotation>
+									<xsd:documentation> \en matrix \enden  \ja 球を定義する変換マトリクス \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 単位球（原点に位置し半径が1、Y軸が極軸の球）から対象とする球に変換する４×４座標変換マトリクス。 \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja このマトリクスをスケール、回転、移動の成分に分解すると、それぞれの成分は球の半径、向き、位置ということになる。 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element ref="skin">
+								<xsd:annotation>
+									<xsd:documentation> \en skin \enden  \ja 球に設定されたスキン \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="master_surface">
+					<xsd:annotation>
+						<xsd:documentation> \en master surface \enden  \ja マスターサーフェス \endja </xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+						<xsd:choice minOccurs="0" maxOccurs="unbounded">
+							<xsd:element name="string">
+								<xsd:annotation>
+									<xsd:documentation> \en name \enden  \ja 名前 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="int">
+								<xsd:annotation>
+									<xsd:documentation> \en int \enden  \ja int \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element ref="surface">
+								<xsd:annotation>
+									<xsd:documentation> \en surface attributes \enden  \ja 表面材質 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element ref="common_shape_info">
+								<xsd:annotation>
+									<xsd:documentation> \en common shape i nfo \enden  \ja 各種属性 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element ref="attributes">
+								<xsd:annotation>
+									<xsd:documentation> \en custom attributes \enden  \ja カスタム属性 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="pixels">
+		<xsd:annotation>
+			<xsd:documentation> \en image \enden  \ja イメージ \endja </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="link_id">
+					<xsd:annotation>
+						<xsd:documentation> \en link_id \enden  \ja イメージの実体を参照するリンク識別子 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="object_id">
+					<xsd:annotation>
+						<xsd:documentation> \en object_id \enden  \ja イメージの実体として他から参照される場合に使われるオブジェクト識別子 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="exr">
+					<xsd:annotation>
+						<xsd:documentation> \en OpenEXR image data \enden  \ja OpenEXR形式イメージデータ \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="mov_alias">
+					<xsd:annotation>
+						<xsd:documentation> \en mov_alias \enden  \ja MOVファイルを参照するエイリアス \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="avi_alias">
+					<xsd:annotation>
+						<xsd:documentation> \en avi_alias \enden  \ja AVIファイルを参照するエイリアス \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="rect">
+					<xsd:annotation>
+						<xsd:documentation> \en boundaries \enden  \ja rect \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="area">
+					<xsd:annotation>
+						<xsd:documentation> \en area \enden  \ja 範囲 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="shift">
+					<xsd:annotation>
+						<xsd:documentation> \en shift \enden  \ja シフト量 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="scale">
+					<xsd:annotation>
+						<xsd:documentation> \en scale \enden  \ja スケール値 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="shade">
+		<xsd:annotation>
+			<xsd:documentation> \en scene \enden  \ja シーン \endja </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="image">
+					<xsd:annotation>
+						<xsd:documentation> \en rendered image \enden  \ja レンダリングされたイメージ \endja </xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element ref="pixels">
+								<xsd:annotation>
+									<xsd:documentation> \en actual image \enden  \ja レンダリングされたイメージの実体 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element ref="attributes">
+					<xsd:annotation>
+						<xsd:documentation> \en custom attributes \enden  \ja プラグインが付加したカスタム属性 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="figure_window_info">
+					<xsd:annotation>
+						<xsd:documentation> \en figure_window_info \enden  \ja 図形ウインドウ関連情報 \endja </xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="size">
+								<xsd:annotation>
+									<xsd:documentation> \en size \enden  \ja サイズ \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="position">
+								<xsd:annotation>
+									<xsd:documentation> \en position \enden  \ja 位置 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="animation_settings">
+					<xsd:annotation>
+						<xsd:documentation> \en animation settings \enden  \ja アニメーション設定 \endja </xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="sequence">
+								<xsd:annotation>
+									<xsd:documentation> \en sequence \enden  \ja シーケンス値 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="leading_frames">
+								<xsd:annotation>
+									<xsd:documentation> \en leading frames \enden  \ja リーディングフレーム数 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="total_frames">
+								<xsd:annotation>
+									<xsd:documentation> \en total frames \enden  \ja 全体フレーム数 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="trailing_frames">
+								<xsd:annotation>
+									<xsd:documentation> \en trailing frames \enden  \ja トレーリングフレーム数 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="start_frame">
+								<xsd:annotation>
+									<xsd:documentation> \en start frame \enden  \ja 開始フレーム \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="end_frame">
+								<xsd:annotation>
+									<xsd:documentation> \en end frame \enden  \ja 終了フレーム \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="frame_rate">
+								<xsd:annotation>
+									<xsd:documentation> \en frame rate \enden  \ja フレームレート値 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="rows">
+								<xsd:annotation>
+									<xsd:documentation> \en rows \enden  \ja 列 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="interlace">
+								<xsd:annotation>
+									<xsd:documentation> \en interlace \enden  \ja インターレースモード \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="step_frames">
+								<xsd:annotation>
+									<xsd:documentation> \en step frames \enden  \ja ステップフレーム \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+
+							<xsd:element name="flags">
+								<xsd:annotation>
+									<xsd:documentation> \en flags \enden  \ja 各種フラグ \endja </xsd:documentation>
+								</xsd:annotation>
+								<xsd:complexType>
+									<xsd:attribute name="auto_scaling">
+										<xsd:annotation>
+											<xsd:documentation> \en auto_scaling \enden  \ja 自動スケーリング \endja </xsd:documentation>
+										</xsd:annotation>
+									</xsd:attribute>
+									<xsd:attribute name="object_movie">
+										<xsd:annotation>
+											<xsd:documentation> \en object_movie \enden  \ja オブジェクトムービー \endja </xsd:documentation>
+										</xsd:annotation>
+									</xsd:attribute>
+									<xsd:attribute name="drop_frame">
+										<xsd:annotation>
+											<xsd:documentation> \en drop_frame \enden  \ja ドロップフレーム \endja </xsd:documentation>
+										</xsd:annotation>
+									</xsd:attribute>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="hot_spot">
+					<xsd:annotation>
+						<xsd:documentation> \en hot_spot \enden  \ja ホットスポット \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="rendering_settings">
+					<xsd:annotation>
+						<xsd:documentation> \en array fof rendering settings \enden  \ja レンダリング設定の配列 \endja </xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+						<xsd:choice minOccurs="0" maxOccurs="unbounded">
+							<xsd:element name="rendering_setting">
+								<xsd:annotation>
+									<xsd:documentation> \en rendering settings \enden  \ja 個々のレンダリング設定 \endja </xsd:documentation>
+								</xsd:annotation>
+								<xsd:complexType>
+									<xsd:choice minOccurs="0" maxOccurs="unbounded">
+										<xsd:element name="flags">
+											<xsd:annotation>
+												<xsd:documentation> \en flags \enden  \ja 各種フラグ \endja </xsd:documentation>
+											</xsd:annotation>
+											<xsd:complexType>
+												<xsd:attribute name="show_background">
+													<xsd:annotation>
+														<xsd:documentation> \en show_background \enden  \ja 背景を表示 \endja </xsd:documentation>
+													</xsd:annotation>
+												</xsd:attribute>
+												<xsd:attribute name="show_shadow">
+													<xsd:annotation>
+														<xsd:documentation> \en show_shadow \enden  \ja 影を表示 \endja </xsd:documentation>
+													</xsd:annotation>
+												</xsd:attribute>
+												<xsd:attribute name="antialiasing">
+													<xsd:annotation>
+														<xsd:documentation> \en antialiasing \enden  \ja アンチエリアシング \endja </xsd:documentation>
+													</xsd:annotation>
+												</xsd:attribute>
+												<xsd:attribute name="show_texture">
+													<xsd:annotation>
+														<xsd:documentation> \en show_texture \enden  \ja テクスチャを表示 \endja </xsd:documentation>
+													</xsd:annotation>
+												</xsd:attribute>
+												<xsd:attribute name="reflect_background">
+													<xsd:annotation>
+														<xsd:documentation> \en reflect_background \enden  \ja 背景を反映 \endja </xsd:documentation>
+													</xsd:annotation>
+												</xsd:attribute>
+												<xsd:attribute name="panorama">
+													<xsd:annotation>
+														<xsd:documentation> \en panorama \enden  \ja パノラマ \endja </xsd:documentation>
+													</xsd:annotation>
+												</xsd:attribute>
+												<xsd:attribute name="sideways">
+													<xsd:annotation>
+														<xsd:documentation> \en sideways \enden  \ja 横向き \endja </xsd:documentation>
+													</xsd:annotation>
+												</xsd:attribute>
+												<xsd:attribute name="alpha_channel">
+													<xsd:annotation>
+														<xsd:documentation> \en alpha_channel \enden  \ja アルファチャネル \endja </xsd:documentation>
+													</xsd:annotation>
+												</xsd:attribute>
+												<xsd:attribute name="single_sided_face">
+													<xsd:annotation>
+														<xsd:documentation> \en single_sided_face \enden  \ja 片面 \endja </xsd:documentation>
+													</xsd:annotation>
+												</xsd:attribute>
+												<xsd:attribute name="total_energy">
+													<xsd:annotation>
+														<xsd:documentation> \en total_energy \enden  \ja total_energy \endja </xsd:documentation>
+														<xsd:documentation> \en blah \enden  \ja オフ：間接光 \endja </xsd:documentation>
+														<xsd:documentation> \en blah \enden  \ja オン：直接光＋間接光 \endja </xsd:documentation>
+													</xsd:annotation>
+												</xsd:attribute>
+												<xsd:attribute name="not_premultiplied_pixel">
+													<xsd:annotation>
+														<xsd:documentation> \en not_premultiplied_pixel \enden  \ja アルファ乗算しない \endja </xsd:documentation>
+													</xsd:annotation>
+												</xsd:attribute>
+												<xsd:attribute name="not_transparency_affects_alpha">
+													<xsd:annotation>
+														<xsd:documentation> \en not_transparency_affects_alpha \enden  \ja 透明度がアルファ値に影響しない \endja </xsd:documentation>
+													</xsd:annotation>
+												</xsd:attribute>
+												<xsd:attribute name="render_transparency">
+													<xsd:annotation>
+														<xsd:documentation> \en render_transparency \enden  \ja 透明度をレンダリング \endja </xsd:documentation>
+													</xsd:annotation>
+												</xsd:attribute>
+												<xsd:attribute name="z">
+													<xsd:annotation>
+														<xsd:documentation> \en z \enden  \ja 奥行き値を保持 \endja </xsd:documentation>
+													</xsd:annotation>
+												</xsd:attribute>
+												<xsd:attribute name="illuminance">
+													<xsd:annotation>
+														<xsd:documentation> \en blah \enden  \ja Shadeデバグ用 \endja </xsd:documentation>
+													</xsd:annotation>
+												</xsd:attribute>
+												<xsd:attribute name="dont_use_rendering_server">
+													<xsd:annotation>
+														<xsd:documentation> \en dont_use_rendering_server \enden  \ja レンダリングサーバを使用しない \endja </xsd:documentation>
+													</xsd:annotation>
+												</xsd:attribute>
+												<xsd:attribute name="solve">
+													<xsd:annotation>
+														<xsd:documentation> \en solve \enden  \ja レンダリング前にラジオシティ計算を行う \endja </xsd:documentation>
+													</xsd:annotation>
+												</xsd:attribute>
+												<xsd:attribute name="use_server_only">
+													<xsd:annotation>
+														<xsd:documentation> \en use_server_only \enden  \ja レンダリングサーバのみを使用する \endja </xsd:documentation>
+													</xsd:annotation>
+												</xsd:attribute>
+											</xsd:complexType>
+										</xsd:element>
+										<xsd:element name="name">
+											<xsd:annotation>
+												<xsd:documentation> \en name \enden  \ja 名前 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="shadow_type">
+											<xsd:annotation>
+												<xsd:documentation> \en shadow type \enden  \ja 影の種類 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 1 : レイトレーシング \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 2 : シャドウマップ \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="surface_division_level">
+											<xsd:annotation>
+												<xsd:documentation> \en surface division level \enden  \ja 分割レベル \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 0 : 分割しない \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 1 : 荒い \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 2 : 普通 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 3 : 細かい \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 4 : 最も細かい \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="ray_cast_level">
+											<xsd:annotation>
+												<xsd:documentation> \en ray cast level \enden  \ja 視線追跡レベル \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="ray_tracing_quality">
+											<xsd:annotation>
+												<xsd:documentation> \en ray tracing quality \enden  \ja 画質 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="number_of_threads">
+											<xsd:annotation>
+												<xsd:documentation> \en the number o f threads \enden  \ja スレッド数 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="use_environment_mapping">
+											<xsd:annotation>
+												<xsd:documentation> \en use_environment_mapping \enden  \ja use_environment_mapping \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="use_spherical_panorama">
+											<xsd:annotation>
+												<xsd:documentation> \en use_spherical_panorama \enden  \ja use_spherical_panorama \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="over_sampling">
+											<xsd:annotation>
+												<xsd:documentation> \en over sampling \enden  \ja オーバーサンプリング \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 1 : 自動適応 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 2 : 2 x 2 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 3 : 3 x 3 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 4 : 4 x 4 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="renderer_uuid">
+											<xsd:annotation>
+												<xsd:documentation> \en renderer \enden  \ja レンダラ識別子 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 先頭32ビット以外が全てゼロの場合には、先頭32ビット整数の値を以下のように解釈する。 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 0 : レイトレーシング \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 0 : パストレーシング \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 0 : スキャンライン \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja それ以外の場合には、プラグインレンダラの識別子 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="shadow_map_size">
+											<xsd:annotation>
+												<xsd:documentation> \en shadow map size \enden  \ja シャドウマップのサイズ \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="shadow_map_sampling">
+											<xsd:annotation>
+												<xsd:documentation> \en shadow map sampling \enden  \ja シャドウマップのサンプリング \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 0 : ４×４ ジタリングする \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 1 : ８×８ ジタリングする \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 2 : １６×１６ ジタリングしない \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="minimum_samplings">
+											<xsd:annotation>
+												<xsd:documentation> \en minimum samplings \enden  \ja サンプリング数最小値 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 未使用 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="subframes">
+											<xsd:annotation>
+												<xsd:documentation> \en the number of subframes \enden  \ja サブフレーム数 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja モーションブラーを計算する際のサブフレーム分割数 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="initialize_random">
+											<xsd:annotation>
+												<xsd:documentation> \en initialize_random \enden  \ja initialize_random \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 未使用 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="photon_map_total_energy">
+											<xsd:annotation>
+												<xsd:documentation> \en photon map total energy \enden  \ja フォトンマップ　直接光＋間接光 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja デバグ用 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="caustics">
+											<xsd:annotation>
+												<xsd:documentation> \en blah \enden  \ja コースティクス計算のオン／オフ \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="caustics_weight">
+											<xsd:annotation>
+												<xsd:documentation> \en caustics weight \enden  \ja コースティクス荷重 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja この値が大きいほどコースティクス計算に時間を割く。 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="frequency_cap">
+											<xsd:annotation>
+												<xsd:documentation> \en frequency cap \enden  \ja テクスチャパターンの周波数を制限 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja デバグ用 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="sampling_shape">
+											<xsd:annotation>
+												<xsd:documentation> \en sampling shape \enden  \ja サンプリングの形状 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja デバグ用 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 0 : 円形 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 1 : 正方形 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="probabilistic_branching">
+											<xsd:annotation>
+												<xsd:documentation> \en probabilistic_branching \enden  \ja probabilistic_branching \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="own_image">
+											<xsd:annotation>
+												<xsd:appinfo></xsd:appinfo>
+												<xsd:documentation> \en own image \enden  \ja それぞれのレンダリング設定が個別にレンダリングイメージを持つ \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja デバグ用 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="pixel_depth">
+											<xsd:annotation>
+												<xsd:documentation> \en pixel depth \enden  \ja イメージのピクセル深度 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 0 : 32ビット。R,G,B,Aそれぞれ8ビット符号無し整数 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 1 : 64ビット。R,G,B,Aそれぞれ16ビット浮動小数点 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 2 : 128ビット。R,G,B,Aそれぞれ32ビット浮動小数点 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="image_width">
+											<xsd:annotation>
+												<xsd:documentation> \en image width \enden  \ja イメージの幅のピクセル数 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="image_height">
+											<xsd:annotation>
+												<xsd:documentation> \en image height \enden  \ja イメージの高さのピクセル数 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="image_scale">
+											<xsd:annotation>
+												<xsd:documentation> \en image scale \enden  \ja イメージのスケール \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="compatibility_mode">
+											<xsd:annotation>
+												<xsd:documentation> \en compatibility mode \enden  \ja レンダリング互換モード \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 0 : Shade R5 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 1 : Shade 6 spirit (rev.18) \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 2 : Shade 6 (rev.19) \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 3 : Shade 6 (rev.20) \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 4 : Shade 7 basic (rev.37) \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 5 : Shade 7.1.1 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 6 : Shade 7.5 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 適当に大きな数 : 現行版 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="global_illumination">
+											<xsd:annotation>
+												<xsd:documentation> \en global illumination \enden  \ja 大域照明の種類 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 0 : 無し \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 0 : パストレーシング \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 0 : フォトンマッピング \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 0 : ラジオシティ \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="target_number_of_photons">
+											<xsd:annotation>
+												<xsd:documentation> \en target number of photons \enden  \ja 発射するフォトンの目標数 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="pixel_ratio">
+											<xsd:annotation>
+												<xsd:documentation> \en pixel ratio \enden  \ja ピクセル縦横比 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="fisheye_distortion">
+											<xsd:annotation>
+												<xsd:documentation> \en fisheye distortion \enden  \ja 魚眼変形 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="ray_tracing_delta">
+											<xsd:annotation>
+												<xsd:documentation> \en ray_tracing_delta \enden  \ja ray_tracing_delta \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="shadow_map_blur">
+											<xsd:annotation>
+												<xsd:documentation> \en shadow map blur \enden  \ja シャドウマップのブラー値 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="shadow_map_bias">
+											<xsd:annotation>
+												<xsd:documentation> \en shadow map bias \enden  \ja シャドウマップのバイアス値 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="reflection_factor">
+											<xsd:annotation>
+												<xsd:documentation> \en reflection factor \enden  \ja 拡散反射係数 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="noise_reduction">
+											<xsd:annotation>
+												<xsd:documentation> \en nosie reduction \enden  \ja ノイズ減少 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="sampling_spread">
+											<xsd:annotation>
+												<xsd:documentation> \en sampmling spread \enden  \ja サンプリングの範囲 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="opening">
+											<xsd:annotation>
+												<xsd:documentation> \en opening \enden  \ja モーションブラーのシャッター開度 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="backdrop">
+											<xsd:annotation>
+												<xsd:documentation> \en backdrop \enden  \ja バックドロップ \endja </xsd:documentation>
+											</xsd:annotation>
+											<xsd:complexType>
+												<xsd:choice minOccurs="0" maxOccurs="unbounded">
+													<xsd:element name="flags">
+														<xsd:annotation>
+															<xsd:documentation> \en flags \enden  \ja 各種フラグ \endja </xsd:documentation>
+														</xsd:annotation>
+														<xsd:complexType>
+															<xsd:attribute name="backdrop">
+																<xsd:annotation>
+																	<xsd:documentation> \en backdrop \enden  \ja バックドロップを合成する \endja </xsd:documentation>
+																</xsd:annotation>
+															</xsd:attribute>
+														</xsd:complexType>
+													</xsd:element>
+													<xsd:element ref="pixels">
+														<xsd:annotation>
+															<xsd:documentation> \en image \enden  \ja イメージデータの実体 \endja </xsd:documentation>
+														</xsd:annotation>
+													</xsd:element>
+												</xsd:choice>
+											</xsd:complexType>
+										</xsd:element>
+										<xsd:element name="renderers">
+											<xsd:annotation>
+												<xsd:documentation> \en renderers \enden  \ja プラグインレンダラが設定したカスタム属性データの配列 \endja </xsd:documentation>
+											</xsd:annotation>
+											<xsd:complexType>
+												<xsd:choice minOccurs="0" maxOccurs="unbounded">
+													<xsd:element name="face_index">
+														<xsd:annotation>
+															<xsd:documentation> \en void \enden  \ja 無効 \endja </xsd:documentation>
+														</xsd:annotation>
+													</xsd:element>
+													<xsd:element name="vertex_index">
+														<xsd:annotation>
+															<xsd:documentation> \en void \enden  \ja 無効 \endja </xsd:documentation>
+														</xsd:annotation>
+													</xsd:element>
+													<xsd:element ref="attribute">
+														<xsd:annotation>
+															<xsd:documentation> \en attribute \enden  \ja renderersに含まれる個々のattribute \endja </xsd:documentation>
+														</xsd:annotation>
+													</xsd:element>
+												</xsd:choice>
+											</xsd:complexType>
+										</xsd:element>
+										<xsd:element name="effectors">
+											<xsd:annotation>
+												<xsd:documentation> \en array of effectors \enden  \ja レンダリングエフェクターの配列 \endja </xsd:documentation>
+											</xsd:annotation>
+											<xsd:complexType>
+												<xsd:choice minOccurs="0" maxOccurs="unbounded">
+													<xsd:element name="face_index">
+														<xsd:annotation>
+															<xsd:documentation> \en void \enden  \ja 無効 \endja </xsd:documentation>
+														</xsd:annotation>
+													</xsd:element>
+													<xsd:element name="vertex_index">
+														<xsd:annotation>
+															<xsd:documentation> \en void \enden  \ja 無効 \endja </xsd:documentation>
+														</xsd:annotation>
+													</xsd:element>
+													<xsd:element ref="attribute">
+														<xsd:annotation>
+															<xsd:documentation> \en effector which is actually attibute \enden  \ja 個々のエフェクタ（実態はエフェクタプラグインが付加した属性データ） \endja </xsd:documentation>
+														</xsd:annotation>
+													</xsd:element>
+												</xsd:choice>
+											</xsd:complexType>
+										</xsd:element>
+										<xsd:element ref="attributes">
+											<xsd:annotation>
+												<xsd:documentation> \en custom attributes \enden  \ja （レンダラプラグインに限らず）任意のプラグインがレンダリング設定に付加したカスタム属性 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+									</xsd:choice>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="index">
+								<xsd:annotation>
+									<xsd:documentation> \en index \enden  \ja レンダリング設定のインデクス値 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element ref="fog"/>
+				<xsd:element name="distant_lights">
+					<xsd:annotation>
+						<xsd:documentation>/distant lights \enden  \ja 無限遠光源 \endja </xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+						<xsd:choice minOccurs="0" maxOccurs="unbounded">
+							<xsd:element name="distant_light" maxOccurs="unbounded">
+								<xsd:annotation>
+									<xsd:documentation> \en distant light \enden  \ja 個々の無限遠光源 \endja </xsd:documentation>
+								</xsd:annotation>
+								<xsd:complexType>
+									<xsd:choice minOccurs="0" maxOccurs="unbounded">
+
+										<xsd:element name="flags">
+											<xsd:annotation>
+												<xsd:documentation> \en flags \enden  \ja 各種フラグ \endja </xsd:documentation>
+											</xsd:annotation>
+											<xsd:complexType>
+												<xsd:attribute name="has_shadow_map_bias">
+													<xsd:annotation>
+														<xsd:documentation> \en has_shadow_map_bias \enden  \ja シャドウマップバイアス値を持っている \endja </xsd:documentation>
+														<xsd:documentation> \en blah \enden  \ja 値を持っていない場合には、レンダリング設定値から継承する。 \endja </xsd:documentation>
+													</xsd:annotation>
+												</xsd:attribute>
+												<xsd:attribute name="has_shadow_map_blur">
+													<xsd:annotation>
+														<xsd:documentation> \en has_shadow_map_blur \enden  \ja シャドウマップブラー値を持っている \endja </xsd:documentation>
+														<xsd:documentation> \en blah \enden  \ja 値を持っていない場合には、レンダリング設定値から継承する。 \endja </xsd:documentation>
+													</xsd:annotation>
+												</xsd:attribute>
+												<xsd:attribute name="has_shadow_map_size">
+													<xsd:annotation>
+														<xsd:documentation> \en has_shadow_map_size \enden  \ja シャドウマップサイズ値を持っている \endja </xsd:documentation>
+														<xsd:documentation> \en blah \enden  \ja 値を持っていない場合には、レンダリング設定値から継承する。 \endja </xsd:documentation>
+													</xsd:annotation>
+												</xsd:attribute>
+											</xsd:complexType>
+										</xsd:element>
+
+										<xsd:element name="index">
+											<xsd:annotation>
+												<xsd:documentation> \en index \enden  \ja インデクス値 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="rgb">
+											<xsd:annotation>
+												<xsd:documentation> \en color \enden  \ja 光源の色 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="direction">
+											<xsd:annotation>
+												<xsd:documentation> \en direction \enden  \ja 光源の方向 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="intensity">
+											<xsd:annotation>
+												<xsd:documentation> \en intensity \enden  \ja 光源の強度 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="ambient">
+											<xsd:annotation>
+												<xsd:documentation> \en ambient \enden  \ja 環境光の相対強度 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="softness">
+											<xsd:annotation>
+												<xsd:documentation> \en softness \enden  \ja ソフトネス \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="shadow">
+											<xsd:annotation>
+												<xsd:documentation> \en shadow \enden  \ja 影の強度 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="glare">
+											<xsd:annotation>
+												<xsd:documentation> \en glare \enden  \ja グレア \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="size">
+											<xsd:annotation>
+												<xsd:documentation> \en glare size \enden  \ja グレアの大きさ \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="specular">
+											<xsd:annotation>
+												<xsd:documentation> \en specular \enden  \ja 鏡面反射の強度 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="diffuse">
+											<xsd:annotation>
+												<xsd:documentation> \en diffuse \enden  \ja 拡散反射の強度 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="shadow_map_bias">
+											<xsd:annotation>
+												<xsd:documentation> \en shadow_map_bias \enden  \ja シャドウマップバイアス値 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="shadow_map_blur">
+											<xsd:annotation>
+												<xsd:documentation> \en shadow_map_blur \enden  \ja シャドウマップブラー値 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="shadow_map_size">
+											<xsd:annotation>
+												<xsd:documentation> \en shadow map size \enden  \ja シャドウマップのサイズ値 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="shadow_type">
+											<xsd:annotation>
+												<xsd:documentation> \en shadow type \enden  \ja 影の種類 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 0 : レンダリング設定値から継承 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 1 : レイトレーシング \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 2 : シャドウマップ \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element ref="attributes">
+											<xsd:annotation>
+												<xsd:documentation> \en attributes \enden  \ja プラグインが付加したカスタム属性 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="xrp_index">
+											<xsd:annotation>
+												<xsd:documentation> \en xrp index \enden  \ja Shade内部でラジオシティ計算に使用するインデクス値 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+									</xsd:choice>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="flags">
+								<xsd:annotation>
+									<xsd:documentation> \en flags \enden  \ja 各種フラグ \endja </xsd:documentation>
+								</xsd:annotation>
+								<xsd:complexType>
+									<xsd:attribute name="lx">
+										<xsd:annotation>
+											<xsd:documentation> \en lx \enden  \ja lx \endja </xsd:documentation>
+										</xsd:annotation>
+									</xsd:attribute>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="sky_light">
+								<xsd:annotation>
+									<xsd:documentation> \en sky light \enden  \ja 天空光の強度 \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja ラジオシティで使用 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="skylight_color">
+								<xsd:annotation>
+									<xsd:documentation> \en skylight color \enden  \ja 天空光の色 \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja ラジオシティで使用 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="background">
+					<xsd:annotation>
+						<xsd:documentation> \en background settings \enden  \ja 背景設定 \endja </xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+						<xsd:choice minOccurs="0" maxOccurs="unbounded">
+							<xsd:element name="upper_base_color">
+								<xsd:annotation>
+									<xsd:documentation> \en uppser basde color \enden  \ja 上半球の基本色 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="lower_base_color">
+								<xsd:annotation>
+									<xsd:documentation> \en lower base color \enden  \ja 下半球の基本色 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="lighting_intensity_factor">
+								<xsd:annotation>
+									<xsd:documentation> \en lighting intensity factor \enden  \ja 光源強度係数 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="background_layer">
+								<xsd:annotation>
+									<xsd:documentation> \en background layer \enden  \ja 背景レイヤ \endja </xsd:documentation>
+								</xsd:annotation>
+								<xsd:complexType>
+									<xsd:choice minOccurs="0" maxOccurs="unbounded">
+										<xsd:element name="index">
+											<xsd:annotation>
+												<xsd:documentation> \en index \enden  \ja 背景レイヤのインデクス値 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="target">
+											<xsd:annotation>
+												<xsd:documentation> \en target \enden  \ja ターゲット \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 0 : 全体 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 1 : 上半球 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 2 : 下半球 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="texture">
+											<xsd:annotation>
+												<xsd:documentation> \en texture \enden  \ja テクスチャの種類 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 0 : 無し \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 1 : 雲 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 2 : 海 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 3 : 大理石 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 4 : スポット \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 5 : チェック \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 6 : 霧 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 7 : イメージ \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="mix_mode">
+											<xsd:annotation>
+												<xsd:documentation> \en blend mode \enden  \ja 合成モード \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 0 : 通常 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 1 : αブレンド \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 2 : 加算 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 3 : 減算 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 4 : 乗算 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 5 : 比較（明） \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 6 : 比較（暗） \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="premultiplied">
+											<xsd:annotation>
+												<xsd:documentation> \en alpha premultiplied \enden  \ja アルファ値乗算済みイメージ \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="projection">
+											<xsd:annotation>
+												<xsd:documentation> \en projection mode \enden  \ja 投影モード \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 0 : 平面 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 1 : Latitude-longitude \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 2 : Light probe \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 3 : Cube map \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 4 : Vertical cross \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="projection_direction">
+											<xsd:annotation>
+												<xsd:documentation> \en projection direction \enden  \ja 投影方向 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 0 : X軸正方向 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 1 : X軸負方向 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 2 : Y軸正方向 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 3 : Y軸負方向 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 4 : Z軸正方向 \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja 5 : Z軸負方向 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="color">
+											<xsd:annotation>
+												<xsd:documentation> \en color \enden  \ja 色 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="area">
+											<xsd:annotation>
+												<xsd:documentation> \en area \enden  \ja イメージの範囲 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="flags">
+											<xsd:annotation>
+												<xsd:documentation> \en flags \enden  \ja 各種フラグ \endja </xsd:documentation>
+											</xsd:annotation>
+											<xsd:complexType>
+												<xsd:attribute name="horizontal_flip">
+													<xsd:annotation>
+														<xsd:documentation> \en horizontal_flip \enden  \ja 水平反転 \endja </xsd:documentation>
+													</xsd:annotation>
+												</xsd:attribute>
+												<xsd:attribute name="vertical_flip">
+													<xsd:annotation>
+														<xsd:documentation> \en vertical_flip \enden  \ja 垂直反転 \endja </xsd:documentation>
+													</xsd:annotation>
+												</xsd:attribute>
+												<xsd:attribute name="swap_axis">
+													<xsd:annotation>
+														<xsd:documentation> \en swap_axis \enden  \ja 縦横入れ替え \endja </xsd:documentation>
+													</xsd:annotation>
+												</xsd:attribute>
+											</xsd:complexType>
+										</xsd:element>
+										<xsd:element name="mapping">
+											<xsd:annotation>
+												<xsd:documentation> \en mapping \enden  \ja ブレンド荷重 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="density">
+											<xsd:annotation>
+												<xsd:documentation> \en density \enden  \ja 密度 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="phase">
+											<xsd:annotation>
+												<xsd:documentation> \en phase \enden  \ja 位相 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="size">
+											<xsd:annotation>
+												<xsd:documentation> \en size \enden  \ja サイズ \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="anisotropic">
+											<xsd:annotation>
+												<xsd:documentation> \en anisotropic \enden  \ja 異方性 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element ref="pixels">
+											<xsd:annotation>
+												<xsd:documentation> \en pixels \enden  \ja イメージの実体 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+									</xsd:choice>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="radiosity">
+					<xsd:annotation>
+						<xsd:documentation> \en radiosity \enden  \ja ラジオシティ \endja </xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+						<xsd:choice minOccurs="0" maxOccurs="unbounded">
+							<xsd:element name="flags">
+								<xsd:annotation>
+									<xsd:documentation> \en flags \enden  \ja 各種フラグ \endja </xsd:documentation>
+								</xsd:annotation>
+								<xsd:complexType>
+									<xsd:attribute name="display_mesh">
+										<xsd:annotation>
+											<xsd:documentation> \en display_mesh \enden  \ja メッシュ表示 \endja </xsd:documentation>
+										</xsd:annotation>
+									</xsd:attribute>
+									<xsd:attribute name="display_solid">
+										<xsd:annotation>
+											<xsd:documentation> \en display_solid \enden  \ja ソリッド表示 \endja </xsd:documentation>
+										</xsd:annotation>
+									</xsd:attribute>
+									<xsd:attribute name="display_cull_face">
+										<xsd:annotation>
+											<xsd:documentation> \en display_cull_face \enden  \ja カルフェイス表示 \endja </xsd:documentation>
+										</xsd:annotation>
+									</xsd:attribute>
+									<xsd:attribute name="display_blend">
+										<xsd:annotation>
+											<xsd:documentation> \en display_blend \enden  \ja ブレンド表示 \endja </xsd:documentation>
+										</xsd:annotation>
+									</xsd:attribute>
+									<xsd:attribute name="display_texture">
+										<xsd:annotation>
+											<xsd:documentation> \en display_texture \enden  \ja テクスチャ表示 \endja </xsd:documentation>
+										</xsd:annotation>
+									</xsd:attribute>
+									<xsd:attribute name="display_radiator">
+										<xsd:annotation>
+											<xsd:documentation> \en display_radiator \enden  \ja ラジエタ表示 \endja </xsd:documentation>
+										</xsd:annotation>
+									</xsd:attribute>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="display_updates">
+								<xsd:annotation>
+									<xsd:documentation> \en display updates \enden  \ja 表示の更新頻度 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="solution_sky_light_accuracy">
+								<xsd:annotation>
+									<xsd:documentation> \en sky light accuracy \enden  \ja 天空光計算精度 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="solution_source_subdivision_sensitivity">
+								<xsd:annotation>
+									<xsd:documentation> \en solution_source_subdivision_sensitivity \enden  \ja solution_source_subdivision_sensitivity \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="number_of_threads">
+								<xsd:annotation>
+									<xsd:documentation> \en the number of threads \enden  \ja スレッド数 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="shadow_leak_reduction">
+								<xsd:annotation>
+									<xsd:documentation> \en shadow leak reduction \enden  \ja シャドウリーク減少 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="auto_update">
+								<xsd:annotation>
+									<xsd:documentation> \en auto update \enden  \ja 自動更新 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="solution_convergence">
+								<xsd:annotation>
+									<xsd:documentation> \en solution_convergence \enden  \ja solution_convergence \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="solution_initial_mesh_spacing">
+								<xsd:annotation>
+									<xsd:documentation> \en initial mesh spacing \enden  \ja 初期メッシュ間隔 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="solution_minimum_mesh_spacing">
+								<xsd:annotation>
+									<xsd:documentation> \en minimum mesh spacing \enden  \ja 最小メッシュ間隔 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="solution_direct_radiation_mesh_subdivision_sensitivity">
+								<xsd:annotation>
+									<xsd:documentation> \en solution_direct_radiation_mesh_subdivision_sensitivity \enden  \ja solution_direct_radiation_mesh_subdivision_sensitivity \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="solution_indirect_radiation_mesh_subdivision_sensitivity">
+								<xsd:annotation>
+									<xsd:documentation> \en solution_indirect_radiation_mesh_subdivision_sensitivity \enden  \ja solution_indirect_radiation_mesh_subdivision_sensitivity \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="solution_diffuse">
+								<xsd:annotation>
+									<xsd:documentation> \en diffuse \enden  \ja 拡散反射 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="exposure">
+								<xsd:annotation>
+									<xsd:documentation> \en exposure \enden  \ja 露出設定 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="original_reference_energy">
+								<xsd:annotation>
+									<xsd:documentation> \en original reference energy \enden  \ja オリジナル参照エネルギー値 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="reference_energy">
+								<xsd:annotation>
+									<xsd:documentation> \en reference energy \enden  \ja 参照エネルギー値 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="radiosity">
+								<xsd:annotation>
+									<xsd:documentation> \en radiosity solution \enden  \ja ラジオシティ計算結果 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="keyframes">
+					<xsd:annotation>
+						<xsd:documentation> \en array of keyframes \enden  \ja キーフレーム列 \endja </xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+						<xsd:choice minOccurs="0" maxOccurs="unbounded">
+							<xsd:element name="minframe">
+								<xsd:annotation>
+									<xsd:documentation> \en minimum frame \enden  \ja 最小フレーム値 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="maxframe">
+								<xsd:annotation>
+									<xsd:documentation> \en maximum frame \enden  \ja 最大フレーム値 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="keyframe_groups">
+								<xsd:annotation>
+									<xsd:documentation> \en array of keyframe groups \enden  \ja キーフレームグループの列 \endja </xsd:documentation>
+								</xsd:annotation>
+								<xsd:complexType>
+									<xsd:choice minOccurs="0" maxOccurs="unbounded">
+										<xsd:element name="index">
+											<xsd:annotation>
+												<xsd:documentation> \en index \enden  \ja キーフレームグループのインデクス値 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="keyframe_group">
+											<xsd:annotation>
+												<xsd:documentation> \en keyframe group \enden  \ja キーフレームグループ \endja </xsd:documentation>
+												<xsd:documentation> \en  \enden  \ja 0個以上の、キーフレームのインデクス値が並ぶ \endja </xsd:documentation>
+											</xsd:annotation>
+											<xsd:complexType>
+												<xsd:choice minOccurs="0" maxOccurs="unbounded">
+													<xsd:element name="name">
+														<xsd:annotation>
+															<xsd:documentation> \en name \enden  \ja 名前 \endja </xsd:documentation>
+														</xsd:annotation>
+													</xsd:element>
+													<xsd:element name="repeat">
+														<xsd:annotation>
+															<xsd:documentation> \en repeat \enden  \ja 繰り返しの数 \endja </xsd:documentation>
+														</xsd:annotation>
+													</xsd:element>
+													<xsd:element name="minframe">
+														<xsd:annotation>
+															<xsd:documentation> \en minframe \enden  \ja 最小フレーム値 \endja </xsd:documentation>
+														</xsd:annotation>
+													</xsd:element>
+													<xsd:element name="maxframe">
+														<xsd:annotation>
+															<xsd:documentation> \en maxframe \enden  \ja 最大フレーム値 \endja </xsd:documentation>
+														</xsd:annotation>
+													</xsd:element>
+													<xsd:element name="i">
+														<xsd:annotation>
+															<xsd:documentation> \en i \enden  \ja キーフレームのインデクス値 \endja </xsd:documentation>
+														</xsd:annotation>
+													</xsd:element>
+												</xsd:choice>
+											</xsd:complexType>
+										</xsd:element>
+									</xsd:choice>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="keyframe">
+								<xsd:complexType>
+									<xsd:choice minOccurs="0" maxOccurs="unbounded">
+										<xsd:element name="clone">
+											<xsd:annotation>
+												<xsd:documentation> \en clone \enden  \ja クローン \endja </xsd:documentation>
+												<xsd:documentation> \en blah \enden  \ja キーフレームを複製した場合に、複製元は複製先のキーフレームのインデクス値を保持する。 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="repeat">
+											<xsd:annotation>
+												<xsd:documentation> \en repeat \enden  \ja 繰り返しによってキーフレームが生成された場合、元のキーフレームは生成されたキーフレームのインデクス値を保持する。 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="repeated">
+											<xsd:annotation>
+												<xsd:documentation> \en repeated \enden  \ja このキーフレームは繰り返しによって生成された \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+ 										<xsd:element name="frame">
+											<xsd:annotation>
+												<xsd:documentation> \en frame \enden  \ja フレーム値 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="flags">
+											<xsd:annotation>
+												<xsd:documentation> \en flags \enden  \ja 各種フラグ \endja </xsd:documentation>
+											</xsd:annotation>
+											<xsd:complexType>
+												<xsd:attribute name="active">
+													<xsd:annotation>
+														<xsd:documentation> \en active \enden  \ja 選択されている \endja </xsd:documentation>
+													</xsd:annotation>
+												</xsd:attribute>
+											</xsd:complexType>
+										</xsd:element>
+										<xsd:element ref="joint_specifier">
+											<xsd:annotation>
+												<xsd:documentation> \en joint \enden  \ja ジョイント \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+									</xsd:choice>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="quickrendering">
+					<xsd:annotation>
+						<xsd:documentation> \en shading display settings \enden  \ja シェーディング表示設定 \endja </xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+						<xsd:choice minOccurs="0" maxOccurs="unbounded">
+							<xsd:element name="singlesided">
+								<xsd:annotation>
+									<xsd:documentation> \en single-sided \enden  \ja 片面表示 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="all_lights">
+								<xsd:annotation>
+									<xsd:documentation> \en uses all lights \enden  \ja 全ての光源を有効にする \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="texture_size">
+								<xsd:annotation>
+									<xsd:documentation> \en texture size \enden  \ja テクスチャサイズ \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 128, 256, 512, 1024 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="template_images">
+					<xsd:annotation>
+						<xsd:documentation> \en array of template images \enden  \ja テンプレートイメージの配列 \endja </xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+						<xsd:choice minOccurs="0" maxOccurs="unbounded">
+							<xsd:element name="opacity">
+								<xsd:annotation>
+									<xsd:documentation> \en opacity \enden  \ja テンプレートイメージ表示の際の不透明度 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="pers_view">
+								<xsd:annotation>
+									<xsd:documentation> \en pers_view \enden  \ja 透視図に表示するテンプレートイメージ \endja </xsd:documentation>
+									<xsd:documentation> \en pers_view \enden  \ja -1 : 透視図に読み込んだイメージをそのまま表示 \endja </xsd:documentation>
+									<xsd:documentation> \en pers_view \enden  \ja 0 : 側面図に読み込んだイメージをZ-Y平面上に表示 \endja </xsd:documentation>
+									<xsd:documentation> \en pers_view \enden  \ja 1 : 上面図に読み込んだイメージをX-Z平面上に表示 \endja </xsd:documentation>
+									<xsd:documentation> \en pers_view \enden  \ja 2 : 正面図に読み込んだイメージをX-Y平面上に表示 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="visible">
+								<xsd:annotation>
+									<xsd:documentation> \en visible \enden  \ja 表示 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="template_image" maxOccurs="unbounded">
+								<xsd:annotation>
+									<xsd:documentation> \en template image \enden  \ja 個々のテンプレートイメージ \endja </xsd:documentation>
+								</xsd:annotation>
+								<xsd:complexType>
+									<xsd:choice minOccurs="0" maxOccurs="unbounded">
+										<xsd:element name="position">
+											<xsd:annotation>
+												<xsd:documentation> \en position \enden  \ja 位置 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="size">
+											<xsd:annotation>
+												<xsd:documentation> \en size \enden  \ja サイズ \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element ref="pixels" minOccurs="0">
+											<xsd:annotation>
+												<xsd:documentation> \en actual image data \enden  \ja イメージデータの実体 \endja </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+									</xsd:choice>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="scene_info">
+					<xsd:annotation>
+						<xsd:documentation> \en scene info \enden  \ja シーンの情報 \endja </xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+						<xsd:choice minOccurs="0" maxOccurs="unbounded">
+							<xsd:element name="divider">
+								<xsd:annotation>
+									<xsd:documentation> \en divider position \enden  \ja 図面分割ラインの位置 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="spos">
+								<xsd:annotation>
+									<xsd:documentation> \en spos \enden  \ja spos \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="center">
+								<xsd:annotation>
+									<xsd:documentation> \en center position \enden  \ja ３面図表示の中心位置 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element ref="view_info">
+								<xsd:annotation>
+									<xsd:documentation> \en view_info \enden  \ja view_info \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="current_frame">
+								<xsd:annotation>
+									<xsd:documentation> \en current frame \enden  \ja 現行のフレーム値 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="frame_scale">
+								<xsd:annotation>
+									<xsd:documentation> \en frame scale \enden  \ja フレームスケール値 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="elapsed_time">
+								<xsd:annotation>
+									<xsd:documentation> \en elapsed time \enden  \ja レンダリングにかかった時間 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="show_normals">
+								<xsd:annotation>
+									<xsd:documentation> \en show normal \enden  \ja 法線を表示 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="default_bevel_radius">
+								<xsd:annotation>
+									<xsd:documentation> \en default bevel size \enden  \ja ベベルサイズのデフォルト値 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="default_disk_radius">
+								<xsd:annotation>
+									<xsd:documentation> \en default disk radius \enden  \ja 円形状の半径のデフォルト値 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="default_sphere_radius">
+								<xsd:annotation>
+									<xsd:documentation> \en default sphere radius \enden  \ja 円形状の半径のデフォルト値 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="default_light_radius">
+								<xsd:annotation>
+									<xsd:documentation> \en default light size \enden  \ja 光源形状のサイズのデフォルト値 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="safe_zone_size">
+								<xsd:annotation>
+									<xsd:documentation> \en safe zone size \enden  \ja セーフゾーンのサイズ \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="rev16c_compatible_rotation">
+								<xsd:annotation>
+									<xsd:documentation> \en rev16c_compatible_rotation \enden  \ja Rev.16c互換の回転値 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="main_frame_maximized">
+								<xsd:annotation>
+									<xsd:documentation> \en main_frame_maximized \enden  \ja メインフレームが最大化されている \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="main_frame">
+								<xsd:annotation>
+									<xsd:documentation> \en main_frame \enden  \ja メインフレーム \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="flags">
+								<xsd:annotation>
+									<xsd:documentation> \en flags \enden  \ja 各種フラグ \endja </xsd:documentation>
+								</xsd:annotation>
+								<xsd:complexType>
+									<xsd:attribute name="snap">
+										<xsd:annotation>
+											<xsd:documentation> \en snap \enden  \ja スナップ \endja </xsd:documentation>
+										</xsd:annotation>
+									</xsd:attribute>
+									<xsd:attribute name="ruler">
+										<xsd:annotation>
+											<xsd:documentation> \en ruler \enden  \ja 定規表示 \endja </xsd:documentation>
+										</xsd:annotation>
+									</xsd:attribute>
+									<xsd:attribute name="grid">
+										<xsd:annotation>
+											<xsd:documentation> \en grid \enden  \ja ３面図グリッド表示 \endja </xsd:documentation>
+										</xsd:annotation>
+									</xsd:attribute>
+									<xsd:attribute name="pers_grid">
+										<xsd:annotation>
+											<xsd:documentation> \en pers_grid \enden  \ja 透視図グリッド表示 \endja </xsd:documentation>
+										</xsd:annotation>
+									</xsd:attribute>
+									<xsd:attribute name="current_frame_is_good">
+										<xsd:annotation>
+											<xsd:documentation> \en current_frame_is_good \enden  \ja 現行のフレーム値が有効 \endja </xsd:documentation>
+										</xsd:annotation>
+									</xsd:attribute>
+									<xsd:attribute name="local_part">
+										<xsd:annotation>
+											<xsd:documentation> \en local_part \enden  \ja ローカル座標系表示の対象となっているパート \endja </xsd:documentation>
+										</xsd:annotation>
+									</xsd:attribute>
+									<xsd:attribute name="multi_handle">
+										<xsd:annotation>
+											<xsd:documentation> \en multi_handle \enden  \ja 選択されている全てのハンドルが連動する \endja </xsd:documentation>
+										</xsd:annotation>
+									</xsd:attribute>
+									<xsd:attribute name="large_point">
+										<xsd:annotation>
+											<xsd:documentation> \en large_point \enden  \ja ラージポイント \endja </xsd:documentation>
+										</xsd:annotation>
+									</xsd:attribute>
+									<xsd:attribute name="no_snap_frame">
+										<xsd:annotation>
+											<xsd:documentation> \en no_snap_frame \enden  \ja フレーム値をスナップしない \endja </xsd:documentation>
+										</xsd:annotation>
+									</xsd:attribute>
+									<xsd:attribute name="auto_key">
+										<xsd:annotation>
+											<xsd:documentation> \en auto_key \enden  \ja キーフレームを自動生成 \endja </xsd:documentation>
+										</xsd:annotation>
+									</xsd:attribute>
+									<xsd:attribute name="no_frame_skip">
+										<xsd:annotation>
+											<xsd:documentation> \en no_frame_skip \enden  \ja モーションのプレビュー時に実時間再生をしない。 \endja </xsd:documentation>
+										</xsd:annotation>
+									</xsd:attribute>
+									<xsd:attribute name="preview_loop">
+										<xsd:annotation>
+											<xsd:documentation> \en preview_loop \enden  \ja モーションのプレビューをループさせる。 \endja </xsd:documentation>
+										</xsd:annotation>
+									</xsd:attribute>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="views">
+					<xsd:annotation>
+						<xsd:documentation> \en array of view settings \enden  \ja 視野の配列 \endja </xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+						<xsd:choice minOccurs="0" maxOccurs="unbounded">
+							<xsd:element name="current_metacamera">
+								<xsd:annotation>
+									<xsd:documentation> \en current metacamera \enden  \ja 現行のメタカメラのインデクス値 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element ref="view">
+								<xsd:annotation>
+									<xsd:documentation> \en view \enden  \ja 視野情報 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element ref="part">
+					<xsd:annotation>
+						<xsd:documentation> \en part \enden  \ja ルートパート \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="end_of_file">
+					<xsd:annotation>
+						<xsd:documentation> \en end of file marker \enden  \ja ファイル終了マーカ \endja </xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType/>
+				</xsd:element>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="skin">
+		<xsd:annotation>
+			<xsd:documentation> \en skin settings \enden  \ja スキン設定 \endja </xsd:documentation>
+			<xsd:documentation> \en blah \enden  \ja 0個以上の、ジョイントと荷重の値のペアが並ぶ。 \endja </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="index">
+					<xsd:annotation>
+						<xsd:documentation> \en index \enden  \ja ポリゴンメッシュ頂点インデクス値 \endja </xsd:documentation>
+						<xsd:documentation> \en blah \enden  \ja ポリゴンメッシュの頂点に設定されたスキンの場合、その頂点のインデクス値。それ以外の場合には無効。 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element ref="joint_specifier">
+					<xsd:annotation>
+						<xsd:documentation> \en joint \enden  \ja このジョイントから影響を受ける \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="weight">
+					<xsd:annotation>
+						<xsd:documentation> \en weight \enden  \ja ジョイントからの影響の荷重 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="solid">
+		<xsd:annotation>
+			<xsd:documentation> \en solid \enden  \ja ソリッド \endja </xsd:documentation>
+			<xsd:documentation> \en blah \enden  \ja 回転体または掃引体の設定 \endja </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="revolve">
+					<xsd:annotation>
+						<xsd:documentation> \en revole \enden  \ja 回転体の設定 \endja </xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+						<xsd:choice minOccurs="0" maxOccurs="unbounded">
+							<xsd:element name="axis_matrix">
+								<xsd:annotation>
+									<xsd:documentation> \en transformation matrix to define revolution axis \enden  \ja 回転軸を定義する変換マトリクス \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja Z軸をこのマトリクスで座標変換した結果が、回転軸となる。 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="from">
+								<xsd:annotation>
+									<xsd:documentation> \en from \enden  \ja 開始角度 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="to">
+								<xsd:annotation>
+									<xsd:documentation> \en to \enden  \ja 終了角度 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="extrude">
+					<xsd:annotation>
+						<xsd:documentation> \en extrude \enden  \ja 掃引体の設定 \endja </xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+						<xsd:choice minOccurs="0" maxOccurs="unbounded">
+							<xsd:element name="direction">
+								<xsd:annotation>
+									<xsd:documentation> \en direction \enden  \ja 掃引の方向（と距離） \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="surface">
+		<xsd:annotation>
+			<xsd:documentation> \en surface attributes \enden  \ja 表面材質設定 \endja </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="flags">
+					<xsd:annotation>
+						<xsd:documentation> \en flags \enden  \ja 各種フラグ \endja </xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+						<xsd:attribute name="has_diffuse">
+							<xsd:annotation>
+								<xsd:documentation> \en has_diffuse \enden  \ja 拡散反射値を持っている \endja </xsd:documentation>
+								<xsd:documentation> \en blah \enden  \ja 値を持っていない場合には、親階層、さらには表面材質デフォルト設定値から継承する。 \endja </xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+						<xsd:attribute name="has_specular">
+							<xsd:annotation>
+								<xsd:documentation> \en has_specular \enden  \ja 鏡面反射値を持っている \endja </xsd:documentation>
+								<xsd:documentation> \en blah \enden  \ja 値を持っていない場合には、親階層、さらには表面材質デフォルト設定値から継承する。 \endja </xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+						<xsd:attribute name="has_specular_2">
+							<xsd:annotation>
+								<xsd:documentation> \en has_specular_2 \enden  \ja 鏡面反射２値を持っている \endja </xsd:documentation>
+								<xsd:documentation> \en blah \enden  \ja 値を持っていない場合には、親階層、さらには表面材質デフォルト設定値から継承する。 \endja </xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+						<xsd:attribute name="has_roughness">
+							<xsd:annotation>
+								<xsd:documentation> \en has_roughness \enden  \ja 荒さ値を持っている \endja </xsd:documentation>
+								<xsd:documentation> \en blah \enden  \ja 値を持っていない場合には、親階層、さらには表面材質デフォルト設定値から継承する。 \endja </xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+						<xsd:attribute name="has_anisotropic">
+							<xsd:annotation>
+								<xsd:documentation> \en has_anisotropic \enden  \ja 異方性反射値を持っている \endja </xsd:documentation>
+								<xsd:documentation> \en blah \enden  \ja 値を持っていない場合には、親階層、さらには表面材質デフォルト設定値から継承する。 \endja </xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+						<xsd:attribute name="has_reflection">
+							<xsd:annotation>
+								<xsd:documentation> \en has_reflection \enden  \ja 反射率値を持っている \endja </xsd:documentation>
+								<xsd:documentation> \en blah \enden  \ja 値を持っていない場合には、親階層、さらには表面材質デフォルト設定値から継承する。 \endja </xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+						<xsd:attribute name="has_transparency">
+							<xsd:annotation>
+								<xsd:documentation> \en has_transparency \enden  \ja 透明度値を持っている \endja </xsd:documentation>
+								<xsd:documentation> \en blah \enden  \ja 値を持っていない場合には、親階層、さらには表面材質デフォルト設定値から継承する。 \endja </xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+						<xsd:attribute name="has_refraction">
+							<xsd:annotation>
+								<xsd:documentation> \en has_refraction \enden  \ja 屈折率値を持っている \endja </xsd:documentation>
+								<xsd:documentation> \en blah \enden  \ja 値を持っていない場合には、親階層、さらには表面材質デフォルト設定値から継承する。 \endja </xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+						<xsd:attribute name="has_fresnel_reflection">
+							<xsd:annotation>
+								<xsd:documentation> \en has_fresnel_reflection \enden  \ja フレネル反射値を持っている \endja </xsd:documentation>
+								<xsd:documentation> \en blah \enden  \ja 値を持っていない場合には、親階層、さらには表面材質デフォルト設定値から継承する。 \endja </xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+						<xsd:attribute name="has_metallic">
+							<xsd:annotation>
+								<xsd:documentation> \en has_metallic \enden  \ja メタリック値を持っている \endja </xsd:documentation>
+								<xsd:documentation> \en blah \enden  \ja 値を持っていない場合には、親階層、さらには表面材質デフォルト設定値から継承する。 \endja </xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+						<xsd:attribute name="has_glow">
+							<xsd:annotation>
+								<xsd:documentation> \en has_glow \enden  \ja 発光値を持っている \endja </xsd:documentation>
+								<xsd:documentation> \en blah \enden  \ja 値を持っていない場合には、親階層、さらには表面材質デフォルト設定値から継承する。 \endja </xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+						<xsd:attribute name="has_backlight">
+							<xsd:annotation>
+								<xsd:documentation> \en has_backlight \enden  \ja バックライト値を持っている \endja </xsd:documentation>
+								<xsd:documentation> \en blah \enden  \ja 値を持っていない場合には、親階層、さらには表面材質デフォルト設定値から継承する。 \endja </xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+						<xsd:attribute name="has_pseudo_caustics">
+							<xsd:annotation>
+								<xsd:documentation> \en has_pseudo_caustics \enden  \ja pseudo_causticsを持っている \endja </xsd:documentation>
+								<xsd:documentation> \en blah \enden  \ja 値を持っていない場合には、親階層、さらには表面材質デフォルト設定値から継承する。 \endja </xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+						<xsd:attribute name="has_aux">
+							<xsd:annotation>
+								<xsd:documentation> \en has_aux \enden  \ja auxを持っている \endja </xsd:documentation>
+								<xsd:documentation> \en blah \enden  \ja 値を持っていない場合には、親階層、さらには表面材質デフォルト設定値から継承する。 \endja </xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+						<xsd:attribute name="has_mappings">
+							<xsd:annotation>
+								<xsd:documentation> \en has_mappings \enden  \ja マッピング設定を持っている \endja </xsd:documentation>
+								<xsd:documentation> \en blah \enden  \ja 値を持っていない場合には、親階層、さらには表面材質デフォルト設定値から継承する。 \endja </xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element ref="pixels">
+					<xsd:annotation>
+						<xsd:documentation> \en thumbnail image \enden  \ja サムネールイメージ \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="aux">
+					<xsd:annotation>
+						<xsd:documentation> \en aux. flags \enden  \ja その他フラグ \endja </xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+						<xsd:attribute name="white_key_mask">
+							<xsd:annotation>
+								<xsd:documentation> \en white key mask \enden  \ja ホワイトキーマスク \endja </xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+						<xsd:attribute name="black_key_mask">
+							<xsd:annotation>
+								<xsd:documentation> \en black key mask \enden  \ja ブラックキーマスク \endja </xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+						<xsd:attribute name="dont_cast_shadow">
+							<xsd:annotation>
+								<xsd:documentation> \en do not cast shadow \enden  \ja 影を落とさない \endja </xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+						<xsd:attribute name="no_shading">
+							<xsd:annotation>
+								<xsd:documentation> \en no shading \enden  \ja 陰影付けしない \endja </xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+						<xsd:attribute name="smoother_shading">
+							<xsd:annotation>
+								<xsd:documentation> \en smoother shading \enden  \ja より滑らかな陰影付け \endja </xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+						<xsd:attribute name="dracula">
+							<xsd:annotation>
+								<xsd:documentation> \en do not reflect \enden  \ja 反射しない \endja </xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+						<xsd:attribute name="texture_transformation">
+							<xsd:annotation>
+								<xsd:documentation> \en texture transformation \enden  \ja テクスチャ座標の変換 \endja </xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+						<xsd:attribute name="dont_show_shadow">
+							<xsd:annotation>
+								<xsd:documentation> \en do not show shadow \enden  \ja 影を表示しない \endja </xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="diffuse_color">
+					<xsd:annotation>
+						<xsd:documentation> \en diffuse color \enden  \ja 拡散反射の色 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="diffuse">
+					<xsd:annotation>
+						<xsd:documentation> \en diffuse \enden  \ja 拡散反射の強度 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="specular_color">
+					<xsd:annotation>
+						<xsd:documentation> \en specular color \enden  \ja 鏡面反射の色 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="highlight">
+					<xsd:annotation>
+						<xsd:documentation> \en specular \enden  \ja 鏡面反射の強度 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="highlight_size">
+					<xsd:annotation>
+						<xsd:documentation> \en specular size \enden  \ja 鏡面反射のサイズ \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="highlight_2">
+					<xsd:annotation>
+						<xsd:documentation> \en specular2 \enden  \ja 鏡面反射2の強度 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="highlight_size_2">
+					<xsd:annotation>
+						<xsd:documentation> \en specular2 size \enden  \ja 鏡面反射2のサイズ \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="specular_color_2">
+					<xsd:annotation>
+						<xsd:documentation> \en specular2 size \enden  \ja 鏡面反射2の色 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="roughness">
+					<xsd:annotation>
+						<xsd:documentation> \en roughness \enden  \ja 荒さ \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="anisotropic">
+					<xsd:annotation>
+						<xsd:documentation> \en anisotropic \enden  \ja 異方性反射 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="reflection_color">
+					<xsd:annotation>
+						<xsd:documentation> \en reflection color \enden  \ja 反射の色 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="reflection">
+					<xsd:annotation>
+						<xsd:documentation> \en reflection \enden  \ja 反射の強度 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="transparency_color">
+					<xsd:annotation>
+						<xsd:documentation> \en transparency color \enden  \ja 透過の色 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="transparency">
+					<xsd:annotation>
+						<xsd:documentation> \en transparency \enden  \ja 透明度 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="refraction">
+					<xsd:annotation>
+						<xsd:documentation> \en refraction \enden  \ja 屈折率 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="fresnel_reflection">
+					<xsd:annotation>
+						<xsd:documentation> \en fresnel reflection \enden  \ja フレネル反射 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="metallic_color">
+					<xsd:annotation>
+						<xsd:documentation> \en metallic color \enden  \ja メタリックの色 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="metallic">
+					<xsd:annotation>
+						<xsd:documentation> \en metallic \enden  \ja メタリックの強度 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="glow_color">
+					<xsd:annotation>
+						<xsd:documentation> \en glow color \enden  \ja 発光の色 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="glow">
+					<xsd:annotation>
+						<xsd:documentation> \en glow \enden  \ja 発光の強度 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="soft_glow">
+					<xsd:annotation>
+						<xsd:documentation> \en soft glow \enden  \ja ソフト発光 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="backlight_color">
+					<xsd:annotation>
+						<xsd:documentation> \en backlight color \enden  \ja バックライトの色 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="backlight">
+					<xsd:annotation>
+						<xsd:documentation> \en backlight \enden  \ja バックライトの強度 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="pseudo_caustics">
+					<xsd:annotation>
+						<xsd:documentation> \en pseudo_caustics \enden  \ja 疑似コースティクス \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="pseudo_caustics_aberration">
+					<xsd:annotation>
+						<xsd:documentation> \en pseudo_caustics_aberration \enden  \ja 疑似コースティクス収差 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="pseudo_caustics_brightness">
+					<xsd:annotation>
+						<xsd:documentation> \en pseudo_caustics_brightness \enden  \ja 疑似コースティクス明るさ \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="pseudo_caustics_bump">
+					<xsd:annotation>
+						<xsd:documentation> \en pseudo_caustics_bump \enden  \ja 疑似コースティクスバンプ \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="aberration">
+					<xsd:annotation>
+						<xsd:documentation> \en aberration \enden  \ja 収差 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element ref="attributes">
+					<xsd:annotation>
+						<xsd:documentation> \en attributes \enden  \ja プラグインが付加したカスタム属性 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="number_of_mappings">
+					<xsd:annotation>
+						<xsd:documentation> \en the number of mapping layers \enden  \ja マッピングレイヤの数 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="mapping_layer">
+					<xsd:annotation>
+						<xsd:documentation> \en mapping layer \enden  \ja マッピングレイヤ \endja </xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+						<xsd:choice minOccurs="0" maxOccurs="unbounded">
+							<xsd:element name="index">
+								<xsd:annotation>
+									<xsd:documentation> \en index \enden  \ja マッピングレイヤのインデクス値 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="mapping_mix">
+								<xsd:annotation>
+									<xsd:documentation> \en blending mode \enden  \ja 合成モード \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 0 : 通常 \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 1 : αブレンド \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 2 : 加算 \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 3 : 減算 \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 4 : 乗算 \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 5 : 比較（明） \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 6 : 比較（暗） \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="premultiplied">
+								<xsd:annotation>
+									<xsd:documentation> \en premultiplied \enden  \ja アルファ乗算済みイメージ \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="mapping_by">
+								<xsd:annotation>
+									<xsd:documentation> \en blah \enden  \ja 0 : 距離補正 \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 1 : UV \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="mapping_type">
+								<xsd:annotation>
+									<xsd:documentation> \en channel \enden  \ja チャネル \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 0 : 拡散反射 \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 1 : 光沢１ \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 2 : 光沢２ \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 3 : 反射 \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 4 : 透明度 \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 5 : バンプ \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 6 : トリム \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 7 : 環境 \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 8 : 発光 \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 9 : バックライト \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 10 : 荷重 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="pattern_type_uuid">
+								<xsd:annotation>
+									<xsd:documentation> \en pattern \enden  \ja パターン \endja </xsd:documentation>
+									<xsd:documentation> \en pattern \enden  \ja 先頭の32ビット以外が全てゼロの場合には、先頭32ビットによって以下のように解釈する。 \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 0 : 無し \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 2 : ストライプ \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 3 : チェック \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 4 : スポット \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 5 : 大理石 \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 6 : 木目 \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 7 : 丸太 \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 10 : 波 \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 11 : 海 \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 12 : 雲 \endja </xsd:documentation>
+									<xsd:documentation> \en pattern \enden  \ja それ以外の場合には、シェーダプラグインの識別子。 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="mapping_projection_type">
+								<xsd:annotation>
+									<xsd:documentation> \en projection type \enden  \ja 投影の種類 \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 0 : X軸方向平行投影 \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 0 : Y軸方向平行投影 \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 0 : Z軸方向平行投影 \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 0 : ラップ／３軸方向 \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 0 : 円筒 \endja </xsd:documentation>
+									<xsd:documentation> \en blah \enden  \ja 0 : 球 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="weight">
+								<xsd:annotation>
+									<xsd:documentation> \en weight \enden  \ja 荷重 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="turbulence">
+								<xsd:annotation>
+									<xsd:documentation> \en turbulence \enden  \ja 乱れ \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="softness">
+								<xsd:annotation>
+									<xsd:documentation> \en softness \enden  \ja ソフトネス \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="diffuse_factor">
+								<xsd:annotation>
+									<xsd:documentation> \en diffuse factor \enden  \ja 拡散反射係数 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="mapping_size">
+								<xsd:annotation>
+									<xsd:documentation> \en mapping size \enden  \ja サイズ \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="mapping_scale">
+								<xsd:annotation>
+									<xsd:documentation> \en mapping scale \enden  \ja スケール \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="x_interval">
+								<xsd:annotation>
+									<xsd:documentation> \en horizontal interval \enden  \ja 横繰り返し間隔 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="y_interval">
+								<xsd:annotation>
+									<xsd:documentation> \en vertical interval \enden  \ja 縦繰り返し間隔 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="phase">
+								<xsd:annotation>
+									<xsd:documentation> \en phase value \enden  \ja 位相 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="mapping_color">
+								<xsd:annotation>
+									<xsd:documentation> \en color \enden  \ja 色 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element ref="pixels">
+								<xsd:annotation>
+									<xsd:documentation> \en image \enden  \ja イメージ \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="area">
+								<xsd:annotation>
+									<xsd:documentation> \en area \enden  \ja イメージの範囲 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="flags">
+								<xsd:annotation>
+									<xsd:documentation> \en flags \enden  \ja 各種フラグ \endja </xsd:documentation>
+								</xsd:annotation>
+								<xsd:complexType>
+									<xsd:attribute name="horizontal_flip">
+										<xsd:annotation>
+											<xsd:documentation> \en horizontal_flip \enden  \ja 水平反転 \endja </xsd:documentation>
+										</xsd:annotation>
+									</xsd:attribute>
+									<xsd:attribute name="vertical_flip">
+										<xsd:annotation>
+											<xsd:documentation> \en vertical_flip \enden  \ja 垂直反転 \endja </xsd:documentation>
+										</xsd:annotation>
+									</xsd:attribute>
+									<xsd:attribute name="swap_axis">
+										<xsd:annotation>
+											<xsd:documentation> \en swap_axis \enden  \ja 縦横反転 \endja </xsd:documentation>
+										</xsd:annotation>
+									</xsd:attribute>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="transformation">
+								<xsd:annotation>
+									<xsd:documentation> \en transformation \enden  \ja テクスチャ座標系の変換マトリクス \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="aux_flags">
+								<xsd:annotation>
+									<xsd:documentation> \en aux. flags \enden  \ja その他フラグ \endja </xsd:documentation>
+								</xsd:annotation>
+								<xsd:complexType>
+									<xsd:attribute name="blur">
+										<xsd:annotation>
+											<xsd:documentation> \en blur \enden  \ja ブラー \endja </xsd:documentation>
+										</xsd:annotation>
+									</xsd:attribute>
+									<xsd:attribute name="flip">
+										<xsd:annotation>
+											<xsd:documentation> \en flip \enden  \ja 反転 \endja </xsd:documentation>
+										</xsd:annotation>
+									</xsd:attribute>
+								</xsd:complexType>
+							</xsd:element>
+							<xsd:element name="repetition_x">
+								<xsd:annotation>
+									<xsd:documentation> \en horizontal repetition \enden  \ja 横繰り返し数 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="repetition_y">
+								<xsd:annotation>
+									<xsd:documentation> \en vertical repetition \enden  \ja 縦繰り返し数 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="shader_attributes">
+								<xsd:annotation>
+									<xsd:documentation> \en shader_attributes \enden  \ja プラグインシェーダが付加した属性 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element ref="attributes">
+								<xsd:annotation>
+									<xsd:documentation> \en custom attributes \enden  \ja プラグインが付加したカスタム属性 \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="view">
+		<xsd:annotation>
+			<xsd:documentation> \en view \enden  \ja 視野設定 \endja </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="index">
+					<xsd:annotation>
+						<xsd:documentation> \en index \enden  \ja 視野設定のインデクス値 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="position">
+					<xsd:annotation>
+						<xsd:documentation> \en position \enden  \ja 視点の位置 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="offset">
+					<xsd:annotation>
+						<xsd:documentation> \en offset \enden  \ja オフセット値 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="rotation">
+					<xsd:annotation>
+						<xsd:documentation> \en rotation \enden  \ja 回転値 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="distance">
+					<xsd:annotation>
+						<xsd:documentation> \en distance \enden  \ja 視点から注視点までの距離 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="camera_mode">
+					<xsd:annotation>
+						<xsd:documentation> \en camera_mode \enden  \ja camera_mode \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="master_mode">
+					<xsd:annotation>
+						<xsd:documentation> \en master_mode \enden  \ja master_mode \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="zoom">
+					<xsd:annotation>
+						<xsd:documentation> \en zoom \enden  \ja ズーム値 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="bank">
+					<xsd:annotation>
+						<xsd:documentation> \en bank \enden  \ja バンク角度 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="focus_point">
+					<xsd:annotation>
+						<xsd:documentation> \en focus point \enden  \ja 焦点の位置 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="focus">
+					<xsd:annotation>
+						<xsd:documentation> \en focus \enden  \ja フォーカス値 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="shift">
+					<xsd:annotation>
+						<xsd:documentation> \en shift \enden  \ja シフト値 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="film_shift">
+					<xsd:annotation>
+						<xsd:documentation> \en film shift \enden  \ja フィルムシフト値 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="film_tilt">
+					<xsd:annotation>
+						<xsd:documentation> \en film tilt \enden  \ja フィルムティルト値 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="lens_tilt">
+					<xsd:annotation>
+						<xsd:documentation> \en lens tilt \enden  \ja レンズティルト値 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="scale">
+					<xsd:annotation>
+						<xsd:documentation> \en scale \enden  \ja スケール値 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="parallel">
+					<xsd:annotation>
+						<xsd:documentation> \en parallel \enden  \ja 平行移動距離 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="correction_value">
+					<xsd:annotation>
+						<xsd:documentation> \en correction value \enden  \ja 垂直パース補正値 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="flags">
+					<xsd:annotation>
+						<xsd:documentation> \en flags \enden  \ja 各種フラグ \endja </xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+						<xsd:attribute name="distant">
+							<xsd:annotation>
+								<xsd:documentation> \en distant \enden  \ja 無限遠カメラ \endja </xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+						<xsd:attribute name="show_volume">
+							<xsd:annotation>
+								<xsd:documentation> \en show_volume \enden  \ja 視野ボリュームを表示 \endja </xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+						<xsd:attribute name="show_sight">
+							<xsd:annotation>
+								<xsd:documentation> \en show_sight \enden  \ja 視線を表示 \endja </xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+						<xsd:attribute name="show_path">
+							<xsd:annotation>
+								<xsd:documentation> \en show_path \enden  \ja パスを表示 \endja </xsd:documentation>
+							</xsd:annotation>
+						</xsd:attribute>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element ref="attributes">
+					<xsd:annotation>
+						<xsd:documentation> \en custom attributes \enden  \ja プラグインが付加したカスタム属性 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="eye_link">
+					<xsd:annotation>
+						<xsd:documentation> \en eye_link \enden  \ja 視点連結 \endja </xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+						<xsd:choice minOccurs="0" maxOccurs="unbounded">
+							<xsd:element ref="shape_specifier">
+								<xsd:annotation>
+									<xsd:documentation> \en shape_specifier \enden  \ja この形状に視点を連動させる \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="target_link">
+					<xsd:annotation>
+						<xsd:documentation> \en target_link \enden  \ja 注視点連結 \endja </xsd:documentation>
+					</xsd:annotation>
+					<xsd:complexType>
+						<xsd:choice minOccurs="0" maxOccurs="unbounded">
+							<xsd:element ref="shape_specifier">
+								<xsd:annotation>
+									<xsd:documentation> \en shape_specifier \enden  \ja この形状に注視点を連動させる \endja </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+						</xsd:choice>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="view_info">
+		<xsd:annotation>
+			<xsd:documentation> \en view info \enden  \ja 表示情報 \endja </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="index">
+					<xsd:annotation>
+						<xsd:documentation> \en index \enden  \ja 表示情報のインデクス値 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="unit">
+					<xsd:annotation>
+						<xsd:documentation> \en unit \enden  \ja 単位 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="precise_center">
+					<xsd:annotation>
+						<xsd:documentation> \en precise_center \enden  \ja precise_center \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="rotation">
+					<xsd:annotation>
+						<xsd:documentation> \en rotation \enden  \ja ろくろ回転値 \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="scale1000">
+					<xsd:annotation>
+						<xsd:documentation> \en scale \enden  \ja スケール \endja </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

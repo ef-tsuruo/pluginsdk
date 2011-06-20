@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>プラグインの種類</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- 作成： Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="main.html"><span>メインページ</span></a></li>
+      <li class="current"><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+
+
+<h1><a class="anchor" id="types">プラグインの種類 </a></h1><h2><a class="anchor" id="importer">
+■インポータ　プラグイン</a></h2>
+<p><code>importer_interface</code> の派生クラスとして、ファイルからシーンデータを読み込む機能を実装する。プラグインの名前がShadeのインポートメニューに追加され、ユーザからはインポートできるファイルの種類が追加されたように見える。</p>
+<h2><a class="anchor" id="imageimporter">
+■イメージインポータ　プラグイン</a></h2>
+<p><code>image_importer_interface</code> の派生クラスとして、ファイルからイメージデータを読み込む機能を実装する。ユーザからは読み込むことのできるイメージファイルの種類が追加されたように見える。</p>
+<h2><a class="anchor" id="exporter">
+■エクスポータ　プラグイン</a></h2>
+<p><code>exporter_interface</code> の派生クラスとして、シーンデータをファイルに書き出す機能を実装する。プラグインの名前がShadeのエクスポートメニューに追加され、ユーザからはエクスポートできるファイルの種類が追加されたように見える。</p>
+<h2><a class="anchor" id="imageexporter">
+■イメージエクスポータ　プラグイン</a></h2>
+<p><code>image_importer_interface</code> の派生クラスとして、イメージデータをファイルに書き出す機能を実装する。ユーザからは、書き出すことのできるイメージファイルの種類が追加されたように見える。</p>
+<h2><a class="anchor" id="creator">
+■クリエータ　プラグイン</a></h2>
+<p><code>creator_interface</code> の派生クラスとして、形状を作成する機能を実装する。プラグインの名前が作成メニュー に追加され、ユーザからは作成できる形状の種類が追加されたように見える。</p>
+<h2><a class="anchor" id="modifier">
+■モディファイア　プラグイン</a></h2>
+<p><code>modifier_interface</code> の派生クラスとして、形状を編集する機能を実装する。プラグインの名前が形状編集メニューに追加され、ユーザからは編集操作の種類が追加されたように見える。</p>
+<h2><a class="anchor" id="attribute">
+■アトリビュート　プラグイン</a></h2>
+<p><code>attribute_interface</code> の派生クラスとして、Shadeの各種オブジェクトに独自の情報（アトリビュート）を追加し、ダイアログボックス表示してユーザが変更できるようにする機能を追加する。追加した情報は、他のプラグインからもアクセス可能。</p>
+<h2><a class="anchor" id="effector">
+■エフェクタ　プラグイン</a></h2>
+<p><code>attribute_interface</code> の派生クラスとして、レンダリング後のイメージに後処理をかける機能を実装する。プラグインの名前がレンダリング設定のエフェクタメニューに追加され、ユーザからはエフェクタの種類が追加されたように見える。</p>
+<h2><a class="anchor" id="renderer">
+■レンダラ　プラグイン</a></h2>
+<p><code>renderer_interface</code> の派生クラスとして、レンダリング機能を実装する。プラグインの名前がレンダリング手法のメニューに追加され、ユーザからはレンダリングの手法が追加されたように見える。</p>
+<h2><a class="anchor" id="plugin">
+■基本　プラグイン</a></h2>
+<p><code>plugin_interface</code> の派生クラスとして実装するが、機能については特に想定されていない。プラグインの名前がプラグインメニューに追加される。</p>
+<h2><a class="anchor" id="browser">
+■ブラウザ　プラグイン</a></h2>
+<p><code>browser_interface</code> の派生クラスとして、ブラウザ追加機能を実装する。プラグインの名前がブラウザのコンテクストメニューに追加される。</p>
+<h2><a class="anchor" id="figurewindow">
+■図形ウインドウ　プラグイン</a></h2>
+<p><code>figure_interface</code> の派生クラスとして、図形ウインドウ追加機能を実装する。プラグインの名前が図形ウインドウのコンテクストメニューに追加される。</p>
+<h2><a class="anchor" id="imagebox">
+■イメージボックス　プラグイン</a></h2>
+<p><code>image_box_interface</code> の派生クラスとして、イメージボックスに機能を追加する。プラグインの名前がイメージボックスのコンテクストメニューに追加される。</p>
+<h2><a class="anchor" id="renderingimage">
+■レンダリングイメージ　プラグイン</a></h2>
+<p><code>rendering_image_interface</code> の派生クラスとして、レンダリングイメージウインドウに機能を追加する。プラグインの名前がレンダリングイメージのコンテクストメニューに追加される。</p>
+<h2><a class="anchor" id="window">
+■ウインドウ　プラグイン</a></h2>
+<p><code>window_interface</code> の派生クラスとして、独自のウインドウを実装する。プラグインの名前が表示メニューに表示され、ユーザからはShadeに備わっているパレットウインドウの種類が追加されたように見える。また、表示メニューに名前が追加された独立ウインドウとしてでなく、モーションウインドウ、イメージウインドウまたはコントロールバーに埋め込んだサブウインドウとするとも可能。</p>
+<h2><a class="anchor" id="shader">
+■シェーダー　プラグイン</a></h2>
+<p><code>shader_interface</code> の派生クラスとして、シェーディング計算を実装する。プラグインの名前が表面材質のマッピングパターンメニューに追加され、ユーザからはマッピングパターンの種類が追加されたように見える。 </p>
+</div>
+<br><br>
+<hr>
+<div align="center">Copyright &copy; e frontier, Inc. All rights reserved.</div>
+</body></html>

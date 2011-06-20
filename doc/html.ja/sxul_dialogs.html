@@ -1,0 +1,491 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Dialog SXULスキーマ定義</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- 作成： Doxygen 1.6.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="main.html"><span>メインページ</span></a></li>
+      <li class="current"><a href="pages.html"><span>関連ページ</span></a></li>
+      <li><a href="namespaces.html"><span>ネームスペース</span></a></li>
+      <li><a href="annotated.html"><span>クラス</span></a></li>
+      <li><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+
+
+<h1><a class="anchor" id="sxul_dialogs">Dialog SXULスキーマ定義 </a></h1><html><head><meta charset="utf-8"></head><body>
+<table width="500"><tr><td class="indexkey"><b>dialog</b></td></tr></table><p>    ダイアログボックス  </p>
+<table border="0" width="350" cellpadding="0" cellspacing="0"><tr><td colspan="2"><p>タグ内で利用可能なタグ</p></td></tr><td class="memItemRight" valign="bottom"><b>vbox,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>hbox,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>push-button,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>bool,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>int,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>float,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>double,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>selection,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>rgb,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>progress,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>short-string,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>long-string,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>long-text,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>vec3,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>custom,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>group,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>include,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>listbox,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>path,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+</td></table><br><ul type="circle">
+<li><b>title</b>	type = xsd:string</li><p>    タイトル  </p>
+</ul>
+<ul type="circle">
+<li><b>default_button</b>	type = xsd:boolean</li><p>    初期設定ボタン  </p>
+</ul>
+<ul type="circle">
+<li><b>reset_button</b>	type = xsd:boolean</li><p>    復帰ボタン  </p>
+</ul>
+<ul type="circle">
+<li><b>ok_button</b>	type = xsd:boolean</li><p>    OKボタン  </p>
+</ul>
+<ul type="circle">
+<li><b>cancel_button</b>	type = xsd:boolean</li><p>    キャンセルボタン  </p>
+</ul>
+<ul type="circle">
+<li><b>resizable</b>	type = xsd:boolean</li><p>   リサイズ可能なダイアログ  </p>
+</ul>
+<ul type="circle">
+<li><b>id</b>	type = xsd:integer</li><p>    識別子  </p>
+</ul>
+<table width="500"><tr><td class="indexkey"><b>vbox</b></td></tr></table><p>    垂直ボックス  </p>
+<table border="0" width="350" cellpadding="0" cellspacing="0"><tr><td colspan="2"><p>タグ内で利用可能なタグ</p></td></tr><td class="memItemRight" valign="bottom"><b>vbox,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>hbox,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>push-button,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>bool,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>int,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>float,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>double,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>selection,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>rgb,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>progress,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>short-string,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>long-string,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>long-text,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>vec3,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>custom,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>group,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>include,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>listbox,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>path,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+</td></table><br><ul type="circle">
+<li><b>id</b>	type = xsd:integer</li><p>    識別子  </p>
+</ul>
+<table width="500"><tr><td class="indexkey"><b>hbox</b></td></tr></table><p>    水平ボックス  </p>
+<table border="0" width="350" cellpadding="0" cellspacing="0"><tr><td colspan="2"><p>タグ内で利用可能なタグ</p></td></tr><td class="memItemRight" valign="bottom"><b>vbox,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>hbox,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>push-button,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>bool,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>int,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>float,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>double,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>selection,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>rgb,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>progress,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>short-string,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>long-string,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>long-text,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>vec3,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>custom,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>group,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>include,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>listbox,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>path,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+</td></table><br><ul type="circle">
+<li><b>id</b>	type = xsd:integer</li><p>    識別子  </p>
+</ul>
+<table width="500"><tr><td class="indexkey"><b>group</b></td></tr></table><p>    グループ  </p>
+<table border="0" width="350" cellpadding="0" cellspacing="0"><tr><td colspan="2"><p>タグ内で利用可能なタグ</p></td></tr><td class="memItemRight" valign="bottom"><b>vbox,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>hbox,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>push-button,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>bool,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>int,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>float,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>double,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>selection,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>rgb,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>progress,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>short-string,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>long-string,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>long-text,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>vec3,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>custom,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>group,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>include,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>listbox,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+<b>path,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+</td></table><br><ul type="circle">
+<li><b>id</b>	type = xsd:integer</li><p>    識別子  </p>
+</ul>
+<ul type="circle">
+<li><b>swap_boxes</b>	type = xsd:boolean</li><p>    trueを指定すると、内包する複数のbox itemを同じ場所に重ね、そのうち一つを表示するようになります。  </p>
+<p>    tab itemと同じ記述になります。  </p>
+<p>    表示上は通常のグループと同じになり、選択されているコントロールのセットのlabelがタイトルになります。  </p>
+<p>    コントロールセットの切り替え、取得はset_selection(), get_selection()で行います。  </p>
+</ul>
+<ul type="circle">
+<li><b>label</b>	type = xsd:string</li><p>    ラベル  </p>
+</ul>
+<table width="500"><tr><td class="indexkey"><b>push-button</b></td></tr></table><p>    プッシュボタン  </p>
+<ul type="circle">
+<li><b>id</b>	type = xsd:integer</li><p>    識別子  </p>
+</ul>
+<ul type="circle">
+<li><b>label</b>	type = xsd:string</li><p>    ラベル  </p>
+</ul>
+<ul type="circle">
+<li><b>width</b>	type = xsd:integer</li><p>    幅  </p>
+<p>  指定したサイズに比べて文字や画像の幅が大きい場合は、コントロールの幅を自動的に広げます。  </p>
+</ul>
+<ul type="circle">
+<li><b>height</b>	type = xsd:integer</li><p>    高さ  </p>
+<p>  指定したサイズに比べて文字や画像の幅が大きい場合は、コントロールの幅を自動的に広げます。  </p>
+</ul>
+<ul type="circle">
+<li><b>image</b>	type = xsd:string</li><p>    targa画像リソースから画像つきのボタンを作成  </p>
+<p>  ボタンの状態に対する描画状態はOSの標準に合わせています。(画像にアルファチャンネルを設定することを推奨)  </p>
+</ul>
+<ul type="circle">
+<li><b>alternate_image</b>	type = xsd:string</li><p>    ボタン押下時に表示される画像を設定  </p>
+<p>  画像を変更しない場合は指定する必要はありません。  </p>
+</ul>
+<ul type="circle">
+<li><b>tooltip</b>	type = xsd:string</li><p>    ツールティップ  </p>
+</ul>
+<ul type="circle">
+<li><b>terminator</b>	type = xsd:boolean</li><p>    trueの場合、このプッシュボタンをクリックすると、ダイアログが閉じられる。  </p>
+</ul>
+<table width="500"><tr><td class="indexkey"><b>bool</b></td></tr></table><p>    チェックボックス  </p>
+<ul type="circle">
+<li><b>id</b>	type = xsd:integer</li><p>    識別子  </p>
+</ul>
+<ul type="circle">
+<li><b>label</b>	type = xsd:string</li><p>    ラベル  </p>
+</ul>
+<ul type="circle">
+<li><b>push</b>	type = xsd:boolean</li><p>    チェックボックスをボタン型に設定  </p>
+<p>  imageを設定した場合は自動的にボタン型になります。  </p>
+</ul>
+<ul type="circle">
+<li><b>width</b>	type = xsd:integer</li><p>    チェックボックスの幅  </p>
+<p>  指定したサイズに比べて文字や画像の幅が大きい場合は、コントロールの幅を自動的に広げます。  </p>
+</ul>
+<ul type="circle">
+<li><b>height</b>	type = xsd:integer</li><p>    チェックボックスの高さ  </p>
+<p>  指定したサイズに比べて文字や画像の幅が大きい場合は、コントロールの幅を自動的に広げます。  </p>
+</ul>
+<ul type="circle">
+<li><b>image</b>	type = xsd:string</li><p>    targa画像リソースから画像つきのボタンを作成  </p>
+<p>  ボタンの状態に対する描画状態はOSの標準に合わせています。(画像にアルファチャンネルを設定することを推奨)  </p>
+</ul>
+<ul type="circle">
+<li><b>alternate_image</b>	type = xsd:string</li><p>    ボタン押下時に表示される画像を設定  </p>
+<p>  画像を変更しない場合は指定する必要はありません。  </p>
+</ul>
+<ul type="circle">
+<li><b>bordered</b>	type = xsd:boolean</li><p>    枠の描画  </p>
+<p>  falseを指定すると枠なしのボタンになります。  </p>
+<p>  画像を貼り付けたボタンのみ有効です。  </p>
+</ul>
+<ul type="circle">
+<li><b>tooltip</b>	type = xsd:string</li><p>    ツールティップ  </p>
+</ul>
+<ul type="circle">
+<li><b>default</b>	type = xsd:boolean</li><p>    デフォルト値  </p>
+</ul>
+<table width="500"><tr><td class="indexkey"><b>int</b></td></tr></table><p>    整数ボックス  </p>
+<ul type="circle">
+<li><b>id</b>	type = xsd:integer</li><p>    識別子  </p>
+</ul>
+<ul type="circle">
+<li><b>label</b>	type = xsd:string</li><p>    ラベル  </p>
+</ul>
+<ul type="circle">
+<li><b>tooltip</b>	type = xsd:string</li><p>    ツールティップ  </p>
+</ul>
+<ul type="circle">
+<li><b>default</b>	type = xsd:integer</li><p>    デフォルト値  </p>
+</ul>
+<ul type="circle">
+<li><b>stepper</b>	type = xsd:boolean</li><p>    ステッパ  </p>
+</ul>
+<ul type="circle">
+<li><b>unit</b>	type = xsd:string</li><p>    単位  </p>
+</ul>
+<table width="500"><tr><td class="indexkey"><b>float</b></td></tr></table><p>    単精度浮動小数点数ボックス  </p>
+<ul type="circle">
+<li><b>id</b>	type = xsd:integer</li><p>    識別子  </p>
+</ul>
+<ul type="circle">
+<li><b>label</b>	type = xsd:string</li><p>    ラベル  </p>
+</ul>
+<ul type="circle">
+<li><b>tooltip</b>	type = xsd:string</li><p>    ツールティップ  </p>
+</ul>
+<ul type="circle">
+<li><b>default</b>	type = xsd:double</li><p>    デフォルト値  </p>
+</ul>
+<ul type="circle">
+<li><b>unit</b>	type = xsd:string</li><p>    単位  </p>
+</ul>
+<ul type="circle">
+<li><b>slider</b>	type = xsd:boolean</li><p>    スライダ  </p>
+</ul>
+<table width="500"><tr><td class="indexkey"><b>double</b></td></tr></table><p>    倍精度浮動小数点数ボックス  </p>
+<ul type="circle">
+<li><b>id</b>	type = xsd:integer</li><p>    識別子  </p>
+</ul>
+<ul type="circle">
+<li><b>label</b>	type = xsd:string</li><p>    ラベル  </p>
+</ul>
+<ul type="circle">
+<li><b>tooltip</b>	type = xsd:string</li><p>    ツールティップ  </p>
+</ul>
+<ul type="circle">
+<li><b>default</b>	type = xsd:double</li><p>    デフォルト値  </p>
+</ul>
+<ul type="circle">
+<li><b>unit</b>	type = xsd:string</li><p>    単位  </p>
+</ul>
+<ul type="circle">
+<li><b>slider</b>	type = xsd:boolean</li><p>    スライダ  </p>
+</ul>
+<table width="500"><tr><td class="indexkey"><b>selection</b></td></tr></table><p>    選択ポップアップメニュ竏鈀  </p>
+<ul type="circle">
+<li><b>id</b>	type = xsd:integer</li><p>    識別子  </p>
+</ul>
+<ul type="circle">
+<li><b>label</b>	type = xsd:string</li><p>    ラベル  </p>
+</ul>
+<ul type="circle">
+<li><b>tooltip</b>	type = xsd:string</li><p>    ツールティップ  </p>
+</ul>
+<ul type="circle">
+<li><b>default</b>	type = xsd:nonNegativeInteger</li><p>    デフォルト値  </p>
+</ul>
+<table width="500"><tr><td class="indexkey"><b>rgb</b></td></tr></table><p>    カラーボックス  </p>
+<ul type="circle">
+<li><b>id</b>	type = xsd:integer</li><p>    識別子  </p>
+</ul>
+<ul type="circle">
+<li><b>label</b>	type = xsd:string</li><p>    ラベル  </p>
+</ul>
+<ul type="circle">
+<li><b>tooltip</b>	type = xsd:string</li><p>    ツールティップ  </p>
+</ul>
+<ul type="circle">
+<li><b>default</b>	type = rgb_type</li><p>    デフォルト値  </p>
+</ul>
+<ul type="circle">
+<li><b>unit</b>	type = xsd:string</li><p>    単位  </p>
+</ul>
+<table width="500"><tr><td class="indexkey"><b>progress</b></td></tr></table><p>    プログレスバー  </p>
+<ul type="circle">
+<li><b>id</b>	type = xsd:integer</li><p>    識別子  </p>
+</ul>
+<ul type="circle">
+<li><b>label</b>	type = xsd:string</li><p>    ラベル  </p>
+</ul>
+<ul type="circle">
+<li><b>tooltip</b>	type = xsd:string</li><p>    ツールティップ  </p>
+</ul>
+<table width="500"><tr><td class="indexkey"><b>short-string</b></td></tr></table><p>    短い文字列  </p>
+<ul type="circle">
+<li><b>id</b>	type = xsd:integer</li><p>    識別子  </p>
+</ul>
+<ul type="circle">
+<li><b>label</b>	type = xsd:string</li><p>    ラベル  </p>
+</ul>
+<ul type="circle">
+<li><b>default</b>	type = xsd:string</li><p>    デフォルト値  </p>
+</ul>
+<ul type="circle">
+<li><b>tooltip</b>	type = xsd:string</li><p>    ツールティップ  </p>
+</ul>
+<ul type="circle">
+<li><b>unit</b>	type = xsd:string</li><p>    単位  </p>
+</ul>
+<table width="500"><tr><td class="indexkey"><b>long-string</b></td></tr></table><p>    長い文字列  </p>
+<ul type="circle">
+<li><b>id</b>	type = xsd:integer</li><p>    識別子  </p>
+</ul>
+<ul type="circle">
+<li><b>label</b>	type = xsd:string</li><p>    ラベル  </p>
+</ul>
+<ul type="circle">
+<li><b>tooltip</b>	type = xsd:string</li><p>    ツールティップ  </p>
+</ul>
+<ul type="circle">
+<li><b>default</b>	type = xsd:string</li><p>    デフォルト  </p>
+</ul>
+<ul type="circle">
+<li><b>unit</b>	type = xsd:string</li><p>    単位  </p>
+</ul>
+<table width="500"><tr><td class="indexkey"><b>long-text</b></td></tr></table><p>    長いテキスト  </p>
+<ul type="circle">
+<li><b>id</b>	type = xsd:integer</li><p>    識別子  </p>
+</ul>
+<ul type="circle">
+<li><b>label</b>	type = xsd:string</li><p>    ラベル  </p>
+</ul>
+<ul type="circle">
+<li><b>tooltip</b>	type = xsd:string</li><p>    ツールティップ  </p>
+</ul>
+<ul type="circle">
+<li><b>default</b>	type = xsd:string</li><p>    デフォルト値  </p>
+</ul>
+<ul type="circle">
+<li><b>editable</b>	type = xsd:boolean</li><p>    編集可能  </p>
+</ul>
+<ul type="circle">
+<li><b>lines</b>	type = xsd:integer</li><p>    テキストの行数  </p>
+</ul>
+<ul type="circle">
+<li><b>short_text</b>	type = xsd:boolean</li><p>    ショートテキスト  </p>
+</ul>
+<ul type="circle">
+<li><b>min_width</b>	type = xsd:integer</li><p>   最小の幅  </p>
+</ul>
+<ul type="circle">
+<li><b>min_height</b>	type = xsd:integer</li><p>   最小の高さ  </p>
+</ul>
+<ul type="circle">
+<li><b>max_width</b>	type = xsd:integer</li><p>   最大の幅  </p>
+</ul>
+<ul type="circle">
+<li><b>max_height</b>	type = xsd:integer</li><p>   最大の高さ  </p>
+</ul>
+<ul type="circle">
+<li><b>resizable</b>	type = xsd:boolean</li><p>   リサイズ可能なダイアログ  </p>
+</ul>
+<table width="500"><tr><td class="indexkey"><b>vec3</b></td></tr></table><p>    vec3  </p>
+<ul type="circle">
+<li><b>id</b>	type = xsd:integer</li><p>    識別子  </p>
+</ul>
+<ul type="circle">
+<li><b>label</b>	type = xsd:string</li><p>    ラベル  </p>
+</ul>
+<ul type="circle">
+<li><b>tooltip</b>	type = xsd:string</li><p>    ツールティップ  </p>
+</ul>
+<ul type="circle">
+<li><b>default</b>	type = xsd:string</li><p>    デフォルト値  </p>
+</ul>
+<ul type="circle">
+<li><b>unit</b>	type = xsd:string</li><p>    単位  </p>
+</ul>
+<table width="500"><tr><td class="indexkey"><b>listbox</b></td></tr></table><p>    リストボックス  </p>
+<ul type="circle">
+<li><b>id</b>	type = xsd:integer</li><p>    識別子  </p>
+</ul>
+<ul type="circle">
+<li><b>lines</b>	type = xsd:integer</li><p>    リストの行数  </p>
+</ul>
+<ul type="circle">
+<li><b>width</b>	type = xsd:integer</li><p>    幅  </p>
+</ul>
+<ul type="circle">
+<li><b>has_checkbox</b>	type = xsd:boolean</li><p>    trueの場合、リストの項目にチェックボックスが追加されます。  </p>
+<p>    チェックの状態が変更されると、respond()の呼び出しでactionにsx::dialog_item::item_changedが渡されます。  </p>
+<p>    デフォルトはtrue(明示的に指定することを推奨)  </p>
+</ul>
+<ul type="circle">
+<li><b>editable</b>	type = xsd:boolean</li><p>    trueの場合、リストの項目をダブルクリックするとテキスト編集モードになり、項目を編集することができます。  </p>
+<p>    テキストが編集されると、respond()の呼び出しでactionにsx::dialog_item::item_changedが渡されます。  </p>
+<p>    デフォルトはtrue(明示的に指定することを推奨)  </p>
+</ul>
+<ul type="circle">
+<li><b>resizable</b>	type = xsd:boolean</li><p>   リサイズ可能なコントロール  </p>
+</ul>
+<ul type="circle">
+<li><b>min_width</b>	type = xsd:integer</li><p>   最小の幅  </p>
+</ul>
+<ul type="circle">
+<li><b>max_width</b>	type = xsd:integer</li><p>   最大の幅  </p>
+</ul>
+<ul type="circle">
+<li><b>min_height</b>	type = xsd:integer</li><p>   最小の高さ  </p>
+</ul>
+<ul type="circle">
+<li><b>max_height</b>	type = xsd:integer</li><p>   最大の高さ  </p>
+</ul>
+<ul type="circle">
+<li><b>tooltip</b>	type = xsd:string</li><p>    ツールティップ  </p>
+</ul>
+<table width="500"><tr><td class="indexkey"><b>custom</b></td></tr></table><p>    カスタムアイテム  </p>
+<p>  </p>
+<p>  縦、横のサイズを固定する場合は、最大サイズと最小サイズを初期値と同じ値に設定します。  </p>
+<p>  動作中にサイズを変更した場合は、window_interface::resize() が呼ばれます。  </p>
+<p>  オーバーライドする場合は、関数内で必ず、window_interface::resize() を呼び出す必要があります。  </p>
+<p>  サイズの変更に合わせて再描画する場合は、window_interface::paint() を呼び出します。  </p>
+<ul type="circle">
+<li><b>id</b>	type = xsd:integer</li><p>    識別子  </p>
+</ul>
+<ul type="circle">
+<li><b>width</b>	type = xsd:integer</li><p>    幅  </p>
+</ul>
+<ul type="circle">
+<li><b>height</b>	type = xsd:integer</li><p>    高さ  </p>
+</ul>
+<ul type="circle">
+<li><b>min_width</b>	type = xsd:integer</li><p>   最小の幅  </p>
+</ul>
+<ul type="circle">
+<li><b>min_height</b>	type = xsd:integer</li><p>   最小の高さ  </p>
+</ul>
+<ul type="circle">
+<li><b>max_width</b>	type = xsd:integer</li><p>   最大の幅  </p>
+</ul>
+<ul type="circle">
+<li><b>max_height</b>	type = xsd:integer</li><p>   最大の高さ  </p>
+</ul>
+<ul type="circle">
+<li><b>resizable</b>	type = xsd:boolean</li><p>   リサイズ可能なコントロール  </p>
+</ul>
+<ul type="circle">
+<li><b>tooltip</b>	type = xsd:string</li><p>    ツールティップ  </p>
+</ul>
+<table width="500"><tr><td class="indexkey"><b>include</b></td></tr></table><p>
+      </p>
+<ul type="circle">
+<li><b>label</b>	type = xsd:string</li><p>
+          </p>
+</ul>
+<ul type="circle">
+<li><b>index</b>	type = xsd:integer</li><p>
+          </p>
+</ul>
+<table width="500"><tr><td class="indexkey"><b>path</b></td></tr></table><p>
+      </p>
+<ul type="circle">
+<li><b>id</b>	type = xsd:integer</li><p>    識別子  </p>
+</ul>
+<ul type="circle">
+<li><b>label</b>	type = xsd:string</li><p>
+          </p>
+</ul>
+<ul type="circle">
+<li><b>tooltip</b>	type = xsd:string</li><p>    ツールティップ  </p>
+</ul>
+</body></html>
+ </div>
+<br><br>
+<hr>
+<div align="center">Copyright &copy; e frontier, Inc. All rights reserved.</div>
+</body></html>
