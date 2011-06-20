@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?><dialog default_button="true" resizable="true" title="simple dialog">
+	<vbox>
+		<short-string id="100" label="ficelle courte:"/>
+		<long-string id="101" label="ficelle longue:"/>
+		<long-text id="102" label="texte long:" lines="3"/>
+		<hbox>
+			<push-button id="103" label="pousser le bouton 0"/>
+			<push-button id="104" label="pousser le bouton 1"/>
+			<push-button id="105" label="pousser le bouton 2"/>
+		</hbox>
+		<bool default="true" id="106" label="bool"/>
+		<int default="100" id="107" label="int:"/>
+		<int id="108" label="int with stepper:" stepper="true"/>
+		<float default="109.2" id="109" label="float:"/>
+		<float id="110" label="float with slider:" slider="true"/>
+		<double id="111" label="double:"/>
+		<selection id="112" label="sélection:|zéro|l'un|deux"/>
+		<rgb id="113" label="rgb"/>
+		<vec3 id="114" label="vec3"/>
+		<custom height="150" id="115" max_height="400" max_width="600" resizable="true" width="200"/>
+		<listbox id="116"/>
+	</vbox>
+</dialog>

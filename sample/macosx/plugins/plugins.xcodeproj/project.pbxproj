@@ -1,0 +1,3074 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		FFA83A8F07C086D9004F8E33 /* all */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = B894B7EA08633A8900B04B44 /* Build configuration list for PBXAggregateTarget "all" */;
+			buildPhases = (
+			);
+			dependencies = (
+				4A83673F11A11647009F9E06 /* PBXTargetDependency */,
+				4A83674111A11647009F9E06 /* PBXTargetDependency */,
+				4A83674311A11647009F9E06 /* PBXTargetDependency */,
+				4A83674511A11647009F9E06 /* PBXTargetDependency */,
+				4A83674711A11647009F9E06 /* PBXTargetDependency */,
+				4A83674911A11647009F9E06 /* PBXTargetDependency */,
+				4A83674B11A11647009F9E06 /* PBXTargetDependency */,
+				4A83674D11A11647009F9E06 /* PBXTargetDependency */,
+				4A83674F11A11647009F9E06 /* PBXTargetDependency */,
+				4A83675111A11647009F9E06 /* PBXTargetDependency */,
+				4A83675311A11647009F9E06 /* PBXTargetDependency */,
+				4A83675511A11647009F9E06 /* PBXTargetDependency */,
+				4A83675711A11647009F9E06 /* PBXTargetDependency */,
+				4A83675911A11647009F9E06 /* PBXTargetDependency */,
+				4A83675B11A11647009F9E06 /* PBXTargetDependency */,
+				4A83675D11A11647009F9E06 /* PBXTargetDependency */,
+				4A83675F11A11647009F9E06 /* PBXTargetDependency */,
+			);
+			name = all;
+			productName = all;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		16F9E21B0546323A00F09F49 /* shdplugin.icns in Resources */ = {isa = PBXBuildFile; fileRef = 16F9E21A0546323A00F09F49 /* shdplugin.icns */; };
+		16F9E21C0546323A00F09F49 /* shdplugin.icns in Resources */ = {isa = PBXBuildFile; fileRef = 16F9E21A0546323A00F09F49 /* shdplugin.icns */; };
+		16F9E21D0546323A00F09F49 /* shdplugin.icns in Resources */ = {isa = PBXBuildFile; fileRef = 16F9E21A0546323A00F09F49 /* shdplugin.icns */; };
+		16F9E21E0546323A00F09F49 /* shdplugin.icns in Resources */ = {isa = PBXBuildFile; fileRef = 16F9E21A0546323A00F09F49 /* shdplugin.icns */; };
+		16F9E21F0546323A00F09F49 /* shdplugin.icns in Resources */ = {isa = PBXBuildFile; fileRef = 16F9E21A0546323A00F09F49 /* shdplugin.icns */; };
+		16F9E2200546323A00F09F49 /* shdplugin.icns in Resources */ = {isa = PBXBuildFile; fileRef = 16F9E21A0546323A00F09F49 /* shdplugin.icns */; };
+		16F9E2210546323A00F09F49 /* shdplugin.icns in Resources */ = {isa = PBXBuildFile; fileRef = 16F9E21A0546323A00F09F49 /* shdplugin.icns */; };
+		16F9E2220546323A00F09F49 /* shdplugin.icns in Resources */ = {isa = PBXBuildFile; fileRef = 16F9E21A0546323A00F09F49 /* shdplugin.icns */; };
+		16F9E2230546323A00F09F49 /* shdplugin.icns in Resources */ = {isa = PBXBuildFile; fileRef = 16F9E21A0546323A00F09F49 /* shdplugin.icns */; };
+		16F9E2240546323A00F09F49 /* shdplugin.icns in Resources */ = {isa = PBXBuildFile; fileRef = 16F9E21A0546323A00F09F49 /* shdplugin.icns */; };
+		16F9E2260546323A00F09F49 /* shdplugin.icns in Resources */ = {isa = PBXBuildFile; fileRef = 16F9E21A0546323A00F09F49 /* shdplugin.icns */; };
+		16F9E2270546323A00F09F49 /* shdplugin.icns in Resources */ = {isa = PBXBuildFile; fileRef = 16F9E21A0546323A00F09F49 /* shdplugin.icns */; };
+		16F9E2280546323A00F09F49 /* shdplugin.icns in Resources */ = {isa = PBXBuildFile; fileRef = 16F9E21A0546323A00F09F49 /* shdplugin.icns */; };
+		16F9E2290546323A00F09F49 /* shdplugin.icns in Resources */ = {isa = PBXBuildFile; fileRef = 16F9E21A0546323A00F09F49 /* shdplugin.icns */; };
+		16F9E22A0546323A00F09F49 /* shdplugin.icns in Resources */ = {isa = PBXBuildFile; fileRef = 16F9E21A0546323A00F09F49 /* shdplugin.icns */; };
+		4A1BD1FA11A2412000AB38FA /* debug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A1BD1F911A2412000AB38FA /* debug.cpp */; };
+		4A1BD1FB11A2412000AB38FA /* debug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A1BD1F911A2412000AB38FA /* debug.cpp */; };
+		4A1BD1FC11A2412000AB38FA /* debug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A1BD1F911A2412000AB38FA /* debug.cpp */; };
+		4A1BD1FD11A2412000AB38FA /* debug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A1BD1F911A2412000AB38FA /* debug.cpp */; };
+		4A1BD1FE11A2412000AB38FA /* debug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A1BD1F911A2412000AB38FA /* debug.cpp */; };
+		4A1BD1FF11A2412000AB38FA /* debug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A1BD1F911A2412000AB38FA /* debug.cpp */; };
+		4A1BD20011A2412000AB38FA /* debug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A1BD1F911A2412000AB38FA /* debug.cpp */; };
+		4A1BD20111A2412000AB38FA /* debug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A1BD1F911A2412000AB38FA /* debug.cpp */; };
+		4A1BD20211A2412000AB38FA /* debug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A1BD1F911A2412000AB38FA /* debug.cpp */; };
+		4A1BD20311A2412000AB38FA /* debug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A1BD1F911A2412000AB38FA /* debug.cpp */; };
+		4A1BD20411A2412000AB38FA /* debug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A1BD1F911A2412000AB38FA /* debug.cpp */; };
+		4A1BD20511A2412000AB38FA /* debug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A1BD1F911A2412000AB38FA /* debug.cpp */; };
+		4A1BD20611A2412000AB38FA /* debug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A1BD1F911A2412000AB38FA /* debug.cpp */; };
+		4A1BD20711A2412000AB38FA /* debug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A1BD1F911A2412000AB38FA /* debug.cpp */; };
+		4A1BD20811A2412000AB38FA /* debug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A1BD1F911A2412000AB38FA /* debug.cpp */; };
+		4A1BD20911A2412000AB38FA /* debug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A1BD1F911A2412000AB38FA /* debug.cpp */; };
+		4A1BD20A11A2412000AB38FA /* debug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A1BD1F911A2412000AB38FA /* debug.cpp */; };
+		4A8367B711A11E8D009F9E06 /* vectors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A8367B611A11E8D009F9E06 /* vectors.cpp */; };
+		4A8367B811A11E8D009F9E06 /* vectors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A8367B611A11E8D009F9E06 /* vectors.cpp */; };
+		4A8367B911A11E8D009F9E06 /* vectors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A8367B611A11E8D009F9E06 /* vectors.cpp */; };
+		4A8367BA11A11E8D009F9E06 /* vectors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A8367B611A11E8D009F9E06 /* vectors.cpp */; };
+		4A8367BB11A11E8D009F9E06 /* vectors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A8367B611A11E8D009F9E06 /* vectors.cpp */; };
+		4A8367BC11A11E8D009F9E06 /* vectors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A8367B611A11E8D009F9E06 /* vectors.cpp */; };
+		4A8367BD11A11E8D009F9E06 /* vectors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A8367B611A11E8D009F9E06 /* vectors.cpp */; };
+		4A8367BE11A11E8D009F9E06 /* vectors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A8367B611A11E8D009F9E06 /* vectors.cpp */; };
+		4A8367BF11A11E8D009F9E06 /* vectors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A8367B611A11E8D009F9E06 /* vectors.cpp */; };
+		4A8367C011A11E8D009F9E06 /* vectors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A8367B611A11E8D009F9E06 /* vectors.cpp */; };
+		4A8367C111A11E8D009F9E06 /* vectors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A8367B611A11E8D009F9E06 /* vectors.cpp */; };
+		4A8367C211A11E8D009F9E06 /* vectors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A8367B611A11E8D009F9E06 /* vectors.cpp */; };
+		4A8367C311A11E8D009F9E06 /* vectors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A8367B611A11E8D009F9E06 /* vectors.cpp */; };
+		4A8367C411A11E8D009F9E06 /* vectors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A8367B611A11E8D009F9E06 /* vectors.cpp */; };
+		4A8367C511A11E8D009F9E06 /* vectors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A8367B611A11E8D009F9E06 /* vectors.cpp */; };
+		4A8367C611A11E8D009F9E06 /* vectors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A8367B611A11E8D009F9E06 /* vectors.cpp */; };
+		4A8367C711A11E8D009F9E06 /* vectors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4A8367B611A11E8D009F9E06 /* vectors.cpp */; };
+		B8364270063886F7007BED7D /* sxuls in Resources */ = {isa = PBXBuildFile; fileRef = B836426C063886F7007BED7D /* sxuls */; };
+		B850A23D0EF7154C00F912F9 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FA2D5004BCE0E800A80009 /* Carbon.framework */; };
+		B850A2BC0EF7155D00F912F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089C1672FE841209C02AAC07 /* Foundation.framework */; };
+		B850A3700EF7156600F912F9 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089C167FFE841241C02AAC07 /* AppKit.framework */; };
+		B850A4270EF715C100F912F9 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B850A4260EF715C100F912F9 /* IOKit.framework */; };
+		B850A44F0EF7162300F912F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089C1672FE841209C02AAC07 /* Foundation.framework */; };
+		B850A4500EF7162700F912F9 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089C167FFE841241C02AAC07 /* AppKit.framework */; };
+		B850A4510EF7162C00F912F9 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FA2D5004BCE0E800A80009 /* Carbon.framework */; };
+		B850A4520EF7163900F912F9 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B850A4260EF715C100F912F9 /* IOKit.framework */; };
+		B850A4650EF7169C00F912F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089C1672FE841209C02AAC07 /* Foundation.framework */; };
+		B850A4660EF716A200F912F9 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089C167FFE841241C02AAC07 /* AppKit.framework */; };
+		B850A4670EF716A700F912F9 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FA2D5004BCE0E800A80009 /* Carbon.framework */; };
+		B850A4690EF716B100F912F9 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B850A4260EF715C100F912F9 /* IOKit.framework */; };
+		B861C5260EF7611300B8F42E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089C1672FE841209C02AAC07 /* Foundation.framework */; };
+		B861C5270EF7611300B8F42E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089C1672FE841209C02AAC07 /* Foundation.framework */; };
+		B861C5280EF7611400B8F42E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089C1672FE841209C02AAC07 /* Foundation.framework */; };
+		B861C5290EF7611400B8F42E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089C1672FE841209C02AAC07 /* Foundation.framework */; };
+		B861C52A0EF7611500B8F42E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089C1672FE841209C02AAC07 /* Foundation.framework */; };
+		B861C52B0EF7611500B8F42E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089C1672FE841209C02AAC07 /* Foundation.framework */; };
+		B861C52C0EF7611600B8F42E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089C1672FE841209C02AAC07 /* Foundation.framework */; };
+		B861C52D0EF7611700B8F42E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089C1672FE841209C02AAC07 /* Foundation.framework */; };
+		B861C52E0EF7611700B8F42E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089C1672FE841209C02AAC07 /* Foundation.framework */; };
+		B861C52F0EF7611800B8F42E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089C1672FE841209C02AAC07 /* Foundation.framework */; };
+		B861C5300EF7611900B8F42E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089C1672FE841209C02AAC07 /* Foundation.framework */; };
+		B861C5310EF7611A00B8F42E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089C1672FE841209C02AAC07 /* Foundation.framework */; };
+		B861C5320EF7611A00B8F42E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089C1672FE841209C02AAC07 /* Foundation.framework */; };
+		B861C5330EF7611B00B8F42E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089C1672FE841209C02AAC07 /* Foundation.framework */; };
+		B861C5E60EF7612200B8F42E /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089C167FFE841241C02AAC07 /* AppKit.framework */; };
+		B861C5E70EF7612300B8F42E /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089C167FFE841241C02AAC07 /* AppKit.framework */; };
+		B861C5E80EF7612300B8F42E /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089C167FFE841241C02AAC07 /* AppKit.framework */; };
+		B861C5E90EF7612400B8F42E /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089C167FFE841241C02AAC07 /* AppKit.framework */; };
+		B861C5EA0EF7612600B8F42E /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089C167FFE841241C02AAC07 /* AppKit.framework */; };
+		B861C5EB0EF7612700B8F42E /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089C167FFE841241C02AAC07 /* AppKit.framework */; };
+		B861C5EC0EF7612700B8F42E /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089C167FFE841241C02AAC07 /* AppKit.framework */; };
+		B861C5ED0EF7612800B8F42E /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089C167FFE841241C02AAC07 /* AppKit.framework */; };
+		B861C5EE0EF7612800B8F42E /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089C167FFE841241C02AAC07 /* AppKit.framework */; };
+		B861C5EF0EF7612900B8F42E /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089C167FFE841241C02AAC07 /* AppKit.framework */; };
+		B861C5F00EF7612900B8F42E /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089C167FFE841241C02AAC07 /* AppKit.framework */; };
+		B861C5F10EF7612A00B8F42E /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089C167FFE841241C02AAC07 /* AppKit.framework */; };
+		B861C5F20EF7612B00B8F42E /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089C167FFE841241C02AAC07 /* AppKit.framework */; };
+		B861C5F30EF7612C00B8F42E /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089C167FFE841241C02AAC07 /* AppKit.framework */; };
+		B861C6D30EF7613B00B8F42E /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FA2D5004BCE0E800A80009 /* Carbon.framework */; };
+		B861C6D40EF7613C00B8F42E /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FA2D5004BCE0E800A80009 /* Carbon.framework */; };
+		B861C6D50EF7613E00B8F42E /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FA2D5004BCE0E800A80009 /* Carbon.framework */; };
+		B861C6D60EF7613E00B8F42E /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FA2D5004BCE0E800A80009 /* Carbon.framework */; };
+		B861C6D70EF7613F00B8F42E /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FA2D5004BCE0E800A80009 /* Carbon.framework */; };
+		B861C6D80EF7613F00B8F42E /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FA2D5004BCE0E800A80009 /* Carbon.framework */; };
+		B861C6D90EF7614100B8F42E /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FA2D5004BCE0E800A80009 /* Carbon.framework */; };
+		B861C6DA0EF7614200B8F42E /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FA2D5004BCE0E800A80009 /* Carbon.framework */; };
+		B861C6DB0EF7614200B8F42E /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FA2D5004BCE0E800A80009 /* Carbon.framework */; };
+		B861C6DC0EF7614300B8F42E /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FA2D5004BCE0E800A80009 /* Carbon.framework */; };
+		B861C6DD0EF7614300B8F42E /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FA2D5004BCE0E800A80009 /* Carbon.framework */; };
+		B861C6DE0EF7614500B8F42E /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FA2D5004BCE0E800A80009 /* Carbon.framework */; };
+		B861C6DF0EF7614600B8F42E /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FA2D5004BCE0E800A80009 /* Carbon.framework */; };
+		B861C6E00EF7614600B8F42E /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FA2D5004BCE0E800A80009 /* Carbon.framework */; };
+		B861C6F30EF7615A00B8F42E /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B850A4260EF715C100F912F9 /* IOKit.framework */; };
+		B861C6F40EF7615A00B8F42E /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B850A4260EF715C100F912F9 /* IOKit.framework */; };
+		B861C6F50EF7615B00B8F42E /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B850A4260EF715C100F912F9 /* IOKit.framework */; };
+		B861C6F60EF7615B00B8F42E /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B850A4260EF715C100F912F9 /* IOKit.framework */; };
+		B861C6F70EF7615C00B8F42E /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B850A4260EF715C100F912F9 /* IOKit.framework */; };
+		B861C6F80EF7615D00B8F42E /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B850A4260EF715C100F912F9 /* IOKit.framework */; };
+		B861C6F90EF7615E00B8F42E /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B850A4260EF715C100F912F9 /* IOKit.framework */; };
+		B861C6FA0EF7615E00B8F42E /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B850A4260EF715C100F912F9 /* IOKit.framework */; };
+		B861C6FB0EF7615F00B8F42E /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B850A4260EF715C100F912F9 /* IOKit.framework */; };
+		B861C6FC0EF7616000B8F42E /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B850A4260EF715C100F912F9 /* IOKit.framework */; };
+		B861C6FD0EF7616000B8F42E /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B850A4260EF715C100F912F9 /* IOKit.framework */; };
+		B861C6FE0EF7616200B8F42E /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B850A4260EF715C100F912F9 /* IOKit.framework */; };
+		B861C6FF0EF7616200B8F42E /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B850A4260EF715C100F912F9 /* IOKit.framework */; };
+		B861C7000EF7616300B8F42E /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B850A4260EF715C100F912F9 /* IOKit.framework */; };
+		B8BFE162054B1BA700301E9D /* undo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8BFE161054B1BA700301E9D /* undo.cpp */; };
+		B8C4EBF804BCABAB00A80009 /* multiplugin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8C4EBF704BCABAB00A80009 /* multiplugin.cpp */; };
+		B8C4EC0004BCAC5D00A80009 /* attribute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8C4EBFF04BCAC5D00A80009 /* attribute.cpp */; };
+		B8C4EC0204BCAC6B00A80009 /* browser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8C4EC0104BCAC6B00A80009 /* browser.cpp */; };
+		B8C4EC0404BCAC7800A80009 /* creator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8C4EC0304BCAC7800A80009 /* creator.cpp */; };
+		B8C4EC0604BCAC8400A80009 /* effector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8C4EC0504BCAC8400A80009 /* effector.cpp */; };
+		B8C4EC0804BCACA000A80009 /* exporter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8C4EC0704BCACA000A80009 /* exporter.cpp */; };
+		B8C4EC0A04BCACAE00A80009 /* figure.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8C4EC0904BCACAE00A80009 /* figure.cpp */; };
+		B8C4EC0C04BCACC500A80009 /* imagebox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8C4EC0B04BCACC500A80009 /* imagebox.cpp */; };
+		B8C4EC0E04BCACD400A80009 /* importer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8C4EC0D04BCACD400A80009 /* importer.cpp */; };
+		B8C4EC1004BCACE100A80009 /* modifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8C4EC0F04BCACE100A80009 /* modifier.cpp */; };
+		B8C4EC1404BCACFE00A80009 /* plugin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8C4EC1304BCACFE00A80009 /* plugin.cpp */; };
+		B8C4EC1604BCAD1500A80009 /* renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8C4EC1504BCAD1500A80009 /* renderer.cpp */; };
+		B8C4EC1904BCAD5800A80009 /* resident.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8C4EC1804BCAD5800A80009 /* resident.cpp */; };
+		B8C4EC1B04BCAD6500A80009 /* shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8C4EC1A04BCAD6500A80009 /* shader.cpp */; };
+		B8C4EC1D04BCAD7200A80009 /* window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8C4EC1C04BCAD7200A80009 /* window.cpp */; };
+		B8CA261507E8B5F80064EDB6 /* sxuls in Resources */ = {isa = PBXBuildFile; fileRef = B836426C063886F7007BED7D /* sxuls */; };
+		B8CB29080EF5D8F500A5934C /* com.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8CB29070EF5D8F500A5934C /* com.cpp */; };
+		B8CB29090EF5D8F500A5934C /* com.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8CB29070EF5D8F500A5934C /* com.cpp */; };
+		B8CB290A0EF5D8F500A5934C /* com.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8CB29070EF5D8F500A5934C /* com.cpp */; };
+		B8CB290B0EF5D8F500A5934C /* com.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8CB29070EF5D8F500A5934C /* com.cpp */; };
+		B8CB290C0EF5D8F500A5934C /* com.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8CB29070EF5D8F500A5934C /* com.cpp */; };
+		B8CB290D0EF5D8F500A5934C /* com.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8CB29070EF5D8F500A5934C /* com.cpp */; };
+		B8CB290E0EF5D8F500A5934C /* com.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8CB29070EF5D8F500A5934C /* com.cpp */; };
+		B8CB290F0EF5D8F500A5934C /* com.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8CB29070EF5D8F500A5934C /* com.cpp */; };
+		B8CB29100EF5D8F500A5934C /* com.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8CB29070EF5D8F500A5934C /* com.cpp */; };
+		B8CB29110EF5D8F500A5934C /* com.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8CB29070EF5D8F500A5934C /* com.cpp */; };
+		B8CB29130EF5D8F500A5934C /* com.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8CB29070EF5D8F500A5934C /* com.cpp */; };
+		B8CB29140EF5D8F500A5934C /* com.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8CB29070EF5D8F500A5934C /* com.cpp */; };
+		B8CB29150EF5D8F500A5934C /* com.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8CB29070EF5D8F500A5934C /* com.cpp */; };
+		B8CB29160EF5D8F500A5934C /* com.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8CB29070EF5D8F500A5934C /* com.cpp */; };
+		B8CB29170EF5D8F500A5934C /* com.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8CB29070EF5D8F500A5934C /* com.cpp */; };
+		B8CB29180EF5D8F500A5934C /* com.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8CB29070EF5D8F500A5934C /* com.cpp */; };
+		B8CB29190EF5D8F500A5934C /* com.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8CB29070EF5D8F500A5934C /* com.cpp */; };
+		B8D8F0BF0EF711AF00BBE4FE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		B8D8F0C00EF711AF00BBE4FE /* shdplugin.icns in Resources */ = {isa = PBXBuildFile; fileRef = 16F9E21A0546323A00F09F49 /* shdplugin.icns */; };
+		B8E4B4A30638817200E3C95D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		B8E4B4A40638817200E3C95D /* shdplugin.icns in Resources */ = {isa = PBXBuildFile; fileRef = 16F9E21A0546323A00F09F49 /* shdplugin.icns */; };
+		B8E4B4D7063881E100E3C95D /* dialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8E4B4AB063881B000E3C95D /* dialog.cpp */; };
+		B8EBACC80EF8816E00C72891 /* simple_window_image.tga in Resources */ = {isa = PBXBuildFile; fileRef = B84DD62F04BF36A900A80009 /* simple_window_image.tga */; };
+		B8F42A0904BCB6DD00A80009 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		B8F42A0C04BCB6F000A80009 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		B8F42A0D04BCB6F700A80009 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		B8F42A0E04BCB6FC00A80009 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		B8F42A0F04BCB70400A80009 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		B8F42A1004BCB70C00A80009 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		B8F42A1104BCB71100A80009 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		B8F42A1204BCB71A00A80009 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		B8F42A1304BCB72000A80009 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		B8F42A1404BCB72600A80009 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		B8F42A1604BCB73500A80009 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		B8F42A1704BCB73B00A80009 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		B8F42A1804BCB74100A80009 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		B8F42A1904BCB74700A80009 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		B8F42A1A04BCB74D00A80009 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		B8FA2DEA04BCE16F00A80009 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8FA2DE904BCE16F00A80009 /* OpenGL.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4A83673E11A11647009F9E06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8C4EB9704BCAA2E00A80009;
+			remoteInfo = attribute;
+		};
+		4A83674011A11647009F9E06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8C4EB9D04BCAA3E00A80009;
+			remoteInfo = browser;
+		};
+		4A83674211A11647009F9E06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8C4EBA304BCAA4D00A80009;
+			remoteInfo = creator;
+		};
+		4A83674411A11647009F9E06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8E4B49E0638817200E3C95D;
+			remoteInfo = dialog;
+		};
+		4A83674611A11647009F9E06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8C4EBA904BCAA5A00A80009;
+			remoteInfo = effector;
+		};
+		4A83674811A11647009F9E06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8C4EBAF04BCAA6A00A80009;
+			remoteInfo = exporter;
+		};
+		4A83674A11A11647009F9E06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8C4EBB504BCAA7700A80009;
+			remoteInfo = figure;
+		};
+		4A83674C11A11647009F9E06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8C4EBBB04BCAA8500A80009;
+			remoteInfo = imagebox;
+		};
+		4A83674E11A11647009F9E06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8C4EBC104BCAA9300A80009;
+			remoteInfo = importer;
+		};
+		4A83675011A11647009F9E06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8C4EBC704BCAAA100A80009;
+			remoteInfo = modifier;
+		};
+		4A83675211A11647009F9E06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8C4EB8504BCA9FB00A80009;
+			remoteInfo = multiplugin;
+		};
+		4A83675411A11647009F9E06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8C4EBD304BCAAC900A80009;
+			remoteInfo = plugin;
+		};
+		4A83675611A11647009F9E06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8C4EBD904BCAAD700A80009;
+			remoteInfo = renderer;
+		};
+		4A83675811A11647009F9E06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8C4EBDF04BCAAE200A80009;
+			remoteInfo = resident;
+		};
+		4A83675A11A11647009F9E06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8C4EBE504BCAAEF00A80009;
+			remoteInfo = shader;
+		};
+		4A83675C11A11647009F9E06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8C4EBEB04BCAAFC00A80009;
+			remoteInfo = window;
+		};
+		4A83675E11A11647009F9E06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8BFE0F8054B1B7B00301E9D;
+			remoteInfo = undo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		089C1672FE841209C02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		089C167EFE841241C02AAC07 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = InfoPlist.strings; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		089C167FFE841241C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		16F9E21A0546323A00F09F49 /* shdplugin.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = shdplugin.icns; path = icns/shdplugin.icns; sourceTree = SOURCE_ROOT; };
+		4A1BD1F911A2412000AB38FA /* debug.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = debug.cpp; path = ../../../include/sx/core/debug.cpp; sourceTree = SOURCE_ROOT; };
+		4A8367AF11A11CA1009F9E06 /* config.plugins.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = config.plugins.xcconfig; path = ../xcconfig/config.plugins.xcconfig; sourceTree = SOURCE_ROOT; };
+		4A8367B611A11E8D009F9E06 /* vectors.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vectors.cpp; path = ../../../include/sx/core/vectors.cpp; sourceTree = SOURCE_ROOT; };
+		B84DD62F04BF36A900A80009 /* simple_window_image.tga */ = {isa = PBXFileReference; lastKnownFileType = file; name = simple_window_image.tga; path = ../../source/plugins/resources/images/simple_window_image.tga; sourceTree = SOURCE_ROOT; };
+		B850A4260EF715C100F912F9 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
+		B87FD1680703B9FD009BA8F2 /* de */ = {isa = PBXFileReference; lastKnownFileType = folder; name = de; path = de.lproj/sxuls; sourceTree = "<group>"; };
+		B87FD3410703BA55009BA8F2 /* en */ = {isa = PBXFileReference; lastKnownFileType = folder; name = en; path = en.lproj/sxuls; sourceTree = "<group>"; };
+		B87FD3420703BA63009BA8F2 /* es */ = {isa = PBXFileReference; lastKnownFileType = folder; name = es; path = es.lproj/sxuls; sourceTree = "<group>"; };
+		B87FD3430703BA70009BA8F2 /* fr */ = {isa = PBXFileReference; lastKnownFileType = folder; name = fr; path = fr.lproj/sxuls; sourceTree = "<group>"; };
+		B87FD3E90703BA8F009BA8F2 /* ja */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ja; path = ja.lproj/sxuls; sourceTree = "<group>"; };
+		B87FD3EA0703BA9F009BA8F2 /* zh_CN */ = {isa = PBXFileReference; lastKnownFileType = folder; name = zh_CN; path = zh_CN.lproj/sxuls; sourceTree = "<group>"; };
+		B8BFE0F9054B1B7B00301E9D /* undo.shdplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = undo.shdplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8BFE161054B1BA700301E9D /* undo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = undo.cpp; path = ../../source/plugins/undo.cpp; sourceTree = SOURCE_ROOT; };
+		B8C4EB8604BCA9FB00A80009 /* multiplugin.shdplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = multiplugin.shdplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8C4EB9804BCAA2E00A80009 /* attribute.shdplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = attribute.shdplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8C4EB9E04BCAA3E00A80009 /* browser.shdplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = browser.shdplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8C4EBA404BCAA4D00A80009 /* creator.shdplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = creator.shdplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8C4EBAA04BCAA5A00A80009 /* effector.shdplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = effector.shdplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8C4EBB004BCAA6A00A80009 /* exporter.shdplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = exporter.shdplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8C4EBB604BCAA7700A80009 /* figure.shdplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = figure.shdplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8C4EBBC04BCAA8500A80009 /* imagebox.shdplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = imagebox.shdplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8C4EBC204BCAA9300A80009 /* importer.shdplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = importer.shdplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8C4EBC804BCAAA100A80009 /* modifier.shdplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = modifier.shdplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8C4EBD404BCAAC900A80009 /* plugin.shdplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = plugin.shdplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8C4EBDA04BCAAD700A80009 /* renderer.shdplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = renderer.shdplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8C4EBE004BCAAE200A80009 /* resident.shdplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = resident.shdplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8C4EBE604BCAAEF00A80009 /* shader.shdplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = shader.shdplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8C4EBEC04BCAAFC00A80009 /* window.shdplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = window.shdplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8C4EBF704BCABAB00A80009 /* multiplugin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = multiplugin.cpp; path = ../../source/plugins/multiplugin.cpp; sourceTree = SOURCE_ROOT; };
+		B8C4EBFF04BCAC5D00A80009 /* attribute.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = attribute.cpp; path = ../../source/plugins/attribute.cpp; sourceTree = SOURCE_ROOT; };
+		B8C4EC0104BCAC6B00A80009 /* browser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = browser.cpp; path = ../../source/plugins/browser.cpp; sourceTree = SOURCE_ROOT; };
+		B8C4EC0304BCAC7800A80009 /* creator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = creator.cpp; path = ../../source/plugins/creator.cpp; sourceTree = SOURCE_ROOT; };
+		B8C4EC0504BCAC8400A80009 /* effector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = effector.cpp; path = ../../source/plugins/effector.cpp; sourceTree = SOURCE_ROOT; };
+		B8C4EC0704BCACA000A80009 /* exporter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = exporter.cpp; path = ../../source/plugins/exporter.cpp; sourceTree = SOURCE_ROOT; };
+		B8C4EC0904BCACAE00A80009 /* figure.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = figure.cpp; path = ../../source/plugins/figure.cpp; sourceTree = SOURCE_ROOT; };
+		B8C4EC0B04BCACC500A80009 /* imagebox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = imagebox.cpp; path = ../../source/plugins/imagebox.cpp; sourceTree = SOURCE_ROOT; };
+		B8C4EC0D04BCACD400A80009 /* importer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = importer.cpp; path = ../../source/plugins/importer.cpp; sourceTree = SOURCE_ROOT; };
+		B8C4EC0F04BCACE100A80009 /* modifier.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = modifier.cpp; path = ../../source/plugins/modifier.cpp; sourceTree = SOURCE_ROOT; };
+		B8C4EC1304BCACFE00A80009 /* plugin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = plugin.cpp; path = ../../source/plugins/plugin.cpp; sourceTree = SOURCE_ROOT; };
+		B8C4EC1504BCAD1500A80009 /* renderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = renderer.cpp; path = ../../source/plugins/renderer.cpp; sourceTree = SOURCE_ROOT; };
+		B8C4EC1804BCAD5800A80009 /* resident.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = resident.cpp; path = ../../source/plugins/resident.cpp; sourceTree = SOURCE_ROOT; };
+		B8C4EC1A04BCAD6500A80009 /* shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = shader.cpp; path = ../../source/plugins/shader.cpp; sourceTree = SOURCE_ROOT; };
+		B8C4EC1C04BCAD7200A80009 /* window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = window.cpp; path = ../../source/plugins/window.cpp; sourceTree = SOURCE_ROOT; };
+		B8CB29070EF5D8F500A5934C /* com.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = com.cpp; path = ../../../include/sx/core/com.cpp; sourceTree = SOURCE_ROOT; };
+		B8E4B4AA0638817200E3C95D /* dialog.shdplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dialog.shdplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8E4B4AB063881B000E3C95D /* dialog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dialog.cpp; path = ../../source/plugins/dialog.cpp; sourceTree = SOURCE_ROOT; };
+		B8FA2D5004BCE0E800A80009 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		B8FA2DE904BCE16F00A80009 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B8BFE0F7054B1B7B00301E9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B850A4650EF7169C00F912F9 /* Foundation.framework in Frameworks */,
+				B850A4660EF716A200F912F9 /* AppKit.framework in Frameworks */,
+				B850A4670EF716A700F912F9 /* Carbon.framework in Frameworks */,
+				B850A4690EF716B100F912F9 /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EB8404BCA9FB00A80009 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B861C5260EF7611300B8F42E /* Foundation.framework in Frameworks */,
+				B861C5E60EF7612200B8F42E /* AppKit.framework in Frameworks */,
+				B861C6D30EF7613B00B8F42E /* Carbon.framework in Frameworks */,
+				B861C6F30EF7615A00B8F42E /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EB9604BCAA2E00A80009 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B861C5270EF7611300B8F42E /* Foundation.framework in Frameworks */,
+				B861C5E70EF7612300B8F42E /* AppKit.framework in Frameworks */,
+				B861C6D40EF7613C00B8F42E /* Carbon.framework in Frameworks */,
+				B861C6F40EF7615A00B8F42E /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EB9C04BCAA3E00A80009 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B861C5280EF7611400B8F42E /* Foundation.framework in Frameworks */,
+				B861C5E80EF7612300B8F42E /* AppKit.framework in Frameworks */,
+				B861C6D50EF7613E00B8F42E /* Carbon.framework in Frameworks */,
+				B861C6F50EF7615B00B8F42E /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBA204BCAA4D00A80009 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B861C5290EF7611400B8F42E /* Foundation.framework in Frameworks */,
+				B861C5E90EF7612400B8F42E /* AppKit.framework in Frameworks */,
+				B861C6D60EF7613E00B8F42E /* Carbon.framework in Frameworks */,
+				B861C6F60EF7615B00B8F42E /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBA804BCAA5A00A80009 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B861C52A0EF7611500B8F42E /* Foundation.framework in Frameworks */,
+				B861C5EA0EF7612600B8F42E /* AppKit.framework in Frameworks */,
+				B861C6D70EF7613F00B8F42E /* Carbon.framework in Frameworks */,
+				B861C6F70EF7615C00B8F42E /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBAE04BCAA6A00A80009 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B861C52B0EF7611500B8F42E /* Foundation.framework in Frameworks */,
+				B861C5EB0EF7612700B8F42E /* AppKit.framework in Frameworks */,
+				B861C6D80EF7613F00B8F42E /* Carbon.framework in Frameworks */,
+				B861C6F90EF7615E00B8F42E /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBB404BCAA7700A80009 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B861C52C0EF7611600B8F42E /* Foundation.framework in Frameworks */,
+				B861C5EC0EF7612700B8F42E /* AppKit.framework in Frameworks */,
+				B861C6D90EF7614100B8F42E /* Carbon.framework in Frameworks */,
+				B861C6F80EF7615D00B8F42E /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBBA04BCAA8500A80009 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B861C52D0EF7611700B8F42E /* Foundation.framework in Frameworks */,
+				B861C5ED0EF7612800B8F42E /* AppKit.framework in Frameworks */,
+				B861C6DA0EF7614200B8F42E /* Carbon.framework in Frameworks */,
+				B861C6FA0EF7615E00B8F42E /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBC004BCAA9300A80009 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B861C52E0EF7611700B8F42E /* Foundation.framework in Frameworks */,
+				B861C5EE0EF7612800B8F42E /* AppKit.framework in Frameworks */,
+				B861C6DB0EF7614200B8F42E /* Carbon.framework in Frameworks */,
+				B861C6FB0EF7615F00B8F42E /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBC604BCAAA100A80009 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B861C52F0EF7611800B8F42E /* Foundation.framework in Frameworks */,
+				B861C5EF0EF7612900B8F42E /* AppKit.framework in Frameworks */,
+				B861C6DC0EF7614300B8F42E /* Carbon.framework in Frameworks */,
+				B861C6FC0EF7616000B8F42E /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBD204BCAAC900A80009 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B861C5300EF7611900B8F42E /* Foundation.framework in Frameworks */,
+				B861C5F00EF7612900B8F42E /* AppKit.framework in Frameworks */,
+				B861C6DD0EF7614300B8F42E /* Carbon.framework in Frameworks */,
+				B861C6FD0EF7616000B8F42E /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBD804BCAAD700A80009 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8FA2DEA04BCE16F00A80009 /* OpenGL.framework in Frameworks */,
+				B850A23D0EF7154C00F912F9 /* Carbon.framework in Frameworks */,
+				B850A2BC0EF7155D00F912F9 /* Foundation.framework in Frameworks */,
+				B850A3700EF7156600F912F9 /* AppKit.framework in Frameworks */,
+				B850A4270EF715C100F912F9 /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBDE04BCAAE200A80009 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B850A44F0EF7162300F912F9 /* Foundation.framework in Frameworks */,
+				B850A4500EF7162700F912F9 /* AppKit.framework in Frameworks */,
+				B850A4510EF7162C00F912F9 /* Carbon.framework in Frameworks */,
+				B850A4520EF7163900F912F9 /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBE404BCAAEF00A80009 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B861C5310EF7611A00B8F42E /* Foundation.framework in Frameworks */,
+				B861C5F10EF7612A00B8F42E /* AppKit.framework in Frameworks */,
+				B861C6DE0EF7614500B8F42E /* Carbon.framework in Frameworks */,
+				B861C6FE0EF7616200B8F42E /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBEA04BCAAFC00A80009 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B861C5320EF7611A00B8F42E /* Foundation.framework in Frameworks */,
+				B861C5F20EF7612B00B8F42E /* AppKit.framework in Frameworks */,
+				B861C6DF0EF7614600B8F42E /* Carbon.framework in Frameworks */,
+				B861C6FF0EF7616200B8F42E /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8E4B4A90638817200E3C95D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B861C5330EF7611B00B8F42E /* Foundation.framework in Frameworks */,
+				B861C5F30EF7612C00B8F42E /* AppKit.framework in Frameworks */,
+				B861C6E00EF7614600B8F42E /* Carbon.framework in Frameworks */,
+				B861C7000EF7616300B8F42E /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* plugins */ = {
+			isa = PBXGroup;
+			children = (
+				4A8367AF11A11CA1009F9E06 /* config.plugins.xcconfig */,
+				32C88E010371C26100C91783 /* source */,
+				089C167CFE841241C02AAC07 /* Resources */,
+				089C1671FE841209C02AAC07 /* Frameworks and Libraries */,
+				19C28FB8FE9D52D311CA2CBB /* Products */,
+			);
+			name = plugins;
+			sourceTree = "<group>";
+		};
+		089C1671FE841209C02AAC07 /* Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				089C1672FE841209C02AAC07 /* Foundation.framework */,
+				089C167FFE841241C02AAC07 /* AppKit.framework */,
+				B8FA2D5004BCE0E800A80009 /* Carbon.framework */,
+				B8FA2DE904BCE16F00A80009 /* OpenGL.framework */,
+				B850A4260EF715C100F912F9 /* IOKit.framework */,
+			);
+			name = "Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C167CFE841241C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				16F9E21A0546323A00F09F49 /* shdplugin.icns */,
+				B84DD62F04BF36A900A80009 /* simple_window_image.tga */,
+				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
+				B836426C063886F7007BED7D /* sxuls */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		19C28FB8FE9D52D311CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B8C4EB8604BCA9FB00A80009 /* multiplugin.shdplugin */,
+				B8C4EB9804BCAA2E00A80009 /* attribute.shdplugin */,
+				B8C4EB9E04BCAA3E00A80009 /* browser.shdplugin */,
+				B8C4EBA404BCAA4D00A80009 /* creator.shdplugin */,
+				B8C4EBAA04BCAA5A00A80009 /* effector.shdplugin */,
+				B8C4EBB004BCAA6A00A80009 /* exporter.shdplugin */,
+				B8C4EBB604BCAA7700A80009 /* figure.shdplugin */,
+				B8C4EBBC04BCAA8500A80009 /* imagebox.shdplugin */,
+				B8C4EBC204BCAA9300A80009 /* importer.shdplugin */,
+				B8C4EBC804BCAAA100A80009 /* modifier.shdplugin */,
+				B8C4EBD404BCAAC900A80009 /* plugin.shdplugin */,
+				B8C4EBDA04BCAAD700A80009 /* renderer.shdplugin */,
+				B8C4EBE004BCAAE200A80009 /* resident.shdplugin */,
+				B8C4EBE604BCAAEF00A80009 /* shader.shdplugin */,
+				B8C4EBEC04BCAAFC00A80009 /* window.shdplugin */,
+				B8BFE0F9054B1B7B00301E9D /* undo.shdplugin */,
+				B8E4B4AA0638817200E3C95D /* dialog.shdplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		32C88E010371C26100C91783 /* source */ = {
+			isa = PBXGroup;
+			children = (
+				4A1BD1F811A2410200AB38FA /* sx */,
+				B8C4EBFF04BCAC5D00A80009 /* attribute.cpp */,
+				B8C4EC0104BCAC6B00A80009 /* browser.cpp */,
+				B8C4EC0304BCAC7800A80009 /* creator.cpp */,
+				B8E4B4AB063881B000E3C95D /* dialog.cpp */,
+				B8C4EC0504BCAC8400A80009 /* effector.cpp */,
+				B8C4EC0704BCACA000A80009 /* exporter.cpp */,
+				B8C4EC0904BCACAE00A80009 /* figure.cpp */,
+				B8C4EC0B04BCACC500A80009 /* imagebox.cpp */,
+				B8C4EC0D04BCACD400A80009 /* importer.cpp */,
+				B8C4EC0F04BCACE100A80009 /* modifier.cpp */,
+				B8C4EBF704BCABAB00A80009 /* multiplugin.cpp */,
+				B8C4EC1304BCACFE00A80009 /* plugin.cpp */,
+				B8C4EC1504BCAD1500A80009 /* renderer.cpp */,
+				B8C4EC1804BCAD5800A80009 /* resident.cpp */,
+				B8C4EC1A04BCAD6500A80009 /* shader.cpp */,
+				B8BFE161054B1BA700301E9D /* undo.cpp */,
+				B8C4EC1C04BCAD7200A80009 /* window.cpp */,
+			);
+			name = source;
+			path = ../../source;
+			sourceTree = "<group>";
+		};
+		4A1BD1F811A2410200AB38FA /* sx */ = {
+			isa = PBXGroup;
+			children = (
+				B8CB29070EF5D8F500A5934C /* com.cpp */,
+				4A1BD1F911A2412000AB38FA /* debug.cpp */,
+				4A8367B611A11E8D009F9E06 /* vectors.cpp */,
+			);
+			name = sx;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B8BFE0F4054B1B7B00301E9D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EB8104BCA9FB00A80009 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EB9304BCAA2E00A80009 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EB9904BCAA3E00A80009 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EB9F04BCAA4D00A80009 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBA504BCAA5A00A80009 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBAB04BCAA6A00A80009 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBB104BCAA7700A80009 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBB704BCAA8500A80009 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBBD04BCAA9300A80009 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBC304BCAAA100A80009 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBCF04BCAAC900A80009 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBD504BCAAD700A80009 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBDB04BCAAE200A80009 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBE104BCAAEF00A80009 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBE704BCAAFC00A80009 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8E4B49F0638817200E3C95D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		B8BFE0F8054B1B7B00301E9D /* undo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B894B7DA08633A8900B04B44 /* Build configuration list for PBXNativeTarget "undo" */;
+			buildPhases = (
+				B8BFE0F4054B1B7B00301E9D /* Headers */,
+				B8BFE0F5054B1B7B00301E9D /* Resources */,
+				B8BFE0F6054B1B7B00301E9D /* Sources */,
+				B8BFE0F7054B1B7B00301E9D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = undo;
+			productName = undo;
+			productReference = B8BFE0F9054B1B7B00301E9D /* undo.shdplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+		B8C4EB8504BCA9FB00A80009 /* multiplugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B894B79A08633A8900B04B44 /* Build configuration list for PBXNativeTarget "multiplugin" */;
+			buildPhases = (
+				B8C4EB8104BCA9FB00A80009 /* Headers */,
+				B8C4EB8204BCA9FB00A80009 /* Resources */,
+				B8C4EB8304BCA9FB00A80009 /* Sources */,
+				B8C4EB8404BCA9FB00A80009 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = multiplugin;
+			productName = multi_plugin;
+			productReference = B8C4EB8604BCA9FB00A80009 /* multiplugin.shdplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+		B8C4EB9704BCAA2E00A80009 /* attribute */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B894B79E08633A8900B04B44 /* Build configuration list for PBXNativeTarget "attribute" */;
+			buildPhases = (
+				B8C4EB9304BCAA2E00A80009 /* Headers */,
+				B8C4EB9404BCAA2E00A80009 /* Resources */,
+				B8C4EB9504BCAA2E00A80009 /* Sources */,
+				B8C4EB9604BCAA2E00A80009 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = attribute;
+			productName = attribute;
+			productReference = B8C4EB9804BCAA2E00A80009 /* attribute.shdplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+		B8C4EB9D04BCAA3E00A80009 /* browser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B894B7A208633A8900B04B44 /* Build configuration list for PBXNativeTarget "browser" */;
+			buildPhases = (
+				B8C4EB9904BCAA3E00A80009 /* Headers */,
+				B8C4EB9A04BCAA3E00A80009 /* Resources */,
+				B8C4EB9B04BCAA3E00A80009 /* Sources */,
+				B8C4EB9C04BCAA3E00A80009 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = browser;
+			productName = browser;
+			productReference = B8C4EB9E04BCAA3E00A80009 /* browser.shdplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+		B8C4EBA304BCAA4D00A80009 /* creator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B894B7A608633A8900B04B44 /* Build configuration list for PBXNativeTarget "creator" */;
+			buildPhases = (
+				B8C4EB9F04BCAA4D00A80009 /* Headers */,
+				B8C4EBA004BCAA4D00A80009 /* Resources */,
+				B8C4EBA104BCAA4D00A80009 /* Sources */,
+				B8C4EBA204BCAA4D00A80009 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = creator;
+			productName = creator;
+			productReference = B8C4EBA404BCAA4D00A80009 /* creator.shdplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+		B8C4EBA904BCAA5A00A80009 /* effector */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B894B7AA08633A8900B04B44 /* Build configuration list for PBXNativeTarget "effector" */;
+			buildPhases = (
+				B8C4EBA504BCAA5A00A80009 /* Headers */,
+				B8C4EBA604BCAA5A00A80009 /* Resources */,
+				B8C4EBA704BCAA5A00A80009 /* Sources */,
+				B8C4EBA804BCAA5A00A80009 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = effector;
+			productName = effector;
+			productReference = B8C4EBAA04BCAA5A00A80009 /* effector.shdplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+		B8C4EBAF04BCAA6A00A80009 /* exporter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B894B7AE08633A8900B04B44 /* Build configuration list for PBXNativeTarget "exporter" */;
+			buildPhases = (
+				B8C4EBAB04BCAA6A00A80009 /* Headers */,
+				B8C4EBAC04BCAA6A00A80009 /* Resources */,
+				B8C4EBAD04BCAA6A00A80009 /* Sources */,
+				B8C4EBAE04BCAA6A00A80009 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = exporter;
+			productName = exporter;
+			productReference = B8C4EBB004BCAA6A00A80009 /* exporter.shdplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+		B8C4EBB504BCAA7700A80009 /* figure */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B894B7B208633A8900B04B44 /* Build configuration list for PBXNativeTarget "figure" */;
+			buildPhases = (
+				B8C4EBB104BCAA7700A80009 /* Headers */,
+				B8C4EBB204BCAA7700A80009 /* Resources */,
+				B8C4EBB304BCAA7700A80009 /* Sources */,
+				B8C4EBB404BCAA7700A80009 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = figure;
+			productName = figure;
+			productReference = B8C4EBB604BCAA7700A80009 /* figure.shdplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+		B8C4EBBB04BCAA8500A80009 /* imagebox */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B894B7B608633A8900B04B44 /* Build configuration list for PBXNativeTarget "imagebox" */;
+			buildPhases = (
+				B8C4EBB704BCAA8500A80009 /* Headers */,
+				B8C4EBB804BCAA8500A80009 /* Resources */,
+				B8C4EBB904BCAA8500A80009 /* Sources */,
+				B8C4EBBA04BCAA8500A80009 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = imagebox;
+			productName = image_box;
+			productReference = B8C4EBBC04BCAA8500A80009 /* imagebox.shdplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+		B8C4EBC104BCAA9300A80009 /* importer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B894B7BA08633A8900B04B44 /* Build configuration list for PBXNativeTarget "importer" */;
+			buildPhases = (
+				B8C4EBBD04BCAA9300A80009 /* Headers */,
+				B8C4EBBE04BCAA9300A80009 /* Resources */,
+				B8C4EBBF04BCAA9300A80009 /* Sources */,
+				B8C4EBC004BCAA9300A80009 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = importer;
+			productName = importer;
+			productReference = B8C4EBC204BCAA9300A80009 /* importer.shdplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+		B8C4EBC704BCAAA100A80009 /* modifier */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B894B7BE08633A8900B04B44 /* Build configuration list for PBXNativeTarget "modifier" */;
+			buildPhases = (
+				B8C4EBC304BCAAA100A80009 /* Headers */,
+				B8C4EBC404BCAAA100A80009 /* Resources */,
+				B8C4EBC504BCAAA100A80009 /* Sources */,
+				B8C4EBC604BCAAA100A80009 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = modifier;
+			productName = modifier;
+			productReference = B8C4EBC804BCAAA100A80009 /* modifier.shdplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+		B8C4EBD304BCAAC900A80009 /* plugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B894B7C608633A8900B04B44 /* Build configuration list for PBXNativeTarget "plugin" */;
+			buildPhases = (
+				B8C4EBCF04BCAAC900A80009 /* Headers */,
+				B8C4EBD004BCAAC900A80009 /* Resources */,
+				B8C4EBD104BCAAC900A80009 /* Sources */,
+				B8C4EBD204BCAAC900A80009 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = plugin;
+			productName = plugin;
+			productReference = B8C4EBD404BCAAC900A80009 /* plugin.shdplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+		B8C4EBD904BCAAD700A80009 /* renderer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B894B7CA08633A8900B04B44 /* Build configuration list for PBXNativeTarget "renderer" */;
+			buildPhases = (
+				B8C4EBD504BCAAD700A80009 /* Headers */,
+				B8C4EBD604BCAAD700A80009 /* Resources */,
+				B8C4EBD704BCAAD700A80009 /* Sources */,
+				B8C4EBD804BCAAD700A80009 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = renderer;
+			productName = renderer;
+			productReference = B8C4EBDA04BCAAD700A80009 /* renderer.shdplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+		B8C4EBDF04BCAAE200A80009 /* resident */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B894B7CE08633A8900B04B44 /* Build configuration list for PBXNativeTarget "resident" */;
+			buildPhases = (
+				B8C4EBDB04BCAAE200A80009 /* Headers */,
+				B8C4EBDC04BCAAE200A80009 /* Resources */,
+				B8C4EBDD04BCAAE200A80009 /* Sources */,
+				B8C4EBDE04BCAAE200A80009 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = resident;
+			productName = resident;
+			productReference = B8C4EBE004BCAAE200A80009 /* resident.shdplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+		B8C4EBE504BCAAEF00A80009 /* shader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B894B7D208633A8900B04B44 /* Build configuration list for PBXNativeTarget "shader" */;
+			buildPhases = (
+				B8C4EBE104BCAAEF00A80009 /* Headers */,
+				B8C4EBE204BCAAEF00A80009 /* Resources */,
+				B8C4EBE304BCAAEF00A80009 /* Sources */,
+				B8C4EBE404BCAAEF00A80009 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = shader;
+			productName = shader;
+			productReference = B8C4EBE604BCAAEF00A80009 /* shader.shdplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+		B8C4EBEB04BCAAFC00A80009 /* window */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B894B7D608633A8900B04B44 /* Build configuration list for PBXNativeTarget "window" */;
+			buildPhases = (
+				B8C4EBE704BCAAFC00A80009 /* Headers */,
+				B8C4EBE804BCAAFC00A80009 /* Resources */,
+				B8C4EBE904BCAAFC00A80009 /* Sources */,
+				B8C4EBEA04BCAAFC00A80009 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = window;
+			productName = window;
+			productReference = B8C4EBEC04BCAAFC00A80009 /* window.shdplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+		B8E4B49E0638817200E3C95D /* dialog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B894B7DE08633A8900B04B44 /* Build configuration list for PBXNativeTarget "dialog" */;
+			buildPhases = (
+				B8E4B49F0638817200E3C95D /* Headers */,
+				B8E4B4A00638817200E3C95D /* Resources */,
+				B8E4B4A50638817200E3C95D /* Sources */,
+				B8E4B4A90638817200E3C95D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = dialog;
+			productName = creator;
+			productReference = B8E4B4AA0638817200E3C95D /* dialog.shdplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = B894B7EE08633A8900B04B44 /* Build configuration list for PBXProject "plugins" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				de,
+				en,
+				es,
+				fr,
+				ja,
+				zh_CN,
+			);
+			mainGroup = 089C166AFE841209C02AAC07 /* plugins */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B8C4EB9704BCAA2E00A80009 /* attribute */,
+				B8C4EB9D04BCAA3E00A80009 /* browser */,
+				B8C4EBA304BCAA4D00A80009 /* creator */,
+				B8E4B49E0638817200E3C95D /* dialog */,
+				B8C4EBA904BCAA5A00A80009 /* effector */,
+				B8C4EBAF04BCAA6A00A80009 /* exporter */,
+				B8C4EBB504BCAA7700A80009 /* figure */,
+				B8C4EBBB04BCAA8500A80009 /* imagebox */,
+				B8C4EBC104BCAA9300A80009 /* importer */,
+				B8C4EBC704BCAAA100A80009 /* modifier */,
+				B8C4EB8504BCA9FB00A80009 /* multiplugin */,
+				B8C4EBD304BCAAC900A80009 /* plugin */,
+				B8C4EBD904BCAAD700A80009 /* renderer */,
+				B8C4EBDF04BCAAE200A80009 /* resident */,
+				B8C4EBE504BCAAEF00A80009 /* shader */,
+				B8C4EBEB04BCAAFC00A80009 /* window */,
+				B8BFE0F8054B1B7B00301E9D /* undo */,
+				FFA83A8F07C086D9004F8E33 /* all */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B8BFE0F5054B1B7B00301E9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8D8F0BF0EF711AF00BBE4FE /* InfoPlist.strings in Resources */,
+				B8D8F0C00EF711AF00BBE4FE /* shdplugin.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EB8204BCA9FB00A80009 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8F42A0904BCB6DD00A80009 /* InfoPlist.strings in Resources */,
+				16F9E21B0546323A00F09F49 /* shdplugin.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EB9404BCAA2E00A80009 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8F42A0C04BCB6F000A80009 /* InfoPlist.strings in Resources */,
+				16F9E21C0546323A00F09F49 /* shdplugin.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EB9A04BCAA3E00A80009 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8F42A0D04BCB6F700A80009 /* InfoPlist.strings in Resources */,
+				16F9E21D0546323A00F09F49 /* shdplugin.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBA004BCAA4D00A80009 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8F42A0E04BCB6FC00A80009 /* InfoPlist.strings in Resources */,
+				16F9E21E0546323A00F09F49 /* shdplugin.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBA604BCAA5A00A80009 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8F42A0F04BCB70400A80009 /* InfoPlist.strings in Resources */,
+				16F9E21F0546323A00F09F49 /* shdplugin.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBAC04BCAA6A00A80009 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8F42A1004BCB70C00A80009 /* InfoPlist.strings in Resources */,
+				16F9E2200546323A00F09F49 /* shdplugin.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBB204BCAA7700A80009 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8F42A1104BCB71100A80009 /* InfoPlist.strings in Resources */,
+				16F9E2210546323A00F09F49 /* shdplugin.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBB804BCAA8500A80009 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8F42A1204BCB71A00A80009 /* InfoPlist.strings in Resources */,
+				16F9E2220546323A00F09F49 /* shdplugin.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBBE04BCAA9300A80009 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8F42A1304BCB72000A80009 /* InfoPlist.strings in Resources */,
+				16F9E2230546323A00F09F49 /* shdplugin.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBC404BCAAA100A80009 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8F42A1404BCB72600A80009 /* InfoPlist.strings in Resources */,
+				16F9E2240546323A00F09F49 /* shdplugin.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBD004BCAAC900A80009 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8F42A1604BCB73500A80009 /* InfoPlist.strings in Resources */,
+				16F9E2260546323A00F09F49 /* shdplugin.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBD604BCAAD700A80009 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8F42A1704BCB73B00A80009 /* InfoPlist.strings in Resources */,
+				16F9E2270546323A00F09F49 /* shdplugin.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBDC04BCAAE200A80009 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8F42A1804BCB74100A80009 /* InfoPlist.strings in Resources */,
+				16F9E2280546323A00F09F49 /* shdplugin.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBE204BCAAEF00A80009 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8F42A1904BCB74700A80009 /* InfoPlist.strings in Resources */,
+				16F9E2290546323A00F09F49 /* shdplugin.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBE804BCAAFC00A80009 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8EBACC80EF8816E00C72891 /* simple_window_image.tga in Resources */,
+				B8CA261507E8B5F80064EDB6 /* sxuls in Resources */,
+				B8F42A1A04BCB74D00A80009 /* InfoPlist.strings in Resources */,
+				16F9E22A0546323A00F09F49 /* shdplugin.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8E4B4A00638817200E3C95D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8E4B4A30638817200E3C95D /* InfoPlist.strings in Resources */,
+				B8E4B4A40638817200E3C95D /* shdplugin.icns in Resources */,
+				B8364270063886F7007BED7D /* sxuls in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B8BFE0F6054B1B7B00301E9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8BFE162054B1BA700301E9D /* undo.cpp in Sources */,
+				B8CB29180EF5D8F500A5934C /* com.cpp in Sources */,
+				4A8367C711A11E8D009F9E06 /* vectors.cpp in Sources */,
+				4A1BD20A11A2412000AB38FA /* debug.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EB8304BCA9FB00A80009 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8C4EBF804BCABAB00A80009 /* multiplugin.cpp in Sources */,
+				B8CB29080EF5D8F500A5934C /* com.cpp in Sources */,
+				4A8367C111A11E8D009F9E06 /* vectors.cpp in Sources */,
+				4A1BD20411A2412000AB38FA /* debug.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EB9504BCAA2E00A80009 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8C4EC0004BCAC5D00A80009 /* attribute.cpp in Sources */,
+				B8CB29090EF5D8F500A5934C /* com.cpp in Sources */,
+				4A8367B711A11E8D009F9E06 /* vectors.cpp in Sources */,
+				4A1BD1FA11A2412000AB38FA /* debug.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EB9B04BCAA3E00A80009 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8C4EC0204BCAC6B00A80009 /* browser.cpp in Sources */,
+				B8CB290A0EF5D8F500A5934C /* com.cpp in Sources */,
+				4A8367B811A11E8D009F9E06 /* vectors.cpp in Sources */,
+				4A1BD1FB11A2412000AB38FA /* debug.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBA104BCAA4D00A80009 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8C4EC0404BCAC7800A80009 /* creator.cpp in Sources */,
+				B8CB290B0EF5D8F500A5934C /* com.cpp in Sources */,
+				4A8367B911A11E8D009F9E06 /* vectors.cpp in Sources */,
+				4A1BD1FC11A2412000AB38FA /* debug.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBA704BCAA5A00A80009 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8C4EC0604BCAC8400A80009 /* effector.cpp in Sources */,
+				B8CB290C0EF5D8F500A5934C /* com.cpp in Sources */,
+				4A8367BA11A11E8D009F9E06 /* vectors.cpp in Sources */,
+				4A1BD1FD11A2412000AB38FA /* debug.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBAD04BCAA6A00A80009 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8C4EC0804BCACA000A80009 /* exporter.cpp in Sources */,
+				B8CB290D0EF5D8F500A5934C /* com.cpp in Sources */,
+				4A8367BC11A11E8D009F9E06 /* vectors.cpp in Sources */,
+				4A1BD1FF11A2412000AB38FA /* debug.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBB304BCAA7700A80009 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8C4EC0A04BCACAE00A80009 /* figure.cpp in Sources */,
+				B8CB290E0EF5D8F500A5934C /* com.cpp in Sources */,
+				4A8367BD11A11E8D009F9E06 /* vectors.cpp in Sources */,
+				4A1BD20011A2412000AB38FA /* debug.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBB904BCAA8500A80009 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8C4EC0C04BCACC500A80009 /* imagebox.cpp in Sources */,
+				B8CB290F0EF5D8F500A5934C /* com.cpp in Sources */,
+				4A8367BE11A11E8D009F9E06 /* vectors.cpp in Sources */,
+				4A1BD20111A2412000AB38FA /* debug.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBBF04BCAA9300A80009 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8C4EC0E04BCACD400A80009 /* importer.cpp in Sources */,
+				B8CB29100EF5D8F500A5934C /* com.cpp in Sources */,
+				4A8367BF11A11E8D009F9E06 /* vectors.cpp in Sources */,
+				4A1BD20211A2412000AB38FA /* debug.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBC504BCAAA100A80009 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8C4EC1004BCACE100A80009 /* modifier.cpp in Sources */,
+				B8CB29110EF5D8F500A5934C /* com.cpp in Sources */,
+				4A8367C011A11E8D009F9E06 /* vectors.cpp in Sources */,
+				4A1BD20311A2412000AB38FA /* debug.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBD104BCAAC900A80009 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8C4EC1404BCACFE00A80009 /* plugin.cpp in Sources */,
+				B8CB29130EF5D8F500A5934C /* com.cpp in Sources */,
+				4A8367C211A11E8D009F9E06 /* vectors.cpp in Sources */,
+				4A1BD20511A2412000AB38FA /* debug.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBD704BCAAD700A80009 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8C4EC1604BCAD1500A80009 /* renderer.cpp in Sources */,
+				B8CB29140EF5D8F500A5934C /* com.cpp in Sources */,
+				4A8367C311A11E8D009F9E06 /* vectors.cpp in Sources */,
+				4A1BD20611A2412000AB38FA /* debug.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBDD04BCAAE200A80009 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8C4EC1904BCAD5800A80009 /* resident.cpp in Sources */,
+				B8CB29150EF5D8F500A5934C /* com.cpp in Sources */,
+				4A8367C411A11E8D009F9E06 /* vectors.cpp in Sources */,
+				4A1BD20711A2412000AB38FA /* debug.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBE304BCAAEF00A80009 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8C4EC1B04BCAD6500A80009 /* shader.cpp in Sources */,
+				B8CB29160EF5D8F500A5934C /* com.cpp in Sources */,
+				4A8367C511A11E8D009F9E06 /* vectors.cpp in Sources */,
+				4A1BD20811A2412000AB38FA /* debug.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C4EBE904BCAAFC00A80009 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8C4EC1D04BCAD7200A80009 /* window.cpp in Sources */,
+				B8CB29170EF5D8F500A5934C /* com.cpp in Sources */,
+				4A8367C611A11E8D009F9E06 /* vectors.cpp in Sources */,
+				4A1BD20911A2412000AB38FA /* debug.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8E4B4A50638817200E3C95D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8E4B4D7063881E100E3C95D /* dialog.cpp in Sources */,
+				B8CB29190EF5D8F500A5934C /* com.cpp in Sources */,
+				4A8367BB11A11E8D009F9E06 /* vectors.cpp in Sources */,
+				4A1BD1FE11A2412000AB38FA /* debug.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4A83673F11A11647009F9E06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B8C4EB9704BCAA2E00A80009 /* attribute */;
+			targetProxy = 4A83673E11A11647009F9E06 /* PBXContainerItemProxy */;
+		};
+		4A83674111A11647009F9E06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B8C4EB9D04BCAA3E00A80009 /* browser */;
+			targetProxy = 4A83674011A11647009F9E06 /* PBXContainerItemProxy */;
+		};
+		4A83674311A11647009F9E06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B8C4EBA304BCAA4D00A80009 /* creator */;
+			targetProxy = 4A83674211A11647009F9E06 /* PBXContainerItemProxy */;
+		};
+		4A83674511A11647009F9E06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B8E4B49E0638817200E3C95D /* dialog */;
+			targetProxy = 4A83674411A11647009F9E06 /* PBXContainerItemProxy */;
+		};
+		4A83674711A11647009F9E06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B8C4EBA904BCAA5A00A80009 /* effector */;
+			targetProxy = 4A83674611A11647009F9E06 /* PBXContainerItemProxy */;
+		};
+		4A83674911A11647009F9E06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B8C4EBAF04BCAA6A00A80009 /* exporter */;
+			targetProxy = 4A83674811A11647009F9E06 /* PBXContainerItemProxy */;
+		};
+		4A83674B11A11647009F9E06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B8C4EBB504BCAA7700A80009 /* figure */;
+			targetProxy = 4A83674A11A11647009F9E06 /* PBXContainerItemProxy */;
+		};
+		4A83674D11A11647009F9E06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B8C4EBBB04BCAA8500A80009 /* imagebox */;
+			targetProxy = 4A83674C11A11647009F9E06 /* PBXContainerItemProxy */;
+		};
+		4A83674F11A11647009F9E06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B8C4EBC104BCAA9300A80009 /* importer */;
+			targetProxy = 4A83674E11A11647009F9E06 /* PBXContainerItemProxy */;
+		};
+		4A83675111A11647009F9E06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B8C4EBC704BCAAA100A80009 /* modifier */;
+			targetProxy = 4A83675011A11647009F9E06 /* PBXContainerItemProxy */;
+		};
+		4A83675311A11647009F9E06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B8C4EB8504BCA9FB00A80009 /* multiplugin */;
+			targetProxy = 4A83675211A11647009F9E06 /* PBXContainerItemProxy */;
+		};
+		4A83675511A11647009F9E06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B8C4EBD304BCAAC900A80009 /* plugin */;
+			targetProxy = 4A83675411A11647009F9E06 /* PBXContainerItemProxy */;
+		};
+		4A83675711A11647009F9E06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B8C4EBD904BCAAD700A80009 /* renderer */;
+			targetProxy = 4A83675611A11647009F9E06 /* PBXContainerItemProxy */;
+		};
+		4A83675911A11647009F9E06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B8C4EBDF04BCAAE200A80009 /* resident */;
+			targetProxy = 4A83675811A11647009F9E06 /* PBXContainerItemProxy */;
+		};
+		4A83675B11A11647009F9E06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B8C4EBE504BCAAEF00A80009 /* shader */;
+			targetProxy = 4A83675A11A11647009F9E06 /* PBXContainerItemProxy */;
+		};
+		4A83675D11A11647009F9E06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B8C4EBEB04BCAAFC00A80009 /* window */;
+			targetProxy = 4A83675C11A11647009F9E06 /* PBXContainerItemProxy */;
+		};
+		4A83675F11A11647009F9E06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B8BFE0F8054B1B7B00301E9D /* undo */;
+			targetProxy = 4A83675E11A11647009F9E06 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		089C167DFE841241C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C167EFE841241C02AAC07 /* InfoPlist.strings */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B836426C063886F7007BED7D /* sxuls */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B87FD1680703B9FD009BA8F2 /* de */,
+				B87FD3410703BA55009BA8F2 /* en */,
+				B87FD3420703BA63009BA8F2 /* es */,
+				B87FD3430703BA70009BA8F2 /* fr */,
+				B87FD3E90703BA8F009BA8F2 /* ja */,
+				B87FD3EA0703BA9F009BA8F2 /* zh_CN */,
+			);
+			name = sxuls;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B85A16FE1044882900B75A2D /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(MACROS)",
+					"$(RELEASEMACROS)",
+				);
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "-force_cpusubtype_ALL";
+				OTHER_CPLUSPLUSFLAGS = (
+					"-ffor-scope",
+					"-Wno-invalid-offsetof",
+					"-force_cpusubtype_ALL",
+				);
+				SKIP_INSTALL = NO;
+				USER_HEADER_SEARCH_PATHS = "$(BOOSTPATH) $(PYTHONPATH) ../../../include ../../../include/openexr-1.6.1/macos ../../../include/openexr-1.6.1/** ../../source";
+			};
+			name = release;
+		};
+		B85A16FF1044882900B75A2D /* release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A8367AF11A11CA1009F9E06 /* config.plugins.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = plugins_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(MACROS)",
+					"$(RELEASEMACROS)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = plists/attribute.Info.plist;
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = attribute;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-w";
+				WRAPPER_EXTENSION = shdplugin;
+				ZERO_LINK = NO;
+			};
+			name = release;
+		};
+		B85A17001044882900B75A2D /* release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A8367AF11A11CA1009F9E06 /* config.plugins.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = plugins_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(MACROS)",
+					"$(RELEASEMACROS)",
+				);
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = plists/browser.Info.plist;
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = browser;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-w";
+				WRAPPER_EXTENSION = shdplugin;
+				ZERO_LINK = NO;
+			};
+			name = release;
+		};
+		B85A17011044882900B75A2D /* release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A8367AF11A11CA1009F9E06 /* config.plugins.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = plugins_Prefix.pch;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = plists/creator.Info.plist;
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = creator;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-w";
+				WRAPPER_EXTENSION = shdplugin;
+				ZERO_LINK = NO;
+			};
+			name = release;
+		};
+		B85A17021044882900B75A2D /* release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A8367AF11A11CA1009F9E06 /* config.plugins.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = plugins_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(MACROS)",
+					"$(RELEASEMACROS)",
+				);
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = plists/dialog.Info.plist;
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = dialog;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-w";
+				WRAPPER_EXTENSION = shdplugin;
+				ZERO_LINK = NO;
+			};
+			name = release;
+		};
+		B85A17031044882900B75A2D /* release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A8367AF11A11CA1009F9E06 /* config.plugins.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = plugins_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(MACROS)",
+					"$(RELEASEMACROS)",
+				);
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = plists/effector.Info.plist;
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = effector;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-w";
+				WRAPPER_EXTENSION = shdplugin;
+				ZERO_LINK = NO;
+			};
+			name = release;
+		};
+		B85A17041044882900B75A2D /* release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A8367AF11A11CA1009F9E06 /* config.plugins.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = plugins_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(MACROS)",
+					"$(RELEASEMACROS)",
+				);
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = plists/exporter.Info.plist;
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = exporter;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-w";
+				WRAPPER_EXTENSION = shdplugin;
+				ZERO_LINK = NO;
+			};
+			name = release;
+		};
+		B85A17051044882900B75A2D /* release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A8367AF11A11CA1009F9E06 /* config.plugins.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = plugins_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(MACROS)",
+					"$(RELEASEMACROS)",
+				);
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = plists/figure.Info.plist;
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = figure;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-w";
+				WRAPPER_EXTENSION = shdplugin;
+				ZERO_LINK = NO;
+			};
+			name = release;
+		};
+		B85A17071044882900B75A2D /* release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A8367AF11A11CA1009F9E06 /* config.plugins.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = plugins_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(MACROS)",
+					"$(RELEASEMACROS)",
+				);
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = plists/imagebox.Info.plist;
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = imagebox;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-w";
+				WRAPPER_EXTENSION = shdplugin;
+				ZERO_LINK = NO;
+			};
+			name = release;
+		};
+		B85A17081044882900B75A2D /* release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A8367AF11A11CA1009F9E06 /* config.plugins.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = plugins_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(MACROS)",
+					"$(RELEASEMACROS)",
+				);
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = plists/importer.Info.plist;
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = importer;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-w";
+				WRAPPER_EXTENSION = shdplugin;
+				ZERO_LINK = NO;
+			};
+			name = release;
+		};
+		B85A17091044882900B75A2D /* release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A8367AF11A11CA1009F9E06 /* config.plugins.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = plugins_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(MACROS)",
+					"$(RELEASEMACROS)",
+				);
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = plists/modifier.Info.plist;
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = modifier;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-w";
+				WRAPPER_EXTENSION = shdplugin;
+				ZERO_LINK = NO;
+			};
+			name = release;
+		};
+		B85A170A1044882900B75A2D /* release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A8367AF11A11CA1009F9E06 /* config.plugins.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = plugins_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(MACROS)",
+					"$(RELEASEMACROS)",
+				);
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = plists/multiplugin.Info.plist;
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = multiplugin;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-w";
+				WRAPPER_EXTENSION = shdplugin;
+				ZERO_LINK = NO;
+			};
+			name = release;
+		};
+		B85A170B1044882900B75A2D /* release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A8367AF11A11CA1009F9E06 /* config.plugins.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = plugins_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(MACROS)",
+					"$(RELEASEMACROS)",
+				);
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = plists/plugin.Info.plist;
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = plugin;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-w";
+				WRAPPER_EXTENSION = shdplugin;
+				ZERO_LINK = NO;
+			};
+			name = release;
+		};
+		B85A170C1044882900B75A2D /* release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A8367AF11A11CA1009F9E06 /* config.plugins.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = plugins_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(MACROS)",
+					"$(RELEASEMACROS)",
+				);
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = plists/renderer.Info.plist;
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = renderer;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-w";
+				WRAPPER_EXTENSION = shdplugin;
+				ZERO_LINK = NO;
+			};
+			name = release;
+		};
+		B85A170D1044882900B75A2D /* release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A8367AF11A11CA1009F9E06 /* config.plugins.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = plugins_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(MACROS)",
+					"$(RELEASEMACROS)",
+				);
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = plists/resident.Info.plist;
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = resident;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-w";
+				WRAPPER_EXTENSION = shdplugin;
+				ZERO_LINK = NO;
+			};
+			name = release;
+		};
+		B85A170E1044882900B75A2D /* release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A8367AF11A11CA1009F9E06 /* config.plugins.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = plugins_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(MACROS)",
+					"$(RELEASEMACROS)",
+				);
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = plists/shader.Info.plist;
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = shader;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-w";
+				WRAPPER_EXTENSION = shdplugin;
+				ZERO_LINK = NO;
+			};
+			name = release;
+		};
+		B85A170F1044882900B75A2D /* release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A8367AF11A11CA1009F9E06 /* config.plugins.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = plugins_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(MACROS)",
+					"$(RELEASEMACROS)",
+				);
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = plists/window.Info.plist;
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = window;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-w";
+				WRAPPER_EXTENSION = shdplugin;
+				ZERO_LINK = NO;
+			};
+			name = release;
+		};
+		B85A17101044882900B75A2D /* release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A8367AF11A11CA1009F9E06 /* config.plugins.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = plugins_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(MACROS)",
+					"$(RELEASEMACROS)",
+				);
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = plists/undo.Info.plist;
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = undo;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-w";
+				WRAPPER_EXTENSION = shdplugin;
+				ZERO_LINK = NO;
+			};
+			name = release;
+		};
+		B85A17111044882900B75A2D /* release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = (
+					../../include,
+					../../boost,
+				);
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = all;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				ZERO_LINK = NO;
+			};
+			name = release;
+		};
+		B894B79B08633A8900B04B44 /* debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A8367AF11A11CA1009F9E06 /* config.plugins.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = plugins_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(MACROS)",
+					"$(DEBUGMACROS)",
+				);
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = plists/multiplugin.Info.plist;
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = multiplugin;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-w";
+				WRAPPER_EXTENSION = shdplugin;
+				ZERO_LINK = NO;
+			};
+			name = debug;
+		};
+		B894B79F08633A8900B04B44 /* debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A8367AF11A11CA1009F9E06 /* config.plugins.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = plugins_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(MACROS)",
+					"$(DEBUGMACROS)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = plists/attribute.Info.plist;
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = attribute;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-w";
+				WRAPPER_EXTENSION = shdplugin;
+				ZERO_LINK = NO;
+			};
+			name = debug;
+		};
+		B894B7A308633A8900B04B44 /* debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A8367AF11A11CA1009F9E06 /* config.plugins.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = plugins_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(MACROS)",
+					"$(DEBUGMACROS)",
+				);
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = plists/browser.Info.plist;
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = browser;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-w";
+				WRAPPER_EXTENSION = shdplugin;
+				ZERO_LINK = NO;
+			};
+			name = debug;
+		};
+		B894B7A708633A8900B04B44 /* debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A8367AF11A11CA1009F9E06 /* config.plugins.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = plugins_Prefix.pch;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = plists/creator.Info.plist;
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = creator;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-w";
+				WRAPPER_EXTENSION = shdplugin;
+				ZERO_LINK = NO;
+			};
+			name = debug;
+		};
+		B894B7AB08633A8900B04B44 /* debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A8367AF11A11CA1009F9E06 /* config.plugins.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = plugins_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(MACROS)",
+					"$(DEBUGMACROS)",
+				);
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = plists/effector.Info.plist;
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = effector;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-w";
+				WRAPPER_EXTENSION = shdplugin;
+				ZERO_LINK = NO;
+			};
+			name = debug;
+		};
+		B894B7AF08633A8900B04B44 /* debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A8367AF11A11CA1009F9E06 /* config.plugins.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = plugins_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(MACROS)",
+					"$(DEBUGMACROS)",
+				);
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = plists/exporter.Info.plist;
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = exporter;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-w";
+				WRAPPER_EXTENSION = shdplugin;
+				ZERO_LINK = NO;
+			};
+			name = debug;
+		};
+		B894B7B308633A8900B04B44 /* debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A8367AF11A11CA1009F9E06 /* config.plugins.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = plugins_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(MACROS)",
+					"$(DEBUGMACROS)",
+				);
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = plists/figure.Info.plist;
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = figure;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-w";
+				WRAPPER_EXTENSION = shdplugin;
+				ZERO_LINK = NO;
+			};
+			name = debug;
+		};
+		B894B7B708633A8900B04B44 /* debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A8367AF11A11CA1009F9E06 /* config.plugins.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = plugins_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(MACROS)",
+					"$(DEBUGMACROS)",
+				);
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = plists/imagebox.Info.plist;
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = imagebox;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-w";
+				WRAPPER_EXTENSION = shdplugin;
+				ZERO_LINK = NO;
+			};
+			name = debug;
+		};
+		B894B7BB08633A8900B04B44 /* debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A8367AF11A11CA1009F9E06 /* config.plugins.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = plugins_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(MACROS)",
+					"$(DEBUGMACROS)",
+				);
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = plists/importer.Info.plist;
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = importer;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-w";
+				WRAPPER_EXTENSION = shdplugin;
+				ZERO_LINK = NO;
+			};
+			name = debug;
+		};
+		B894B7BF08633A8900B04B44 /* debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A8367AF11A11CA1009F9E06 /* config.plugins.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = plugins_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(MACROS)",
+					"$(DEBUGMACROS)",
+				);
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = plists/modifier.Info.plist;
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = modifier;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-w";
+				WRAPPER_EXTENSION = shdplugin;
+				ZERO_LINK = NO;
+			};
+			name = debug;
+		};
+		B894B7C708633A8900B04B44 /* debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A8367AF11A11CA1009F9E06 /* config.plugins.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = plugins_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(MACROS)",
+					"$(DEBUGMACROS)",
+				);
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = plists/plugin.Info.plist;
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = plugin;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-w";
+				WRAPPER_EXTENSION = shdplugin;
+				ZERO_LINK = NO;
+			};
+			name = debug;
+		};
+		B894B7CB08633A8900B04B44 /* debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A8367AF11A11CA1009F9E06 /* config.plugins.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = plugins_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(MACROS)",
+					"$(DEBUGMACROS)",
+				);
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = plists/renderer.Info.plist;
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = renderer;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-w";
+				WRAPPER_EXTENSION = shdplugin;
+				ZERO_LINK = NO;
+			};
+			name = debug;
+		};
+		B894B7CF08633A8900B04B44 /* debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A8367AF11A11CA1009F9E06 /* config.plugins.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = plugins_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(MACROS)",
+					"$(DEBUGMACROS)",
+				);
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = plists/resident.Info.plist;
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = resident;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-w";
+				WRAPPER_EXTENSION = shdplugin;
+				ZERO_LINK = NO;
+			};
+			name = debug;
+		};
+		B894B7D308633A8900B04B44 /* debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A8367AF11A11CA1009F9E06 /* config.plugins.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = plugins_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(MACROS)",
+					"$(DEBUGMACROS)",
+				);
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = plists/shader.Info.plist;
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = shader;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-w";
+				WRAPPER_EXTENSION = shdplugin;
+				ZERO_LINK = NO;
+			};
+			name = debug;
+		};
+		B894B7D708633A8900B04B44 /* debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A8367AF11A11CA1009F9E06 /* config.plugins.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = plugins_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(MACROS)",
+					"$(DEBUGMACROS)",
+				);
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = plists/window.Info.plist;
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = window;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-w";
+				WRAPPER_EXTENSION = shdplugin;
+				ZERO_LINK = NO;
+			};
+			name = debug;
+		};
+		B894B7DB08633A8900B04B44 /* debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A8367AF11A11CA1009F9E06 /* config.plugins.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = plugins_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(MACROS)",
+					"$(DEBUGMACROS)",
+				);
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = plists/undo.Info.plist;
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = undo;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-w";
+				WRAPPER_EXTENSION = shdplugin;
+				ZERO_LINK = NO;
+			};
+			name = debug;
+		};
+		B894B7DF08633A8900B04B44 /* debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A8367AF11A11CA1009F9E06 /* config.plugins.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_TRIGRAPHS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = plugins_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(MACROS)",
+					"$(DEBUGMACROS)",
+				);
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				INFOPLIST_FILE = plists/dialog.Info.plist;
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = Bundle;
+				OTHER_CFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = dialog;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-w";
+				WRAPPER_EXTENSION = shdplugin;
+				ZERO_LINK = NO;
+			};
+			name = debug;
+		};
+		B894B7EB08633A8900B04B44 /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = (
+					../../include,
+					../../boost,
+				);
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = all;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				ZERO_LINK = NO;
+			};
+			name = debug;
+		};
+		B894B7EF08633A8900B04B44 /* debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(MACROS)",
+					"$(DEBUGMACROS)",
+				);
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "-force_cpusubtype_ALL";
+				OTHER_CPLUSPLUSFLAGS = (
+					"-ffor-scope",
+					"-Wno-invalid-offsetof",
+					"-force_cpusubtype_ALL",
+				);
+				SKIP_INSTALL = NO;
+			};
+			name = debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B894B79A08633A8900B04B44 /* Build configuration list for PBXNativeTarget "multiplugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B894B79B08633A8900B04B44 /* debug */,
+				B85A170A1044882900B75A2D /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = debug;
+		};
+		B894B79E08633A8900B04B44 /* Build configuration list for PBXNativeTarget "attribute" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B894B79F08633A8900B04B44 /* debug */,
+				B85A16FF1044882900B75A2D /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = debug;
+		};
+		B894B7A208633A8900B04B44 /* Build configuration list for PBXNativeTarget "browser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B894B7A308633A8900B04B44 /* debug */,
+				B85A17001044882900B75A2D /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = debug;
+		};
+		B894B7A608633A8900B04B44 /* Build configuration list for PBXNativeTarget "creator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B894B7A708633A8900B04B44 /* debug */,
+				B85A17011044882900B75A2D /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = debug;
+		};
+		B894B7AA08633A8900B04B44 /* Build configuration list for PBXNativeTarget "effector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B894B7AB08633A8900B04B44 /* debug */,
+				B85A17031044882900B75A2D /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = debug;
+		};
+		B894B7AE08633A8900B04B44 /* Build configuration list for PBXNativeTarget "exporter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B894B7AF08633A8900B04B44 /* debug */,
+				B85A17041044882900B75A2D /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = debug;
+		};
+		B894B7B208633A8900B04B44 /* Build configuration list for PBXNativeTarget "figure" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B894B7B308633A8900B04B44 /* debug */,
+				B85A17051044882900B75A2D /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = debug;
+		};
+		B894B7B608633A8900B04B44 /* Build configuration list for PBXNativeTarget "imagebox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B894B7B708633A8900B04B44 /* debug */,
+				B85A17071044882900B75A2D /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = debug;
+		};
+		B894B7BA08633A8900B04B44 /* Build configuration list for PBXNativeTarget "importer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B894B7BB08633A8900B04B44 /* debug */,
+				B85A17081044882900B75A2D /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = debug;
+		};
+		B894B7BE08633A8900B04B44 /* Build configuration list for PBXNativeTarget "modifier" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B894B7BF08633A8900B04B44 /* debug */,
+				B85A17091044882900B75A2D /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = debug;
+		};
+		B894B7C608633A8900B04B44 /* Build configuration list for PBXNativeTarget "plugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B894B7C708633A8900B04B44 /* debug */,
+				B85A170B1044882900B75A2D /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = debug;
+		};
+		B894B7CA08633A8900B04B44 /* Build configuration list for PBXNativeTarget "renderer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B894B7CB08633A8900B04B44 /* debug */,
+				B85A170C1044882900B75A2D /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = debug;
+		};
+		B894B7CE08633A8900B04B44 /* Build configuration list for PBXNativeTarget "resident" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B894B7CF08633A8900B04B44 /* debug */,
+				B85A170D1044882900B75A2D /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = debug;
+		};
+		B894B7D208633A8900B04B44 /* Build configuration list for PBXNativeTarget "shader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B894B7D308633A8900B04B44 /* debug */,
+				B85A170E1044882900B75A2D /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = debug;
+		};
+		B894B7D608633A8900B04B44 /* Build configuration list for PBXNativeTarget "window" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B894B7D708633A8900B04B44 /* debug */,
+				B85A170F1044882900B75A2D /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = debug;
+		};
+		B894B7DA08633A8900B04B44 /* Build configuration list for PBXNativeTarget "undo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B894B7DB08633A8900B04B44 /* debug */,
+				B85A17101044882900B75A2D /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = debug;
+		};
+		B894B7DE08633A8900B04B44 /* Build configuration list for PBXNativeTarget "dialog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B894B7DF08633A8900B04B44 /* debug */,
+				B85A17021044882900B75A2D /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = debug;
+		};
+		B894B7EA08633A8900B04B44 /* Build configuration list for PBXAggregateTarget "all" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B894B7EB08633A8900B04B44 /* debug */,
+				B85A17111044882900B75A2D /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = debug;
+		};
+		B894B7EE08633A8900B04B44 /* Build configuration list for PBXProject "plugins" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B894B7EF08633A8900B04B44 /* debug */,
+				B85A16FE1044882900B75A2D /* release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}

@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- simple_window -->
+<palette xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:noNamespaceSchemaLocation='../../sxul.palettes.xsd'>
+	<hbox>
+		<group id='enumerated-items' label='Enumerated items'>
+			<push-button id='enumerated-push-button' label='Push button' tooltip='push button tooltip........'/>
+			<push-button id='enumerated-push-button-with-image' image='simple_window_image' tooltip='push button with image tooltip........'/>
+			<image-box id='enumerated-image-box' size='32 32' tooltip='image box tooltip........'/>
+			<checkbox id='enumerated-checkbox' label='Checkbox' tooltip='checkbox tooltip........'/>
+			<radio-button id='enumerated-radio-button' tooltip='radio button tooltip........'>
+				<item label='Radio 0' id='radio_button_item_0'/>
+				<item label='Radio 1' id='radio_button_item_1'/>
+				<item label='Radio 2' id='radio_button_item_2'/>
+			</radio-button>
+			<popup-menu id='enumerated-popup-menu' label='Popup' tooltip='popup menu tooltip........'>
+				<item label='Menu 0' id='popup_item_0'/>
+				<item label='Menu 1' id='popup_item_1'/>
+				<item label='Menu 2' id='popup_item_2'/>
+			</popup-menu>
+			<popup-menu id='enumerated-popup-menu-with-stepper' label='Popup with stepper' tooltip='popup menu tooltip........' stepper='true'>
+				<item label='Menu 0' id='popup_stepper_item_0'/>
+				<item label='Menu 1' id='popup_stepper_item_1'/>
+				<item label='Menu 2' id='popup_stepper_item_2'/>
+			</popup-menu>
+			<static-text id='enumerated-static-text' label='Static text' tooltip='static tooltip........'/>
+			<number id='enumerated-number-integer' label='Number (integer)' tooltip='number (integer) tooltip........' type='integer'/>
+			<number id='enumerated-number-real' label='Number (real)' tooltip='number (real) tooltip........' type='real'/>
+			<number id='enumerated-number-timecode' label='Number (timecode)' tooltip='number (timecode) tooltip........' type='timecode'/>
+			<slider id='enumerated-slider' label='Slider' tooltip='slider tooltip........' size='50'/>
+			<scale id='enumerated-scale' label='Scale' tooltip='scale tooltip........'/>
+			<color-box id='enumerated-color-box' label='Color box' tooltip='color box tooltip........'/>
+			<color-disk id='enumerated-color-disk' tooltip='color disk tooltip........'/>
+			<vec2 id='enumerated-vec2' label='Vec2' tooltip='vec2 tooltip........'/>
+			<vec3 id='enumerated-vec3' label='Vec3' tooltip='vec3 tooltip........'/>
+			<vec4 id='enumerated-vec4' label='Vec4' tooltip='vec4 tooltip........'/>
+			<quaternion id='enumerated-quaternion' label='Quaternion' tooltip='quaternion tooltip........'/>
+			<matrix id='enumerated-matrix' label='Matrix' tooltip='matrix tooltip........'/>
+			<disclosure-button id='enumerated-disclosure-button' tooltip='disclosure button tooltip........'/>
+			<flasher id='enumerated-flasher' tooltip='flasher tooltip........'/>
+		</group>
+		<vbox>
+			<group id='horizontal-items' label='Horizontal items'>
+				<hbox>
+					<push-button id='horizontal-push-button-0' label='Push button 0' tooltip='push button 0 tooltip........'/>
+					<push-button id='horizontal-push-button-1' label='Push button 1' tooltip='push button 1 tooltip........'/>
+					<push-button id='horizontal-push-button-2' label='Push button 2' tooltip='push button 2 tooltip........'/>
+				</hbox>
+			</group>
+			<tab>
+				<group id='tab0' label='Tab0'>
+					<static-text id='tab0-static-text' label='Static text'/>
+				</group>
+				<group id='tab1' label='Tab1'>
+					<push-button id='tab1-push-button' label='Push button'/>
+				</group>
+				<group id='tab2' label='Tab2'>
+					<checkbox id='tab2-checkbox' label='Checkbox'/>
+				</group>
+			</tab>
+			<group id='disclosable-group' label='Disclosable group' disclosure='true'>
+				<static-text id='disclosable-static-text' label='Static text'/>
+				<push-button id='disclosable-push-button' label='Push button'/>
+				<checkbox id='disclosable-checkbox' label='Checkbox'/>
+			</group>
+      <group disclosure='true' id='table_group' label='Table group' resizable='true'>
+        <table id='table' size='400 100'>
+          <item id='column0' label='bool' size='20' tooltip='' type='bool'/>
+          <item id='column1' label='int' size='50' tooltip='' type='int'/>
+          <item id='column2' label='float' size='50' tooltip='' type='float'/>
+          <item id='column3' label='string' size='100' tooltip='' type='string'/>
+          <item id='column4' label='color' size='50' tooltip='' type='color'/>
+        </table>
+      </group>
+      <control size='1 2'/>
+      <push-button id='insert-row-button' label='Insert row' tooltip='push button tooltip........' size='50'/>
+      <popup-menu id='table-selection-mode-popup-menu' label='Selection Mode' tooltip='popup menu tooltip........' size='180'>
+        <item id='single_line_item' label='Single Line'/>
+        <item id='multi_lines_item' label='Multiple Lines'/>
+      </popup-menu>
+    </vbox>
+	</hbox>
+</palette>

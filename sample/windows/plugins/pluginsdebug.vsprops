@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="pluginsdebug"
+	>
+  <Tool
+	  Name="VCLinkerTool"
+	  AdditionalDependencies="libcmtd.lib"
+	  IgnoreDefaultLibraryNames="libcmt.lib"
+  />
+</VisualStudioPropertySheet>

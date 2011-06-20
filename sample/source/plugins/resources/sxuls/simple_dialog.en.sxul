@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dialog title='simple dialog' default_button='true' resizable='true'>
+	<vbox>
+		<short-string label='short string:' id='100'/>
+		<long-string label='long string:' id='101'/>
+		<long-text label='long text:' lines='3' id='102'/>
+		<hbox>
+			<push-button label='push button 0' id='103'/>
+			<push-button label='push button 1' id='104'/>
+			<push-button label='push button 2' id='105'/>
+		</hbox>
+		<bool label='bool' id='106' default='true'/>
+		<int label='int:' id='107' default='100'/>
+		<int label='int with stepper:' stepper='true' id='108'/>
+		<float label='float:' id='109' default='109.2'/>
+		<float label='float with slider:' id='110' slider='true'/>
+		<double label='double:' id='111'/>
+		<selection label='selection:|zero|one|two' id='112'/>
+		<rgb label='rgb' id='113'/>
+		<vec3 label='vec3' id='114'/>
+		<custom height='150' id='115' width='200' resizable='true' max_height='400' max_width='600'/>
+		<listbox id='116'/>
+	</vbox>
+</dialog>

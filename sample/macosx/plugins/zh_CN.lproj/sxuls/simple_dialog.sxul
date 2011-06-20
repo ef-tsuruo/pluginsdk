@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?><dialog default_button="true" resizable="true" title="simple dialog">
+	<vbox>
+		<short-string id="100" label="短文字行:"/>
+		<long-string id="101" label="长文字行:"/>
+		<long-text id="102" label="长文本:" lines="3"/>
+		<hbox>
+			<push-button id="103" label="推动按钮 0"/>
+			<push-button id="104" label="推动按钮 1"/>
+			<push-button id="105" label="推动按钮 2"/>
+		</hbox>
+		<bool default="true" id="106" label="bool"/>
+		<int default="100" id="107" label="整数:"/>
+		<int id="108" label="int with stepper:" stepper="true"/>
+		<float default="109.2" id="109" label="浮点数:"/>
+		<float id="110" label="float with slider:" slider="true"/>
+		<double id="111" label="精度数:"/>
+		<selection id="112" label="选择:|零|一个|二"/>
+		<rgb id="113" label="rgb"/>
+		<vec3 id="114" label="vec3"/>
+		<custom height="150" id="115" max_height="400" max_width="600" resizable="true" width="200"/>
+		<listbox id="116"/>
+	</vbox>
+</dialog>

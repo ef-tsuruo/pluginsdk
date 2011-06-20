@@ -1,0 +1,11 @@
+#include <Carbon/Carbon.h>
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <AppKit/AppKit.h>
+#endif 
+
+#define SXMACOSX 1
+#define SXCARBON 1
+#define PLUGIN 1
+#define SXPLUGIN 1
+#define __stdcall
