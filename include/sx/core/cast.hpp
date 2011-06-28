@@ -11,34 +11,30 @@ namespace sx {
 	template<typename T> T &cast (T &u);
 
 	template<typename T, typename U> inline const T *cast (const U *u) {
-		BOOST_STATIC_ASSERT((boost::is_base_of<U, T>::value));
-		SXASSERT(!u || u->check_signature());
+		if (u) SXTEST(sx::check_invariant(*u));
 		const T *const t = dynamic_cast<const T *>(u);
-		SXASSERT(!t || t->check_signature());
+		if (t) SXTEST(sx::check_invariant(*t));
 		return t;
 	}
 	template<typename T, typename U> inline T *cast (U *u) {
-		BOOST_STATIC_ASSERT((boost::is_base_of<U, T>::value));
-		SXASSERT(!u || u->check_signature());
+		if (u) SXTEST(sx::check_invariant(*u));
 		T *const t = dynamic_cast<T *>(u);
-		SXASSERT(!t || t->check_signature());
+		if (t) SXTEST(sx::check_invariant(*t));
 		return t;
 	}
 
 	template<typename T, typename U> inline const T &cast (const U &u) {
-		BOOST_STATIC_ASSERT((boost::is_base_of<U, T>::value));
-		SXASSERT(u.check_signature());
+		SXTEST(sx::check_invariant(u));
 		const T *const t = dynamic_cast<const T *>(&u);
 		SXASSERT(t);
-		SXASSERT(t->check_signature());
+		SXTEST(sx::check_invariant(*t));
 		return *t;
 	}
 	template<typename T, typename U> inline T &cast (U &u) {
-		BOOST_STATIC_ASSERT((boost::is_base_of<U, T>::value));
-		SXASSERT(u.check_signature());
+		SXTEST(sx::check_invariant(u));
 		T *const t = dynamic_cast<T *>(&u);
 		SXASSERT(t);
-		SXASSERT(t->check_signature());
+		SXTEST(sx::check_invariant(*t));
 		return *t;
 	}
 }

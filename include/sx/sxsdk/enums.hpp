@@ -175,6 +175,7 @@ namespace sx {
 			ime_process_key		= 0x504,
 			convert_key			= 0x505,
 			nonconvert_key		= 0x506,
+			clear_key			= 0x507,
 
 			// accelerator keys
 			option_key			= 0x801,	///< Z(Win), option(Mac)

@@ -5,6 +5,7 @@ SXCORE
 #include "sx/core/type_traits.hpp"
 #include "sx/core/debug.hpp"
 #include "sx/core/simd.hpp"
+#include "sx/core/settings.hpp"
 
 #undef check
 
@@ -22,9 +23,8 @@ namespace sx {
 		operator T *const () const { return p; }
 		T *const operator= (T *q) { return (p = q); }
 		void swap (xvector_data_template<T,N> &t) { adl::swap(p, t.p); }
-		bool check_invariant () const {
-			SXASSERT(sx::memory::check_address(p));
-			return true;
+		void check_invariant () const {
+			SXTEST(sx::memory::check_address(p));
 		}
 	private:
 		alignment_type storage[(sizeof(T) * N + sizeof(alignment_type) - 1) / sizeof(alignment_type)];
@@ -38,20 +38,24 @@ namespace sx {
 		operator T *const () const { return p; }
 		T *const operator= (T *q) { return (p = q); }
 		void swap (xvector_data_template<T,0> &t) { adl::swap(p, t.p); }
-		bool check_invariant () const {
-			SXASSERT(sx::memory::check_address(p));
-			return true;
+		void check_invariant () const {
+			if (sx::core::settings::check_invariant()) check_invariant_imp();
 		}
 	private:
 		T *p;
+	private:
+		void check_invariant_imp () const;
 	};
+	template<typename T> void xvector_data_template<T,0>::check_invariant_imp () const {
+		sx::memory::check_address(p);
+	}
 	template<typename T, std::size_t N> inline void swap (xvector_data_template<T,N> &a, xvector_data_template<T,N> &b) {
 		a.swap(b);
 	}
 	
 	template <typename T, std::size_t N> class vector;
 
-	template <typename T, std::size_t N = 0> class vector {
+	template <typename T, std::size_t N = 0> class vector : public sx::signature<0xDE2B796E> {
 	public:
 		typedef std::random_access_iterator_tag iterator_category;
 		typedef T value_type;
@@ -125,7 +129,13 @@ namespace sx {
 			return *this;
 		}
 		inline void shrink_to_fit ();
-		bool check_invariant () const;
+		void check_invariant () const {
+			sx::signature<0xDE2B796E>::check_invariant();
+			sx::check_invariant(p);
+			SXASSERT((n <= N) || (n <= get_size(p)));
+			if (sx::core::settings::check_invariant()) check_invariant_imp();
+		}
+		bool check_each () const;
 	private:
 		xvector_data_template<T,N> p;
 		std::size_t n;
@@ -156,6 +166,8 @@ namespace sx {
 		void insert_imp (iterator loc, const_iterator first, const_iterator last);
 
 		void append (const_iterator start, const_iterator end);
+	private:
+		void check_invariant_imp () const;
 	};
 	template<typename T, std::size_t N> void vector<T, N>::cleanup (T *p, std::size_t begin, std::size_t end) {
 		if (p) {
@@ -163,23 +175,23 @@ namespace sx {
 		}
 	}
 	template<typename T, std::size_t N> inline T *get (vector<T, N> &v) {
-		sxassert(v.check_invariant());
+		SXTEST(sx::check_invariant(v));
 		return v.empty() ? 0 : &(v[0]);
 	}
 	template<typename T, std::size_t N> inline const T *get (const vector<T, N> &v) {
-		sxassert(v.check_invariant());
+		SXTEST(sx::check_invariant(v));
 		return v.empty() ? 0 : &(v[0]);
 	}
 	template<typename T, std::size_t N> inline void swap (vector<T, N> &a, vector<T, N> &b) {
-		sxassert(a.check_invariant());
-		sxassert(b.check_invariant());
+		SXTEST(sx::check_invariant(a));
+		SXTEST(sx::check_invariant(b));
 		a.swap(b);
-		sxassert(a.check_invariant());
-		sxassert(b.check_invariant());
+		SXTEST(sx::check_invariant(a));
+		SXTEST(sx::check_invariant(b));
 	}
 	template<typename T, std::size_t N> inline void vector<T, N>::swap (vector &v) {
-		SXASSERT(check_invariant());
-		sxassert(v.check_invariant());
+		SXTEST(sx::check_invariant(*this));
+		SXTEST(sx::check_invariant(v));
 		if (0 < N) {
 			if (p) {
 				if (v.p) {
@@ -198,7 +210,7 @@ namespace sx {
 				if (v.p) {
 					if (!boost::has_trivial_constructor<T>::value) { std::size_t i; try { for (i = 0; i < n; ++i) ::new (v.storagep() + i) T; } catch (...) { cleanup(v.storagep(), 0, i); throw; } }
 					try { for (std::size_t i = 0; i < n; ++i) adl::swap(storagep()[i], v.storagep()[i]); } catch (...) { cleanup(v.storagep(), 0, v.n); throw; }
-					if (!boost::has_trivial_destructor<T>::value) { for (std::size_t i = 0; i < n; ++i) v.storagep()[i].~T(); }
+					if (!boost::has_trivial_destructor<T>::value) { for (std::size_t i = 0; i < n; ++i) storagep()[i].~T(); }
 					adl::swap(n, v.n);
 					adl::swap(p, v.p);
 				}
@@ -221,12 +233,12 @@ namespace sx {
 			adl::swap(n, v.n);
 			adl::swap(p, v.p);
 		}
-		SXASSERT(check_invariant());
-		sxassert(v.check_invariant());
+		SXTEST(sx::check_invariant(*this));
+		SXTEST(sx::check_invariant(v));
 	}
 	template<typename T, std::size_t N> void vector<T, N>::shrink_to_fit_imp () {
-		SXASSERT(check_invariant());
-		sxassert(p);
+		SXTEST(sx::check_invariant(*this));
+		SXASSERT(p);
 		if ((0 < N) && (n <= N)) {
 			if (sx::is_movable<T>::value) {
 				if (0 < n) ::memcpy(storagep(), p, sizeof(T)*n);
@@ -254,17 +266,17 @@ namespace sx {
 				free(p); p = q;
 			}
 		}
-		SXASSERT(check_invariant());
+		SXTEST(sx::check_invariant(*this));
 	}
 	template<typename T, std::size_t N> inline void vector<T, N>::shrink_to_fit () {
-		SXASSERT(check_invariant());
+		SXTEST(sx::check_invariant(*this));
 		if (p) {
 			shrink_to_fit_imp();
 		}
-		SXASSERT(check_invariant());
+		SXTEST(sx::check_invariant(*this));
 	}
 	template<typename T, std::size_t N> inline vector<T, N>::vector () : p(0), n(0) {
-		SXASSERT(check_invariant());
+		SXTEST(sx::check_invariant(*this));
 	}
 
 	template<typename T, std::size_t N> void vector<T, N>::copy_imp (const vector &t) {
@@ -278,58 +290,63 @@ namespace sx {
 		n = t.n;
 	}
 	template<typename T, std::size_t N> inline vector<T, N>::vector (const vector &t) : p(0), n(0) {
-		SXASSERT(check_invariant());
-		sxassert(t.check_invariant());
+		SXTEST(sx::check_invariant(*this));
+		SXTEST(sx::check_invariant(t));
 		if (0 < t.n) {
 			copy_imp(t);
 		}
-		SXASSERT(check_invariant());
-		sxassert(t.check_invariant());
+		SXTEST(sx::check_invariant(*this));
+		SXTEST(sx::check_invariant(t));
 	}
 	template<typename T, std::size_t N> inline vector<T, N>::vector (std::size_t n) : p(0), n(0) {
-		SXASSERT(check_invariant());
+		SXTEST(sx::check_invariant(*this));
 		if (N < n) p = allocate(n);
 		T *q = get_p();
 		if (!boost::has_trivial_constructor<T>::value)	{ std::size_t i; try { for (i = 0; i < n; ++i) ::new (q+i) T; } catch (...) { cleanup(q, 0, i); free(p); throw; } }
 		this->n = n;
-		SXASSERT(check_invariant());
+		SXTEST(sx::check_invariant(*this));
 	}
 	template<typename T, std::size_t N> inline vector<T, N>::vector (std::size_t n, const T &t) : p(0), n(0) {
-		SXASSERT(check_invariant());
+		SXTEST(sx::check_invariant(*this));
 		if (N < n) p = allocate(n);
 		T *q = get_p();
 		if (!boost::has_trivial_copy<T>::value)	{ std::size_t i; try { for (i = 0; i < n; ++i) ::new (q+i) T(t); } catch (...) { cleanup(q, 0, i); free(p); throw; } }
 		else									{ for (std::size_t i = 0; i < n; ++i) *(q+i) = t; }
 		this->n = n;
-		SXASSERT(check_invariant());
+		SXTEST(sx::check_invariant(*this));
 	}
 	template<typename T, std::size_t N> void vector<T, N>::assign_imp (const vector &t) {
-		sxassert(t.p);
+		SXASSERT(t.p);
 		if (!boost::has_trivial_destructor<T>::value)	{ T *q = get_p(); for (std::size_t i = 0; i < n; ++i) q[i].~T(); }
 		free(p);
 		retain(p = t.p);
 		n = t.n;
 	}
 	template<typename T, std::size_t N> inline vector<T, N> &vector<T, N>::operator= (const vector &t) {
-		SXASSERT(check_invariant());
-		sxassert(t.check_invariant());
+		SXTEST(sx::check_invariant(*this));
+		SXTEST(sx::check_invariant(t));
 		if (this != &t) {
 			if (!boost::has_trivial_assign<T>::value)	{
-				if (!boost::has_nothrow_assign<T>::value)	{ vector<T, N> tmp(t); swap(tmp); }
+				if (!boost::has_nothrow_assign<T>::value)	{
+					sxassert(check_each());
+					vector<T, N> tmp(t);
+					sxassert(tmp.check_each());
+					swap(tmp);
+				}
 				else										{ resize(t.n); T *p = get_p(); const T *q = t.get_p(); for (std::size_t i = 0; i < t.n; ++i) *p++ = *q++; }
 			}
 			else											{ resize(t.n); T *p = get_p(); const T *q = t.get_p(); if (0 < t.n) ::memcpy(p, q, sizeof(T)*t.n); }
 		}
-		SXASSERT(check_invariant());
-		sxassert(n == t.n);
+		SXTEST(sx::check_invariant(*this));
+		SXASSERT(n == t.n);
 		return *this;
 	}
 	template<typename T, std::size_t N> inline vector<T, N>::~vector () {
-		SXASSERT(check_invariant());
+		SXTEST(sx::check_invariant(*this));
 		if (!boost::has_trivial_destructor<T>::value) {
 			T *const p = get_p();
 			SXASSERT((n == 0) || p);
-			for (std::size_t i = 0; i < n; ++i) p[i].~T();
+			for (std::size_t i = 0; i < n; ++i) { SXTEST(sx::check_invariant(p[i])); p[i].~T(); }
 		}
 		free(p);
 	}
@@ -349,21 +366,21 @@ namespace sx {
 		p = q;
 	}
 	template<typename T, std::size_t N> inline void vector<T, N>::reserve (std::size_t k) {
-		SXASSERT(check_invariant());
+		SXTEST(sx::check_invariant(*this));
 		if (capacity() < k) {
 			reserve_imp(k);
 		}
-		SXASSERT(check_invariant());
+		SXTEST(sx::check_invariant(*this));
 	}
 	template<typename T, std::size_t N> inline void vector<T, N>::clear () {
-		SXASSERT(check_invariant());
+		SXTEST(sx::check_invariant(*this));
 		if (!boost::has_trivial_destructor<T>::value)	{ T *const p = get_p(); for (std::size_t i = 0; i < n; ++i) p[i].~T(); }
 		free(p);
 		p = 0;
 		n = 0;
 	}
 	template<typename T, std::size_t N> void vector<T, N>::resize_imp (std::size_t k) {
-		sxassert(n < k);
+		SXASSERT(n < k);
 		if (p) {
 			if (get_size(p) < k) {
 				T *const q = allocate(k);
@@ -403,8 +420,8 @@ namespace sx {
 		n = k;
 	}
 	template<typename T, std::size_t N> inline void vector<T, N>::resize (std::size_t k) {
-		SXASSERT(check_invariant());
-		#ifndef NDEBUG
+		SXTEST(sx::check_invariant(*this));
+		#if !defined(NDEBUG) || SXASSERTDEFINED
 			const std::size_t old_capacity = capacity();
 		#endif
 		if (k < n) {
@@ -414,13 +431,12 @@ namespace sx {
 		else if (n < k) {
 			resize_imp(k);
 		}
-		#ifndef NDEBUG
-			if (n <= old_capacity) sxassert(old_capacity == capacity());
-		#endif
-		SXASSERT(check_invariant());
+		SXASSERT((old_capacity < n) || (old_capacity == capacity()));
+		SXTEST(sx::check_invariant(*this));
 	}
 	template<typename T, std::size_t N> void vector<T, N>::resize_imp (std::size_t k, const T &t) {
-		sxassert(n < k);
+		SXTEST(check_signature());
+		SXASSERT(n < k);
 		if (p) {
 			if (get_size(p) < k) {
 				T *const q = allocate(k);
@@ -469,8 +485,8 @@ namespace sx {
 		n = k;
 	}
 	template<typename T, std::size_t N> inline void vector<T, N>::resize (std::size_t k, const T &t) {
-		SXASSERT(check_invariant());
-		#ifndef NDEBUG
+		SXTEST(sx::check_invariant(*this));
+		#if !defined(NDEBUG) || SXASSERTDEFINED
 			const std::size_t old_capacity = capacity();
 		#endif
 		if (k < n) {
@@ -480,10 +496,8 @@ namespace sx {
 		else if (n < k) {
 			resize_imp(k, t);
 		}
-		#ifndef NDEBUG
-			if (n <= old_capacity) sxassert(old_capacity == capacity());
-		#endif
-		SXASSERT(check_invariant());
+		SXASSERT((old_capacity < n) || (old_capacity == capacity()));
+		SXTEST(sx::check_invariant(*this));
 	}
 	template<typename T, std::size_t N> void vector<T, N>::append_imp (const_iterator start, const_iterator end) {
 		const std::size_t k = n + (end - start);
@@ -536,27 +550,25 @@ namespace sx {
 		n = k;
 	}
 	template<typename T, std::size_t N> inline void vector<T, N>::append (const_iterator start, const_iterator end) {
-		SXASSERT(check_invariant());
-		#ifndef NDEBUG
+		SXTEST(sx::check_invariant(*this));
+		#if !defined(NDEBUG) || SXASSERTDEFINED
 			const std::size_t old_capacity = capacity();
 		#endif
 		append_imp(start, end);
-		#ifndef NDEBUG
-			if (n <= old_capacity) sxassert(old_capacity == capacity());
-		#endif
-		SXASSERT(check_invariant());
+		SXASSERT((old_capacity < n) || (old_capacity == capacity()));
+		SXTEST(sx::check_invariant(*this));
 	}
 	template<typename T, std::size_t N> inline void vector<T, N>::push_back (const T &t) {
-		SXASSERT(check_invariant());
+		SXTEST(sx::check_invariant(*this));
 		resize(n+1, t);
-		SXASSERT(check_invariant());
+		SXTEST(sx::check_invariant(*this));
 	}
 	template<typename T, std::size_t N> inline void vector<T, N>::pop_back () {
-		SXASSERT(check_invariant());
-		sxassert(0 < n);
+		SXTEST(sx::check_invariant(*this));
+		SXASSERT(0 < n);
 		get_p()[n-1].~T();
 		--n;
-		SXASSERT(check_invariant());
+		SXTEST(sx::check_invariant(*this));
 	}
 	template<typename T, std::size_t N> inline T *vector<T, N>::insert (iterator loc, const T& t) {
 		const std::size_t s = loc - begin();
@@ -572,12 +584,12 @@ namespace sx {
 		for (std::size_t i = 0; i < tn; ++i) p[s+i] = t;
 	}
 	template<typename T, std::size_t N> inline void vector<T, N>::insert (iterator loc, std::size_t tn, const T& t) {
-		SXASSERT(check_invariant());
+		SXTEST(sx::check_invariant(*this));
 		if (0 < tn) {
 			if (loc == end())	resize(n+tn, t);
 			else				insert_imp(loc, tn, t);
 		}
-		SXASSERT(check_invariant());
+		SXTEST(sx::check_invariant(*this));
 	}
 	template<typename T, std::size_t N> void vector<T, N>::insert_imp (iterator loc, const_iterator first, const_iterator last) {
 		const std::size_t s = loc - begin();
@@ -589,60 +601,55 @@ namespace sx {
 		for (std::size_t i = 0; i < tn; ++i) p[s+i] = *(first+i);
 	}
 	template<typename T, std::size_t N> inline void vector<T, N>::insert (iterator loc, const_iterator first, const_iterator last) {
-		SXASSERT(check_invariant());
+		SXTEST(sx::check_invariant(*this));
 		if (loc == end())	append(first, last);
 		else				insert_imp(loc, first, last);
-		SXASSERT(check_invariant());
+		SXTEST(sx::check_invariant(*this));
 	}
 	template<typename T, std::size_t N> inline const T &vector<T, N>::operator[] (std::size_t i) const {
-		SXASSERT(check_invariant());
-		sxassert(i < n);
+		SXTEST(sx::check_invariant(*this));
+		SXASSERT(i < n);
 		return get_p()[i];
 	}
 	template<typename T, std::size_t N> inline const T &vector<T, N>::front () const {
-		SXASSERT(check_invariant());
-		sxassert(0 < n);
+		SXTEST(sx::check_invariant(*this));
+		SXASSERT(0 < n);
 		return get_p()[0];
 	}
-	template<typename T, std::size_t N> bool vector<T, N>::check_invariant () const {
-		SXASSERT(p.check_invariant());
-		SXASSERT((n <= N) || (n <= get_size(p)));
-		#if !defined(NDEBUG) || SXASSERTDEFINED
-			if (N < n) {
-				sx::memory::header_class *q = sx::memory::header(get_p());
-				if (q->offset != -1) {
-					const std::size_t s = sx::memory::get_optimum_size(sizeof(T)*n)/sizeof(T)*sizeof(T);
-					SXASSERT(s <= q->size);
-				}
+	template<typename T, std::size_t N> void vector<T, N>::check_invariant_imp () const {
+		if (N < n) {
+			sx::memory::header_class *q = sx::memory::header(get_p());
+			if (q->offset != -1) {
+				const std::size_t s = sx::memory::get_optimum_size(sizeof(T)*n)/sizeof(T)*sizeof(T);
+				SXASSERT(s <= q->size);
 			}
-		#endif
-		return true;
+		}
 	}
 	template<typename T, std::size_t N> inline T &vector<T, N>::front () {
-		SXASSERT(check_invariant());
-		sxassert(0 < n);
+		SXTEST(sx::check_invariant(*this));
+		SXASSERT(0 < n);
 		return get_p()[0];
 	}
 	template<typename T, std::size_t N> inline const T &vector<T, N>::back () const {
-		SXASSERT(check_invariant());
-		sxassert(0 < n);
+		SXTEST(sx::check_invariant(*this));
+		SXASSERT(0 < n);
 		return get_p()[n-1];
 	}
 	template<typename T, std::size_t N> inline T &vector<T, N>::back () {
-		SXASSERT(check_invariant());
-		sxassert(0 < n);
+		SXTEST(sx::check_invariant(*this));
+		SXASSERT(0 < n);
 		return get_p()[n-1];
 	}
 	template<typename T, std::size_t N> inline bool vector<T, N>::operator== (const vector<T, N> &b) const {
-		SXASSERT(check_invariant());
-		sxassert(b.check_invariant());
+		SXTEST(sx::check_invariant(*this));
+		SXTEST(sx::check_invariant(b));
 		const vector<T, N> &a = *this;
 		if (a.n != b.n) return false;
 		T *ap = a.get_p();
 		T *bp = b.get_p();
 		const std::size_t n = a.n;
 		for (std::size_t i = 0; i < n; ++i) {
-			if (*ap++ != *bp++) return false;
+			if (!(*ap++ == *bp++)) return false;
 		}
 		return true;
 	}
@@ -651,27 +658,28 @@ namespace sx {
 		return !(a == b);
 	}
 	template<typename T, std::size_t N> inline void vector<T, N>::erase (T *q) {
-		SXASSERT(check_invariant());
+		SXTEST(sx::check_invariant(*this));
 		if (!q) return;
-		sxassert(begin() <= q && q < end());
+		SXASSERT(begin() <= q && q < end());
 		{	T *const p = get_p();
 			if (!boost::has_trivial_assign<T>::value)		{ for (std::size_t i = q - p; i+1 < n; ++i) adl::swap(p[i], p[i+1]); }
 			else											{ for (std::size_t i = q - p; i+1 < n; ++i) p[i] = p[i+1]; }
 			if (!boost::has_trivial_destructor<T>::value)	{ p[n-1].~T(); }
 		}
 		--n;
-		SXASSERT(check_invariant());
+		SXTEST(sx::check_invariant(*this));
 	}
+	template<typename T, std::size_t N> bool vector<T, N>::check_each () const {
+		foreach (const T &t, *this) sx::check_invariant(t);
+		return true;
+	}
+	
 	template<typename T, std::size_t N> inline void shrink_to_fit (vector<T, N> &v) {
 		v.shrink_to_fit();
 	}
 
-	template<typename T, std::size_t N> bool check_invariant (const sx::vector<T, N> &v) {
-		foreach (const T &t, v) t.check_invariant();
-		return true;
-	}
-	template<typename T, std::size_t N> bool check_invariant (const sx::vector<T *, N> &v) {
-		foreach (T *const t, v) if (t) t->check_invariant();
+	template<typename T, std::size_t N> bool check_each (const sx::vector<T, N> &v) {
+		v.check_each();
 		return true;
 	}
 	

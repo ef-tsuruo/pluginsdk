@@ -183,8 +183,8 @@ dialog_item_class& set_listbox_label (const std::string& label) { return set_lis
 	virtual const char* ask_path (bool open = true, const char* extensions = 0) = 0; // 66
 	virtual void set_vec2_default_value (int index, const sxsdk::vec2& value, void* aux = 0) = 0; // 67
 	virtual int append_vec2 (const char* name = 0, const char* unit = 0, sxsdk::plugin_interface* responder = 0) = 0; // 68
-	virtual int dialog_interface_dummy69(void *) { assert(false); throw "invalid interface dialog_interface"; return 0; } // 69
-	virtual int dialog_interface_dummy70(void *) { assert(false); throw "invalid interface dialog_interface"; return 0; } // 70
+	virtual void do_reset (void* aux = 0) { } // 69
+	virtual void do_default (void* aux = 0) { } // 70
 	virtual int dialog_interface_dummy71(void *) { assert(false); throw "invalid interface dialog_interface"; return 0; } // 71
 	virtual int dialog_interface_dummy72(void *) { assert(false); throw "invalid interface dialog_interface"; return 0; } // 72
 	virtual int dialog_interface_dummy73(void *) { assert(false); throw "invalid interface dialog_interface"; return 0; } // 73

@@ -170,7 +170,14 @@ namespace sxsdk {
 			cylinder_projection	= 4,	///< \en blah \enden \ja 円柱投影\endja
 			sphere_projection	= 5,	///< \en blah \enden \ja 球投影\endja
 			box_projection		= 6,	///< \en blah \enden \ja ボックス投影（法線に合わせてX, Y, Z軸投影のいずれかに割り振り）\endja
-			last_mapping_projection	///< \en blah \enden \ja 未使用\endja
+			last_mapping_projection		///< \en blah \enden \ja 未使用\endja
+		};
+		/// \en blah \enden \ja ボリュームレンダリングの種類\endja
+		enum volume_type {
+			no_volume_method = 0,		///< \en blah \enden \ja なし\endja
+			volume_method = 1,			///< \en blah \enden \ja ボリュームレンダリング\endja
+			sss_method = 2,				///< \en blah \enden \ja サブサーフェススキャタリング\endja
+			last_volume_type			///< \en blah \enden \ja 未使用\endja
 		};
 		/// \en blah \enden \ja オブジェクトカメラのモーションの移動モード\endja
 		enum anchor_type {
@@ -304,10 +311,11 @@ namespace sxsdk {
 		};
 		/// \en blah \enden \ja カメラウインドウの操作のモード \endja
 		enum camera_trackmode_enum {
-			eye_trackmode,		///< \en blah \enden \ja 視点\endja
-			target_trackmode,	///< \en blah \enden \ja 注視点\endja
-			eyetarget_trackmode,///< \en blah \enden \ja 視点＆注視点\endja
-			zoom_trackmode		///< \en blah \enden \ja ズーム\endja
+			eye_trackmode,				///< \en blah \enden \ja 視点\endja
+			target_trackmode,			///< \en blah \enden \ja 注視点\endja
+			eyetarget_trackmode,		///< \en blah \enden \ja 視点＆注視点\endja
+			zoom_trackmode,				///< \en blah \enden \ja ズーム\endja
+			zoom_figure_trackmode,		///< \en blah \enden \ja 図形ウィンドウメニューバーズーム\endja
 		};
 		/// \en Selection mode of polygonmesh. \enden \ja ポリゴンメッシュの選択モード \endja
 		enum selection_mode_enum {
@@ -394,6 +402,7 @@ namespace sxsdk {
 			local_type,
 			normal_type
 		};
+		/// \en blah \enden \ja 立体視レンダリングの出力画像の配置方法 \endja
 		enum stereo_output_type_enum {
 			stereo_side_by_side,		///< \en Side by Side \enden \ja 平行法 \endja
 			stereo_crosseye,			///< \en Crosseye \enden \ja 交差法 \endja
@@ -407,6 +416,25 @@ namespace sxsdk {
 			last_stereo_output_type,	///< \en blah \enden \ja 未使用 \endja
 			number_of_stereo_output_types = last_stereo_output_type
 		};
+		/// \en blah \enden \ja 立体視レンダリングの仮想スクリーンの距離の設定方法 \endja
+		enum stereo_depth_type_enum {
+			stereo_auto_depth,			///< \en Auto Calculation \enden \ja 自動計算 \endja
+			stereo_target_depth,		///< \en Link Camera Target \enden \ja 注視点に連動 \endja
+			stereo_user_depth,			///< \en User Defined \enden \ja 数値入力 \endja
+			last_stereo_depth_type,		///< \en blah \enden \ja 未使用 \endja
+			number_of_stereo_depth_types = last_stereo_depth_type
+		};
+		/// \en blah \enden \ja 立体視レンダリングの視聴環境設定のプロファイル \endja
+		enum stereo_viewing_profile_enum {
+			stereo_profile_medium_effect,		///< \en \enden \ja 立体感 中 \endja
+			stereo_profile_weak_effect,			///< \en \ja 立体感 弱 \endja
+			stereo_profile_medium_effect_child,	///< \en \enden \ja 立体感 中(子供向け) \endja
+			stereo_profile_weak_effect_child,	///< \en \ja 立体感 弱(子供向け) \endja
+			stereo_profile_custom_angle,		///< \en \ja カスタム(視差角設定) \endja
+			stereo_profile_custom_depth,		///< \en \enden \ja カスタム(深度設定) \endja
+			last_stereo_viewing_profile,		///< \en blah \enden \ja 未使用 \endja
+			number_of_stereo_viewing_profile = last_stereo_viewing_profile
+		};
 	}
 
 	/// \en blah \enden \ja マルチパスレンダリングに関連するenum \endja
@@ -416,6 +444,7 @@ namespace sxsdk {
 			combined_layers,		///< \en blah \enden \ja 統合レイヤー \endja
 			color_layers,			///< \en blah \enden \ja カラー要素 \endja
 			parameter_layers,		///< \en blah \enden \ja パラメータ要素 \endja
+			uv_layers,				///< \en blah \enden \ja UV要素 \endja
 			object_mask_layers,		///< \en blah \enden \ja 形状マスク \endja
 			surface_mask_layers,	///< \en blah \enden \ja 表面材質マスク \endja
 			custom_layers,			///< \en blah \enden \ja プラグイン、スクリプトで生成したレイヤー \endja
@@ -438,11 +467,12 @@ namespace sxsdk {
 				gi,				///< \en blah \enden \ja 大域照明 \endja
 				caustics,		///< \en blah \enden \ja コースティクス(フォトンマッピング) \endja
 				volumelight,	///< \en blah \enden \ja ボリュームライト \endja
+				volume,			///< \en blah \enden \ja ボリュームレンダリング、サブサーフェススキャタリング \endja
 				fog,			///< \en blah \enden \ja フォグ \endja
 				last_type		///< \en blah \enden \ja 未使用 \endja
 			};
 			/// \en blah \enden \ja レイヤーのID名 \endja
-			static const char *name[last_type] = {
+			static const char *const name[last_type] = {
 				"Background",
 				"Diffuse",
 				"Specular",
@@ -455,6 +485,7 @@ namespace sxsdk {
 				"GI",
 				"Caustics",
 				"VolumeLight",
+				"Volume",
 				"Fog"
 			};
 			static inline const char *get_name (type i) { return name[i]; }	///< \en blah \enden \ja レイヤーのID名を取得する \endja
@@ -471,8 +502,6 @@ namespace sxsdk {
 				position,			///< \en blah \enden \ja 座標値 \endja
 				xy_normal,			///< \en blah \enden \ja 法線(カメラ) \endja
 				normal,				///< \en blah \enden \ja 法線(グローバル) \endja
-				uv1,				///< \en blah \enden \ja UV座標(UV1, 距離補正) \endja
-				uv2,				///< \en blah \enden \ja UV座標(UV2, UV) \endja
 				light_diffuse,		///< \en blah \enden \ja 光源: 拡散反射 \endja
 				light_specular,		///< \en blah \enden \ja 光源: 光沢 \endja
 				light_gi,			///< \en blah \enden \ja 光源: 大域照明 \endja
@@ -483,7 +512,7 @@ namespace sxsdk {
 				last_type			///< \en blah \enden \ja 未使用 \endja
 			};
 			/// \en blah \enden \ja レイヤーのID名 \endja
-			static const char *name[last_type] = {
+			static const char *const name[last_type] = {
 				"PreEffect",
 				"Transparency",
 				"ZDepth",
@@ -491,8 +520,6 @@ namespace sxsdk {
 				"Position",
 				"XYNormal",
 				"Normal",
-				"UV1",
-				"UV2",
 				"LightDiffuse",
 				"LightSpecular",
 				"LightGI",
@@ -504,18 +531,13 @@ namespace sxsdk {
 			static inline const char *get_name (type i) { return name[i]; }	///< \en blah \enden \ja レイヤーのID名を取得する \endja
 			static inline std::size_t size () { return last_type; }			///< \en blah \enden \ja レイヤーの数 \endja
 		}
-		/// \en blah \enden \ja マルチパスレンダリングの形状マスクレイヤー \endja
-		namespace object_mask {
-			/// \en blah \enden \ja レイヤーのID名 \endja
-			static const char *name = "ObjectMask";
-			/// \en blah \enden \ja \a index からレイヤーのID名を取得する \endja
-			static inline std::string get_name (int index) {
+		namespace utility {
+			static inline std::string get_name (int index, const char *const name) {
 				std::stringstream ss;
 				ss << name << index;
 				return ss.str();
 			}
-			/// \en blah \enden \ja レイヤーのID名からマスクのindexを取得する。形状マスクのID名ではない場合は-1を返す。 \endja
-			static inline int get_index (const std::string &s) {
+			static inline int get_index (const std::string &s, const char *const name) {
 				if (s.compare(0, strlen(name), name)) return -1;
 
 				int index = -1;
@@ -524,38 +546,36 @@ namespace sxsdk {
 				return index;
 			}
 		}
+		/// \en blah \enden \ja マルチパスレンダリングのUVレイヤー \endja
+		namespace uv {
+			static const char *const name = "UV";	///< \en blah \enden \ja レイヤーのID名 \endja
+			static inline std::string get_name (int index) { return sxsdk::multipass::utility::get_name(index + 1, name); }	///< \en blah \enden \ja \a index からレイヤーのID名を取得する \endja
+			static inline int get_index (const std::string &s) { return sxsdk::multipass::utility::get_index(s, name) - 1; }///< \en blah \enden \ja レイヤーのID名からindexを取得する。ID名ではない場合は負の値を返す。 \endja
+		}
+		/// \en blah \enden \ja マルチパスレンダリングの形状マスクレイヤー \endja
+		namespace object_mask {
+			static const char *const name = "ObjectMask";	///< \en blah \enden \ja レイヤーのID名 \endja
+			static inline std::string get_name (int index) { return sxsdk::multipass::utility::get_name(index, name); }		///< \en blah \enden \ja \a index からレイヤーのID名を取得する \endja
+			static inline int get_index (const std::string &s) { return sxsdk::multipass::utility::get_index(s, name); }	///< \en blah \enden \ja レイヤーのID名からindexを取得する。ID名ではない場合は負の値を返す。 \endja
+		}
 		/// \en blah \enden \ja マルチパスレンダリングの表面材質マスクレイヤー \endja
 		namespace surface_mask {
-			/// \en blah \enden \ja レイヤーのID名 \endja
-			static const char *name = "SurfaceMask";
-			/// \en blah \enden \ja \a index からレイヤーのID名を取得する \endja
-			static inline std::string get_name (int index) {
-				std::stringstream ss;
-				ss << name << index;
-				return ss.str();
-			}
-			/// \en blah \enden \ja レイヤーのID名からマスクのindexを取得する。表面材質マスクのID名ではない場合は-1を返す。 \endja
-			static inline int get_index (const std::string &s) {
-				if (s.compare(0, strlen(name), name)) return -1;
-
-				int index = -1;
-				std::istringstream iss(s.substr(strlen(name)));
-				iss >> index;
-				return index;
-			}
+			static const char *const name = "SurfaceMask";	///< \en blah \enden \ja レイヤーのID名 \endja
+			static inline std::string get_name (int index) { return sxsdk::multipass::utility::get_name(index, name); }		///< \en blah \enden \ja \a index からレイヤーのID名を取得する \endja
+			static inline int get_index (const std::string &s) { return sxsdk::multipass::utility::get_index(s, name); }	///< \en blah \enden \ja レイヤーのID名からindexを取得する。ID名ではない場合は負の値を返す。 \endja
 		}
 	}
 
 	namespace tag {
 		namespace name {
 			/// \en blah \enden \ja vector格納用タグ名称 \endja
-			static const char *vector[4] = { "_x", "_y", "_z", "_w" };
+			static const char *const vector[4] = { "_x", "_y", "_z", "_w" };
 		}
 		static inline std::string add_vector (const std::string &path, int axis) { return path + tag::name::vector[axis]; }
 
 		namespace drafting {
 			/// \en blah \enden \ja メタタグのキー(UUID) \endja
-			static const char *key = "D534EF1E-6AF5-4ce7-B171-43288DF0150C";
+			static const char *const key = "D534EF1E-6AF5-4ce7-B171-43288DF0150C";
 			enum name_type {
 				line_type,
 				line_width,
@@ -563,7 +583,7 @@ namespace sxsdk {
 				face_color,
 				last_name_type
 			};
-			static const char *name[last_name_type] = {
+			static const char *const name[last_name_type] = {
 				"line_type",
 				"line_width",
 				"face_type",
@@ -574,7 +594,7 @@ namespace sxsdk {
 		}
 		namespace speed_display {
 			/// \en blah \enden \ja メタタグのキー(UUID) \endja
-			static const char *key = "5EE4376C-0E6E-4c1d-B549-58300682EAF0";
+			static const char *const key = "5EE4376C-0E6E-4c1d-B549-58300682EAF0";
 			/// \en blah \enden \ja SPEED用表示タグ名称 \endja
 			enum name_type {
 				t_3D,						///< \en blah \enden \ja 3D \endja
@@ -596,7 +616,7 @@ namespace sxsdk {
 				separator,					///< \en blah \enden \ja セパレータ \endja
 				last_name_type
 			};
-			static const char *name[last_name_type] = {
+			static const char *const name[last_name_type] = {
 				"3D",						///< \en blah \enden \ja 3D \endja
 				"3D_hole",					///< \en blah \enden \ja 3D 開口情報 \endja
 				"2D_floor_plan",			///< \en blah \enden \ja 2D 簡易平面表現 \endja
@@ -620,7 +640,7 @@ namespace sxsdk {
 		}
 		namespace axis_sets {
 			/// \en blah \enden \ja メタタグのキー(UUID) \endja
-			static const char *key = "6D8A1BE3-A60E-4275-986E-BDB009920F29";
+			static const char *const key = "6D8A1BE3-A60E-4275-986E-BDB009920F29";
 			/// \en blah \enden \ja メタタグのキーと組み合わせる名前(任意文字列) \endja
 			enum name_type {
 				axis,				///< \en blah \enden \ja axis \endja
@@ -628,7 +648,7 @@ namespace sxsdk {
 				modeling_camera,	///< \en blah \enden \ja modeling_camera \endja
 				last_name_type
 			};
-			static const char *name[last_name_type] =
+			static const char *const name[last_name_type] =
 			{
 				"axis",					///< \en blah \enden \ja axis \endja
 				"temp_axis",			///< \en blah \enden \ja temp_axis \endja

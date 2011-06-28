@@ -1109,6 +1109,7 @@ namespace sxsdk {
 		unsigned int i:15, j:15;
 		bool interpolate:1;
 
-		meshes_element_class () : n(sx::vec<float,3>(0,0,0)), i(0), j(0) { }
+		explicit meshes_element_class () : n(sx::vec<float,3>(0,0,0)), i(0), j(0) { }
+		void check_invariant () const { }
 	};
 }

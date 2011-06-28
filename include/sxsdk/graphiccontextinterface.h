@@ -38,5 +38,7 @@ namespace sxsdk {
 	virtual void draw_bitmap (bitmap_interface* image, const sx::rectangle_class& destination_rectangle, void* aux = 0) = 0; // 32
 	virtual void draw_uniscaled_image (sxsdk::image_interface* image, const sx::rectangle_class& destination_rectangle, void* aux = 0) = 0; // 33
 	virtual void draw_uniscaled_bitmap (bitmap_interface* image, const sx::rectangle_class& destination_rectangle, void* aux = 0) = 0; // 34
+	virtual void paint_polygon (int n_points, const sxsdk::vec2 points[], void* aux = 0) = 0; // 35
+	virtual void frame_polygon (int n_points, const sxsdk::vec2 points[], void* aux = 0) = 0; // 36
 	};
 }

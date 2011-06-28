@@ -26,6 +26,7 @@ public:
 	int get_refcount () const { return ref; }
 	int get_shade_build_number () const;
 	volatile static unsigned interface_total_count;
+	void check_invariant () const { }
 protected:
 	volatile unsigned ref;
 };
@@ -83,6 +84,7 @@ public:
 	T *release () { // note that release() is NOT the reverse operation of retatin().
 		T *p = ptr; ptr = 0; return p;
 	}
+	void check_invariant () const { }
 private:
 	T *ptr;
 };

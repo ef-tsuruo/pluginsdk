@@ -4,7 +4,7 @@ SXCORE
 namespace sx {
 	// Association represents the ability of one instance to send a message to another instance.
 	// |A|----------->|B|
-	template<typename T> class association {
+	template<typename T> class association : public sx::signature<0x8541F65E> {
 	public:
 		association (T *p = 0) : p(p) { } // allow implicit conversion
 		T &operator* () const {
@@ -25,13 +25,16 @@ namespace sx {
 			this->p = p;
 			return *this;
 		}
+		void check_invariant () const {
+			check_signature();
+		}
 	private:
 		T *p;
 	};
 
 	// Aggregation [...] is the typical whole/part relationship. This is exactly the same as an association with the exception that instances cannot have cyclic aggregation relationships (i.e. a part cannot contain its whole).
 	// |Node|<>-------->|Node|
-	template<typename T> class aggregation {
+	template<typename T> class aggregation : public sx::signature<0x7D12AD1D> {
 	public:
 		aggregation (T *p = 0) : p(p) { } // allow implicit conversion
 		T &operator* () const {
@@ -52,13 +55,19 @@ namespace sx {
 			this->p = p;
 			return *this;
 		}
+		void reset (T *p) {
+			this->p = p;
+		}
+		void check_invariant () const {
+			check_signature();
+		}
 	private:
 		T *p;
 	};
 
 	//Composition is exactly like Aggregation except that the lifetime of the 'part' is controlled by the 'whole'. This control may be direct or transitive. That is, the 'whole' may take direct responsibility for creating or destroying the 'part', or it may accept an already created part, and later pass it on to some other whole that assumes responsibility for it.
 	// |Car|<#>-------->|Carburetor|
-	template<typename T, bool DEFERRED=false> class composition {
+	template<typename T, bool DEFERRED=false> class composition : public sx::signature<0xCA14672F> {
 	public:
 		explicit composition () { }
 		template<typename U> explicit composition (const U &u) : t(u) { }
@@ -78,15 +87,15 @@ namespace sx {
 			return t;
 		}
 		void swap (composition<T,DEFERRED> &c) { adl::swap(t, c.t); }
-		bool check_invariant () const {
-			SXASSERT(sx::check_invariant(t));
-			return true;
+		void check_invariant () const {
+			check_signature();
+			sx::check_invariant(t);
 		}
 	private:
 		T t;
 	};
 
-	template<typename T> class composition<T *, false> {
+	template<typename T> class composition<T *, false> : public sx::signature<0x9B783936> {
 	public:
 		explicit composition () : p(new T) { }
 		explicit composition (T *p) : p(p) { }
@@ -118,16 +127,16 @@ namespace sx {
 			SXASSERT(p);
 			return *p;
 		}
-		void swap (composition<T> &c) { p.swap(c.t); }
-		bool check_invariant () const {
+		void swap (composition<T> &c) { p.swap(c.p); }
+		void check_invariant  () const {
+			check_signature();
 			SXASSERT(p);
-			SXASSERT(sx::check_invariant(*p));
-			return true;
+			sx::check_invariant(*p);
 		}
 	private:
 		std::unique_ptr<T> p;
 	};
-	template<typename T> class composition<T *, true> {
+	template<typename T> class composition<T *, true> : public sx::signature<0xF6D6B916> {
 	public:
 		explicit composition () { }
 		explicit composition (T *p) : p(p) { }
@@ -165,10 +174,10 @@ namespace sx {
 		operator const T & () const {
 			return *p;
 		}
-		void swap (composition<T> &c) { p.swap(c.t); }
-		bool check_invariant () const {
-			SXASSERT(!p || sx::check_invariant(*p));
-			return true;
+		void swap (composition<T> &c) { p.swap(c.p); }
+		void check_invariant  () const {
+			check_signature();
+			if (p) sx::check_invariant(*p);
 		}
 	private:
 		mutable std::unique_ptr<T> p;
@@ -177,7 +186,7 @@ namespace sx {
 		a.swap(b);
 	}
 
-	template<typename T> class reference {
+	template<typename T> class reference : public sx::signature<0xC79FCE32> {
 	public:
 		typedef T element_type;
 

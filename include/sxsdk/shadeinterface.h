@@ -320,5 +320,9 @@ bool open_backup (const char* file_path, const char* output_folder = 0, int flag
 const char* get_version_info (void * = 0) const { return (const_cast<shade_interface *>(this))->implementation().get_version_info(); }
 void virtual_query () { return (const_cast<shade_interface *>(this))->implementation().virtual_query(); }
 int get_current_time () { return (const_cast<shade_interface *>(this))->implementation().get_current_time(); }
+gridmanager_window_interface* get_gridmanager_window_interface (void * = 0) const { return (const_cast<shade_interface *>(this))->implementation().view_get_gridmanager_window_interface(); }
+shade_interface &set_gridmanager_window_shown (bool gridmanager_window_shown_param, void * = 0) { (this)->implementation().view_set_gridmanager_window_shown(gridmanager_window_shown_param); return *this; }
+bool get_gridmanager_window_shown (void * = 0) const { return (const_cast<shade_interface *>(this))->implementation().view_get_gridmanager_window_shown(); }
+gridmanager_view_interface* get_gridmanager_view_interface (void * = 0) const { return (const_cast<shade_interface *>(this))->implementation().view_get_gridmanager_view_interface(); }
 	};
 }

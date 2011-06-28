@@ -51,5 +51,6 @@ namespace sxsdk {
 	virtual int get_number_of_image_layers (int type = -1, void* aux = 0) const = 0; // 44
 	virtual sxsdk::image_layer_interface* get_image_layer_interface_by_index (unsigned index, int type = -1, void* aux = 0) const = 0; // 45
 	virtual bool get_active (void * = 0) const = 0; // 46
+	virtual float get_current_frame_float (void * = 0) const = 0; // 47
 	};
 }

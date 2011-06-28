@@ -53,6 +53,8 @@ namespace sxsdk {
 	virtual void do_light (sxsdk::enums::light_distribution_type points, const sxsdk::vec3* color, const sxsdk::vec3* position, const sxsdk::vec3* direction, float angle, float softness, void* aux = 0) { }  // 45
 	virtual void do_replicator (sxsdk::part_class& replicator, sxsdk::shape_class& shape, const sxsdk::mat4* trans, void* aux = 0) { }  // 46
 	virtual void do_switch (sxsdk::part_class& switch_joint, void* aux = 0) { }  // 47
+	virtual bool can_accept_mirror ( void* aux =0 ) { return false; }  // 48
+	virtual void do_mirror (sxsdk::shape_class& shape, void* aux = 0) { }  // 49
 	};
 }
 

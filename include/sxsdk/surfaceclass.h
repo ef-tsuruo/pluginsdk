@@ -161,10 +161,10 @@ namespace sxsdk {
 	virtual float find_fresnel_reflection (const sxsdk::shape_class& shape, void* aux = 0) const = 0; // 153
 	virtual float find_diffuse (const sxsdk::shape_class& shape, void* aux = 0) const = 0; // 154
 	virtual sxsdk::rgb_class find_diffuse_color (const sxsdk::shape_class& shape, void* aux = 0) const = 0; // 155
-	virtual surface_class &set_has_volume_density (bool has_volume_density_param, void * = 0) = 0; // 156
-	virtual bool get_has_volume_density (void * = 0) const = 0; // 157
-	virtual surface_class &set_volume_density (float volume_density_param, void * = 0) = 0; // 158
-	virtual float get_volume_density (void * = 0) const = 0; // 159
+	virtual surface_class &set_has_volume_density_obsolete (bool has_volume_density_obsolete_param, void * = 0) = 0; // 156
+	virtual bool get_has_volume_density_obsolete (void * = 0) const = 0; // 157
+	virtual surface_class &set_volume_density_obsolete (float volume_density_obsolete_param, void * = 0) = 0; // 158
+	virtual float get_volume_density_obsolete (void * = 0) const = 0; // 159
 	virtual bool get_has_shader_node (void * = 0) const = 0; // 160
 	virtual surface_class &set_has_shader_node (bool has_shader_node_param, void * = 0) = 0; // 161
 	virtual sxsdk::shader_node_class& get_shader_node (void * = 0) const = 0; // 162
@@ -183,5 +183,18 @@ namespace sxsdk {
 	virtual bool get_has_ambient (void * = 0) const = 0; // 175
 	virtual float find_ambient (const sxsdk::shape_class& shape, void* aux = 0) const = 0; // 176
 	virtual sxsdk::rgb_class find_ambient_color (const sxsdk::shape_class& shape, void* aux = 0) const = 0; // 177
+	virtual void set_has (sxsdk::enums::mapping_type type, bool b, void* aux = 0) = 0; // 178
+	virtual bool get_has (sxsdk::enums::mapping_type type, void* aux = 0) const = 0; // 179
+	virtual void set_quantity (sxsdk::enums::mapping_type type, float quantity, void* aux = 0) = 0; // 180
+	virtual float get_quantity (sxsdk::enums::mapping_type type, void* aux = 0) const = 0; // 181
+	virtual void set_color (sxsdk::enums::mapping_type type, const sxsdk::rgb_class& quantity, void* aux = 0) = 0; // 182
+	virtual sxsdk::rgb_class get_color (sxsdk::enums::mapping_type type, void* aux = 0) const = 0; // 183
+	virtual float find_quantity (sxsdk::enums::mapping_type type, const sxsdk::shape_class& shape, void* aux = 0) const = 0; // 184
+	virtual sxsdk::rgb_class find_color (sxsdk::enums::mapping_type type, const sxsdk::shape_class& shape, void* aux = 0) const = 0; // 185
+	virtual surface_class &set_volume_type (sxsdk::enums::volume_type volume_type_param, void * = 0) = 0; // 186
+	virtual sxsdk::enums::volume_type get_volume_type (void * = 0) const = 0; // 187
+	virtual surface_class &set_multiply_ambient (bool multiply_ambient_param, void * = 0) = 0; // 188
+	virtual bool get_multiply_ambient (void * = 0) const = 0; // 189
+	virtual bool find_multiply_ambient (const sxsdk::shape_class& shape, void* aux = 0) const = 0; // 190
 	};
 }

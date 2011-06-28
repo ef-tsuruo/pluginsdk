@@ -29,7 +29,7 @@
 //#define glMultTransposeMatrixf 0
 //#define glClearColor 0
 //#define glClear 0
-//#define glLineWidth 0
+#define glLineWidth 0 // use sx::gl::linewidth
 //#define glRasterPos 0
 //#define glRect 0
 //#define glDeleteTextures
@@ -66,13 +66,8 @@ namespace sx {
 		#elif SXMACOSX
 			static const int PIXEL_FORMAT =				GL_BGRA;
 			static const int NSBITMAP_PIXEL_FORMAT =	GL_RGBA;
-			#if __ppc__ || __ppc64__
-				static const int PIXEL_TYPE =			GL_UNSIGNED_INT_8_8_8_8_REV;
-				static const int NSBITMAP_PIXEL_TYPE =	GL_UNSIGNED_INT_8_8_8_8;
-			#else
-				static const int PIXEL_TYPE =			GL_UNSIGNED_INT_8_8_8_8;
-				static const int NSBITMAP_PIXEL_TYPE =	GL_UNSIGNED_INT_8_8_8_8_REV;
-			#endif
+			static const int PIXEL_TYPE =			GL_UNSIGNED_INT_8_8_8_8;
+			static const int NSBITMAP_PIXEL_TYPE =	GL_UNSIGNED_INT_8_8_8_8_REV;
 		#elif SXWINDOWS
 			static const int PIXEL_FORMAT =				GL_BGRA;
 			static const int PIXEL_TYPE =				GL_UNSIGNED_BYTE;
@@ -88,51 +83,39 @@ namespace sx {
 		#if defined(GL_BGRA) && defined(GL_UNSIGNED_INT_8_8_8_8)
 			template<> class pixel<GL_BGRA,GL_UNSIGNED_INT_8_8_8_8> {
 			public:
-				#if __BIG_ENDIAN__
-					typedef sx::rgba<sx::unsigned8,BGRA> type;
-				#else
-					typedef sx::rgba<sx::unsigned8,ARGB> type;
-				#endif
+				typedef sx::rgba<sx::unsigned8,ARGB> type;
 			};
 		#endif
 		#if defined(GL_BGRA) && defined(GL_UNSIGNED_INT_8_8_8_8_REV)
 			template<> class pixel<GL_BGRA,GL_UNSIGNED_INT_8_8_8_8_REV> {
 			public:
-				#if __BIG_ENDIAN__
-					typedef sx::rgba<sx::unsigned8,ARGB> type;
-				#else
-					typedef sx::rgba<sx::unsigned8,BGRA> type;
-				#endif
+				typedef sx::rgba<sx::unsigned8,BGRA> type;
 			};
 		#endif
 
-//		template<typename T> class pixeltype;
-//		template<> class pixeltype<sx::rgba<sx::unsigned8,ARGB> > {
-//		public:
-//			static const GLenum id = GL_BGRA;
-//		};
-//		template<> class pixeltype<sx::rgba<sx::unsigned8,BGRA> > {
-//		public:
-//			static const GLenum id = GL_BGRA;
-//		};
-//
-//		template<typename T> class pixelformat;
-//		template<> class pixelformat<sx::rgba<sx::unsigned8,ARGB> > {
-//		public:
-//			#if __BIG_ENDIAN__
-//				static const GLenum id = GL_UNSIGNED_INT_8_8_8_8_REV;
-//			#else
-//				static const GLenum id = GL_UNSIGNED_INT_8_8_8_8;
-//			#endif
-//		};
-//		template<> class pixelformat<sx::rgba<sx::unsigned8,BGRA> > {
-//		public:
-//			#if __BIG_ENDIAN__
-//				static const GLenum id = GL_UNSIGNED_INT_8_8_8_8;
-//			#else
-//				static const GLenum id = GL_UNSIGNED_INT_8_8_8_8_REV;
-//			#endif
-//		};
+		template<typename T> class pixelformat;
+		template<> class pixelformat<sx::rgba<sx::unsigned8,ARGB> > {
+		public:
+			static const GLenum id = GL_BGRA;
+		};
+		template<> class pixelformat<sx::rgba<sx::unsigned8,BGRA> > {
+		public:
+			static const GLenum id = GL_BGRA;
+		};
+
+		template<typename T> class pixeltype;
+		template<> class pixeltype<sx::rgba<sx::unsigned8,ARGB> > {
+		public:
+			static const GLenum id = GL_UNSIGNED_INT_8_8_8_8_REV;
+		};
+		template<> class pixeltype<sx::rgba<sx::unsigned8,BGRA> > {
+		public:
+			#if SXMACOSX
+				static const GLenum id = GL_UNSIGNED_INT_8_8_8_8;
+			#else
+				static const GLenum id = GL_UNSIGNED_BYTE;
+			#endif
+		};
 
 		template<typename T> class type;
 		template<> class type<GLubyte> {
@@ -232,10 +215,10 @@ inline GLint glGetInteger (GLenum i) {
 	return j;
 }
 inline void glGetFloat (long i, sx::vec<float,4> &t) {
-	glGetFloatv(i, (float *)&t);
+	::glGetFloatv(i, (float *)&t);
 }
 inline void glGetFloat (long i, sx::mat<float,4> &t) {
-	glGetFloatv(i, (float *)&t);
+	::glGetFloatv(i, (float *)&t);
 }
 inline void glLight (long i, long j, const sx::rgb<float> &v) {
 	const sx::rgba<float> p(v, 1.0f);
@@ -536,6 +519,7 @@ namespace sx {
 			explicit bind_texture_class (GLenum target, GLuint i);
 			~bind_texture_class ();
 		private:
+			const GLuint texname;
 			const GLenum target;
 		};
 

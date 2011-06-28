@@ -63,10 +63,10 @@ namespace sxsdk {
 	virtual void end_polymesh_face2 ( void* aux =0 ) { }  // 57
 	virtual void begin_polymesh_face_group (int face_group_index, void* aux = 0) { }  // 58
 	virtual void end_polymesh_face_group ( void* aux =0 ) { }  // 59
-	virtual int exporter_interface_dummy60(void *) { assert(false); throw "invalid interface exporter_interface"; return 0; } // 60
-	virtual int exporter_interface_dummy61(void *) { assert(false); throw "invalid interface exporter_interface"; return 0; } // 61
-	virtual int exporter_interface_dummy62(void *) { assert(false); throw "invalid interface exporter_interface"; return 0; } // 62
-	virtual int exporter_interface_dummy63(void *) { assert(false); throw "invalid interface exporter_interface"; return 0; } // 63
+	virtual bool must_skip ( void* aux =0 ) { return false; }  // 60
+	virtual bool can_accept_skip ( void* aux =0 ) { return false; }  // 61
+	virtual bool can_accept_mirror ( void* aux =0 ) { return false; }  // 62
+	virtual void do_mirror (shape_class& shape, void* aux = 0) { }  // 63
 	virtual int exporter_interface_dummy64(void *) { assert(false); throw "invalid interface exporter_interface"; return 0; } // 64
 	virtual int exporter_interface_dummy65(void *) { assert(false); throw "invalid interface exporter_interface"; return 0; } // 65
 	virtual int exporter_interface_dummy66(void *) { assert(false); throw "invalid interface exporter_interface"; return 0; } // 66

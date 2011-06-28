@@ -247,5 +247,28 @@ namespace sxsdk {
 	virtual preference_interface &set_autosave_history (int autosave_history_param, void * = 0) = 0; // 241
 	virtual bool get_opengl_stereo (void * = 0) const = 0; // 242
 	virtual preference_interface &set_opengl_stereo (bool opengl_stereo_param, void * = 0) = 0; // 243
+	virtual sxsdk::rgb_class get_perspective_sky_color (void * = 0) const = 0; // 244
+	virtual preference_interface &set_perspective_sky_color (const sxsdk::rgb_class &perspective_sky_color_param, void * = 0) = 0; // 245
+	virtual sxsdk::rgb_class get_perspective_sky_center_color (void * = 0) const = 0; // 246
+	virtual preference_interface &set_perspective_sky_center_color (const sxsdk::rgb_class &perspective_sky_center_color_param, void * = 0) = 0; // 247
+	virtual sxsdk::rgb_class get_perspective_ground_center_color (void * = 0) const = 0; // 248
+	virtual preference_interface &set_perspective_ground_center_color (const sxsdk::rgb_class &perspective_ground_center_color_param, void * = 0) = 0; // 249
+	virtual sxsdk::rgb_class get_perspective_ground_color (void * = 0) const = 0; // 250
+	virtual preference_interface &set_perspective_ground_color (const sxsdk::rgb_class &perspective_ground_color_param, void * = 0) = 0; // 251
+	virtual sxsdk::rgb_class get_selected_control_color (void * = 0) const = 0; // 252
+	virtual preference_interface &set_selected_control_color (const sxsdk::rgb_class &selected_control_color_param, void * = 0) = 0; // 253
+	virtual bool get_opengl_fbo (void * = 0) const = 0; // 254
+	virtual preference_interface &set_opengl_fbo (bool opengl_fbo_param, void * = 0) = 0; // 255
+	virtual sxsdk::rgb_class get_button_frame_color (void * = 0) const = 0; // 256
+	virtual preference_interface &set_button_frame_color (const sxsdk::rgb_class &button_frame_color_param, void * = 0) = 0; // 257
+	virtual sxsdk::rgb_class get_group_header_color (void * = 0) const = 0; // 258
+	virtual preference_interface &set_group_header_color (const sxsdk::rgb_class &group_header_color_param, void * = 0) = 0; // 259
+	virtual sxsdk::rgb_class get_tool_header_color (void * = 0) const = 0; // 260
+	virtual preference_interface &set_tool_header_color (const sxsdk::rgb_class &tool_header_color_param, void * = 0) = 0; // 261
+	virtual sxsdk::rgb_class get_mainframe_background_color (void * = 0) const = 0; // 262
+	virtual preference_interface &set_mainframe_background_color (const sxsdk::rgb_class &mainframe_background_color_param, void * = 0) = 0; // 263
+	virtual bool get_opengl_update_background (void * = 0) const = 0; // 264
+	virtual preference_interface &set_opengl_update_background (bool opengl_update_background_param, void * = 0) = 0; // 265
+	virtual const char* get_locale (void * = 0) const = 0; // 266
 	};
 }

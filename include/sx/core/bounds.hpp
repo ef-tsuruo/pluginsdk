@@ -38,27 +38,27 @@ namespace sx {
 		explicit bounds () : min(std::numeric_limits<T>::max()), max(-std::numeric_limits<T>::max()) { }
 		template<typename U> bounds (const bounds<U> &c) : min(c.empty() ? std::numeric_limits<T>::max() : T(c.min)), max(c.empty() ? -std::numeric_limits<T>::max() : T(c.max)) { }
 		explicit bounds (const T &min, const T &max) : min(min), max(max) {
-			sxassert(sx::check(min) && check(max));
+			SXTEST(sx::check_invariant(*this));
 		}
 		explicit bounds (const T &max) : min(0), max(max) {
-			sxassert(sx::check(min) && check(max));
+			SXTEST(sx::check_invariant(*this));
 		}
 		template<typename U> explicit bounds (U minx, U miny, U maxx, U maxy) : min(minx, miny), max(maxx, maxy) {
-			sxassert(sx::check(min) && check(max));
+			SXTEST(sx::check_invariant(*this));
 		}
 		#if SXIOS || SXMACOSX
 			explicit bounds (const CGRect &r) : min(r.origin.x, r.origin.y), max(r.origin.x+r.size.width, r.origin.y+r.size.height) {
-				sxassert(sx::check(min) && check(max));
+			SXTEST(sx::check_invariant(*this));
 			}
 		#endif
 		#if SXMACOSX && !(__LP64__)
 			explicit bounds (const NSRect &r) : min(r.origin.x, r.origin.y), max(r.origin.x+r.size.width, r.origin.y+r.size.height) {
-				sxassert(sx::check(min) && check(max));
+			SXTEST(sx::check_invariant(*this));
 			}
 		#endif
 		#if	SXWINDOWS
 			explicit bounds (const RECT &r) : min(r.left, r.top), max(r.right, r.bottom) {
-				sxassert(sx::check(min) && check(max));
+			SXTEST(sx::check_invariant(*this));
 			}
 		#endif
 		bounds &operator|= (const T &b) {
@@ -89,7 +89,10 @@ namespace sx {
 		}
 		const T &operator[] (bool i) const	{ return (i ? max : min); }
 		T &operator[] (bool i)				{ return (i ? max : min); }
-		bool check_invariant () const { sxassert(sx::check(min)); sxassert(sx::check(max)); return true; }
+		void check_invariant () const {
+			sx::check_invariant(min);
+			sx::check_invariant(max);
+		}
 
 		static bounds empty_bounds () { return bounds(); }
 		static bounds max_bounds () { return bounds(-std::numeric_limits<T>::max(), std::numeric_limits<T>::max()); }
@@ -124,10 +127,10 @@ namespace sx {
 		explicit bounds () : min(std::numeric_limits<sx::vectorx>::max()), max(-std::numeric_limits<sx::vectorx>::max()) { }
 		template<typename U> bounds (const bounds<U> &c) : min(c.min), max(c.max) { }
 		explicit bounds (const sx::vectorx &min, const sx::vectorx &max) : min(min), max(max) {
-			sxassert(sx::check(min) && check(max));
+			SXTEST(sx::check_invariant(*this));
 		}
 		explicit bounds (const sx::vectorx &max) : min(sx::vzero), max(max) {
-			sxassert(sx::check(min) && check(max));
+			SXTEST(sx::check_invariant(*this));
 		}
 		bounds &operator|= (const sx::vectorx &b) {
 			if (!empty()) {
@@ -154,6 +157,10 @@ namespace sx {
 		void inset (const sx::vectorx &d) {
 			min = (min + d);
 			max = (max - d);
+		}
+		void check_invariant () const {
+			sx::check_invariant(min);
+			sx::check_invariant(max);
 		}
 
 		static bounds empty_bounds () { return bounds(); }
@@ -189,13 +196,13 @@ namespace sx {
 		explicit bounds () : min(std::numeric_limits<sx::vec<sx::vectorx,3> >::max()), max(-std::numeric_limits<sx::vec<sx::vectorx,3> >::max()) { }
 		template<typename U> bounds (const bounds<U> &c) : min(c.min), max(c.max) { }
 		explicit bounds (const sx::vec<sx::vectorx,3> &min, const sx::vec<sx::vectorx,3> &max) : min(min), max(max) {
-			sxassert(sx::check(min) && check(max));
+			SXTEST(sx::check_invariant(*this));
 		}
 		explicit bounds (const sx::vec<sx::vectorx,3> &max) : min(0), max(max) {
-			sxassert(sx::check(min) && check(max));
+			SXTEST(sx::check_invariant(*this));
 		}
 		template<typename U> explicit bounds (U minx, U miny, U maxx, U maxy) : min(minx, miny), max(maxx, maxy) {
-			sxassert(sx::check(min) && check(max));
+			SXTEST(sx::check_invariant(*this));
 		}
 		bounds &operator|= (const sx::vec<sx::vectorx,3> &b) {
 			if (!empty()) {
@@ -233,7 +240,10 @@ namespace sx {
 		}
 		const sx::vec<sx::vectorx,3> &operator[] (bool i) const	{ return (i ? max : min); }
 		sx::vec<sx::vectorx,3> &operator[] (bool i)				{ return (i ? max : min); }
-		bool check_invariant () const { sxassert(sx::check(min)); sxassert(sx::check(max)); return true; }
+		void check_invariant () const {
+			sx::check_invariant(min);
+			sx::check_invariant(max);
+		}
 
 		static bounds empty_bounds () { return bounds(); }
 		static bounds max_bounds () { return bounds(-std::numeric_limits<sx::vec<sx::vectorx,3> >::max(), std::numeric_limits<sx::vec<sx::vectorx,3> >::max()); }
@@ -241,7 +251,8 @@ namespace sx {
 }
 
 template<typename T> inline bool operator== (const sx::bounds<T> &a, const sx::bounds<T> &b) {
-	if (a.empty() || b.empty()) return false;
+	//if (a.empty() || b.empty()) return false;
+	if (a.empty() && b.empty()) return true;
 	return (a.min == b.min) && (a.max == b.max);
 }
 template<typename T> inline bool operator!= (const sx::bounds<T> &a, const sx::bounds<T> &b) {
@@ -351,6 +362,12 @@ namespace sx {
 	#if SXMACOSX
 		template<typename T> NSRect nsrect (const sx::bounds<sx::vec<T,2> > &b) {
 			return NSMakeRect(b.min.x, b.min.y, b.size().x, b.size().y);
+		}
+	#endif
+	#if SXWINDOWS
+		template<typename T> RECT msrect (const sx::bounds<sx::vec<T,2> > &b) {
+			RECT r; r.left = b.min.x; r.top = b.min.y; r.right = b.max.x; r.bottom = b.max.y;
+			return r;
 		}
 	#endif
 	template<typename T> const sx::bounds<T> inset (const sx::bounds<T> &b, const T &d) {

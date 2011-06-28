@@ -53,6 +53,9 @@ namespace sx {
 			inline const __m128 _mm_set_ss (const float f) {
 				return vsetq_lane_f32(f, vdupq_n_f32(0.0f), 0);
 			}
+			inline const __m128 _mm_loadu_ps (const float const *p) {
+				return _mm_setr_ps(p[0], p[1], p[2], p[3]);
+			}
 			inline const __m128 _mm_mul_ps (const __m128 &a, const __m128 &b) {
 				return vmulq_f32(a, b);
 			}
@@ -136,6 +139,9 @@ namespace sx {
 		}
 		inline const __m128 _mm_set_ss (const float f) {
 			vectorx v; v[0] = f; v[1] = v[2] = v[3] = 0.0f; return v;
+		}
+		inline const __m128 _mm_loadu_ps (const float const *p) {
+			vectorx v; v[0] = p[0]; v[1] = p[1]; v[2] = p[2]; v[3] = p[3]; return v;
 		}
 		inline const __m128 _mm_mul_ps (const __m128 &a, const __m128 &b) {
 			vectorx v; for (int i = 0; i < 4; ++i) v[i] = a[i] * b[i]; return v;
@@ -245,10 +251,10 @@ namespace sx {
 		return reinterpret_cast<const float *>(&m);
 	}
 
-	inline const bool check (const vectorx &v) { return is_aligned(&v); }
-	inline const bool check2 (const vectorx &v) { return (check(v) && (((const float *)(&v))[2] == 0.0f) && (((const float *)(&v))[3] == 0.0f)); }
-	inline const bool check3 (const vectorx &v) { return (check(v) && ((const float *)(&v))[3] == 0.0f); }
-	
+	inline void check_invariant (const vectorx &v) { SXASSERT(is_aligned(&v)); }
+	inline const bool check2 (const vectorx &v) { return (is_aligned(&v) && (((const float *)(&v))[2] == 0.0f) && (((const float *)(&v))[3] == 0.0f)); }
+	inline const bool check3 (const vectorx &v) { return (is_aligned(&v) && ((const float *)(&v))[3] == 0.0f); }
+
 	inline const vectorx vectorxt (const float f) {
 		return _mm_set_ps1(f);
 	}
@@ -260,6 +266,9 @@ namespace sx {
 	}
 	inline const vectorx vectorxt (const float x, const float y, const float z, const float w) {
 		return _mm_setr_ps(x, y, z, w);
+	}
+	inline const vectorx vectorxt (const float *const p) {
+		return _mm_loadu_ps(p);
 	}
 
 	inline const vectorx vectorxt (const vec<float,2> &v, const float z = 0.0f, const float w = 0.0f) {
@@ -767,7 +776,7 @@ namespace sx {
 	}
 
 	inline const scalarx sum4 (const vectorx &p) {
-		sxassert(sx::check(p));
+		SXTEST(sx::check_invariant(p));
 		#if SXSIMD
 			#if __ARM_NEON__
 				return vdupq_n_f32(vgetq_lane_f32(p,0) + vgetq_lane_f32(p,1) + vgetq_lane_f32(p,2) + vgetq_lane_f32(p,3));
@@ -788,7 +797,7 @@ namespace sx {
 		#endif
 	}
 	inline const vectorx sum4 (const vectorx &p0, const vectorx &p1, const vectorx &p2, const vectorx &p3) {
-		sxassert(sx::check(p0) && sx::check(p1) && sx::check(p2) && sx::check(p3));
+		SXTEST((sx::check_invariant(p0), sx::check_invariant(p1), sx::check_invariant(p2), sx::check_invariant(p3)));
 		#if SXSIMD
 			#if __ARM_NEON__
 				return _mm_setr_ps(
@@ -816,7 +825,7 @@ namespace sx {
 		#endif
 	}
 	inline const scalarx sum3 (const vectorx &p) {
-		sxassert(sx::check(p));
+		SXTEST(sx::check_invariant(p));
 		#if SXSIMD
 			#if __ARM_NEON__
 				return vdupq_n_f32(vgetq_lane_f32(p,0) + vgetq_lane_f32(p,1) + vgetq_lane_f32(p,2));
@@ -835,7 +844,7 @@ namespace sx {
 		#endif
 	}
 	inline const vectorx sum3 (const vectorx &p0, const vectorx &p1, const vectorx &p2, const vectorx &p3) {
-		sxassert(sx::check(p0) && sx::check(p1) && sx::check(p2) && sx::check(p3));
+		SXTEST((sx::check_invariant(p0), sx::check_invariant(p1), sx::check_invariant(p2), sx::check_invariant(p3)));
 		#if SXSIMD
 			#if __ARM_NEON__
 				return _mm_setr_ps(
@@ -863,7 +872,7 @@ namespace sx {
 		#endif
 	}
 	inline const vectorx sum3 (const vectorx &p0, const vectorx &p1, const vectorx &p2) {
-		sxassert(sx::check(p0) && sx::check(p1) && sx::check(p2));
+		SXTEST((sx::check_invariant(p0), sx::check_invariant(p1), sx::check_invariant(p2)));
 		#if SXSIMD
 			#if __ARM_NEON__
 				return _mm_setr_ps(
@@ -918,7 +927,7 @@ namespace sx {
 		return sum4(_mm_mul_ps(a0, b0), _mm_mul_ps(a1, b1), _mm_mul_ps(a2, b2), vzero);
 	}
 	inline const scalarx inner_product3 (const vectorx &a, const vectorx &b) {
-		sxassert(sx::check(a) && check(b));
+		SXTEST((sx::check_invariant(a), check_invariant(b)));
 		return sum3(_mm_mul_ps(a, b));
 	}
 	inline const scalarx inner_product3 (const vectorx &a0, const vectorx &b0, const vectorx &a1, const vectorx &b1, const vectorx &a2, const vectorx &b2, const vectorx &a3, const vectorx &b3) {
@@ -1010,7 +1019,7 @@ namespace sx {
 		return transform44(p, t[0], t[1], t[2], t[3]);
 	}
 	inline const vectorx transform33 (const vectorx &p, const vectorx &t0, const vectorx &t1, const vectorx &t2, const vectorx &t3) {
-		sxassert(check(p) && check(t0) && check(t1) && check(t2) && check(t3));
+		SXTEST((check_invariant(p), check_invariant(t0), check_invariant(t1), check_invariant(t2), check_invariant(t3)));
 		const vectorx q = _mm_mul_ps(_mm_add_ps(_mm_mul_ps(splat<0>(p), t0), _mm_add_ps(_mm_mul_ps(splat<1>(p), t1), _mm_add_ps(_mm_mul_ps(splat<2>(p), t2), t3))), vmask3);
 		sxassert(check3(q));
 		return q;
@@ -1029,7 +1038,7 @@ namespace sx {
 	}
 
 	inline const vectorx transform_direction (const vectorx &p, const vectorx &t0, const vectorx &t1, const vectorx &t2) {
-		sxassert(check3(p) && check(t0) && check(t1) && check(t2));
+		SXTEST((check_invariant(p), check_invariant(t0), check_invariant(t1), check_invariant(t2)));
 		const vectorx q = _mm_add_ps(_mm_mul_ps(splat<0>(p), t0), _mm_add_ps(_mm_mul_ps(splat<1>(p), t1), _mm_mul_ps(splat<2>(p), t2)));
 		sxassert(check3(q));
 		return q;
@@ -1284,10 +1293,14 @@ namespace std {
 	};
 }
 namespace sx {
+	inline const vectorx is_finitex (const vectorx &v) {
+		return andx(lex(std::numeric_limits<sx::vectorx>::min(), v), lex(v, std::numeric_limits<sx::vectorx>::max()));
+	}
 	inline const bool is_finite (const vectorx &v) {
-		return (_mm_movemask_ps(andx(lex(std::numeric_limits<sx::vectorx>::min(), v), lex(v, std::numeric_limits<sx::vectorx>::max()))) == 0xf);
+		return (_mm_movemask_ps(is_finitex(v)) == 0xf);
 	}
 }
+
 #if !(__GNUG__ && SXSIMD)
 	inline const sx::vectorx operator+ (const sx::vectorx &a, const sx::vectorx &b) {
 		using namespace sx;
@@ -1347,7 +1360,7 @@ namespace sx {
 		void set (int i, const vectorx &v) { sx::floatp(x)[i] = sx::floatp(v)[0]; sx::floatp(y)[i] = sx::floatp(v)[1]; }
 		template<typename U> void set (int i, const vec<U,2> &v) { sx::floatp(x)[i] = v.x; sx::floatp(y)[i] = v.y; }
 		int size () const { return 2; }
-		bool check_invariant () const { check(x); check(y); return true; }
+		void check_invariant () const { sx::check_invariant(x); sx::check_invariant(y); }
 	};
 
 	template <> class vec<vectorx,3> : public sx::memory::object {
@@ -1373,7 +1386,7 @@ namespace sx {
 		template<typename U> void set (int i, const vec<U,3> &v) { sx::floatp(x)[i] = v.x; sx::floatp(y)[i] = v.y; sx::floatp(z)[i] = v.z; }
 		template<typename U> void set (int i, const rgb<U> &c) { sx::floatp(x)[i] = c.red; sx::floatp(y)[i] = c.green; sx::floatp(z)[i] = c.blue; }
 		int size () const { return 3; }
-		bool check_invariant () const { check(x); check(y); check(z); return true; }
+		void check_invariant () const { sx::check_invariant(x); sx::check_invariant(y); sx::check_invariant(z); }
 
 		void transpose () {
 			#if SXSIMD
@@ -1424,7 +1437,7 @@ namespace sx {
 		template<typename U> void set (int i, const vec<U,4> &v) { sx::floatp(x)[i] = v.x; sx::floatp(y)[i] = v.y; sx::floatp(z)[i] = v.z; sx::floatp(w)[i] = v.w; }
 		template<typename U> void set (int i, const rgba<U> &c) { sx::floatp(x)[i] = c.red; sx::floatp(y)[i] = c.green; sx::floatp(z)[i] = c.blue; sx::floatp(w)[i] = c.alpha; }
 		int size () const { return 4; }
-		bool check_invariant () const { check(x); check(y); check(z); check(w); return true; }
+		void check_invariant () const { sx::check_invariant(x); sx::check_invariant(y); sx::check_invariant(z); sx::check_invariant(w); }
 
 		void transpose () {
 			#if SXSIMD

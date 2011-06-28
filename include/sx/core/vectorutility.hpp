@@ -2,6 +2,7 @@
 SXCORE
 #include "sx/core/adl.hpp"
 #include "boost/ptr_container/ptr_vector.hpp"
+#include "sx/core/settings.hpp"
 
 namespace sx {
 
@@ -28,7 +29,7 @@ namespace sx {
 		v.resize(std::remove_if(v.begin(), v.end(), is_delete_flag_set<typename T::value_type>()) - v.begin());
 		sxassert(std::find_if(v.begin(), v.end(), is_delete_flag_set<typename T::value_type>()) == v.end());
 	}
-	template<typename T> class vector_item_template {
+	template<typename T> class vector_item_template : public sx::signature<> {
 	public:	// property
 		const bool delete_flag () const { sxassert(p); return p->delete_flag(); }
 	public:
@@ -71,21 +72,23 @@ namespace sx {
 		std::size_t size () const { return size_imp(); }
 		bool empty () const { return empty_imp(); }
 		T &operator[] (std::size_t i) {
-			SXASSERT(check_invariant());
+			SXTEST(sx::check_invariant(*this));
 			return const_cast<T &>(const_cast<const vector_accessor_interface<T> &>(*this)[i]);
 		}
 		const T &operator[] (std::size_t i) const {
-			SXASSERT(check_invariant());
+			SXTEST(sx::check_invariant(*this));
 			return item_at_imp(i);
 		}
-		bool check_invariant () const { check_invariant_imp(); return true; }
+		void check_invariant () const {
+			if (sx::core::settings::check_invariant()) check_invariant_imp();
+		}
 	private:
 		virtual std::size_t size_imp () const = 0;
 		virtual bool empty_imp () const = 0;
 		virtual const T &item_at_imp (std::size_t i) const = 0;
 		virtual void check_invariant_imp () const { SXASSERT(false); }
 	};
-	
+
 	template<typename T> class vector_accessor : public vector_accessor_interface<typename T::value_type> {
 	public:
 		explicit vector_accessor (T &t) : t(t) { }
@@ -105,19 +108,47 @@ namespace sx {
 		const std::size_t n;
 
 		virtual std::size_t size_imp () const { return n; }
-		virtual bool empty_imp () const { return (0 < n); }
+		virtual bool empty_imp () const { return (n == 0); }
 		virtual const T &item_at_imp (std::size_t i) const { return t[i]; }
 		virtual void check_invariant_imp () const { }
 	};
-	
-	template<typename T> bool check_invariant (const std::vector<T> &v) {
-		foreach (const T &t, v) t.check_invariant();
-		return true;
-	}
-	template<typename T> bool check_invariant (const std::vector<T *> &v) {
-		foreach (T *const t, v) if (t) t->check_invariant();
-		return true;
-	}
+	template<typename T, typename S> class vector_index_accessor : public vector_accessor_interface<typename T::value_type> {
+	public:
+		explicit vector_index_accessor (T &t, const S &indices) : t(t), indices(indices) { }
+	private:
+		T &t;
+		const S &indices;
+
+		virtual std::size_t size_imp () const { return t.size(); }
+		virtual bool empty_imp () const { return t.empty(); }
+		virtual const typename T::value_type &item_at_imp (std::size_t i) const { return t[indices[i]]; }
+		virtual void check_invariant_imp () const { }
+	};
+	template<typename T, typename S> class vector_index_accessor<T *, S *> : public vector_accessor_interface<T> {
+	public:
+		explicit vector_index_accessor (const T *t, const S *indices, std::size_t n) : t(t), indices(indices), n(n) { }
+	private:
+		const T *const t;
+		const S *const indices;
+		const std::size_t n;
+
+		virtual std::size_t size_imp () const { return n; }
+		virtual bool empty_imp () const { return (n == 0); }
+		virtual const T &item_at_imp (std::size_t i) const { return t[indices[i]]; }
+		virtual void check_invariant_imp () const { }
+	};
+	template<typename T> class vector_fill_accessor : public vector_accessor_interface<T> {
+	public:
+		explicit vector_fill_accessor (const T &t, std::size_t n) : t(t), n(n) { }
+	private:
+		const T &t;
+		const std::size_t n;
+
+		virtual std::size_t size_imp () const { return n; }
+		virtual bool empty_imp () const { return (n == 0); }
+		virtual const T &item_at_imp (std::size_t i) const { return t; }
+		virtual void check_invariant_imp () const { }
+	};
 }
 
 namespace boost {
@@ -133,7 +164,8 @@ template<typename T, typename Alloc, typename U> inline std::vector<T, Alloc> &o
 template<typename T, typename Alloc> void shrink_to_fit (std::vector<T, Alloc> &v) {
 	std::vector<T, Alloc>(v).swap(v);
 }
-template<typename T, typename Alloc> bool check (const std::vector<T, Alloc> &v) {
-	foreach (const T &t, v) check(t);
-	return true;
+namespace sx {
+	template<typename T, typename Alloc> void check_invariant (const std::vector<T, Alloc> &v) {
+//		foreach (const T &t, v) check_invariant(t);
+	}
 }

@@ -3,16 +3,15 @@ SXCORE
 #include "sx/core/setting.hpp"
 
 namespace sx {
-	class mutex;
+	class recursive_mutex;
 
 	namespace memory {
 		#if SXDARWIN
-			extern sx::mutex mutex; // attempt to fix infrequent carsh on quadxeon powermac with snow leopard. it is suspected that vm_(de)allocate() routines may not be thread safe. should to be verified.
+			extern sx::recursive_mutex mutex; // attempt to fix infrequent carsh on quadxeon powermac with snow leopard. it is suspected that vm_(de)allocate() routines may not be thread safe. should to be verified.
 		#endif
 		// be warned that using reallocate() functions to shrink a block that's larger than chunk_size can be inefficient and can hog up virtual address space.
 	
 		namespace settings {
-			extern bool			break_on_outofmemory;			// for testing
 			extern sx::setting<bool> debug;
 			extern sx::setting<bool> memory_analysis;
 		}
@@ -41,7 +40,8 @@ namespace sx {
 		#endif
 		const std::size_t chunk_size = (std::size_t(1) << N); // hard-coded so that this can be used in constant expression for performance. on 32bit Windows, an attempt to allocate a few megabytes of memory (including BitMap object) can easily fail due to fragmentation in 32-bit virtual address space. it may be best to try to avoid allocating blocks larger than the granularity.
 
-		bool check_address (void *p);
+		void check_address (void *p);
+		void check_heap ();
 
 		class header_base_imp {
 		public:
@@ -99,16 +99,21 @@ namespace sx {
 			}
 			return n;
 		}
-		inline static std::size_t get_optimum_size (std::size_t size) {
+		inline static std::size_t get_optimum_size (const std::size_t size, const int N) {
 			const int n = find_size(size);
 			if (n <= N) return (std::size_t(1) << n) - header_size;
+
+			const std::size_t chunk_size = (std::size_t(1) << N);
 			#if SXSIGNATURE
 				return (((header_size + size + sizeof(sx::unsigned32)) + chunk_size - 1) / chunk_size * chunk_size) - header_size;
 			#else
 				return (((header_size + size) + chunk_size - 1) / chunk_size * chunk_size) - header_size;
 			#endif
 		}
-		
+		inline static std::size_t get_optimum_size (std::size_t size) {
+			return get_optimum_size(size, N);
+		}
+
 		void *allocate (std::size_t size);
 		void *reallocate (void *p, std::size_t size);
 		void free (void *p);
@@ -168,6 +173,8 @@ namespace sx {
 		};
 
 		void get_analysis_data (std::map<void *, block_info_class> &data);
+		const std::size_t get_free_size ();
+		void eat (std::size_t free);
 	}
 }
 template<typename T1, typename T2> bool operator== (const sx::memory::allocator<T1> &, const sx::memory::allocator<T2> &) throw() {

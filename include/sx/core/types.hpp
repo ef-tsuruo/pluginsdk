@@ -1,6 +1,7 @@
 #pragma once
 SXCORE
 #include "Half/half.h"
+//#include "Half/halfLimits.h"
 
 namespace sx {
 	typedef unsigned char		byte;
@@ -17,16 +18,16 @@ namespace sx {
 	typedef double				float64;
 
 	namespace image {
-		/// \en blah \enden \ja ÉCÉÅÅ[ÉWÇÃçáê¨ÉÇÅ[Éh \endja
+		/// \en blah \enden \ja イメージの合成モード \endja
 		enum mix_mode {
-			blend_mode,			///< \en blah \enden \ja í èÌ\endja
-			alpha_blend_mode,	///< \en blah \enden \ja ÉøÉuÉåÉìÉh\endja
-			add_mode,			///< \en blah \enden \ja â¡éZ\endja
-			sub_mode,			///< \en blah \enden \ja å∏éZ\endja
-			mul_mode,			///< \en blah \enden \ja èÊéZ\endja
-			max_mode,			///< \en blah \enden \ja î‰är(ñæ)\endja
-			min_mode,			///< \en blah \enden \ja î‰är(à√)\endja
-			last_mix_mode		///< \en blah \enden \ja ñ¢égóp\endja
+			blend_mode,			///< \en blah \enden \ja 通常\endja
+			alpha_blend_mode,	///< \en blah \enden \ja αブレンド\endja
+			add_mode,			///< \en blah \enden \ja 加算\endja
+			sub_mode,			///< \en blah \enden \ja 減算\endja
+			mul_mode,			///< \en blah \enden \ja 乗算\endja
+			max_mode,			///< \en blah \enden \ja 比較(明)\endja
+			min_mode,			///< \en blah \enden \ja 比較(暗)\endja
+			last_mix_mode		///< \en blah \enden \ja 未使用\endja
 		};
 	}
 }

@@ -77,6 +77,12 @@ namespace sx {
 		const T max(std::numeric_limits<T>::max());
 		return ((-max <= t) && (t <= max));
 	}
+	inline bool isnormal (const float &f) {
+		return (f < -denormalized_min || denormalized_min < f || f == 0.0f);
+	}
+	inline bool isnormal (const double &d) {
+		return (d < -DBL_MIN || DBL_MIN < d || d == 0.0);
+	}
 }
 
 namespace sx {
@@ -87,6 +93,12 @@ namespace sx {
 				SXUNITTEST(sx::isnan(std::numeric_limits<float>::quiet_NaN()));
 				SXUNITTEST(sx::isnan(std::numeric_limits<double>::signaling_NaN()));
 				SXUNITTEST(sx::isnan(std::numeric_limits<double>::quiet_NaN()));
+
+				SXUNITTEST(sx::isnormal(sx::epsilon));
+				SXUNITTEST(!sx::isnormal(std::numeric_limits<float>::denorm_min()));
+				SXUNITTEST(sx::isnormal(double(sx::denormalized_min)));
+				SXUNITTEST(sx::isnormal(double(std::numeric_limits<float>::denorm_min())));
+				SXUNITTEST(!sx::isnormal(std::numeric_limits<double>::denorm_min()));
 			}
 		}
 	}

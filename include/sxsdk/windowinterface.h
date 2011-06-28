@@ -821,7 +821,7 @@ int get_string_height () const { return shade.implementation().get_string_height
 	virtual void select_image (void* aux = 0) = 0; // 1
 	virtual void select_global_illumination (void* aux = 0) = 0; // 2
 	virtual void select_effects (void* aux = 0) = 0; // 3
-	virtual void select_servers (void* aux = 0) = 0; // 4
+	virtual void select_multipass (void* aux = 0) = 0; // 4
 	virtual void select_misc (void* aux = 0) = 0; // 5
 	};
 
@@ -879,6 +879,9 @@ int get_string_height () const { return shade.implementation().get_string_height
 
 	class message_view_interface : public window_interface {
 	public:
+	virtual void clear_message (void* aux = 0) = 0; // 0
+	virtual message_view_interface &set_message (const char* message_param, void * = 0) = 0; // 1
+	virtual const char* get_message (void * = 0) const = 0; // 2
 	};
 
 	class script_view_interface : public window_interface {
@@ -1037,6 +1040,25 @@ int get_string_height () const { return shade.implementation().get_string_height
 	class meshtools_window_interface : public window_interface {
 	public:
 	virtual meshtools_view_interface* get_meshtools_view_interface (void * = 0) const = 0; // 0
+	};
+
+	class gridmanager_view_interface : public window_interface {
+	public:
+	virtual int get_server_total (void* aux = 0) = 0; // 0
+	virtual const char * get_server_name (int i, void* aux = 0) = 0; // 1
+	virtual const char * get_server_ip (int i, void* aux = 0) = 0; // 2
+	virtual bool get_server_check (int i, void* aux = 0) = 0; // 3
+	virtual void set_server_check (int i, bool useit, void* aux = 0) = 0; // 4
+	virtual void remove_server (int i, void* aux = 0) = 0; // 5
+	virtual void refresh_server_list (void* aux = 0) = 0; // 6
+	virtual void add_server (const char* name, const char* ip) = 0; // 7
+	virtual const char * get_server_version (int i, void* aux = 0) = 0; // 8
+	virtual const char * get_server_os (int i, void* aux = 0) = 0; // 9
+	};
+
+	class gridmanager_window_interface : public window_interface {
+	public:
+	virtual gridmanager_view_interface* get_gridmanager_view_interface (void * = 0) const = 0; // 0
 	};
 }
 #if _MSC_VER

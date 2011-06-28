@@ -1,5 +1,6 @@
 #pragma once
 
+
 #ifndef DEFINE_DYNAMIC_CAST
 	#define DEFINE_DYNAMIC_CAST(class_name, base_name, shape_type) static class_name &cast (base_name &s) { if (s.get_type() != shape_type) throw std::bad_cast(); return static_cast<class_name &>(s); } static const class_name &cast (const base_name &s) { if (s.get_type() != shape_type) throw std::bad_cast(); return static_cast<const class_name &>(s); } static class_name *cast (base_name *s) { if (s && s->get_type() != shape_type) return 0; return static_cast<class_name *>(s); } static const class_name *cast (const base_name *s) { if (s && s->get_type() != shape_type) return 0; return static_cast<const class_name *>(s); }
 #endif
@@ -1181,8 +1182,8 @@ sxsdk::texture_interface* create_texture_interface2 (int self = 0, const sxsdk::
 	virtual float get_intensity (void * = 0) const = 0; // 3
 	virtual light_class &set_spotlight (bool spotlight_param, void * = 0) = 0; // 4
 	virtual bool get_spotlight (void * = 0) const = 0; // 5
-	virtual light_class &set_attenuation (int attenuation_param, void * = 0) = 0; // 6
-	virtual int get_attenuation (void * = 0) const = 0; // 7
+	virtual light_class &set_attenuation_deprecated (int attenuation_deprecated_param, void * = 0) = 0; // 6
+	virtual int get_attenuation_deprecated (void * = 0) const = 0; // 7
 	virtual light_class &set_angle (float angle_param, void * = 0) = 0; // 8
 	virtual float get_angle (void * = 0) const = 0; // 9
 	virtual light_class &set_softness (float softness_param, void * = 0) = 0; // 10
@@ -1203,8 +1204,8 @@ sxsdk::texture_interface* create_texture_interface2 (int self = 0, const sxsdk::
 	virtual light_class &set_lumen (bool lumen_param, void * = 0) = 0; // 25
 	virtual bool get_lumen (void * = 0) const = 0; // 26
 	virtual void load_ies (const char* from, void* aux = 0) = 0; // 27
-	virtual light_class &set_distribution_type (int distribution_type_param, void * = 0) = 0; // 28
-	virtual int get_distribution_type (void * = 0) const = 0; // 29
+	virtual light_class &set_distribution_type (sxsdk::enums::light_distribution_type distribution_type_param, void * = 0) = 0; // 28
+	virtual sxsdk::enums::light_distribution_type get_distribution_type (void * = 0) const = 0; // 29
 	virtual light_class &set_volume_light (bool volume_light_param, void * = 0) = 0; // 30
 	virtual bool get_volume_light (void * = 0) const = 0; // 31
 	virtual light_class &set_volume_light_intensity (float volume_light_intensity_param, void * = 0) = 0; // 32
@@ -1219,20 +1220,20 @@ sxsdk::texture_interface* create_texture_interface2 (int self = 0, const sxsdk::
 	virtual int get_volume_light_quality (void * = 0) const = 0; // 41
 	virtual void save_ies (const char* to, void* aux = 0) = 0; // 42
 	virtual void clear_ies (void* aux = 0) = 0; // 43
-	virtual int light_class_dummy44(void *) { assert(false); throw "invalid interface light_class"; return 0; } // 44
-	virtual int light_class_dummy45(void *) { assert(false); throw "invalid interface light_class"; return 0; } // 45
-	virtual int light_class_dummy46(void *) { assert(false); throw "invalid interface light_class"; return 0; } // 46
-	virtual int light_class_dummy47(void *) { assert(false); throw "invalid interface light_class"; return 0; } // 47
-	virtual int light_class_dummy48(void *) { assert(false); throw "invalid interface light_class"; return 0; } // 48
-	virtual int light_class_dummy49(void *) { assert(false); throw "invalid interface light_class"; return 0; } // 49
-	virtual int light_class_dummy50(void *) { assert(false); throw "invalid interface light_class"; return 0; } // 50
-	virtual int light_class_dummy51(void *) { assert(false); throw "invalid interface light_class"; return 0; } // 51
-	virtual int light_class_dummy52(void *) { assert(false); throw "invalid interface light_class"; return 0; } // 52
-	virtual int light_class_dummy53(void *) { assert(false); throw "invalid interface light_class"; return 0; } // 53
-	virtual int light_class_dummy54(void *) { assert(false); throw "invalid interface light_class"; return 0; } // 54
-	virtual int light_class_dummy55(void *) { assert(false); throw "invalid interface light_class"; return 0; } // 55
-	virtual int light_class_dummy56(void *) { assert(false); throw "invalid interface light_class"; return 0; } // 56
-	virtual int light_class_dummy57(void *) { assert(false); throw "invalid interface light_class"; return 0; } // 57
+	virtual light_class &set_attenuation (sxsdk::enums::attenuation_type attenuation_param, void * = 0) = 0; // 44
+	virtual sxsdk::enums::attenuation_type get_attenuation (void * = 0) const = 0; // 45
+	virtual light_class &set_cylinder_radius (float cylinder_radius_param, void * = 0) = 0; // 46
+	virtual float get_cylinder_radius (void * = 0) const = 0; // 47
+	virtual light_class &set_distant (bool distant_param, void * = 0) = 0; // 48
+	virtual bool get_distant (void * = 0) const = 0; // 49
+	virtual light_class &set_has_light_color (bool has_light_color_param, void * = 0) = 0; // 50
+	virtual bool get_has_light_color (void * = 0) const = 0; // 51
+	virtual light_class &set_light_color (const sxsdk::rgb_class &light_color_param, void * = 0) = 0; // 52
+	virtual sxsdk::rgb_class get_light_color (void * = 0) const = 0; // 53
+	virtual light_class &set_light_color_quantity (float light_color_quantity_param, void * = 0) = 0; // 54
+	virtual float get_light_color_quantity (void * = 0) const = 0; // 55
+	virtual light_class &set_ambient (float ambient_param, void * = 0) = 0; // 56
+	virtual float get_ambient (void * = 0) const = 0; // 57
 	virtual int light_class_dummy58(void *) { assert(false); throw "invalid interface light_class"; return 0; } // 58
 	virtual int light_class_dummy59(void *) { assert(false); throw "invalid interface light_class"; return 0; } // 59
 	virtual int light_class_dummy60(void *) { assert(false); throw "invalid interface light_class"; return 0; } // 60
@@ -1456,12 +1457,12 @@ sxsdk::texture_interface* create_texture_interface2 (int self = 0, const sxsdk::
 	virtual line_class &set_volume_light_castshadow_type (sxsdk::enums::castshadow_type volume_light_castshadow_type_param, void * = 0) = 0; // 72
 	virtual line_class &set_volume_light_quality (int volume_light_quality_param, void * = 0) = 0; // 73
 	virtual int get_volume_light_quality (void * = 0) const = 0; // 74
-	virtual int line_class_dummy75(void *) { assert(false); throw "invalid interface line_class"; return 0; } // 75
-	virtual int line_class_dummy76(void *) { assert(false); throw "invalid interface line_class"; return 0; } // 76
-	virtual int line_class_dummy77(void *) { assert(false); throw "invalid interface line_class"; return 0; } // 77
-	virtual int line_class_dummy78(void *) { assert(false); throw "invalid interface line_class"; return 0; } // 78
-	virtual int line_class_dummy79(void *) { assert(false); throw "invalid interface line_class"; return 0; } // 79
-	virtual int line_class_dummy80(void *) { assert(false); throw "invalid interface line_class"; return 0; } // 80
+	virtual line_class &set_has_light_color (bool has_light_color_param, void * = 0) = 0; // 75
+	virtual bool get_has_light_color (void * = 0) const = 0; // 76
+	virtual line_class &set_light_color (const sxsdk::rgb_class &light_color_param, void * = 0) = 0; // 77
+	virtual sxsdk::rgb_class get_light_color (void * = 0) const = 0; // 78
+	virtual line_class &set_light_color_quantity (float light_color_quantity_param, void * = 0) = 0; // 79
+	virtual float get_light_color_quantity (void * = 0) const = 0; // 80
 	virtual int line_class_dummy81(void *) { assert(false); throw "invalid interface line_class"; return 0; } // 81
 	virtual int line_class_dummy82(void *) { assert(false); throw "invalid interface line_class"; return 0; } // 82
 	virtual int line_class_dummy83(void *) { assert(false); throw "invalid interface line_class"; return 0; } // 83
@@ -1690,6 +1691,8 @@ sxsdk::texture_interface* create_texture_interface2 (int self = 0, const sxsdk::
 	virtual sphere_class &set_matrix (const sxsdk::mat4 &matrix_param, void * = 0) = 0; // 5
 	virtual sphere_interface* get_sphere_interface (void* aux = 0) = 0; // 6
 	virtual sphere_saver_class* get_sphere_saver (void* aux = 0) = 0; // 7
+	virtual sphere_class &set_volume_distance_decay (bool volume_distance_decay_param, void * = 0) = 0; // 8
+	virtual bool get_volume_distance_decay (void * = 0) const = 0; // 9
 	};
 
 	class disk_class : public shape_class {
@@ -1732,6 +1735,8 @@ sxsdk::texture_interface* create_texture_interface2 (int self = 0, const sxsdk::
 	virtual int get_object_mask_index (void * = 0) const = 0; // 9
 	virtual proxy_shape_class &set_surface_mask_index (int surface_mask_index_param, void * = 0) = 0; // 10
 	virtual int get_surface_mask_index (void * = 0) const = 0; // 11
+	virtual sxsdk::proxy_shape_class& set_face_group_surface_id_color (const int face_group_index, const sxsdk::vec3 & surface_id_color_param, void* aux = 0) = 0; // 12
+	virtual sxsdk::vec3 get_face_group_surface_id_color (const int face_group_index = -1, void* aux = 0) const = 0; // 13
 	};
 
 	class rotator_joint_interface : public unknown_interface {

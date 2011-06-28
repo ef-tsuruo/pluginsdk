@@ -1,7 +1,7 @@
 #pragma once
+#include "sx/core.h"
 #include "sx/core/debug.hpp"
 #include "sx/core/config.hpp"
-#include "sx/core.h"
 #include "sxsdk/shadebuildnumber.h"
 #include "sxsdk/com.h"
 #include "sxsdk/uuid.h"
@@ -211,6 +211,8 @@ namespace sxsdk {
 	class expression_interface;
 	class shade_interface;
 	class implementation_interface;
+	class gridmanager_window_interface;
+	class gridmanager_view_interface;
 
 	class output_function_class;
 	class shader_info_base_class;

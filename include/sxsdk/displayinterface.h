@@ -13,7 +13,9 @@ namespace sxsdk {
 			shading,				
 			shading_and_wireframe,	
 			texture,				
-			texture_and_wireframe	
+			texture_and_wireframe,
+			drafting,
+			preview_rendering,
 		};							
 		enum lighting_mode_enum {	
 			default_light,			
@@ -99,5 +101,7 @@ namespace sxsdk {
 	virtual void set_uv_image_brightness (int viewpane, bool uv_image_brightness_param, void* aux = 0) = 0; // 76
 	virtual void set_camera_type (int viewpane, int camera_type, int camera_index = 0, void* aux = 0) = 0; // 77
 	virtual int get_camera_type (int viewpane, void* aux = 0) = 0; // 78
+	virtual bool set_stereo_type (int stereo_type, void* aux = 0) = 0; // 79
+	virtual int get_stereo_type (void* aux = 0) = 0; // 80
 	};
 }

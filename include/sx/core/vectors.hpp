@@ -50,6 +50,7 @@ namespace sx {
 	namespace imp {
 		template<typename T> T one ();
 		template<> inline sx::unsigned8 one () { return 255; }
+		template<> inline half one () { return 1.0f; }
 		template<> inline float one () { return 1.0f; }
 		template<> inline double one () { return 1.0; }
 	}
@@ -63,7 +64,7 @@ namespace sx {
 		explicit rgb (const T &red, const T &green, const T &blue) : red(red), green(green), blue(blue) { }
 		explicit rgb (const T &f) : red(f), green(f), blue(f) { }
 		explicit rgb (const float *v) : red(v[0]), green(v[1]), blue(v[2]) { }
-		bool check_invariant () const { return true; }
+		void check_invariant () const { sx::check_invariant(red); sx::check_invariant(green); sx::check_invariant(blue); }
 	};
 	template<typename T> class rgb<T, BGR> {
 	public:
@@ -74,7 +75,7 @@ namespace sx {
 		explicit rgb (const T &red, const T &green, const T &blue) : red(red), green(green), blue(blue) { }
 		explicit rgb (const T &f) : red(f), green(f), blue(f) { }
 		explicit rgb (const float *v) : red(v[0]), green(v[1]), blue(v[2]) { }
-		bool check_invariant () const { return true; }
+		void check_invariant () const { sx::check_invariant(red); sx::check_invariant(green); sx::check_invariant(blue); }
 	};
 
 	template<typename T> class rgba<T, RGBA> {
@@ -91,7 +92,7 @@ namespace sx {
 		template<int L> explicit rgba (const rgba<T,L> &c, const T &alpha) : red(c.red), green(c.green), blue(c.blue), alpha(alpha) { }
 		operator const rgb<T,RGB> & () const { return *(const rgb<T,RGB> *)(this); }
 		operator rgb<T,RGB> & () { return *(rgb<T,RGB> *)(this); }
-		bool check_invariant () const { return true; }
+		void check_invariant () const { sx::check_invariant(red); sx::check_invariant(green); sx::check_invariant(blue); sx::check_invariant(alpha); }
 	};
 	template<typename T> class rgba<T, BGRA> {
 	public:
@@ -107,7 +108,7 @@ namespace sx {
 		template<int L> explicit rgba (const rgba<T,L> &c, T alpha) : red(c.red), green(c.green), blue(c.blue), alpha(alpha) { }
 		operator const rgb<T,BGR> & () const { return (const rgb<T,BGR> &)(*this); }
 		operator rgb<T,BGR> & () { return (rgb<T,BGR> &)(*this); }
-		bool check_invariant () const { return true; }
+		void check_invariant () const { sx::check_invariant(red); sx::check_invariant(green); sx::check_invariant(blue); sx::check_invariant(alpha); }
 	};
 	template<typename T> class rgba<T, ARGB> {
 	public:
@@ -121,14 +122,14 @@ namespace sx {
 		template<int L> explicit rgba (const rgb<T,L> &c) : red(c.red), green(c.green), blue(c.blue), alpha(sx::imp::one<T>()) { }
 		template<int L> explicit rgba (const rgb<T,L> &c, const T &alpha) : red(c.red), green(c.green), blue(c.blue), alpha(alpha) { }
 		template<int L> explicit rgba (const rgba<T,L> &c, const T &alpha) : red(c.red), green(c.green), blue(c.blue), alpha(alpha) { }
-		bool check_invariant () const { return true; }
+		void check_invariant () const { sx::check_invariant(red); sx::check_invariant(green); sx::check_invariant(blue); sx::check_invariant(alpha); }
 	};
 }
 
-template<typename T, int K> inline const sx::rgb<T,K> operator* (const sx::rgb<T,K> &a, const T &b)								{ return sx::rgb<T,K>(a.red*b, a.green*b, a.blue*b); }
-template<typename T, int K> inline const sx::rgba<T,K> operator* (const sx::rgba<T,K> &a, const T &b)								{ return sx::rgba<T,K>(a.red*b, a.green*b, a.blue*b, a.alpha*b); }
-template<typename T, int K> inline sx::rgb<T,K> &operator*= (sx::rgb<T,K> &a, const T &b)											{ a.red *= b; a.green *= b; a.blue *= b; return a; }
-template<typename T, int K> inline sx::rgba<T,K> &operator*= (sx::rgba<T,K> &a, const T &b)										{ a.red *= b; a.green *= b; a.blue *= b; a.alpha *= b; return a; }
+template<typename T, int K> inline const sx::rgb<T,K> operator* (const sx::rgb<T,K> &a, const T &b)							{ return sx::rgb<T,K>(a.red*b, a.green*b, a.blue*b); }
+template<typename T, int K> inline const sx::rgba<T,K> operator* (const sx::rgba<T,K> &a, const T &b)						{ return sx::rgba<T,K>(a.red*b, a.green*b, a.blue*b, a.alpha*b); }
+template<typename T, int K> inline sx::rgb<T,K> &operator*= (sx::rgb<T,K> &a, const T &b)									{ a.red *= b; a.green *= b; a.blue *= b; return a; }
+template<typename T, int K> inline sx::rgba<T,K> &operator*= (sx::rgba<T,K> &a, const T &b)									{ a.red *= b; a.green *= b; a.blue *= b; a.alpha *= b; return a; }
 template<typename T, int K, int L> inline const sx::rgb<T,K> operator* (const sx::rgb<T,K> &a, const sx::rgb<T,L> &b)		{ return sx::rgb<T,K>(a.red*b.red, a.green*b.green, a.blue*b.blue); }
 template<typename T, int K, int L> inline const sx::rgb<T,K> operator* (const sx::rgb<T,K> &a, const sx::rgba<T,L> &b)		{ return sx::rgb<T,K>(a.red*b.red, a.green*b.green, a.blue*b.blue); }
 template<typename T, int K, int L> inline const sx::rgba<T,K> operator* (const sx::rgba<T,K> &a, const sx::rgba<T,L> &b)	{ return sx::rgba<T,K>(a.red*b.red, a.green*b.green, a.blue*b.blue, a.alpha*b.alpha); }
@@ -137,10 +138,10 @@ template<typename T, int K, int L> inline sx::rgb<T,K> &operator*= (sx::rgb<T,K>
 template<typename T, int K, int L> inline sx::rgba<T,K> &operator*= (sx::rgba<T,K> &a, const sx::rgba<T,L> &b)				{ a.red *= b.red; a.green *= b.green; a.blue *= b.blue; a.alpha *= b.alpha; return a; }
 template<typename T, int K, int L> inline const sx::rgb<T,K> operator/ (const sx::rgb<T,K> &a, const sx::rgb<T,L> &b)		{ return sx::rgb<T,K>(a.red/b.red, a.green/b.green, a.blue/b.blue); }
 template<typename T, int K, int L> inline const sx::rgba<T,K> operator/ (const sx::rgba<T,K> &a, const sx::rgba<T,L> &b)	{ return sx::rgba<T,K>(a.red/b.red, a.green/b.green, a.blue/b.blue, a.alpha/b.alpha); }
-template<typename T, int K> inline const sx::rgb<T,K> operator/ (const sx::rgb<T,K> &a, const T &b)								{ return sx::rgb<T,K>(a.red/b, a.green/b, a.blue/b); }
-template<typename T, int K> inline const sx::rgba<T,K> operator/ (const sx::rgba<T,K> &a, const T &b)								{ return sx::rgba<T,K>(a.red/b, a.green/b, a.blue/b, a.alpha/b); }
-template<typename T, int K> inline sx::rgb<T,K> &operator/= (sx::rgb<T,K> &a, const T &b)											{ a.red /= b; a.green /= b; a.blue /= b; return a; }
-template<typename T, int K> inline sx::rgba<T,K> &operator/= (sx::rgba<T,K> &a, const T &b)										{ a.red /= b; a.green /= b; a.blue /= b; a.alpha /= b; return a; }
+template<typename T, int K> inline const sx::rgb<T,K> operator/ (const sx::rgb<T,K> &a, const T &b)							{ return sx::rgb<T,K>(a.red/b, a.green/b, a.blue/b); }
+template<typename T, int K> inline const sx::rgba<T,K> operator/ (const sx::rgba<T,K> &a, const T &b)						{ return sx::rgba<T,K>(a.red/b, a.green/b, a.blue/b, a.alpha/b); }
+template<typename T, int K> inline sx::rgb<T,K> &operator/= (sx::rgb<T,K> &a, const T &b)									{ a.red /= b; a.green /= b; a.blue /= b; return a; }
+template<typename T, int K> inline sx::rgba<T,K> &operator/= (sx::rgba<T,K> &a, const T &b)									{ a.red /= b; a.green /= b; a.blue /= b; a.alpha /= b; return a; }
 template<typename T, int K, int L> inline const sx::rgb<T,K> operator+ (const sx::rgb<T,K> &a, const sx::rgb<T,L> &b)		{ return sx::rgb<T,K>(a.red+b.red, a.green+b.green, a.blue+b.blue); }
 template<typename T, int K, int L> inline const sx::rgb<T,K> operator+ (const sx::rgb<T,K> &a, const sx::rgba<T,L> &b)		{ return sx::rgb<T,K>(a.red+b.red, a.green+b.green, a.blue+b.blue); }
 template<typename T, int K, int L> inline const sx::rgba<T,K> operator+ (const sx::rgba<T,K> &a, const sx::rgba<T,L> &b)	{ return sx::rgba<T,K>(a.red+b.red, a.green+b.green, a.blue+b.blue, a.alpha+b.alpha); }
@@ -189,6 +190,12 @@ namespace sx {
 	template<typename T, int K> inline const rgb<T,K> normalize  (const rgb<T,K> &c)										{ const T t = std::sqrt(c.red*c.red + c.green*c.green + c.blue*c.blue); return sx::rgb<T,K>(c.red/t, c.green/t, c.blue/t); }
 	template<int K> inline const rgb<float,K> clamp (const rgb<float,K> &c)													{ return sx::max(sx::min(c, rgb<float,K>(1.0f)), rgb<float,K>(0.0f)); }
 	template<int K> inline const rgba<float,K> clamp (const rgba<float,K> &c)												{ return sx::max(sx::min(c, rgba<float,K>(1.0f)), rgba<float,K>(0.0f)); }
+	template<int K> inline const bool isnan (const rgb<float,K> &c)															{ return (sx::isnan(c.red) && sx::isnan(c.green) && sx::isnan(c.blue)); }
+	template<int K> inline const bool isnan (const rgba<float,K> &c)														{ return (sx::isnan(c.red) && sx::isnan(c.green) && sx::isnan(c.blue) && sx::isnan(c.alpha)); }
+	template<int K> inline const bool isnormal (const rgb<float,K> &c)														{ return (sx::isnormal(c.red) && sx::isnormal(c.green) && sx::isnormal(c.blue)); }
+	template<int K> inline const bool isnormal (const rgba<float,K> &c)														{ return (sx::isnormal(c.red) && sx::isnormal(c.green) && sx::isnormal(c.blue) && sx::isnormal(c.alpha)); }
+	template<int K> inline const rgb<float,K> undenormal (const rgb<float,K> &c)											{ return rgb<float,K>(sx::isnormal(c.red) ? c.red : 0.0f, sx::isnormal(c.green) ? c.green : 0.0f, sx::isnormal(c.blue) ? c.blue : 0.0f); }
+	template<int K> inline const rgba<float,K> undenormal (const rgba<float,K> &c)											{ return rgba<float,K>(sx::isnormal(c.red) ? c.red : 0.0f, sx::isnormal(c.green) ? c.green : 0.0f, sx::isnormal(c.blue) ? c.blue : 0.0f, sx::isnormal(c.alpha) ? c.alpha : 0.0f); }
 
 	template <typename T, int N> class vec;
 
@@ -219,10 +226,10 @@ namespace sx {
 			explicit vec (const POINT &p) : x(p.x), y(p.y) { }
 			explicit vec (const SIZE &p) : x(p.cx), y(p.cy) { }
 		#endif
-		const T &operator[] (int i) const { sxassert(0<=i&&i<2); return (&x)[i]; }
-		T &operator[] (int i) { sxassert(0<=i&&i<2); return (&x)[i]; }
+		const T &operator[] (int i) const { SXASSERT((0<=i) && (i<2)); return (&x)[i]; }
+		T &operator[] (int i) { SXASSERT((0<=i) && (i<2)); return (&x)[i]; }
 		int size () const { return 2; }
-		bool check_invariant () const { return true; }
+		void check_invariant () const { sx::check_invariant(x); sx::check_invariant(y); }
 	};
 	
 	template <typename T> class vec<T,3> {
@@ -241,10 +248,10 @@ namespace sx {
 		explicit vec (const vec<T,2> &v, const T &z) : x(v.x), y(v.y), z(z) { }
 		explicit vec (const vec<T,4> &v);
 		template<typename U> vec (const vec<U,3> &v) : x(T(v.x)), y(T(v.y)), z(T(v.z)) { } // allow implicit conversion
-		const T &operator[] (int i) const { sxassert(0<=i&&i<3); return (&x)[i]; }
-		T &operator[] (int i) { sxassert(0<=i&&i<3); return (&x)[i]; }
+		const T &operator[] (int i) const { SXASSERT((0<=i) && (i<3)); return (&x)[i]; }
+		T &operator[] (int i) { SXASSERT((0<=i) && (i<3)); return (&x)[i]; }
 		int size () const { return 3; }
-		bool check_invariant () const { return true; }
+		void check_invariant () const { sx::check_invariant(x); sx::check_invariant(y); sx::check_invariant(z); }
 	};
 
 	template <typename T> class vec<T,4> {
@@ -264,10 +271,10 @@ namespace sx {
 		explicit vec (const vec<T,3> &v, const T &w) : x(v.x), y(v.y), z(v.z), w(w) { }
 		explicit vec (const vec<T,2> &v, const T &z, const T &w) : x(v.x), y(v.y), z(z), w(w) { }
 		template<typename U> vec (const vec<U,4> &v) : x(T(v.x)), y(T(v.y)), z(T(v.z)), w(T(v.w)) { } // allow implicit conversion
-		const T &operator[] (int i) const { sxassert(0<=i&&i<4); return (&x)[i]; }
-		T &operator[] (int i) { sxassert(0<=i&&i<4); return (&x)[i]; }
+		const T &operator[] (int i) const { SXASSERT((0<=i) && (i<4)); return (&x)[i]; }
+		T &operator[] (int i) { SXASSERT((0<=i) && (i<4)); return (&x)[i]; }
 		int size () const { return 4; }
-		bool check_invariant () const { return true; }
+		void check_invariant () const { sx::check_invariant(x); sx::check_invariant(y); sx::check_invariant(z); sx::check_invariant(w); }
 	};
 
 	template<typename T, int N> inline void initialize (sx::vec<T,N> &v) { }
@@ -295,11 +302,6 @@ namespace sx {
 		return vec<T,4>(v[i0], v[i1], v[i2], v[i3]);
 	}
 
-	template<typename T, int N> bool check (const vec<T,N> &v) {
-		//for (int i = 0; i < N; ++i) sxassert(v.i[i] != 0x7f800001);
-		return true;
-	}
-
 	template<typename T, int N> inline bool isnan (const sx::vec<T,N> &v) {
 		for (int i = 0; i < N; ++i) if (sx::isnan(v[i])) return true;
 		return false;
@@ -324,17 +326,11 @@ namespace sx {
 		explicit mat (const T &a0, const T &a1, const T &a2, const T &a3, const T &b0, const T &b1, const T &b2, const T &b3, const T &c0, const T &c1, const T &c2, const T &c3, const T &d0, const T &d1, const T &d2, const T &d3);
 		explicit mat (const T *);
 		mat &normalize ();
-		bool check_invariant () const { return true; }
+		void check_invariant () const { for (int i = 0; i < N; ++i) sx::check_invariant((*this)[i]); }
 	};
 	template<typename T, int N> bool isnan (const mat<T,N> &a) {
 		for (int i = 0; i < N; ++i) if (isnan(a[i])) return true;
 		return false;
-	}
-	template<typename T, int N> bool check (const mat<T,N> &a) {
-		#ifndef NDEBUG
-			for (int i = 0; i < N; ++i) sxassert(sx::check(a[i]));
-		#endif
-		return true;
 	}
 
 	inline const float sqr (const float &t) { return t*t; }
@@ -511,7 +507,7 @@ namespace sx {
 	}
 
 	template<typename T> inline T det (const sx::mat<T,4> &a, int i1, int i2, int i3, int j1, int j2, int j3) {
-		sxassert(sx::check(a));
+		SXTEST(sx::check_invariant(a));
 		return (	(a[i1][j1]*a[i2][j2]*a[i3][j3])
 				+	(a[i1][j2]*a[i2][j3]*a[i3][j1])
 				+	(a[i1][j3]*a[i2][j1]*a[i3][j2])
@@ -520,7 +516,7 @@ namespace sx {
 				-	(a[i1][j3]*a[i2][j2]*a[i3][j1]));
 	}
 	template<typename T> inline T det (const mat<T,4> &a) {
-		sxassert(sx::check(a));
+		SXTEST(sx::check_invariant(a));
 		enum { X, Y, Z, W };
 		return (		(a[0][X]*a[1][Y]*a[2][Z])
 					+	(a[0][Y]*a[1][Z]*a[2][X])
@@ -813,7 +809,7 @@ template<typename T, int N> inline sx::mat<T,N> operator* (const sx::mat<T,N> &a
 	return t;
 }
 template<typename T, int N> inline sx::mat<T,N> &operator*= (sx::mat<T,N> &a, const sx::mat<T,N> &b) {
-	sxassert(sx::check(a) && check(b));
+	SXTEST((sx::check_invariant(a), sx::check_invariant(b)));
 	for (int i = 0; i < N; ++i) a[i] *= b;
 	return a;
 }
@@ -823,7 +819,7 @@ template<typename T, int N> inline sx::mat<T,N> &operator>> (const sx::mat<T,N> 
 }
 
 template<typename T, int N> bool operator== (const sx::mat<T,N> &a, const sx::mat<T,N> &b) {
-	sxassert(sx::check(a) && check(b));
+	SXTEST((sx::check_invariant(a), sx::check_invariant(b)));
 	for (int i = 0; i < N; ++i) if (a[i] != b[i]) return false;
 	return true;
 }
@@ -833,7 +829,7 @@ template<typename T, int N> bool operator!= (const sx::mat<T,N> &a, const sx::ma
 
 namespace sx {
 	template<typename T> inline bool zero (const mat<T,4> &m) {
-		sxassert(sx::check(m));
+		SXTEST(sx::check_invariant(m));
 		const sx::vec<T,3> z(T(0));
 		return ((sx::vec<T,3> &)m[0] == z) && ((sx::vec<T,3> &)m[1] == z) && ((sx::vec<T,3> &)m[2] == z); 
 	}
@@ -848,8 +844,23 @@ namespace sx {
 	}
 
 	template<typename T, int N> bool is_finite (const vec<T,N> &v) {
+		SXTEST(sx::check_invariant(v));
 		const vec<T,N> max(std::numeric_limits<T>::max());
 		return (-max <= v) && (v <= max);
+	}
+
+	template<typename T, int N> bool isnormal (const vec<T,N> &v) {
+		SXTEST(sx::check_invariant(v));
+		if (!std::numeric_limits<T>::has_denorm) return true;
+		for (int i = 0; i < N; ++i) if (!sx::isnormal(v[i])) return false;
+		return true;
+	}
+	template<typename T, int N> inline const vec<T,N> undenormal (const vec<T,N> &v) {
+		SXTEST(sx::check_invariant(v));
+		if (!std::numeric_limits<T>::has_denorm) return v;
+		vec<T,N> w;
+		for (int i = 0; i < N; ++i) w[i] = sx::isnormal(v[i]) ? v[i] : 0.0f;
+		return w;
 	}
 }
 
@@ -870,6 +881,7 @@ namespace sx {
 		explicit uv (const sx::vec<T,2> &v) : u(v.x), v(v.y) { }
 		operator const sx::vec<T,2> & () const { return *(const sx::vec<T,2> *)(this); }
 		operator sx::vec<T,2> & () { return *(sx::vec<T,2> *)(this); }
+		void check_invariant () const { sx::check_invariant(u); sx::check_invariant(v); }
 	};
 }
 template<typename T> inline const sx::uv<T> operator* (const sx::uv<T> &a, const sx::mat<T,4> &b) {
@@ -929,6 +941,9 @@ template<typename T>inline const bool operator<= (const sx::uv<T> &a, const sx::
 	return (a.u <= b.u) && (a.v <= b.v);
 }
 namespace sx {
+	template<typename T> inline bool zero (const sx::uv<T> &a) {
+		return (sx::zero(a.u) && sx::zero(a.v));
+	}
 	template<typename T>inline const sx::uv<T> min (const sx::uv<T> &a, const sx::uv<T> &b) {
 		return sx::uv<T>(std::min(a.u,b.u), std::min(a.v,b.v));
 	}

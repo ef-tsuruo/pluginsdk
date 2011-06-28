@@ -66,6 +66,7 @@
 		using namespace tr1;
 	}
 
+	#include "boost/any.hpp"
 	#include "boost/version.hpp"
 	#include "boost/static_assert.hpp"
 	BOOST_STATIC_ASSERT(104200 <= BOOST_VERSION);

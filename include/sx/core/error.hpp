@@ -41,7 +41,7 @@ namespace sx {
 	};
 
 	void verify_failed (const char *message, const char *file, int line);
-	inline static void verify (bool condition, const char *message = "", const char *file = 0, int line = 0) { // default to minimize merge conflicts. remove them later.
+	inline void verify (bool condition, const char *message, const char *file, int line) {
 		if (!condition) verify_failed(message, file, line);
 	}
 	

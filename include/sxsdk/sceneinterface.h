@@ -477,5 +477,9 @@ std::vector<sxsdk::shape_class*> get_shapes_by_name_scriptimplementation (const 
 	virtual sxsdk::shape_class& create_primitive_cylinder (const char* as, int type, bool set_uv, int du, int dv, const sxsdk::vec3& at, float r, int axis, const sxsdk::vec3& edir, bool top_face = true, bool bottom_face = true, void* aux = 0) = 0; // 448
 	virtual sxsdk::shape_class& create_primitive_capsule (const char* as, int type, bool set_uv, int du, int dv, const sxsdk::vec3& at, float r, int axis, const sxsdk::vec3& edir, void* aux = 0) = 0; // 449
 	virtual sxsdk::shape_class& create_primitive_torus (const char* as, int type, bool set_uv, int du, int dv, const sxsdk::vec3& at, float r, float r2, int axis, void* aux = 0) = 0; // 450
+	virtual void save_XVL (const char*const& in, const sxsdk::exporter_settings_interface* settings = 0) = 0; // 451
+	virtual void draw_select_edges (bool draw = true, void* aux = 0) = 0; // 452
+	virtual float get_step_frames_float (void * = 0) const = 0; // 453
+	virtual scene_interface &set_step_frames_float (float step_frames_float_param, void * = 0) = 0; // 454
 	};
 }

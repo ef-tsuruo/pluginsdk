@@ -81,58 +81,58 @@ namespace sxsdk {
 	virtual sx::rectangle_class window_window_to_global_rectangle (const window_interface& w, const sx::rectangle_class& r) = 0; // 75
 	virtual const char* window_get_title (const window_interface& w) = 0; // 76
 	virtual shader_info_base_class* shader_get_shader_info ( 
-			 ) = 0; // 77
+       ) = 0; // 77
 	virtual float shader_get_mapping ( 
-			 ) = 0; // 78
+       ) = 0; // 78
 	virtual sxsdk::rgb_class shader_get_mapping_color ( 
-			 ) = 0; // 79
+       ) = 0; // 79
 	virtual float shader_get_turbulence ( 
-			 ) = 0; // 80
+       ) = 0; // 80
 	virtual float shader_get_softness ( 
-			 ) = 0; // 81
+       ) = 0; // 81
 	virtual rgba_class shader_sample_image (float u, float v) = 0; // 82
 	virtual sxsdk::vec2 shader_sample_bump (float u, float v) = 0; // 83
 	virtual sxsdk::vec3 shader_get_P ( 
-			 ) = 0; // 84
+       ) = 0; // 84
 	virtual void shader_set_P (const sxsdk::vec3& P) = 0; // 85
 	virtual sxsdk::vec3 shader_get_N ( 
-			 ) = 0; // 86
+       ) = 0; // 86
 	virtual void shader_set_N (const sxsdk::vec3& N) = 0; // 87
 	virtual sxsdk::vec3 shader_get_Ng ( 
-			 ) = 0; // 88
+       ) = 0; // 88
 	virtual sxsdk::vec3 shader_get_I ( 
-			 ) = 0; // 89
+       ) = 0; // 89
 	virtual sxsdk::rgb_class shader_get_Cs ( 
-			 ) = 0; // 90
+       ) = 0; // 90
 	virtual sxsdk::rgb_class shader_get_Os ( 
-			 ) = 0; // 91
+       ) = 0; // 91
 	virtual float shader_get_u ( 
-			 ) = 0; // 92
+       ) = 0; // 92
 	virtual float shader_get_v ( 
-			 ) = 0; // 93
+       ) = 0; // 93
 	virtual float shader_get_s ( 
-			 ) = 0; // 94
+       ) = 0; // 94
 	virtual float shader_get_t ( 
-			 ) = 0; // 95
+       ) = 0; // 95
 	virtual sxsdk::vec3 shader_get_dPdu ( 
-			 ) = 0; // 96
+       ) = 0; // 96
 	virtual sxsdk::vec3 shader_get_dPdv ( 
-			 ) = 0; // 97
+       ) = 0; // 97
 	virtual float shader_get_time ( 
-			 ) = 0; // 98
+       ) = 0; // 98
 	virtual float shader_get_du ( 
-			 ) = 0; // 99
+       ) = 0; // 99
 	virtual float shader_get_dv ( 
-			 ) = 0; // 100
+       ) = 0; // 100
 	virtual sxsdk::vec3 shader_get_L ( 
-			 ) = 0; // 101
+       ) = 0; // 101
 	virtual sxsdk::rgb_class shader_get_Cl ( 
-			 ) = 0; // 102
+       ) = 0; // 102
 	virtual sxsdk::rgb_class shader_get_Ci ( 
-			 ) = 0; // 103
+       ) = 0; // 103
 	virtual void shader_set_Ci (const sxsdk::rgb_class& Ci) = 0; // 104
 	virtual sxsdk::rgb_class shader_get_Oi ( 
-			 ) = 0; // 105
+       ) = 0; // 105
 	virtual void shader_set_Oi (const sxsdk::rgb_class& Oi) = 0; // 106
 	virtual sxsdk::vec3 shader_normalize (const sxsdk::vec3& v) = 0; // 107
 	virtual float shader_mod (float x, float p) = 0; // 108
@@ -190,38 +190,38 @@ namespace sxsdk {
 	virtual void mousetracker_set_handler (sx::mouse_tracker_class& m, unknown_interface& handler) = 0; // 160
 	virtual void window_delete_self (sxsdk::window_interface& w) = 0; // 161
 	virtual int get_current_time ( 
-			 ) = 0; // 162
+       ) = 0; // 162
 	virtual sxsdk::stream_interface* shader_get_stream_interface ( 
-			 ) = 0; // 163
+       ) = 0; // 163
 	virtual sx::rectangle_class window_get_client_rectangle (const window_interface& w, bool include_scroll_bars) = 0; // 164
 	virtual void window_set_client_size (sxsdk::window_interface& w, sx::vec<int,2> size) = 0; // 165
 	virtual void window_reset_control_position (sxsdk::window_interface& w) = 0; // 166
 	virtual sx::vec<int,2> window_get_scroll_position (const window_interface& w) = 0; // 167
 	virtual void window_set_scroll_position (sxsdk::window_interface& w, sx::vec<int,2> position) = 0; // 168
 	virtual int shader_get_projection ( 
-			 ) = 0; // 169
+       ) = 0; // 169
 	virtual bool shader_has_uv ( 
-			 ) = 0; // 170
+       ) = 0; // 170
 	virtual bool shader_has_st ( 
-			 ) = 0; // 171
+       ) = 0; // 171
 	virtual bool shader_has_tangents ( 
-			 ) = 0; // 172
+       ) = 0; // 172
 	virtual void control_set_handler (xshade::control::control_class& control, unknown_interface& handler, int plugin_id) = 0; // 173
 	virtual sx::rectangle_class window_get_frame_rectangle (const window_interface& w) = 0; // 174
 	virtual sxsdk::rgb_class get_highlight_color ( 
-			 ) = 0; // 175
+       ) = 0; // 175
 	virtual sxsdk::rgb_class get_face_color ( 
-			 ) = 0; // 176
+       ) = 0; // 176
 	virtual sxsdk::rgb_class get_shadow_color ( 
-			 ) = 0; // 177
+       ) = 0; // 177
 	virtual sxsdk::rgb_class get_text_color ( 
-			 ) = 0; // 178
+       ) = 0; // 178
 	virtual sxsdk::rgb_class get_graytext_color ( 
-			 ) = 0; // 179
+       ) = 0; // 179
 	virtual sxsdk::rgb_class get_selected_color ( 
-			 ) = 0; // 180
+       ) = 0; // 180
 	virtual sxsdk::rgb_class get_selectedtext_color ( 
-			 ) = 0; // 181
+       ) = 0; // 181
 	virtual void window_set_number_integer (sxsdk::window_interface& w, plugin_number_class& c) = 0; // 182
 	virtual void window_set_number_columns (sxsdk::window_interface& w, plugin_number_class& c, int i) = 0; // 183
 	virtual void window_set_slider_integer (sxsdk::window_interface& w, plugin_slider_class& c) = 0; // 184
@@ -545,5 +545,9 @@ namespace sxsdk {
 	virtual sxsdk::shape_class & set_ambient_value (sxsdk::shape_class& shape_, float f) = 0; // 502
 	virtual float get_ambient_value (sxsdk::shape_class& shape_) = 0; // 503
 	virtual sxsdk::texture_interface* create_texture_interface2 (sxsdk::shape_class& shape_, int self = 0, const sxsdk::vec3& point = sxsdk::vec3(0.0f,0.0f,0.0f), const sxsdk::vec3& shading_normal = sxsdk::vec3(0.0f,1.0f,0.0f), const sxsdk::vec3& geometric_normal = sxsdk::vec3(0.0f,1.0f,0.0f), const sxsdk::vec3& incident = sxsdk::vec3(0.0f,0.0f,-1.0f), const sxsdk::vec2* uv = 0, const sxsdk::vec3* du = 0, const sxsdk::vec3* dv = 0, int n_uvs = 0, const sxsdk::vec2* uvs = 0, sxsdk::master_surface_class* master_surface = 0) = 0; // 504
+	virtual gridmanager_window_interface* view_get_gridmanager_window_interface () = 0; // 505
+	virtual void view_set_gridmanager_window_shown (bool view_set_gridmanager_window_shown_param) = 0; // 506
+	virtual bool view_get_gridmanager_window_shown () = 0; // 507
+	virtual gridmanager_view_interface* view_get_gridmanager_view_interface () = 0; // 508
 	};
 }
