@@ -156,6 +156,7 @@
 <li>get_ambient()
 : <a class="el" href="structsxsdk_1_1distant__light__item__class.html#aee94f954703e85aaa1395b2ca48a84ea">sxsdk::distant_light_item_class</a>
 , <a class="el" href="structsxsdk_1_1rendering__light__class.html#a31292dcc9e2ed595f3d84abb2bf0a843">sxsdk::rendering_light_class</a>
+, <a class="el" href="structsxsdk_1_1light__class.html#af1e3f21b9b46cdd03bb09465c5af3d53">sxsdk::light_class</a>
 , <a class="el" href="structsxsdk_1_1surface__class.html#a74f104de183ee6555148beeafdced440">sxsdk::surface_class</a>
 </li>
 <li>get_ambient_color()
@@ -187,7 +188,10 @@
 , <a class="el" href="structsxsdk_1_1shader__node__class.html#af2515ddc90204420a1dcfb9071ae38cc">sxsdk::shader_node_class</a>
 </li>
 <li>get_attenuation()
-: <a class="el" href="structsxsdk_1_1light__class.html#a2ff849bf0c765a32c4a46d9fdce6759a">sxsdk::light_class</a>
+: <a class="el" href="structsxsdk_1_1light__class.html#aef043d0103c1dfdccf95d456b93454df">sxsdk::light_class</a>
+</li>
+<li>get_attenuation_deprecated()
+: <a class="el" href="structsxsdk_1_1light__class.html#aba1e79d32ce56e91295f4d42e57ae4b6">sxsdk::light_class</a>
 </li>
 <li>get_attribute_stream_interface_with_uuid()
 : <a class="el" href="structsxsdk_1_1camera__class.html#a41867ed95be35a31df4b3c01b49d0ccf">sxsdk::camera_class</a>
@@ -350,13 +354,16 @@
 : <a class="el" href="structsxsdk_1_1mapping__layer__class.html#a58f4c458d7cf869656a1e52a632f3b04">sxsdk::mapping_layer_class</a>
 , <a class="el" href="structsxsdk_1_1shader__node__class.html#a923731a50172ebade72e6372cfeb2242">sxsdk::shader_node_class</a>
 </li>
+<li>get_button_frame_color()
+: <a class="el" href="structsxsdk_1_1preference__interface.html#a702d850242f5134550ac537226f826d9">sxsdk::preference_interface</a>
+</li>
 <li>get_camera()
 : <a class="el" href="structsxsdk_1_1rendering__context__interface.html#a98cfd0444eeb439affdffa31ddd91ab9">sxsdk::rendering_context_interface</a>
 , <a class="el" href="structsxsdk_1_1scene__interface.html#abe59499c9e67d44a1d9c1f2ee825664e">sxsdk::scene_interface</a>
 </li>
 <li>get_camera_mode()
-: <a class="el" href="structsxsdk_1_1camera__class.html#a0b29ec18c35b26c8313d3a5f9de53033">sxsdk::camera_class</a>
-, <a class="el" href="structsxsdk_1_1camera__interface.html#ad4e0899f057025543f4128242317fdd7">sxsdk::camera_interface</a>
+: <a class="el" href="structsxsdk_1_1camera__interface.html#ad4e0899f057025543f4128242317fdd7">sxsdk::camera_interface</a>
+, <a class="el" href="structsxsdk_1_1camera__class.html#a0b29ec18c35b26c8313d3a5f9de53033">sxsdk::camera_class</a>
 </li>
 <li>get_camera_object()
 : <a class="el" href="structsxsdk_1_1camera__class.html#a19e20f735dc95f97b00111413e555592">sxsdk::camera_class</a>
@@ -427,6 +434,7 @@
 , <a class="el" href="structsxsdk_1_1color__list__interface.html#aa7494350fdf98d5e73cded16bdfcb55d">sxsdk::color_list_interface</a>
 , <a class="el" href="structsxsdk_1_1fog__interface.html#a34ba5e68ce91e54dd0f177fb5245e1d6">sxsdk::fog_interface</a>
 , <a class="el" href="structsxsdk_1_1rendering__light__class.html#a385c500227d6ec8d4ad96e0ae13c6a8e">sxsdk::rendering_light_class</a>
+, <a class="el" href="structsxsdk_1_1surface__class.html#a00a3c6c04c728da4b62dede9abe7605e">sxsdk::surface_class</a>
 </li>
 <li>get_color_interface()
 : <a class="el" href="structsxsdk_1_1shade__interface.html#a4a2f6f335d7d6769c3665585cebd229c">sxsdk::shade_interface</a>
@@ -517,6 +525,9 @@
 <li>get_current_frame()
 : <a class="el" href="structsxsdk_1_1rendering__context__interface.html#ae219a75c3206b8e87f7163a7c34f396e">sxsdk::rendering_context_interface</a>
 </li>
+<li>get_current_frame_float()
+: <a class="el" href="structsxsdk_1_1rendering__context__interface.html#a87ceb3991873dfb58fabd947ddc16397">sxsdk::rendering_context_interface</a>
+</li>
 <li>get_current_index()
 : <a class="el" href="structsxsdk_1_1rendering__interface.html#aab005be84b818afcde8340c33e3d49fd">sxsdk::rendering_interface</a>
 </li>
@@ -570,6 +581,9 @@
 </li>
 <li>get_custom_joint_interface()
 : <a class="el" href="structsxsdk_1_1shape__class.html#aa152a15a733cc2dc2472986adcc71436">sxsdk::shape_class</a>
+</li>
+<li>get_cylinder_radius()
+: <a class="el" href="structsxsdk_1_1light__class.html#a6b01c54f2bb72f4447096779c7be0332">sxsdk::light_class</a>
 </li>
 <li>get_dad()
 : <a class="el" href="structsxsdk_1_1shape__class.html#a010a77dcc709ad5531a274c790daa907">sxsdk::shape_class</a>
@@ -680,9 +694,12 @@
 <li>get_distance_uv()
 : <a class="el" href="structsxsdk_1_1face__class.html#ac0daf565cded20a374b733974081fc3c">sxsdk::face_class</a>
 </li>
+<li>get_distant()
+: <a class="el" href="structsxsdk_1_1light__class.html#a2993682904635eb1332483764271961a">sxsdk::light_class</a>
+</li>
 <li>get_distant_camera()
-: <a class="el" href="structsxsdk_1_1camera__interface.html#ab92fcbdac4a48113386e4f95732c5474">sxsdk::camera_interface</a>
-, <a class="el" href="structsxsdk_1_1camera__class.html#aa8342cb5bc41864b0e6ece5e155762c3">sxsdk::camera_class</a>
+: <a class="el" href="structsxsdk_1_1camera__class.html#aa8342cb5bc41864b0e6ece5e155762c3">sxsdk::camera_class</a>
+, <a class="el" href="structsxsdk_1_1camera__interface.html#ab92fcbdac4a48113386e4f95732c5474">sxsdk::camera_interface</a>
 </li>
 <li>get_distant_light_interface()
 : <a class="el" href="structsxsdk_1_1scene__interface.html#a66590430c8b87b47533d2251ee561694">sxsdk::scene_interface</a>
@@ -699,7 +716,7 @@
 : <a class="el" href="structsxsdk_1_1shade__interface.html#acec66bf6e409066120c00dfc2202fa72">sxsdk::shade_interface</a>
 </li>
 <li>get_distribution_type()
-: <a class="el" href="structsxsdk_1_1light__class.html#a7a9dc6f547b721ae2e9d3e0bb7b0fe1a">sxsdk::light_class</a>
+: <a class="el" href="structsxsdk_1_1light__class.html#a6788c8f5d6d1d5d40f793b7418094b7f">sxsdk::light_class</a>
 </li>
 <li>get_dll_interface()
 : <a class="el" href="structsxsdk_1_1shade__interface.html#ad32e71bb61002a169aa54c4b40f7dc0a">sxsdk::shade_interface</a>
@@ -828,6 +845,9 @@
 </li>
 <li>get_face_group_surface()
 : <a class="el" href="structsxsdk_1_1polygon__mesh__class.html#ad755b0212bccd29db3f4dba5f9daee02">sxsdk::polygon_mesh_class</a>
+</li>
+<li>get_face_group_surface_id_color()
+: <a class="el" href="structsxsdk_1_1proxy__shape__class.html#a052c630857cc96614ce527c155e9342e">sxsdk::proxy_shape_class</a>
 </li>
 <li>get_face_uv()
 : <a class="el" href="structsxsdk_1_1face__class.html#a8c825302cebcaed4c2e71d4924746734">sxsdk::face_class</a>
@@ -1022,8 +1042,21 @@
 <li>get_grid_shown()
 : <a class="el" href="structsxsdk_1_1scene__interface.html#af2c8e59a6c0081784b71560383e1a03c">sxsdk::scene_interface</a>
 </li>
+<li>get_gridmanager_view_interface()
+: <a class="el" href="structsxsdk_1_1shade__interface.html#a02d014b58fd542486305cf2310059139">sxsdk::shade_interface</a>
+, <a class="el" href="structsxsdk_1_1gridmanager__window__interface.html#aab48772dcd93273dfb4f4546ceda15a2">sxsdk::gridmanager_window_interface</a>
+</li>
+<li>get_gridmanager_window_interface()
+: <a class="el" href="structsxsdk_1_1shade__interface.html#abd9e701430836a5ec72fc540ee19738b">sxsdk::shade_interface</a>
+</li>
+<li>get_gridmanager_window_shown()
+: <a class="el" href="structsxsdk_1_1shade__interface.html#a6a8faf71d1ff9efe4443fcf5de8f4cde">sxsdk::shade_interface</a>
+</li>
 <li>get_group()
 : <a class="el" href="structsxsdk_1_1part__class.html#a475a4b635104299208361704b220dde1">sxsdk::part_class</a>
+</li>
+<li>get_group_header_color()
+: <a class="el" href="structsxsdk_1_1preference__interface.html#ae0f9c23cd7081affb28eb046c7eae9e5">sxsdk::preference_interface</a>
 </li>
 <li>get_groupname_method()
 : <a class="el" href="classsxsdk_1_1__3ds__exporter__settings__interface.html#acc2fd29333a3070cebbac71e09df9209">sxsdk::_3ds_exporter_settings_interface</a>
@@ -1036,6 +1069,9 @@
 </li>
 <li>get_handle_color()
 : <a class="el" href="structsxsdk_1_1preference__interface.html#a0423536ae1498d8887e2422c345c75c8">sxsdk::preference_interface</a>
+</li>
+<li>get_has()
+: <a class="el" href="structsxsdk_1_1surface__class.html#adcf8cd619121e62d4adf5b3f6c8cc2fd">sxsdk::surface_class</a>
 </li>
 <li>get_has_aberration()
 : <a class="el" href="structsxsdk_1_1surface__class.html#a5989fcaabdae5fefa1921a9c1a254f88">sxsdk::surface_class</a>
@@ -1060,6 +1096,10 @@
 </li>
 <li>get_has_glow()
 : <a class="el" href="structsxsdk_1_1surface__class.html#aac17a39b6cdf8629574cc109326e11cc">sxsdk::surface_class</a>
+</li>
+<li>get_has_light_color()
+: <a class="el" href="structsxsdk_1_1light__class.html#a8e41922ae4f84e72cc586e8c6486dd6b">sxsdk::light_class</a>
+, <a class="el" href="structsxsdk_1_1line__class.html#abdd1015ee1aa37c623a39ad3ea552068">sxsdk::line_class</a>
 </li>
 <li>get_has_mapping_layers()
 : <a class="el" href="structsxsdk_1_1surface__class.html#a7283f13c3ae51d40796ef52469b73905">sxsdk::surface_class</a>
@@ -1104,8 +1144,7 @@
 : <a class="el" href="structsxsdk_1_1surface__class.html#aaa2e87182e80ddb79393c889c7ada4f1">sxsdk::surface_class</a>
 </li>
 <li>get_has_volume_density()
-: <a class="el" href="structsxsdk_1_1surface__class.html#abc4d09097f5e621ee48f7be3574b6ecb">sxsdk::surface_class</a>
-, <a class="el" href="structsxsdk_1_1surface__interface.html#a4ed33450a923e37362048722679a793a">sxsdk::surface_interface</a>
+: <a class="el" href="structsxsdk_1_1surface__interface.html#a4ed33450a923e37362048722679a793a">sxsdk::surface_interface</a>
 </li>
 <li>get_highlight()
 : <a class="el" href="structsxsdk_1_1surface__class.html#ad11a0a1bb18fdee1312d0d7fd34e56d3">sxsdk::surface_class</a>
@@ -1354,6 +1393,12 @@
 </li>
 <li>get_light_color()
 : <a class="el" href="structsxsdk_1_1distant__light__item__class.html#a735a0bbf05cfc2b03cdd76dc76eb1d3a">sxsdk::distant_light_item_class</a>
+, <a class="el" href="structsxsdk_1_1light__class.html#af24b26c440f73321eadc764579c17e0f">sxsdk::light_class</a>
+, <a class="el" href="structsxsdk_1_1line__class.html#a7da2eab3912447f81efcb8f37d33cec2">sxsdk::line_class</a>
+</li>
+<li>get_light_color_quantity()
+: <a class="el" href="structsxsdk_1_1light__class.html#ad1070c12e643b894dcbc9551683a2a5c">sxsdk::light_class</a>
+, <a class="el" href="structsxsdk_1_1line__class.html#aafcb5c9ed4527547a2f506674967e384">sxsdk::line_class</a>
 </li>
 <li>get_light_effector_interface()
 : <a class="el" href="structsxsdk_1_1shape__class.html#a64f7c8a27261d9fd54dc89b67eee93e7">sxsdk::shape_class</a>
@@ -1434,6 +1479,9 @@
 <li>get_local_to_world_matrix()
 : <a class="el" href="structsxsdk_1_1shape__class.html#a8f6c4c8a6e1a288c3a932bb8b9828784">sxsdk::shape_class</a>
 </li>
+<li>get_locale()
+: <a class="el" href="structsxsdk_1_1preference__interface.html#a4156ffabb737c36ee9319d7732df1c7c">sxsdk::preference_interface</a>
+</li>
 <li>get_lower_base_color()
 : <a class="el" href="structsxsdk_1_1background__interface.html#a6913203e8f950520c30b14357f6e1d39">sxsdk::background_interface</a>
 </li>
@@ -1451,6 +1499,9 @@
 </li>
 <li>get_main_window()
 : <a class="el" href="structsxsdk_1_1shade__interface.html#aa32995fd1de6d8f1ecada8a917d692e3">sxsdk::shade_interface</a>
+</li>
+<li>get_mainframe_background_color()
+: <a class="el" href="structsxsdk_1_1preference__interface.html#aeab9c5e20a6f8a09ff3df26ea8fea9df">sxsdk::preference_interface</a>
 </li>
 <li>get_major_grid_color()
 : <a class="el" href="structsxsdk_1_1preference__interface.html#a40b5df9a068332414c6b7cba231cd4e2">sxsdk::preference_interface</a>
@@ -1553,6 +1604,9 @@
 <li>get_meshtools_window_shown()
 : <a class="el" href="structsxsdk_1_1shade__interface.html#a112aa4707e5febab0e4df47d07b8c168">sxsdk::shade_interface</a>
 </li>
+<li>get_message()
+: <a class="el" href="structsxsdk_1_1message__view__interface.html#a185f291d1a0bd54fb58f86ccbefe5994">sxsdk::message_view_interface</a>
+</li>
 <li>get_message_view_interface()
 : <a class="el" href="structsxsdk_1_1shade__interface.html#abbb4d3fd40668a2069b0e00b1089e50b">sxsdk::shade_interface</a>
 , <a class="el" href="structsxsdk_1_1message__window__interface.html#a78271ed3bf94fd11b4e1ecb2148257b1">sxsdk::message_window_interface</a>
@@ -1635,6 +1689,9 @@
 </li>
 <li>get_multipass_rendering()
 : <a class="el" href="structsxsdk_1_1rendering__interface.html#a7b4bc087558cd7c8ec9e97a58279822c">sxsdk::rendering_interface</a>
+</li>
+<li>get_multiply_ambient()
+: <a class="el" href="structsxsdk_1_1surface__class.html#a6019f6af599dd39ae5fb04d7cfef0f37">sxsdk::surface_class</a>
 </li>
 <li>get_must_be_saved()
 : <a class="el" href="structsxsdk_1_1preference__interface.html#a80405a2e3b6a8cfb379508bf60212f42">sxsdk::preference_interface</a>
@@ -1754,8 +1811,8 @@
 : <a class="el" href="structsxsdk_1_1importer__interface.html#a65977f1d94435df084f78c25a37ef0da">sxsdk::importer_interface</a>
 </li>
 <li>get_number_of_image_layers()
-: <a class="el" href="structsxsdk_1_1rendering__interface.html#afb871f090297c22a3250c100fac4693a">sxsdk::rendering_interface</a>
-, <a class="el" href="structsxsdk_1_1rendering__context__interface.html#a39b507e13254a043d974bbe15ecc5ffe">sxsdk::rendering_context_interface</a>
+: <a class="el" href="structsxsdk_1_1rendering__context__interface.html#a39b507e13254a043d974bbe15ecc5ffe">sxsdk::rendering_context_interface</a>
+, <a class="el" href="structsxsdk_1_1rendering__interface.html#afb871f090297c22a3250c100fac4693a">sxsdk::rendering_interface</a>
 </li>
 <li>get_number_of_items()
 : <a class="el" href="structsxsdk_1_1color__list__interface.html#a602f349599e35548f19332d76546159d">sxsdk::color_list_interface</a>
@@ -1777,8 +1834,8 @@
 : <a class="el" href="structsxsdk_1_1scene__interface.html#a9b44f9243c7dbf20330a617889c99386">sxsdk::scene_interface</a>
 </li>
 <li>get_number_of_metacameras()
-: <a class="el" href="structsxsdk_1_1camera__interface.html#a82ee8e6497ac4b33a9085ae09159a6a2">sxsdk::camera_interface</a>
-, <a class="el" href="structsxsdk_1_1scene__interface.html#a94ab2bbd62ffa7cd59145723899a1a85">sxsdk::scene_interface</a>
+: <a class="el" href="structsxsdk_1_1scene__interface.html#a94ab2bbd62ffa7cd59145723899a1a85">sxsdk::scene_interface</a>
+, <a class="el" href="structsxsdk_1_1camera__interface.html#a82ee8e6497ac4b33a9085ae09159a6a2">sxsdk::camera_interface</a>
 </li>
 <li>get_number_of_motion_points()
 : <a class="el" href="structsxsdk_1_1motion__interface.html#a1e683aa0748779c77398b95e79161a9a">sxsdk::motion_interface</a>
@@ -1787,8 +1844,8 @@
 : <a class="el" href="structsxsdk_1_1exporter__interface.html#afbd9c4240924a56cdb6309dc0c594c58">sxsdk::exporter_interface</a>
 </li>
 <li>get_number_of_points()
-: <a class="el" href="structsxsdk_1_1shape__class.html#a1a7bc16788d829d9f233abcf4d841477">sxsdk::shape_class</a>
-, <a class="el" href="structsxsdk_1_1shape__saver__interface.html#aa2f2a0be2d9f87918f53a1a0ac9fdd54">sxsdk::shape_saver_interface</a>
+: <a class="el" href="structsxsdk_1_1shape__saver__interface.html#aa2f2a0be2d9f87918f53a1a0ac9fdd54">sxsdk::shape_saver_interface</a>
+, <a class="el" href="structsxsdk_1_1shape__class.html#a1a7bc16788d829d9f233abcf4d841477">sxsdk::shape_class</a>
 </li>
 <li>get_number_of_sequence_key_points()
 : <a class="el" href="structsxsdk_1_1motion__interface.html#adc77b42bb615f0da824338bd707542dc">sxsdk::motion_interface</a>
@@ -1816,9 +1873,9 @@
 : <a class="el" href="structsxsdk_1_1proxy__shape__class.html#a553ccf4320fad81be86338fb557d9011">sxsdk::proxy_shape_class</a>
 </li>
 <li>get_object_info_view_interface()
-: <a class="el" href="structsxsdk_1_1aggregate__view__interface.html#a3075b40697f9a19007e51509f199e10b">sxsdk::aggregate_view_interface</a>
+: <a class="el" href="structsxsdk_1_1object__info__window__interface.html#a38187be47bdb5bfa3e8d2d4876b585a1">sxsdk::object_info_window_interface</a>
 , <a class="el" href="structsxsdk_1_1shade__interface.html#a02c7d69223a010182372734ff5e29163">sxsdk::shade_interface</a>
-, <a class="el" href="structsxsdk_1_1object__info__window__interface.html#a38187be47bdb5bfa3e8d2d4876b585a1">sxsdk::object_info_window_interface</a>
+, <a class="el" href="structsxsdk_1_1aggregate__view__interface.html#a3075b40697f9a19007e51509f199e10b">sxsdk::aggregate_view_interface</a>
 </li>
 <li>get_object_info_window_interface()
 : <a class="el" href="structsxsdk_1_1shade__interface.html#a619d6102f58a08ebe6c524bc7141d449">sxsdk::shade_interface</a>
@@ -1849,6 +1906,9 @@
 <li>get_opengl_drawelements()
 : <a class="el" href="structsxsdk_1_1preference__interface.html#a62c30a42d21e336d8a16ff20c799bf61">sxsdk::preference_interface</a>
 </li>
+<li>get_opengl_fbo()
+: <a class="el" href="structsxsdk_1_1preference__interface.html#ad8071544ab34fd56d762d92ffb616313">sxsdk::preference_interface</a>
+</li>
 <li>get_opengl_pbuffer()
 : <a class="el" href="structsxsdk_1_1preference__interface.html#acc7cdf74e79a555b1f4454145f22c2e6">sxsdk::preference_interface</a>
 </li>
@@ -1858,6 +1918,9 @@
 <li>get_opengl_texture_size()
 : <a class="el" href="structsxsdk_1_1preference__interface.html#a2cbce3cdcf83937fbd77db03c527eeb4">sxsdk::preference_interface</a>
 </li>
+<li>get_opengl_update_background()
+: <a class="el" href="structsxsdk_1_1preference__interface.html#a22cbdfa88db8185ee7fb8e4876ca0f31">sxsdk::preference_interface</a>
+</li>
 <li>get_ordinal()
 : <a class="el" href="structsxsdk_1_1shape__class.html#ae2bde59792a6745f03cd3705ca416484">sxsdk::shape_class</a>
 </li>
@@ -1865,8 +1928,8 @@
 : <a class="el" href="structsxsdk_1_1background__layer__class.html#a460d335bc329eee432b34feea6defa1e">sxsdk::background_layer_class</a>
 </li>
 <li>get_origin()
-: <a class="el" href="structsxsdk_1_1mapping__layer__class.html#af83fb93357efc45d8ced49698c6a05ae">sxsdk::mapping_layer_class</a>
-, <a class="el" href="structsxsdk_1_1shader__node__class.html#abdbded1ecb7febf29c6b9facfdde2110">sxsdk::shader_node_class</a>
+: <a class="el" href="structsxsdk_1_1shader__node__class.html#abdbded1ecb7febf29c6b9facfdde2110">sxsdk::shader_node_class</a>
+, <a class="el" href="structsxsdk_1_1mapping__layer__class.html#af83fb93357efc45d8ced49698c6a05ae">sxsdk::mapping_layer_class</a>
 </li>
 <li>get_Os()
 : <a class="el" href="structsxsdk_1_1shader__interface.html#aaa797fa645a103996a66ef99748d2a69">sxsdk::shader_interface</a>
@@ -1898,14 +1961,14 @@
 , <a class="el" href="structsxsdk_1_1proxy__shape__class.html#addf98bb7e6bb0d112981664f95d13a0a">sxsdk::proxy_shape_class</a>
 </li>
 <li>get_part()
-: <a class="el" href="structsxsdk_1_1shape__class.html#af549ebc37d1f503cdd1426eb06f27fa3">sxsdk::shape_class</a>
+: <a class="el" href="structsxsdk_1_1shape__class.html#ae0edc8f16bac8ec43b69f58ff044f5d1">sxsdk::shape_class</a>
 </li>
 <li>get_part_type()
 : <a class="el" href="structsxsdk_1_1part__class.html#a241c9e440c39581633a57a0c2842e5ee">sxsdk::part_class</a>
 </li>
 <li>get_path()
-: <a class="el" href="structsxsdk_1_1image__interface.html#a5f57126de5d8e33faa4622466bda3df8">sxsdk::image_interface</a>
-, <a class="el" href="structsxsdk_1_1shade__interface.html#a75796cb9b1ade4c7e1842a7c26e7c05a">sxsdk::shade_interface</a>
+: <a class="el" href="structsxsdk_1_1shade__interface.html#a75796cb9b1ade4c7e1842a7c26e7c05a">sxsdk::shade_interface</a>
+, <a class="el" href="structsxsdk_1_1image__interface.html#a5f57126de5d8e33faa4622466bda3df8">sxsdk::image_interface</a>
 , <a class="el" href="structsxsdk_1_1master__shape__class.html#a24d7f6fa125f3918095a74122e168c32">sxsdk::master_shape_class</a>
 , <a class="el" href="structsxsdk_1_1master__surface__class.html#a2782e6dc877b46d5a744e3ee24ff50fa">sxsdk::master_surface_class</a>
 </li>
@@ -1923,8 +1986,8 @@
 , <a class="el" href="structsxsdk_1_1shader__node__class.html#ada06f2bd878767b167e81cfbce008c74">sxsdk::shader_node_class</a>
 </li>
 <li>get_pattern_name()
-: <a class="el" href="structsxsdk_1_1shader__node__class.html#ab6eb2a13faa1ed0931edc91a4220f7a6">sxsdk::shader_node_class</a>
-, <a class="el" href="structsxsdk_1_1mapping__layer__class.html#a8449cfe5509c80e2325781abf928ef30">sxsdk::mapping_layer_class</a>
+: <a class="el" href="structsxsdk_1_1mapping__layer__class.html#a8449cfe5509c80e2325781abf928ef30">sxsdk::mapping_layer_class</a>
+, <a class="el" href="structsxsdk_1_1shader__node__class.html#ab6eb2a13faa1ed0931edc91a4220f7a6">sxsdk::shader_node_class</a>
 </li>
 <li>get_pattern_uuid()
 : <a class="el" href="structsxsdk_1_1mapping__layer__class.html#a886e9a49bf517c669c851bb361919e63">sxsdk::mapping_layer_class</a>
@@ -1938,6 +2001,18 @@
 </li>
 <li>get_perspective_correction()
 : <a class="el" href="structsxsdk_1_1motion__point__interface.html#a9877da27ccb0a820ea61073dc437dabe">sxsdk::motion_point_interface</a>
+</li>
+<li>get_perspective_ground_center_color()
+: <a class="el" href="structsxsdk_1_1preference__interface.html#a9220f34227276535e6eb2d0bbba97701">sxsdk::preference_interface</a>
+</li>
+<li>get_perspective_ground_color()
+: <a class="el" href="structsxsdk_1_1preference__interface.html#afc5f70f85156dfa4ba05450f9fb69bbc">sxsdk::preference_interface</a>
+</li>
+<li>get_perspective_sky_center_color()
+: <a class="el" href="structsxsdk_1_1preference__interface.html#af683403d818a3a072dfd5ea1da791686">sxsdk::preference_interface</a>
+</li>
+<li>get_perspective_sky_color()
+: <a class="el" href="structsxsdk_1_1preference__interface.html#a6ddc067ef066befde2ef92c9deed61ee">sxsdk::preference_interface</a>
 </li>
 <li>get_perturbed_normal()
 : <a class="el" href="structsxsdk_1_1texture__interface.html#a5145c796465512e12dfc2a40b393e7db">sxsdk::texture_interface</a>
@@ -1960,22 +2035,22 @@
 : <a class="el" href="structsxsdk_1_1rendering__interface.html#a7d537e00f8c98010185a85da5d8bce12">sxsdk::rendering_interface</a>
 </li>
 <li>get_pivot()
-: <a class="el" href="structsxsdk_1_1uniscale__joint__interface.html#a19662f8f26aa04720c12d0401eb5e1b9">sxsdk::uniscale_joint_interface</a>
+: <a class="el" href="structsxsdk_1_1scale__joint__interface.html#a117e6ce3f69bcb355cda6bbf34dfb5d6">sxsdk::scale_joint_interface</a>
 , <a class="el" href="structsxsdk_1_1rotator__joint__interface.html#ac5ae2738caa6ec512790d4a17f8e028f">sxsdk::rotator_joint_interface</a>
-, <a class="el" href="structsxsdk_1_1scale__joint__interface.html#a117e6ce3f69bcb355cda6bbf34dfb5d6">sxsdk::scale_joint_interface</a>
+, <a class="el" href="structsxsdk_1_1uniscale__joint__interface.html#a19662f8f26aa04720c12d0401eb5e1b9">sxsdk::uniscale_joint_interface</a>
 </li>
 <li>get_pivot_position()
 : <a class="el" href="structsxsdk_1_1scene__interface.html#ab2d41b25c72ac313064edc8a40376143">sxsdk::scene_interface</a>
 </li>
 <li>get_pixel()
-: <a class="el" href="structsxsdk_1_1image__interface.html#a7fbd06c53a41bf2d4fcbc97628c9f059">sxsdk::image_interface</a>
+: <a class="el" href="structsxsdk_1_1image__interface.html#a733798d979d6f1037ef9085f332cac74">sxsdk::image_interface</a>
 </li>
 <li>get_pixel_()
 : <a class="el" href="structsxsdk_1_1image__interface.html#a3a04c702129da7d2f5454dc4f32b358b">sxsdk::image_interface</a>
 </li>
 <li>get_pixel_depth()
-: <a class="el" href="structsxsdk_1_1image__interface.html#ab545d8162b153c21921f9752b367d344">sxsdk::image_interface</a>
-, <a class="el" href="structsxsdk_1_1image__layer__interface.html#a9d50e7909b693d1aa8c5879d8e34afdc">sxsdk::image_layer_interface</a>
+: <a class="el" href="structsxsdk_1_1image__layer__interface.html#a9d50e7909b693d1aa8c5879d8e34afdc">sxsdk::image_layer_interface</a>
+, <a class="el" href="structsxsdk_1_1image__interface.html#ab545d8162b153c21921f9752b367d344">sxsdk::image_interface</a>
 , <a class="el" href="structsxsdk_1_1rendering__interface.html#a40ac6129b7df0902ab167085bb0f39e8">sxsdk::rendering_interface</a>
 </li>
 <li>get_pixel_format()
@@ -2006,8 +2081,8 @@
 : <a class="el" href="structsxsdk_1_1window__interface.html#aece1d57b3925904a60eee07fe6ece2d8">sxsdk::window_interface</a>
 </li>
 <li>get_plane_equation()
-: <a class="el" href="structsxsdk_1_1part__class.html#a80914694128acf7263984a687476e259">sxsdk::part_class</a>
-, <a class="el" href="structsxsdk_1_1polygon__mesh__class.html#aba97734d5d21bbf93173e4b6ab0a64b3">sxsdk::polygon_mesh_class</a>
+: <a class="el" href="structsxsdk_1_1polygon__mesh__class.html#aba97734d5d21bbf93173e4b6ab0a64b3">sxsdk::polygon_mesh_class</a>
+, <a class="el" href="structsxsdk_1_1part__class.html#a80914694128acf7263984a687476e259">sxsdk::part_class</a>
 </li>
 <li>get_plugin_blacklist()
 : <a class="el" href="structsxsdk_1_1preference__interface.html#a6513cb800ece53bcde6ceb1834b04d51">sxsdk::preference_interface</a>
@@ -2034,35 +2109,35 @@
 : <a class="el" href="structsxsdk_1_1preference__interface.html#a6da86e65350f6ad5ba24d49200b1d1d9">sxsdk::preference_interface</a>
 </li>
 <li>get_position()
-: <a class="el" href="structsxsdk_1_1light__class.html#a1b138d5a3beb00ca79f5357cad1d8364">sxsdk::light_class</a>
-, <a class="el" href="structsxsdk_1_1window__interface_1_1control__base__class.html#a4435aebd3fc8adff7208be53af554004">sxsdk::window_interface::control_base_class</a>
+: <a class="el" href="structsxsdk_1_1vertex__class.html#a14a1488df2649b38cfe0384e354878ea">sxsdk::vertex_class</a>
+, <a class="el" href="structsxsdk_1_1rendering__light__class.html#a5600696e8d25fc801763f28cffc6473d">sxsdk::rendering_light_class</a>
 , <a class="el" href="structsxsdk_1_1control__point__class.html#a16a384043c5633574e4a95dff8667faa">sxsdk::control_point_class</a>
 , <a class="el" href="structsxsdk_1_1motion__interface.html#ae8051b5e0201f0d96ae927c8a88fa688">sxsdk::motion_interface</a>
-, <a class="el" href="structsxsdk_1_1rendering__light__class.html#a5600696e8d25fc801763f28cffc6473d">sxsdk::rendering_light_class</a>
+, <a class="el" href="structsxsdk_1_1light__class.html#a1b138d5a3beb00ca79f5357cad1d8364">sxsdk::light_class</a>
 , <a class="el" href="structsxsdk_1_1ball__joint__interface.html#acd9b710c1645c05733a617b4ee64d237">sxsdk::ball_joint_interface</a>
 , <a class="el" href="structsxsdk_1_1texture__interface.html#accb82728669c0d4c63d51dcf6184db5b">sxsdk::texture_interface</a>
-, <a class="el" href="structsxsdk_1_1vertex__class.html#a14a1488df2649b38cfe0384e354878ea">sxsdk::vertex_class</a>
+, <a class="el" href="structsxsdk_1_1window__interface_1_1control__base__class.html#a4435aebd3fc8adff7208be53af554004">sxsdk::window_interface::control_base_class</a>
 </li>
 <li>get_preference_interface()
 : <a class="el" href="structsxsdk_1_1shade__interface.html#aafb826da7d2533c80d3e5358f14b958d">sxsdk::shade_interface</a>
 </li>
 <li>get_premultiplied()
-: <a class="el" href="structsxsdk_1_1background__layer__class.html#a61658687c347a746dd1122264c18f08c">sxsdk::background_layer_class</a>
-, <a class="el" href="structsxsdk_1_1mapping__layer__class.html#a1f9ee3db81790c6cdb581f30978136e3">sxsdk::mapping_layer_class</a>
+: <a class="el" href="structsxsdk_1_1mapping__layer__class.html#a1f9ee3db81790c6cdb581f30978136e3">sxsdk::mapping_layer_class</a>
+, <a class="el" href="structsxsdk_1_1background__layer__class.html#a61658687c347a746dd1122264c18f08c">sxsdk::background_layer_class</a>
 , <a class="el" href="structsxsdk_1_1shader__node__class.html#a4f1b66def02f39f32f46c01f13903626">sxsdk::shader_node_class</a>
 </li>
 <li>get_premultiplied_pixel()
 : <a class="el" href="structsxsdk_1_1rendering__interface.html#a868dee30945b64bbe9c2104e16b00154">sxsdk::rendering_interface</a>
 </li>
 <li>get_projection()
-: <a class="el" href="structsxsdk_1_1shader__interface.html#ae77eb6fef32dbf0b824ed9ebe4b6243e">sxsdk::shader_interface</a>
-, <a class="el" href="structsxsdk_1_1background__layer__class.html#a2081844209778b3e202e2ef99a9c232f">sxsdk::background_layer_class</a>
+: <a class="el" href="structsxsdk_1_1background__layer__class.html#a2081844209778b3e202e2ef99a9c232f">sxsdk::background_layer_class</a>
 , <a class="el" href="structsxsdk_1_1mapping__layer__class.html#ad7814b47de6db153e22103b61cfe916d">sxsdk::mapping_layer_class</a>
+, <a class="el" href="structsxsdk_1_1shader__interface.html#ae77eb6fef32dbf0b824ed9ebe4b6243e">sxsdk::shader_interface</a>
 , <a class="el" href="structsxsdk_1_1shader__node__class.html#a6f6b22738fe03065e54d3bbe1e2afda2">sxsdk::shader_node_class</a>
 </li>
 <li>get_projections()
-: <a class="el" href="structsxsdk_1_1mapping__layer__class.html#aa0ff49a508f70aa003a531e996ae0e14">sxsdk::mapping_layer_class</a>
-, <a class="el" href="structsxsdk_1_1shader__node__class.html#aab5c95b670a7205a5a7f634d60cd23d1">sxsdk::shader_node_class</a>
+: <a class="el" href="structsxsdk_1_1shader__node__class.html#aab5c95b670a7205a5a7f634d60cd23d1">sxsdk::shader_node_class</a>
+, <a class="el" href="structsxsdk_1_1mapping__layer__class.html#aa0ff49a508f70aa003a531e996ae0e14">sxsdk::mapping_layer_class</a>
 </li>
 <li>get_property_flag()
 : <a class="el" href="structsxsdk_1_1dialog__interface.html#ae4f2e12e1059490f5cdc3340a4caceb5">sxsdk::dialog_interface</a>
@@ -2094,7 +2169,7 @@
 : <a class="el" href="structsxsdk_1_1dialog__interface.html#acef4836c145b4ab8823fcbaac709279a">sxsdk::dialog_interface</a>
 </li>
 <li>get_proxy_shape()
-: <a class="el" href="structsxsdk_1_1shape__class.html#a0a472440060766e64740d230e64bc927">sxsdk::shape_class</a>
+: <a class="el" href="structsxsdk_1_1shape__class.html#a7b2bf3bac1ac1fd16b30ad9dfbfe9864">sxsdk::shape_class</a>
 </li>
 <li>get_pseudo_caustics()
 : <a class="el" href="structsxsdk_1_1surface__class.html#a324d78d4be4c906dc3d1228a1fc3b320">sxsdk::surface_class</a>
@@ -2108,6 +2183,9 @@
 <li>get_pseudo_caustics_bump()
 : <a class="el" href="structsxsdk_1_1surface__class.html#a79bcbbc8d89f90a7ca0b456898aeec64">sxsdk::surface_class</a>
 </li>
+<li>get_quantity()
+: <a class="el" href="structsxsdk_1_1surface__class.html#aed9efb8b17df2ce2592f2b8839f3b5df">sxsdk::surface_class</a>
+</li>
 <li>get_radiosity_attributes_interface()
 : <a class="el" href="structsxsdk_1_1shape__class.html#ac1aaf15f8701f85351d8d8a6cf36000b">sxsdk::shape_class</a>
 </li>
@@ -2115,12 +2193,12 @@
 : <a class="el" href="structsxsdk_1_1scene__interface.html#ab12f10da414d9a8bbeeaf4edba0179f9">sxsdk::scene_interface</a>
 </li>
 <li>get_radiosity_options_view_interface()
-: <a class="el" href="structsxsdk_1_1radiosity__view__interface.html#a93e91a443db2366995e6bf1e8a06b04c">sxsdk::radiosity_view_interface</a>
-, <a class="el" href="structsxsdk_1_1shade__interface.html#aae8f9dae3b0cf947733b721f43911207">sxsdk::shade_interface</a>
+: <a class="el" href="structsxsdk_1_1shade__interface.html#aae8f9dae3b0cf947733b721f43911207">sxsdk::shade_interface</a>
+, <a class="el" href="structsxsdk_1_1radiosity__view__interface.html#a93e91a443db2366995e6bf1e8a06b04c">sxsdk::radiosity_view_interface</a>
 </li>
 <li>get_radiosity_view_interface()
-: <a class="el" href="structsxsdk_1_1shade__interface.html#a9df9d5d3c58f1a3eb763b376dba1f89b">sxsdk::shade_interface</a>
-, <a class="el" href="structsxsdk_1_1radiosity__window__interface.html#a7ba64de96e9dc8bbba4f092c6d5ad006">sxsdk::radiosity_window_interface</a>
+: <a class="el" href="structsxsdk_1_1radiosity__window__interface.html#a7ba64de96e9dc8bbba4f092c6d5ad006">sxsdk::radiosity_window_interface</a>
+, <a class="el" href="structsxsdk_1_1shade__interface.html#a9df9d5d3c58f1a3eb763b376dba1f89b">sxsdk::shade_interface</a>
 </li>
 <li>get_radiosity_window_interface()
 : <a class="el" href="structsxsdk_1_1shade__interface.html#a70b47e34153a8c2d1b0055ca21ae2437">sxsdk::shade_interface</a>
@@ -2133,17 +2211,17 @@
 , <a class="el" href="structsxsdk_1_1disk__class.html#abae6003ebf49812270ca72950debc1bb">sxsdk::disk_class</a>
 </li>
 <li>get_range()
-: <a class="el" href="structsxsdk_1_1slider__joint__interface.html#ad11ef3c3cba90ddefcf85e04ab7d4ab8">sxsdk::slider_joint_interface</a>
-, <a class="el" href="structsxsdk_1_1rotator__joint__interface.html#a9b8f5a12e24e9cbeabd706868e2b7375">sxsdk::rotator_joint_interface</a>
-, <a class="el" href="structsxsdk_1_1scale__joint__interface.html#ab83832dd03ff236f6f65e53cd42b7e7e">sxsdk::scale_joint_interface</a>
+: <a class="el" href="structsxsdk_1_1custom__joint__interface.html#aeaf1ffb2d01344d4a7c4c91f19b6354f">sxsdk::custom_joint_interface</a>
 , <a class="el" href="structsxsdk_1_1uniscale__joint__interface.html#a5bf2308aea91e0bb393092ea47955fc2">sxsdk::uniscale_joint_interface</a>
+, <a class="el" href="structsxsdk_1_1rotator__joint__interface.html#a9b8f5a12e24e9cbeabd706868e2b7375">sxsdk::rotator_joint_interface</a>
+, <a class="el" href="structsxsdk_1_1slider__joint__interface.html#ad11ef3c3cba90ddefcf85e04ab7d4ab8">sxsdk::slider_joint_interface</a>
+, <a class="el" href="structsxsdk_1_1scale__joint__interface.html#ab83832dd03ff236f6f65e53cd42b7e7e">sxsdk::scale_joint_interface</a>
 , <a class="el" href="structsxsdk_1_1light__effector__interface.html#a1969026e69184cff161165e1209069f1">sxsdk::light_effector_interface</a>
-, <a class="el" href="structsxsdk_1_1morph__effector__interface.html#ac001692e2d10d3fcf00f351df61e1cf2">sxsdk::morph_effector_interface</a>
-, <a class="el" href="structsxsdk_1_1custom__joint__interface.html#aeaf1ffb2d01344d4a7c4c91f19b6354f">sxsdk::custom_joint_interface</a>
-, <a class="el" href="structsxsdk_1_1sound__track__interface.html#a50a178e62778ceb1f0c0b05f3b0b3317">sxsdk::sound_track_interface</a>
-, <a class="el" href="structsxsdk_1_1path__replicator__interface.html#a520651e4b50a65f714666fa39d859c9b">sxsdk::path_replicator_interface</a>
 , <a class="el" href="structsxsdk_1_1path__joint__interface.html#ae884e09df8f2776d24104a2e5902ac75">sxsdk::path_joint_interface</a>
+, <a class="el" href="structsxsdk_1_1morph__effector__interface.html#ac001692e2d10d3fcf00f351df61e1cf2">sxsdk::morph_effector_interface</a>
+, <a class="el" href="structsxsdk_1_1sound__track__interface.html#a50a178e62778ceb1f0c0b05f3b0b3317">sxsdk::sound_track_interface</a>
 , <a class="el" href="structsxsdk_1_1switch__effector__interface.html#a7ff2b6af4950d4826aa4a01d57c3e3ce">sxsdk::switch_effector_interface</a>
+, <a class="el" href="structsxsdk_1_1path__replicator__interface.html#a520651e4b50a65f714666fa39d859c9b">sxsdk::path_replicator_interface</a>
 </li>
 <li>get_ray_cast_level()
 : <a class="el" href="structsxsdk_1_1rendering__interface.html#a5bb4333f884955aabc9c897796144e12">sxsdk::rendering_interface</a>
@@ -2208,9 +2286,9 @@
 : <a class="el" href="structsxsdk_1_1shade__interface.html#a43e7b1808981f28f97659f3bd7c5e8cc">sxsdk::shade_interface</a>
 </li>
 <li>get_render()
-: <a class="el" href="structsxsdk_1_1plugin__exporter__interface.html#a84749f940d9df0f82da48d168af5ba90">sxsdk::plugin_exporter_interface</a>
+: <a class="el" href="structsxsdk_1_1loader__info__interface.html#acf87b3334e05458ff00d5f449c148441">sxsdk::loader_info_interface</a>
+, <a class="el" href="structsxsdk_1_1plugin__exporter__interface.html#a84749f940d9df0f82da48d168af5ba90">sxsdk::plugin_exporter_interface</a>
 , <a class="el" href="structsxsdk_1_1rendering__context__interface.html#a239a96a38d61499a915c497c2b65f0f6">sxsdk::rendering_context_interface</a>
-, <a class="el" href="structsxsdk_1_1loader__info__interface.html#acf87b3334e05458ff00d5f449c148441">sxsdk::loader_info_interface</a>
 </li>
 <li>get_render_flag()
 : <a class="el" href="structsxsdk_1_1shape__class.html#ae617d8d3d40634a600ad5e8111490768">sxsdk::shape_class</a>
@@ -2234,9 +2312,9 @@
 : <a class="el" href="structsxsdk_1_1scene__interface.html#a2ec39b5838d3f1edb45dab25de59371d">sxsdk::scene_interface</a>
 </li>
 <li>get_rendering_flag()
-: <a class="el" href="structsxsdk_1_1loader__info__interface.html#a7d39cd895ee7ac2e16397ed8d2f27f22">sxsdk::loader_info_interface</a>
-, <a class="el" href="structsxsdk_1_1plugin__exporter__interface.html#aaa9fd22672035c5865b2fe89032ea5d2">sxsdk::plugin_exporter_interface</a>
+: <a class="el" href="structsxsdk_1_1plugin__exporter__interface.html#aaa9fd22672035c5865b2fe89032ea5d2">sxsdk::plugin_exporter_interface</a>
 , <a class="el" href="structsxsdk_1_1rendering__context__interface.html#adab29b0b1b7f3855c0b26508fceec02c">sxsdk::rendering_context_interface</a>
+, <a class="el" href="structsxsdk_1_1loader__info__interface.html#a7d39cd895ee7ac2e16397ed8d2f27f22">sxsdk::loader_info_interface</a>
 </li>
 <li>get_rendering_interface()
 : <a class="el" href="structsxsdk_1_1scene__interface.html#a4fa7035d56cdbfd3e8313ec0358e1e26">sxsdk::scene_interface</a>
@@ -2292,14 +2370,14 @@
 , <a class="el" href="structsxsdk_1_1camera__interface.html#a6f87b7ceb44b38d8e963b8e48dd61665">sxsdk::camera_interface</a>
 </li>
 <li>get_root_proxy_shape()
-: <a class="el" href="structsxsdk_1_1loader__info__interface.html#a48049bf3a90e54fa6733fca150f4517b">sxsdk::loader_info_interface</a>
+: <a class="el" href="structsxsdk_1_1rendering__context__interface.html#a8cc3b5051fa992892a276d60569225b0">sxsdk::rendering_context_interface</a>
 , <a class="el" href="structsxsdk_1_1plugin__exporter__interface.html#a659501fe48f01435fa44c12875904b81">sxsdk::plugin_exporter_interface</a>
-, <a class="el" href="structsxsdk_1_1rendering__context__interface.html#a8cc3b5051fa992892a276d60569225b0">sxsdk::rendering_context_interface</a>
+, <a class="el" href="structsxsdk_1_1loader__info__interface.html#a48049bf3a90e54fa6733fca150f4517b">sxsdk::loader_info_interface</a>
 </li>
 <li>get_rotation()
-: <a class="el" href="structsxsdk_1_1motion__point__interface.html#a1facb6a33604967daf61c59c6edea5e0">sxsdk::motion_point_interface</a>
+: <a class="el" href="structsxsdk_1_1ball__joint__interface.html#a672d7331496d5542c2cb163972cc0bd4">sxsdk::ball_joint_interface</a>
+, <a class="el" href="structsxsdk_1_1motion__point__interface.html#a1facb6a33604967daf61c59c6edea5e0">sxsdk::motion_point_interface</a>
 , <a class="el" href="structsxsdk_1_1rotator__joint__interface.html#a450f6864519c32a17baa287a252ccd0c">sxsdk::rotator_joint_interface</a>
-, <a class="el" href="structsxsdk_1_1ball__joint__interface.html#a672d7331496d5542c2cb163972cc0bd4">sxsdk::ball_joint_interface</a>
 </li>
 <li>get_rotator_joint_interface()
 : <a class="el" href="structsxsdk_1_1shape__class.html#a4ee3083613ad4e97d2726d2746878cfb">sxsdk::shape_class</a>
@@ -2339,11 +2417,11 @@
 : <a class="el" href="structsxsdk_1_1motion__point__interface.html#ab7faca785d5374d652d1bdc8bfb874a8">sxsdk::motion_point_interface</a>
 </li>
 <li>get_scale()
-: <a class="el" href="structsxsdk_1_1scale__joint__interface.html#abd9a396dd508252b92508f84f155db88">sxsdk::scale_joint_interface</a>
+: <a class="el" href="structsxsdk_1_1uniscale__joint__interface.html#ac5a05ce9e7e8c872554a3fcab65bbc94">sxsdk::uniscale_joint_interface</a>
+, <a class="el" href="structsxsdk_1_1scale__joint__interface.html#abd9a396dd508252b92508f84f155db88">sxsdk::scale_joint_interface</a>
 , <a class="el" href="structsxsdk_1_1camera__class.html#a7f558f165a85c3ad999c03b0cef18752">sxsdk::camera_class</a>
-, <a class="el" href="structsxsdk_1_1uniscale__joint__interface.html#ac5a05ce9e7e8c872554a3fcab65bbc94">sxsdk::uniscale_joint_interface</a>
-, <a class="el" href="structsxsdk_1_1camera__interface.html#a0a5cb28ed79c15259be1e1c4ccf8fe83">sxsdk::camera_interface</a>
 , <a class="el" href="structsxsdk_1_1motion__point__interface.html#a3bd515358bbe22cee9b98070b00deff7">sxsdk::motion_point_interface</a>
+, <a class="el" href="structsxsdk_1_1camera__interface.html#a0a5cb28ed79c15259be1e1c4ccf8fe83">sxsdk::camera_interface</a>
 </li>
 <li>get_scale_joint_interface()
 : <a class="el" href="structsxsdk_1_1shape__class.html#a7264f015119bd6c274415dc221adf164">sxsdk::shape_class</a>
@@ -2352,12 +2430,12 @@
 : <a class="el" href="structsxsdk_1_1rendering__interface.html#af13c53173fa666f3b3a3c38a88d19c3e">sxsdk::rendering_interface</a>
 </li>
 <li>get_scene_interface()
-: <a class="el" href="structsxsdk_1_1plugin__exporter__interface.html#a22696274e2377329a42046dd9747b440">sxsdk::plugin_exporter_interface</a>
-, <a class="el" href="structsxsdk_1_1stream__interface.html#a73af8482f1c4f62b875432d17e455b58">sxsdk::stream_interface</a>
-, <a class="el" href="structsxsdk_1_1shape__class.html#a476057cf7e7c4797c0c5b5c41dc347b9">sxsdk::shape_class</a>
-, <a class="el" href="structsxsdk_1_1rendering__context__interface.html#a5cc42ec6d11577997180f48499d29fa0">sxsdk::rendering_context_interface</a>
+: <a class="el" href="structsxsdk_1_1shade__interface.html#a3c0645c8b5acbe164aed7715c6674931">sxsdk::shade_interface</a>
 , <a class="el" href="structsxsdk_1_1surface__interface.html#ad0923167d45576d1b54acb18a9435c60">sxsdk::surface_interface</a>
-, <a class="el" href="structsxsdk_1_1shade__interface.html#a3c0645c8b5acbe164aed7715c6674931">sxsdk::shade_interface</a>
+, <a class="el" href="structsxsdk_1_1stream__interface.html#a73af8482f1c4f62b875432d17e455b58">sxsdk::stream_interface</a>
+, <a class="el" href="structsxsdk_1_1rendering__context__interface.html#a5cc42ec6d11577997180f48499d29fa0">sxsdk::rendering_context_interface</a>
+, <a class="el" href="structsxsdk_1_1plugin__exporter__interface.html#a22696274e2377329a42046dd9747b440">sxsdk::plugin_exporter_interface</a>
+, <a class="el" href="structsxsdk_1_1shape__class.html#a476057cf7e7c4797c0c5b5c41dc347b9">sxsdk::shape_class</a>
 </li>
 <li>get_script_interface()
 : <a class="el" href="structsxsdk_1_1shade__interface.html#a92f8fe64b4f13c6ede7db98cca2ca3e2">sxsdk::shade_interface</a>
@@ -2384,9 +2462,12 @@
 <li>get_scroll_wheel_speed()
 : <a class="el" href="structsxsdk_1_1preference__interface.html#ad90e2a39ae6bde2b3c574f882dcf1bd2">sxsdk::preference_interface</a>
 </li>
+<li>get_selected_control_color()
+: <a class="el" href="structsxsdk_1_1preference__interface.html#aa2158da1e2edf4bb2dd561727533a8ba">sxsdk::preference_interface</a>
+</li>
 <li>get_selection()
-: <a class="el" href="structsxsdk_1_1switch__effector__interface.html#abe78ef3d3a4955b41ee72756280692e2">sxsdk::switch_effector_interface</a>
-, <a class="el" href="structsxsdk_1_1dialog__item__class.html#a243690fed5aacfc63f5b82fb765ea28f">sxsdk::dialog_item_class</a>
+: <a class="el" href="structsxsdk_1_1dialog__item__class.html#a243690fed5aacfc63f5b82fb765ea28f">sxsdk::dialog_item_class</a>
+, <a class="el" href="structsxsdk_1_1switch__effector__interface.html#abe78ef3d3a4955b41ee72756280692e2">sxsdk::switch_effector_interface</a>
 </li>
 <li>get_selection_default()
 : <a class="el" href="structsxsdk_1_1dialog__item__class.html#ae23b1b41587673f534b7ee73b08612f3">sxsdk::dialog_item_class</a>
@@ -2404,8 +2485,8 @@
 : <a class="el" href="structsxsdk_1_1dialog__interface.html#a902bc04e28e36094bc6524bfdb5d3056">sxsdk::dialog_interface</a>
 </li>
 <li>get_sequence()
-: <a class="el" href="structsxsdk_1_1motion__interface.html#adf29c4c4d9f2f350b748fd2e20b3ba75">sxsdk::motion_interface</a>
-, <a class="el" href="structsxsdk_1_1motion__point__interface.html#a5c6d35bed70efeb1514b4c342b54fdde">sxsdk::motion_point_interface</a>
+: <a class="el" href="structsxsdk_1_1motion__point__interface.html#a5c6d35bed70efeb1514b4c342b54fdde">sxsdk::motion_point_interface</a>
+, <a class="el" href="structsxsdk_1_1motion__interface.html#adf29c4c4d9f2f350b748fd2e20b3ba75">sxsdk::motion_interface</a>
 </li>
 <li>get_sequence_joint_matrix()
 : <a class="el" href="structsxsdk_1_1shape__class.html#a02d6a95c0fccde11cf1e2829f698e977">sxsdk::shape_class</a>
@@ -2414,8 +2495,8 @@
 : <a class="el" href="structsxsdk_1_1shape__class.html#a28a6e67fd2b4f903ffee23f816514c13">sxsdk::shape_class</a>
 </li>
 <li>get_sequence_mode()
-: <a class="el" href="structsxsdk_1_1motion__interface.html#ab20b191a6e8dd705d6bf6b2348c4ffe7">sxsdk::motion_interface</a>
-, <a class="el" href="structsxsdk_1_1scene__interface.html#a46e2169f449109e99fed06a0bcf0ab0a">sxsdk::scene_interface</a>
+: <a class="el" href="structsxsdk_1_1scene__interface.html#a46e2169f449109e99fed06a0bcf0ab0a">sxsdk::scene_interface</a>
+, <a class="el" href="structsxsdk_1_1motion__interface.html#ab20b191a6e8dd705d6bf6b2348c4ffe7">sxsdk::motion_interface</a>
 </li>
 <li>get_sequence_skin_world_matrix()
 : <a class="el" href="structsxsdk_1_1skin__class.html#adcbe3c1f4b673b543781b784f51b228c">sxsdk::skin_class</a>
@@ -2438,13 +2519,31 @@
 <li>get_sequence_world_to_view_matrix()
 : <a class="el" href="structsxsdk_1_1scene__interface.html#ad4c92f310fdfb143d710896a69dcd712">sxsdk::scene_interface</a>
 </li>
+<li>get_server_check()
+: <a class="el" href="structsxsdk_1_1gridmanager__view__interface.html#ae44ef336329fc7e35d292170483756db">sxsdk::gridmanager_view_interface</a>
+</li>
+<li>get_server_ip()
+: <a class="el" href="structsxsdk_1_1gridmanager__view__interface.html#ae1e5614f45db01d2092ab5c37d78c78b">sxsdk::gridmanager_view_interface</a>
+</li>
+<li>get_server_name()
+: <a class="el" href="structsxsdk_1_1gridmanager__view__interface.html#a274d6fc3398a7e17ca8a760fe7708128">sxsdk::gridmanager_view_interface</a>
+</li>
+<li>get_server_os()
+: <a class="el" href="structsxsdk_1_1gridmanager__view__interface.html#a92b3bc6b4a57d342d2543c24fcb53ab5">sxsdk::gridmanager_view_interface</a>
+</li>
+<li>get_server_total()
+: <a class="el" href="structsxsdk_1_1gridmanager__view__interface.html#ac1e7f1aaf5311e4e4a1ce994f2a84dba">sxsdk::gridmanager_view_interface</a>
+</li>
+<li>get_server_version()
+: <a class="el" href="structsxsdk_1_1gridmanager__view__interface.html#ab640d73a7cfa4227d2e25a9b2cd80688">sxsdk::gridmanager_view_interface</a>
+</li>
 <li>get_shade_interface()
 : <a class="el" href="structsxsdk_1_1plugin__exporter__interface.html#acac543b739ae2342d848796d9d602ab8">sxsdk::plugin_exporter_interface</a>
 </li>
 <li>get_shade_version()
-: <a class="el" href="structsxsdk_1_1dialog__interface.html#a9439df47a9ced6c635ae3cd87d3cdeb2">sxsdk::dialog_interface</a>
-, <a class="el" href="structsxsdk_1_1window__interface_1_1control__base__class.html#ada4e56d4dd7444a55d15e639a259d44d">sxsdk::window_interface::control_base_class</a>
+: <a class="el" href="structsxsdk_1_1window__interface_1_1control__base__class.html#ada4e56d4dd7444a55d15e639a259d44d">sxsdk::window_interface::control_base_class</a>
 , <a class="el" href="structsxsdk_1_1plugin__interface.html#abefe5152e5b874796b6067f93cb4bd37">sxsdk::plugin_interface</a>
+, <a class="el" href="structsxsdk_1_1dialog__interface.html#a9439df47a9ced6c635ae3cd87d3cdeb2">sxsdk::dialog_interface</a>
 </li>
 <li>get_shadeexplorer_data_path()
 : <a class="el" href="structsxsdk_1_1shade__interface.html#a2a7acaaac12a808c644501e67a3d04d1">sxsdk::shade_interface</a>
@@ -2471,10 +2570,10 @@
 : <a class="el" href="structsxsdk_1_1texture__interface.html#aa2f7a8001397a3bcea10cee211a0cc6e">sxsdk::texture_interface</a>
 </li>
 <li>get_shadow()
-: <a class="el" href="structsxsdk_1_1line__class.html#aa0e91c55fa301f57bd872e8b080c9911">sxsdk::line_class</a>
-, <a class="el" href="structsxsdk_1_1rendering__light__class.html#a21562f131088014ac11757f47cef1917">sxsdk::rendering_light_class</a>
-, <a class="el" href="structsxsdk_1_1distant__light__item__class.html#a832021069795c788afaacbee857e713d">sxsdk::distant_light_item_class</a>
+: <a class="el" href="structsxsdk_1_1distant__light__item__class.html#a832021069795c788afaacbee857e713d">sxsdk::distant_light_item_class</a>
 , <a class="el" href="structsxsdk_1_1light__class.html#ade2a20964fa0d8a3efe4985df9a76218">sxsdk::light_class</a>
+, <a class="el" href="structsxsdk_1_1rendering__light__class.html#a21562f131088014ac11757f47cef1917">sxsdk::rendering_light_class</a>
+, <a class="el" href="structsxsdk_1_1line__class.html#aa0e91c55fa301f57bd872e8b080c9911">sxsdk::line_class</a>
 </li>
 <li>get_shadow_catcher()
 : <a class="el" href="structsxsdk_1_1shape__class.html#a8de1bdcb5a9462dee49ffd8122d6e0af">sxsdk::shape_class</a>
@@ -2486,29 +2585,29 @@
 : <a class="el" href="structsxsdk_1_1correction__interface.html#ae0fa17d07f0eea4465d70aa0c4d6912b">sxsdk::correction_interface</a>
 </li>
 <li>get_shadow_map_bias()
-: <a class="el" href="structsxsdk_1_1distant__light__item__class.html#a960266ee2486f2793e790d2f3303653a">sxsdk::distant_light_item_class</a>
-, <a class="el" href="structsxsdk_1_1shape__class.html#ae3ea8bcb42c55efd3f567735413095ab">sxsdk::shape_class</a>
+: <a class="el" href="structsxsdk_1_1shape__class.html#ae3ea8bcb42c55efd3f567735413095ab">sxsdk::shape_class</a>
+, <a class="el" href="structsxsdk_1_1distant__light__item__class.html#a960266ee2486f2793e790d2f3303653a">sxsdk::distant_light_item_class</a>
 , <a class="el" href="structsxsdk_1_1rendering__interface.html#ad5b32a37ccf4733eab700db91cd2fa08">sxsdk::rendering_interface</a>
 </li>
 <li>get_shadow_map_blur()
-: <a class="el" href="structsxsdk_1_1rendering__interface.html#a4133fe02fde83ed954d14f11b31de220">sxsdk::rendering_interface</a>
+: <a class="el" href="structsxsdk_1_1distant__light__item__class.html#a55c1fdc639eaabac1d783627ae6c7c42">sxsdk::distant_light_item_class</a>
+, <a class="el" href="structsxsdk_1_1rendering__interface.html#a4133fe02fde83ed954d14f11b31de220">sxsdk::rendering_interface</a>
 , <a class="el" href="structsxsdk_1_1shape__class.html#aa9d6b3b2ef07288ff2c15fdb8e1d6b24">sxsdk::shape_class</a>
-, <a class="el" href="structsxsdk_1_1distant__light__item__class.html#a55c1fdc639eaabac1d783627ae6c7c42">sxsdk::distant_light_item_class</a>
 </li>
 <li>get_shadow_map_sampling()
 : <a class="el" href="structsxsdk_1_1rendering__interface.html#a96ce733eb8efd86025a912e488387739">sxsdk::rendering_interface</a>
 </li>
 <li>get_shadow_map_size()
-: <a class="el" href="structsxsdk_1_1distant__light__item__class.html#af4e1542f9758eca6b5549f1c4a544ba0">sxsdk::distant_light_item_class</a>
+: <a class="el" href="structsxsdk_1_1shape__class.html#a730fb54d909c3ce3b7e71e1396c0a5f9">sxsdk::shape_class</a>
 , <a class="el" href="structsxsdk_1_1rendering__interface.html#a2afc945fdb1f7eb8b2735bea2f21e35b">sxsdk::rendering_interface</a>
-, <a class="el" href="structsxsdk_1_1shape__class.html#a730fb54d909c3ce3b7e71e1396c0a5f9">sxsdk::shape_class</a>
+, <a class="el" href="structsxsdk_1_1distant__light__item__class.html#af4e1542f9758eca6b5549f1c4a544ba0">sxsdk::distant_light_item_class</a>
 </li>
 <li>get_shadow_saturation()
 : <a class="el" href="structsxsdk_1_1correction__interface.html#a34d1dddc075373d66176cb694358e97b">sxsdk::correction_interface</a>
 </li>
 <li>get_shadow_softness()
-: <a class="el" href="structsxsdk_1_1light__class.html#affc2ee41367b21eadf7ddfff236a5c07">sxsdk::light_class</a>
-, <a class="el" href="structsxsdk_1_1rendering__light__class.html#a7eec9982dc1e9f7c587b69b04da37367">sxsdk::rendering_light_class</a>
+: <a class="el" href="structsxsdk_1_1rendering__light__class.html#a7eec9982dc1e9f7c587b69b04da37367">sxsdk::rendering_light_class</a>
+, <a class="el" href="structsxsdk_1_1light__class.html#affc2ee41367b21eadf7ddfff236a5c07">sxsdk::light_class</a>
 </li>
 <li>get_shadow_type()
 : <a class="el" href="structsxsdk_1_1rendering__interface.html#a77fdd5a034e6d34543a2d16c326f8fdf">sxsdk::rendering_interface</a>
@@ -2516,8 +2615,8 @@
 , <a class="el" href="structsxsdk_1_1shape__class.html#a0ec70a2c408fd024fc7abfee7bc385f1">sxsdk::shape_class</a>
 </li>
 <li>get_shape()
-: <a class="el" href="structsxsdk_1_1scene__interface.html#a8ee9b92723d237fcbfb2646c3a3a1b7d">sxsdk::scene_interface</a>
-, <a class="el" href="structsxsdk_1_1skin__bind__class.html#ad97c0d7e0303dafec6b3b8adecdca41d">sxsdk::skin_bind_class</a>
+: <a class="el" href="structsxsdk_1_1skin__bind__class.html#ad97c0d7e0303dafec6b3b8adecdca41d">sxsdk::skin_bind_class</a>
+, <a class="el" href="structsxsdk_1_1scene__interface.html#a8ee9b92723d237fcbfb2646c3a3a1b7d">sxsdk::scene_interface</a>
 , <a class="el" href="structsxsdk_1_1proxy__shape__class.html#a864a687bedd30891dd9f546e47cf397f">sxsdk::proxy_shape_class</a>
 </li>
 <li>get_shape_by_attribute()
@@ -2539,10 +2638,10 @@
 : <a class="el" href="structsxsdk_1_1scene__interface.html#a29f3fdf3b7bb0564ab7a58cfdd9c0420">sxsdk::scene_interface</a>
 </li>
 <li>get_shift()
-: <a class="el" href="structsxsdk_1_1motion__point__interface.html#a4843e08f09b77429a6e9c5f39fe67e32">sxsdk::motion_point_interface</a>
-, <a class="el" href="structsxsdk_1_1camera__interface.html#a60981a5662fbbb2aaf4d4d6ec91cebea">sxsdk::camera_interface</a>
-, <a class="el" href="structsxsdk_1_1camera__class.html#af259b3252aa621c6ed9f789036414307">sxsdk::camera_class</a>
+: <a class="el" href="structsxsdk_1_1camera__interface.html#a60981a5662fbbb2aaf4d4d6ec91cebea">sxsdk::camera_interface</a>
+, <a class="el" href="structsxsdk_1_1motion__point__interface.html#a4843e08f09b77429a6e9c5f39fe67e32">sxsdk::motion_point_interface</a>
 , <a class="el" href="structsxsdk_1_1image__interface.html#af132a44d35eae0e2773c417e38afcf8c">sxsdk::image_interface</a>
+, <a class="el" href="structsxsdk_1_1camera__class.html#af259b3252aa621c6ed9f789036414307">sxsdk::camera_class</a>
 </li>
 <li>get_shooter()
 : <a class="el" href="structsxsdk_1_1radiosity__attributes__interface.html#aded4062f272789d906706d094de52ceb">sxsdk::radiosity_attributes_interface</a>
@@ -2551,8 +2650,8 @@
 : <a class="el" href="structsxsdk_1_1shade__interface.html#aea046d7ac6fc94e081911aa018cea68d">sxsdk::shade_interface</a>
 </li>
 <li>get_shortcut_view_interface()
-: <a class="el" href="structsxsdk_1_1shortcut__window__interface.html#af85bccd0bd00799dcb02b53930b11b4e">sxsdk::shortcut_window_interface</a>
-, <a class="el" href="structsxsdk_1_1shade__interface.html#a868f6c59057a183bf7e824331235b6a0">sxsdk::shade_interface</a>
+: <a class="el" href="structsxsdk_1_1shade__interface.html#a868f6c59057a183bf7e824331235b6a0">sxsdk::shade_interface</a>
+, <a class="el" href="structsxsdk_1_1shortcut__window__interface.html#af85bccd0bd00799dcb02b53930b11b4e">sxsdk::shortcut_window_interface</a>
 </li>
 <li>get_shortcut_window_interface()
 : <a class="el" href="structsxsdk_1_1shade__interface.html#a7195763ce6039b6aafe7e473a635fd05">sxsdk::shade_interface</a>
@@ -2564,8 +2663,8 @@
 : <a class="el" href="structsxsdk_1_1preference__interface.html#abe8966d330939511c752a7e7fce5cee0">sxsdk::preference_interface</a>
 </li>
 <li>get_show_background()
-: <a class="el" href="structsxsdk_1_1rendering__interface.html#a23883a458c7c6ba0cfa98b7b7a1eca03">sxsdk::rendering_interface</a>
-, <a class="el" href="structsxsdk_1_1display__interface.html#a3054c205051db56dccc6d7656e51607d">sxsdk::display_interface</a>
+: <a class="el" href="structsxsdk_1_1display__interface.html#a3054c205051db56dccc6d7656e51607d">sxsdk::display_interface</a>
+, <a class="el" href="structsxsdk_1_1rendering__interface.html#a23883a458c7c6ba0cfa98b7b7a1eca03">sxsdk::rendering_interface</a>
 </li>
 <li>get_show_bbox()
 : <a class="el" href="structsxsdk_1_1display__interface.html#a90440747672caf85c6f0ac9b1f055ad5">sxsdk::display_interface</a>
@@ -2611,21 +2710,21 @@
 , <a class="el" href="structsxsdk_1_1proxy__shape__class.html#a65a24fdca13dd6ea55d4f2105082000d">sxsdk::proxy_shape_class</a>
 </li>
 <li>get_size()
-: <a class="el" href="structsxsdk_1_1motion__interface.html#a4410f8322432da56e23616bbf67b7622">sxsdk::motion_interface</a>
+: <a class="el" href="structsxsdk_1_1image__interface.html#ae368cc5eace184c76d9c363d52c99383">sxsdk::image_interface</a>
+, <a class="el" href="structsxsdk_1_1window__interface_1_1control__base__class.html#ac33ce69a3b341c4760647040cbc52ea2">sxsdk::window_interface::control_base_class</a>
+, <a class="el" href="structsxsdk_1_1distant__light__item__class.html#ae2253ebc6e521796b07fdbae09c39b60">sxsdk::distant_light_item_class</a>
+, <a class="el" href="structsxsdk_1_1motion__interface.html#a4410f8322432da56e23616bbf67b7622">sxsdk::motion_interface</a>
 , <a class="el" href="structsxsdk_1_1ball__joint__interface.html#ae3ee0bfcfafcc0567509aa3c8c66b149">sxsdk::ball_joint_interface</a>
 , <a class="el" href="structsxsdk_1_1stream__interface.html#a9b65991886bfd895bd72869db7df4280">sxsdk::stream_interface</a>
-, <a class="el" href="structsxsdk_1_1window__interface_1_1control__base__class.html#ac33ce69a3b341c4760647040cbc52ea2">sxsdk::window_interface::control_base_class</a>
-, <a class="el" href="structsxsdk_1_1image__interface.html#ae368cc5eace184c76d9c363d52c99383">sxsdk::image_interface</a>
-, <a class="el" href="structsxsdk_1_1distant__light__item__class.html#ae2253ebc6e521796b07fdbae09c39b60">sxsdk::distant_light_item_class</a>
 </li>
 <li>get_skin()
-: <a class="el" href="structsxsdk_1_1control__point__class.html#a15318711b61a6834947ffd7765eee686">sxsdk::control_point_class</a>
-, <a class="el" href="structsxsdk_1_1shape__class.html#a94a8c1504bf7a0361c6e14ace129b147">sxsdk::shape_class</a>
+: <a class="el" href="structsxsdk_1_1shape__class.html#a94a8c1504bf7a0361c6e14ace129b147">sxsdk::shape_class</a>
+, <a class="el" href="structsxsdk_1_1control__point__class.html#a15318711b61a6834947ffd7765eee686">sxsdk::control_point_class</a>
 , <a class="el" href="structsxsdk_1_1vertex__class.html#a198772f427c9b81e38475e5cd01bf5a9">sxsdk::vertex_class</a>
 </li>
 <li>get_skin_view_interface()
-: <a class="el" href="structsxsdk_1_1skin__window__interface.html#aa138a1d0bd22cc872e81d2b3ada4acc1">sxsdk::skin_window_interface</a>
-, <a class="el" href="structsxsdk_1_1shade__interface.html#aedbe71ebd6a3ba940e3c6451aba126e3">sxsdk::shade_interface</a>
+: <a class="el" href="structsxsdk_1_1shade__interface.html#aedbe71ebd6a3ba940e3c6451aba126e3">sxsdk::shade_interface</a>
+, <a class="el" href="structsxsdk_1_1skin__window__interface.html#aa138a1d0bd22cc872e81d2b3ada4acc1">sxsdk::skin_window_interface</a>
 </li>
 <li>get_skin_window_interface()
 : <a class="el" href="structsxsdk_1_1shade__interface.html#a6b076e71ea007c061bab1a81bc2b5de5">sxsdk::shade_interface</a>
@@ -2691,12 +2790,12 @@
 : <a class="el" href="structsxsdk_1_1surface__class.html#ae0bf2b17b4bc921e7f2fbfa2e7c54af0">sxsdk::surface_class</a>
 </li>
 <li>get_softness()
-: <a class="el" href="structsxsdk_1_1rendering__light__class.html#acfdaac7a76b325eac07067a64384446d">sxsdk::rendering_light_class</a>
-, <a class="el" href="structsxsdk_1_1shader__interface.html#a0417522a5eae240f749b9db789addb82">sxsdk::shader_interface</a>
+: <a class="el" href="structsxsdk_1_1mapping__layer__class.html#a9e05de2c91d9cc2efd7e15cbc6e2f48e">sxsdk::mapping_layer_class</a>
 , <a class="el" href="structsxsdk_1_1light__class.html#a784766cb5d969b17a09ebaab78da1267">sxsdk::light_class</a>
-, <a class="el" href="structsxsdk_1_1mapping__layer__class.html#a9e05de2c91d9cc2efd7e15cbc6e2f48e">sxsdk::mapping_layer_class</a>
-, <a class="el" href="structsxsdk_1_1distant__light__item__class.html#a9b31a10a38962455f41c9cbbef8a80ef">sxsdk::distant_light_item_class</a>
+, <a class="el" href="structsxsdk_1_1rendering__light__class.html#acfdaac7a76b325eac07067a64384446d">sxsdk::rendering_light_class</a>
+, <a class="el" href="structsxsdk_1_1shader__interface.html#a0417522a5eae240f749b9db789addb82">sxsdk::shader_interface</a>
 , <a class="el" href="structsxsdk_1_1shader__node__class.html#a34e8f448c45272eb75bb03ba767f3688">sxsdk::shader_node_class</a>
+, <a class="el" href="structsxsdk_1_1distant__light__item__class.html#a9b31a10a38962455f41c9cbbef8a80ef">sxsdk::distant_light_item_class</a>
 </li>
 <li>get_solution_convergence()
 : <a class="el" href="structsxsdk_1_1radiosity__interface.html#a0ac6c4551ce26cf71b4eae51c4d54040">sxsdk::radiosity_interface</a>
@@ -2732,8 +2831,8 @@
 : <a class="el" href="structsxsdk_1_1preference__interface.html#a62ece79e2afc60fdf83e97210faca9cd">sxsdk::preference_interface</a>
 </li>
 <li>get_sound3d()
-: <a class="el" href="structsxsdk_1_1sound__track__interface.html#a67681292ce88c388fbba8bd37d656157">sxsdk::sound_track_interface</a>
-, <a class="el" href="structsxsdk_1_1animation__settings__interface.html#ae8854de3604d518f82d8ee7895d5ff5e">sxsdk::animation_settings_interface</a>
+: <a class="el" href="structsxsdk_1_1animation__settings__interface.html#ae8854de3604d518f82d8ee7895d5ff5e">sxsdk::animation_settings_interface</a>
+, <a class="el" href="structsxsdk_1_1sound__track__interface.html#a67681292ce88c388fbba8bd37d656157">sxsdk::sound_track_interface</a>
 </li>
 <li>get_sound_track_interface()
 : <a class="el" href="structsxsdk_1_1shape__class.html#a51ea376dce1d3d20300e78ba76747934">sxsdk::shape_class</a>
@@ -2745,9 +2844,9 @@
 : <a class="el" href="structsxsdk_1_1shade__interface.html#a33e927156dacfd4c3c110ef1489945b7">sxsdk::shade_interface</a>
 </li>
 <li>get_specular()
-: <a class="el" href="structsxsdk_1_1rendering__light__class.html#a50e59f8d34c9c1f9682923529ddb8095">sxsdk::rendering_light_class</a>
+: <a class="el" href="structsxsdk_1_1light__class.html#ae569c89c3a79ecc897295de6bdc18e1b">sxsdk::light_class</a>
+, <a class="el" href="structsxsdk_1_1rendering__light__class.html#a50e59f8d34c9c1f9682923529ddb8095">sxsdk::rendering_light_class</a>
 , <a class="el" href="structsxsdk_1_1line__class.html#ab36ffa4064c57cff19465fd71fa7a86a">sxsdk::line_class</a>
-, <a class="el" href="structsxsdk_1_1light__class.html#ae569c89c3a79ecc897295de6bdc18e1b">sxsdk::light_class</a>
 , <a class="el" href="structsxsdk_1_1distant__light__item__class.html#af86315f4cd8e949aea0d9b5e5bde62b8">sxsdk::distant_light_item_class</a>
 </li>
 <li>get_specular1()
@@ -2802,19 +2901,25 @@
 <li>get_step_frames()
 : <a class="el" href="structsxsdk_1_1scene__interface.html#a90356cd1e88754f7a16509c67907f3ec">sxsdk::scene_interface</a>
 </li>
+<li>get_step_frames_float()
+: <a class="el" href="structsxsdk_1_1scene__interface.html#afc27a3aa638db5fffdb76fe581d8b156">sxsdk::scene_interface</a>
+</li>
 <li>get_step_rounding_type()
 : <a class="el" href="structsxsdk_1_1path__replicator__interface.html#a6a98b0bcc29b48ddf8b39f449f883dc0">sxsdk::path_replicator_interface</a>
+</li>
+<li>get_stereo_type()
+: <a class="el" href="structsxsdk_1_1display__interface.html#ab4f5a11d7d7e9f7f1a44cf18d8d81d84">sxsdk::display_interface</a>
 </li>
 <li>get_sticky_mouse()
 : <a class="el" href="structsxsdk_1_1preference__interface.html#a6c565e6fe3cf8a9dd4a9caed465dcb04">sxsdk::preference_interface</a>
 </li>
 <li>get_stream_interface()
-: <a class="el" href="structsxsdk_1_1shader__interface.html#a1d81335c4f0efa5905591875d9a39c24">sxsdk::shader_interface</a>
-, <a class="el" href="structsxsdk_1_1plugin__exporter__interface.html#af5fea325af10e34b6681f93d12066e6a">sxsdk::plugin_exporter_interface</a>
+: <a class="el" href="structsxsdk_1_1plugin__exporter__interface.html#af5fea325af10e34b6681f93d12066e6a">sxsdk::plugin_exporter_interface</a>
+, <a class="el" href="structsxsdk_1_1shader__interface.html#a1d81335c4f0efa5905591875d9a39c24">sxsdk::shader_interface</a>
 </li>
 <li>get_string()
-: <a class="el" href="classsxsdk_1_1expression__interface.html#a0822ea8aa345537b4a3cdc7c2ece88f8">sxsdk::expression_interface</a>
-, <a class="el" href="structsxsdk_1_1strings__interface.html#a129b9cb5c464bfd28f68e370508f2cf3">sxsdk::strings_interface</a>
+: <a class="el" href="structsxsdk_1_1strings__interface.html#a129b9cb5c464bfd28f68e370508f2cf3">sxsdk::strings_interface</a>
+, <a class="el" href="classsxsdk_1_1expression__interface.html#a0822ea8aa345537b4a3cdc7c2ece88f8">sxsdk::expression_interface</a>
 , <a class="el" href="structsxsdk_1_1dialog__item__class.html#a69f73f8b070f0708cead1ca15d0d78b0">sxsdk::dialog_item_class</a>
 </li>
 <li>get_string_default()
@@ -2824,8 +2929,8 @@
 : <a class="el" href="structsxsdk_1_1dialog__interface.html#a0cb9d6428c8541abcbfc22a6e0b07532">sxsdk::dialog_interface</a>
 </li>
 <li>get_string_height()
-: <a class="el" href="structsxsdk_1_1graphic__context__interface.html#aabe33e0c1efb6549a29ef5dff44e2e02">sxsdk::graphic_context_interface</a>
-, <a class="el" href="structsxsdk_1_1window__interface.html#a729c39718ee3c8a1bc58bd6473ea2e05">sxsdk::window_interface</a>
+: <a class="el" href="structsxsdk_1_1window__interface.html#a729c39718ee3c8a1bc58bd6473ea2e05">sxsdk::window_interface</a>
+, <a class="el" href="structsxsdk_1_1graphic__context__interface.html#aabe33e0c1efb6549a29ef5dff44e2e02">sxsdk::graphic_context_interface</a>
 </li>
 <li>get_string_property_value()
 : <a class="el" href="structsxsdk_1_1dialog__interface.html#a3a9563fefe80fd2f093c1cd58b8cd700">sxsdk::dialog_interface</a>
@@ -2849,8 +2954,8 @@
 : <a class="el" href="structsxsdk_1_1face__class.html#ab3a7bf0fb22682e979b210993723252c">sxsdk::face_class</a>
 </li>
 <li>get_subdivision_level()
-: <a class="el" href="structsxsdk_1_1plugin__exporter__interface.html#a87a4d1ba5bcaa4a98d09e8ea85c818c6">sxsdk::plugin_exporter_interface</a>
-, <a class="el" href="structsxsdk_1_1exporter__settings__interface.html#a4ce474a8c65b8bf06a53711981c63e16">sxsdk::exporter_settings_interface</a>
+: <a class="el" href="structsxsdk_1_1exporter__settings__interface.html#a4ce474a8c65b8bf06a53711981c63e16">sxsdk::exporter_settings_interface</a>
+, <a class="el" href="structsxsdk_1_1plugin__exporter__interface.html#a87a4d1ba5bcaa4a98d09e8ea85c818c6">sxsdk::plugin_exporter_interface</a>
 , <a class="el" href="structsxsdk_1_1loader__info__interface.html#adfa11015e4124a52b85744bd4027de48">sxsdk::loader_info_interface</a>
 </li>
 <li>get_supress_image_window()
@@ -2884,9 +2989,9 @@
 : <a class="el" href="structsxsdk_1_1part__class.html#a9f51dd6474313de013311942a77ae6c7">sxsdk::part_class</a>
 </li>
 <li>get_surface_view_interface()
-: <a class="el" href="structsxsdk_1_1shade__interface.html#a5f7f64f3383840ec87af1b6fe905de80">sxsdk::shade_interface</a>
+: <a class="el" href="structsxsdk_1_1surface__window__interface.html#a94f6619a54637e5c2b3985e9e0c12a05">sxsdk::surface_window_interface</a>
 , <a class="el" href="structsxsdk_1_1aggregate__view__interface.html#ac5e1c0aa0b3657e278f6ea6012f22410">sxsdk::aggregate_view_interface</a>
-, <a class="el" href="structsxsdk_1_1surface__window__interface.html#a94f6619a54637e5c2b3985e9e0c12a05">sxsdk::surface_window_interface</a>
+, <a class="el" href="structsxsdk_1_1shade__interface.html#a5f7f64f3383840ec87af1b6fe905de80">sxsdk::shade_interface</a>
 </li>
 <li>get_surface_window_interface()
 : <a class="el" href="structsxsdk_1_1shade__interface.html#a28fc427e41f5d0d2ec84c02f31c1aea6">sxsdk::shade_interface</a>
@@ -2896,8 +3001,8 @@
 </li>
 <li>get_swap_axes()
 : <a class="el" href="structsxsdk_1_1mapping__layer__class.html#a21ab38b08037a7dcee221af6a18bf44c">sxsdk::mapping_layer_class</a>
-, <a class="el" href="structsxsdk_1_1background__layer__class.html#a7c8c442af93ca612749dcdd656db4df9">sxsdk::background_layer_class</a>
 , <a class="el" href="structsxsdk_1_1shader__node__class.html#acdedc23ff3a55d288f538e6aa670c258">sxsdk::shader_node_class</a>
+, <a class="el" href="structsxsdk_1_1background__layer__class.html#a7c8c442af93ca612749dcdd656db4df9">sxsdk::background_layer_class</a>
 </li>
 <li>get_swap_endian()
 : <a class="el" href="structsxsdk_1_1stream__interface.html#ae2a3825155fcdf9c0438914d57ffee0f">sxsdk::stream_interface</a>
@@ -2927,9 +3032,9 @@
 : <a class="el" href="structsxsdk_1_1shape__class.html#ad7d223f378bca53e76e8fcbe848fa707">sxsdk::shape_class</a>
 </li>
 <li>get_target()
-: <a class="el" href="structsxsdk_1_1camera__class.html#a276e4843aa37812f3093ed32725ca0c9">sxsdk::camera_class</a>
-, <a class="el" href="structsxsdk_1_1rendering__context__interface.html#a4850fa55227c222fb10c6ed43c6bf102">sxsdk::rendering_context_interface</a>
+: <a class="el" href="structsxsdk_1_1rendering__context__interface.html#a4850fa55227c222fb10c6ed43c6bf102">sxsdk::rendering_context_interface</a>
 , <a class="el" href="structsxsdk_1_1background__layer__class.html#ad1bc82a7de7e71c4c73933e82f81deb9">sxsdk::background_layer_class</a>
+, <a class="el" href="structsxsdk_1_1camera__class.html#a276e4843aa37812f3093ed32725ca0c9">sxsdk::camera_class</a>
 , <a class="el" href="structsxsdk_1_1camera__interface.html#a66c5ebe8fe07f89ef4a5375d4b6cb403">sxsdk::camera_interface</a>
 </li>
 <li>get_target_number_of_photons()
@@ -2984,9 +3089,9 @@
 : <a class="el" href="structsxsdk_1_1animation__settings__interface.html#a9056a61e87fee468154a8fcfa3d8c5d8">sxsdk::animation_settings_interface</a>
 </li>
 <li>get_title()
-: <a class="el" href="structsxsdk_1_1window__interface.html#a27090e51eee923213c266c5259bae4fd">sxsdk::window_interface</a>
+: <a class="el" href="structsxsdk_1_1window__interface_1_1control__base__class.html#a473b154017e62b0232a912de3b87fbe9">sxsdk::window_interface::control_base_class</a>
+, <a class="el" href="structsxsdk_1_1window__interface.html#a27090e51eee923213c266c5259bae4fd">sxsdk::window_interface</a>
 , <a class="el" href="structsxsdk_1_1dialog__interface.html#a3d91a244d67bdc603a53ca24711e2f78">sxsdk::dialog_interface</a>
-, <a class="el" href="structsxsdk_1_1window__interface_1_1control__base__class.html#a473b154017e62b0232a912de3b87fbe9">sxsdk::window_interface::control_base_class</a>
 </li>
 <li>get_title_width()
 : <a class="el" href="structsxsdk_1_1window__interface_1_1control__base__class.html#ae0a8420b79d62bad5b6e8942265930e5">sxsdk::window_interface::control_base_class</a>
@@ -3000,6 +3105,9 @@
 </li>
 <li>get_tool_box_window_shown()
 : <a class="el" href="structsxsdk_1_1shade__interface.html#a32dba1baece7a500c3f4770b2831e17c">sxsdk::shade_interface</a>
+</li>
+<li>get_tool_header_color()
+: <a class="el" href="structsxsdk_1_1preference__interface.html#a9ce8d605c6a2600457ab3401d940e3e8">sxsdk::preference_interface</a>
 </li>
 <li>get_total_blocks()
 : <a class="el" href="structsxsdk_1_1rendering__context__interface.html#a7ffe0eb79ad1fc841750738003b45757">sxsdk::rendering_context_interface</a>
@@ -3021,11 +3129,11 @@
 : <a class="el" href="structsxsdk_1_1animation__settings__interface.html#a8a57ffb03098f6abf1ceec9666b5c58e">sxsdk::animation_settings_interface</a>
 </li>
 <li>get_transformation()
-: <a class="el" href="structsxsdk_1_1loader__info__interface.html#aae16e073ac89d6029f55a32530f5ffb3">sxsdk::loader_info_interface</a>
-, <a class="el" href="structsxsdk_1_1plugin__exporter__interface.html#af456762d402b05d8111e8470128f0563">sxsdk::plugin_exporter_interface</a>
-, <a class="el" href="structsxsdk_1_1shape__class.html#a735bfaceb1406c4d00d9972d97184a9b">sxsdk::shape_class</a>
-, <a class="el" href="structsxsdk_1_1shader__node__class.html#a8096a36ca8b9aac6503df6e775f1fa00">sxsdk::shader_node_class</a>
+: <a class="el" href="structsxsdk_1_1plugin__exporter__interface.html#af456762d402b05d8111e8470128f0563">sxsdk::plugin_exporter_interface</a>
 , <a class="el" href="structsxsdk_1_1mapping__layer__class.html#a2a67b84f96388defed8824ff9de41111">sxsdk::mapping_layer_class</a>
+, <a class="el" href="structsxsdk_1_1loader__info__interface.html#aae16e073ac89d6029f55a32530f5ffb3">sxsdk::loader_info_interface</a>
+, <a class="el" href="structsxsdk_1_1shader__node__class.html#a8096a36ca8b9aac6503df6e775f1fa00">sxsdk::shader_node_class</a>
+, <a class="el" href="structsxsdk_1_1shape__class.html#a735bfaceb1406c4d00d9972d97184a9b">sxsdk::shape_class</a>
 </li>
 <li>get_transformation_matrix()
 : <a class="el" href="structsxsdk_1_1part__class.html#a8aba7566e3a84c2c44c8784c83560c74">sxsdk::part_class</a>
@@ -3049,14 +3157,14 @@
 , <a class="el" href="structsxsdk_1_1shader__node__class.html#a89ec84f4478cab264a87e3a964e2ce4f">sxsdk::shader_node_class</a>
 </li>
 <li>get_type()
-: <a class="el" href="structsxsdk_1_1mapping__layer__class.html#aa8ba463d7cc47e0d2346e4ef0ed40a9b">sxsdk::mapping_layer_class</a>
-, <a class="el" href="structsxsdk_1_1shape__class.html#ae2c3e3c08b3bf23288e516b2686fd6e9">sxsdk::shape_class</a>
-, <a class="el" href="structsxsdk_1_1shader__node__class.html#a36b347ec170c8aa1f462c4452b345624">sxsdk::shader_node_class</a>
+: <a class="el" href="structsxsdk_1_1shader__node__class.html#a36b347ec170c8aa1f462c4452b345624">sxsdk::shader_node_class</a>
 , <a class="el" href="classsxsdk_1_1expression__interface.html#a87a877f49b2f210858b23a47f3b96f76">sxsdk::expression_interface</a>
+, <a class="el" href="structsxsdk_1_1shape__class.html#ae2c3e3c08b3bf23288e516b2686fd6e9">sxsdk::shape_class</a>
+, <a class="el" href="structsxsdk_1_1mapping__layer__class.html#aa8ba463d7cc47e0d2346e4ef0ed40a9b">sxsdk::mapping_layer_class</a>
 </li>
 <li>get_types()
-: <a class="el" href="structsxsdk_1_1shader__node__class.html#a829364ef617f9fd090f9030577d3739c">sxsdk::shader_node_class</a>
-, <a class="el" href="structsxsdk_1_1mapping__layer__class.html#aae1c812cc308422b5bbf86fd9a700a09">sxsdk::mapping_layer_class</a>
+: <a class="el" href="structsxsdk_1_1mapping__layer__class.html#aae1c812cc308422b5bbf86fd9a700a09">sxsdk::mapping_layer_class</a>
+, <a class="el" href="structsxsdk_1_1shader__node__class.html#a829364ef617f9fd090f9030577d3739c">sxsdk::shader_node_class</a>
 </li>
 <li>get_u()
 : <a class="el" href="structsxsdk_1_1shader__interface.html#a9aa8f47eb8732182f82ae62a19d808f8">sxsdk::shader_interface</a>
@@ -3092,9 +3200,9 @@
 : <a class="el" href="structsxsdk_1_1rendering__interface.html#a233fd99f7922fd0cbcba14661f52a8b6">sxsdk::rendering_interface</a>
 </li>
 <li>get_uuid()
-: <a class="el" href="structsxsdk_1_1shape__class.html#a77462f0c8c8e1a07d0559da2210f7ba6">sxsdk::shape_class</a>
-, <a class="el" href="structsxsdk_1_1exporter__settings__interface.html#a97d9c0d94dfb82da09690466a73c13fe">sxsdk::exporter_settings_interface</a>
+: <a class="el" href="structsxsdk_1_1exporter__settings__interface.html#a97d9c0d94dfb82da09690466a73c13fe">sxsdk::exporter_settings_interface</a>
 , <a class="el" href="structsxsdk_1_1plugin__interface.html#aad63e0cd7531162310962893a9767e84">sxsdk::plugin_interface</a>
+, <a class="el" href="structsxsdk_1_1shape__class.html#a77462f0c8c8e1a07d0559da2210f7ba6">sxsdk::shape_class</a>
 </li>
 <li>get_uv()
 : <a class="el" href="structsxsdk_1_1texture__interface.html#a63d7f78f9117b2d40e5b2911ff7da8db">sxsdk::texture_interface</a>
@@ -3132,29 +3240,29 @@
 : <a class="el" href="structsxsdk_1_1edge__class.html#aec6eb954ba6a1323492ba62971d7feac">sxsdk::edge_class</a>
 </li>
 <li>get_value()
-: <a class="el" href="structsxsdk_1_1custom__joint__interface.html#a6b581a169b4a91fadf644370cda31c5a">sxsdk::custom_joint_interface</a>
-, <a class="el" href="structsxsdk_1_1window__interface_1_1color__box__class.html#a97ce1c3769525f175a43df8108ca6960">sxsdk::window_interface::color_box_class</a>
-, <a class="el" href="structsxsdk_1_1window__interface_1_1popup__menu__class.html#ae1b1cfab0baf9f0a3bd7886055ac5c8b">sxsdk::window_interface::popup_menu_class</a>
-, <a class="el" href="structsxsdk_1_1window__interface_1_1slider__class.html#aba8382820ad91ff5ace087f50a37dadd">sxsdk::window_interface::slider_class</a>
-, <a class="el" href="structsxsdk_1_1window__interface_1_1image__box__class.html#a8483b298cb1e68ffd377729ca2faf041">sxsdk::window_interface::image_box_class</a>
-, <a class="el" href="structsxsdk_1_1window__interface_1_1tab__class.html#a958ccfd2b2b76bb8f793b3ab8dcf654b">sxsdk::window_interface::tab_class</a>
-, <a class="el" href="structsxsdk_1_1window__interface_1_1scale__control__class.html#a55b2eb2f11a34308d73fc89b188368b9">sxsdk::window_interface::scale_control_class</a>
-, <a class="el" href="structsxsdk_1_1window__interface_1_1quaternion__control__class.html#a66f4835adadf6f5fe1b65a7e48a176cf">sxsdk::window_interface::quaternion_control_class</a>
-, <a class="el" href="structsxsdk_1_1window__interface_1_1matrix__control__class.html#a5f82f9395d28c7e8b21566030141ffb5">sxsdk::window_interface::matrix_control_class</a>
-, <a class="el" href="structsxsdk_1_1window__interface_1_1number__class.html#acad5cca9edf8de218a6ebda278af2367">sxsdk::window_interface::number_class</a>
-, <a class="el" href="structsxsdk_1_1window__interface_1_1vec4__control__class.html#ae402cb2c22b2ae59299c170f52c04ffa">sxsdk::window_interface::vec4_control_class</a>
-, <a class="el" href="structsxsdk_1_1window__interface_1_1color__disk__class.html#a2704e5b2205e0770b5b34c1bfba48932">sxsdk::window_interface::color_disk_class</a>
-, <a class="el" href="structsxsdk_1_1window__interface_1_1radio__button__class.html#a9b2be94779e81da916399ac338db5e38">sxsdk::window_interface::radio_button_class</a>
-, <a class="el" href="structsxsdk_1_1light__effector__interface.html#a381152dc66d09894ef4a6029e5d40fc8">sxsdk::light_effector_interface</a>
-, <a class="el" href="structsxsdk_1_1sound__track__interface.html#a98bf0c0069c7bc595a3acf98cae57401">sxsdk::sound_track_interface</a>
-, <a class="el" href="structsxsdk_1_1dialog__interface.html#a35f481abd2c22c8ab5bd26ff35db1b2c">sxsdk::dialog_interface</a>
+: <a class="el" href="structsxsdk_1_1window__interface_1_1disclosure__button__class.html#aacbe6496f0c9bf37f1ed9fc9226371c0">sxsdk::window_interface::disclosure_button_class</a>
 , <a class="el" href="structsxsdk_1_1window__interface_1_1checkbox__class.html#a3073af46e73fb48a9a1e455e44efe368">sxsdk::window_interface::checkbox_class</a>
-, <a class="el" href="structsxsdk_1_1window__interface_1_1push__button__class.html#a06b9c2ee2ff195276c74ee11ec785a3f">sxsdk::window_interface::push_button_class</a>
-, <a class="el" href="structsxsdk_1_1window__interface_1_1vec3__control__class.html#a17c7e84a15377bc469f6df1b3b0ea8c7">sxsdk::window_interface::vec3_control_class</a>
+, <a class="el" href="structsxsdk_1_1window__interface_1_1color__box__class.html#a97ce1c3769525f175a43df8108ca6960">sxsdk::window_interface::color_box_class</a>
 , <a class="el" href="structsxsdk_1_1motion__point__interface.html#a4d92f1c7ab0e27abe7677d016e7d22e7">sxsdk::motion_point_interface</a>
-, <a class="el" href="structsxsdk_1_1window__interface_1_1disclosure__button__class.html#aacbe6496f0c9bf37f1ed9fc9226371c0">sxsdk::window_interface::disclosure_button_class</a>
-, <a class="el" href="structsxsdk_1_1window__interface_1_1editable__text__class.html#ab996d8946de75595fe689de99b6649a3">sxsdk::window_interface::editable_text_class</a>
+, <a class="el" href="structsxsdk_1_1window__interface_1_1number__class.html#acad5cca9edf8de218a6ebda278af2367">sxsdk::window_interface::number_class</a>
+, <a class="el" href="structsxsdk_1_1window__interface_1_1image__box__class.html#a8483b298cb1e68ffd377729ca2faf041">sxsdk::window_interface::image_box_class</a>
+, <a class="el" href="structsxsdk_1_1sound__track__interface.html#a98bf0c0069c7bc595a3acf98cae57401">sxsdk::sound_track_interface</a>
+, <a class="el" href="structsxsdk_1_1window__interface_1_1vec4__control__class.html#ae402cb2c22b2ae59299c170f52c04ffa">sxsdk::window_interface::vec4_control_class</a>
+, <a class="el" href="structsxsdk_1_1window__interface_1_1quaternion__control__class.html#a66f4835adadf6f5fe1b65a7e48a176cf">sxsdk::window_interface::quaternion_control_class</a>
+, <a class="el" href="structsxsdk_1_1window__interface_1_1color__disk__class.html#a2704e5b2205e0770b5b34c1bfba48932">sxsdk::window_interface::color_disk_class</a>
+, <a class="el" href="structsxsdk_1_1window__interface_1_1popup__menu__class.html#ae1b1cfab0baf9f0a3bd7886055ac5c8b">sxsdk::window_interface::popup_menu_class</a>
 , <a class="el" href="structsxsdk_1_1window__interface_1_1vec2__control__class.html#aaad26aebc2dbb3896d66d570d96b6011">sxsdk::window_interface::vec2_control_class</a>
+, <a class="el" href="structsxsdk_1_1window__interface_1_1scale__control__class.html#a55b2eb2f11a34308d73fc89b188368b9">sxsdk::window_interface::scale_control_class</a>
+, <a class="el" href="structsxsdk_1_1window__interface_1_1radio__button__class.html#a9b2be94779e81da916399ac338db5e38">sxsdk::window_interface::radio_button_class</a>
+, <a class="el" href="structsxsdk_1_1window__interface_1_1editable__text__class.html#ab996d8946de75595fe689de99b6649a3">sxsdk::window_interface::editable_text_class</a>
+, <a class="el" href="structsxsdk_1_1window__interface_1_1slider__class.html#aba8382820ad91ff5ace087f50a37dadd">sxsdk::window_interface::slider_class</a>
+, <a class="el" href="structsxsdk_1_1custom__joint__interface.html#a6b581a169b4a91fadf644370cda31c5a">sxsdk::custom_joint_interface</a>
+, <a class="el" href="structsxsdk_1_1window__interface_1_1vec3__control__class.html#a17c7e84a15377bc469f6df1b3b0ea8c7">sxsdk::window_interface::vec3_control_class</a>
+, <a class="el" href="structsxsdk_1_1dialog__interface.html#a35f481abd2c22c8ab5bd26ff35db1b2c">sxsdk::dialog_interface</a>
+, <a class="el" href="structsxsdk_1_1window__interface_1_1tab__class.html#a958ccfd2b2b76bb8f793b3ab8dcf654b">sxsdk::window_interface::tab_class</a>
+, <a class="el" href="structsxsdk_1_1light__effector__interface.html#a381152dc66d09894ef4a6029e5d40fc8">sxsdk::light_effector_interface</a>
+, <a class="el" href="structsxsdk_1_1window__interface_1_1matrix__control__class.html#a5f82f9395d28c7e8b21566030141ffb5">sxsdk::window_interface::matrix_control_class</a>
+, <a class="el" href="structsxsdk_1_1window__interface_1_1push__button__class.html#a06b9c2ee2ff195276c74ee11ec785a3f">sxsdk::window_interface::push_button_class</a>
 </li>
 <li>get_variable()
 : <a class="el" href="classsxsdk_1_1expression__interface.html#afcd174aa7e0c632514645dbefd8fff38">sxsdk::expression_interface</a>
@@ -3216,37 +3324,42 @@
 : <a class="el" href="structsxsdk_1_1rendering__light__class.html#a2e5765bb50887de19dc30cf0eb651ece">sxsdk::rendering_light_class</a>
 </li>
 <li>get_volume_density()
-: <a class="el" href="structsxsdk_1_1surface__class.html#a02c9b512634da02c99a05e0740c0cf7c">sxsdk::surface_class</a>
-, <a class="el" href="structsxsdk_1_1surface__interface.html#a0415413881136fb371e0d261fecc12b1">sxsdk::surface_interface</a>
+: <a class="el" href="structsxsdk_1_1surface__interface.html#a0415413881136fb371e0d261fecc12b1">sxsdk::surface_interface</a>
+</li>
+<li>get_volume_distance_decay()
+: <a class="el" href="structsxsdk_1_1sphere__class.html#a389f8a3f8bde01424eddf20b8348a635">sxsdk::sphere_class</a>
 </li>
 <li>get_volume_light()
-: <a class="el" href="structsxsdk_1_1line__class.html#ad940c10ebf0b32f3a868cd2f937d76e6">sxsdk::line_class</a>
-, <a class="el" href="structsxsdk_1_1light__class.html#a7c8ac70cb4cdcc128495579cac950f43">sxsdk::light_class</a>
+: <a class="el" href="structsxsdk_1_1light__class.html#a7c8ac70cb4cdcc128495579cac950f43">sxsdk::light_class</a>
+, <a class="el" href="structsxsdk_1_1line__class.html#ad940c10ebf0b32f3a868cd2f937d76e6">sxsdk::line_class</a>
 </li>
 <li>get_volume_light_auto_radius()
 : <a class="el" href="structsxsdk_1_1line__class.html#a5db2f1368549bd2369b4077eeaafbd91">sxsdk::line_class</a>
 , <a class="el" href="structsxsdk_1_1light__class.html#af066706d959c3e0351f4f724be60239f">sxsdk::light_class</a>
 </li>
 <li>get_volume_light_castshadow_type()
-: <a class="el" href="structsxsdk_1_1light__class.html#acfc6be6ca66323104d24922d0c24cccf">sxsdk::light_class</a>
-, <a class="el" href="structsxsdk_1_1line__class.html#a2462f0a5e1b62cb0fc073c5fa69343e1">sxsdk::line_class</a>
+: <a class="el" href="structsxsdk_1_1line__class.html#a2462f0a5e1b62cb0fc073c5fa69343e1">sxsdk::line_class</a>
+, <a class="el" href="structsxsdk_1_1light__class.html#acfc6be6ca66323104d24922d0c24cccf">sxsdk::light_class</a>
 </li>
 <li>get_volume_light_intensity()
-: <a class="el" href="structsxsdk_1_1light__class.html#a546bae0d9e612359e8427a4f100eb353">sxsdk::light_class</a>
-, <a class="el" href="structsxsdk_1_1line__class.html#a672b3de3ee07beb3ce1ae8101f6ebb73">sxsdk::line_class</a>
+: <a class="el" href="structsxsdk_1_1line__class.html#a672b3de3ee07beb3ce1ae8101f6ebb73">sxsdk::line_class</a>
+, <a class="el" href="structsxsdk_1_1light__class.html#a546bae0d9e612359e8427a4f100eb353">sxsdk::light_class</a>
 </li>
 <li>get_volume_light_quality()
-: <a class="el" href="structsxsdk_1_1line__class.html#afa7424bb249751acd28852f1764260e4">sxsdk::line_class</a>
-, <a class="el" href="structsxsdk_1_1light__class.html#ae1a3da8962eb36d0b7665c98c4dbc260">sxsdk::light_class</a>
+: <a class="el" href="structsxsdk_1_1light__class.html#ae1a3da8962eb36d0b7665c98c4dbc260">sxsdk::light_class</a>
+, <a class="el" href="structsxsdk_1_1line__class.html#afa7424bb249751acd28852f1764260e4">sxsdk::line_class</a>
 </li>
 <li>get_volume_light_radius()
-: <a class="el" href="structsxsdk_1_1light__class.html#a4d4e756dba721eb965ccba1d07b142b0">sxsdk::light_class</a>
-, <a class="el" href="structsxsdk_1_1line__class.html#a7888eee5984995aece4c694410222e9a">sxsdk::line_class</a>
+: <a class="el" href="structsxsdk_1_1line__class.html#a7888eee5984995aece4c694410222e9a">sxsdk::line_class</a>
+, <a class="el" href="structsxsdk_1_1light__class.html#a4d4e756dba721eb965ccba1d07b142b0">sxsdk::light_class</a>
+</li>
+<li>get_volume_type()
+: <a class="el" href="structsxsdk_1_1surface__class.html#adf7721e3bcb6b444cb4f7a8005ed908e">sxsdk::surface_class</a>
 </li>
 <li>get_weight()
-: <a class="el" href="structsxsdk_1_1skin__bind__class.html#a35f7ef91e1e7dd2382dd0792f827dbbc">sxsdk::skin_bind_class</a>
+: <a class="el" href="structsxsdk_1_1background__layer__class.html#a4b67df0aea6c630048a8691964e0cff5">sxsdk::background_layer_class</a>
 , <a class="el" href="structsxsdk_1_1shader__node__class.html#a7c04c63e063bd27484bccf7ad953187b">sxsdk::shader_node_class</a>
-, <a class="el" href="structsxsdk_1_1background__layer__class.html#a4b67df0aea6c630048a8691964e0cff5">sxsdk::background_layer_class</a>
+, <a class="el" href="structsxsdk_1_1skin__bind__class.html#a35f7ef91e1e7dd2382dd0792f827dbbc">sxsdk::skin_bind_class</a>
 , <a class="el" href="structsxsdk_1_1mapping__layer__class.html#acae81b1f3cdf5c6b2e277bc93e7394bd">sxsdk::mapping_layer_class</a>
 </li>
 <li>get_white_cursor()
@@ -3298,25 +3411,25 @@
 : <a class="el" href="structsxsdk_1_1preference__interface.html#a4211190ee698ea5fbda2fc5af34aaf6c">sxsdk::preference_interface</a>
 </li>
 <li>get_world_to_device_matrix()
-: <a class="el" href="structsxsdk_1_1rendering__context__interface.html#a709a1258bf087166ee3e18453b857913">sxsdk::rendering_context_interface</a>
-, <a class="el" href="structsxsdk_1_1scene__interface.html#a74070812d0fd327e7f39a38cbbb2cb07">sxsdk::scene_interface</a>
+: <a class="el" href="structsxsdk_1_1scene__interface.html#a74070812d0fd327e7f39a38cbbb2cb07">sxsdk::scene_interface</a>
+, <a class="el" href="structsxsdk_1_1rendering__context__interface.html#a709a1258bf087166ee3e18453b857913">sxsdk::rendering_context_interface</a>
 </li>
 <li>get_world_to_local_matrix()
 : <a class="el" href="structsxsdk_1_1shape__class.html#ad3c84cbdc78f1b5b827d8aa80136b056">sxsdk::shape_class</a>
 </li>
 <li>get_world_to_perspective_matrix()
-: <a class="el" href="structsxsdk_1_1camera__interface.html#a074f854a57338f09a1f226f353dbfd57">sxsdk::camera_interface</a>
-, <a class="el" href="structsxsdk_1_1camera__class.html#a0d19a0c5efada6301db0e1c1544ee739">sxsdk::camera_class</a>
-, <a class="el" href="structsxsdk_1_1scene__interface.html#a1f86d46f6c871daf7acaebecd7305c5a">sxsdk::scene_interface</a>
+: <a class="el" href="structsxsdk_1_1scene__interface.html#a1f86d46f6c871daf7acaebecd7305c5a">sxsdk::scene_interface</a>
 , <a class="el" href="structsxsdk_1_1rendering__context__interface.html#acb2506347eb006f2dcf7c7611c33d075">sxsdk::rendering_context_interface</a>
+, <a class="el" href="structsxsdk_1_1camera__class.html#a0d19a0c5efada6301db0e1c1544ee739">sxsdk::camera_class</a>
+, <a class="el" href="structsxsdk_1_1camera__interface.html#a074f854a57338f09a1f226f353dbfd57">sxsdk::camera_interface</a>
 </li>
 <li>get_world_to_user_matrix()
 : <a class="el" href="structsxsdk_1_1scene__interface.html#a4b6a910168bbe270a19a9a45c2e9fe51">sxsdk::scene_interface</a>
 </li>
 <li>get_world_to_view_matrix()
-: <a class="el" href="structsxsdk_1_1camera__interface.html#ae03d27759a1e840020dd35a034a88d9c">sxsdk::camera_interface</a>
-, <a class="el" href="structsxsdk_1_1rendering__context__interface.html#a1d2922dc9fb98802d1a1bc304a59e7d0">sxsdk::rendering_context_interface</a>
+: <a class="el" href="structsxsdk_1_1rendering__context__interface.html#a1d2922dc9fb98802d1a1bc304a59e7d0">sxsdk::rendering_context_interface</a>
 , <a class="el" href="structsxsdk_1_1scene__interface.html#aec8be4386a44c6e57e10888e87731533">sxsdk::scene_interface</a>
+, <a class="el" href="structsxsdk_1_1camera__interface.html#ae03d27759a1e840020dd35a034a88d9c">sxsdk::camera_interface</a>
 , <a class="el" href="structsxsdk_1_1camera__class.html#ae56fe14634ce923c5cfe0db2d47438f7">sxsdk::camera_class</a>
 </li>
 <li>get_x_axis_color()
@@ -3335,9 +3448,9 @@
 : <a class="el" href="structsxsdk_1_1shade__interface.html#abe0295ea8a6e87be326479f07e1b3f3f">sxsdk::shade_interface</a>
 </li>
 <li>get_zoom()
-: <a class="el" href="structsxsdk_1_1rendering__context__interface.html#ac1021d4df6b641e420b0e685f530f0b9">sxsdk::rendering_context_interface</a>
+: <a class="el" href="structsxsdk_1_1motion__point__interface.html#af03880acf0108c0ac4611397a934ed01">sxsdk::motion_point_interface</a>
+, <a class="el" href="structsxsdk_1_1rendering__context__interface.html#ac1021d4df6b641e420b0e685f530f0b9">sxsdk::rendering_context_interface</a>
 , <a class="el" href="structsxsdk_1_1camera__interface.html#a1c7dcc7aa7beaf4afdf98f5d23e67798">sxsdk::camera_interface</a>
-, <a class="el" href="structsxsdk_1_1motion__point__interface.html#af03880acf0108c0ac4611397a934ed01">sxsdk::motion_point_interface</a>
 , <a class="el" href="structsxsdk_1_1camera__class.html#a08d951e2c1169170f38255199e58231c">sxsdk::camera_class</a>
 </li>
 <li>get_zs()

@@ -160,6 +160,10 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Overridable. blah.  <a href="#afd44d7639e1b5f16924170604570ad96"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#afbe4ef394035f66a1111c66f6191a59f">do_switch</a> (<a class="el" href="structsxsdk_1_1part__class.html">sxsdk::part_class</a> &amp;switch_joint, void *aux=0)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Overridable. Called when the current object is a switch joint. Called only if the <a class="el" href="structsxsdk_1_1loader__interface.html#a7eb69a6743eb8f5d7cfe3160b837f838" title="Overridable. Override and return true if the plugin can handle switch joints.">can_accept_switch()</a> function returns true.  <a href="#afbe4ef394035f66a1111c66f6191a59f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#a28717652dbc6da3b2c5336f7b0d94a0a">can_accept_mirror</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Overridable. Override and return true if the plugin can handle mirror objects.  <a href="#a28717652dbc6da3b2c5336f7b0d94a0a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1loader__interface.html#a3ae54718e7952680d59746debdf91be9">do_mirror</a> (<a class="el" href="structsxsdk_1_1shape__class.html">sxsdk::shape_class</a> &amp;shape, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Overridable. Called when the current object is a mirror object. Called only if the <a class="el" href="structsxsdk_1_1loader__interface.html#a28717652dbc6da3b2c5336f7b0d94a0a" title="Overridable. Override and return true if the plugin can handle mirror objects.">can_accept_mirror()</a> function returns true.  <a href="#a3ae54718e7952680d59746debdf91be9"></a><br/></td></tr>
 </table>
 <hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="a571f3cf06233a0548524fccbff60b99d"></a><!-- doxytag: member="sxsdk::loader_interface::begin_polymesh_face" ref="a571f3cf06233a0548524fccbff60b99d" args="(int n, void *aux=0)" -->
@@ -292,6 +296,27 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 <p>Overridable. If override and return false, the plugins avoid calling do_meshes to process by polygonmesh. </p>
 <p>Call do_meshes if true is returned. </p>
+
+</div>
+</div>
+<a class="anchor" id="a28717652dbc6da3b2c5336f7b0d94a0a"></a><!-- doxytag: member="sxsdk::loader_interface::can_accept_mirror" ref="a28717652dbc6da3b2c5336f7b0d94a0a" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::loader_interface::can_accept_mirror </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Overridable. Override and return true if the plugin can handle mirror objects. </p>
+<p>If false is returned, make the mirror objects real objects and call the callback functions like <code><a class="el" href="structsxsdk_1_1loader__interface.html#a28b940cd7fd64b01fc5feb41a13a0937" title="Overridable. Called when the current object is an open line object, or an object...">do_polygon()</a></code>. </p>
 
 </div>
 </div>
@@ -724,6 +749,42 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>m</em>&nbsp;</td><td>the mesh data </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a3ae54718e7952680d59746debdf91be9"></a><!-- doxytag: member="sxsdk::loader_interface::do_mirror" ref="a3ae54718e7952680d59746debdf91be9" args="(sxsdk::shape_class &amp;shape, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::loader_interface::do_mirror </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1shape__class.html">sxsdk::shape_class</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>shape</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Overridable. Called when the current object is a mirror object. Called only if the <a class="el" href="structsxsdk_1_1loader__interface.html#a28717652dbc6da3b2c5336f7b0d94a0a" title="Overridable. Override and return true if the plugin can handle mirror objects.">can_accept_mirror()</a> function returns true. </p>
+<p>Used if exporting to a format supporting mirror objects.</p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>shape</em>&nbsp;</td><td>The mirror object. </td></tr>
   </table>
   </dd>
 </dl>

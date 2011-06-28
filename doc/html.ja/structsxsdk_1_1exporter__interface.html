@@ -190,6 +190,16 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa0f9a837f4c60839246ed687fb73745c"></a><!-- doxytag: member="sxsdk::exporter_interface::end_polymesh_face_group" ref="aa0f9a837f4c60839246ed687fb73745c" args="(void *aux=0)" -->
 virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1exporter__interface.html#aa0f9a837f4c60839246ed687fb73745c">end_polymesh_face_group</a> (void *aux=0)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。フェイスグループごとの面列の終了を示すために呼ばれる。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae7a2c9fe86dcf16966f24cf6b93b59a2"></a><!-- doxytag: member="sxsdk::exporter_interface::must_skip" ref="ae7a2c9fe86dcf16966f24cf6b93b59a2" args="(void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1exporter__interface.html#ae7a2c9fe86dcf16966f24cf6b93b59a2">must_skip</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。現在の形状をスキップするかどうかを返す <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a32739dea9a4737ea4911fc9c1817c7e5"></a><!-- doxytag: member="sxsdk::exporter_interface::can_accept_skip" ref="a32739dea9a4737ea4911fc9c1817c7e5" args="(void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1exporter__interface.html#a32739dea9a4737ea4911fc9c1817c7e5">can_accept_skip</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。現在の形状をスキップするかどうかを返す <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1exporter__interface.html#a2d69d48a244ba80394a977d2142e10a6">can_accept_mirror</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。オーバライドしてtrueを返すことによって、ミラー形状に対して<code><a class="el" href="structsxsdk_1_1exporter__interface.html#ab87e68667adb90030318b183560b29ed" title="オーバライド可。カレント形状がミラー形状の場合に呼ばれる。can_accept_mi...">do_mirror()</a></code> が呼び出される。  <a href="#a2d69d48a244ba80394a977d2142e10a6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1exporter__interface.html#ab87e68667adb90030318b183560b29ed">do_mirror</a> (<a class="el" href="structsxsdk_1_1shape__class.html">shape_class</a> &amp;shape, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">オーバライド可。カレント形状がミラー形状の場合に呼ばれる。<code><a class="el" href="structsxsdk_1_1exporter__interface.html#a2d69d48a244ba80394a977d2142e10a6" title="オーバライド可。オーバライドしてtrueを返すことによって、ミラー形状に...">can_accept_mirror()</a></code> がtrueを返す場合にのみ呼ばれる。  <a href="#ab87e68667adb90030318b183560b29ed"></a><br/></td></tr>
 </table>
 <hr/><h2>関数</h2>
 <a class="anchor" id="a492d39c41037848cad2e82e0733dfc88"></a><!-- doxytag: member="sxsdk::exporter_interface::begin_polymesh_face" ref="a492d39c41037848cad2e82e0733dfc88" args="(int n, void *aux=0)" -->
@@ -420,6 +430,27 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 <p>オーバライド可。オーバライドしてfalseを返すことによって、<code><a class="el" href="structsxsdk_1_1exporter__interface.html#acd9cfb9d76ee3a20ed9991d7166ffedb" title="オーバライド可。カレント形状がmeshes形状に変換された場合に呼ばれる。...">do_meshes()</a>の呼び出しを避け、ポリゴンメッシュとして処理する。</code> </p>
 <p>trueが返される場合は<code><a class="el" href="structsxsdk_1_1exporter__interface.html#acd9cfb9d76ee3a20ed9991d7166ffedb" title="オーバライド可。カレント形状がmeshes形状に変換された場合に呼ばれる。...">do_meshes()</a>が呼ばれる。</code> </p>
+
+</div>
+</div>
+<a class="anchor" id="a2d69d48a244ba80394a977d2142e10a6"></a><!-- doxytag: member="sxsdk::exporter_interface::can_accept_mirror" ref="a2d69d48a244ba80394a977d2142e10a6" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::exporter_interface::can_accept_mirror </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。オーバライドしてtrueを返すことによって、ミラー形状に対して<code><a class="el" href="structsxsdk_1_1exporter__interface.html#ab87e68667adb90030318b183560b29ed" title="オーバライド可。カレント形状がミラー形状の場合に呼ばれる。can_accept_mi...">do_mirror()</a></code> が呼び出される。 </p>
+<p>falseが返される場合は、ミラー形状を実体化して、<code><a class="el" href="structsxsdk_1_1exporter__interface.html#aa13a6ec649a309e7a3a504513775f3d8" title="オーバライド可。カレント形状が閉じた線形状の場合、または他の形状か�...">do_polygon()</a></code> などの形状処理コールバックを呼び出す。 </p>
 
 </div>
 </div>
@@ -786,6 +817,42 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <dl><dt><b>引数:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>m</em>&nbsp;</td><td>メッシュデータ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab87e68667adb90030318b183560b29ed"></a><!-- doxytag: member="sxsdk::exporter_interface::do_mirror" ref="ab87e68667adb90030318b183560b29ed" args="(shape_class &amp;shape, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::exporter_interface::do_mirror </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1shape__class.html">shape_class</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>shape</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>オーバライド可。カレント形状がミラー形状の場合に呼ばれる。<code><a class="el" href="structsxsdk_1_1exporter__interface.html#a2d69d48a244ba80394a977d2142e10a6" title="オーバライド可。オーバライドしてtrueを返すことによって、ミラー形状に...">can_accept_mirror()</a></code> がtrueを返す場合にのみ呼ばれる。 </p>
+<p>リンク形状に対応したデータ形式に書き出す場合に使用する。</p>
+<dl><dt><b>引数:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>shape</em>&nbsp;</td><td>対象形状 </td></tr>
   </table>
   </dd>
 </dl>

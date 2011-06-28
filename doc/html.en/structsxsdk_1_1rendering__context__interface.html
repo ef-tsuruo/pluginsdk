@@ -152,6 +152,8 @@ virtual <a class="el" href="structsxsdk_1_1image__interface.html">sxsdk::image_i
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">blah  <a href="#a93153bb7ec2ee56468de727d40023428"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1rendering__context__interface.html#afe898b7ebec816584cd7a301c0f0ddac">get_active</a> (void *=0) const </td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get Whether the current shape is active while <a class="el" href="structsxsdk_1_1rendering__context__interface.html#a23980a62f0e7685e3187e2a812b243a9" title="Traverses the shape tree in the scene, converts each shape object if necessary and...">convert()</a> is being called().  <a href="#afe898b7ebec816584cd7a301c0f0ddac"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1rendering__context__interface.html#a87ceb3991873dfb58fabd947ddc16397">get_current_frame_float</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get The current frame number(float).  <a href="#a87ceb3991873dfb58fabd947ddc16397"></a><br/></td></tr>
 </table>
 <hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="ad771f6e8e90e28414f0b623634f04634"></a><!-- doxytag: member="sxsdk::rendering_context_interface::begin_progress" ref="ad771f6e8e90e28414f0b623634f04634" args="(const char *title, void *aux=0)" -->
@@ -356,6 +358,27 @@ virtual <a class="el" href="structsxsdk_1_1image__interface.html">sxsdk::image_i
 <div class="memdoc">
 
 <p>Get The current frame number. </p>
+<p>Because sometimes the camera info changes during rendering, use the value returned here rather than the value returned by <code><a class="el" href="structsxsdk_1_1camera__class.html">camera_class</a></code>. </p>
+
+</div>
+</div>
+<a class="anchor" id="a87ceb3991873dfb58fabd947ddc16397"></a><!-- doxytag: member="sxsdk::rendering_context_interface::get_current_frame_float" ref="a87ceb3991873dfb58fabd947ddc16397" args="(void *=0) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual float sxsdk::rendering_context_interface::get_current_frame_float </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get The current frame number(float). </p>
 <p>Because sometimes the camera info changes during rendering, use the value returned here rather than the value returned by <code><a class="el" href="structsxsdk_1_1camera__class.html">camera_class</a></code>. </p>
 
 </div>

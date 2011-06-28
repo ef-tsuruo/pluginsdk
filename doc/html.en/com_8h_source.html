@@ -52,55 +52,57 @@
 <a name="l00026"></a>00026     <span class="keywordtype">int</span> get_refcount ()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> ref; }
 <a name="l00027"></a>00027     <span class="keywordtype">int</span> get_shade_build_number () <span class="keyword">const</span>;
 <a name="l00028"></a>00028     <span class="keyword">volatile</span> <span class="keyword">static</span> <span class="keywordtype">unsigned</span> interface_total_count;
-<a name="l00029"></a>00029 <span class="keyword">protected</span>:
-<a name="l00030"></a>00030     <span class="keyword">volatile</span> <span class="keywordtype">unsigned</span> ref;
-<a name="l00031"></a>00031 };
-<a name="l00032"></a>00032 
-<a name="l00034"></a><a class="code" href="classcompointer.html">00034</a> <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt; <span class="keyword">class </span><a class="code" href="classcompointer.html" title="A smart pointer for reference counted *_interface classes.">compointer</a> {
-<a name="l00035"></a>00035 <span class="keyword">public</span>:
-<a name="l00036"></a>00036     <span class="keyword">explicit</span> <a class="code" href="classcompointer.html" title="A smart pointer for reference counted *_interface classes.">compointer</a> () : ptr(0) { }
-<a name="l00038"></a><a class="code" href="classcompointer.html#adb298123a893be991761b29c457e69df">00038</a>     <span class="keyword">explicit</span> <a class="code" href="classcompointer.html#adb298123a893be991761b29c457e69df" title="blah">compointer</a> (T *p, <span class="keywordtype">int</span> n = 0) : ptr(p) {
-<a name="l00039"></a>00039         <span class="keywordflow">if</span> (ptr) <span class="keywordflow">while</span> (n--) ptr-&gt;AddRef();
-<a name="l00040"></a>00040     }
-<a name="l00042"></a><a class="code" href="classcompointer.html#aa60d9a9e8e188d2d0bc82261fe313cce">00042</a>     <a class="code" href="classcompointer.html#aa60d9a9e8e188d2d0bc82261fe313cce" title="blah">compointer</a> (<span class="keyword">const</span> <a class="code" href="classcompointer.html" title="A smart pointer for reference counted *_interface classes.">compointer&lt;T&gt;</a> &amp;p) : ptr(p.ptr) {
-<a name="l00043"></a>00043         <span class="keywordflow">if</span> (ptr) ptr-&gt;AddRef();
-<a name="l00044"></a>00044     }
-<a name="l00045"></a>00045     ~<a class="code" href="classcompointer.html" title="A smart pointer for reference counted *_interface classes.">compointer</a> () {
-<a name="l00046"></a>00046         <span class="keywordflow">if</span> (ptr) ptr-&gt;Release();
-<a name="l00047"></a>00047     }
-<a name="l00049"></a><a class="code" href="classcompointer.html#ac8de18a726ce63be87e7c49c646e3ee8">00049</a>     T *<span class="keyword">get</span> () <span class="keyword">const</span> {
-<a name="l00050"></a>00050         <span class="keywordflow">return</span> ptr;
-<a name="l00051"></a>00051     }
-<a name="l00053"></a><a class="code" href="classcompointer.html#a9016c6c25b0f67e3ee57214d04bf0f1a">00053</a>     T &amp;<a class="code" href="classcompointer.html#a9016c6c25b0f67e3ee57214d04bf0f1a" title="blah">operator* </a>()<span class="keyword"> const </span>{
-<a name="l00054"></a>00054         <span class="keywordflow">return</span> *ptr;
-<a name="l00055"></a>00055     }
-<a name="l00057"></a><a class="code" href="classcompointer.html#aac6be8511338afb8cda1caf593bbe49f">00057</a>     T *<a class="code" href="classcompointer.html#aac6be8511338afb8cda1caf593bbe49f" title="blah">operator-&gt; </a>()<span class="keyword"> const </span>{
-<a name="l00058"></a>00058         <span class="keywordflow">return</span> ptr;
-<a name="l00059"></a>00059     }
-<a name="l00061"></a><a class="code" href="classcompointer.html#a9f31ce16341b0287df02076ae6f9aebf">00061</a>     <a class="code" href="classcompointer.html#a9f31ce16341b0287df02076ae6f9aebf" title="blah">operator T * </a>()<span class="keyword"> const </span>{
-<a name="l00062"></a>00062         <span class="keywordflow">return</span> ptr;
-<a name="l00063"></a>00063     }
-<a name="l00065"></a><a class="code" href="classcompointer.html#af608df5ca607e9623df0c3aa4c637ac5">00065</a>     <a class="code" href="classcompointer.html" title="A smart pointer for reference counted *_interface classes.">compointer&lt;T&gt;</a> &amp;<a class="code" href="classcompointer.html#af608df5ca607e9623df0c3aa4c637ac5" title="blah">operator= </a>(T *p) {
-<a name="l00066"></a>00066         <span class="keywordflow">if</span> (ptr != p &amp;&amp; ptr != 0) ptr-&gt;Release();
-<a name="l00067"></a>00067         ptr = p;
-<a name="l00068"></a>00068         <span class="keywordflow">return</span> *<span class="keyword">this</span>;
-<a name="l00069"></a>00069     }
-<a name="l00071"></a><a class="code" href="classcompointer.html#a000bc73a66ef52662d8a5d2495855c62">00071</a>     <a class="code" href="classcompointer.html" title="A smart pointer for reference counted *_interface classes.">compointer&lt;T&gt;</a> &amp;<a class="code" href="classcompointer.html#af608df5ca607e9623df0c3aa4c637ac5" title="blah">operator= </a>(<span class="keyword">const</span> <a class="code" href="classcompointer.html" title="A smart pointer for reference counted *_interface classes.">compointer&lt;T&gt;</a> &amp;p) {
-<a name="l00072"></a>00072         <span class="keywordflow">if</span> (ptr != p.<a class="code" href="classcompointer.html#ac8de18a726ce63be87e7c49c646e3ee8" title="blah">get</a>() &amp;&amp; ptr != 0) ptr-&gt;Release();
-<a name="l00073"></a>00073         ptr = p.<a class="code" href="classcompointer.html#ac8de18a726ce63be87e7c49c646e3ee8" title="blah">get</a>();
-<a name="l00074"></a>00074         <span class="keywordflow">if</span> (ptr != 0) ptr-&gt;AddRef();
-<a name="l00075"></a>00075         <span class="keywordflow">return</span> *<span class="keyword">this</span>;
-<a name="l00076"></a>00076     }
-<a name="l00078"></a><a class="code" href="classcompointer.html#a1f23c35d017e8d08628d4ff33dd287fe">00078</a>     T *<a class="code" href="classcompointer.html#a1f23c35d017e8d08628d4ff33dd287fe" title="blah">retain</a> () {
-<a name="l00079"></a>00079         ptr-&gt;AddRef();
-<a name="l00080"></a>00080         <span class="keywordflow">return</span> ptr;
-<a name="l00081"></a>00081     }
-<a name="l00083"></a><a class="code" href="classcompointer.html#aaa6b4a2192e16eb35017fa5563707e4c">00083</a>     T *<a class="code" href="classcompointer.html#aaa6b4a2192e16eb35017fa5563707e4c" title="blah">release</a> () { <span class="comment">// note that release() is NOT the reverse operation of retatin().</span>
-<a name="l00084"></a>00084         T *p = ptr; ptr = 0; <span class="keywordflow">return</span> p;
-<a name="l00085"></a>00085     }
-<a name="l00086"></a>00086 <span class="keyword">private</span>:
-<a name="l00087"></a>00087     T *ptr;
-<a name="l00088"></a>00088 };
+<a name="l00029"></a>00029     <span class="keywordtype">void</span> check_invariant ()<span class="keyword"> const </span>{ }
+<a name="l00030"></a>00030 <span class="keyword">protected</span>:
+<a name="l00031"></a>00031     <span class="keyword">volatile</span> <span class="keywordtype">unsigned</span> ref;
+<a name="l00032"></a>00032 };
+<a name="l00033"></a>00033 
+<a name="l00035"></a><a class="code" href="classcompointer.html">00035</a> <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt; <span class="keyword">class </span><a class="code" href="classcompointer.html" title="A smart pointer for reference counted *_interface classes.">compointer</a> {
+<a name="l00036"></a>00036 <span class="keyword">public</span>:
+<a name="l00037"></a>00037     <span class="keyword">explicit</span> <a class="code" href="classcompointer.html" title="A smart pointer for reference counted *_interface classes.">compointer</a> () : ptr(0) { }
+<a name="l00039"></a><a class="code" href="classcompointer.html#adb298123a893be991761b29c457e69df">00039</a>     <span class="keyword">explicit</span> <a class="code" href="classcompointer.html#adb298123a893be991761b29c457e69df" title="blah">compointer</a> (T *p, <span class="keywordtype">int</span> n = 0) : ptr(p) {
+<a name="l00040"></a>00040         <span class="keywordflow">if</span> (ptr) <span class="keywordflow">while</span> (n--) ptr-&gt;AddRef();
+<a name="l00041"></a>00041     }
+<a name="l00043"></a><a class="code" href="classcompointer.html#aa60d9a9e8e188d2d0bc82261fe313cce">00043</a>     <a class="code" href="classcompointer.html#aa60d9a9e8e188d2d0bc82261fe313cce" title="blah">compointer</a> (<span class="keyword">const</span> <a class="code" href="classcompointer.html" title="A smart pointer for reference counted *_interface classes.">compointer&lt;T&gt;</a> &amp;p) : ptr(p.ptr) {
+<a name="l00044"></a>00044         <span class="keywordflow">if</span> (ptr) ptr-&gt;AddRef();
+<a name="l00045"></a>00045     }
+<a name="l00046"></a>00046     ~<a class="code" href="classcompointer.html" title="A smart pointer for reference counted *_interface classes.">compointer</a> () {
+<a name="l00047"></a>00047         <span class="keywordflow">if</span> (ptr) ptr-&gt;Release();
+<a name="l00048"></a>00048     }
+<a name="l00050"></a><a class="code" href="classcompointer.html#ac8de18a726ce63be87e7c49c646e3ee8">00050</a>     T *<span class="keyword">get</span> () <span class="keyword">const</span> {
+<a name="l00051"></a>00051         <span class="keywordflow">return</span> ptr;
+<a name="l00052"></a>00052     }
+<a name="l00054"></a><a class="code" href="classcompointer.html#a9016c6c25b0f67e3ee57214d04bf0f1a">00054</a>     T &amp;<a class="code" href="classcompointer.html#a9016c6c25b0f67e3ee57214d04bf0f1a" title="blah">operator* </a>()<span class="keyword"> const </span>{
+<a name="l00055"></a>00055         <span class="keywordflow">return</span> *ptr;
+<a name="l00056"></a>00056     }
+<a name="l00058"></a><a class="code" href="classcompointer.html#aac6be8511338afb8cda1caf593bbe49f">00058</a>     T *<a class="code" href="classcompointer.html#aac6be8511338afb8cda1caf593bbe49f" title="blah">operator-&gt; </a>()<span class="keyword"> const </span>{
+<a name="l00059"></a>00059         <span class="keywordflow">return</span> ptr;
+<a name="l00060"></a>00060     }
+<a name="l00062"></a><a class="code" href="classcompointer.html#a9f31ce16341b0287df02076ae6f9aebf">00062</a>     <a class="code" href="classcompointer.html#a9f31ce16341b0287df02076ae6f9aebf" title="blah">operator T * </a>()<span class="keyword"> const </span>{
+<a name="l00063"></a>00063         <span class="keywordflow">return</span> ptr;
+<a name="l00064"></a>00064     }
+<a name="l00066"></a><a class="code" href="classcompointer.html#af608df5ca607e9623df0c3aa4c637ac5">00066</a>     <a class="code" href="classcompointer.html" title="A smart pointer for reference counted *_interface classes.">compointer&lt;T&gt;</a> &amp;<a class="code" href="classcompointer.html#af608df5ca607e9623df0c3aa4c637ac5" title="blah">operator= </a>(T *p) {
+<a name="l00067"></a>00067         <span class="keywordflow">if</span> (ptr != p &amp;&amp; ptr != 0) ptr-&gt;Release();
+<a name="l00068"></a>00068         ptr = p;
+<a name="l00069"></a>00069         <span class="keywordflow">return</span> *<span class="keyword">this</span>;
+<a name="l00070"></a>00070     }
+<a name="l00072"></a><a class="code" href="classcompointer.html#a000bc73a66ef52662d8a5d2495855c62">00072</a>     <a class="code" href="classcompointer.html" title="A smart pointer for reference counted *_interface classes.">compointer&lt;T&gt;</a> &amp;<a class="code" href="classcompointer.html#af608df5ca607e9623df0c3aa4c637ac5" title="blah">operator= </a>(<span class="keyword">const</span> <a class="code" href="classcompointer.html" title="A smart pointer for reference counted *_interface classes.">compointer&lt;T&gt;</a> &amp;p) {
+<a name="l00073"></a>00073         <span class="keywordflow">if</span> (ptr != p.<a class="code" href="classcompointer.html#ac8de18a726ce63be87e7c49c646e3ee8" title="blah">get</a>() &amp;&amp; ptr != 0) ptr-&gt;Release();
+<a name="l00074"></a>00074         ptr = p.<a class="code" href="classcompointer.html#ac8de18a726ce63be87e7c49c646e3ee8" title="blah">get</a>();
+<a name="l00075"></a>00075         <span class="keywordflow">if</span> (ptr != 0) ptr-&gt;AddRef();
+<a name="l00076"></a>00076         <span class="keywordflow">return</span> *<span class="keyword">this</span>;
+<a name="l00077"></a>00077     }
+<a name="l00079"></a><a class="code" href="classcompointer.html#a1f23c35d017e8d08628d4ff33dd287fe">00079</a>     T *<a class="code" href="classcompointer.html#a1f23c35d017e8d08628d4ff33dd287fe" title="blah">retain</a> () {
+<a name="l00080"></a>00080         ptr-&gt;AddRef();
+<a name="l00081"></a>00081         <span class="keywordflow">return</span> ptr;
+<a name="l00082"></a>00082     }
+<a name="l00084"></a><a class="code" href="classcompointer.html#aaa6b4a2192e16eb35017fa5563707e4c">00084</a>     T *<a class="code" href="classcompointer.html#aaa6b4a2192e16eb35017fa5563707e4c" title="blah">release</a> () { <span class="comment">// note that release() is NOT the reverse operation of retatin().</span>
+<a name="l00085"></a>00085         T *p = ptr; ptr = 0; <span class="keywordflow">return</span> p;
+<a name="l00086"></a>00086     }
+<a name="l00087"></a>00087     <span class="keywordtype">void</span> check_invariant ()<span class="keyword"> const </span>{ }
+<a name="l00088"></a>00088 <span class="keyword">private</span>:
+<a name="l00089"></a>00089     T *ptr;
+<a name="l00090"></a>00090 };
 </pre></div></div>
 <br><br>
 <hr>

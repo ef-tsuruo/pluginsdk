@@ -1114,6 +1114,16 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Creates a capsule.  <a href="#a0e1b019fdd594d2f920ad2fa3da68037"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structsxsdk_1_1shape__class.html">sxsdk::shape_class</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1scene__interface.html#a0eeececbe252120087f2c897d456093c">create_primitive_torus</a> (const char *as, int type, bool set_uv, int du, int dv, const sxsdk::vec3 &amp;at, float r, float r2, int axis, void *aux=0)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Creates a torus.  <a href="#a0eeececbe252120087f2c897d456093c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1scene__interface.html#a0308dd7b8420bc6ea8ff22cd75f7a86a">save_XVL</a> (const char *const &amp;in, const <a class="el" href="structsxsdk_1_1exporter__settings__interface.html">sxsdk::exporter_settings_interface</a> *settings=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Saves objects in XVL format.  <a href="#a0308dd7b8420bc6ea8ff22cd75f7a86a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1scene__interface.html#aeb0546175861a9ea868e603100022f93">draw_select_edges</a> (bool draw=true, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Make selected edges either applicable or not on line drawing processing.  <a href="#aeb0546175861a9ea868e603100022f93"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afc27a3aa638db5fffdb76fe581d8b156"></a><!-- doxytag: member="sxsdk::scene_interface::get_step_frames_float" ref="afc27a3aa638db5fffdb76fe581d8b156" args="(void *=0) const " -->
+virtual float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1scene__interface.html#afc27a3aa638db5fffdb76fe581d8b156">get_step_frames_float</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the number of step frames(float). <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a31c3ffc73d25db2e8842758ed76b0f6c"></a><!-- doxytag: member="sxsdk::scene_interface::set_step_frames_float" ref="a31c3ffc73d25db2e8842758ed76b0f6c" args="(float step_frames_float_param, void *=0)" -->
+virtual <a class="el" href="structsxsdk_1_1scene__interface.html">scene_interface</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1scene__interface.html#a31c3ffc73d25db2e8842758ed76b0f6c">set_step_frames_float</a> (float step_frames_float_param, void *=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set the number of step frames(float). <br/></td></tr>
 </table>
 <hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="a9acb167a81b2469fc1ffa02fac141f30"></a><!-- doxytag: member="sxsdk::scene_interface::active_shape" ref="a9acb167a81b2469fc1ffa02fac141f30" args="(int i=0, void *aux=0)" -->
@@ -3259,7 +3269,7 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>as</em>&nbsp;</td><td>Name. If NULL is passed the default name is used. </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>type</em>&nbsp;</td><td>Primitive type (0:Primitive, 1:Surface_part, 2:Extrude(unuse), 3:Polygonmesh) </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>type</em>&nbsp;</td><td>Primitive type (0:Default, 1:Surface_part, 2:unuse, 3:Polygonmesh) </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>set_uv</em>&nbsp;</td><td>Output UV. </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>du</em>&nbsp;</td><td>Divide size U. </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>dv</em>&nbsp;</td><td>Divide size V. </td></tr>
@@ -3355,7 +3365,7 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>as</em>&nbsp;</td><td>Name. If NULL is passed the default name is used. </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>type</em>&nbsp;</td><td>Primitive type (0:Primitive, 1:Surface_part, 2:Extrude(unuse), 3:Polygonmesh) </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>type</em>&nbsp;</td><td>Primitive type (0:Default, 1:Surface_part, 2:unuse, 3:Polygonmesh) </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>set_uv</em>&nbsp;</td><td>Output UV. </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>du</em>&nbsp;</td><td>Divide size U. </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>dv</em>&nbsp;</td><td>Divide size V. </td></tr>
@@ -3453,7 +3463,7 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>as</em>&nbsp;</td><td>Name. If NULL is passed the default name is used. </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>type</em>&nbsp;</td><td>Primitive type (0:Primitive, 1:Surface_part, 2:Extrude(unuse), 3:Polygonmesh) </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>type</em>&nbsp;</td><td>Primitive type (0:Default, 1:Surface_part, 2:unuse, 3:Polygonmesh) </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>set_uv</em>&nbsp;</td><td>Output UV. </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>du</em>&nbsp;</td><td>Divide size U. </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>dv</em>&nbsp;</td><td>Divide size V. </td></tr>
@@ -3558,7 +3568,7 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>as</em>&nbsp;</td><td>Name. If NULL is passed the default name is used. </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>type</em>&nbsp;</td><td>Primitive type (0:Primitive, 1:Surface_part, 2:Extrude(unuse), 3:Polygonmesh) </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>type</em>&nbsp;</td><td>Primitive type (0:Default, 1:Surface_part, 2:unuse, 3:Polygonmesh) </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>set_uv</em>&nbsp;</td><td>Output UV. </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>du</em>&nbsp;</td><td>Divide size U. </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>dv</em>&nbsp;</td><td>Divide size V. </td></tr>
@@ -3652,7 +3662,7 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>as</em>&nbsp;</td><td>Name. If NULL is passed the default name is used. </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>type</em>&nbsp;</td><td>Primitive type (0:Primitive, 1:Surface_part, 2:Extrude(unuse), 3:Polygonmesh) </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>type</em>&nbsp;</td><td>Primitive type (0:Default, 1:Surface_part, 2:unuse, 3:Polygonmesh) </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>set_uv</em>&nbsp;</td><td>Output UV. </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>du</em>&nbsp;</td><td>Divide size U. </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>dv</em>&nbsp;</td><td>Divide size V. </td></tr>
@@ -3762,7 +3772,7 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>as</em>&nbsp;</td><td>Name. If NULL is passed the default name is used. </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>type</em>&nbsp;</td><td>Primitive type (0:Primitive, 1:Surface_part, 2:Extrude(unuse), 3:Polygonmesh) </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>type</em>&nbsp;</td><td>Primitive type (0:Default, 1:Surface_part, 2:unuse, 3:Polygonmesh) </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>set_uv</em>&nbsp;</td><td>Output UV. </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>du</em>&nbsp;</td><td>Divide size U. </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>dv</em>&nbsp;</td><td>Divide size V. </td></tr>
@@ -3845,7 +3855,7 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>as</em>&nbsp;</td><td>Name. If NULL is passed the default name is used. </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>type</em>&nbsp;</td><td>Primitive type (0:Primitive, 1:Surface_part, 2:Extrude(unuse), 3:Polygonmesh) </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>type</em>&nbsp;</td><td>Primitive type (0:Default, 1:Surface_part, 2:unuse, 3:Polygonmesh) </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>set_uv</em>&nbsp;</td><td>Output UV. </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>du</em>&nbsp;</td><td>Divide size U. </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>dv</em>&nbsp;</td><td>Divide size V. </td></tr>
@@ -3935,7 +3945,7 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>as</em>&nbsp;</td><td>Name. If NULL is passed the default name is used. </td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>type</em>&nbsp;</td><td>Primitive type (0:Primitive, 1:Surface_part, 2:Extrude(unuse), 3:Polygonmesh) </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>type</em>&nbsp;</td><td>Primitive type (0:Default, 1:Surface_part, 2:unuse, 3:Polygonmesh) </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>set_uv</em>&nbsp;</td><td>Output UV. </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>du</em>&nbsp;</td><td>Divide size U. </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>dv</em>&nbsp;</td><td>Divide size V. </td></tr>
@@ -5212,6 +5222,41 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>attribute_id</em>&nbsp;</td><td>the attribute stream <code>uuid</code> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aeb0546175861a9ea868e603100022f93"></a><!-- doxytag: member="sxsdk::scene_interface::draw_select_edges" ref="aeb0546175861a9ea868e603100022f93" args="(bool draw=true, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::scene_interface::draw_select_edges </td>
+          <td>(</td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>draw</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Make selected edges either applicable or not on line drawing processing. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>draw</em>&nbsp;</td><td>Pointer to <code><a class="el" href="structsxsdk_1_1exporter__settings__interface.html">exporter_settings_interface</a></code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -8611,6 +8656,42 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 <p>Saves objects in VRML format. </p>
 <p>The Save dialog is displayed. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0308dd7b8420bc6ea8ff22cd75f7a86a"></a><!-- doxytag: member="sxsdk::scene_interface::save_XVL" ref="a0308dd7b8420bc6ea8ff22cd75f7a86a" args="(const char *const &amp;in, const sxsdk::exporter_settings_interface *settings=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::scene_interface::save_XVL </td>
+          <td>(</td>
+          <td class="paramtype">const char *const &amp;&nbsp;</td>
+          <td class="paramname"> <em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structsxsdk_1_1exporter__settings__interface.html">sxsdk::exporter_settings_interface</a> *&nbsp;</td>
+          <td class="paramname"> <em>settings</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Saves objects in XVL format. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>in</em>&nbsp;</td><td>file path name </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>settings</em>&nbsp;</td><td>Pointer to <code><a class="el" href="structsxsdk_1_1exporter__settings__interface.html">exporter_settings_interface</a></code>. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

@@ -744,7 +744,7 @@
 <a name="l01096"></a>01096     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="structsxsdk_1_1rendering__options__view__interface.html#ac4e4039737d5fa92c6c78bcd831251f3" title="Selects the image view.">select_image</a> (<span class="keywordtype">void</span>* aux = 0);
 <a name="l01098"></a>01098     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="structsxsdk_1_1rendering__options__view__interface.html#ad3306a43696564f501cd477f47f87863" title="Selects the global illumination view.">select_global_illumination</a> (<span class="keywordtype">void</span>* aux = 0);
 <a name="l01100"></a>01100     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="structsxsdk_1_1rendering__options__view__interface.html#a01ae0485170ef450ea82638f7fd0446c" title="Selects the effects view.">select_effects</a> (<span class="keywordtype">void</span>* aux = 0);
-<a name="l01102"></a>01102     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="structsxsdk_1_1rendering__options__view__interface.html#a9abc5a4495a97c352c3f0094e34c5bb2" title="Selects the rendering servers view.">select_servers</a> (<span class="keywordtype">void</span>* aux = 0);
+<a name="l01102"></a>01102     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="structsxsdk_1_1rendering__options__view__interface.html#a356c60076579a09b3450c007fce15c5b" title="Selects the rendering servers view.">select_multipass</a> (<span class="keywordtype">void</span>* aux = 0);
 <a name="l01104"></a>01104     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="structsxsdk_1_1rendering__options__view__interface.html#ac33dec522ef3be8b232bc48d51a2b00c" title="Selects the misc. view.">select_misc</a> (<span class="keywordtype">void</span>* aux = 0);
 <a name="l01105"></a>01105 };
 <a name="l01106"></a>01106 } <span class="comment">// sxsdk</span>
@@ -813,201 +813,225 @@
 <a name="l01191"></a>01191 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
 <a name="l01192"></a><a class="code" href="structsxsdk_1_1message__view__interface.html">01192</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1message__view__interface.html">message_view_interface</a> {
 <a name="l01193"></a>01193 <span class="keyword">public</span>:
-<a name="l01194"></a>01194 };
-<a name="l01195"></a>01195 } <span class="comment">// sxsdk</span>
-<a name="l01197"></a>01197 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
-<a name="l01198"></a><a class="code" href="structsxsdk_1_1script__view__interface.html">01198</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1script__view__interface.html">script_view_interface</a> {
-<a name="l01199"></a>01199 <span class="keyword">public</span>:
+<a name="l01195"></a>01195     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="structsxsdk_1_1message__view__interface.html#aaa770254c794096a2c8423e31b4ee512" title="Clear message.">clear_message</a> (<span class="keywordtype">void</span>* aux = 0);
+<a name="l01197"></a>01197     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1message__view__interface.html">message_view_interface</a> &amp;<a class="code" href="structsxsdk_1_1message__view__interface.html#a896db93a9990944cb7279d5010f6c565" title="Set Text in message window.">set_message</a> (<span class="keyword">const</span> <span class="keywordtype">char</span>* message_param, <span class="keywordtype">void</span> * = 0);
+<a name="l01199"></a>01199     <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="structsxsdk_1_1message__view__interface.html#a185f291d1a0bd54fb58f86ccbefe5994" title="Get Text in message window.">get_message</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
 <a name="l01200"></a>01200 };
 <a name="l01201"></a>01201 } <span class="comment">// sxsdk</span>
 <a name="l01203"></a>01203 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
-<a name="l01204"></a><a class="code" href="structsxsdk_1_1shortcut__view__interface.html">01204</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1shortcut__view__interface.html">shortcut_view_interface</a> {
+<a name="l01204"></a><a class="code" href="structsxsdk_1_1script__view__interface.html">01204</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1script__view__interface.html">script_view_interface</a> {
 <a name="l01205"></a>01205 <span class="keyword">public</span>:
 <a name="l01206"></a>01206 };
 <a name="l01207"></a>01207 } <span class="comment">// sxsdk</span>
 <a name="l01209"></a>01209 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
-<a name="l01210"></a><a class="code" href="structsxsdk_1_1radiosity__options__view__interface.html">01210</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1radiosity__options__view__interface.html">radiosity_options_view_interface</a> {
+<a name="l01210"></a><a class="code" href="structsxsdk_1_1shortcut__view__interface.html">01210</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1shortcut__view__interface.html">shortcut_view_interface</a> {
 <a name="l01211"></a>01211 <span class="keyword">public</span>:
-<a name="l01213"></a>01213     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="structsxsdk_1_1radiosity__options__view__interface.html#a71b0621ac1155074c8787db8a7d30e7a" title="Selects the exposure view.">select_exposure</a> (<span class="keywordtype">void</span>* aux = 0);
-<a name="l01215"></a>01215     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="structsxsdk_1_1radiosity__options__view__interface.html#ad36ff0677b6fffd8a3ed955901c25eb8" title="Selects the display view.">select_display</a> (<span class="keywordtype">void</span>* aux = 0);
-<a name="l01217"></a>01217     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="structsxsdk_1_1radiosity__options__view__interface.html#a4feaa45698730ffbc52d62f969648efe" title="Selects the solution view.">select_solution</a> (<span class="keywordtype">void</span>* aux = 0);
-<a name="l01218"></a>01218 };
-<a name="l01219"></a>01219 } <span class="comment">// sxsdk</span>
-<a name="l01221"></a>01221 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
-<a name="l01222"></a><a class="code" href="structsxsdk_1_1radiosity__view__interface.html">01222</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1radiosity__view__interface.html">radiosity_view_interface</a> {
-<a name="l01223"></a>01223 <span class="keyword">public</span>:
-<a name="l01225"></a>01225     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="structsxsdk_1_1radiosity__view__interface.html#ab6ccaf2c730ce5d6a35966c2270aeeb0" title="Shows the radiosity options view.">show_options</a> (<span class="keywordtype">void</span>* aux = 0);
-<a name="l01227"></a>01227     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="structsxsdk_1_1radiosity__view__interface.html#a4723ae36e79067c3b6fba383cf228f2b" title="Hides the radiosity options view.">hide_options</a> (<span class="keywordtype">void</span>* aux = 0);
-<a name="l01229"></a>01229     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1radiosity__options__view__interface.html">radiosity_options_view_interface</a>* <a class="code" href="structsxsdk_1_1radiosity__view__interface.html#a93e91a443db2366995e6bf1e8a06b04c" title="Get The radiosity options view.">get_radiosity_options_view_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
-<a name="l01230"></a>01230 };
-<a name="l01231"></a>01231 } <span class="comment">// sxsdk</span>
-<a name="l01233"></a>01233 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
-<a name="l01234"></a><a class="code" href="structsxsdk_1_1skin__view__interface.html">01234</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1skin__view__interface.html">skin_view_interface</a> {
-<a name="l01235"></a>01235 <span class="keyword">public</span>:
+<a name="l01212"></a>01212 };
+<a name="l01213"></a>01213 } <span class="comment">// sxsdk</span>
+<a name="l01215"></a>01215 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
+<a name="l01216"></a><a class="code" href="structsxsdk_1_1radiosity__options__view__interface.html">01216</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1radiosity__options__view__interface.html">radiosity_options_view_interface</a> {
+<a name="l01217"></a>01217 <span class="keyword">public</span>:
+<a name="l01219"></a>01219     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="structsxsdk_1_1radiosity__options__view__interface.html#a71b0621ac1155074c8787db8a7d30e7a" title="Selects the exposure view.">select_exposure</a> (<span class="keywordtype">void</span>* aux = 0);
+<a name="l01221"></a>01221     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="structsxsdk_1_1radiosity__options__view__interface.html#ad36ff0677b6fffd8a3ed955901c25eb8" title="Selects the display view.">select_display</a> (<span class="keywordtype">void</span>* aux = 0);
+<a name="l01223"></a>01223     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="structsxsdk_1_1radiosity__options__view__interface.html#a4feaa45698730ffbc52d62f969648efe" title="Selects the solution view.">select_solution</a> (<span class="keywordtype">void</span>* aux = 0);
+<a name="l01224"></a>01224 };
+<a name="l01225"></a>01225 } <span class="comment">// sxsdk</span>
+<a name="l01227"></a>01227 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
+<a name="l01228"></a><a class="code" href="structsxsdk_1_1radiosity__view__interface.html">01228</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1radiosity__view__interface.html">radiosity_view_interface</a> {
+<a name="l01229"></a>01229 <span class="keyword">public</span>:
+<a name="l01231"></a>01231     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="structsxsdk_1_1radiosity__view__interface.html#ab6ccaf2c730ce5d6a35966c2270aeeb0" title="Shows the radiosity options view.">show_options</a> (<span class="keywordtype">void</span>* aux = 0);
+<a name="l01233"></a>01233     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="structsxsdk_1_1radiosity__view__interface.html#a4723ae36e79067c3b6fba383cf228f2b" title="Hides the radiosity options view.">hide_options</a> (<span class="keywordtype">void</span>* aux = 0);
+<a name="l01235"></a>01235     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1radiosity__options__view__interface.html">radiosity_options_view_interface</a>* <a class="code" href="structsxsdk_1_1radiosity__view__interface.html#a93e91a443db2366995e6bf1e8a06b04c" title="Get The radiosity options view.">get_radiosity_options_view_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
 <a name="l01236"></a>01236 };
 <a name="l01237"></a>01237 } <span class="comment">// sxsdk</span>
 <a name="l01239"></a>01239 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
-<a name="l01240"></a><a class="code" href="structsxsdk_1_1motion__view__interface.html">01240</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1motion__view__interface.html">motion_view_interface</a> {
+<a name="l01240"></a><a class="code" href="structsxsdk_1_1skin__view__interface.html">01240</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1skin__view__interface.html">skin_view_interface</a> {
 <a name="l01241"></a>01241 <span class="keyword">public</span>:
 <a name="l01242"></a>01242 };
 <a name="l01243"></a>01243 } <span class="comment">// sxsdk</span>
 <a name="l01245"></a>01245 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
-<a name="l01246"></a><a class="code" href="structsxsdk_1_1object__info__view__interface.html">01246</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1object__info__view__interface.html">object_info_view_interface</a> {
+<a name="l01246"></a><a class="code" href="structsxsdk_1_1motion__view__interface.html">01246</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1motion__view__interface.html">motion_view_interface</a> {
 <a name="l01247"></a>01247 <span class="keyword">public</span>:
 <a name="l01248"></a>01248 };
 <a name="l01249"></a>01249 } <span class="comment">// sxsdk</span>
 <a name="l01251"></a>01251 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
-<a name="l01252"></a><a class="code" href="structsxsdk_1_1control__bar__interface.html">01252</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1control__bar__interface.html">control_bar_interface</a> {
+<a name="l01252"></a><a class="code" href="structsxsdk_1_1object__info__view__interface.html">01252</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1object__info__view__interface.html">object_info_view_interface</a> {
 <a name="l01253"></a>01253 <span class="keyword">public</span>:
 <a name="l01254"></a>01254 };
 <a name="l01255"></a>01255 } <span class="comment">// sxsdk</span>
 <a name="l01257"></a>01257 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
-<a name="l01258"></a><a class="code" href="structsxsdk_1_1status__bar__interface.html">01258</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1status__bar__interface.html">status_bar_interface</a> {
+<a name="l01258"></a><a class="code" href="structsxsdk_1_1control__bar__interface.html">01258</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1control__bar__interface.html">control_bar_interface</a> {
 <a name="l01259"></a>01259 <span class="keyword">public</span>:
-<a name="l01261"></a>01261     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="structsxsdk_1_1status__bar__interface.html#af5a803078a4ff92e55f8dbbea726e678" title="Add message to status bar.">add_message</a> (<span class="keyword">const</span> <span class="keywordtype">char</span>* key, <span class="keyword">const</span> <span class="keywordtype">char</span>* message, <span class="keywordtype">void</span>* aux = 0);
-<a name="l01263"></a>01263     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="structsxsdk_1_1status__bar__interface.html#a520199365f39ef7283944b95296f72f6" title="Remove message from status bar.">remove_message</a> (<span class="keyword">const</span> <span class="keywordtype">char</span>* key, <span class="keywordtype">void</span>* aux = 0);
-<a name="l01265"></a>01265     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="structsxsdk_1_1status__bar__interface.html#ac585bbb83e33e41ac8da8d3b9ef929c6" title="Start indicator.">start_indicator</a> (<span class="keyword">const</span> <span class="keywordtype">char</span>* key, <span class="keywordtype">void</span>* aux = 0);
-<a name="l01267"></a>01267     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="structsxsdk_1_1status__bar__interface.html#a2df52ec68428d3bcd5665942a5047189" title="Stop indicator.">stop_indicator</a> (<span class="keyword">const</span> <span class="keywordtype">char</span>* key, <span class="keywordtype">void</span>* aux = 0);
-<a name="l01268"></a>01268 };
-<a name="l01269"></a>01269 } <span class="comment">// sxsdk</span>
-<a name="l01271"></a>01271 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
-<a name="l01272"></a><a class="code" href="structsxsdk_1_1figure__view__interface.html">01272</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1figure__view__interface.html">figure_view_interface</a> {
-<a name="l01273"></a>01273 <span class="keyword">public</span>:
-<a name="l01276"></a>01276     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="structsxsdk_1_1figure__view__interface.html#a7b02868c2f8e91ca9c4ea866851bf0e7" title="Picks objects using the rectangular region.">pick</a> (<span class="keyword">const</span> sx::rectangle_class&amp; area, <span class="keywordtype">void</span>* aux = 0);
-<a name="l01278"></a>01278     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="structsxsdk_1_1figure__view__interface.html#af2c234531168c572665b4fc34e17090a" title="Waits for OpenGL rendering to finish.">wait</a> (<span class="keywordtype">void</span>* aux = 0);
-<a name="l01280"></a>01280     <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="structsxsdk_1_1figure__view__interface.html#aa118aa1b273ddaf0362833ae72e514f7" title="Get Accumulated redraw time.">get_redraw_time</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
-<a name="l01282"></a>01282     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1figure__view__interface.html">figure_view_interface</a> &amp;<a class="code" href="structsxsdk_1_1figure__view__interface.html#a2613a62b0de2a8ae4b2904efa12d4961" title="Set Accumulated redraw time.">set_redraw_time</a> (<span class="keywordtype">int</span> redraw_time_param, <span class="keywordtype">void</span> * = 0);
-<a name="l01284"></a>01284     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="structsxsdk_1_1figure__view__interface.html#a31f5102669d3941f08ec3d2f895a770a" title="blah.">update</a> (<span class="keywordtype">int</span> viewmask = 15, <span class="keywordtype">void</span>* aux = 0);
-<a name="l01286"></a>01286     <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="structsxsdk_1_1figure__view__interface.html#abf5293b67d972ac515bc14f54bcd5c17" title="Get redraw count. cleared when redraw_time is set to zero.">get_redraw_count</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
-<a name="l01287"></a>01287 };
-<a name="l01288"></a>01288 } <span class="comment">// sxsdk</span>
-<a name="l01290"></a>01290 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
-<a name="l01291"></a><a class="code" href="structsxsdk_1_1meshtools__view__interface.html">01291</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1meshtools__view__interface.html">meshtools_view_interface</a> {
-<a name="l01292"></a>01292 <span class="keyword">public</span>:
+<a name="l01260"></a>01260 };
+<a name="l01261"></a>01261 } <span class="comment">// sxsdk</span>
+<a name="l01263"></a>01263 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
+<a name="l01264"></a><a class="code" href="structsxsdk_1_1status__bar__interface.html">01264</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1status__bar__interface.html">status_bar_interface</a> {
+<a name="l01265"></a>01265 <span class="keyword">public</span>:
+<a name="l01267"></a>01267     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="structsxsdk_1_1status__bar__interface.html#af5a803078a4ff92e55f8dbbea726e678" title="Add message to status bar.">add_message</a> (<span class="keyword">const</span> <span class="keywordtype">char</span>* key, <span class="keyword">const</span> <span class="keywordtype">char</span>* message, <span class="keywordtype">void</span>* aux = 0);
+<a name="l01269"></a>01269     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="structsxsdk_1_1status__bar__interface.html#a520199365f39ef7283944b95296f72f6" title="Remove message from status bar.">remove_message</a> (<span class="keyword">const</span> <span class="keywordtype">char</span>* key, <span class="keywordtype">void</span>* aux = 0);
+<a name="l01271"></a>01271     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="structsxsdk_1_1status__bar__interface.html#ac585bbb83e33e41ac8da8d3b9ef929c6" title="Start indicator.">start_indicator</a> (<span class="keyword">const</span> <span class="keywordtype">char</span>* key, <span class="keywordtype">void</span>* aux = 0);
+<a name="l01273"></a>01273     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="structsxsdk_1_1status__bar__interface.html#a2df52ec68428d3bcd5665942a5047189" title="Stop indicator.">stop_indicator</a> (<span class="keyword">const</span> <span class="keywordtype">char</span>* key, <span class="keywordtype">void</span>* aux = 0);
+<a name="l01274"></a>01274 };
+<a name="l01275"></a>01275 } <span class="comment">// sxsdk</span>
+<a name="l01277"></a>01277 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
+<a name="l01278"></a><a class="code" href="structsxsdk_1_1figure__view__interface.html">01278</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1figure__view__interface.html">figure_view_interface</a> {
+<a name="l01279"></a>01279 <span class="keyword">public</span>:
+<a name="l01282"></a>01282     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="structsxsdk_1_1figure__view__interface.html#a7b02868c2f8e91ca9c4ea866851bf0e7" title="Picks objects using the rectangular region.">pick</a> (<span class="keyword">const</span> sx::rectangle_class&amp; area, <span class="keywordtype">void</span>* aux = 0);
+<a name="l01284"></a>01284     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="structsxsdk_1_1figure__view__interface.html#af2c234531168c572665b4fc34e17090a" title="Waits for OpenGL rendering to finish.">wait</a> (<span class="keywordtype">void</span>* aux = 0);
+<a name="l01286"></a>01286     <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="structsxsdk_1_1figure__view__interface.html#aa118aa1b273ddaf0362833ae72e514f7" title="Get Accumulated redraw time.">get_redraw_time</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l01288"></a>01288     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1figure__view__interface.html">figure_view_interface</a> &amp;<a class="code" href="structsxsdk_1_1figure__view__interface.html#a2613a62b0de2a8ae4b2904efa12d4961" title="Set Accumulated redraw time.">set_redraw_time</a> (<span class="keywordtype">int</span> redraw_time_param, <span class="keywordtype">void</span> * = 0);
+<a name="l01290"></a>01290     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="structsxsdk_1_1figure__view__interface.html#a31f5102669d3941f08ec3d2f895a770a" title="blah.">update</a> (<span class="keywordtype">int</span> viewmask = 15, <span class="keywordtype">void</span>* aux = 0);
+<a name="l01292"></a>01292     <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="structsxsdk_1_1figure__view__interface.html#abf5293b67d972ac515bc14f54bcd5c17" title="Get redraw count. cleared when redraw_time is set to zero.">get_redraw_count</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
 <a name="l01293"></a>01293 };
 <a name="l01294"></a>01294 } <span class="comment">// sxsdk</span>
 <a name="l01296"></a>01296 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
-<a name="l01297"></a><a class="code" href="structsxsdk_1_1figure__window__interface.html">01297</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1figure__window__interface.html">figure_window_interface</a> {
+<a name="l01297"></a><a class="code" href="structsxsdk_1_1meshtools__view__interface.html">01297</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1meshtools__view__interface.html">meshtools_view_interface</a> {
 <a name="l01298"></a>01298 <span class="keyword">public</span>:
-<a name="l01300"></a>01300     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1control__bar__interface.html">sxsdk::control_bar_interface</a>* <a class="code" href="structsxsdk_1_1figure__window__interface.html#a5f877461e45826225e3d49534d3746ef" title="Get The control bar.">get_control_bar_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
-<a name="l01302"></a>01302     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1figure__view__interface.html">sxsdk::figure_view_interface</a>* <a class="code" href="structsxsdk_1_1figure__window__interface.html#a15f68c12fec38e455eaebbdcbf18d7e6" title="Get the figure view.">get_figure_view_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
-<a name="l01304"></a>01304     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1status__bar__interface.html">sxsdk::status_bar_interface</a>* <a class="code" href="structsxsdk_1_1figure__window__interface.html#ae23fbfbac51e52d2ccfe4377543fe160" title="Get the status bar.">get_status_bar_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
-<a name="l01305"></a>01305 };
-<a name="l01306"></a>01306 } <span class="comment">// sxsdk</span>
-<a name="l01308"></a>01308 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
-<a name="l01309"></a><a class="code" href="structsxsdk_1_1image__window__interface.html">01309</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1image__window__interface.html">image_window_interface</a> {
-<a name="l01310"></a>01310 <span class="keyword">public</span>:
-<a name="l01312"></a>01312     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1image__view__interface.html">image_view_interface</a>* <a class="code" href="structsxsdk_1_1image__window__interface.html#a2ca58866f0b18a506a1017ae1e3e9f7f" title="Get The image view.">get_image_view_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
-<a name="l01313"></a>01313 };
-<a name="l01314"></a>01314 } <span class="comment">// sxsdk</span>
-<a name="l01316"></a>01316 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
-<a name="l01317"></a><a class="code" href="structsxsdk_1_1tool__box__window__interface.html">01317</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1tool__box__window__interface.html">tool_box_window_interface</a> {
-<a name="l01318"></a>01318 <span class="keyword">public</span>:
-<a name="l01320"></a>01320     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1tool__box__view__interface.html">tool_box_view_interface</a>* <a class="code" href="structsxsdk_1_1tool__box__window__interface.html#ac19f28f21d82727356f48282f9c52573" title="Get The tool box view.">get_tool_box_view_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
-<a name="l01321"></a>01321 };
-<a name="l01322"></a>01322 } <span class="comment">// sxsdk</span>
-<a name="l01324"></a>01324 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
-<a name="l01325"></a><a class="code" href="structsxsdk_1_1color__window__interface.html">01325</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1color__window__interface.html">color_window_interface</a> {
-<a name="l01326"></a>01326 <span class="keyword">public</span>:
-<a name="l01328"></a>01328     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1color__view__interface.html">color_view_interface</a>* <a class="code" href="structsxsdk_1_1color__window__interface.html#a1ee900058054e1a84ae90f1399580693" title="Get The color view.">get_color_view_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
-<a name="l01329"></a>01329 };
-<a name="l01330"></a>01330 } <span class="comment">// sxsdk</span>
-<a name="l01332"></a>01332 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
-<a name="l01333"></a><a class="code" href="structsxsdk_1_1background__window__interface.html">01333</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1background__window__interface.html">background_window_interface</a> {
-<a name="l01334"></a>01334 <span class="keyword">public</span>:
-<a name="l01336"></a>01336     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1background__view__interface.html">background_view_interface</a>* <a class="code" href="structsxsdk_1_1background__window__interface.html#ae6a6c65efacc25fe267c0a9a48d0402a" title="Get the background view.">get_background_view_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
-<a name="l01337"></a>01337 };
-<a name="l01338"></a>01338 } <span class="comment">// sxsdk</span>
-<a name="l01340"></a>01340 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
-<a name="l01341"></a><a class="code" href="structsxsdk_1_1surface__window__interface.html">01341</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1surface__window__interface.html">surface_window_interface</a> {
-<a name="l01342"></a>01342 <span class="keyword">public</span>:
-<a name="l01344"></a>01344     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1surface__view__interface.html">surface_view_interface</a>* <a class="code" href="structsxsdk_1_1surface__window__interface.html#a94f6619a54637e5c2b3985e9e0c12a05" title="Get The surface view.">get_surface_view_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
-<a name="l01345"></a>01345 };
-<a name="l01346"></a>01346 } <span class="comment">// sxsdk</span>
-<a name="l01348"></a>01348 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
-<a name="l01349"></a><a class="code" href="structsxsdk_1_1browser__window__interface.html">01349</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1browser__window__interface.html">browser_window_interface</a> {
-<a name="l01350"></a>01350 <span class="keyword">public</span>:
-<a name="l01352"></a>01352     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1browser__view__interface.html">browser_view_interface</a>* <a class="code" href="structsxsdk_1_1browser__window__interface.html#a03d72b7cd21fd71a0d97027513f61b08" title="Get The browser view.">get_browser_view_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
-<a name="l01353"></a>01353 };
-<a name="l01354"></a>01354 } <span class="comment">// sxsdk</span>
-<a name="l01356"></a>01356 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
-<a name="l01357"></a><a class="code" href="structsxsdk_1_1correction__window__interface.html">01357</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1correction__window__interface.html">correction_window_interface</a> {
-<a name="l01358"></a>01358 <span class="keyword">public</span>:
-<a name="l01360"></a>01360     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1correction__view__interface.html">correction_view_interface</a>* <a class="code" href="structsxsdk_1_1correction__window__interface.html#aa7ecfef4e322d17f0fcca723efe79882" title="Get The correction view.">get_correction_view_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
-<a name="l01361"></a>01361 };
-<a name="l01362"></a>01362 } <span class="comment">// sxsdk</span>
-<a name="l01364"></a>01364 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
-<a name="l01365"></a><a class="code" href="structsxsdk_1_1camera__window__interface.html">01365</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1camera__window__interface.html">camera_window_interface</a> {
-<a name="l01366"></a>01366 <span class="keyword">public</span>:
-<a name="l01368"></a>01368     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1camera__view__interface.html">camera_view_interface</a>* <a class="code" href="structsxsdk_1_1camera__window__interface.html#afa2dbaba6790d2f42e11d69c59502f42" title="Get The camera view.">get_camera_view_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
-<a name="l01369"></a>01369 };
-<a name="l01370"></a>01370 } <span class="comment">// sxsdk</span>
-<a name="l01372"></a>01372 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
-<a name="l01373"></a><a class="code" href="structsxsdk_1_1distant__light__window__interface.html">01373</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1distant__light__window__interface.html">distant_light_window_interface</a> {
-<a name="l01374"></a>01374 <span class="keyword">public</span>:
-<a name="l01376"></a>01376     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1distant__light__view__interface.html">distant_light_view_interface</a>* <a class="code" href="structsxsdk_1_1distant__light__window__interface.html#a573f02e37adb019d9e236f3295553e1a" title="Get The distant light view.">get_distant_light_view_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
-<a name="l01377"></a>01377 };
-<a name="l01378"></a>01378 } <span class="comment">// sxsdk</span>
-<a name="l01380"></a>01380 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
-<a name="l01381"></a><a class="code" href="structsxsdk_1_1ruler__window__interface.html">01381</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1ruler__window__interface.html">ruler_window_interface</a> {
-<a name="l01382"></a>01382 <span class="keyword">public</span>:
-<a name="l01384"></a>01384     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1ruler__view__interface.html">ruler_view_interface</a>* <a class="code" href="structsxsdk_1_1ruler__window__interface.html#a4606318535b8c774b9bfd6899ddb7c13" title="Get The ruler view.">get_ruler_view_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
-<a name="l01385"></a>01385 };
-<a name="l01386"></a>01386 } <span class="comment">// sxsdk</span>
-<a name="l01388"></a>01388 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
-<a name="l01389"></a><a class="code" href="structsxsdk_1_1message__window__interface.html">01389</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1message__window__interface.html">message_window_interface</a> {
-<a name="l01390"></a>01390 <span class="keyword">public</span>:
-<a name="l01392"></a>01392     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1message__view__interface.html">message_view_interface</a>* <a class="code" href="structsxsdk_1_1message__window__interface.html#a78271ed3bf94fd11b4e1ecb2148257b1" title="Get The message view.">get_message_view_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
-<a name="l01393"></a>01393 };
-<a name="l01394"></a>01394 } <span class="comment">// sxsdk</span>
-<a name="l01396"></a>01396 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
-<a name="l01397"></a><a class="code" href="structsxsdk_1_1script__window__interface.html">01397</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1script__window__interface.html">script_window_interface</a> {
-<a name="l01398"></a>01398 <span class="keyword">public</span>:
-<a name="l01400"></a>01400     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1script__view__interface.html">script_view_interface</a>* <a class="code" href="structsxsdk_1_1script__window__interface.html#a10b0989ef8d6b4436021c65dee053316" title="Get The script view.">get_script_view_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
-<a name="l01401"></a>01401 };
-<a name="l01402"></a>01402 } <span class="comment">// sxsdk</span>
-<a name="l01404"></a>01404 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
-<a name="l01405"></a><a class="code" href="structsxsdk_1_1shortcut__window__interface.html">01405</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1shortcut__window__interface.html">shortcut_window_interface</a> {
-<a name="l01406"></a>01406 <span class="keyword">public</span>:
-<a name="l01408"></a>01408     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1shortcut__view__interface.html">shortcut_view_interface</a>* <a class="code" href="structsxsdk_1_1shortcut__window__interface.html#af85bccd0bd00799dcb02b53930b11b4e" title="Get The shortcut view.">get_shortcut_view_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
-<a name="l01409"></a>01409 };
-<a name="l01410"></a>01410 } <span class="comment">// sxsdk</span>
-<a name="l01412"></a>01412 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
-<a name="l01413"></a><a class="code" href="structsxsdk_1_1radiosity__window__interface.html">01413</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1radiosity__window__interface.html">radiosity_window_interface</a> {
-<a name="l01414"></a>01414 <span class="keyword">public</span>:
-<a name="l01416"></a>01416     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1radiosity__view__interface.html">radiosity_view_interface</a>* <a class="code" href="structsxsdk_1_1radiosity__window__interface.html#a7ba64de96e9dc8bbba4f092c6d5ad006" title="Get The radiosity view.">get_radiosity_view_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
-<a name="l01417"></a>01417 };
-<a name="l01418"></a>01418 } <span class="comment">// sxsdk</span>
-<a name="l01420"></a>01420 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
-<a name="l01421"></a><a class="code" href="structsxsdk_1_1skin__window__interface.html">01421</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1skin__window__interface.html">skin_window_interface</a> {
-<a name="l01422"></a>01422 <span class="keyword">public</span>:
-<a name="l01424"></a>01424     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1skin__view__interface.html">skin_view_interface</a>* <a class="code" href="structsxsdk_1_1skin__window__interface.html#aa138a1d0bd22cc872e81d2b3ada4acc1" title="Get The skin view.">get_skin_view_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
-<a name="l01425"></a>01425 };
-<a name="l01426"></a>01426 } <span class="comment">// sxsdk</span>
-<a name="l01428"></a>01428 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
-<a name="l01429"></a><a class="code" href="structsxsdk_1_1motion__window__interface.html">01429</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1motion__window__interface.html">motion_window_interface</a> {
-<a name="l01430"></a>01430 <span class="keyword">public</span>:
-<a name="l01432"></a>01432     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1motion__view__interface.html">motion_view_interface</a>* <a class="code" href="structsxsdk_1_1motion__window__interface.html#affc0a36620bf814ff1f77cb2be63e60b" title="Get The motion view.">get_motion_view_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
-<a name="l01433"></a>01433 };
-<a name="l01434"></a>01434 } <span class="comment">// sxsdk</span>
-<a name="l01436"></a>01436 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
-<a name="l01437"></a><a class="code" href="structsxsdk_1_1object__info__window__interface.html">01437</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1object__info__window__interface.html">object_info_window_interface</a> {
-<a name="l01438"></a>01438 <span class="keyword">public</span>:
-<a name="l01440"></a>01440     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1object__info__view__interface.html">object_info_view_interface</a>* <a class="code" href="structsxsdk_1_1object__info__window__interface.html#a38187be47bdb5bfa3e8d2d4876b585a1" title="Get The object info. view.">get_object_info_view_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
-<a name="l01441"></a>01441 };
-<a name="l01442"></a>01442 } <span class="comment">// sxsdk</span>
-<a name="l01444"></a>01444 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
-<a name="l01445"></a><a class="code" href="structsxsdk_1_1aggregate__window__interface.html">01445</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1aggregate__window__interface.html">aggregate_window_interface</a> {
-<a name="l01446"></a>01446 <span class="keyword">public</span>:
-<a name="l01448"></a>01448     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1aggregate__view__interface.html">aggregate_view_interface</a>* <a class="code" href="structsxsdk_1_1aggregate__window__interface.html#ae1bcfb2ca018f348745b77d149abaee9" title="Get aggregate view interface.">get_aggregate_view_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
-<a name="l01449"></a>01449 };
-<a name="l01450"></a>01450 } <span class="comment">// sxsdk</span>
-<a name="l01452"></a>01452 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
-<a name="l01453"></a><a class="code" href="structsxsdk_1_1meshtools__window__interface.html">01453</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1meshtools__window__interface.html">meshtools_window_interface</a> {
-<a name="l01454"></a>01454 <span class="keyword">public</span>:
-<a name="l01456"></a>01456     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1meshtools__view__interface.html">meshtools_view_interface</a>* <a class="code" href="structsxsdk_1_1meshtools__window__interface.html#a1a1ec9283ce4c6021c55556339cbeb25" title="Get meshtools view interface.">get_meshtools_view_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
-<a name="l01457"></a>01457 };
-<a name="l01458"></a>01458 } <span class="comment">// sxsdk</span>
+<a name="l01299"></a>01299 };
+<a name="l01300"></a>01300 } <span class="comment">// sxsdk</span>
+<a name="l01302"></a>01302 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
+<a name="l01303"></a><a class="code" href="structsxsdk_1_1figure__window__interface.html">01303</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1figure__window__interface.html">figure_window_interface</a> {
+<a name="l01304"></a>01304 <span class="keyword">public</span>:
+<a name="l01306"></a>01306     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1control__bar__interface.html">sxsdk::control_bar_interface</a>* <a class="code" href="structsxsdk_1_1figure__window__interface.html#a5f877461e45826225e3d49534d3746ef" title="Get The control bar.">get_control_bar_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l01308"></a>01308     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1figure__view__interface.html">sxsdk::figure_view_interface</a>* <a class="code" href="structsxsdk_1_1figure__window__interface.html#a15f68c12fec38e455eaebbdcbf18d7e6" title="Get the figure view.">get_figure_view_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l01310"></a>01310     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1status__bar__interface.html">sxsdk::status_bar_interface</a>* <a class="code" href="structsxsdk_1_1figure__window__interface.html#ae23fbfbac51e52d2ccfe4377543fe160" title="Get the status bar.">get_status_bar_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l01311"></a>01311 };
+<a name="l01312"></a>01312 } <span class="comment">// sxsdk</span>
+<a name="l01314"></a>01314 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
+<a name="l01315"></a><a class="code" href="structsxsdk_1_1image__window__interface.html">01315</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1image__window__interface.html">image_window_interface</a> {
+<a name="l01316"></a>01316 <span class="keyword">public</span>:
+<a name="l01318"></a>01318     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1image__view__interface.html">image_view_interface</a>* <a class="code" href="structsxsdk_1_1image__window__interface.html#a2ca58866f0b18a506a1017ae1e3e9f7f" title="Get The image view.">get_image_view_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l01319"></a>01319 };
+<a name="l01320"></a>01320 } <span class="comment">// sxsdk</span>
+<a name="l01322"></a>01322 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
+<a name="l01323"></a><a class="code" href="structsxsdk_1_1tool__box__window__interface.html">01323</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1tool__box__window__interface.html">tool_box_window_interface</a> {
+<a name="l01324"></a>01324 <span class="keyword">public</span>:
+<a name="l01326"></a>01326     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1tool__box__view__interface.html">tool_box_view_interface</a>* <a class="code" href="structsxsdk_1_1tool__box__window__interface.html#ac19f28f21d82727356f48282f9c52573" title="Get The tool box view.">get_tool_box_view_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l01327"></a>01327 };
+<a name="l01328"></a>01328 } <span class="comment">// sxsdk</span>
+<a name="l01330"></a>01330 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
+<a name="l01331"></a><a class="code" href="structsxsdk_1_1color__window__interface.html">01331</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1color__window__interface.html">color_window_interface</a> {
+<a name="l01332"></a>01332 <span class="keyword">public</span>:
+<a name="l01334"></a>01334     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1color__view__interface.html">color_view_interface</a>* <a class="code" href="structsxsdk_1_1color__window__interface.html#a1ee900058054e1a84ae90f1399580693" title="Get The color view.">get_color_view_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l01335"></a>01335 };
+<a name="l01336"></a>01336 } <span class="comment">// sxsdk</span>
+<a name="l01338"></a>01338 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
+<a name="l01339"></a><a class="code" href="structsxsdk_1_1background__window__interface.html">01339</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1background__window__interface.html">background_window_interface</a> {
+<a name="l01340"></a>01340 <span class="keyword">public</span>:
+<a name="l01342"></a>01342     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1background__view__interface.html">background_view_interface</a>* <a class="code" href="structsxsdk_1_1background__window__interface.html#ae6a6c65efacc25fe267c0a9a48d0402a" title="Get the background view.">get_background_view_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l01343"></a>01343 };
+<a name="l01344"></a>01344 } <span class="comment">// sxsdk</span>
+<a name="l01346"></a>01346 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
+<a name="l01347"></a><a class="code" href="structsxsdk_1_1surface__window__interface.html">01347</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1surface__window__interface.html">surface_window_interface</a> {
+<a name="l01348"></a>01348 <span class="keyword">public</span>:
+<a name="l01350"></a>01350     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1surface__view__interface.html">surface_view_interface</a>* <a class="code" href="structsxsdk_1_1surface__window__interface.html#a94f6619a54637e5c2b3985e9e0c12a05" title="Get The surface view.">get_surface_view_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l01351"></a>01351 };
+<a name="l01352"></a>01352 } <span class="comment">// sxsdk</span>
+<a name="l01354"></a>01354 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
+<a name="l01355"></a><a class="code" href="structsxsdk_1_1browser__window__interface.html">01355</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1browser__window__interface.html">browser_window_interface</a> {
+<a name="l01356"></a>01356 <span class="keyword">public</span>:
+<a name="l01358"></a>01358     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1browser__view__interface.html">browser_view_interface</a>* <a class="code" href="structsxsdk_1_1browser__window__interface.html#a03d72b7cd21fd71a0d97027513f61b08" title="Get The browser view.">get_browser_view_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l01359"></a>01359 };
+<a name="l01360"></a>01360 } <span class="comment">// sxsdk</span>
+<a name="l01362"></a>01362 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
+<a name="l01363"></a><a class="code" href="structsxsdk_1_1correction__window__interface.html">01363</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1correction__window__interface.html">correction_window_interface</a> {
+<a name="l01364"></a>01364 <span class="keyword">public</span>:
+<a name="l01366"></a>01366     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1correction__view__interface.html">correction_view_interface</a>* <a class="code" href="structsxsdk_1_1correction__window__interface.html#aa7ecfef4e322d17f0fcca723efe79882" title="Get The correction view.">get_correction_view_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l01367"></a>01367 };
+<a name="l01368"></a>01368 } <span class="comment">// sxsdk</span>
+<a name="l01370"></a>01370 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
+<a name="l01371"></a><a class="code" href="structsxsdk_1_1camera__window__interface.html">01371</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1camera__window__interface.html">camera_window_interface</a> {
+<a name="l01372"></a>01372 <span class="keyword">public</span>:
+<a name="l01374"></a>01374     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1camera__view__interface.html">camera_view_interface</a>* <a class="code" href="structsxsdk_1_1camera__window__interface.html#afa2dbaba6790d2f42e11d69c59502f42" title="Get The camera view.">get_camera_view_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l01375"></a>01375 };
+<a name="l01376"></a>01376 } <span class="comment">// sxsdk</span>
+<a name="l01378"></a>01378 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
+<a name="l01379"></a><a class="code" href="structsxsdk_1_1distant__light__window__interface.html">01379</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1distant__light__window__interface.html">distant_light_window_interface</a> {
+<a name="l01380"></a>01380 <span class="keyword">public</span>:
+<a name="l01382"></a>01382     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1distant__light__view__interface.html">distant_light_view_interface</a>* <a class="code" href="structsxsdk_1_1distant__light__window__interface.html#a573f02e37adb019d9e236f3295553e1a" title="Get The distant light view.">get_distant_light_view_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l01383"></a>01383 };
+<a name="l01384"></a>01384 } <span class="comment">// sxsdk</span>
+<a name="l01386"></a>01386 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
+<a name="l01387"></a><a class="code" href="structsxsdk_1_1ruler__window__interface.html">01387</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1ruler__window__interface.html">ruler_window_interface</a> {
+<a name="l01388"></a>01388 <span class="keyword">public</span>:
+<a name="l01390"></a>01390     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1ruler__view__interface.html">ruler_view_interface</a>* <a class="code" href="structsxsdk_1_1ruler__window__interface.html#a4606318535b8c774b9bfd6899ddb7c13" title="Get The ruler view.">get_ruler_view_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l01391"></a>01391 };
+<a name="l01392"></a>01392 } <span class="comment">// sxsdk</span>
+<a name="l01394"></a>01394 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
+<a name="l01395"></a><a class="code" href="structsxsdk_1_1message__window__interface.html">01395</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1message__window__interface.html">message_window_interface</a> {
+<a name="l01396"></a>01396 <span class="keyword">public</span>:
+<a name="l01398"></a>01398     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1message__view__interface.html">message_view_interface</a>* <a class="code" href="structsxsdk_1_1message__window__interface.html#a78271ed3bf94fd11b4e1ecb2148257b1" title="Get The message view.">get_message_view_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l01399"></a>01399 };
+<a name="l01400"></a>01400 } <span class="comment">// sxsdk</span>
+<a name="l01402"></a>01402 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
+<a name="l01403"></a><a class="code" href="structsxsdk_1_1script__window__interface.html">01403</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1script__window__interface.html">script_window_interface</a> {
+<a name="l01404"></a>01404 <span class="keyword">public</span>:
+<a name="l01406"></a>01406     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1script__view__interface.html">script_view_interface</a>* <a class="code" href="structsxsdk_1_1script__window__interface.html#a10b0989ef8d6b4436021c65dee053316" title="Get The script view.">get_script_view_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l01407"></a>01407 };
+<a name="l01408"></a>01408 } <span class="comment">// sxsdk</span>
+<a name="l01410"></a>01410 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
+<a name="l01411"></a><a class="code" href="structsxsdk_1_1shortcut__window__interface.html">01411</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1shortcut__window__interface.html">shortcut_window_interface</a> {
+<a name="l01412"></a>01412 <span class="keyword">public</span>:
+<a name="l01414"></a>01414     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1shortcut__view__interface.html">shortcut_view_interface</a>* <a class="code" href="structsxsdk_1_1shortcut__window__interface.html#af85bccd0bd00799dcb02b53930b11b4e" title="Get The shortcut view.">get_shortcut_view_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l01415"></a>01415 };
+<a name="l01416"></a>01416 } <span class="comment">// sxsdk</span>
+<a name="l01418"></a>01418 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
+<a name="l01419"></a><a class="code" href="structsxsdk_1_1radiosity__window__interface.html">01419</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1radiosity__window__interface.html">radiosity_window_interface</a> {
+<a name="l01420"></a>01420 <span class="keyword">public</span>:
+<a name="l01422"></a>01422     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1radiosity__view__interface.html">radiosity_view_interface</a>* <a class="code" href="structsxsdk_1_1radiosity__window__interface.html#a7ba64de96e9dc8bbba4f092c6d5ad006" title="Get The radiosity view.">get_radiosity_view_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l01423"></a>01423 };
+<a name="l01424"></a>01424 } <span class="comment">// sxsdk</span>
+<a name="l01426"></a>01426 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
+<a name="l01427"></a><a class="code" href="structsxsdk_1_1skin__window__interface.html">01427</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1skin__window__interface.html">skin_window_interface</a> {
+<a name="l01428"></a>01428 <span class="keyword">public</span>:
+<a name="l01430"></a>01430     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1skin__view__interface.html">skin_view_interface</a>* <a class="code" href="structsxsdk_1_1skin__window__interface.html#aa138a1d0bd22cc872e81d2b3ada4acc1" title="Get The skin view.">get_skin_view_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l01431"></a>01431 };
+<a name="l01432"></a>01432 } <span class="comment">// sxsdk</span>
+<a name="l01434"></a>01434 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
+<a name="l01435"></a><a class="code" href="structsxsdk_1_1motion__window__interface.html">01435</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1motion__window__interface.html">motion_window_interface</a> {
+<a name="l01436"></a>01436 <span class="keyword">public</span>:
+<a name="l01438"></a>01438     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1motion__view__interface.html">motion_view_interface</a>* <a class="code" href="structsxsdk_1_1motion__window__interface.html#affc0a36620bf814ff1f77cb2be63e60b" title="Get The motion view.">get_motion_view_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l01439"></a>01439 };
+<a name="l01440"></a>01440 } <span class="comment">// sxsdk</span>
+<a name="l01442"></a>01442 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
+<a name="l01443"></a><a class="code" href="structsxsdk_1_1object__info__window__interface.html">01443</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1object__info__window__interface.html">object_info_window_interface</a> {
+<a name="l01444"></a>01444 <span class="keyword">public</span>:
+<a name="l01446"></a>01446     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1object__info__view__interface.html">object_info_view_interface</a>* <a class="code" href="structsxsdk_1_1object__info__window__interface.html#a38187be47bdb5bfa3e8d2d4876b585a1" title="Get The object info. view.">get_object_info_view_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l01447"></a>01447 };
+<a name="l01448"></a>01448 } <span class="comment">// sxsdk</span>
+<a name="l01450"></a>01450 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
+<a name="l01451"></a><a class="code" href="structsxsdk_1_1aggregate__window__interface.html">01451</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1aggregate__window__interface.html">aggregate_window_interface</a> {
+<a name="l01452"></a>01452 <span class="keyword">public</span>:
+<a name="l01454"></a>01454     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1aggregate__view__interface.html">aggregate_view_interface</a>* <a class="code" href="structsxsdk_1_1aggregate__window__interface.html#ae1bcfb2ca018f348745b77d149abaee9" title="Get aggregate view interface.">get_aggregate_view_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l01455"></a>01455 };
+<a name="l01456"></a>01456 } <span class="comment">// sxsdk</span>
+<a name="l01458"></a>01458 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
+<a name="l01459"></a><a class="code" href="structsxsdk_1_1meshtools__window__interface.html">01459</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1meshtools__window__interface.html">meshtools_window_interface</a> {
+<a name="l01460"></a>01460 <span class="keyword">public</span>:
+<a name="l01462"></a>01462     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1meshtools__view__interface.html">meshtools_view_interface</a>* <a class="code" href="structsxsdk_1_1meshtools__window__interface.html#a1a1ec9283ce4c6021c55556339cbeb25" title="Get meshtools view interface.">get_meshtools_view_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l01463"></a>01463 };
+<a name="l01464"></a>01464 } <span class="comment">// sxsdk</span>
+<a name="l01466"></a>01466 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
+<a name="l01467"></a><a class="code" href="structsxsdk_1_1gridmanager__view__interface.html">01467</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1gridmanager__view__interface.html">gridmanager_view_interface</a> {
+<a name="l01468"></a>01468 <span class="keyword">public</span>:
+<a name="l01470"></a>01470     <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="structsxsdk_1_1gridmanager__view__interface.html#ac1e7f1aaf5311e4e4a1ce994f2a84dba" title="Return numbers of servers.">get_server_total</a> (<span class="keywordtype">void</span>* aux = 0);
+<a name="l01472"></a>01472     <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="structsxsdk_1_1gridmanager__view__interface.html#a274d6fc3398a7e17ca8a760fe7708128" title="Return server name.">get_server_name</a> (<span class="keywordtype">int</span> i, <span class="keywordtype">void</span>* aux = 0);
+<a name="l01474"></a>01474     <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="structsxsdk_1_1gridmanager__view__interface.html#ae1e5614f45db01d2092ab5c37d78c78b" title="Return server ip.">get_server_ip</a> (<span class="keywordtype">int</span> i, <span class="keywordtype">void</span>* aux = 0);
+<a name="l01476"></a>01476     <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="structsxsdk_1_1gridmanager__view__interface.html#ae44ef336329fc7e35d292170483756db" title="Return server is checked.">get_server_check</a> (<span class="keywordtype">int</span> i, <span class="keywordtype">void</span>* aux = 0);
+<a name="l01478"></a>01478     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="structsxsdk_1_1gridmanager__view__interface.html#a2714d01ef0f7919a92feb82af49fa432" title="Check server state.">set_server_check</a> (<span class="keywordtype">int</span> i, <span class="keywordtype">bool</span> useit, <span class="keywordtype">void</span>* aux = 0);
+<a name="l01480"></a>01480     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="structsxsdk_1_1gridmanager__view__interface.html#aec3421ffbe68ee9537d366347067f163" title="Remove server from the list.">remove_server</a> (<span class="keywordtype">int</span> i, <span class="keywordtype">void</span>* aux = 0);
+<a name="l01482"></a>01482     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="structsxsdk_1_1gridmanager__view__interface.html#ab85a63d1be203947ee0b123169e49fbd" title="Refresh server list.">refresh_server_list</a> (<span class="keywordtype">void</span>* aux = 0);
+<a name="l01484"></a>01484     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="structsxsdk_1_1gridmanager__view__interface.html#a92aeacc6b33148477edb9dda832a9e9d" title="Append server to the list.">add_server</a> (<span class="keyword">const</span> <span class="keywordtype">char</span>* name, <span class="keyword">const</span> <span class="keywordtype">char</span>* ip);
+<a name="l01486"></a>01486     <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="structsxsdk_1_1gridmanager__view__interface.html#ab640d73a7cfa4227d2e25a9b2cd80688" title="Return server version.">get_server_version</a> (<span class="keywordtype">int</span> i, <span class="keywordtype">void</span>* aux = 0);
+<a name="l01488"></a>01488     <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="structsxsdk_1_1gridmanager__view__interface.html#a92b3bc6b4a57d342d2543c24fcb53ab5" title="Return server OS.">get_server_os</a> (<span class="keywordtype">int</span> i, <span class="keywordtype">void</span>* aux = 0);
+<a name="l01489"></a>01489 };
+<a name="l01490"></a>01490 } <span class="comment">// sxsdk</span>
+<a name="l01492"></a>01492 <span class="comment"></span><span class="keyword">namespace </span>sxsdk {
+<a name="l01493"></a><a class="code" href="structsxsdk_1_1gridmanager__window__interface.html">01493</a> <span class="keyword">struct </span><a class="code" href="structsxsdk_1_1gridmanager__window__interface.html">gridmanager_window_interface</a> {
+<a name="l01494"></a>01494 <span class="keyword">public</span>:
+<a name="l01496"></a>01496     <span class="keyword">virtual</span> <a class="code" href="structsxsdk_1_1gridmanager__view__interface.html">gridmanager_view_interface</a>* <a class="code" href="structsxsdk_1_1gridmanager__window__interface.html#aab48772dcd93273dfb4f4546ceda15a2" title="Get The gridmanager view.">get_gridmanager_view_interface</a> (<span class="keywordtype">void</span> * = 0) <span class="keyword">const</span>;
+<a name="l01497"></a>01497 };
+<a name="l01498"></a>01498 } <span class="comment">// sxsdk</span>
 </pre></div></div>
 <br><br>
 <hr>

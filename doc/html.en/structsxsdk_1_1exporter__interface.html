@@ -190,6 +190,16 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa0f9a837f4c60839246ed687fb73745c"></a><!-- doxytag: member="sxsdk::exporter_interface::end_polymesh_face_group" ref="aa0f9a837f4c60839246ed687fb73745c" args="(void *aux=0)" -->
 virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1exporter__interface.html#aa0f9a837f4c60839246ed687fb73745c">end_polymesh_face_group</a> (void *aux=0)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Overridable. Called to indicate the end of a sequence of faces in face group. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae7a2c9fe86dcf16966f24cf6b93b59a2"></a><!-- doxytag: member="sxsdk::exporter_interface::must_skip" ref="ae7a2c9fe86dcf16966f24cf6b93b59a2" args="(void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1exporter__interface.html#ae7a2c9fe86dcf16966f24cf6b93b59a2">must_skip</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Overridable. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a32739dea9a4737ea4911fc9c1817c7e5"></a><!-- doxytag: member="sxsdk::exporter_interface::can_accept_skip" ref="a32739dea9a4737ea4911fc9c1817c7e5" args="(void *aux=0)" -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1exporter__interface.html#a32739dea9a4737ea4911fc9c1817c7e5">can_accept_skip</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Overridable. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1exporter__interface.html#a2d69d48a244ba80394a977d2142e10a6">can_accept_mirror</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Overridable. Override and return true if the plugin can handle mirror objects.  <a href="#a2d69d48a244ba80394a977d2142e10a6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1exporter__interface.html#ab87e68667adb90030318b183560b29ed">do_mirror</a> (<a class="el" href="structsxsdk_1_1shape__class.html">shape_class</a> &amp;shape, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Overridable. Called when the current object is a mirror object. Called only if the <a class="el" href="structsxsdk_1_1exporter__interface.html#a2d69d48a244ba80394a977d2142e10a6" title="Overridable. Override and return true if the plugin can handle mirror objects.">can_accept_mirror()</a> function returns true.  <a href="#ab87e68667adb90030318b183560b29ed"></a><br/></td></tr>
 </table>
 <hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="a492d39c41037848cad2e82e0733dfc88"></a><!-- doxytag: member="sxsdk::exporter_interface::begin_polymesh_face" ref="a492d39c41037848cad2e82e0733dfc88" args="(int n, void *aux=0)" -->
@@ -419,6 +429,27 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 <p>Overridable. If override and return false, the plugins avoid calling do_meshes to process by polygonmesh. </p>
 <p>Call do_meshes if true is returned. </p>
+
+</div>
+</div>
+<a class="anchor" id="a2d69d48a244ba80394a977d2142e10a6"></a><!-- doxytag: member="sxsdk::exporter_interface::can_accept_mirror" ref="a2d69d48a244ba80394a977d2142e10a6" args="(void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::exporter_interface::can_accept_mirror </td>
+          <td>(</td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Overridable. Override and return true if the plugin can handle mirror objects. </p>
+<p>If false is returned, make the mirror objects real objects and call the callback functions like <code><a class="el" href="structsxsdk_1_1exporter__interface.html#aa13a6ec649a309e7a3a504513775f3d8" title="Overridable. Called when the current object is an open line object, or an object...">do_polygon()</a></code>. </p>
 
 </div>
 </div>
@@ -785,6 +816,42 @@ virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>m</em>&nbsp;</td><td>the mesh data </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab87e68667adb90030318b183560b29ed"></a><!-- doxytag: member="sxsdk::exporter_interface::do_mirror" ref="ab87e68667adb90030318b183560b29ed" args="(shape_class &amp;shape, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void sxsdk::exporter_interface::do_mirror </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structsxsdk_1_1shape__class.html">shape_class</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>shape</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Overridable. Called when the current object is a mirror object. Called only if the <a class="el" href="structsxsdk_1_1exporter__interface.html#a2d69d48a244ba80394a977d2142e10a6" title="Overridable. Override and return true if the plugin can handle mirror objects.">can_accept_mirror()</a> function returns true. </p>
+<p>Used if exporting to a format supporting mirror objects.</p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>shape</em>&nbsp;</td><td>The mirror object. </td></tr>
   </table>
   </dd>
 </dl>

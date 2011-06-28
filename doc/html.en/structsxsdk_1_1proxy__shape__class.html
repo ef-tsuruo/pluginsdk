@@ -86,6 +86,10 @@ virtual <a class="el" href="structsxsdk_1_1proxy__shape__class.html">proxy_shape
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6e128b290cefb1d1353eb130bae2326c"></a><!-- doxytag: member="sxsdk::proxy_shape_class::get_surface_mask_index" ref="a6e128b290cefb1d1353eb130bae2326c" args="(void *=0) const " -->
 virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1proxy__shape__class.html#a6e128b290cefb1d1353eb130bae2326c">get_surface_mask_index</a> (void *=0) const </td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the number of mask assigned to the surface material. It is used as a surface material mask of multi-pass rendering. When the mask is not set, this value will be -1. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structsxsdk_1_1proxy__shape__class.html">sxsdk::proxy_shape_class</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1proxy__shape__class.html#acd02d21a1283f6e0d62bdcd095c08125">set_face_group_surface_id_color</a> (const int face_group_index, const sxsdk::vec3 &amp;surface_id_color_param, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Assined color for each surface material(face group). It is used as a surface material id of multi-pass rendering.  <a href="#acd02d21a1283f6e0d62bdcd095c08125"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual sxsdk::vec3&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1proxy__shape__class.html#a052c630857cc96614ce527c155e9342e">get_face_group_surface_id_color</a> (const int face_group_index=-1, void *aux=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Assined color for each surface material(face group). It is used as a surface material id of multi-pass rendering.  <a href="#a052c630857cc96614ce527c155e9342e"></a><br/></td></tr>
 </table>
 <hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="a79a4ca9403758b8edd500486c146601a"></a><!-- doxytag: member="sxsdk::proxy_shape_class::get_bro" ref="a79a4ca9403758b8edd500486c146601a" args="(void *=0) const " -->
@@ -108,6 +112,41 @@ virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <p>The next shape of a proxi shape is always a proxy shape. </p>
 
 <p>Reimplemented from <a class="el" href="structsxsdk_1_1shape__class.html#a235917324e86d9cfebf7ed6e13e887ce">sxsdk::shape_class</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a052c630857cc96614ce527c155e9342e"></a><!-- doxytag: member="sxsdk::proxy_shape_class::get_face_group_surface_id_color" ref="a052c630857cc96614ce527c155e9342e" args="(const int face_group_index=&#45;1, void *aux=0) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual sxsdk::vec3 sxsdk::proxy_shape_class::get_face_group_surface_id_color </td>
+          <td>(</td>
+          <td class="paramtype">const int&nbsp;</td>
+          <td class="paramname"> <em>face_group_index</em> = <code>-1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td> const<code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Assined color for each surface material(face group). It is used as a surface material id of multi-pass rendering. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>face_group_index</em>&nbsp;</td><td>face group index </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -177,6 +216,48 @@ virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <p>The sis shape of a proxi shape is always a proxy shape. </p>
 
 <p>Reimplemented from <a class="el" href="structsxsdk_1_1shape__class.html#a46e765a64702e7a1ccce6b51bbc5512e">sxsdk::shape_class</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acd02d21a1283f6e0d62bdcd095c08125"></a><!-- doxytag: member="sxsdk::proxy_shape_class::set_face_group_surface_id_color" ref="acd02d21a1283f6e0d62bdcd095c08125" args="(const int face_group_index, const sxsdk::vec3 &amp;surface_id_color_param, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="structsxsdk_1_1proxy__shape__class.html">sxsdk::proxy_shape_class</a>&amp; sxsdk::proxy_shape_class::set_face_group_surface_id_color </td>
+          <td>(</td>
+          <td class="paramtype">const int&nbsp;</td>
+          <td class="paramname"> <em>face_group_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const sxsdk::vec3 &amp;&nbsp;</td>
+          <td class="paramname"> <em>surface_id_color_param</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Assined color for each surface material(face group). It is used as a surface material id of multi-pass rendering. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>face_group_index</em>&nbsp;</td><td>face group index </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>surface_id_color_param</em>&nbsp;</td><td>color </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

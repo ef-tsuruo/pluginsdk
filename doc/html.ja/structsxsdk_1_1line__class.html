@@ -186,10 +186,10 @@ virtual float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" h
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">光源の光沢の値を取得する。 <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0e38206e31a9cd687cc65baebb449d49"></a><!-- doxytag: member="sxsdk::line_class::set_diffuse" ref="a0e38206e31a9cd687cc65baebb449d49" args="(float diffuse_param, void *=0)" -->
 virtual <a class="el" href="structsxsdk_1_1line__class.html">line_class</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1line__class.html#a0e38206e31a9cd687cc65baebb449d49">set_diffuse</a> (float diffuse_param, void *=0)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">光の拡散反射の値を設定する。 <br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">光源の拡散反射の値を設定する。 <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abaa7948245cc3f2e1270eb1a6917c2a2"></a><!-- doxytag: member="sxsdk::line_class::get_diffuse" ref="abaa7948245cc3f2e1270eb1a6917c2a2" args="(void *=0) const " -->
 virtual float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1line__class.html#abaa7948245cc3f2e1270eb1a6917c2a2">get_diffuse</a> (void *=0) const </td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">光の拡散反射の値を取得する。 <br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">光源の拡散反射の値を取得する。 <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1line__class.html#adb9452957ed71c1c6146f0604d78f44f">calculate_parameter</a> (float distance, void *aux=0)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">線形状の距離ベースの位置(0.0~1.0)からパラメータベースの位置(0.0~1.0)に変換する  <a href="#adb9452957ed71c1c6146f0604d78f44f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abfff2f2ca6dd9f97ba885c41cac20fc2"></a><!-- doxytag: member="sxsdk::line_class::set_volume_light" ref="abfff2f2ca6dd9f97ba885c41cac20fc2" args="(bool volume_light_param, void *=0)" -->
@@ -229,6 +229,24 @@ virtual <a class="el" href="structsxsdk_1_1line__class.html">line_class</a> &amp
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa7424bb249751acd28852f1764260e4"></a><!-- doxytag: member="sxsdk::line_class::get_volume_light_quality" ref="afa7424bb249751acd28852f1764260e4" args="(void *=0) const " -->
 virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1line__class.html#afa7424bb249751acd28852f1764260e4">get_volume_light_quality</a> (void *=0) const </td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ボリュームライトの品質を取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a87159eb32506d09d0c44f61665a3372d"></a><!-- doxytag: member="sxsdk::line_class::set_has_light_color" ref="a87159eb32506d09d0c44f61665a3372d" args="(bool has_light_color_param, void *=0)" -->
+virtual <a class="el" href="structsxsdk_1_1line__class.html">line_class</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1line__class.html#a87159eb32506d09d0c44f61665a3372d">set_has_light_color</a> (bool has_light_color_param, void *=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">光源の色が有効かどうかを設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abdd1015ee1aa37c623a39ad3ea552068"></a><!-- doxytag: member="sxsdk::line_class::get_has_light_color" ref="abdd1015ee1aa37c623a39ad3ea552068" args="(void *=0) const " -->
+virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1line__class.html#abdd1015ee1aa37c623a39ad3ea552068">get_has_light_color</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">光源の色が有効かどうかを取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a79696937d1894bb88ec63228b342b0cd"></a><!-- doxytag: member="sxsdk::line_class::set_light_color" ref="a79696937d1894bb88ec63228b342b0cd" args="(const sxsdk::rgb_class &amp;light_color_param, void *=0)" -->
+virtual <a class="el" href="structsxsdk_1_1line__class.html">line_class</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1line__class.html#a79696937d1894bb88ec63228b342b0cd">set_light_color</a> (const sxsdk::rgb_class &amp;light_color_param, void *=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">光源の色を設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7da2eab3912447f81efcb8f37d33cec2"></a><!-- doxytag: member="sxsdk::line_class::get_light_color" ref="a7da2eab3912447f81efcb8f37d33cec2" args="(void *=0) const " -->
+virtual sxsdk::rgb_class&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1line__class.html#a7da2eab3912447f81efcb8f37d33cec2">get_light_color</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">光源の色を取得する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad809ae0c6bc9fff5457864e9d557bbe5"></a><!-- doxytag: member="sxsdk::line_class::set_light_color_quantity" ref="ad809ae0c6bc9fff5457864e9d557bbe5" args="(float light_color_quantity_param, void *=0)" -->
+virtual <a class="el" href="structsxsdk_1_1line__class.html">line_class</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1line__class.html#ad809ae0c6bc9fff5457864e9d557bbe5">set_light_color_quantity</a> (float light_color_quantity_param, void *=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">光源の色の適用率を設定する。 <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aafcb5c9ed4527547a2f506674967e384"></a><!-- doxytag: member="sxsdk::line_class::get_light_color_quantity" ref="aafcb5c9ed4527547a2f506674967e384" args="(void *=0) const " -->
+virtual float&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1line__class.html#aafcb5c9ed4527547a2f506674967e384">get_light_color_quantity</a> (void *=0) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">光源の色の適用率を取得する。 <br/></td></tr>
 </table>
 <hr/><h2>関数</h2>
 <a class="anchor" id="a695ce093451a9b30083028680ae8e071"></a><!-- doxytag: member="sxsdk::line_class::bevel_edge" ref="a695ce093451a9b30083028680ae8e071" args="(float by, void *aux=0)" -->

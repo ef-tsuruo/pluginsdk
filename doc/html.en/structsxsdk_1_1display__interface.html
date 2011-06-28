@@ -217,6 +217,11 @@ virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">blah  <a href="#a75660d465efe57a5496f31b16592fe6e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1display__interface.html#a44a070cb3ec27d576c8b0c51caa80417">get_camera_type</a> (int viewpane, void *aux=0)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">blah  <a href="#a44a070cb3ec27d576c8b0c51caa80417"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1display__interface.html#a6f433cd69a4081ef5745ff86ada6ff8c">set_stereo_type</a> (int stereo_type, void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">blah  <a href="#a6f433cd69a4081ef5745ff86ada6ff8c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab4f5a11d7d7e9f7f1a44cf18d8d81d84"></a><!-- doxytag: member="sxsdk::display_interface::get_stereo_type" ref="ab4f5a11d7d7e9f7f1a44cf18d8d81d84" args="(void *aux=0)" -->
+virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsxsdk_1_1display__interface.html#ab4f5a11d7d7e9f7f1a44cf18d8d81d84">get_stereo_type</a> (void *aux=0)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">figure window stereo type. 0: none, 1: anaglyph, 2: opengl quad buffer. (enum) <br/></td></tr>
 </table>
 <hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="a4b0ddf1d8d20e467755715ccabec6bac"></a><!-- doxytag: member="sxsdk::display_interface::clear_template_image" ref="a4b0ddf1d8d20e467755715ccabec6bac" args="(int viewpane, void *aux=0)" -->
@@ -1207,6 +1212,41 @@ virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" hre
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>viewpane</em>&nbsp;</td><td>select viewpane </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>show_singlesided_param</em>&nbsp;</td><td>blah </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a6f433cd69a4081ef5745ff86ada6ff8c"></a><!-- doxytag: member="sxsdk::display_interface::set_stereo_type" ref="a6f433cd69a4081ef5745ff86ada6ff8c" args="(int stereo_type, void *aux=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool sxsdk::display_interface::set_stereo_type </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>stereo_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>aux</em> = <code>0</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>blah </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>stereo_type</em>&nbsp;</td><td>specify figure window stereo type. 0: none, 1: anaglyph, 2: opengl quad buffer. (enum) </td></tr>
   </table>
   </dd>
 </dl>
