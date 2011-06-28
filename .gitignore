@@ -1,0 +1,32 @@
+
+# Mac OS X
+*.DS_Store
+
+# Windows
+[Tt]humbs.db
+
+# Visual Studio 
+_UpgradeReport_Files/
+*.[Oo]bj
+*.exe
+*.pdb
+*.idb
+*.obj
+*.pdb
+*.exp
+*.ilk
+*.log
+*.tlog
+*.user
+*.filters
+*.suo
+*.sdf
+*.ncb
+*.old
+*.dep
+*.ipch
+[Dd]ebug*/
+[Rr]elease*/
+
+# Project
+[Bb]uild/
