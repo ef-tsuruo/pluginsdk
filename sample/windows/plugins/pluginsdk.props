@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="UserMacros">
+    <BOOSTPATH>../../../../boost_1_43_0</BOOSTPATH>
+    <SXINCLUDEPATH>../../../../include</SXINCLUDEPATH>
+  </PropertyGroup>
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;SXWIN32;_WINDOWS;SXWINDOWS;_SECURE_SCL=0;SXPLUGIN=1;SXCORE=;SXMODEL=;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(BOOSTPATH);$(SXINCLUDEPATH);$(SXINCLUDEPATH)/openexr-1.6.1;$(SXINCLUDEPATH)/opengl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="BOOSTPATH">
+      <Value>$(BOOSTPATH)</Value>
+    </BuildMacro>
+    <BuildMacro Include="SXINCLUDEPATH">
+      <Value>$(SXINCLUDEPATH)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>
