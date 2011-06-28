@@ -6,8 +6,8 @@
 	>
 	<Tool
 		Name="VCCLCompilerTool"
-		PreprocessorDefinitions="WIN32;SXWIN32;_WINDOWS;SXWINDOWS;Windows=1;_SECURE_SCL=0;SXPLUGIN=1;SXCORE=;SXMODEL="
-		AdditionalIncludeDirectories="$(BOOSTPATH);$(INCLUDEPATH);$(INCLUDEPATH)/openexr-1.6.1;$(INCLUDEPATH)/opengl"
+		PreprocessorDefinitions="WIN32;SXWIN32;_WINDOWS;SXWINDOWS;_SECURE_SCL=0;SXPLUGIN=1;SXCORE=;SXMODEL="
+		AdditionalIncludeDirectories="$(BOOSTPATH);$(SXINCLUDEPATH);$(SXINCLUDEPATH)/openexr-1.6.1;$(SXINCLUDEPATH)/opengl"
 		DisableSpecificWarnings="4819"
 	/>
 	<UserMacro
@@ -15,7 +15,7 @@
 		Value="../../../../boost_1_43_0"
 	/>
 	<UserMacro
-		Name="INCLUDEPATH"
+		Name="SXINCLUDEPATH"
 		Value="../../../../include"
 	/>
 </VisualStudioPropertySheet>
