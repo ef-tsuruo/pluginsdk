@@ -25,7 +25,7 @@
 <h1><a class="anchor" id="compile">コンパイル </a></h1><h2><a class="anchor" id="windows">
 ■Windows</a></h2>
 <h2><a class="anchor" id="compile_new_project_windows">
-■Visual C++ .NET 2005でのShadeプラグイン用の新規プロジェクト作成方法</a></h2>
+■Visual C++ .NET 2008でのShadeプラグイン用の新規プロジェクト作成方法</a></h2>
 <h3><a class="anchor" id="compile_new_project_windows_step1">
 1.新規プロジェクトの作成</a></h3>
 <ul>
@@ -50,7 +50,7 @@
  </li>
 <li>構成プロパティ &gt; C/C++ &gt; 全般の「追加のインクルード ディレクトリ」にヘッダーファイルのパスを追加 サンプルでは以下のようになっています。作成したプロジェクトとPluinSDKの位置に応じて変更して下さい。</li>
 </ul>
-<div class="fragment"><pre class="fragment"> ../../include;../../boost_1_33_1
+<div class="fragment"><pre class="fragment"> ../../include;../../boost_1_43_0
 </pre></div><ul>
 <li>構成プロパティ &gt; C/C++ &gt; プリプロセッサの「プリプロセッサの定義」に以下の項目を追加してください。</li>
 </ul>
@@ -65,7 +65,7 @@
 <h2><a class="anchor" id="MacOSX">
 ■MacOSX</a></h2>
 <h2><a class="anchor" id="compile_new_project_mac">
-■Xcode 2.xでのShadeプラグイン用の新規プロジェクト作成方法</a></h2>
+■Xcode 3.xでのShadeプラグイン用の新規プロジェクト作成方法</a></h2>
 <h3><a class="anchor" id="compile_new_project_mac_step1">
 1.新規プロジェクトの作成</a></h3>
 <ul>
@@ -84,9 +84,9 @@
  </li>
 <li>"ラッパーの拡張子"の"bundle"を"shdplugin"に変更します。<br/>
  </li>
-<li>"ヘッダ検索パス"にShade 9 Plugin SDKのincludeとboost_1_33_1のパスを記述します。<br/>
+<li>"ヘッダ検索パス"にShade 12 Plugin SDKのincludeとboost_1_33_1のパスを記述します。<br/>
  </li>
-<li>Shade 9 Plugin SDKのincludeの中にある vectors.cpp、 com.cpp を「グループとファイル」ツリーに追加します。<br/>
+<li>Shade 12 Plugin SDKのincludeの中にある vectors.cpp、 com.cpp を「グループとファイル」ツリーに追加します。<br/>
  </li>
 <li>「グループとファイル」ツリーにあるプリコンパイルヘッダ(標準ではプロジェクト名.pch)に以下を追記してください。</li>
 </ul>
