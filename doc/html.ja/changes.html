@@ -22,7 +22,177 @@
 <div class="contents">
 
 
-<h1><a class="anchor" id="changes">Shade 12 SDKの変更点 </a></h1><p>作成中 </p>
+<h1><a class="anchor" id="changes">Shade 12 SDKの変更点 </a></h1><h2><a class="anchor" id="summary">
+概要</a></h2>
+<p>Shade 12 SDKに対応するための変更点を記載しています。</p>
+<h3><a class="anchor" id="summary_difference_from_11">
+Shade11からの違い</a></h3>
+<h3><a class="anchor" id="changes_0">
+ヘッダの検索パス指定</a></h3>
+<p>SDKのディレクトリを「SDK」と仮定する。 <br/>
+Shade11では、<br/>
+</p>
+<div class="fragment"><pre class="fragment"> SDK/include
+</pre></div><p>を検索パスとして追加。<br/>
+必要に応じてboostのディレクトリを検索パスに加える（なくてもよい）。</p>
+<p>Shade12では、</p>
+<div class="fragment"><pre class="fragment"> SDK/include
+ SDK/boost_1_43_0
+ SDK/include/openexr-1.6.1
+ SDK/include/opengl
+</pre></div><p>を検索パスとして追加。boostも必須になった。ないとビルドが通らない。</p>
+<h3><a class="anchor" id="changes_1">
+プリプロセッサ指定(Win環境の場合）</a></h3>
+<p>Shade11の場合、<br/>
+</p>
+<div class="fragment"><pre class="fragment"> SXWINDOWS
+ SXWIN32
+ DEMO_PLUGIN=0
+ NDEBUG
+ sxdebug=0
+ WIN32
+ _WINDOWS
+ Windows=1
+ PLUGIN=1
+ STDCALL=__stdcall
+ DLLEXPORT=__declspec(dllexport)
+ NOMINMAX
+ for=if(true)for
+ _CRT_SECURE_NO_DEPRECATE
+</pre></div><p>Shade12の場合「NOMINMAX」を削除。これがあると、GdiplusTypes.hにてmin/maxがないということでエラーになる。これ以外に以下を追加。</p>
+<div class="fragment"><pre class="fragment"> SXPLUGIN=1
+ _SECURE_SCL=0
+ PLUGIN_EXPORTS
+ SXCORE=
+ SXMODEL=
+</pre></div><h3><a class="anchor" id="changes_2">
+プリプロセッサ指定（Mac環境の場合）</a></h3>
+<p>「xcconfig/config.plugins.xcconfig」ファイルにて以下の記述を行う。</p>
+<div class="fragment"><pre class="fragment"> ARCHS = x86_64 i386
+ MACOSX_DEPLOYMENT_TARGET[arch=x86_64] = 10.6
+ MACOSX_DEPLOYMENT_TARGET[arch=i386] = 10.5
+ SDKROOT[arch=x86_64] = macosx10.6
+ SDKROOT[arch=i386] = macosx10.5
+</pre></div><div class="fragment"><pre class="fragment"> GCC_VERSION = 4.2
+ GCC_FAST_MATH = YES
+ GCC_SYMBOLS_PRIVATE_EXTERN = YES
+ 
+ GCC_ENABLE_SSE3_EXTENSIONS = YES
+ GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS = NO
+ 
+ MACROS     = SXMACOSX SXDARWIN SXPOSIX __ASSERTMACROS__SXEXPORT= SXCOREFOUNDATION=1 
+         SXCOCOA=1 __stdcall= DLLEXPORT= STDCALL= __PROJECT_BUILDER__=1 SXCONFIGURATION=$(CONFIGURATION) SXCORE=
+ DEBUGMACROS    = 
+ RELEASEMACROS   = NDEBUG
+ BOOSTPATH    = ../../../../boost_1_43_0
+ INCLUDEPATH    = ../../../../include
+ 
+ <span class="comment">//OTHER_CFLAGS   = -force_cpusubtype_ALL -ftree-vectorize -fvisibility=hidden</span>
+ OTHER_CFLAGS   = -force_cpusubtype_ALL -fno-stack-protector
+ OTHER_CPLUSPLUSFLAGS = $(OTHER_CFLAGS) -ffor-scope -Wno-invalid-offsetof
+ 
+ PER_ARCH_CFLAGS_x86_64 = -mfpmath=sse
+ PER_ARCH_CFLAGS_i386 = -mfpmath=sse -DSXCARBON=1
+ 
+ CONFIGURATION_BUILD_DIR = ./build/$(CONFIGURATION)
+ USER_HEADER_SEARCH_PATHS = $(BOOSTPATH) $(INCLUDEPATH) 
+</pre></div><div class="fragment"><pre class="fragment"> $(INCLUDEPATH)/openexr-1.6.1/macos $(INCLUDEPATH)/openexr-1.6.1<span class="comment">/**</span>
+</pre></div><p>複数行に分けている部分は1行にて記述のこと。このファイルは、SDKの 「sample/macosx/xcconfig/config.plugins.xcconfig」をそのまま持ってくるとよい。<br/>
+</p>
+<p>「BOOSTPATH」「INCLUDEPATH」は環境によってパスの記述を変更のこと。<br/>
+これを、ターゲットプロジェクトの情報ウィンドウにて割り当てる。<br/>
+</p>
+<p>「ビルド」タブを選択した状態で、ウィンドウ右下の「ベース」のところで「config.plugins」を選ぶ。<br/>
+</p>
+<p>C/C++コンパイラのバージョンが「GCC 4.2」となっているのを確認。<br/>
+</p>
+<p>「GCC 4.2 - プリプロセス」の「プリプロセッサマクロ」にて「 」を指定する。<br/>
+</p>
+<p>「GCC 4.2 - 言語」の「コンパイルでのソースの解釈」にて「Objective C++」を指定する。<br/>
+</p>
+<p>上記3つがないとビルド時に大量のエラーが出たので、コンパイル／ビルドオプションについて注意する必要がある。<br/>
+</p>
+<p>Macの場合は、細かいオプション変更があるようで<br/>
+</p>
+<p>サンプルプロジェクトをコピーして独自プロジェクトに変換していくほうが早い<br/>
+</p>
+<h3><a class="anchor" id="changes_3">
+ヘッダ指定</a></h3>
+<p>Shade11では</p>
+<div class="fragment"><pre class="fragment"><span class="preprocessor"> #include &quot;shadebuildnumber.h&quot;</span>
+<span class="preprocessor"> #include &quot;plugininterface.h&quot;</span>
+<span class="preprocessor"> #include &quot;shadeinterface.h&quot;</span>
+<span class="preprocessor"> #include &quot;pluginids.h&quot;</span>
+<span class="preprocessor"> #include &quot;sceneinterface.h&quot;</span>
+</pre></div><p>のような指定があったがこれが不要になり、Shade12では代わりに<br/>
+</p>
+<div class="fragment"><pre class="fragment"><span class="preprocessor"> #include &quot;sxsdk.cxx&quot;</span>
+</pre></div><p>を記載する。</p>
+<h3><a class="anchor" id="changes_4">
+プロジェクトに追加する既存ファイル</a></h3>
+<p>Shade11では</p>
+<div class="fragment"><pre class="fragment"> include/com.cpp
+ include/vectors.cpp
+</pre></div><p>をプロジェクトに追加していたが、</p>
+<p>Shade12では</p>
+<div class="fragment"><pre class="fragment"> include/sx/core/com.cpp
+ include/sx/core/vectors.cpp
+ include/sx/core/debug.cpp
+</pre></div><p>をプロジェクトに加えておく。</p>
+<h3><a class="anchor" id="changes_5">
+interfaceの指定</a></h3>
+<p>plugin_interfaceなどの指定はすべて「sxsdkplugin_interface」のように「sxsdk::」をつける。<br/>
+</p>
+<p>ただし、例外的に「unknown_interface」はそのまま。<br/>
+</p>
+<h3><a class="anchor" id="changes_6">
+classの指定</a></h3>
+<p>shape_classなどの指定はすべて「sxsdkshape_class」のように「sxsdk::」をつける。<br/>
+</p>
+<h3><a class="anchor" id="changes_7">
+ベクトルや行列の型</a></h3>
+<div class="fragment"><pre class="fragment"> vec2
+ vec3
+ mat4
+</pre></div><p>などは、Shade12では</p>
+<div class="fragment"><pre class="fragment"> sxsdk::vec2
+ sxsdk::vec3
+ sxsdk::mat4
+</pre></div><p>に変更。ベクトルは、以下を置き換えているものになる。</p>
+<div class="fragment"><pre class="fragment"> sx::vec&lt;float,2&gt; ← vec2
+ sx::vec&lt;float,3&gt; ← vec3
+</pre></div><h3><a class="anchor" id="changes_8">
+enums</a></h3>
+<p>「sxsdkenums::polygon_mesh」などのように「sxsdk::」をつける。<br/>
+また、マルチパスのネームスペースが変更されていた。</p>
+<div class="fragment"><pre class="fragment"> multipath::parameter::z_depth → <a class="code" href="namespacesxsdk_1_1multipass_1_1parameter.html#a932d20d309ec5f153f98f6402fe4ad07a5009a0d02c631762e0e794884b865101" title="Z値.">sxsdk::multipass::parameter::z_depth</a>
+</pre></div><h3><a class="anchor" id="changes_9">
+sxsdk::rgb_classの要素</a></h3>
+<p>Shade11まではrgb_classの要素は(x, y, z)だったが、 Shade12では「sxsdkrgb_class」は(red, green, blue)の要素を持つ。</p>
+<p>同様に、 sxsdk::rgba_classの要素は(red, green, blue, alpha)。</p>
+<h3><a class="anchor" id="changes_10">
+rgb_classでの色の定数</a></h3>
+<p>「rgb_class col = rgb_class::white」のような色の定数表記は、<br/>
+</p>
+<p>「sxsdkvec3 sxsdk::color3::white」に変更。<br/>
+</p>
+<p>ただし、型が異なるため実質ダイレクトにrgb_classに定数を格納できない。<br/>
+</p>
+<div class="fragment"><pre class="fragment"> sxsdk::vec3 vcol = sxsdk::color3::white;
+ sxsdk::rgb_class col = sxsdk::rgb_class(vcol.x, vcol.y, vcol.z);
+</pre></div><p>としないといけない。</p>
+<div class="fragment"><pre class="fragment"> sxsdk::rgb_class col = *(sxsdk::rgb_class *)&amp;vcol;
+</pre></div><p>でもOK。</p>
+<p>このrgb_classとvec3変換部分は結構大変なため、Shade11からのプラグイン移行時は rgb_classをsxsdkvec3に変換し、アクセス関数でsxsdkrgb_classを使用する場合だけ変換して渡すのが手っ取り早い。<br/>
+</p>
+<h3><a class="anchor" id="changes_11">
+sx::rectangle_class</a></h3>
+<p>「sxrectangle_class」の要素はShade11までは、(left, top) - (right, bottom)だったが、<br/>
+</p>
+<p>Shade12ではsxbounds&lt;sx::vec&lt;int,2&gt; &gt;にtypedefされている。<br/>
+</p>
+<p>そのため、要素は(min.x, min.y) - (max.x, max.y)になる。<br/>
+ </p>
 </div>
 <br><br>
 <hr>

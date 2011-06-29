@@ -22,7 +22,93 @@
 <div class="contents">
 
 
-<h1><a class="anchor" id="changes">What's new in Shade 12 Plugin SDK </a></h1><p>blah </p>
+<h1><a class="anchor" id="changes">What's new in Shade 12 Plugin SDK </a></h1><h2><a class="anchor" id="summary">
+Summary</a></h2>
+<h3><a class="anchor" id="summary_difference_from_11">
+summary_difference_from_11</a></h3>
+<h3><a class="anchor" id="changes_0">
+changes_0</a></h3>
+<div class="fragment"><pre class="fragment"></pre></div><div class="fragment"><pre class="fragment"></pre></div><h3><a class="anchor" id="changes_1">
+changes_1</a></h3>
+<div class="fragment"><pre class="fragment"> SXWINDOWS
+ SXWIN32
+ DEMO_PLUGIN=0
+ NDEBUG
+ sxdebug=0
+ WIN32
+ _WINDOWS
+ Windows=1
+ PLUGIN=1
+ STDCALL=__stdcall
+ DLLEXPORT=__declspec(dllexport)
+ NOMINMAX
+ for=if(true)for
+ _CRT_SECURE_NO_DEPRECATE
+</pre></div><div class="fragment"><pre class="fragment"> SXPLUGIN=1
+ _SECURE_SCL=0
+ PLUGIN_EXPORTS
+ SXCORE=
+ SXMODEL=
+</pre></div><h3><a class="anchor" id="changes_2">
+changes_2</a></h3>
+<div class="fragment"><pre class="fragment"> ARCHS = x86_64 i386
+ MACOSX_DEPLOYMENT_TARGET[arch=x86_64] = 10.6
+ MACOSX_DEPLOYMENT_TARGET[arch=i386] = 10.5
+ SDKROOT[arch=x86_64] = macosx10.6
+ SDKROOT[arch=i386] = macosx10.5
+</pre></div><div class="fragment"><pre class="fragment"> GCC_VERSION = 4.2
+ GCC_FAST_MATH = YES
+ GCC_SYMBOLS_PRIVATE_EXTERN = YES
+ 
+ GCC_ENABLE_SSE3_EXTENSIONS = YES
+ GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS = NO
+ 
+ MACROS     = SXMACOSX SXDARWIN SXPOSIX __ASSERTMACROS__SXEXPORT= SXCOREFOUNDATION=1 
+         SXCOCOA=1 __stdcall= DLLEXPORT= STDCALL= __PROJECT_BUILDER__=1 SXCONFIGURATION=$(CONFIGURATION) SXCORE=
+ DEBUGMACROS    = 
+ RELEASEMACROS   = NDEBUG
+ BOOSTPATH    = ../../../../boost_1_43_0
+ INCLUDEPATH    = ../../../../include
+ 
+ <span class="comment">//OTHER_CFLAGS   = -force_cpusubtype_ALL -ftree-vectorize -fvisibility=hidden</span>
+ OTHER_CFLAGS   = -force_cpusubtype_ALL -fno-stack-protector
+ OTHER_CPLUSPLUSFLAGS = $(OTHER_CFLAGS) -ffor-scope -Wno-invalid-offsetof
+ 
+ PER_ARCH_CFLAGS_x86_64 = -mfpmath=sse
+ PER_ARCH_CFLAGS_i386 = -mfpmath=sse -DSXCARBON=1
+ 
+ CONFIGURATION_BUILD_DIR = ./build/$(CONFIGURATION)
+ USER_HEADER_SEARCH_PATHS = $(BOOSTPATH) $(INCLUDEPATH) 
+</pre></div><div class="fragment"><pre class="fragment"> $(INCLUDEPATH)/openexr-1.6.1/macos $(INCLUDEPATH)/openexr-1.6.1<span class="comment">/**</span>
+</pre></div><h3><a class="anchor" id="changes_3">
+changes_3</a></h3>
+<div class="fragment"><pre class="fragment"><span class="preprocessor"> #include &quot;shadebuildnumber.h&quot;</span>
+<span class="preprocessor"> #include &quot;plugininterface.h&quot;</span>
+<span class="preprocessor"> #include &quot;shadeinterface.h&quot;</span>
+<span class="preprocessor"> #include &quot;pluginids.h&quot;</span>
+<span class="preprocessor"> #include &quot;sceneinterface.h&quot;</span>
+</pre></div><div class="fragment"><pre class="fragment"><span class="preprocessor"> #include &quot;sxsdk.cxx&quot;</span>
+</pre></div><h3><a class="anchor" id="changes_4">
+changes_4</a></h3>
+<div class="fragment"><pre class="fragment"> include/com.cpp
+ include/vectors.cpp
+</pre></div><div class="fragment"><pre class="fragment"> include/sx/core/com.cpp
+ include/sx/core/vectors.cpp
+ include/sx/core/debug.cpp
+</pre></div><h3><a class="anchor" id="changes_5">
+changes_5</a></h3>
+<h3><a class="anchor" id="changes_6">
+changes_6</a></h3>
+<h3><a class="anchor" id="changes_7">
+changes_7</a></h3>
+<div class="fragment"><pre class="fragment"></pre></div><div class="fragment"><pre class="fragment"></pre></div><div class="fragment"><pre class="fragment"></pre></div><h3><a class="anchor" id="changes_8">
+changes_8</a></h3>
+<div class="fragment"><pre class="fragment"></pre></div><h3><a class="anchor" id="changes_9">
+changes_9</a></h3>
+<h3><a class="anchor" id="changes_10">
+changes_10</a></h3>
+<div class="fragment"><pre class="fragment"></pre></div><div class="fragment"><pre class="fragment"></pre></div><h3><a class="anchor" id="changes_11">
+changes_11</a></h3>
 </div>
 <br><br>
 <hr>
